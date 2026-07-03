@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TradePilot 銘柄シグナル",
+  "description": "1銘柄に対する LLM シグナル出力のスキーマ。全フィールド必須。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "signal",
+    "confidence",
+    "target_price",
+    "stop_loss",
+    "holding_period_days",
+    "reasons",
+    "risks"
+  ],
+  "properties": {
+    "signal": {
+      "type": "string",
+      "enum": ["buy", "sell", "hold"],
+      "description": "売買判断。buy=買い / sell=売り / hold=様子見"
+    },
+    "confidence": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "判断の確信度（0-100）"
+    },
+    "target_price": {
+      "type": ["number", "null"],
+      "exclusiveMinimum": 0,
+      "description": "目標株価（円）。hold の場合のみ null 可"
+    },
+    "stop_loss": {
+      "type": ["number", "null"],
+      "exclusiveMinimum": 0,
+      "description": "損切り価格（円）。hold の場合のみ null 可"
+    },
+    "holding_period_days": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 365,
+      "description": "想定保有期間（営業日ではなく暦日）"
+    },
+    "reasons": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 5,
+      "description": "判断の根拠。各要素は根拠の説明と参照した入力データを持つ",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["reason", "evidence"],
+        "properties": {
+          "reason": {
+            "type": "string",
+            "minLength": 1,
+            "description": "根拠の説明（1-2文）"
+          },
+          "evidence": {
+            "type": "string",
+            "minLength": 1,
+            "description": "参照した入力データの箇所（例: 'price_technical.rsi_14=28.5' や 'news[2] 2026-07-03 のタイトル'）"
+          }
+        }
+      }
+    },
+    "risks": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 5,
+      "description": "この判断が外れる場合のリスク要因",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "signal": { "enum": ["buy", "sell"] } }
+      },
+      "then": {
+        "properties": {
+          "target_price": { "type": "number" },
+          "stop_loss": { "type": "number" }
+        }
+      }
+    }
+  ]
+}

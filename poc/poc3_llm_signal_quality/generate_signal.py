@@ -1,0 +1,288 @@
+"""PoC-3: LLM シグナル生成パイプライン。
+
+流れ: context_builder → プロンプト組み立て → LLM 呼び出し（llm_client 経由）
+      → JSON パース・スキーマ検証 → data/signals/ に保存
+
+LLM プロバイダは未選定のため、現状は stub（呼ぶと NotImplementedError）。
+`--dry-run` を付けると LLM を呼ばずに「実際に送るプロンプト全文」を
+data/signals/dry_run/ にファイル出力し、トークン量の概算を表示する。
+
+使い方:
+    # universe 全銘柄の dry-run（プロンプト出力 + トークン見積もり）
+    ../../.venv/bin/python generate_signal.py --dry-run
+
+    # 特定銘柄のみ
+    ../../.venv/bin/python generate_signal.py --dry-run --codes 7203 6758
+
+    # 本実行（プロバイダ実装後）
+    ../../.venv/bin/python generate_signal.py --provider <name>
+"""
+import argparse
+import json
+import re
+import sys
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+
+import jsonschema
+
+from context_builder import (
+    DATA_DIR,
+    UNIVERSE,
+    ContextBuildError,
+    build_context,
+    context_to_json,
+)
+from llm_client import get_client
+
+POC_DIR = Path(__file__).resolve().parent
+SCHEMA_PATH = POC_DIR / "signal_schema.json"
+TEMPLATE_PATH = POC_DIR / "prompt_template.md"
+SIGNALS_DIR = DATA_DIR / "signals"
+
+JST = timezone(timedelta(hours=9))
+
+# 出力トークンの想定値（スキーマ準拠の応答 JSON 1件分の概算。README 参照）
+ASSUMED_OUTPUT_TOKENS_PER_STOCK = 500
+
+# 月間見積もりの前提
+MONTHLY_STOCKS = 50
+MONTHLY_TRADING_DAYS = 22
+
+
+# ---------------------------------------------------------------------------
+# プロンプト組み立て
+# ---------------------------------------------------------------------------
+
+def load_schema() -> dict:
+    with open(SCHEMA_PATH, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def load_template_sections() -> dict:
+    """prompt_template.md から `## system` / `## user` セクションを抽出する。"""
+    text = TEMPLATE_PATH.read_text(encoding="utf-8")
+    sections = {}
+    current = None
+    buf = []
+    for line in text.splitlines():
+        heading = line.strip().lower()
+        if heading in ("## system", "## user"):
+            if current:
+                sections[current] = "\n".join(buf).strip()
+            current = heading[3:]
+            buf = []
+        elif current:
+            buf.append(line)
+    if current:
+        sections[current] = "\n".join(buf).strip()
+    for key in ("system", "user"):
+        if key not in sections:
+            raise ValueError(f"prompt_template.md に `## {key}` セクションがありません。")
+    return sections
+
+
+def render_prompts(context: dict) -> "tuple[str, str]":
+    """コンテキストからシステム/ユーザープロンプトを組み立てる。"""
+    sections = load_template_sections()
+    schema_json = json.dumps(load_schema(), ensure_ascii=False, indent=1)
+    system = sections["system"].replace("{schema_json}", schema_json)
+    user = (
+        sections["user"]
+        .replace("{stock_name}", context["meta"]["name"])
+        .replace("{stock_code}", context["meta"]["code"])
+        .replace("{as_of}", context["price_technical"]["as_of"])
+        .replace("{context_json}", context_to_json(context))
+    )
+    return system, user
+
+
+# ---------------------------------------------------------------------------
+# トークン概算
+# ---------------------------------------------------------------------------
+
+def estimate_tokens(text: str) -> int:
+    """粗いトークン概算: 日本語等の非 ASCII は 1文字=1トークン、ASCII は 4文字=1トークン。"""
+    ascii_chars = sum(1 for c in text if ord(c) < 128)
+    non_ascii_chars = len(text) - ascii_chars
+    return round(ascii_chars / 4) + non_ascii_chars
+
+
+# ---------------------------------------------------------------------------
+# LLM 応答の処理
+# ---------------------------------------------------------------------------
+
+def parse_response(raw: str) -> dict:
+    """LLM 応答テキストから JSON を取り出してパースする。
+
+    指示上コードフェンスは禁止だが、防御的に ```json フェンスは剥がす。
+    """
+    text = raw.strip()
+    fence = re.match(r"^```(?:json)?\s*\n(.*)\n```\s*$", text, re.DOTALL)
+    if fence:
+        text = fence.group(1).strip()
+    return json.loads(text)
+
+
+def validate_signal(signal: dict) -> None:
+    """signal_schema.json に対してスキーマ検証する（違反時は ValidationError）。"""
+    jsonschema.validate(instance=signal, schema=load_schema())
+
+
+def save_signal(code: str, name: str, context: dict, signal: dict, raw: str) -> Path:
+    """検証済みシグナルを data/signals/<日付>/<code>.json に保存する。"""
+    now = datetime.now(JST)
+    out_dir = SIGNALS_DIR / now.strftime("%Y-%m-%d")
+    out_dir.mkdir(parents=True, exist_ok=True)
+    path = out_dir / f"{code}.json"
+    record = {
+        "code": code,
+        "name": name,
+        "generated_at": now.isoformat(timespec="seconds"),
+        "price_as_of": context["price_technical"]["as_of"],
+        "signal": signal,
+        "raw_response": raw,
+    }
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(record, f, ensure_ascii=False, indent=2)
+    return path
+
+
+# ---------------------------------------------------------------------------
+# パイプライン
+# ---------------------------------------------------------------------------
+
+def run_dry_run(codes: "list[str]") -> None:
+    """LLM を呼ばず、送信予定のプロンプト全文とトークン概算を出力する。"""
+    out_dir = SIGNALS_DIR / "dry_run"
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    rows = []
+    for code in codes:
+        try:
+            context = build_context(code)
+        except ContextBuildError as e:
+            print(f"[SKIP] {code}: {e}", file=sys.stderr)
+            continue
+        system, user = render_prompts(context)
+
+        prompt_path = out_dir / f"{code}_prompt.txt"
+        prompt_path.write_text(
+            "=== SYSTEM PROMPT ===\n\n"
+            + system
+            + "\n\n=== USER PROMPT ===\n\n"
+            + user
+            + "\n",
+            encoding="utf-8",
+        )
+
+        rows.append(
+            {
+                "code": code,
+                "name": context["meta"]["name"],
+                "system_chars": len(system),
+                "user_chars": len(user),
+                "system_tokens_est": estimate_tokens(system),
+                "user_tokens_est": estimate_tokens(user),
+                "input_tokens_est": estimate_tokens(system) + estimate_tokens(user),
+                "prompt_file": str(prompt_path.relative_to(DATA_DIR.parent)),
+            }
+        )
+
+    if not rows:
+        print("有効な銘柄がありませんでした。", file=sys.stderr)
+        sys.exit(1)
+
+    # 集計と月間見積もり
+    avg_input = round(sum(r["input_tokens_est"] for r in rows) / len(rows))
+    monthly_calls = MONTHLY_STOCKS * MONTHLY_TRADING_DAYS
+    summary = {
+        "generated_at": datetime.now(JST).isoformat(timespec="seconds"),
+        "token_estimation_rule": "非ASCII 1文字=1トークン / ASCII 4文字=1トークン",
+        "stocks": rows,
+        "avg_input_tokens_per_stock": avg_input,
+        "assumed_output_tokens_per_stock": ASSUMED_OUTPUT_TOKENS_PER_STOCK,
+        "monthly_assumption": f"{MONTHLY_STOCKS}銘柄 × 日次 × {MONTHLY_TRADING_DAYS}営業日 = {monthly_calls}回",
+        "monthly_input_tokens_est": avg_input * monthly_calls,
+        "monthly_output_tokens_est": ASSUMED_OUTPUT_TOKENS_PER_STOCK * monthly_calls,
+    }
+    summary_path = out_dir / "summary.json"
+    with open(summary_path, "w", encoding="utf-8") as f:
+        json.dump(summary, f, ensure_ascii=False, indent=2)
+
+    print(f"{'code':>6} {'銘柄':<14} {'sys tok':>8} {'user tok':>9} {'input計':>8}")
+    for r in rows:
+        print(
+            f"{r['code']:>6} {r['name'][:7]:<14} {r['system_tokens_est']:>8,}"
+            f" {r['user_tokens_est']:>9,} {r['input_tokens_est']:>8,}"
+        )
+    print()
+    print(f"平均入力トークン/銘柄: {avg_input:,}")
+    print(f"想定出力トークン/銘柄: {ASSUMED_OUTPUT_TOKENS_PER_STOCK:,}")
+    print(f"月間（{summary['monthly_assumption']}）:")
+    print(f"  入力: {summary['monthly_input_tokens_est']:,} トークン")
+    print(f"  出力: {summary['monthly_output_tokens_est']:,} トークン")
+    print()
+    print(f"プロンプト全文: {out_dir}/")
+    print(f"集計: {summary_path}")
+
+
+def run_generate(codes: "list[str]", provider: str) -> None:
+    """本実行: LLM を呼び、検証済みシグナルを保存する。"""
+    client = get_client(provider)
+    ok, ng = 0, 0
+    for code in codes:
+        try:
+            context = build_context(code)
+            system, user = render_prompts(context)
+            raw = client.complete(system, user)
+            signal = parse_response(raw)
+            validate_signal(signal)
+            path = save_signal(code, context["meta"]["name"], context, signal, raw)
+            print(f"[OK ] {code} {context['meta']['name']}: {signal['signal']}"
+                  f" (confidence={signal['confidence']}) -> {path}")
+            ok += 1
+        except NotImplementedError as e:
+            print(f"[NG ] {code}: {e}", file=sys.stderr)
+            print("--dry-run でプロンプト確認のみ行えます。", file=sys.stderr)
+            sys.exit(2)
+        except (ContextBuildError, json.JSONDecodeError,
+                jsonschema.ValidationError) as e:
+            print(f"[NG ] {code}: {type(e).__name__}: {e}", file=sys.stderr)
+            ng += 1
+    print(f"\n完了: OK {ok} / NG {ng}")
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="PoC-3 LLM シグナル生成パイプライン")
+    parser.add_argument(
+        "--codes",
+        nargs="*",
+        default=None,
+        help="対象銘柄コード（省略時は universe 全銘柄）",
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="LLM を呼ばず、送信予定のプロンプト全文とトークン概算を出力",
+    )
+    parser.add_argument(
+        "--provider",
+        default="stub",
+        help="LLM プロバイダ名（現状 'stub' のみ。実装後に追加）",
+    )
+    args = parser.parse_args()
+
+    codes = args.codes or [s["code"] for s in UNIVERSE]
+    unknown = [c for c in codes if c not in {s["code"] for s in UNIVERSE}]
+    if unknown:
+        parser.error(f"universe に存在しないコード: {unknown}")
+
+    if args.dry_run:
+        run_dry_run(codes)
+    else:
+        run_generate(codes, args.provider)
+
+
+if __name__ == "__main__":
+    main()
