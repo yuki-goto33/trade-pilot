@@ -34,6 +34,28 @@ INDEX_TICKERS = {
 }
 SECTOR_ETFS = {f"{code}.T": f"TOPIX-17 ETF {code}" for code in range(1617, 1634)}
 
+# 前夜のNY市場（v2.1: 日本株の寄り付きに影響する米国指数・セクターETF）
+US_MARKET_TICKERS = {
+    "^IXIC": "NASDAQ総合",
+    "^DJI": "NYダウ",
+    "^SOX": "SOX指数（フィラデルフィア半導体）",
+    "SMH": "米・半導体ETF",
+    "XLK": "米・テクノロジーETF",
+    "XLF": "米・金融ETF",
+    "XLE": "米・エネルギーETF",
+    "XLV": "米・ヘルスケアETF",
+    "XLY": "米・一般消費財ETF",
+    "XLC": "米・通信サービスETF",
+    "XLI": "米・資本財ETF",
+}
+
+
+def adr_tickers() -> dict:
+    """universe の ADR ティッカー → ラベルのマップ。"""
+    from universe import UNIVERSE
+    return {s["adr"]: f"{s['name']} ADR" for s in UNIVERSE if s.get("adr")}
+
+
 JGB_CSV_URL = "https://www.mof.go.jp/jgbs/reference/interest_rate/jgbcm.csv"
 
 FRED_URL = "https://api.stlouisfed.org/fred/series/observations"
@@ -55,7 +77,7 @@ def wareki_to_date(s: str):
 
 
 def fetch_yfinance() -> pd.DataFrame:
-    tickers = {**INDEX_TICKERS, **SECTOR_ETFS}
+    tickers = {**INDEX_TICKERS, **SECTOR_ETFS, **US_MARKET_TICKERS, **adr_tickers()}
     raw = yf.download(
         tickers=list(tickers),
         period="60d",

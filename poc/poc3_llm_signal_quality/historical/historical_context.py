@@ -60,11 +60,15 @@ from context_builder import (  # noqa: E402
     _round,
     _stock_meta,
     _fundamentals_period,
+    US_INDEX_TICKERS,
+    US_SECTOR_TICKERS,
     boj_snapshot,
     context_to_json,
     jfc_sme_snapshot,
     market_regime_from_series,
     technical_from_window,
+    us_market_snapshot,
+    us_overnight_for_stock,
 )
 from universe import UNIVERSE, yf_tickers  # noqa: E402
 
@@ -86,6 +90,11 @@ MACRO_TICKER_LABELS = {
     "^GSPC": "S&P500",
     "^VIX": "VIX",
 }
+# 前夜のNY市場（v2.1）: 米国指数・セクターETF + universe 銘柄の ADR
+MACRO_TICKER_LABELS.update(US_INDEX_TICKERS)
+MACRO_TICKER_LABELS.update({t: f"米セクターETF {n}" for t, n in US_SECTOR_TICKERS.items()})
+MACRO_TICKER_LABELS.update(
+    {s["adr"]: f"{s['name']} ADR" for s in UNIVERSE if s.get("adr")})
 
 
 def _to_date(d) -> date_cls:
@@ -462,6 +471,10 @@ def build_macro_asof(asof) -> dict:
     boj = boj_snapshot(asof=asof)
     if boj:
         macro["boj"] = boj
+    # 前夜のNY市場（Date < asof の最終NY営業日 = asof の朝に確定済みの終値）
+    us = us_market_snapshot(df, asof=asof)
+    if us:
+        macro["us_market_overnight"] = us
     return macro
 
 
@@ -473,7 +486,7 @@ def build_context_asof(code: str, asof) -> dict:
     """1銘柄 × 過去営業日 as-of の分析入力コンテキスト（既存 build_context と同一構造）。"""
     asof = _to_date(asof)
     meta = _stock_meta(code)
-    return {
+    context = {
         "meta": {
             "code": code,
             "name": meta["name"],
@@ -485,6 +498,10 @@ def build_context_asof(code: str, asof) -> dict:
         "disclosures": build_disclosures_asof(code, asof),
         "macro": build_macro_asof(asof),
     }
+    us = us_overnight_for_stock(code, _load_macro_history(), asof=asof)
+    if us:
+        context["us_overnight"] = us
+    return context
 
 
 def main() -> None:

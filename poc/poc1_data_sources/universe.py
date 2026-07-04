@@ -25,17 +25,22 @@ import unicodedata
 from pathlib import Path
 
 UNIVERSE = [
-    {"code": "7203", "name": "トヨタ自動車"},
-    {"code": "6758", "name": "ソニーグループ"},
-    {"code": "8306", "name": "三菱UFJフィナンシャル・グループ"},
-    {"code": "9984", "name": "ソフトバンクグループ"},
-    {"code": "6861", "name": "キーエンス"},
-    {"code": "4063", "name": "信越化学工業"},
-    {"code": "9433", "name": "KDDI"},
-    {"code": "8058", "name": "三菱商事"},
-    {"code": "6501", "name": "日立製作所"},
-    {"code": "4568", "name": "第一三共"},
-    {"code": "285A", "name": "キオクシアホールディングス", "news_name": "キオクシア"},
+    # adr: 米国上場 ADR/OTC ティッカー（前夜のNYでの当該銘柄の値動き。無い銘柄は省略）
+    # us_sector_proxy: 業種に対応する米セクターETF/指数（前夜のNYセクター動向）
+    {"code": "7203", "name": "トヨタ自動車", "adr": "TM", "us_sector_proxy": "XLY"},
+    {"code": "6758", "name": "ソニーグループ", "adr": "SONY", "us_sector_proxy": "XLK"},
+    {"code": "8306", "name": "三菱UFJフィナンシャル・グループ", "adr": "MUFG",
+     "us_sector_proxy": "XLF"},
+    {"code": "9984", "name": "ソフトバンクグループ", "adr": "SFTBY",
+     "us_sector_proxy": "XLK"},
+    {"code": "6861", "name": "キーエンス", "adr": "KYCCF", "us_sector_proxy": "XLK"},
+    {"code": "4063", "name": "信越化学工業", "adr": "SHECY", "us_sector_proxy": "SMH"},
+    {"code": "9433", "name": "KDDI", "adr": "KDDIY", "us_sector_proxy": "XLC"},
+    {"code": "8058", "name": "三菱商事", "adr": "MSBHF", "us_sector_proxy": "XLE"},
+    {"code": "6501", "name": "日立製作所", "adr": "HTHIY", "us_sector_proxy": "XLI"},
+    {"code": "4568", "name": "第一三共", "adr": "DSNKY", "us_sector_proxy": "XLV"},
+    {"code": "285A", "name": "キオクシアホールディングス", "news_name": "キオクシア",
+     "us_sector_proxy": "SMH"},
 ]
 
 ENV_UNIVERSE_FILE = "UNIVERSE_FILE"

@@ -395,6 +395,92 @@ def jfc_sme_snapshot(asof=None, months: int = JFC_SME_MONTHS) -> "dict | None":
     }
 
 
+# 前夜のNY市場スナップショットの対象（fetch_macro.py の US_MARKET_TICKERS と対応）
+US_INDEX_TICKERS = {
+    "^IXIC": "NASDAQ総合",
+    "^DJI": "NYダウ",
+    "^SOX": "SOX指数（フィラデルフィア半導体）",
+}
+US_SECTOR_TICKERS = {
+    "SMH": "半導体",
+    "XLK": "テクノロジー",
+    "XLF": "金融",
+    "XLE": "エネルギー",
+    "XLV": "ヘルスケア",
+    "XLY": "一般消費財",
+    "XLC": "通信サービス",
+    "XLI": "資本財",
+}
+
+
+def _us_row(df: pd.DataFrame, ticker: str, asof=None) -> "dict | None":
+    """マクロ価格 DataFrame から 1 ティッカーの直近NY営業日の騰落を抽出する。
+
+    asof（JST の日付）を渡すと Date < asof で絞る。NY の日付 D の終値は
+    JST では D+1 早朝に確定するため、「asof の朝に見える最新のNY終値」は
+    Date < asof の最終行と一致する（forward は末尾行 = 昨夜の終値）。
+    """
+    series = df[df["ticker"] == ticker].dropna(subset=["Close"])
+    if asof is not None:
+        series = series[series["Date"].dt.date < asof]
+    if series.empty:
+        return None
+    series = series.tail(6)
+    last = series.iloc[-1]
+    prev = series["Close"].iloc[-2] if len(series) >= 2 else None
+    first = series["Close"].iloc[0]
+    return {
+        "date_ny": last["Date"].strftime("%Y-%m-%d"),
+        "close": _round(last["Close"]),
+        "change_1d_pct": _round((last["Close"] / prev - 1) * 100) if prev else None,
+        "change_5d_pct": _round((last["Close"] / first - 1) * 100),
+    }
+
+
+def us_market_snapshot(df: pd.DataFrame, asof=None) -> "dict | None":
+    """前夜のNY市場（指数 + セクターETF）のスナップショットを組み立てる。"""
+    indices, sectors = [], []
+    for ticker, name in US_INDEX_TICKERS.items():
+        row = _us_row(df, ticker, asof)
+        if row:
+            indices.append({"name": name, "ticker": ticker, **row})
+    for ticker, name in US_SECTOR_TICKERS.items():
+        row = _us_row(df, ticker, asof)
+        if row:
+            sectors.append({"sector": name, "ticker": ticker, **row})
+    if not indices and not sectors:
+        return None
+    return {
+        "note": ("前夜（日本時間の朝時点で確定済みの直近NY営業日）の米国市場動向。"
+                 "日本株の当日の寄り付きは前夜のNY市場、特に同業種セクターの"
+                 "動きに影響されやすい"),
+        "indices": indices,
+        "sector_etfs": sectors,
+    }
+
+
+def us_overnight_for_stock(code: str, df: pd.DataFrame, asof=None) -> "dict | None":
+    """銘柄別の前夜NY動向（ADR + 業種対応セクターETF）を組み立てる。"""
+    meta = _stock_meta(code)
+    out = {}
+    adr = meta.get("adr")
+    if adr:
+        row = _us_row(df, adr, asof)
+        if row:
+            out["adr"] = {"ticker": adr, **row}
+    proxy = meta.get("us_sector_proxy")
+    if proxy:
+        row = _us_row(df, proxy, asof)
+        if row:
+            label = US_SECTOR_TICKERS.get(proxy) or US_INDEX_TICKERS.get(proxy, proxy)
+            out["sector_proxy"] = {"sector": label, "ticker": proxy, **row}
+    if not out:
+        return None
+    out["note"] = ("前夜のNY市場での当該銘柄の ADR と業種対応セクターETFの騰落。"
+                   "当日の寄り付き方向を示す先行指標（エントリータイミングの補助）")
+    return out
+
+
 def boj_snapshot(asof=None) -> "dict | None":
     """日銀関連スナップショット（決定会合日程・短観 DI・重要発表）を組み立てる。
 
@@ -556,6 +642,9 @@ def build_macro() -> dict:
     boj = boj_snapshot()
     if boj:
         macro["boj"] = boj
+    us = us_market_snapshot(df)
+    if us:
+        macro["us_market_overnight"] = us
     return macro
 
 
@@ -570,7 +659,7 @@ def build_context(code: str) -> dict:
         LLM プロンプトに埋め込む中間表現（JSON 化可能な dict）。
     """
     meta = _stock_meta(code)
-    return {
+    context = {
         "meta": {
             "code": code,
             "name": meta["name"],
@@ -582,6 +671,10 @@ def build_context(code: str) -> dict:
         "disclosures": build_disclosures(code),
         "macro": build_macro(),
     }
+    us = us_overnight_for_stock(code, _load_macro_prices())
+    if us:
+        context["us_overnight"] = us
+    return context
 
 
 def context_to_json(context: dict) -> str:
