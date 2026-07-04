@@ -36,11 +36,15 @@ REPORTS_HISTORY_DIR = POC_DIR / "reports_history"   # git 管理下
 
 # 朝バッチで実行する PoC-1 fetch スクリプト（実行順）。
 # J-Quants（前営業日データは夕方更新）と EDINET（財務は低頻度）は対象外。
+# summarize_disclosures は fetch_disclosures_yanoshin の出力に依存するため後に置く
+# （新規の重要開示のみ Gemini で要約し、既要約分はキャッシュを使う）。
 FETCH_SCRIPTS = [
     "fetch_prices_yfinance.py",
+    "fetch_fundamentals_yfinance.py",
     "fetch_news_google.py",
     "fetch_news_macro_rss.py",
     "fetch_disclosures_yanoshin.py",
+    "summarize_disclosures.py",
     "fetch_macro.py",
 ]
 
