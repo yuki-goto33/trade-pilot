@@ -116,3 +116,15 @@ universe 11銘柄で `--dry-run` を実行。トークンは粗い換算
 - [ ] フォワードテスト 4 週間（毎朝生成・記録 → `data/signals/` に蓄積）
 - [ ] 簡易ヒストリカルテスト 30 ケース以上（J-Quants 過去データ + リーク注意）
 - [ ] 理由の人手評価 30 件以上（事実誤認・納得感の採点）
+
+## 実装状況（2026-07-04 更新）
+
+- **LLM プロバイダ実装済み**: `GeminiClient`（Google Gemini API 無料枠、既定モデル `gemini-flash-latest`、`GEMINI_MODEL` で変更可）
+  - 認証は `X-goog-api-key` ヘッダー（クエリパラメータ方式は一部モデルが 404 になるため不可）
+  - JSON モード（responseMimeType）+ ローカル jsonschema 検証。レート制限対策: 呼び出し間隔 5 秒 + 429 時は retryDelay 尊重リトライ
+  - この API キーの無料枠では Pro 系（gemini-2.5-pro 等）は quota 0 で利用不可。Flash 系のみ
+- **フォワードテスト開始**: 2026-07-04 に全 11 銘柄のシグナル生成成功（`data/signals/2026-07-04/`）
+- 実行: `../../.venv/bin/python generate_signal.py --provider gemini`
+- 既知の注意点:
+  - 同一入力でも判定が揺れる（トヨタで buy75 → hold60 を観測）。フォワードテストでは 1 日 1 回の生成値を正とする
+  - `data/` の取得ファイルは universe 間で共有のため、50 銘柄検証などを走らせた後は 11 銘柄で取得し直すこと（要改善: universe 別ファイル名）
