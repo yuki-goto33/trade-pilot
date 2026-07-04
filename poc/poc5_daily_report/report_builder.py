@@ -162,6 +162,19 @@ def load_macro_snapshot() -> list:
 # 整形ヘルパー
 # ---------------------------------------------------------------------------
 
+STANCE_JP = {"bullish": "強気", "bearish": "弱気", "neutral": "中立"}
+
+
+def expert_stance_str(record: dict) -> str:
+    """専門家見解の1行表記（例: "T:強気(75) / F:中立(50)"）。無ければ空文字。"""
+    views = record.get("expert_views") or {}
+    t, f = views.get("technical"), views.get("fundamental")
+    if not (t and f):
+        return ""
+    return (f"T:{STANCE_JP.get(t['stance'], t['stance'])}({t['strength']}) / "
+            f"F:{STANCE_JP.get(f['stance'], f['stance'])}({f['strength']})")
+
+
 def summarize(text: str, limit: int = 90) -> str:
     """理由テキストを 1 行に要約する（最初の文 + 文字数上限）。"""
     text = " ".join(text.split())  # 改行・連続空白を潰す
@@ -229,6 +242,9 @@ def build_markdown(date: str, records: list, macro: list, missing_sources=None) 
         label = SIGNAL_LABEL[s["signal"]]
         lines.append(f"### {mark} {label} {r['code']} {r['name']}（確信度 {s['confidence']}）")
         lines.append("")
+        stance = expert_stance_str(r)
+        if stance:
+            lines.append(f"- 専門家見解: {stance}")
         lines.append(
             f"- 現在値: {current_price_str(r, prices)} / "
             f"目標: {fmt_price(s['target_price'])} / "
@@ -249,7 +265,9 @@ def build_markdown(date: str, records: list, macro: list, missing_sources=None) 
     for r in holds:
         s = r["signal"]
         first_reason = summarize(s["reasons"][0]["reason"]) if s["reasons"] else "—"
-        lines.append(f"- {r['code']} {r['name']}（{s['confidence']}）: {first_reason}")
+        stance = expert_stance_str(r)
+        stance_part = f"［{stance}］" if stance else ""
+        lines.append(f"- {r['code']} {r['name']}（{s['confidence']}）{stance_part}: {first_reason}")
     lines.append("")
 
     lines.append("## マクロスナップショット")
@@ -296,6 +314,9 @@ def build_slack_blocks(date: str, records: list, macro: list, missing_sources=No
             mark = SIGNAL_MARK[s["signal"]]
             label = SIGNAL_LABEL[s["signal"]]
             lines = [f"{mark} *{label} {r['code']} {r['name']}*（確信度 {s['confidence']}）"]
+            stance = expert_stance_str(r)
+            if stance:
+                lines.append(f"_専門家見解: {stance}_")
             lines.append(
                 f"現在値 {current_price_str(r, prices)} / 目標 {fmt_price(s['target_price'])}"
                 f" / 損切り {fmt_price(s['stop_loss'])} / 想定保有 {s['holding_period_days']}日"
@@ -313,7 +334,9 @@ def build_slack_blocks(date: str, records: list, macro: list, missing_sources=No
         for r in holds:
             s = r["signal"]
             first_reason = summarize(s["reasons"][0]["reason"], limit=70) if s["reasons"] else "—"
-            lines.append(f"• {r['code']} {r['name']}（{s['confidence']}）: {first_reason}")
+            stance = expert_stance_str(r)
+            stance_part = f"［{stance}］" if stance else ""
+            lines.append(f"• {r['code']} {r['name']}（{s['confidence']}）{stance_part}: {first_reason}")
         blocks.append("\n".join(lines))
 
     if macro:

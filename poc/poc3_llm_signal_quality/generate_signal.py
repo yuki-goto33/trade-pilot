@@ -129,7 +129,8 @@ def validate_signal(signal: dict) -> None:
     jsonschema.validate(instance=signal, schema=load_schema())
 
 
-def save_signal(code: str, name: str, context: dict, signal: dict, raw: str) -> Path:
+def save_signal(code: str, name: str, context: dict, signal: dict, raw: str,
+                expert_views: dict = None) -> Path:
     """検証済みシグナルを data/signals/<日付>/<code>.json に保存する。"""
     now = datetime.now(JST)
     out_dir = SIGNALS_DIR / now.strftime("%Y-%m-%d")
@@ -143,6 +144,8 @@ def save_signal(code: str, name: str, context: dict, signal: dict, raw: str) -> 
         "signal": signal,
         "raw_response": raw,
     }
+    if expert_views:
+        record["expert_views"] = expert_views
     with open(path, "w", encoding="utf-8") as f:
         json.dump(record, f, ensure_ascii=False, indent=2)
     return path
@@ -227,20 +230,39 @@ def run_dry_run(codes: "list[str]") -> None:
     print(f"集計: {summary_path}")
 
 
-def run_generate(codes: "list[str]", provider: str) -> None:
-    """本実行: LLM を呼び、検証済みシグナルを保存する。"""
+def run_generate(codes: "list[str]", provider: str, mode: str = "experts") -> None:
+    """本実行: LLM を呼び、検証済みシグナルを保存する。
+
+    mode="experts"（既定）はテクニカル/ファンダ専門家 + チーフアナリスト統合の
+    3段パイプライン（銘柄あたり LLM 3回）。mode="single" は従来の一括判定。
+    """
+    from experts import run_expert_pipeline
+
     client = get_client(provider)
     ok, ng = 0, 0
     for code in codes:
         try:
             context = build_context(code)
-            system, user = render_prompts(context)
-            raw = client.complete(system, user)
-            signal = parse_response(raw)
-            validate_signal(signal)
-            path = save_signal(code, context["meta"]["name"], context, signal, raw)
+            expert_views = None
+            if mode == "experts":
+                signal, views, raws = run_expert_pipeline(
+                    client, context, parse_response, validate_signal,
+                    log=lambda m: print(m, file=sys.stderr))
+                raw = raws["synthesis"]
+                expert_views = views
+            else:
+                system, user = render_prompts(context)
+                raw = client.complete(system, user)
+                signal = parse_response(raw)
+                validate_signal(signal)
+            path = save_signal(code, context["meta"]["name"], context, signal,
+                               raw, expert_views=expert_views)
+            stance = ""
+            if expert_views:
+                stance = (f" [T:{expert_views['technical']['stance']}"
+                          f"/F:{expert_views['fundamental']['stance']}]")
             print(f"[OK ] {code} {context['meta']['name']}: {signal['signal']}"
-                  f" (confidence={signal['confidence']}) -> {path}")
+                  f" (confidence={signal['confidence']}){stance} -> {path}")
             ok += 1
         except NotImplementedError as e:
             print(f"[NG ] {code}: {e}", file=sys.stderr)
@@ -271,6 +293,12 @@ def main() -> None:
         default="stub",
         help="LLM プロバイダ名（現状 'stub' のみ。実装後に追加）",
     )
+    parser.add_argument(
+        "--mode",
+        choices=["experts", "single"],
+        default="experts",
+        help="experts=2専門家+統合の3段パイプライン（既定） / single=従来の一括判定",
+    )
     args = parser.parse_args()
 
     codes = args.codes or [s["code"] for s in UNIVERSE]
@@ -281,7 +309,7 @@ def main() -> None:
     if args.dry_run:
         run_dry_run(codes)
     else:
-        run_generate(codes, args.provider)
+        run_generate(codes, args.provider, mode=args.mode)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,58 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "TradePilot 専門家見解",
+ "description": "テクニカル/ファンダメンタル専門家の見解出力スキーマ（共通）。全フィールド必須。",
+ "type": "object",
+ "additionalProperties": false,
+ "required": ["stance", "strength", "summary", "points", "cautions", "key_levels"],
+ "properties": {
+  "stance": {
+   "type": "string",
+   "enum": ["bullish", "bearish", "neutral"],
+   "description": "見解の方向。bullish=強気 / bearish=弱気 / neutral=中立"
+  },
+  "strength": {
+   "type": "integer",
+   "minimum": 0,
+   "maximum": 100,
+   "description": "見解の強さ（0-100）。50=根拠が弱い/拮抗、70=明確な根拠、85+=複数の強い根拠"
+  },
+  "summary": {
+   "type": "string",
+   "minLength": 1,
+   "description": "見解の要約（1-2文、日本語）"
+  },
+  "points": {
+   "type": "array",
+   "minItems": 1,
+   "maxItems": 5,
+   "description": "見解の根拠。各要素は根拠の説明と参照した入力データ",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["point", "evidence"],
+    "properties": {
+     "point": {"type": "string", "minLength": 1, "description": "根拠の説明（1-2文）"},
+     "evidence": {"type": "string", "minLength": 1, "description": "参照した入力データの箇所"}
+    }
+   }
+  },
+  "cautions": {
+   "type": "array",
+   "minItems": 1,
+   "maxItems": 5,
+   "description": "この見解が外れる場合の注意点・リスク要因",
+   "items": {"type": "string", "minLength": 1}
+  },
+  "key_levels": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": ["support", "resistance"],
+   "description": "意識される価格の節目（円）。テクニカル専門家は必ず設定、ファンダ専門家は不明なら null",
+   "properties": {
+    "support": {"type": ["number", "null"], "description": "下値の節目（円）"},
+    "resistance": {"type": ["number", "null"], "description": "上値の節目（円）"}
+   }
+  }
+ }
+}

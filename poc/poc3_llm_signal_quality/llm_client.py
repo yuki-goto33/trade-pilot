@@ -179,10 +179,84 @@ class GeminiClient(LLMClient):
         raise RuntimeError(f"Gemini API リトライ上限到達: {last_err}")
 
 
+# Gemini 無料枠はモデルごとに小さなトークンバケット型クォータのため、
+# 複数モデルをローテーションする（クォータ枯渇時に次モデルへ切替）。
+# 敗因分析で lite 系 40.4% vs 非 lite 53.1% だったため非 lite を優先する。
+DEFAULT_ROTATION_MODELS = [
+    "gemini-flash-latest",
+    "gemini-3-flash-preview",
+    "gemini-2.5-flash",
+    "gemini-2.0-flash",
+    "gemini-2.5-flash-lite",
+    "gemini-3.1-flash-lite",
+    "gemini-2.0-flash-lite",
+]
+
+
+class RotatingGeminiClient(LLMClient):
+    """モデルごとの 429 クォータをまたいでローテーションする Gemini クライアント。
+
+    - 各モデルの GeminiClient は 429 を即時 GeminiRateLimitError で返す設定にし、
+      クールダウン（API 提示の retryDelay）を記録して次モデルへ切り替える
+    - その他の RuntimeError（503 リトライ上限等）も短いクールダウンで次モデルへ
+    - 全モデルがクールダウン中なら最短の解除時刻まで待つ
+    - 成功したモデル名を last_model に保持する（シグナル記録用）
+    """
+
+    TOTAL_WAIT_CAP_SEC = 2700.0   # 1コンテキストあたりの累計待機上限
+    ERROR_COOLDOWN_SEC = 90.0     # 429 以外のエラー時のクールダウン
+
+    def __init__(self, models=None):
+        self.models = models or DEFAULT_ROTATION_MODELS
+        self.clients = {m: GeminiClient(model=m, rate_limit_max_wait_sec=0.0)
+                        for m in self.models}
+        self.cooldown_until = {m: 0.0 for m in self.models}
+        self.last_model = None
+
+    def complete(self, system: str, user: str) -> str:
+        import sys
+        waited = 0.0
+        last_err = None
+        while True:
+            now = time.monotonic()
+            available = [m for m in self.models if self.cooldown_until[m] <= now]
+            if not available:
+                wait = min(self.cooldown_until.values()) - now + 1.0
+                if waited + wait > self.TOTAL_WAIT_CAP_SEC:
+                    raise RuntimeError(
+                        f"全モデルがクールダウン中で待機上限超過: {last_err}")
+                time.sleep(wait)
+                waited += wait
+                continue
+            model = available[0]
+            try:
+                raw = self.clients[model].complete(system, user)
+                self.last_model = model
+                return raw
+            except GeminiRateLimitError as e:
+                self.cooldown_until[model] = (
+                    time.monotonic() + max(e.retry_delay_sec, 30.0))
+                last_err = str(e)[:150]
+                print(f"    [rotate] {model}: quota (cooldown "
+                      f"{max(e.retry_delay_sec, 30.0):.0f}s)", file=sys.stderr)
+            except RuntimeError as e:
+                self.cooldown_until[model] = (
+                    time.monotonic() + self.ERROR_COOLDOWN_SEC)
+                last_err = str(e)[:150]
+                print(f"    [rotate] {model}: {last_err}", file=sys.stderr)
+
+
 def get_client(provider: str = "stub") -> LLMClient:
-    """プロバイダ名からクライアントを生成する。"""
+    """プロバイダ名からクライアントを生成する。
+
+    'gemini' はモデルローテーション付きクライアントを返す（v3 の専門家モードは
+    銘柄あたり 3 コールで単一モデルの無料枠クォータを超えやすいため）。
+    単一モデル固定が必要な場合は 'gemini-single' を使う。
+    """
     if provider == "stub":
         return StubLLMClient()
     if provider == "gemini":
+        return RotatingGeminiClient()
+    if provider == "gemini-single":
         return GeminiClient()
-    raise ValueError(f"未知のプロバイダ: {provider}（'stub' / 'gemini'）")
+    raise ValueError(f"未知のプロバイダ: {provider}（'stub' / 'gemini' / 'gemini-single'）")

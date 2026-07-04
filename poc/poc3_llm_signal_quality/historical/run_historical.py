@@ -35,78 +35,15 @@ from historical_context import (  # noqa: E402
     build_context_asof,
     trading_dates,
 )
-from llm_client import GeminiClient, GeminiRateLimitError  # noqa: E402
+from llm_client import (  # noqa: E402
+    DEFAULT_ROTATION_MODELS as DEFAULT_MODELS,
+    RotatingGeminiClient,
+)
 
 # v2 の既定保存先（v1: signals_historical は保持したまま分離）
 DEFAULT_SIGNALS_DIR = DATA_DIR / "signals_historical_v2"
 
 JST = timezone(timedelta(hours=9))
-
-# Gemini 無料枠はモデルごとに小さなトークンバケット型クォータのため、
-# 既定で複数モデルをローテーションする（クォータ枯渇時に次モデルへ切替）。
-# v2: 敗因分析で lite 系 40.4% vs 非 lite 53.1% (n=136) だったため、
-# 非 lite を優先し lite 系は最後の砦とする。
-DEFAULT_MODELS = [
-    "gemini-flash-latest",
-    "gemini-3-flash-preview",
-    "gemini-2.5-flash",
-    "gemini-2.0-flash",
-    "gemini-2.5-flash-lite",
-    "gemini-3.1-flash-lite",
-    "gemini-2.0-flash-lite",
-]
-
-
-class RotatingGeminiClient:
-    """モデルごとの 429 クォータをまたいでローテーションする Gemini クライアント。
-
-    - 各モデルの GeminiClient は 429 を即時 GeminiRateLimitError で返す設定にし、
-      クールダウン（API 提示の retryDelay）を記録して次モデルへ切り替える
-    - その他の RuntimeError（503 リトライ上限等）も短いクールダウンで次モデルへ
-    - 全モデルがクールダウン中なら最短の解除時刻まで待つ
-    - 成功したモデル名を last_model に保持する（シグナル記録用）
-    """
-
-    TOTAL_WAIT_CAP_SEC = 2700.0   # 1コンテキストあたりの累計待機上限
-    ERROR_COOLDOWN_SEC = 90.0     # 429 以外のエラー時のクールダウン
-
-    def __init__(self, models=None):
-        self.models = models or DEFAULT_MODELS
-        self.clients = {m: GeminiClient(model=m, rate_limit_max_wait_sec=0.0)
-                        for m in self.models}
-        self.cooldown_until = {m: 0.0 for m in self.models}
-        self.last_model = None
-
-    def complete(self, system: str, user: str) -> str:
-        waited = 0.0
-        last_err = None
-        while True:
-            now = time.monotonic()
-            available = [m for m in self.models if self.cooldown_until[m] <= now]
-            if not available:
-                wait = min(self.cooldown_until.values()) - now + 1.0
-                if waited + wait > self.TOTAL_WAIT_CAP_SEC:
-                    raise RuntimeError(
-                        f"全モデルがクールダウン中で待機上限超過: {last_err}")
-                time.sleep(wait)
-                waited += wait
-                continue
-            model = available[0]
-            try:
-                raw = self.clients[model].complete(system, user)
-                self.last_model = model
-                return raw
-            except GeminiRateLimitError as e:
-                self.cooldown_until[model] = (
-                    time.monotonic() + max(e.retry_delay_sec, 30.0))
-                last_err = str(e)[:150]
-                print(f"    [rotate] {model}: quota (cooldown "
-                      f"{max(e.retry_delay_sec, 30.0):.0f}s)", file=sys.stderr)
-            except RuntimeError as e:
-                self.cooldown_until[model] = (
-                    time.monotonic() + self.ERROR_COOLDOWN_SEC)
-                last_err = str(e)[:150]
-                print(f"    [rotate] {model}: {last_err}", file=sys.stderr)
 
 
 def signal_path(signals_dir: Path, asof, code: str) -> Path:
@@ -114,7 +51,8 @@ def signal_path(signals_dir: Path, asof, code: str) -> Path:
 
 
 def save_signal_asof(signals_dir: Path, asof, code: str, name: str, context: dict,
-                     signal: dict, raw: str, model: str = None) -> Path:
+                     signal: dict, raw: str, model: str = None,
+                     expert_views: dict = None) -> Path:
     path = signal_path(signals_dir, asof, code)
     path.parent.mkdir(parents=True, exist_ok=True)
     record = {
@@ -127,6 +65,8 @@ def save_signal_asof(signals_dir: Path, asof, code: str, name: str, context: dic
         "signal": signal,
         "raw_response": raw,
     }
+    if expert_views:
+        record["expert_views"] = expert_views
     with open(path, "w", encoding="utf-8") as f:
         json.dump(record, f, ensure_ascii=False, indent=2)
     return path
@@ -152,6 +92,9 @@ def main() -> None:
                         help=f"ローテーションする Gemini モデル（既定: {DEFAULT_MODELS}）")
     parser.add_argument("--signals-dir", type=Path, default=DEFAULT_SIGNALS_DIR,
                         help=f"シグナル保存先ディレクトリ（既定: {DEFAULT_SIGNALS_DIR}）")
+    parser.add_argument("--mode", choices=["single", "experts"], default="single",
+                        help="single=一括判定（既定、v2互換） / experts=2専門家+統合"
+                             "（銘柄あたり LLM 3回。v3 用に別 signals-dir を推奨）")
     args = parser.parse_args()
     signals_dir = args.signals_dir
 
@@ -184,22 +127,33 @@ def main() -> None:
             break
         try:
             context = build_context_asof(code, asof)
-            system, user = render_prompts(context)
-            # パース・スキーマ違反は LLM 出力の揺らぎなので 1 回だけ再サンプルする
-            for retry in range(2):
-                calls += 1
-                raw = client.complete(system, user)
-                try:
-                    signal = parse_response(raw)
-                    validate_signal(signal)
-                    break
-                except (json.JSONDecodeError, jsonschema.ValidationError):
-                    if retry == 1:
-                        raise
-                    print(f"    [resample] {asof} {code}: スキーマ違反のため再生成",
-                          file=sys.stderr)
+            expert_views = None
+            if args.mode == "experts":
+                from experts import run_expert_pipeline
+                signal, views, raws = run_expert_pipeline(
+                    client, context, parse_response, validate_signal,
+                    log=lambda m: print(m, file=sys.stderr))
+                raw = raws["synthesis"]
+                expert_views = views
+                calls += 3
+            else:
+                system, user = render_prompts(context)
+                # パース・スキーマ違反は LLM 出力の揺らぎなので 1 回だけ再サンプルする
+                for retry in range(2):
+                    calls += 1
+                    raw = client.complete(system, user)
+                    try:
+                        signal = parse_response(raw)
+                        validate_signal(signal)
+                        break
+                    except (json.JSONDecodeError, jsonschema.ValidationError):
+                        if retry == 1:
+                            raise
+                        print(f"    [resample] {asof} {code}: スキーマ違反のため再生成",
+                              file=sys.stderr)
             save_signal_asof(signals_dir, asof, code, context["meta"]["name"],
-                             context, signal, raw, model=client.last_model)
+                             context, signal, raw, model=client.last_model,
+                             expert_views=expert_views)
             ok += 1
             elapsed = time.monotonic() - started
             print(f"[OK ] {asof} {code}: {signal['signal']}"
