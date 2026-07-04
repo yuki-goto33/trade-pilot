@@ -61,6 +61,7 @@ from context_builder import (  # noqa: E402
     _stock_meta,
     _fundamentals_period,
     context_to_json,
+    jfc_sme_snapshot,
     market_regime_from_series,
     technical_from_window,
 )
@@ -446,12 +447,17 @@ def build_macro_asof(asof) -> dict:
     topix = topix.dropna(subset=["Close"])
     regime = market_regime_from_series(topix.set_index("Date")["Close"])
 
-    return {
+    macro = {
         "indices": indices,
         "market_regime": regime,
         "rates": {},
         "note": "ヒストリカル再構成のため金利（日米10年金利等）の過去時点値は未取得",
     }
+    # 日本公庫 中小企業景況調査 DI（調査月の翌月1日以降にのみ利用可 = look-ahead 防止）
+    sme = jfc_sme_snapshot(asof=asof)
+    if sme:
+        macro["jfc_sme_survey"] = sme
+    return macro
 
 
 # ---------------------------------------------------------------------------

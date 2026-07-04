@@ -46,6 +46,7 @@ FETCH_SCRIPTS = [
     "fetch_disclosures_yanoshin.py",
     "summarize_disclosures.py",
     "fetch_macro.py",
+    "fetch_macro_jfc.py",
 ]
 
 FETCH_TIMEOUT_SEC = 600

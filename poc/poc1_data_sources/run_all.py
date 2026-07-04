@@ -13,6 +13,7 @@ import fetch_disclosures_yanoshin
 import fetch_news_google
 import fetch_news_macro_rss
 import fetch_macro
+import fetch_macro_jfc
 from common import now_jst_iso, save_json
 
 STEPS = [
@@ -23,6 +24,7 @@ STEPS = [
     fetch_news_google,
     fetch_news_macro_rss,
     fetch_macro,
+    fetch_macro_jfc,
 ]
 
 SLEEP_BETWEEN = 3.0
