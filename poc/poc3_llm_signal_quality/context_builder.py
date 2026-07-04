@@ -9,7 +9,8 @@ dict はそのまま JSON 化してユーザープロンプトに埋め込む中
 - disclosures_yanoshin.json: 銘柄別 適時開示タイトル
 - fundamentals_yfinance.json: バリュエーション・業績トレンド・次回決算日
 - disclosure_summaries.json: 重要開示（決算短信等）の Gemini 要約キャッシュ
-- macro_yfinance.csv      : 日経平均/TOPIX ETF/ドル円/S&P500/VIX（直近5日）
+- macro_yfinance.csv      : 日経平均/TOPIX ETF/ドル円/S&P500/VIX
+  （直近約60日。スナップショットは末尾5日窓、市場レジーム判定に全履歴を使用）
 - macro_jgb.json          : 日本10年金利
 - macro_fred.json         : 米10年金利・FF金利
 
@@ -51,6 +52,12 @@ DISCLOSURE_SUMMARY_RECENT_DAYS = 90
 
 # マクロスナップショットに含める市場系列（macro_yfinance.csv の ticker）
 MACRO_TICKERS = ["^N225", "1306.T", "JPY=X", "^GSPC", "^VIX"]
+
+# マクロスナップショットの営業日数（indices の change_5d_pct 用）
+MACRO_SNAPSHOT_BDAYS = 5
+
+# 市場レジーム判定に使う系列（TOPIX 連動 ETF）
+REGIME_TICKER = "1306.T"
 
 
 class ContextBuildError(Exception):
@@ -349,16 +356,59 @@ def build_fundamentals(code: str) -> dict:
 # マクロ
 # ---------------------------------------------------------------------------
 
+def market_regime_from_series(close: pd.Series) -> dict:
+    """TOPIX 連動 ETF (1306.T) の終値系列（昇順）から市場レジームを機械判定する。
+
+    判定ロジック（v2、シンプルに固定）:
+    - 終値 > 25日線 かつ 直近5日騰落率 > 0 → "uptrend"
+    - 終値 < 25日線 かつ 直近5日騰落率 < 0 → "downtrend"
+    - それ以外 → "neutral"
+
+    context_builder.build_macro（最新データ）と
+    historical_context.build_macro_asof（過去 as-of 時点）の共通実装。
+    データが 25日線計算に足りない場合は neutral + note を返す。
+    """
+    close = close.dropna()
+    if len(close) < 26:
+        return {
+            "market_regime": "neutral",
+            "note": f"TOPIX 終値履歴が25日線計算に不足（{len(close)}本 < 26本）のため neutral 扱い",
+        }
+    last = float(close.iloc[-1])
+    sma25 = float(close.rolling(25).mean().iloc[-1])
+    ret5 = (last / float(close.iloc[-6]) - 1) * 100
+    ret25 = (last / float(close.iloc[-26]) - 1) * 100
+    if last > sma25 and ret5 > 0:
+        regime = "uptrend"
+    elif last < sma25 and ret5 < 0:
+        regime = "downtrend"
+    else:
+        regime = "neutral"
+    return {
+        "market_regime": regime,
+        "topix_close": _round(last),
+        "topix_sma25": _round(sma25),
+        "topix_close_vs_sma25": "above" if last >= sma25 else "below",
+        "topix_return_5d_pct": _round(ret5),
+        "topix_return_25d_pct": _round(ret25),
+        "note": "TOPIX連動ETF(1306.T) の終値 vs 25日線と直近5日騰落率による機械判定"
+                "（終値>25日線かつ5日騰落>0=uptrend / 終値<25日線かつ5日騰落<0=downtrend"
+                " / それ以外=neutral）",
+    }
+
+
 def build_macro() -> dict:
-    """指数・為替・金利のスナップショット（銘柄に依らず共通）。"""
+    """指数・為替・金利のスナップショット + 市場レジーム（銘柄に依らず共通）。"""
     df = _load_macro_prices()
 
     indices = []
     for ticker in MACRO_TICKERS:
-        series = df[df["ticker"] == ticker]
+        series = df[df["ticker"] == ticker].dropna(subset=["Close"])
         if series.empty:
             continue
         label = series["label"].iloc[-1]
+        # スナップショットは直近5営業日窓（CSV に長い履歴があっても 5日騰落を保つ）
+        series = series.tail(MACRO_SNAPSHOT_BDAYS)
         last = series.iloc[-1]
         first = series.iloc[0]
         prev_close = series["Close"].iloc[-2] if len(series) >= 2 else None
@@ -376,6 +426,10 @@ def build_macro() -> dict:
                 "change_5d_pct": _round(change_period),
             }
         )
+
+    # 市場レジーム（TOPIX 25日線には CSV 内の全履歴を使う）
+    topix = df[df["ticker"] == REGIME_TICKER].dropna(subset=["Close"])
+    regime = market_regime_from_series(topix.set_index("Date")["Close"])
 
     rates = {}
     try:
@@ -400,7 +454,7 @@ def build_macro() -> dict:
     except ContextBuildError:
         pass
 
-    return {"indices": indices, "rates": rates}
+    return {"indices": indices, "market_regime": regime, "rates": rates}
 
 
 # ---------------------------------------------------------------------------

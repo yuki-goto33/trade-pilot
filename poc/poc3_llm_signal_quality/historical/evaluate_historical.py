@@ -14,14 +14,24 @@
    target 到達（的中）/ stop 到達（外れ）/ 期限切れ時の含み損益方向 を判定し、
    55% 基準と照合
 5. 結果を data/historical_eval_report.md に出力
+   （--signals-dir data/signals_historical_v2 の場合は historical_eval_report_v2.md）
+
+--baseline-dir を指定すると、ベースライン（例: v1 の data/signals_historical）と
+同一 (as-of, code) に絞った的中率・シグナル分布・モデル構成・バックテストの
+比較セクションをレポートに追加する。
 
 使い方:
     ../../../.venv/bin/python evaluate_historical.py
     ../../../.venv/bin/python evaluate_historical.py --min-confidence 60
+    ../../../.venv/bin/python evaluate_historical.py \
+        --signals-dir ../../../data/signals_historical_v2 \
+        --baseline-dir ../../../data/signals_historical
 """
 import argparse
 import json
+import re
 import sys
+import tempfile
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -45,9 +55,7 @@ from historical_context import (  # noqa: E402
 from run_golden_cross import CASH, LOT_SIZE, portfolio_summary, run_backtests  # noqa: E402
 from run_signals import SignalStrategy, load_signals  # noqa: E402
 
-SIGNALS_HIST_DIR = DATA_DIR / "signals_historical"
-SIGNALS_CSV = SIGNALS_HIST_DIR / "signals.csv"
-REPORT_PATH = DATA_DIR / "historical_eval_report.md"
+DEFAULT_SIGNALS_DIR = DATA_DIR / "signals_historical"
 
 JST = timezone(timedelta(hours=9))
 HIT_RATE_TARGET_PCT = 55.0
@@ -59,19 +67,39 @@ _OHLCV_COLS = ["Open", "High", "Low", "Close", "Volume"]
 # シグナル読み込み・CSV 変換
 # ---------------------------------------------------------------------------
 
-def load_signal_records() -> list:
-    """data/signals_historical/<date>/<code>.json を全件読み込む。"""
+def default_report_path(signals_dir: Path) -> Path:
+    """signals_historical → historical_eval_report.md /
+    signals_historical_v2 → historical_eval_report_v2.md"""
+    suffix = signals_dir.name.replace("signals_historical", "")
+    return DATA_DIR / f"historical_eval_report{suffix}.md"
+
+
+def load_signal_records(signals_dir: Path = DEFAULT_SIGNALS_DIR) -> list:
+    """<signals_dir>/<date>/<code>.json を全件読み込む。"""
     records = []
-    for path in sorted(SIGNALS_HIST_DIR.glob("????-??-??/*.json")):
+    for path in sorted(Path(signals_dir).glob("????-??-??/*.json")):
         with open(path, encoding="utf-8") as f:
             records.append(json.load(f))
     if not records:
-        raise SystemExit(f"{SIGNALS_HIST_DIR} にシグナルがありません。"
+        raise SystemExit(f"{signals_dir} にシグナルがありません。"
                          "run_historical.py を先に実行してください。")
     return records
 
 
-def write_signals_csv(records: list) -> pd.DataFrame:
+def extract_model(generator: str) -> str:
+    """'historical (run_historical.py, gemini-2.5-flash)' → 'gemini-2.5-flash'"""
+    m = re.search(r"run_historical\.py,\s*([^)]+)\)", generator or "")
+    return m.group(1).strip() if m else (generator or "unknown")
+
+
+def lite_class(model: str) -> str:
+    """モデル名 → 'lite' / 'non-lite' / 'unknown'（モデル名記録なし）。"""
+    if not model or model == "gemini":
+        return "unknown"
+    return "lite" if "lite" in model else "non-lite"
+
+
+def write_signals_csv(records: list, csv_path: Path) -> pd.DataFrame:
     """poc4 用の signals.csv を書き出す（date は price_as_of = as-of の前営業日）。"""
     rows = [
         {
@@ -83,7 +111,7 @@ def write_signals_csv(records: list) -> pd.DataFrame:
         for r in records
     ]
     df = pd.DataFrame(rows).sort_values(["date", "code"])
-    df.to_csv(SIGNALS_CSV, index=False)
+    df.to_csv(csv_path, index=False)
     return df
 
 
@@ -221,6 +249,37 @@ def direction_hit_rates(records: list, prices: dict) -> "tuple":
 
 
 # ---------------------------------------------------------------------------
+# バックテスト（poc4 再利用）
+# ---------------------------------------------------------------------------
+
+def run_signal_backtest(sig_df: pd.DataFrame, csv_path: Path, min_confidence: float):
+    """signals.csv を poc4 SignalStrategy でバックテストする。
+
+    Returns: (summary DataFrame|None, port dict|None, prices dict, start)
+    """
+    signal_map = load_signals(csv_path)
+    start = sig_df["date"].min()
+    prices = load_prices_yf(start=start)
+    target = {c: prices[c] for c in prices if c in signal_map}
+
+    summary, port = None, None
+    if target:
+        rows, curves = [], {}
+        for code in sorted(target):
+            s, e = run_backtests(
+                SignalStrategy,
+                prices={code: target[code]},
+                signals=signal_map[code],
+                min_confidence=min_confidence,
+            )
+            rows.append(s)
+            curves.update(e)
+        summary = pd.concat(rows, ignore_index=True)
+        port = portfolio_summary(summary, curves)
+    return summary, port, prices, start
+
+
+# ---------------------------------------------------------------------------
 # レポート
 # ---------------------------------------------------------------------------
 
@@ -237,6 +296,7 @@ def build_report(records, sig_df, summary, port, topix, hit_stats, args) -> str:
     lines.append(f"- 生成日時: {datetime.now(JST).isoformat(timespec='seconds')}")
     lines.append(f"- シグナル期間 (as-of): {dates[0]} 〜 {dates[-1]}"
                  f"（{len(dates)} 営業日 × {len(codes)} 銘柄 = {len(records)} 件）")
+    lines.append(f"- シグナルディレクトリ: {Path(args.signals_dir).name}")
     lines.append(f"- 確信度足切り (--min-confidence): {args.min_confidence}")
     lines.append("- シグナル生成: 各 as-of 日の朝に「前営業日引けまでの"
                  "テクニカル・直前3日ニュース・90日開示・公表済みファンダ・マクロ」のみで生成")
@@ -321,37 +381,178 @@ def build_report(records, sig_df, summary, port, topix, hit_stats, args) -> str:
     return "\n".join(lines)
 
 
+# ---------------------------------------------------------------------------
+# ベースライン比較（v1 vs v2 など）
+# ---------------------------------------------------------------------------
+
+def _hit_summary(judged: list) -> dict:
+    def rate(items):
+        return round(100 * sum(1 for x in items if x["hit"]) / len(items), 1) if items else None
+    out = {"n": len(judged), "rate": rate(judged)}
+    for a in ("buy", "sell"):
+        g = [x for x in judged if x["action"] == a]
+        out[a] = {"n": len(g), "rate": rate(g)}
+    return out
+
+
+def _action_dist(records: list) -> dict:
+    dist = {"buy": 0, "sell": 0, "hold": 0}
+    for r in records:
+        dist[r["signal"]["signal"]] = dist.get(r["signal"]["signal"], 0) + 1
+    return dist
+
+
+def _model_map(records: list) -> dict:
+    return {(r["asof"], r["code"]): extract_model(r.get("generator", ""))
+            for r in records}
+
+
+def _judged_by_class(judged: list, model_map: dict) -> dict:
+    groups = {}
+    for x in judged:
+        cls = lite_class(model_map.get((x["asof"], x["code"])))
+        groups.setdefault(cls, []).append(x)
+    return groups
+
+
+def _fmt(rate, n):
+    return f"{rate}% (n={n})" if rate is not None else f"- (n={n})"
+
+
+def build_comparison_section(records, judged, port, prices, baseline_dir: Path,
+                             min_confidence: float) -> list:
+    """今回のシグナル集合とベースライン（同一 as-of × code に絞る）の比較セクション。"""
+    base_records = load_signal_records(baseline_dir)
+    keys = {(r["asof"], r["code"]) for r in records}
+    base_matched = [r for r in base_records if (r["asof"], r["code"]) in keys]
+
+    base_judged_m, _ = direction_hit_rates(base_matched, prices)
+    base_judged_all, _ = direction_hit_rates(base_records, prices)
+
+    cur = _hit_summary(judged)
+    bm = _hit_summary(base_judged_m)
+    ba = _hit_summary(base_judged_all)
+
+    # ベースライン（同範囲）のバックテスト（一時 CSV 経由で poc4 ローダーを再利用）
+    base_port = None
+    if base_matched:
+        with tempfile.TemporaryDirectory() as td:
+            csv_path = Path(td) / "signals.csv"
+            bdf = write_signals_csv(base_matched, csv_path)
+            _, base_port, _, _ = run_signal_backtest(bdf, csv_path, min_confidence)
+
+    cur_models = _model_map(records)
+    base_models = _model_map(base_matched)
+    cur_cls = _judged_by_class(judged, cur_models)
+    base_cls = _judged_by_class(base_judged_m, base_models)
+
+    L = []
+    L.append(f"## 6. ベースライン比較（vs {Path(baseline_dir).name}）")
+    L.append("")
+    L.append(f"- ベースライン: {Path(baseline_dir).name}（全 {len(base_records)} 件）")
+    L.append(f"- 同条件比較: 今回の (as-of, code) と一致する {len(base_matched)} 件に絞った値も併記")
+    L.append("")
+    L.append("### 6-1. 方向的中率の比較")
+    L.append("")
+    L.append("| 集団 | 判定 n | 的中率% | buy | sell |")
+    L.append("|---|---:|---:|---:|---:|")
+    for label, s in (("今回", cur),
+                     ("ベースライン（同一 as-of×code）", bm),
+                     ("ベースライン（全件）", ba)):
+        L.append(f"| {label} | {s['n']} | {s['rate']} "
+                 f"| {_fmt(s['buy']['rate'], s['buy']['n'])} "
+                 f"| {_fmt(s['sell']['rate'], s['sell']['n'])} |")
+    L.append("")
+
+    L.append("### 6-2. シグナル分布の比較")
+    L.append("")
+    d_cur, d_base = _action_dist(records), _action_dist(base_matched)
+    L.append("| action | 今回 | ベースライン（同範囲） |")
+    L.append("|---|---:|---:|")
+    for a in ("buy", "sell", "hold"):
+        c, b = d_cur.get(a, 0), d_base.get(a, 0)
+        pc = 100 * c / len(records) if records else 0
+        pb = 100 * b / len(base_matched) if base_matched else 0
+        L.append(f"| {a} | {c} ({pc:.1f}%) | {b} ({pb:.1f}%) |")
+    L.append("")
+
+    L.append("### 6-3. モデル構成と lite/非lite 分解")
+    L.append("")
+    all_models = sorted(set(cur_models.values()) | set(base_models.values()))
+    cur_counts = pd.Series(list(cur_models.values())).value_counts()
+    base_counts = pd.Series(list(base_models.values())).value_counts() \
+        if base_models else pd.Series(dtype=int)
+    L.append("| モデル | 今回件数 | ベースライン（同範囲）件数 |")
+    L.append("|---|---:|---:|")
+    for m in all_models:
+        L.append(f"| {m} | {int(cur_counts.get(m, 0))} | {int(base_counts.get(m, 0))} |")
+    L.append("")
+    L.append("方向的中率の lite/非lite 分解（判定対象のみ）:")
+    L.append("")
+    L.append("| 集団 | クラス | n | 的中率% |")
+    L.append("|---|---|---:|---:|")
+    for label, groups in (("今回", cur_cls), ("ベースライン（同範囲）", base_cls)):
+        for cls in ("non-lite", "lite", "unknown"):
+            g = groups.get(cls)
+            if not g:
+                continue
+            s = _hit_summary(g)
+            L.append(f"| {label} | {cls} | {s['n']} | {s['rate']} |")
+    L.append("")
+    cn, bn = cur_cls.get("non-lite"), base_cls.get("non-lite")
+    cl, bl = cur_cls.get("lite"), base_cls.get("lite")
+    if cn and bn:
+        L.append(f"- **プロンプト等の効果の目安（非lite同士の比較）**: 今回 "
+                 f"{_fmt(_hit_summary(cn)['rate'], len(cn))} vs ベースライン "
+                 f"{_fmt(_hit_summary(bn)['rate'], len(bn))}")
+    if cl and bl:
+        L.append(f"- プロンプト等の効果の目安（lite同士の比較）: 今回 "
+                 f"{_fmt(_hit_summary(cl)['rate'], len(cl))} vs ベースライン "
+                 f"{_fmt(_hit_summary(bl)['rate'], len(bl))}")
+    if cn and cl:
+        L.append(f"- モデル効果の目安（今回内の lite vs 非lite）: 非lite "
+                 f"{_fmt(_hit_summary(cn)['rate'], len(cn))} vs lite "
+                 f"{_fmt(_hit_summary(cl)['rate'], len(cl))}")
+    L.append("")
+
+    L.append("### 6-4. バックテスト比較（同範囲）")
+    L.append("")
+    if port:
+        L.append(f"- 今回ポートフォリオリターン: {port['total_return_pct']}%")
+    if base_port:
+        L.append(f"- ベースライン（同範囲）ポートフォリオリターン: "
+                 f"{base_port['total_return_pct']}%")
+    if not port and not base_port:
+        L.append("- バックテスト対象なし")
+    L.append("")
+    return L
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--min-confidence", type=float, default=0.0,
                         help="この確信度(0-100)未満のシグナルを無視")
+    parser.add_argument("--signals-dir", type=Path, default=DEFAULT_SIGNALS_DIR,
+                        help=f"評価対象シグナルのディレクトリ（既定: {DEFAULT_SIGNALS_DIR}）")
+    parser.add_argument("--report", type=Path, default=None,
+                        help="レポート出力先（既定: signals-dir 名から自動決定）")
+    parser.add_argument("--baseline-dir", type=Path, default=None,
+                        help="比較するベースラインのシグナルディレクトリ（例: v1）")
     args = parser.parse_args()
 
-    records = load_signal_records()
-    sig_df = write_signals_csv(records)
-    print(f"signals.csv: {len(sig_df)} 行 -> {SIGNALS_CSV}")
+    signals_dir = args.signals_dir
+    report_path = args.report or default_report_path(signals_dir)
+    signals_csv = signals_dir / "signals.csv"
+
+    records = load_signal_records(signals_dir)
+    sig_df = write_signals_csv(records, signals_csv)
+    print(f"signals.csv: {len(sig_df)} 行 -> {signals_csv}")
     print(sig_df["action"].value_counts().to_string())
 
     # バックテスト（価格は最初のシグナル date から末尾まで）
-    signal_map = load_signals(SIGNALS_CSV)
-    start = sig_df["date"].min()
-    prices = load_prices_yf(start=start)
-    target = {c: prices[c] for c in prices if c in signal_map}
-
-    summary, port = None, None
-    if target:
-        rows, curves = [], {}
-        for code in sorted(target):
-            s, e = run_backtests(
-                SignalStrategy,
-                prices={code: target[code]},
-                signals=signal_map[code],
-                min_confidence=args.min_confidence,
-            )
-            rows.append(s)
-            curves.update(e)
-        summary = pd.concat(rows, ignore_index=True)
-        port = portfolio_summary(summary, curves)
+    summary, port, prices, start = run_signal_backtest(
+        sig_df, signals_csv, args.min_confidence)
+    if summary is not None:
         print("\n=== バックテスト銘柄別サマリー ===")
         print(summary.to_string(index=False))
         print("\n=== ポートフォリオ合算 ===")
@@ -359,6 +560,8 @@ def main() -> None:
             print(f"{k}: {v:,}")
 
     # TOPIX 比較（バックテストと同じ日付範囲）
+    codes = {r["code"] for r in records}
+    target = {c: df for c, df in prices.items() if c in codes}
     price_end = max(df.index.max() for df in target.values()) if target else None
     topix = topix_return_pct(start, price_end) if price_end is not None else (None,) * 3
 
@@ -369,10 +572,14 @@ def main() -> None:
     print(f"内訳: {hit_stats['outcomes']}")
 
     report = build_report(records, sig_df, summary, port, topix, hit_stats, args)
-    REPORT_PATH.write_text(report, encoding="utf-8")
-    print(f"\nレポート出力: {REPORT_PATH}")
+    if args.baseline_dir:
+        report += "\n".join(build_comparison_section(
+            records, judged, port, prices, args.baseline_dir,
+            args.min_confidence)) + "\n"
+    report_path.write_text(report, encoding="utf-8")
+    print(f"\nレポート出力: {report_path}")
 
-    detail_path = SIGNALS_HIST_DIR / "direction_judgements.json"
+    detail_path = signals_dir / "direction_judgements.json"
     with open(detail_path, "w", encoding="utf-8") as f:
         json.dump(judged, f, ensure_ascii=False, indent=2)
     print(f"的中判定の明細: {detail_path}")

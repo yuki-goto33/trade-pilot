@@ -3,10 +3,11 @@
 generate_signal.py の render_prompts / parse_response / validate_signal を再利用し、
 コンテキストのみ historical_context.build_context_asof で as-of 時点に差し替える。
 
-- 保存先: data/signals_historical/<YYYY-MM-DD>/<code>.json
+- 保存先: data/signals_historical_v2/<YYYY-MM-DD>/<code>.json
+  （--signals-dir で変更可。v1 の生成物は data/signals_historical/ に保持）
 - 生成済み（ファイル存在）はスキップ → resume 対応
 - --max-calls N で 1 回の実行の LLM 呼び出し数を制限（チャンク実行用）
-- 進捗を stdout と data/signals_historical/progress.json に出力
+- 進捗を stdout と <signals-dir>/progress.json に出力
 
 使い方:
     ../../../.venv/bin/python run_historical.py --start 2026-04-01 --end 2026-04-30 --max-calls 40
@@ -36,20 +37,23 @@ from historical_context import (  # noqa: E402
 )
 from llm_client import GeminiClient, GeminiRateLimitError  # noqa: E402
 
-SIGNALS_HIST_DIR = DATA_DIR / "signals_historical"
-PROGRESS_PATH = SIGNALS_HIST_DIR / "progress.json"
+# v2 の既定保存先（v1: signals_historical は保持したまま分離）
+DEFAULT_SIGNALS_DIR = DATA_DIR / "signals_historical_v2"
 
 JST = timezone(timedelta(hours=9))
 
 # Gemini 無料枠はモデルごとに小さなトークンバケット型クォータのため、
 # 既定で複数モデルをローテーションする（クォータ枯渇時に次モデルへ切替）。
+# v2: 敗因分析で lite 系 40.4% vs 非 lite 53.1% (n=136) だったため、
+# 非 lite を優先し lite 系は最後の砦とする。
 DEFAULT_MODELS = [
-    "gemini-2.5-flash-lite",
+    "gemini-flash-latest",
+    "gemini-3-flash-preview",
     "gemini-2.5-flash",
     "gemini-2.0-flash",
-    "gemini-2.0-flash-lite",
-    "gemini-3-flash-preview",
+    "gemini-2.5-flash-lite",
     "gemini-3.1-flash-lite",
+    "gemini-2.0-flash-lite",
 ]
 
 
@@ -105,13 +109,13 @@ class RotatingGeminiClient:
                 print(f"    [rotate] {model}: {last_err}", file=sys.stderr)
 
 
-def signal_path(asof, code: str) -> Path:
-    return SIGNALS_HIST_DIR / asof.isoformat() / f"{code}.json"
+def signal_path(signals_dir: Path, asof, code: str) -> Path:
+    return signals_dir / asof.isoformat() / f"{code}.json"
 
 
-def save_signal_asof(asof, code: str, name: str, context: dict,
+def save_signal_asof(signals_dir: Path, asof, code: str, name: str, context: dict,
                      signal: dict, raw: str, model: str = None) -> Path:
-    path = signal_path(asof, code)
+    path = signal_path(signals_dir, asof, code)
     path.parent.mkdir(parents=True, exist_ok=True)
     record = {
         "code": code,
@@ -128,11 +132,11 @@ def save_signal_asof(asof, code: str, name: str, context: dict,
     return path
 
 
-def write_progress(stats: dict) -> None:
-    SIGNALS_HIST_DIR.mkdir(parents=True, exist_ok=True)
+def write_progress(signals_dir: Path, stats: dict) -> None:
+    signals_dir.mkdir(parents=True, exist_ok=True)
     stats = dict(stats)
     stats["updated_at"] = datetime.now(JST).isoformat(timespec="seconds")
-    with open(PROGRESS_PATH, "w", encoding="utf-8") as f:
+    with open(signals_dir / "progress.json", "w", encoding="utf-8") as f:
         json.dump(stats, f, ensure_ascii=False, indent=2)
 
 
@@ -146,7 +150,10 @@ def main() -> None:
                         help="この実行での LLM 呼び出し数上限（チャンク実行用）")
     parser.add_argument("--models", nargs="*", default=None,
                         help=f"ローテーションする Gemini モデル（既定: {DEFAULT_MODELS}）")
+    parser.add_argument("--signals-dir", type=Path, default=DEFAULT_SIGNALS_DIR,
+                        help=f"シグナル保存先ディレクトリ（既定: {DEFAULT_SIGNALS_DIR}）")
     args = parser.parse_args()
+    signals_dir = args.signals_dir
 
     codes = args.codes or [s["code"] for s in UNIVERSE]
     unknown = [c for c in codes if c not in {s["code"] for s in UNIVERSE}]
@@ -160,10 +167,11 @@ def main() -> None:
             tasks.append((d, code))
     tasks.sort()
 
-    done_before = sum(1 for d, c in tasks if signal_path(d, c).exists())
-    todo = [(d, c) for d, c in tasks if not signal_path(d, c).exists()]
+    done_before = sum(1 for d, c in tasks if signal_path(signals_dir, d, c).exists())
+    todo = [(d, c) for d, c in tasks if not signal_path(signals_dir, d, c).exists()]
     print(f"対象: {len(tasks)} 件（{args.start}〜{args.end} × {len(codes)} 銘柄）"
           f" / 生成済み {done_before} / 残り {len(todo)}"
+          f" / 保存先 {signals_dir}"
           + (f" / 今回上限 {args.max_calls}" if args.max_calls else ""))
 
     client = RotatingGeminiClient(args.models)
@@ -190,8 +198,8 @@ def main() -> None:
                         raise
                     print(f"    [resample] {asof} {code}: スキーマ違反のため再生成",
                           file=sys.stderr)
-            save_signal_asof(asof, code, context["meta"]["name"], context,
-                             signal, raw, model=client.last_model)
+            save_signal_asof(signals_dir, asof, code, context["meta"]["name"],
+                             context, signal, raw, model=client.last_model)
             ok += 1
             elapsed = time.monotonic() - started
             print(f"[OK ] {asof} {code}: {signal['signal']}"
@@ -202,7 +210,7 @@ def main() -> None:
             ng += 1
             print(f"[NG ] {asof} {code}: {type(e).__name__}: {e}", file=sys.stderr)
 
-        write_progress({
+        write_progress(signals_dir, {
             "range": [args.start, args.end],
             "codes": codes,
             "total_tasks": len(tasks),

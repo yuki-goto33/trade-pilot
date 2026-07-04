@@ -10,7 +10,10 @@ LLM API は一切呼ばない（統計・データ分析のみ）。
 
 使い方:
     ../../../.venv/bin/python analyze_failures.py
+    ../../../.venv/bin/python analyze_failures.py \
+        --signals-dir ../../../data/signals_historical_v2
 """
+import argparse
 import json
 import re
 import sys
@@ -24,27 +27,30 @@ sys.path.insert(0, str(HIST_DIR))
 
 from evaluate_historical import (  # noqa: E402
     DATA_DIR,
+    DEFAULT_SIGNALS_DIR,
+    extract_model,
     judge_direction,
     load_prices_yf,
     load_signal_records,
 )
 from historical_context import _load_macro_history  # noqa: E402
 
-REPORT_PATH = DATA_DIR / "failure_analysis.md"
 JST = timezone(timedelta(hours=9))
 
 TOPIX_TICKER = "1306.T"
 FUND_PATTERN = re.compile(r"fundamentals|ファンダ")
 
 
+def default_report_path(signals_dir: Path) -> Path:
+    """signals_historical → failure_analysis.md /
+    signals_historical_v2 → failure_analysis_v2.md"""
+    suffix = Path(signals_dir).name.replace("signals_historical", "")
+    return DATA_DIR / f"failure_analysis{suffix}.md"
+
+
 # ---------------------------------------------------------------------------
 # 判定明細の構築（evaluate_historical の判定ロジックを再利用し属性を付加）
 # ---------------------------------------------------------------------------
-
-def extract_model(generator: str) -> str:
-    """'historical (run_historical.py, gemini-3.1-flash-lite)' → 'gemini-3.1-flash-lite'"""
-    m = re.search(r"run_historical\.py,\s*([^)]+)\)", generator)
-    return m.group(1).strip() if m else generator
 
 
 def sma25_position(ohlcv: pd.DataFrame, price_as_of: pd.Timestamp):
@@ -239,7 +245,15 @@ def rate(df: pd.DataFrame) -> float:
 
 
 def main() -> None:
-    records = load_signal_records()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--signals-dir", type=Path, default=DEFAULT_SIGNALS_DIR,
+                        help=f"分析対象シグナルのディレクトリ（既定: {DEFAULT_SIGNALS_DIR}）")
+    parser.add_argument("--report", type=Path, default=None,
+                        help="レポート出力先（既定: signals-dir 名から自動決定）")
+    args = parser.parse_args()
+    report_path = args.report or default_report_path(args.signals_dir)
+
+    records = load_signal_records(args.signals_dir)
     prices = load_prices_yf()  # start=None: SMA25 計算のため全履歴を使う
     macro = _load_macro_history()
     topix = (macro[macro["ticker"] == TOPIX_TICKER]
@@ -259,9 +273,10 @@ def main() -> None:
     holds = analyze_holds(records, prices)
 
     L = []
-    L.append("# 敗因分析: ヒストリカルシミュレーション 方向的中率 43.1% (n=137)")
+    L.append(f"# 敗因分析: ヒストリカルシミュレーション 方向的中率 {rate(df)}% (n={len(df)})")
     L.append("")
     L.append(f"- 生成日時: {datetime.now(JST).isoformat(timespec='seconds')}")
+    L.append(f"- シグナルディレクトリ: {Path(args.signals_dir).name}")
     L.append("- 生成スクリプト: `poc/poc3_llm_signal_quality/historical/analyze_failures.py`"
              "（evaluate_historical.py の judge_direction を再利用。LLM API 不使用）")
     L.append("- 的中の定義: holding_period_days（暦日）以内に target 到達=的中 / "
@@ -349,7 +364,8 @@ def main() -> None:
     L.append("## 3. buy 失敗の型分類")
     L.append("")
     L.append(f"buy {len(buys)} 件のうち stop 到達（同一バー両到達含む）は "
-             f"{len(stop_buys)} 件（{100 * len(stop_buys) / len(buys):.1f}%）。")
+             f"{len(stop_buys)} 件"
+             + (f"（{100 * len(stop_buys) / len(buys):.1f}%）。" if len(buys) else "。"))
     L.append("")
     L.append("### 3-a. エントリー時点の 25日線に対する位置（逆張り vs 順張り）")
     L.append("")
@@ -372,8 +388,9 @@ def main() -> None:
     L.append("")
     sb2 = stop_buys.dropna(subset=["topix_5d_pct"])
     n_dn = int((sb2["topix_5d_pct"] <= 0).sum())
+    pct_dn = f"（{100 * n_dn / len(sb2):.1f}%）" if len(sb2) else ""
     L.append(f"- stop 到達 buy のうち TOPIX 5日方向が判定可能な {len(sb2)} 件中、"
-             f"TOPIX 下落局面でのエントリーは {n_dn} 件（{100 * n_dn / len(sb2):.1f}%）")
+             f"TOPIX 下落局面でのエントリーは {n_dn} 件{pct_dn}")
     L.append("")
     L.append("### 3-c. target/stop の非対称性（リスクリワード比）")
     L.append("")
@@ -475,9 +492,10 @@ def main() -> None:
     hyps = [
         f"**地合い（市場トレンド）フィルタの導入**: エントリー直後 5 日の TOPIX が"
         f"下落した局面の buy は的中率 {rate(tp_dn)}% (n={len(tp_dn)})、上昇局面は "
-        f"{rate(tp_up)}% (n={len(tp_up)}) と 22pt 超の差。stop 到達 buy "
-        f"{len(stop_buys)} 件の {100 * n_dn / len(sb2):.0f}% が TOPIX 下落局面での"
-        f"エントリーで、月別でも地合いが崩れた 2026-06 が最低（35.2%）。"
+        f"{rate(tp_up)}% (n={len(tp_up)})。stop 到達 buy "
+        f"{len(stop_buys)} 件の "
+        f"{(100 * n_dn / len(sb2)) if len(sb2) else float('nan'):.0f}% が TOPIX 下落局面での"
+        f"エントリーで、月別でも地合いが崩れた月が低い傾向（1-2 節参照）。"
         "個別材料でなく市場ベータで負けている → TOPIX/日経の短期トレンドが下向きの"
         "ときは buy を抑制する（またはサイズを落とす）ルールを追加する。",
         f"**target の欲張り抑制（RR 上限の設定）**: RR>=2.5 の buy は的中率 "
@@ -517,8 +535,8 @@ def main() -> None:
              "（2 節）、足切り・サイズ調整に使うのは現状では逆効果。")
     L.append("")
 
-    REPORT_PATH.write_text("\n".join(L), encoding="utf-8")
-    print(f"レポート出力: {REPORT_PATH}")
+    report_path.write_text("\n".join(L), encoding="utf-8")
+    print(f"レポート出力: {report_path}")
 
     # コンソールに要点を出す
     print(f"\n全体的中率 {rate(df)}% (n={len(df)})")
