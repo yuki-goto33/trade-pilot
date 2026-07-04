@@ -10,8 +10,22 @@
 |---|---|
 | `fetch_news_range.py` | Google News RSS の日付指定検索（`after:D-3 before:D`）で過去見出しを `data/news_history/<code>/<D>.json` にキャッシュ。3秒間隔 + バックオフ。キャッシュ済みはスキップ |
 | `historical_context.py` | `build_context_asof(code, date)`: as-of 時点のコンテキストを既存 `build_context` と同一構造で組み立てる。`--fetch` で `data/prices_history.csv` / `data/macro_history.csv`（yfinance 日足）を作成 |
-| `run_historical.py` | 営業日 × 銘柄でシグナル生成（`data/signals_historical/<date>/<code>.json`）。生成済みスキップ（resume）・`--max-calls` チャンク実行・`progress.json` 出力 |
-| `evaluate_historical.py` | signals.csv 変換 → poc4 バックテスト（手数料0.1%・100株単元・1銘柄1,000万円）→ TOPIX(1306.T) 比較 → 方向的中率（55%基準）→ `data/historical_eval_report.md` |
+| `run_historical.py` | 営業日 × 銘柄でシグナル生成（既定 `data/signals_historical_v2/<date>/<code>.json`、`--signals-dir` で変更可）。生成済みスキップ（resume）・`--max-calls` チャンク実行・`progress.json` 出力。モデルローテーションは非 lite 優先 |
+| `evaluate_historical.py` | signals.csv 変換 → poc4 バックテスト（手数料0.1%・100株単元・1銘柄1,000万円）→ TOPIX(1306.T) 比較 → 方向的中率（55%基準）→ `data/historical_eval_report*.md`。`--signals-dir` で対象を選択、`--baseline-dir` で v1 との同条件比較セクションを追加 |
+| `analyze_failures.py` | 的中率の切り口別分解と敗因分析 → `data/failure_analysis*.md`（`--signals-dir` 対応） |
+
+## v1 → v2（2026-07-04）
+
+v1（`data/signals_historical/`、的中率 43.1% n=137）の敗因分析
+（`data/failure_analysis.md`）を受けて以下を変更し、`data/signals_historical_v2/` に再生成:
+
+1. **コンテキスト**: macro に `market_regime`（TOPIX 終値 vs 25日線 + 5日騰落率の機械判定、
+   uptrend/downtrend/neutral）を追加（フォワードの context_builder と共通実装）
+2. **プロンプト v2**: downtrend 時のテクニカルのみ buy 禁止 / buy にファンダ・開示根拠必須 /
+   target は 20営業日 ±5〜8% 以内・RR 1.2〜2.0（>2.5 禁止）/ sell は悪材料+下降トレンド必須
+   （25日線割れ後の逆張り sell 禁止）/ confidence 採点アンカー（50/60/70/80）
+3. **モデル順**: 非 lite 優先（gemini-flash-latest → 3-flash-preview → 2.5-flash →
+   2.0-flash → lite 系は最後の砦）
 
 ## as-of 再構成のルール（look-ahead 防止）
 
