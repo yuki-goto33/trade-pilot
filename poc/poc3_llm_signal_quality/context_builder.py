@@ -395,6 +395,57 @@ def jfc_sme_snapshot(asof=None, months: int = JFC_SME_MONTHS) -> "dict | None":
     }
 
 
+# 日本PMI: 改定値の公表は 製造業=翌月第1営業日 / サービス・複合=翌月第3営業日。
+# look-ahead 防止のため月 M の値は翌月の以下の日から利用可とみなす（保守的）
+PMI_AVAILABLE_DAY = {"manufacturing": 2, "services": 6, "composite": 6}
+PMI_LABELS = {"manufacturing": "製造業", "services": "サービス業", "composite": "複合"}
+
+
+def japan_pmi_snapshot(asof=None, months: int = 6) -> "dict | None":
+    """日本PMI（製造業・サービス業・複合）のスナップショットを組み立てる。
+
+    data/macro_pmi.json（fetch_macro_pmi.py の出力）から直近 months ヶ月分を返す。
+    asof を渡すと公表タイミング（PMI_AVAILABLE_DAY）で look-ahead を防止する。
+    英文サマリーは過去時点の再構成が不可能なためフォワード（asof=None）のみ。
+    """
+    try:
+        data = _load_json("macro_pmi.json")
+    except ContextBuildError:
+        return None
+    out = {}
+    for kind, values in (data.get("series") or {}).items():
+        avail_day = PMI_AVAILABLE_DAY.get(kind, 6)
+
+        def available(month_key):
+            # フォワード（asof=None）は「取得できた = 公表済み」なのでフィルタ不要。
+            # ヒストリカルのみ公表タイミングで look-ahead を防ぐ
+            if asof is None:
+                return True
+            y, m = map(int, month_key.split("-"))
+            y, m = (y + 1, 1) if m == 12 else (y, m + 1)
+            return date(y, m, avail_day) <= asof
+
+        usable = {k: v for k, v in sorted(values.items()) if available(k)}
+        if not usable:
+            continue
+        recent = dict(list(usable.items())[-months:])
+        latest = list(recent.items())[-1]
+        entry = {"label": PMI_LABELS.get(kind, kind),
+                 "latest_month": latest[0], "latest_value": latest[1],
+                 "monthly": recent}
+        if asof is None:
+            summary = (data.get("summaries_en") or {}).get(kind)
+            if summary:
+                entry["summary_en"] = summary
+        out[kind] = entry
+    if not out:
+        return None
+    out["note"] = ("S&P Global / auじぶん銀行 日本PMI。50超=景気拡大・50未満=縮小。"
+                   "水準と前月からの方向を、銘柄の業種（製造業/サービス業）と"
+                   "関連づけて判断に用いること")
+    return out
+
+
 # 前夜のNY市場スナップショットの対象（fetch_macro.py の US_MARKET_TICKERS と対応）
 US_INDEX_TICKERS = {
     "^IXIC": "NASDAQ総合",
@@ -645,6 +696,9 @@ def build_macro() -> dict:
     us = us_market_snapshot(df)
     if us:
         macro["us_market_overnight"] = us
+    pmi = japan_pmi_snapshot()
+    if pmi:
+        macro["japan_pmi"] = pmi
     return macro
 
 

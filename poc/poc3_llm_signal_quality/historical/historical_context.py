@@ -64,6 +64,7 @@ from context_builder import (  # noqa: E402
     US_SECTOR_TICKERS,
     boj_snapshot,
     context_to_json,
+    japan_pmi_snapshot,
     jfc_sme_snapshot,
     market_regime_from_series,
     technical_from_window,
@@ -475,6 +476,10 @@ def build_macro_asof(asof) -> dict:
     us = us_market_snapshot(df, asof=asof)
     if us:
         macro["us_market_overnight"] = us
+    # 日本PMI（公表タイミングによる look-ahead ガード付き）
+    pmi = japan_pmi_snapshot(asof=asof)
+    if pmi:
+        macro["japan_pmi"] = pmi
     return macro
 
 
