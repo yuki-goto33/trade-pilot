@@ -22,6 +22,17 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 load_dotenv(REPO_ROOT / ".env")
 
 
+class GeminiRateLimitError(RuntimeError):
+    """429（クォータ超過）の待機上限に達した場合の例外。
+
+    retry_delay_sec に API が提示した待機秒数を保持する（モデルローテーション用）。
+    """
+
+    def __init__(self, message: str, retry_delay_sec: float):
+        super().__init__(message)
+        self.retry_delay_sec = retry_delay_sec
+
+
 class LLMClient(ABC):
     """LLM 呼び出しの抽象インターフェース。"""
 
@@ -69,12 +80,18 @@ class GeminiClient(LLMClient):
     BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models"
     MIN_INTERVAL_SEC = 5.0
     MAX_RETRIES = 4
+    # 429（クォータ）はトークンバケット的に数十秒〜数分で回復するため、
+    # リトライ回数ではなく累計待機時間で打ち切る（大量バッチ実行用）
+    RATE_LIMIT_MAX_WAIT_SEC = 1800.0
 
-    def __init__(self, model: str = None, api_key: str = None):
+    def __init__(self, model: str = None, api_key: str = None,
+                 rate_limit_max_wait_sec: float = None):
         self.model = model or os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
         self.api_key = api_key or os.environ.get("GEMINI_API_KEY")
         if not self.api_key:
             raise RuntimeError(".env に GEMINI_API_KEY が設定されていません。")
+        if rate_limit_max_wait_sec is not None:
+            self.RATE_LIMIT_MAX_WAIT_SEC = rate_limit_max_wait_sec
         self._last_call = 0.0
 
     def _throttle(self) -> None:
@@ -110,7 +127,9 @@ class GeminiClient(LLMClient):
         }
 
         last_err = None
-        for attempt in range(self.MAX_RETRIES):
+        rate_limit_waited = 0.0
+        attempt = 0
+        while attempt < self.MAX_RETRIES:
             self._throttle()
             resp = requests.post(url, headers=headers, json=payload, timeout=120)
             self._last_call = time.monotonic()
@@ -140,6 +159,18 @@ class GeminiClient(LLMClient):
                     body = {}
                 delay = self._retry_delay_sec(body, attempt)
                 last_err = f"HTTP {resp.status_code}: {str(body)[:200]}"
+                if resp.status_code == 429:
+                    # クォータ回復待ち: 回数ではなく累計待機時間で管理する
+                    if rate_limit_waited + delay > self.RATE_LIMIT_MAX_WAIT_SEC:
+                        raise GeminiRateLimitError(
+                            f"Gemini API クォータ待機が上限"
+                            f"（{self.RATE_LIMIT_MAX_WAIT_SEC:.0f}s）超過"
+                            f" (model={self.model}): {last_err}",
+                            retry_delay_sec=delay,
+                        )
+                    rate_limit_waited += delay
+                else:
+                    attempt += 1
                 time.sleep(delay)
                 continue
 

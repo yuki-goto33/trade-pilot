@@ -118,14 +118,13 @@ def _rsi_wilder(close: pd.Series, period: int = 14) -> pd.Series:
     return 100 - 100 / (1 + rs)
 
 
-def build_technical(code: str) -> dict:
-    """日足30日から SMA/RSI/MACD と直近5日の値動きサマリーを計算する。"""
-    df = _load_prices()
-    ticker = f"{code}.T"
-    px = df[df["ticker"] == ticker].copy()
-    if px.empty:
-        raise ContextBuildError(f"prices_yfinance.csv に {ticker} のデータがありません。")
+def technical_from_window(px: pd.DataFrame) -> dict:
+    """日足ウィンドウ（約30営業日、列: Date/Open/High/Low/Close/Volume）から
+    SMA/RSI/MACD と直近5日の値動きサマリーを計算する。
 
+    build_technical（最新データ）と historical_context.build_technical_asof
+    （過去 as-of 時点）の共通実装。
+    """
     close = px["Close"].reset_index(drop=True)
     px = px.reset_index(drop=True)
 
@@ -176,6 +175,16 @@ def build_technical(code: str) -> dict:
         "macd_histogram": _round(last["macd_hist"]),
         "recent_5_days": recent5,
     }
+
+
+def build_technical(code: str) -> dict:
+    """日足30日から SMA/RSI/MACD と直近5日の値動きサマリーを計算する。"""
+    df = _load_prices()
+    ticker = f"{code}.T"
+    px = df[df["ticker"] == ticker].copy()
+    if px.empty:
+        raise ContextBuildError(f"prices_yfinance.csv に {ticker} のデータがありません。")
+    return technical_from_window(px)
 
 
 # ---------------------------------------------------------------------------
