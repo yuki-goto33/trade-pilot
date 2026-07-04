@@ -12,8 +12,8 @@ from urllib.parse import quote
 
 import feedparser
 
-from common import Timer, now_jst_iso, print_summary, save_json
-from universe import UNIVERSE
+from common import Timer, now_jst_iso, parse_universe_arg, print_summary, save_json
+from universe import load_universe
 
 SOURCE = "news_google"
 SLEEP_SEC = 2.0
@@ -28,10 +28,10 @@ def _entry_to_dict(e) -> dict:
     }
 
 
-def fetch() -> dict:
+def fetch(universe) -> dict:
     results = {}
     failed = []
-    for i, s in enumerate(UNIVERSE):
+    for i, s in enumerate(universe):
         if i > 0:
             time.sleep(SLEEP_SEC)
         code, name = s["code"], s.get("news_name", s["name"])
@@ -53,13 +53,14 @@ def fetch() -> dict:
     return {"fetched_at": now_jst_iso(), "failed": failed, "news": results}
 
 
-def main() -> dict:
+def main(universe_path=None) -> dict:
+    universe = load_universe(universe_path)
     with Timer() as t:
         try:
-            data = fetch()
+            data = fetch(universe)
             out = save_json("news_google.json", data)
             count = sum(v["count"] for v in data["news"].values())
-            note = f"{len(data['news'])}/{len(UNIVERSE)} 銘柄, 保存先 {out.name}"
+            note = f"{len(data['news'])}/{len(universe)} 銘柄, 保存先 {out.name}"
             summary = {"source": SOURCE, "ok": True, "count": count, "note": note}
         except Exception as e:
             summary = {"source": SOURCE, "ok": False, "count": 0, "note": f"{type(e).__name__}: {e}"}
@@ -70,4 +71,4 @@ def main() -> dict:
 
 
 if __name__ == "__main__":
-    sys.exit(0 if main()["ok"] else 1)
+    sys.exit(0 if main(parse_universe_arg(__doc__))["ok"] else 1)

@@ -20,8 +20,8 @@ import pandas as pd
 import requests
 from dotenv import load_dotenv
 
-from common import Timer, ensure_data_dir, now_jst_iso, print_summary, save_json, DATA_DIR, REPO_ROOT
-from universe import UNIVERSE
+from common import Timer, ensure_data_dir, now_jst_iso, parse_universe_arg, print_summary, save_json, DATA_DIR, REPO_ROOT
+from universe import load_universe
 
 SOURCE = "prices_jquants"
 BASE_URL = "https://api.jquants.com/v2"
@@ -79,7 +79,7 @@ def fetch_one(session: requests.Session, code5: str, d_from: str, d_to: str) -> 
     return rows
 
 
-def fetch() -> pd.DataFrame:
+def fetch(universe) -> pd.DataFrame:
     load_dotenv(REPO_ROOT / ".env")
     api_key = os.getenv("JQUANTS_API_KEY")
     if not api_key:
@@ -95,7 +95,7 @@ def fetch() -> pd.DataFrame:
 
     frames = []
     failed = []
-    for i, s in enumerate(UNIVERSE):
+    for i, s in enumerate(universe):
         code5 = s["code"] + "0"
         if i > 0:
             time.sleep(SLEEP_SEC)
@@ -118,10 +118,11 @@ def fetch() -> pd.DataFrame:
     return pd.concat(frames, ignore_index=True)
 
 
-def main() -> dict:
+def main(universe_path=None) -> dict:
+    universe = load_universe(universe_path)
     with Timer() as t:
         try:
-            df = fetch()
+            df = fetch(universe)
             ensure_data_dir()
             out = DATA_DIR / "prices_jquants.csv"
             df.to_csv(out, index=False)
@@ -142,4 +143,4 @@ def main() -> dict:
 
 
 if __name__ == "__main__":
-    sys.exit(0 if main()["ok"] else 1)
+    sys.exit(0 if main(parse_universe_arg(__doc__))["ok"] else 1)

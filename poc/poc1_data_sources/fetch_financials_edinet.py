@@ -21,8 +21,8 @@ import pandas as pd
 import requests
 from dotenv import load_dotenv
 
-from common import Timer, ensure_data_dir, now_jst_iso, print_summary, save_json, DATA_DIR, REPO_ROOT
-from universe import UNIVERSE, edinet_sec_codes
+from common import Timer, ensure_data_dir, now_jst_iso, parse_universe_arg, print_summary, save_json, DATA_DIR, REPO_ROOT
+from universe import edinet_sec_codes, load_universe
 
 SOURCE = "financials_edinet"
 BASE_URL = "https://api.edinet-fsa.go.jp/api/v2"
@@ -38,8 +38,8 @@ def _doc_to_dict(d: dict) -> dict:
     return {k: d.get(k) for k in keys}
 
 
-def fetch_list(api_key: str) -> list:
-    sec_codes = set(edinet_sec_codes())
+def fetch_list(api_key: str, universe) -> list:
+    sec_codes = set(edinet_sec_codes(universe))
     matched = []
     today = date.today()
     for i in range(LOOKBACK_DAYS):
@@ -90,7 +90,8 @@ def download_sample_csv(api_key: str, doc: dict) -> dict:
     }
 
 
-def main() -> dict:
+def main(universe_path=None) -> dict:
+    universe = load_universe(universe_path)
     with Timer() as t:
         try:
             load_dotenv(REPO_ROOT / ".env")
@@ -98,7 +99,7 @@ def main() -> dict:
             if not api_key:
                 raise RuntimeError("EDINET_API_KEY が .env に設定されていません")
 
-            matched = fetch_list(api_key)
+            matched = fetch_list(api_key, universe)
             sample = None
             note_parts = [f"{len(matched)} 書類 / 直近{LOOKBACK_DAYS}日"]
             csv_docs = [d for d in matched if str(d.get("csvFlag")) == "1"]
@@ -116,7 +117,7 @@ def main() -> dict:
             save_json("financials_edinet.json", {
                 "fetched_at": now_jst_iso(),
                 "lookback_days": LOOKBACK_DAYS,
-                "universe_sec_codes": edinet_sec_codes(),
+                "universe_sec_codes": edinet_sec_codes(universe),
                 "documents": matched,
                 "csv_sample": sample,
             })
@@ -131,4 +132,4 @@ def main() -> dict:
 
 
 if __name__ == "__main__":
-    sys.exit(0 if main()["ok"] else 1)
+    sys.exit(0 if main(parse_universe_arg(__doc__))["ok"] else 1)

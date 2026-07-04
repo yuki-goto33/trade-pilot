@@ -11,8 +11,8 @@ import time
 import pandas as pd
 import yfinance as yf
 
-from common import Timer, ensure_data_dir, now_jst_iso, print_summary, DATA_DIR
-from universe import UNIVERSE, yf_tickers
+from common import Timer, ensure_data_dir, now_jst_iso, parse_universe_arg, print_summary, DATA_DIR
+from universe import load_universe, yf_tickers
 
 SOURCE = "prices_yfinance"
 PERIOD = "30d"
@@ -26,8 +26,8 @@ def _to_long(df: pd.DataFrame, ticker: str) -> pd.DataFrame:
     return df
 
 
-def fetch() -> pd.DataFrame:
-    tickers = yf_tickers()
+def fetch(universe) -> pd.DataFrame:
+    tickers = yf_tickers(universe)
     frames = []
     failed = []
 
@@ -84,16 +84,17 @@ def fetch() -> pd.DataFrame:
     return pd.concat(frames, ignore_index=True)
 
 
-def main() -> dict:
+def main(universe_path=None) -> dict:
+    universe = load_universe(universe_path)
     with Timer() as t:
         try:
-            df = fetch()
+            df = fetch(universe)
             ensure_data_dir()
             out = DATA_DIR / "prices_yfinance.csv"
             df.to_csv(out, index=False)
             summary = {
                 "source": SOURCE, "ok": True, "count": len(df),
-                "note": f"{df['ticker'].nunique()}/{len(UNIVERSE)} 銘柄, 保存先 {out.name}",
+                "note": f"{df['ticker'].nunique()}/{len(universe)} 銘柄, 保存先 {out.name}",
             }
         except Exception as e:
             summary = {"source": SOURCE, "ok": False, "count": 0, "note": f"{type(e).__name__}: {e}"}
@@ -104,4 +105,4 @@ def main() -> dict:
 
 
 if __name__ == "__main__":
-    sys.exit(0 if main()["ok"] else 1)
+    sys.exit(0 if main(parse_universe_arg(__doc__))["ok"] else 1)

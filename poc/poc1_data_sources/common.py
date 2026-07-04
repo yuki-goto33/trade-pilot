@@ -1,4 +1,5 @@
 """PoC-1 共通ユーティリティ。"""
+import argparse
 import json
 import time
 from datetime import datetime, timezone, timedelta
@@ -35,6 +36,17 @@ class Timer:
 
     def __exit__(self, *exc):
         self.seconds = round(time.monotonic() - self.start, 1)
+
+
+def parse_universe_arg(description: str) -> "str | None":
+    """fetch スクリプト共通の --universe オプションをパースしてパスを返す。"""
+    ap = argparse.ArgumentParser(description=description)
+    ap.add_argument(
+        "--universe",
+        default=None,
+        help="universe JSON のパス（省略時: 環境変数 UNIVERSE_FILE → デフォルト11銘柄）",
+    )
+    return ap.parse_args().universe
 
 
 def print_summary(source: str, ok: bool, count: int, seconds: float, note: str = ""):
