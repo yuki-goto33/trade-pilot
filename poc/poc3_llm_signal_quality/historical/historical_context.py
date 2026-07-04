@@ -60,6 +60,7 @@ from context_builder import (  # noqa: E402
     _round,
     _stock_meta,
     _fundamentals_period,
+    boj_snapshot,
     context_to_json,
     jfc_sme_snapshot,
     market_regime_from_series,
@@ -457,6 +458,10 @@ def build_macro_asof(asof) -> dict:
     sme = jfc_sme_snapshot(asof=asof)
     if sme:
         macro["jfc_sme_survey"] = sme
+    # 日銀（決定会合日程 + 短観。新着発表は遡及不可のため asof 指定時は含まれない）
+    boj = boj_snapshot(asof=asof)
+    if boj:
+        macro["boj"] = boj
     return macro
 
 
