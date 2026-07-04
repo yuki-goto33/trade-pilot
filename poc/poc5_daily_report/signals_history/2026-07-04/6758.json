@@ -1,0 +1,32 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-07-04T10:24:13+09:00",
+  "price_as_of": "2026-07-03",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 14,
+    "reasons": [
+      {
+        "reason": "5日移動平均線が25日移動平均線の下に位置するデッドクロス状態が継続している一方で、直近2営業日は連続して上昇しており、テクニカル的な方向感が定まっていません。",
+        "evidence": "price_technical.sma5_vs_sma25='dead(5日線が25日線の下)' および price_technical.recent_5_days の直近2日間の株価推移（07-02が+2.46%、07-03が+1.5%）"
+      },
+      {
+        "reason": "RSI14が46.9と中立水準にあり、買われすぎ・売られすぎのどちらのサインも示していません。",
+        "evidence": "price_technical.rsi14=46.9"
+      },
+      {
+        "reason": "直近1日において新規のニュースや適時開示情報が存在せず、株価のトレンドを決定付ける材料が不足しています。",
+        "evidence": "news.total_count=0、disclosures.itemsが空"
+      }
+    ],
+    "risks": [
+      "ドル円相場が161.32円からさらに円高方向に進んだ場合、業績への悪影響懸念から売り優勢となるリスクがあります。",
+      "全体相場（日経平均など）のボラティリティが上昇し、調整局面入りした場合に連れ安するリスクがあります。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 55,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 14,\n  \"reasons\": [\n    {\n      \"reason\": \"5日移動平均線が25日移動平均線の下に位置するデッドクロス状態が継続している一方で、直近2営業日は連続して上昇しており、テクニカル的な方向感が定まっていません。\",\n      \"evidence\": \"price_technical.sma5_vs_sma25='dead(5日線が25日線の下)' および price_technical.recent_5_days の直近2日間の株価推移（07-02が+2.46%、07-03が+1.5%）\"\n    },\n    {\n      \"reason\": \"RSI14が46.9と中立水準にあり、買われすぎ・売られすぎのどちらのサインも示していません。\",\n      \"evidence\": \"price_technical.rsi14=46.9\"\n    },\n    {\n      \"reason\": \"直近1日において新規のニュースや適時開示情報が存在せず、株価のトレンドを決定付ける材料が不足しています。\",\n      \"evidence\": \"news.total_count=0、disclosures.itemsが空\"\n    }\n  ],\n  \"risks\": [\n    \"ドル円相場が161.32円からさらに円高方向に進んだ場合、業績への悪影響懸念から売り優勢となるリスクがあります。\",\n    \"全体相場（日経平均など）のボラティリティが上昇し、調整局面入りした場合に連れ安するリスクがあります。\"\n  ]\n}"
+}

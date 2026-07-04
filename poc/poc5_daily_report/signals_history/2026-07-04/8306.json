@@ -1,0 +1,33 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-07-04T10:21:26+09:00",
+  "price_as_of": "2026-07-03",
+  "signal": {
+    "signal": "hold",
+    "confidence": 75,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 15,
+    "reasons": [
+      {
+        "reason": "5日移動平均線が25日線を上回るゴールデンクロスが発生し直近3日間連続で上昇していますが、期間高値の3394.0円が近づいており上値抵抗線として意識されやすい水準です。",
+        "evidence": "price_technical.sma5_vs_sma25='golden(5日線が25日線の上)', price_technical.period_high=3394.0, price_technical.recent_5_days"
+      },
+      {
+        "reason": "直近の開示情報において、これまで株価の下支え要因となっていた自己株式の取得終了が発表されており、需給面での短期的な買い圧力が減退する懸念があります。",
+        "evidence": "disclosures[0] 2026-06-26 の開示タイトル '自己株式の取得状況および取得終了に関するお知らせ'"
+      },
+      {
+        "reason": "日本の10年債利回りが2.778%と高水準でマクロ環境は追い風ですが、MACDヒストグラムが依然としてマイナス圏（-0.04）にあり、明確な上昇トレンドへの転換を確実視するには材料が不足しています。",
+        "evidence": "macro.rates.jgb_10y_percent.value=2.778, price_technical.macd_histogram=-0.04"
+      }
+    ],
+    "risks": [
+      "自社株買い終了に伴う需給の悪化により、直近の上昇トレンドが維持できず調整に転じるリスク。",
+      "国内外の長期金利が低下方向に転じた場合、金利メリット株としての魅力が減退し、下落基調に転じるリスク。",
+      "直近高値（3394円）付近での利益確定売りに押され、MACDのデッドクロスが確定するテクニカル的な下落リスク。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 75,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 15,\n \"reasons\": [\n  {\n   \"reason\": \"5日移動平均線が25日線を上回るゴールデンクロスが発生し直近3日間連続で上昇していますが、期間高値の3394.0円が近づいており上値抵抗線として意識されやすい水準です。\",\n   \"evidence\": \"price_technical.sma5_vs_sma25='golden(5日線が25日線の上)', price_technical.period_high=3394.0, price_technical.recent_5_days\"\n  },\n  {\n   \"reason\": \"直近の開示情報において、これまで株価の下支え要因となっていた自己株式の取得終了が発表されており、需給面での短期的な買い圧力が減退する懸念があります。\",\n   \"evidence\": \"disclosures[0] 2026-06-26 の開示タイトル '自己株式の取得状況および取得終了に関するお知らせ'\"\n  },\n  {\n   \"reason\": \"日本の10年債利回りが2.778%と高水準でマクロ環境は追い風ですが、MACDヒストグラムが依然としてマイナス圏（-0.04）にあり、明確な上昇トレンドへの転換を確実視するには材料が不足しています。\",\n   \"evidence\": \"macro.rates.jgb_10y_percent.value=2.778, price_technical.macd_histogram=-0.04\"\n  }\n ],\n \"risks\": [\n  \"自社株買い終了に伴う需給の悪化により、直近の上昇トレンドが維持できず調整に転じるリスク。\",\n  \"国内外の長期金利が低下方向に転じた場合、金利メリット株としての魅力が減退し、下落基調に転じるリスク。\",\n  \"直近高値（3394円）付近での利益確定売りに押され、MACDのデッドクロスが確定するテクニカル的な下落リスク。\"\n ]\n}"
+}

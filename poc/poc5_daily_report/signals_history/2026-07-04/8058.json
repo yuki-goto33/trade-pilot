@@ -1,0 +1,32 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-07-04T10:22:39+09:00",
+  "price_as_of": "2026-07-03",
+  "signal": {
+    "signal": "buy",
+    "confidence": 70,
+    "target_price": 4800.0,
+    "stop_loss": 4280.0,
+    "holding_period_days": 14,
+    "reasons": [
+      {
+        "reason": "RSI14が25.3と売られすぎ水準に達したのち、株価が直近3営業日で4344.0円から4457.0円へと反発し、底打ちの兆候を示しているため。",
+        "evidence": "price_technical.rsi14=25.3, price_technical.recent_5_days"
+      },
+      {
+        "reason": "MACD（-164.51）がMACDシグナル（-170.87）を上回り、ヒストグラムが6.36とプラスに転じるなど、モメンタムの改善が見られるため。",
+        "evidence": "price_technical.macd=-164.51, price_technical.macd_signal=-170.87, price_technical.macd_histogram=6.36"
+      },
+      {
+        "reason": "TOPIX連動ETFが前日比+1.24%と上昇し、VIXが15.81と低水準に抑えられていることから、全体相場が安定し、買いが入りやすい環境であるため。",
+        "evidence": "macro.indices[1](TOPIX連動ETF)の2026-07-03データ, macro.indices[4](VIX)の2026-07-03データ"
+      }
+    ],
+    "risks": [
+      "5日移動平均線が25日移動平均線の下に位置するデッドクロス状態が依然継続しており、上値の重い展開が続くリスク（price_technical.sma5_vs_sma25）。",
+      "ドル円が前日比-0.75%と円高方向に振れており、海外ビジネスへの逆風となるリスク（macro.indices[2] ドル円 2026-07-03）。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"buy\",\n \"confidence\": 70,\n \"target_price\": 4800.0,\n \"stop_loss\": 4280.0,\n \"holding_period_days\": 14,\n \"reasons\": [\n  {\n   \"reason\": \"RSI14が25.3と売られすぎ水準に達したのち、株価が直近3営業日で4344.0円から4457.0円へと反発し、底打ちの兆候を示しているため。\",\n   \"evidence\": \"price_technical.rsi14=25.3, price_technical.recent_5_days\"\n  },\n  {\n   \"reason\": \"MACD（-164.51）がMACDシグナル（-170.87）を上回り、ヒストグラムが6.36とプラスに転じるなど、モメンタムの改善が見られるため。\",\n   \"evidence\": \"price_technical.macd=-164.51, price_technical.macd_signal=-170.87, price_technical.macd_histogram=6.36\"\n  },\n  {\n   \"reason\": \"TOPIX連動ETFが前日比+1.24%と上昇し、VIXが15.81と低水準に抑えられていることから、全体相場が安定し、買いが入りやすい環境であるため。\",\n   \"evidence\": \"macro.indices[1](TOPIX連動ETF)の2026-07-03データ, macro.indices[4](VIX)の2026-07-03データ\"\n  }\n ],\n \"risks\": [\n  \"5日移動平均線が25日移動平均線の下に位置するデッドクロス状態が依然継続しており、上値の重い展開が続くリスク（price_technical.sma5_vs_sma25）。\",\n  \"ドル円が前日比-0.75%と円高方向に振れており、海外ビジネスへの逆風となるリスク（macro.indices[2] ドル円 2026-07-03）。\"\n ]\n}"
+}

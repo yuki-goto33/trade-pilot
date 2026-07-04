@@ -1,0 +1,32 @@
+{
+  "code": "4063",
+  "name": "信越化学工業",
+  "generated_at": "2026-07-04T10:22:00+09:00",
+  "price_as_of": "2026-07-03",
+  "signal": {
+    "signal": "hold",
+    "confidence": 70,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "テクニカル面において、5日移動平均線が25日移動平均線を下回るデッドクロスが継続しており、MACDもシグナル線を下回って下落傾向にあります。",
+        "evidence": "price_technical.sma5_vs_sma25='dead(5日線が25日線の下)', price_technical.macd=-52.24, price_technical.macd_signal=-20.86"
+      },
+      {
+        "reason": "7月3日に日経平均が1,000円超大幅反発する良好なマクロ環境であったにもかかわらず、同社株価は7月2日（-3.24%）、7月3日（-0.94%）と続落しており、全体相場に対して逆行安の弱さを見せています。",
+        "evidence": "news[2]のタイトル '日経平均が大幅反発、1010円高...', price_technical.recent_5_days[3].change_pct=-3.24, price_technical.recent_5_days[4].change_pct=-0.94"
+      },
+      {
+        "reason": "直近の適時開示は6月18日の自己株式公開買付け結果以降、トレンドを大きく好転させる新規のポジティブ材料が出ておらず、様子見が推奨される状況です。",
+        "evidence": "disclosures[0]のタイトル '自己株式の公開買付けの結果に関するお知らせ'"
+      }
+    ],
+    "risks": [
+      "半導体関連セクターや化学セクターへの世界的な資金流入により、テクニカルな上値抵抗線を上抜けて急反発するリスク",
+      "ドル円相場が161円台と歴史的な円安水準にあるため、為替要因をきっかけに輸出関連銘柄として買い戻されるリスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 70,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"テクニカル面において、5日移動平均線が25日移動平均線を下回るデッドクロスが継続しており、MACDもシグナル線を下回って下落傾向にあります。\",\n   \"evidence\": \"price_technical.sma5_vs_sma25='dead(5日線が25日線の下)', price_technical.macd=-52.24, price_technical.macd_signal=-20.86\"\n  },\n  {\n   \"reason\": \"7月3日に日経平均が1,000円超大幅反発する良好なマクロ環境であったにもかかわらず、同社株価は7月2日（-3.24%）、7月3日（-0.94%）と続落しており、全体相場に対して逆行安の弱さを見せています。\",\n   \"evidence\": \"news[2]のタイトル '日経平均が大幅反発、1010円高...', price_technical.recent_5_days[3].change_pct=-3.24, price_technical.recent_5_days[4].change_pct=-0.94\"\n  },\n  {\n   \"reason\": \"直近の適時開示は6月18日の自己株式公開買付け結果以降、トレンドを大きく好転させる新規のポジティブ材料が出ておらず、様子見が推奨される状況です。\",\n   \"evidence\": \"disclosures[0]のタイトル '自己株式の公開買付けの結果に関するお知らせ'\"\n  }\n ],\n \"risks\": [\n  \"半導体関連セクターや化学セクターへの世界的な資金流入により、テクニカルな上値抵抗線を上抜けて急反発するリスク\",\n  \"ドル円相場が161円台と歴史的な円安水準にあるため、為替要因をきっかけに輸出関連銘柄として買い戻されるリスク\"\n ]\n}"
+}
