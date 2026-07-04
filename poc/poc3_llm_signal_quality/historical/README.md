@@ -41,6 +41,54 @@
 ../../../.venv/bin/python evaluate_historical.py
 ```
 
+## 長期間バッチの運用手順（2026-05〜06 の 440 件で検証済み）
+
+1ヶ月を超えるバッチは「ニュース取得を先行させ、生成ループを追従させる」のが最速。
+
+```bash
+# 1. ニュース取得をバックグラウンドで開始（473 リクエスト ≒ 29 分。日付昇順に進む）
+nohup ../../../.venv/bin/python fetch_news_range.py \
+    --start 2026-05-01 --end 2026-06-30 > /tmp/fetch_news.log 2>&1 &
+
+# 2. 生成ループ（resume 前提の再実行ループ）。フェッチと並行して回してよい。
+#    ニュース未取得の日付は ContextBuildError で NG になるが LLM を消費せず、
+#    次の周回で resume されるため安全。
+while true; do
+  ../../../.venv/bin/python run_historical.py --start 2026-05-01 --end 2026-06-30
+  rem=$(python3 -c "import json;print(json.load(open('../../../data/signals_historical/progress.json'))['remaining'])")
+  [ "$rem" -eq 0 ] && break
+  sleep 60
+done
+
+# 3. 評価（signals_historical 配下の全日付を自動で拾う）
+../../../.venv/bin/python evaluate_historical.py
+```
+
+- **resume**: `data/signals_historical/<date>/<code>.json` が存在するタスクはスキップ
+  されるので、中断・kill・クォータ枯渇のどこで止まっても同じコマンドで再開できる。
+  進捗は `data/signals_historical/progress.json`（done_total / remaining / last）で確認
+- **チャンク実行**: フォアグラウンドで回す場合は `--max-calls 60` 程度で 10 分以内に
+  収まる（順調時 7〜8 秒/件）。上記のループならバックグラウンドで放置できる
+- **クォータ対策**: 無料枠はモデル別のトークンバケット（バースト後は 1 分弱の
+  cooldown を繰り返す低速リフィル）に加えて日次上限がある。6 モデルローテーションで
+  約 290 呼び出し/セッションを消化した後は数件/10分まで失速した。日次クォータは
+  **太平洋時間 0 時（JST 16:00）にリセット**され、その後は 7〜20 秒/件に回復する。
+  枯渇したらプロセスは生かしたまま待つ（RotatingGeminiClient が cooldown 明けに
+  自動再開する）か、一旦止めて JST 16:00 以降に再実行する
+- 実測（2026-05-01〜06-30、440 件）: 総 LLM 呼び出し 483 回（スキーマ違反の
+  再サンプル込み）、総所要 約 95 分（うちクォータ枯渇による失速 約 30 分）
+
+## 実行結果メモ（2026-04-01〜06-30 フル期間）
+
+- 生成: 61 営業日 × 11 銘柄 = 671 件（4月 231 / 5月 198 / 6月 242）
+- 使用モデル内訳: gemini-3.1-flash-lite 572 / gemini-3-flash-preview 47 /
+  gemini-2.5-flash 35 / gemini-2.5-flash-lite 9 / その他 8
+- 方向的中率 43.1%（n=137、基準 55% 未達。buy 45.6% n=125 / sell 16.7% n=12）。
+  月別: 4月 50.0% (n=30) → 5月 47.2% (n=53) → 6月 35.2% (n=54)
+- バックテスト: +24,198,019 円（+22.0%）、対 TOPIX +11.08pt、最大DD -12.29%。
+  ただし 285A・9984 の2銘柄が利益の大半で、銘柄別では 11 銘柄中 4 銘柄が B&H 負け
+- 詳細は `data/historical_eval_report.md`（gitignore 対象・ローカルのみ）
+
 ## 評価の意味論
 
 - シグナルは「as-of 日 D の朝に D-1 引けまでのデータで生成」→ poc4 の
