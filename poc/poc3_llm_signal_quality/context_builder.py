@@ -395,6 +395,40 @@ def jfc_sme_snapshot(asof=None, months: int = JFC_SME_MONTHS) -> "dict | None":
     }
 
 
+def japan_cpi_snapshot(asof=None, months: int = 6) -> "dict | None":
+    """全国CPI（総合・コア・コアコア）のスナップショットを組み立てる。
+
+    data/macro_cpi.json（fetch_macro_cpi.py の出力）から直近 months ヶ月分を返す。
+    asof を渡すと「実際の公表日の翌日以降に利用可」で look-ahead を防止する
+    （公表は 8:30 で朝バッチ 7:00 より後のため、公表日当日は含めない）。
+    """
+    try:
+        data = _load_json("macro_cpi.json")
+    except ContextBuildError:
+        return None
+    series = data.get("series") or {}
+    usable = {}
+    for month_key, rec in sorted(series.items()):
+        if asof is not None:
+            pub = rec.get("published")
+            if not pub or date.fromisoformat(pub) >= asof:
+                continue
+        usable[month_key] = rec
+    if not usable:
+        return None
+    recent = dict(list(usable.items())[-months:])
+    latest_month, latest = list(recent.items())[-1]
+    return {
+        "note": ("全国消費者物価指数（総務省、2020年=100）。core=生鮮食品を除く"
+                 "総合（日銀が2%目標の参照とするコアCPI）、core_core=生鮮食品"
+                 "及びエネルギーを除く総合。前年同月比（yoy_pct）の水準と方向を"
+                 "インフレ動向・日銀の金融政策との関係で判断に用いること"),
+        "latest_month": latest_month,
+        "latest": latest,
+        "monthly": recent,
+    }
+
+
 # 日本PMI: 改定値の公表は 製造業=翌月第1営業日 / サービス・複合=翌月第3営業日。
 # look-ahead 防止のため月 M の値は翌月の以下の日から利用可とみなす（保守的）
 PMI_AVAILABLE_DAY = {"manufacturing": 2, "services": 6, "composite": 6}
@@ -699,6 +733,9 @@ def build_macro() -> dict:
     pmi = japan_pmi_snapshot()
     if pmi:
         macro["japan_pmi"] = pmi
+    cpi = japan_cpi_snapshot()
+    if cpi:
+        macro["japan_cpi"] = cpi
     return macro
 
 

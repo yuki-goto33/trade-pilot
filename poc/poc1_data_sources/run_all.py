@@ -16,6 +16,7 @@ import fetch_macro
 import fetch_macro_jfc
 import fetch_macro_boj
 import fetch_macro_pmi
+import fetch_macro_cpi
 from common import now_jst_iso, save_json
 
 STEPS = [
@@ -29,6 +30,7 @@ STEPS = [
     fetch_macro_jfc,
     fetch_macro_boj,
     fetch_macro_pmi,
+    fetch_macro_cpi,
 ]
 
 SLEEP_BETWEEN = 3.0

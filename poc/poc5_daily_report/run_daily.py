@@ -49,6 +49,7 @@ FETCH_SCRIPTS = [
     "fetch_macro_jfc.py",
     "fetch_macro_boj.py",
     "fetch_macro_pmi.py",
+    "fetch_macro_cpi.py",
 ]
 
 FETCH_TIMEOUT_SEC = 600

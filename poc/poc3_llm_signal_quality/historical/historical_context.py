@@ -64,6 +64,7 @@ from context_builder import (  # noqa: E402
     US_SECTOR_TICKERS,
     boj_snapshot,
     context_to_json,
+    japan_cpi_snapshot,
     japan_pmi_snapshot,
     jfc_sme_snapshot,
     market_regime_from_series,
@@ -480,6 +481,10 @@ def build_macro_asof(asof) -> dict:
     pmi = japan_pmi_snapshot(asof=asof)
     if pmi:
         macro["japan_pmi"] = pmi
+    # 全国CPI（実公表日の翌日以降のみ = look-ahead 防止）
+    cpi = japan_cpi_snapshot(asof=asof)
+    if cpi:
+        macro["japan_cpi"] = cpi
     return macro
 
 
