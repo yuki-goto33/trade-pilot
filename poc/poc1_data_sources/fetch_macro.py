@@ -47,6 +47,10 @@ US_MARKET_TICKERS = {
     "XLY": "米・一般消費財ETF",
     "XLC": "米・通信サービスETF",
     "XLI": "米・資本財ETF",
+    "XLP": "米・生活必需品ETF",
+    "XLB": "米・素材ETF",
+    "XLU": "米・公益事業ETF",
+    "XLRE": "米・不動産ETF",
 }
 
 

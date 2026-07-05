@@ -47,7 +47,7 @@ ENV_UNIVERSE_FILE = "UNIVERSE_FILE"
 
 
 def _normalize_stock(s: dict) -> dict:
-    """JSON の銘柄エントリを {code, name, news_name} 形式に正規化する。"""
+    """JSON の銘柄エントリを {code, name, news_name, ...} 形式に正規化する。"""
     code = str(s["code"])
     name = s["name"]
     stock = {"code": code, "name": name}
@@ -58,6 +58,10 @@ def _normalize_stock(s: dict) -> dict:
         nfkc = unicodedata.normalize("NFKC", name)
         if nfkc != name:
             stock["news_name"] = nfkc
+    # 任意フィールドはそのまま引き継ぐ（前夜NY・業種分類）
+    for key in ("adr", "us_sector_proxy", "sector17"):
+        if s.get(key):
+            stock[key] = s[key]
     return stock
 
 
@@ -78,6 +82,13 @@ def load_universe(path=None) -> list:
 def yf_tickers(universe=None):
     """yfinance 用ティッカー（コード.T）一覧を返す。"""
     return [f"{s['code']}.T" for s in (universe or UNIVERSE)]
+
+
+# 環境変数 UNIVERSE_FILE が設定されていれば、モジュール定数 UNIVERSE 自体を
+# 差し替える（context_builder / historical_context 等が UNIVERSE を直接 import
+# しているため、fetch スクリプト以外にも universe 切替を効かせる）。
+if os.getenv(ENV_UNIVERSE_FILE):
+    UNIVERSE = load_universe()
 
 
 def jquants_codes(universe=None):
