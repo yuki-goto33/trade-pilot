@@ -23,7 +23,9 @@ import subprocess
 import sys
 from pathlib import Path
 
-from report_builder import DATA_DIR, REPO_ROOT, SIGNALS_DIR, build_report, today_jst
+from html_report import build_html, build_index_html
+from report_builder import (DATA_DIR, REPO_ROOT, SIGNALS_DIR, build_report,
+                            load_macro_snapshot, load_signals, today_jst)
 from slack_notify import send_messages
 
 POC_DIR = Path(__file__).resolve().parent
@@ -33,6 +35,7 @@ POC3_DIR = REPO_ROOT / "poc" / "poc3_llm_signal_quality"
 REPORTS_DIR = DATA_DIR / "reports"                  # gitignore 下（ローカル成果物）
 SIGNALS_HISTORY_DIR = POC_DIR / "signals_history"   # git 管理下（フォワードテスト履歴）
 REPORTS_HISTORY_DIR = POC_DIR / "reports_history"   # git 管理下
+DOCS_REPORTS_DIR = REPO_ROOT / "docs" / "reports"   # git 管理下（GitHub Pages 配信用）
 
 # 朝バッチで実行する PoC-1 fetch スクリプト（実行順）。
 # J-Quants（前営業日データは夕方更新）と EDINET（財務は低頻度）は対象外。
@@ -102,6 +105,17 @@ def step_report(date: str, missing_sources: list) -> bool:
     report_path.write_text(markdown, encoding="utf-8")
     print(f"[OK] レポート保存: {report_path}")
 
+    # リッチ版 HTML（チャート + 両専門家の見解 + 引用リンク）。
+    # 失敗しても Slack 送信は続行する（HTML はあくまで詳細ビュー）
+    try:
+        html_text = build_html(date, load_signals(date), load_macro_snapshot(),
+                               missing_sources or None)
+        html_path = REPORTS_DIR / f"{date}.html"
+        html_path.write_text(html_text, encoding="utf-8")
+        print(f"[OK] HTML レポート保存: {html_path}")
+    except Exception as e:  # noqa: BLE001 - レポート補助機能のため広く握る
+        print(f"[WARN] HTML レポート構築失敗: {type(e).__name__}: {e}", file=sys.stderr)
+
     sent = send_messages(slack_messages)
     if not sent:
         print("[WARN] Slack 送信に失敗しました（レポート自体は保存済み）。", file=sys.stderr)
@@ -126,6 +140,17 @@ def step_persist_history(date: str) -> None:
         dst_report = REPORTS_HISTORY_DIR / f"{date}.md"
         shutil.copy2(src_report, dst_report)
         print(f"[OK] レポート履歴コピー: {dst_report}")
+
+    # HTML は GitHub Pages 配信用の docs/reports/ に置き、一覧 index も更新する
+    src_html = REPORTS_DIR / f"{date}.html"
+    if src_html.is_file():
+        DOCS_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(src_html, DOCS_REPORTS_DIR / f"{date}.html")
+        dates = sorted((p.stem for p in DOCS_REPORTS_DIR.glob("????-??-??.html")),
+                       reverse=True)
+        (DOCS_REPORTS_DIR / "index.html").write_text(
+            build_index_html(dates), encoding="utf-8")
+        print(f"[OK] HTML レポート公開コピー: {DOCS_REPORTS_DIR / (date + '.html')}")
 
 
 def main() -> int:

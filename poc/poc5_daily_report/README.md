@@ -10,13 +10,15 @@ PoC-1（データ取得）と PoC-3（LLM シグナル生成）をつなぎ、
 |---------|------|
 | `run_daily.py` | 毎朝の一括実行（取得 → シグナル生成 → レポート → 配信 → 履歴保存） |
 | `report_builder.py` | `data/signals/<date>/*.json` から Markdown / Slack mrkdwn レポートを構築 |
+| `html_report.py` | リッチ版 HTML レポート（SVG チャート + 両専門家の見解 + 総合判断 + 引用リンク） |
 | `slack_notify.py` | Slack Incoming Webhook への送信（分割対応・未設定時は stdout フォールバック） |
 | `signals_history/<date>/` | シグナル JSON の履歴（**git 管理下**。フォワードテスト 4 週間の記録用） |
 | `reports_history/<date>.md` | レポート Markdown の履歴（**git 管理下**） |
+| `../../docs/reports/<date>.html` | リッチ版 HTML の公開先（**git 管理下**。GitHub Pages 配信用） |
 | `../../.github/workflows/daily-report.yml` | GitHub Actions 定義（平日朝 JST 7:00 目安） |
 
 `data/` 配下（`data/reports/<date>.md` 含む）は gitignore 済みのローカル成果物。
-git に残す履歴は `signals_history/` と `reports_history/` にコピーされる。
+git に残す履歴は `signals_history/` と `reports_history/`、HTML は `docs/reports/` にコピーされる。
 
 ## パイプラインの流れ（`run_daily.py`）
 
@@ -30,13 +32,31 @@ git に残す履歴は `signals_history/` と `reports_history/` にコピーさ
 
 ## レポートの内容
 
-- サマリー行（日付、buy/sell/hold の件数）
-- 注目銘柄（buy/sell を確信度降順）: 判定・確信度・現在値・目標/損切り・想定保有日数・理由の要約・リスク 1 行
+Slack / Markdown（要約版）:
+
+- サマリー行（日付、buy/sell/hold の件数）+ リッチ版 HTML へのリンク
+- 売買シグナル（buy/sell を確信度降順）: 判定・確信度・現在値・目標/損切り・想定保有日数・理由の要約・リスク 1 行
+- 👀 注目（買い候補・監視中）: hold のうち「ファンダ強気(strength≥60) × テクニカル中立」の銘柄
+  （v5 で buy 発火をファンダ strength≥70 に引き上げたため、60〜69 のカタリスト待ちを可視化）
 - 様子見（hold）銘柄は 1 行ずつ
 - マクロスナップショット（日経平均・TOPIX ETF・ドル円・VIX・日米金利）
 - 欠損ソース（取得失敗があった場合のみ）
 
 Slack は 1 メッセージ 3,000 字を超える場合に自動分割される。
+
+リッチ版 HTML（`html_report.py`、外部依存なしの自己完結 1 ファイル）は銘柄ごとに:
+
+- 株価チャート（直近60営業日の終値 + SMA5/25 + 目標/損切り/節目ライン + 出来高、SVG 手描画）
+- テクニカル専門家・ファンダメンタルズ専門家それぞれの見解（stance/strength・根拠 + evidence・注意点・節目）
+- チーフアナリストの総合判断（シグナル・確信度・目標/損切り・理由・リスク・再エントリー抑制の状態）
+- 参照ニュース・適時開示へのリンク（シグナルレコードの `context_refs`。LLM 入力に含まれた見出しの原典）
+
+### HTML レポートの公開（GitHub Pages、初回のみ手動設定）
+
+リポジトリの **Settings → Pages → Build and deployment** で
+Source = `Deploy from a branch`、Branch = `main` / `/docs` を選択すると、
+`https://<user>.github.io/trade-pilot/reports/<date>.html` で配信される
+（Slack のリンクはこの URL を指す。`REPORT_PAGES_URL` 環境変数で上書き可）。
 
 ## ローカル実行
 

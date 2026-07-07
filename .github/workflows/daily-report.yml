@@ -39,15 +39,17 @@ jobs:
         run: python poc/poc5_daily_report/run_daily.py
 
       - name: Commit history
-        # Slack 送信失敗等で前ステップが exit 1 でも、生成済みの履歴は残す
+        # Slack 送信失敗等で前ステップが exit 1 でも、生成済みの履歴は残す。
+        # docs/reports は GitHub Pages（main /docs）で配信するリッチ版 HTML
         if: ${{ !cancelled() }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898024+github-actions[bot]@users.noreply.github.com"
-          git add poc/poc5_daily_report/signals_history poc/poc5_daily_report/reports_history
+          git add poc/poc5_daily_report/signals_history poc/poc5_daily_report/reports_history docs
           if git diff --cached --quiet; then
             echo "変更なし（コミットをスキップ）"
           else
             git commit -m "chore(poc5): daily report $(TZ=Asia/Tokyo date +%Y-%m-%d)"
+            git pull --rebase origin main
             git push
           fi

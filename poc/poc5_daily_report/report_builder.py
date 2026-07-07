@@ -11,6 +11,7 @@
 import argparse
 import csv
 import json
+import os
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -19,6 +20,11 @@ POC_DIR = Path(__file__).resolve().parent
 REPO_ROOT = POC_DIR.parents[1]
 DATA_DIR = REPO_ROOT / "data"
 SIGNALS_DIR = DATA_DIR / "signals"
+
+# リッチ版 HTML レポートの公開 URL（GitHub Pages: Settings → Pages →
+# main ブランチ /docs を有効化すると配信される）。環境変数で上書き可。
+REPORT_PAGES_URL = os.environ.get(
+    "REPORT_PAGES_URL", "https://yuki-goto33.github.io/trade-pilot/reports")
 
 JST = timezone(timedelta(hours=9))
 
@@ -195,12 +201,34 @@ def fmt_price(value) -> str:
 
 
 def split_records(records: list):
-    """シグナルを (注目=buy/sell 確信度降順, 様子見=hold 確信度降順) に分ける。"""
+    """シグナルを (売買=buy/sell 確信度降順, 様子見=hold 確信度降順) に分ける。"""
     actionable = [r for r in records if r["signal"]["signal"] in ("buy", "sell")]
     holds = [r for r in records if r["signal"]["signal"] == "hold"]
     actionable.sort(key=lambda r: r["signal"]["confidence"], reverse=True)
     holds.sort(key=lambda r: r["signal"]["confidence"], reverse=True)
     return actionable, holds
+
+
+def is_watch(record: dict) -> bool:
+    """「注目（買い候補・監視中）」判定: hold かつ F強気(60+) × T中立。
+
+    v5 で buy 発火をファンダ strength≥70 に引き上げたため、60〜69 の
+    bullish（= カタリスト待ち）をレポート上の「注目」として可視化する。
+    """
+    if record["signal"]["signal"] != "hold":
+        return False
+    views = record.get("expert_views") or {}
+    t = views.get("technical") or {}
+    f = views.get("fundamental") or {}
+    return (f.get("stance") == "bullish" and (f.get("strength") or 0) >= 60
+            and t.get("stance") == "neutral")
+
+
+def split_holds(holds: list):
+    """hold を (注目, その他様子見) に分ける（ともに確信度降順を維持）。"""
+    watch = [r for r in holds if is_watch(r)]
+    others = [r for r in holds if not is_watch(r)]
+    return watch, others
 
 
 def count_line(records: list) -> str:
@@ -225,13 +253,14 @@ def current_price_str(record: dict, prices: dict) -> str:
 def build_markdown(date: str, records: list, macro: list, missing_sources=None) -> str:
     prices = load_latest_prices()
     actionable, holds = split_records(records)
+    watch, holds = split_holds(holds)
     lines = []
     lines.append(f"# デイリーシグナルレポート {date}")
     lines.append("")
     lines.append(f"**{count_line(records)}**")
     lines.append("")
 
-    lines.append("## 注目銘柄（買い / 売り）")
+    lines.append("## 売買シグナル（買い / 売り）")
     lines.append("")
     if not actionable:
         lines.append("本日の買い / 売りシグナルはありません。")
@@ -256,6 +285,17 @@ def build_markdown(date: str, records: list, macro: list, missing_sources=None) 
             lines.append(f"  - {summarize(reason['reason'])}")
         if s["risks"]:
             lines.append(f"- リスク: {summarize(s['risks'][0])}")
+        lines.append("")
+
+    if watch:
+        lines.append("## 👀 注目（買い候補・監視中: ファンダ強気 × テクニカル中立）")
+        lines.append("")
+        for r in watch:
+            s = r["signal"]
+            first_reason = summarize(s["reasons"][0]["reason"]) if s["reasons"] else "—"
+            stance = expert_stance_str(r)
+            stance_part = f"［{stance}］" if stance else ""
+            lines.append(f"- {r['code']} {r['name']}（{s['confidence']}）{stance_part}: {first_reason}")
         lines.append("")
 
     lines.append("## 様子見（hold）")
@@ -304,9 +344,14 @@ def build_slack_blocks(date: str, records: list, macro: list, missing_sources=No
     """Slack mrkdwn の「段落」リストを返す（分割はこの単位で行う）。"""
     prices = load_latest_prices()
     actionable, holds = split_records(records)
+    watch, holds = split_holds(holds)
     blocks = []
 
-    blocks.append(f":newspaper: *デイリーシグナルレポート {date}*\n{count_line(records)}")
+    header = f":newspaper: *デイリーシグナルレポート {date}*\n{count_line(records)}"
+    if REPORT_PAGES_URL:
+        header += (f"\n:bar_chart: <{REPORT_PAGES_URL.rstrip('/')}/{date}.html"
+                   "|詳細レポート（チャート・両専門家の見解・引用記事）>")
+    blocks.append(header)
 
     if actionable:
         for r in actionable:
@@ -328,6 +373,16 @@ def build_slack_blocks(date: str, records: list, macro: list, missing_sources=No
             blocks.append("\n".join(lines))
     else:
         blocks.append("本日の買い / 売りシグナルはありません。")
+
+    if watch:
+        lines = ["*👀 注目（買い候補・監視中: ファンダ強気 × テクニカル中立）*"]
+        for r in watch:
+            s = r["signal"]
+            first_reason = summarize(s["reasons"][0]["reason"], limit=70) if s["reasons"] else "—"
+            stance = expert_stance_str(r)
+            stance_part = f"［{stance}］" if stance else ""
+            lines.append(f"• {r['code']} {r['name']}（{s['confidence']}）{stance_part}: {first_reason}")
+        blocks.append("\n".join(lines))
 
     if holds:
         lines = ["*様子見（hold）*"]

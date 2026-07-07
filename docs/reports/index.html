@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>trade-pilot デイリーレポート一覧</title>
+<style>
+body { font-family: 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif;
+       margin: 0; background: #f4f6f8; color: #1a2733; line-height: 1.65; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 24px 16px 64px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+.sub { color: #5b6b7a; font-size: 13px; margin-bottom: 20px; }
+.counts { display: inline-block; background: #fff; border-radius: 8px;
+          padding: 6px 14px; font-size: 14px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.stock { background: #fff; border-radius: 12px; box-shadow: 0 1px 4px rgba(0,0,0,.08);
+         margin: 22px 0; padding: 20px 22px; }
+.stock h2 { font-size: 19px; margin: 0 0 2px; }
+.badge { display: inline-block; font-size: 12px; font-weight: 700; border-radius: 999px;
+         padding: 2px 12px; margin-left: 8px; vertical-align: 2px; color: #fff; }
+.badge.buy { background: #16a34a; } .badge.sell { background: #dc2626; }
+.badge.hold { background: #64748b; } .badge.watch { background: #d97706; }
+.meta-line { color: #5b6b7a; font-size: 13px; margin-bottom: 10px; }
+.chart { margin: 8px 0 14px; overflow-x: auto; }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 760px) { .cols { grid-template-columns: 1fr; } }
+.card { border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px; }
+.card h3 { font-size: 14px; margin: 0 0 8px; display: flex; align-items: center; gap: 8px; }
+.stance { font-size: 12px; font-weight: 700; border-radius: 999px; padding: 1px 10px; color: #fff; }
+.stance.bull { background: #16a34a; } .stance.bear { background: #dc2626; }
+.stance.neut { background: #94a3b8; }
+.card ul { margin: 6px 0; padding-left: 18px; }
+.card li { margin: 4px 0; font-size: 13.5px; }
+.ev { color: #64748b; font-size: 11.5px; display: block; }
+.cautions { background: #fef9ec; border-radius: 8px; padding: 8px 12px; margin-top: 8px;
+            font-size: 12.5px; color: #7c5e10; }
+.cautions ul { margin: 2px 0; padding-left: 16px; }
+.synth { border: 2px solid #c7d6e8; background: #f8fbff; grid-column: 1 / -1; }
+.kv { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13.5px; margin: 6px 0; }
+.kv b { color: #0f2f57; }
+.risks { background: #fdf2f2; border-radius: 8px; padding: 8px 12px; margin-top: 8px;
+         font-size: 12.5px; color: #8a1f1f; }
+.risks ul { margin: 2px 0; padding-left: 16px; }
+.refs { margin-top: 12px; font-size: 13px; }
+.refs h4 { font-size: 13px; margin: 10px 0 4px; color: #33475b; }
+.refs ul { margin: 2px 0; padding-left: 18px; }
+.refs a { color: #0b62c4; text-decoration: none; }
+.refs a:hover { text-decoration: underline; }
+.refs .dim { color: #7b8794; font-size: 11.5px; }
+table.macro { border-collapse: collapse; background: #fff; border-radius: 10px;
+              overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.08); font-size: 13.5px; }
+table.macro th, table.macro td { padding: 6px 14px; border-bottom: 1px solid #eef2f6; text-align: left; }
+table.macro th { background: #eef4fa; }
+.section-h { font-size: 17px; margin: 30px 0 6px; }
+.legend { font-size: 11.5px; color: #5b6b7a; }
+.footer { color: #8a97a4; font-size: 12px; margin-top: 30px; }
+.missing { background: #fff7ed; border-radius: 8px; padding: 8px 14px; font-size: 13px;
+           color: #9a3412; margin-top: 16px; }
+</style></head><body>
+<div class="wrap">
+<h1>📚 デイリーレポート一覧</h1><ul>
+<li><a href="2026-07-04.html">2026-07-04</a></li>
+</ul></div></body></html>
