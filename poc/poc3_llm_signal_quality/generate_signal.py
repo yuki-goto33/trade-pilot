@@ -21,13 +21,14 @@ import argparse
 import json
 import re
 import sys
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 import jsonschema
 
 from context_builder import (
     DATA_DIR,
+    REPO_ROOT,
     UNIVERSE,
     ContextBuildError,
     build_context,
@@ -39,6 +40,13 @@ POC_DIR = Path(__file__).resolve().parent
 SCHEMA_PATH = POC_DIR / "signal_schema.json"
 TEMPLATE_PATH = POC_DIR / "prompt_template.md"
 SIGNALS_DIR = DATA_DIR / "signals"
+
+# フォワードの buy 履歴の検索先。data/signals はローカル実行の蓄積、
+# signals_history は git 管理下（GitHub Actions のチェックアウトで過去分が入る）
+SIGNALS_HISTORY_DIR = REPO_ROOT / "poc" / "poc5_daily_report" / "signals_history"
+
+# v5: 同一銘柄への再 buy を抑制する日数
+REBUY_SUPPRESS_DAYS = 14
 
 JST = timezone(timedelta(hours=9))
 
@@ -129,6 +137,79 @@ def validate_signal(signal: dict) -> None:
     jsonschema.validate(instance=signal, schema=load_schema())
 
 
+def find_recent_buy(code: str, days: int = REBUY_SUPPRESS_DAYS) -> "dict | None":
+    """直近 days 日以内（当日を除く）に当該銘柄へ buy を出していれば返す。
+
+    data/signals（ローカル蓄積）と poc5 signals_history（git 管理下）の
+    両方を走査する。GitHub Actions ではチェックアウトされた signals_history
+    が唯一の過去履歴になる。
+    """
+    today = datetime.now(JST).date()
+    latest = None
+    for base in (SIGNALS_DIR, SIGNALS_HISTORY_DIR):
+        if not base.is_dir():
+            continue
+        for day_dir in base.iterdir():
+            try:
+                d = date.fromisoformat(day_dir.name)
+            except ValueError:
+                continue
+            if not (0 < (today - d).days <= days):
+                continue
+            path = day_dir / f"{code}.json"
+            if not path.is_file():
+                continue
+            try:
+                with open(path, encoding="utf-8") as f:
+                    rec = json.load(f)
+            except (json.JSONDecodeError, OSError):
+                continue
+            sig = rec.get("signal") or {}
+            if sig.get("signal") == "buy" and (latest is None or d > latest[0]):
+                latest = (d, sig.get("confidence"))
+    if latest is None:
+        return None
+    return {
+        "date": latest[0].isoformat(),
+        "days_ago": (today - latest[0]).days,
+        "confidence": latest[1],
+        "note": (f"直近{REBUY_SUPPRESS_DAYS}日以内に buy シグナル済み。"
+                 "新規 buy は出さず hold（継続監視）とすること"),
+    }
+
+
+def build_context_refs(code: str) -> dict:
+    """レポート引用用のニュース・開示リンク（LLM プロンプトには含めない）。
+
+    build_news / build_disclosures はトークン節約のため URL を落とすので、
+    元 JSON から URL 付きで拾い直してシグナルレコードに保存する。
+    """
+    refs = {}
+    try:
+        with open(DATA_DIR / "news_google.json", encoding="utf-8") as f:
+            data = json.load(f)
+        items = ((data.get("news") or {}).get(code) or {}).get("items", [])[:10]
+        refs["news"] = [
+            {"title": i.get("title"), "url": i.get("link"),
+             "published": i.get("published"), "publisher": i.get("source")}
+            for i in items
+        ]
+    except (OSError, json.JSONDecodeError):
+        pass
+    try:
+        with open(DATA_DIR / "disclosures_yanoshin.json", encoding="utf-8") as f:
+            data = json.load(f)
+        items = ((data.get("disclosures") or {}).get(code) or {}).get("items", [])[:10]
+        refs["disclosures"] = [
+            {"title": i.get("title"), "url": i.get("document_url"),
+             "date": i.get("pubdate")}
+            for i in items
+        ]
+    except (OSError, json.JSONDecodeError):
+        pass
+    return refs
+
+
 def save_signal(code: str, name: str, context: dict, signal: dict, raw: str,
                 expert_views: dict = None) -> Path:
     """検証済みシグナルを data/signals/<日付>/<code>.json に保存する。"""
@@ -146,6 +227,11 @@ def save_signal(code: str, name: str, context: dict, signal: dict, raw: str,
     }
     if expert_views:
         record["expert_views"] = expert_views
+    if context.get("recent_buy"):
+        record["recent_buy"] = context["recent_buy"]
+    refs = build_context_refs(code)
+    if refs:
+        record["context_refs"] = refs
     with open(path, "w", encoding="utf-8") as f:
         json.dump(record, f, ensure_ascii=False, indent=2)
     return path
@@ -243,6 +329,9 @@ def run_generate(codes: "list[str]", provider: str, mode: str = "experts") -> No
     for code in codes:
         try:
             context = build_context(code)
+            recent = find_recent_buy(code)
+            if recent:
+                context["recent_buy"] = recent
             expert_views = None
             if mode == "experts":
                 signal, views, raws = run_expert_pipeline(

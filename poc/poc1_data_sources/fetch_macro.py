@@ -1,8 +1,9 @@
 """マクロ指標を取得する。
 
 1. yfinance: ^N225, 1306.T(TOPIX連動ETF), JPY=X, ^GSPC, ^VIX
-   + TOPIX-17 業種 ETF（1617.T〜1633.T）の直近約60日
+   + TOPIX-17 業種 ETF（1617.T〜1633.T）の直近約150日
    （v2: 市場レジーム判定に TOPIX の 25日線が必要なため 5d → 60d に拡張。
+     v5: 対TOPIX相対騰落（60営業日）の計算に 61 営業日以上が必要なため 150d に拡張。
      poc3 context_builder のスナップショットは末尾5日窓を使うので互換）
 2. 財務省 国債金利 CSV（jgbcm.csv, cp932, 和暦）から直近の10年金利を抽出
 3. FRED API で DGS10（米10年債利回り）と DFF（FF金利）の直近5観測値を取得
@@ -84,7 +85,7 @@ def fetch_yfinance() -> pd.DataFrame:
     tickers = {**INDEX_TICKERS, **SECTOR_ETFS, **US_MARKET_TICKERS, **adr_tickers()}
     raw = yf.download(
         tickers=list(tickers),
-        period="60d",
+        period="150d",
         interval="1d",
         auto_adjust=False,
         group_by="ticker",

@@ -12,16 +12,17 @@
 # 入力データについて
 
 - price_technical: 日足（直近約30営業日）のテクニカル指標（SMA5/SMA25、RSI14、MACD）と直近5営業日の値動き、期間高値・安値
-- us_overnight: 前夜のNY市場での当該銘柄のADRと業種対応セクターETFの騰落（存在する場合のみ）
-- macro.indices: 日経平均・TOPIX・ドル円・S&P500・VIX のスナップショット
+- price_technical.trend_60d: 60営業日騰落率と対TOPIX相対騰落率（中期トレンドの文脈。存在する場合のみ）
+- us_overnight: 前夜のNY市場での当該銘柄のADRと業種対応セクターETFの騰落（半導体銘柄はSOX指数も。存在する場合のみ）
+- macro.indices: 日経平均・TOPIX・S&P500・VIX のスナップショット
 - macro.market_regime: TOPIX の終値 vs 25日線等から機械判定した市場レジーム（uptrend / downtrend / neutral）
-- macro.us_market_overnight: 前夜の米国市場（NASDAQ・NYダウ・SOX指数・セクターETF）
 
 # 厳守事項
 
 - 判断の根拠は**入力データに実際に含まれる事実のみ**。データにない価格水準・過去の値動きを推測しない。
 - 各根拠（points[].evidence）には参照した入力データの箇所を明記する（例: "price_technical.rsi14=28.5"）。
 - stance の目安: トレンド（SMA・MACD）とモメンタム（RSI・直近の値動き）が同方向なら bullish/bearish、食い違うなら neutral。**迷ったら neutral**。
+- **中期下落トレンドの検知（v5・最重要）**: trend_60d の change_60d_pct と relative_to_topix_60d_pct が**ともにマイナス**の場合、その銘柄は中期下落トレンド内にある。直近数日の下げ止まり・小反発だけでは neutral にせず **bearish に倒す**こと。neutral 以上とするには明確な反転の証拠（MACD好転 + 25日線回復、または出来高を伴う大幅反発）が複数必要。※「短期は落ち着いているが中期は下落継続中」を中立と誤認したことが、下落銘柄への buy 連発（バリュートラップ）の主因だった。
 - strength の目安: 50=シグナルが弱い/拮抗、70=複数指標が同方向、85+=トレンド・モメンタム・地合い・前夜NYがすべて同方向。
 - key_levels は入力データに実在する節目（period_high / period_low / sma25 / 直近の高値安値）から設定する。
 - 25日線を大きく下回った銘柄の「売られすぎからの反発期待」は、反転の証拠（MACD好転・下げ止まりの値動き）がない限り bullish の根拠にしない。

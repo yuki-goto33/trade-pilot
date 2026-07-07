@@ -184,14 +184,56 @@ def technical_from_window(px: pd.DataFrame) -> dict:
     }
 
 
+def trend_60d(close: pd.Series, topix_close: "pd.Series | None" = None) -> "dict | None":
+    """60営業日騰落と対TOPIX相対騰落（v5: 中期トレンド文脈）を計算する。
+
+    close / topix_close は昇順の終値系列。61営業日に満たない場合は None
+    （呼び出し側でキーごと省略。バリュートラップ対策として、直近数日が
+    落ち着いていても中期下落トレンド内の銘柄を検知するための入力）。
+
+    build_technical（最新データ）と historical_context.build_technical_asof
+    （過去 as-of 時点）の共通実装。
+    """
+    close = close.dropna()
+    if len(close) < 61:
+        return None
+    chg = (float(close.iloc[-1]) / float(close.iloc[-61]) - 1) * 100
+    out = {
+        "change_60d_pct": _round(chg),
+        "note": ("直近60営業日の騰落率と対TOPIX相対騰落。ともにマイナスなら"
+                 "中期下落トレンド内（直近の下げ止まりだけで中立と判断しないこと）"),
+    }
+    if topix_close is not None:
+        topix_close = topix_close.dropna()
+        if len(topix_close) >= 61:
+            topix_chg = (float(topix_close.iloc[-1])
+                         / float(topix_close.iloc[-61]) - 1) * 100
+            out["topix_change_60d_pct"] = _round(topix_chg)
+            out["relative_to_topix_60d_pct"] = _round(chg - topix_chg)
+    return out
+
+
+# テクニカル指標の計算窓（従来の約30営業日を維持。period_high/low の意味を変えない）
+TECHNICAL_WINDOW_BDAYS = 30
+
+
 def build_technical(code: str) -> dict:
-    """日足30日から SMA/RSI/MACD と直近5日の値動きサマリーを計算する。"""
+    """日足から SMA/RSI/MACD（末尾30営業日窓）と 60日トレンドを計算する。"""
     df = _load_prices()
     ticker = f"{code}.T"
     px = df[df["ticker"] == ticker].copy()
     if px.empty:
         raise ContextBuildError(f"prices_yfinance.csv に {ticker} のデータがありません。")
-    return technical_from_window(px)
+    out = technical_from_window(px.tail(TECHNICAL_WINDOW_BDAYS))
+    try:
+        macro = _load_macro_prices()
+        topix = macro[macro["ticker"] == REGIME_TICKER].sort_values("Date")["Close"]
+    except ContextBuildError:
+        topix = None
+    trend = trend_60d(px.sort_values("Date")["Close"], topix)
+    if trend:
+        out["trend_60d"] = trend
+    return out
 
 
 # ---------------------------------------------------------------------------
@@ -356,7 +398,8 @@ def build_fundamentals(code: str) -> dict:
 # マクロ
 # ---------------------------------------------------------------------------
 
-JFC_SME_MONTHS = 6
+# v5: 引用率6.8%に対し約1,250文字/銘柄とコスパが悪かったため 6→3ヶ月に圧縮
+JFC_SME_MONTHS = 3
 
 
 def jfc_sme_snapshot(asof=None, months: int = JFC_SME_MONTHS) -> "dict | None":
@@ -563,6 +606,12 @@ def us_overnight_for_stock(code: str, df: pd.DataFrame, asof=None) -> "dict | No
         if row:
             label = US_SECTOR_TICKERS.get(proxy) or US_INDEX_TICKERS.get(proxy, proxy)
             out["sector_proxy"] = {"sector": label, "ticker": proxy, **row}
+        # v5: 半導体銘柄には SOX 指数も付ける（NYフルグリッド廃止の代替）
+        if proxy == "SMH":
+            sox = _us_row(df, "^SOX", asof)
+            if sox:
+                out["sox_index"] = {"name": US_INDEX_TICKERS["^SOX"],
+                                    "ticker": "^SOX", **sox}
     if not out:
         return None
     out["note"] = ("前夜のNY市場での当該銘柄の ADR と業種対応セクターETFの騰落。"
@@ -711,18 +760,10 @@ def build_macro() -> dict:
     except ContextBuildError:
         rates["jgb_10y_percent"] = None
 
-    try:
-        fred = _load_json("macro_fred.json")
-        for series_id, info in (fred.get("series") or {}).items():
-            obs = info.get("observations") or []
-            if obs:
-                rates[series_id] = {
-                    "label": info.get("label"),
-                    "value": float(obs[0]["value"]),
-                    "date": obs[0]["date"],
-                }
-    except ContextBuildError:
-        pass
+    # v5: FRED（米10年債・FF金利）は引用率0.1%（日銀・JGBに完全代替）のため
+    # コンテキストから除去。取得（fetch_macro.py）とレポート表示は継続。
+    # NYフルグリッド（macro.us_market_overnight）も総合指数の引用率2.0%のため
+    # 除去し、銘柄別 us_overnight（ADR 91.3% + 業種プロキシ + 半導体はSOX）に一本化。
 
     macro = {"indices": indices, "market_regime": regime, "rates": rates}
     sme = jfc_sme_snapshot()
@@ -731,9 +772,6 @@ def build_macro() -> dict:
     boj = boj_snapshot()
     if boj:
         macro["boj"] = boj
-    us = us_market_snapshot(df)
-    if us:
-        macro["us_market_overnight"] = us
     pmi = japan_pmi_snapshot()
     if pmi:
         macro["japan_pmi"] = pmi

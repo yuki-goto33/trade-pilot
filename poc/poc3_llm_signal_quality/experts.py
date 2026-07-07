@@ -24,9 +24,12 @@ TEMPLATES = {
 }
 
 # コンテキストの macro キーの振り分け
-TECH_MACRO_KEYS = ("indices", "market_regime", "us_market_overnight")
+# v5: us_market_overnight（NYフルグリッド）は廃止（銘柄別 us_overnight に一本化）。
+# ドル円はテクニカル側の引用率1.6%（ファンダ側47.9%）のためファンダ専用にする。
+TECH_MACRO_KEYS = ("indices", "market_regime")
 FUND_MACRO_KEYS = ("indices", "market_regime", "rates",
                    "jfc_sme_survey", "boj", "japan_pmi", "japan_cpi")
+TECH_EXCLUDE_INDEX_TICKERS = {"JPY=X"}
 
 
 def load_expert_schema() -> dict:
@@ -57,10 +60,15 @@ def _load_sections(path: Path) -> dict:
 def split_context(context: dict) -> "tuple[dict, dict, dict]":
     """フルコンテキストを (テクニカル用, ファンダ用, 参照データ) に分割する。"""
     macro = context.get("macro") or {}
+    tech_macro = {k: macro[k] for k in TECH_MACRO_KEYS if k in macro}
+    if isinstance(tech_macro.get("indices"), list):
+        tech_macro["indices"] = [
+            i for i in tech_macro["indices"]
+            if i.get("ticker") not in TECH_EXCLUDE_INDEX_TICKERS]
     tech = {
         "meta": context["meta"],
         "price_technical": context["price_technical"],
-        "macro": {k: macro[k] for k in TECH_MACRO_KEYS if k in macro},
+        "macro": tech_macro,
     }
     if context.get("us_overnight"):
         tech["us_overnight"] = context["us_overnight"]
@@ -84,6 +92,10 @@ def split_context(context: dict) -> "tuple[dict, dict, dict]":
         "next_boj_meeting": ((macro.get("boj") or {}).get(
             "monetary_policy_meeting") or {}).get("next_meeting"),
     }
+    # v5: 直近14日以内の buy（フォワードのみ generate_signal が付与）。
+    # 存在する場合、チーフアナリストは新規 buy を抑制する
+    if context.get("recent_buy"):
+        reference["recent_buy"] = context["recent_buy"]
     return tech, fund, reference
 
 

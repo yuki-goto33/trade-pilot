@@ -1,4 +1,8 @@
-"""yfinance でユニバース銘柄の日足 OHLCV（直近30日 + 調整後終値）を取得する。
+"""yfinance でユニバース銘柄の日足 OHLCV（直近150日 + 調整後終値）を取得する。
+
+v5: 60営業日騰落・対TOPIX相対騰落（テクニカル専門家の中期トレンド入力）の
+計算に61営業日以上が必要なため、取得期間を 30d → 150d に拡張。
+テクニカル指標（SMA/RSI/MACD）は従来どおり末尾30営業日窓で計算される。
 
 - ティッカーは <4桁コード>.T 形式
 - まずバッチ取得（threads=False で内部逐次）、失敗銘柄は1req/秒で個別リトライ
@@ -15,7 +19,7 @@ from common import Timer, ensure_data_dir, now_jst_iso, parse_universe_arg, prin
 from universe import load_universe, yf_tickers
 
 SOURCE = "prices_yfinance"
-PERIOD = "30d"
+PERIOD = "150d"
 
 
 def _to_long(df: pd.DataFrame, ticker: str) -> pd.DataFrame:

@@ -69,7 +69,7 @@ from context_builder import (  # noqa: E402
     jfc_sme_snapshot,
     market_regime_from_series,
     technical_from_window,
-    us_market_snapshot,
+    trend_60d,
     us_overnight_for_stock,
 )
 from universe import UNIVERSE, yf_tickers  # noqa: E402
@@ -209,13 +209,21 @@ def build_technical_asof(code: str, asof) -> dict:
     asof = _to_date(asof)
     df = _load_price_history()
     ticker = f"{code}.T"
-    px = df[(df["ticker"] == ticker) & (df["Date"].dt.date < asof)].copy()
-    px = px.tail(TECHNICAL_WINDOW_BDAYS)
+    px_full = df[(df["ticker"] == ticker) & (df["Date"].dt.date < asof)].copy()
+    px = px_full.tail(TECHNICAL_WINDOW_BDAYS)
     if len(px) < 26:
         raise ContextBuildError(
             f"{ticker} の {asof} 以前の価格データが不足しています（{len(px)} 行）。"
         )
-    return technical_from_window(px)
+    out = technical_from_window(px)
+    # v5: 60営業日騰落・対TOPIX相対騰落（履歴が足りない場合はキーごと省略）
+    macro = _load_macro_history()
+    topix = macro[(macro["ticker"] == "1306.T")
+                  & (macro["Date"].dt.date < asof)].sort_values("Date")["Close"]
+    trend = trend_60d(px_full.sort_values("Date")["Close"], topix)
+    if trend:
+        out["trend_60d"] = trend
+    return out
 
 
 def _published_date(item: dict):
@@ -473,10 +481,8 @@ def build_macro_asof(asof) -> dict:
     boj = boj_snapshot(asof=asof)
     if boj:
         macro["boj"] = boj
-    # 前夜のNY市場（Date < asof の最終NY営業日 = asof の朝に確定済みの終値）
-    us = us_market_snapshot(df, asof=asof)
-    if us:
-        macro["us_market_overnight"] = us
+    # v5: NYフルグリッド（us_market_overnight）は廃止。
+    # 銘柄別 us_overnight（ADR + 業種プロキシ + 半導体はSOX）に一本化
     # 日本PMI（公表タイミングによる look-ahead ガード付き）
     pmi = japan_pmi_snapshot(asof=asof)
     if pmi:
