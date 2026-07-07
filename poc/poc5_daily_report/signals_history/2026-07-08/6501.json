@@ -1,0 +1,211 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-07-08T08:18:13+09:00",
+  "price_as_of": "2026-07-07",
+  "signal": {
+    "signal": "buy",
+    "confidence": 70,
+    "target_price": 5280.0,
+    "stop_loss": 4700.0,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の確信度が75と高く、大幅な目標株価引き上げや業績上方修正という強いカタリストがある一方で、テクニカルが中立に留まっており、織り込み前の好機と判断した。",
+        "evidence": "fundamental_view.strength=75, technical_view.stance=neutral, news.headlines: '目標株価6,500円に引上げ'"
+      },
+      {
+        "reason": "株価が25日移動平均線を明確に上抜け、MACDヒストグラムも拡大傾向にあることから、短期的には下値が固まり反転上昇の勢いが増している。",
+        "evidence": "technical_view.points[0]: last_close=4942.0 > sma25=4773.28, technical_view.points[1]: macd_histogram=33.38"
+      },
+      {
+        "reason": "製造業PMIの拡大圏推移や日銀短観のDI改善など、事業環境を支えるマクロデータが良好であり、ファンダメンタルズの裏付けが強い。",
+        "evidence": "fundamental_view.points[2]: macro.japan_pmi.manufacturing.latest_value=54.8, macro.boj.tankan.di.large_manufacturing.change_from_prev=5.0"
+      }
+    ],
+    "risks": [
+      "RSI14が68.3と過熱圏に接近しており、達成感からの利益確定売りに押される可能性がある。",
+      "2026年7月29日の決算発表において、高い市場期待値に届かない場合の見直し売りリスク。",
+      "2026年7月30日から31日の日銀金融政策決定会合に伴う為替・金利変動の影響。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"buy\",\n  \"confidence\": 70,\n  \"target_price\": 5280.0,\n  \"stop_loss\": 4700.0,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ専門家の確信度が75と高く、大幅な目標株価引き上げや業績上方修正という強いカタリストがある一方で、テクニカルが中立に留まっており、織り込み前の好機と判断した。\",\n      \"evidence\": \"fundamental_view.strength=75, technical_view.stance=neutral, news.headlines: '目標株価6,500円に引上げ'\"\n    },\n    {\n      \"reason\": \"株価が25日移動平均線を明確に上抜け、MACDヒストグラムも拡大傾向にあることから、短期的には下値が固まり反転上昇の勢いが増している。\",\n      \"evidence\": \"technical_view.points[0]: last_close=4942.0 > sma25=4773.28, technical_view.points[1]: macd_histogram=33.38\"\n    },\n    {\n      \"reason\": \"製造業PMIの拡大圏推移や日銀短観のDI改善など、事業環境を支えるマクロデータが良好であり、ファンダメンタルズの裏付けが強い。\",\n      \"evidence\": \"fundamental_view.points[2]: macro.japan_pmi.manufacturing.latest_value=54.8, macro.boj.tankan.di.large_manufacturing.change_from_prev=5.0\"\n    }\n  ],\n  \"risks\": [\n    \"RSI14が68.3と過熱圏に接近しており、達成感からの利益確定売りに押される可能性がある。\",\n    \"2026年7月29日の決算発表において、高い市場期待値に届かない場合の見直し売りリスク。\",\n    \"2026年7月30日から31日の日銀金融政策決定会合に伴う為替・金利変動の影響。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "短期的には25日線を上抜ける強い反発を見せ、MACDも改善傾向にありますが、RSIが過熱圏に接近している点や中期的な対市場劣後、前夜の米国市場での下落を考慮し、中立スタンスとします。",
+      "points": [
+        {
+          "point": "直近5営業日で株価が急回復し、25日移動平均線を明確に上抜けています。",
+          "evidence": "price_technical.last_close=4942.0, price_technical.sma25=4773.28, price_technical.recent_5_days[4].change_pct=2.85"
+        },
+        {
+          "point": "MACDヒストグラムが正の値で拡大を続けており、短期的には反転上昇の勢いが強いことを示唆しています。",
+          "evidence": "price_technical.macd_histogram=33.38, price_technical.macd=-55.05, price_technical.macd_signal=-88.43"
+        },
+        {
+          "point": "中期トレンド（60日）ではTOPIXに対して大幅に劣後しており、本格的なトレンド転換には更なる確認が必要です。",
+          "evidence": "price_technical.trend_60d.relative_to_topix_60d_pct=-7.29"
+        }
+      ],
+      "cautions": [
+        "RSI14が68.3と買われすぎ水準の70に接近しており、目先は利益確定売りに押されるリスクがあります。",
+        "前夜のADRおよび米国資本財セクターETFがともに下落しており、当日の寄り付きが弱含みとなる可能性があります。",
+        "5日線と25日線がデッドクロス状態を維持しており、上昇がSMA25付近で一服する「戻り売り」の懸念が残ります。"
+      ],
+      "key_levels": {
+        "support": 4773.28,
+        "resistance": 5375.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "2026年3月期の大幅な増益達成に加え、直近の目標株価引き上げや業績予想の上方修正が新たなカタリストとなっている。製造業の景況感改善や円安といったマクロ環境の追い風も強く、中長期的な成長期待が持続する局面にある。",
+      "points": [
+        {
+          "point": "極めて強い業績トレンド。2026年3月期は売上高・営業利益ともに前年比で大幅な伸びを記録しており、収益性が向上している。",
+          "evidence": "fundamentals.earnings_trend.annual[0] (revenue_oku_jpy: 105868, operating_income_oku_jpy: 11993)"
+        },
+        {
+          "point": "直近のポジティブなアナリスト評価。2026年7月7日に米系大手証券が目標株価を6,500円に引き上げたほか、翌期経常予想も上方修正されている。",
+          "evidence": "news.headlines (Published: 2026-07-07, '目標株価6,500円に引上げ', '27年3月期経常予想。対前週0.7%上昇')"
+        },
+        {
+          "point": "製造業における良好なマクロ環境。PMIが拡大圏の54.8で推移し、日銀短観の大企業製造業DIも前回比+5と大幅に改善している。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.8, macro.boj.tankan.di.large_manufacturing.change_from_prev=5.0"
+        },
+        {
+          "point": "継続的な株主還元策の実施。自己株式の取得を定期的に開示しており、資本効率の向上と株価の下支えに寄与している。",
+          "evidence": "disclosures.items (2026-07-02, 2026-06-02, '自己株式の取得状況に関するお知らせ')"
+        }
+      ],
+      "cautions": [
+        "次回決算発表（2026-07-29）が接近しており、市場の期待値が高い分、内容が予想を下回った場合の反動リスクがある。",
+        "日銀金融政策決定会合（2026-07-30〜31）を控え、金利上昇や円高方向への振れが輸出事業の採算に影響を及ぼす可能性がある。",
+        "予想PERが27倍を超えており（forward_pe=27.744）、歴史的・同業他社比較で割高感が意識されやすい水準にある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": 6500.0
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)日立製作所【6501】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4yQ3lneGRPOVV1N3BFRXRGcHFZa3dpWWttOTd2ZWw4dm9FSVU2NXItOUpGOWJyeFpSYm1DWWYtaEpIMDJZZElwbmJwX0FTTDRMZmd2MzZSWDlLMnhnbDRF?oc=5",
+        "published": "Tue, 07 Jul 2026 06:53:56 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "「Tokyo Pride 2026」 参加レポート - Hitachi Global",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE15SDAySVRhUDFadjhxdFNIbTNMRnhZY3d3OEFyT0tpUW1UbTlsc3N2MllNS0FEQzQzRHdYRFNLTEgwWTZXUV9abW1LQ1ktRFpJN0FaRmNkOWlxbS00dDc3RVlMWWh4cmM?oc=5",
+        "published": "Tue, 07 Jul 2026 07:36:26 GMT",
+        "publisher": "Hitachi Global"
+      },
+      {
+        "title": "【アナリスト評価】日立製作所、レーティング強気を継続、目標株価6,500円に引上げ（米系大手証券）(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOcmQydkxwR181LTVzbDRsN0p5ekFFX3ByOWV1UkpfNmhyVUh6SkwyVzBqZG5oa2FvRzNiUGNtbjlLd3hvblB5aUZBY19QNng3TGlaLURjdXQ1YUpfU1ZueE1NRS1lemdXQTdzZ2J6Qy01TlRUUzNkMzZOeUgtLV9wWmFTTEYxd1U?oc=5",
+        "published": "Tue, 07 Jul 2026 07:22:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "米国株式市場は上昇、ハイテク回復が支援 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQN2taQTZaOWhoRl9UZHItWERqNDZXMl8yYTlQbEJiZ1FOTGRSNUZVMmFRUVpLMHFwajlMZlR0Y0ZkbU9JQ3JjdHVzOWNhc1dkNGlzXzVLVkZCNlBLd0lreTQxaHc0d2VfSm5ia3RJRDhHU1dSWTNscE5LbUlFUGlQX0UyeVFtZzhySWF0c9IBjAFBVV95cUxQN2taQTZaOWhoRl9UZHItWERqNDZXMl8yYTlQbEJiZ1FOTGRSNUZVMmFRUVpLMHFwajlMZlR0Y0ZkbU9JQ3JjdHVzOWNhc1dkNGlzXzVLVkZCNlBLd0lreTQxaHc0d2VfSm5ia3RJRDhHU1dSWTNscE5LbUlFUGlQX0UyeVFtZzhySWF0cw?oc=5",
+        "published": "Mon, 06 Jul 2026 23:02:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "【アナリスト予想】日立製作所、27年3月期経常予想。対前週0.7%上昇。(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNMVVoV1VobVUtZExBMDlRUG5JZXFBZFpkTXQyTW1ZWmpqNm1TdDc5UEFXMHpjUFEtREVSYVpNUVp5ZGdqTVdTYjdGUDE4bVpVcVBDdXVtQUdROE1hOUp3MmE4Vm5meUxPSUhCcndwYTdyOHNuN3MzM081S2pYUUgyZ1lTcmFpNTg?oc=5",
+        "published": "Tue, 07 Jul 2026 13:46:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "生成AIの次は現場AIへ 熟練者の判断を支えるフィジカルAIの可能性 - 千葉テレビ放送",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9sMHBIbFNjUlVfWXZiZU5ucUVzM093eG5jTE84ME43VE1XRGFDb2FtUlRVVjd0R0JzLVRBck9HQVVjT2NUb2M1WFpfOHJicl9yY1NGc3Q2eGhacXlDSjltN0djVEo?oc=5",
+        "published": "Tue, 07 Jul 2026 10:31:00 GMT",
+        "publisher": "千葉テレビ放送"
+      },
+      {
+        "title": "6日のNY市場は上昇 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOaVJlS2ZNbXBUTkpUVmFuemk4emo3cnIzdXhidWRQNW9oTnFVZjRhZVdBdy1kaWlJNWlkZm9tek9hLUVwRlhKaUo2Z2t1MC14UW5YVEhwaHhaWG5MVmYxMTNIZ3hrTVhxQVZVR2hUd2lvelJFWllkcWZ5RXVJZnBhQ3UzVGRpaE5yQkRYbtIBjAFBVV95cUxOaVJlS2ZNbXBUTkpUVmFuemk4emo3cnIzdXhidWRQNW9oTnFVZjRhZVdBdy1kaWlJNWlkZm9tek9hLUVwRlhKaUo2Z2t1MC14UW5YVEhwaHhaWG5MVmYxMTNIZ3hrTVhxQVZVR2hUd2lvelJFWllkcWZ5RXVJZnBhQ3UzVGRpaE5yQkRYbg?oc=5",
+        "published": "Mon, 06 Jul 2026 23:05:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "「株式」ADR日本株ランキング〜全般買い優勢、シカゴは大阪日中比1930円高の70255円 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOeU96OVZxTFR4TXZKdzZJSU1BSWs3dnAxUXNrUkpjVEJBbmVHOThaWTlhOWh3aFY0dy1LSDFJQTlPWDB6c1RZVHdKMlJhRVdhMEFOcE1BTHNFR2xvbGQ0OEhyaXRQanhEdTMtRW9oRWlPdW12MDdaN3pYZVdzN1ZKWDBueHV4MUdZOEowSU1Sa2hJVFFpa19EQU14TTIwOWhaRjJtVGwzSWdPeWMySkhEWEh5SlBBTmsyd3BnTE5lLWk4TWRfRWtfN3NRbTNXV3lFalZvZTFvSV9hYUtC0gGMAUFVX3lxTE94bGJuNThETGZLckVxcndoSG1ra2FEWUk1LXdHZUhBeGRXUXRxZWpjNjRnYlNHUWtFcjBiMkdKVTBBNFUwTEdYaXotS2RfSmR4eHEtZXhHcDBfSFhjS05XRGIzQVNBRGxjb3A3UXduSWpJMGhvcVN1bnFBUmdKcHkxMGMxMlA2RU9QREtx?oc=5",
+        "published": "Mon, 06 Jul 2026 23:46:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "投票所が変更になりました - city.seiyo.ehime.jp",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5GZDEzeTVLY0xlLVprM2U0dG5KaVI0bGhYOUcyMkFreGU4all3a2xnY2ltbFhiNGRXUTZHeXFmU042UWNoVHVuYTdpcU5GdExGeGVfVE1wYWJoVzBvQ043WUgwUVNGbzl6?oc=5",
+        "published": "Tue, 07 Jul 2026 04:42:12 GMT",
+        "publisher": "city.seiyo.ehime.jp"
+      },
+      {
+        "title": "日経平均一時1000円超安、キオクシアやSUMCOが急落──サムスン決算とETF売り圧力が重荷 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBlT3BkbkVaU2FhcnVzVkQxSzBMSjNsbFlJYmxram5pWVp4dHd2eklJbHZ4cjJCSkRpMTF6QnN1anJoTlMyUUpodU1CSktsSTVCczJzTTBSVFhLSmFrR1R5eV8yRVJRMUtOM0lSTU1uTGN4YUR4?oc=5",
+        "published": "Tue, 07 Jul 2026 05:56:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(モビリティ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566288.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(コネクティブインダストリーズ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566292.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(デジタルシステム＆サービス事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566294.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CFO Session)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566296.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559702.pdf",
+        "date": "2026-06-02 15:30:00"
+      },
+      {
+        "title": "剰余金の配当(期末配当)に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533826.pdf",
+        "date": "2026-05-14 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況及び取得終了に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260427511652.pdf",
+        "date": "2026-04-27 15:30:00"
+      }
+    ]
+  }
+}

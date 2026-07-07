@@ -1,0 +1,207 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-07-08T08:12:08+09:00",
+  "price_as_of": "2026-07-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家のスタンスが中立（strength=55）であり、売上高は拡大しているものの2期連続の減益トレンドや予想ROE低下（9.1%）への懸念から、買いエントリーの基準に達していません。",
+        "evidence": "fundamental_view.stance=neutral, fundamental_view.points[0].evidence=fundamentals.earnings_trend.annual, fundamental_view.cautions[2]"
+      },
+      {
+        "reason": "テクニカル面では25日移動平均線を上抜ける短期的な急反発が見られるものの、中期的な下落トレンド（60日騰落率-12.94%）を脱したとは言えず、テクニカル専門家も中立スタンスをとっています。",
+        "evidence": "technical_view.stance=neutral, technical_view.points[2].evidence=price_technical.trend_60d.change_60d_pct=-12.94"
+      },
+      {
+        "reason": "ファンダ・テクニカル双方の専門家が中立姿勢であり、材料の織り込み状況やトレンドの方向性が不明瞭なため、新規のポジション構築を避け様子見とします。",
+        "evidence": "fundamental_view.summary, technical_view.summary"
+      }
+    ],
+    "risks": [
+      "2026年8月4日の次回決算発表にて、今期業績予想の下方修正や為替前提の変更が行われるリスク（reference.next_earnings_date）",
+      "2026年7月30日〜31日の日銀金融政策決定会合における追加利上げ等の政策変更と、それに伴う急激な円高の進行による利益圧迫リスク（reference.next_boj_meeting）",
+      "トランプ関税回避を狙った米国テキサス工場への5,800億円投資に伴う、短期的な資本効率（ROE）の低下や巨額資金流出リスク"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 50,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ専門家のスタンスが中立（strength=55）であり、売上高は拡大しているものの2期連続の減益トレンドや予想ROE低下（9.1%）への懸念から、買いエントリーの基準に達していません。\",\n      \"evidence\": \"fundamental_view.stance=neutral, fundamental_view.points[0].evidence=fundamentals.earnings_trend.annual, fundamental_view.cautions[2]\"\n    },\n    {\n      \"reason\": \"テクニカル面では25日移動平均線を上抜ける短期的な急反発が見られるものの、中期的な下落トレンド（60日騰落率-12.94%）を脱したとは言えず、テクニカル専門家も中立スタンスをとっています。\",\n      \"evidence\": \"technical_view.stance=neutral, technical_view.points[2].evidence=price_technical.trend_60d.change_60d_pct=-12.94\"\n    },\n    {\n      \"reason\": \"ファンダ・テクニカル双方の専門家が中立姿勢であり、材料の織り込み状況やトレンドの方向性が不明瞭なため、新規のポジション構築を避け様子見とします。\",\n      \"evidence\": \"fundamental_view.summary, technical_view.summary\"\n    }\n  ],\n  \"risks\": [\n    \"2026年8月4日の次回決算発表にて、今期業績予想の下方修正や為替前提の変更が行われるリスク（reference.next_earnings_date）\",\n    \"2026年7月30日〜31日の日銀金融政策決定会合における追加利上げ等の政策変更と、それに伴う急激な円高の進行による利益圧迫リスク（reference.next_boj_meeting）\",\n    \"トランプ関税回避を狙った米国テキサス工場への5,800億円投資に伴う、短期的な資本効率（ROE）の低下や巨額資金流出リスク\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "直近では出来高を伴う大幅な反発により25日移動平均線を回復し、短期テクニカル指標の改善が見られますが、中期的な下落トレンドが継続しているため中立スタンスとします。",
+      "points": [
+        {
+          "point": "直近5営業日で株価は連騰し、出来高を伴って25日移動平均線（2800.1円）を明確に上回る急反発を見せています。",
+          "evidence": "price_technical.recent_5_days, price_technical.last_close=2946.0, price_technical.sma25=2800.1"
+        },
+        {
+          "point": "5日線が25日線を上抜けるゴールデンクロスが成立したほか、MACDヒストグラムも28.38と拡大傾向にあり、短期的なモメンタムは好転しています。",
+          "evidence": "price_technical.sma5_vs_sma25=golden(5日線が25日線の上), price_technical.macd_histogram=28.38"
+        },
+        {
+          "point": "しかし、60営業日騰落率（-12.94%）と対TOPIX相対騰落率（-20.79%）がともにマイナスであり、中期的な下落トレンドから完全に脱却したとは言えません。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-12.94, price_technical.trend_60d.relative_to_topix_60d_pct=-20.79"
+        }
+      ],
+      "cautions": [
+        "中期トレンドが下落方向であるため、上昇局面では戻り売り圧力に押される可能性があります。",
+        "RSI14が65.1まで急上昇しており、短期的な急ピッチな騰勢に対する過熱感から利食い売りに押されやすい水準です。",
+        "前夜のADRが-0.21%、対応セクターETFが-0.53%とやや軟調であり、当日の寄り付きに織り込まれるリスクがあります。"
+      ],
+      "key_levels": {
+        "support": 2800.1,
+        "resistance": 3082.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "売上高は拡大基調を維持しているものの、本業の儲けを示す営業利益は減益トレンドにあり、ROEの低下懸念も報じられています。トランプ関税を見据えた米国への5,800億円の投資や歴史的な円安は支えとなるものの、次回決算や日銀会合を控えて様子見姿勢が強まりやすい局面です。",
+      "points": [
+        {
+          "point": "売上高は増加傾向にあるものの、通期の営業利益および純利益は2024年3月期をピークに2期連続の減益トレンドとなっており、利益率の低下が懸念されます。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "トランプ関税リスクへの対応として、メキシコから米国テキサス工場へ「タコマ」の生産を一部移管し、5,800億円（36億ドル）を投資することが直近（2026年7月7日）で報じられています。将来的な関税回避となる一方、短期的には巨額の資本支出を伴います。",
+          "evidence": "news.headlines (トランプ大統領「関税の効果」トヨタが米テキサス工場に5800億円投資 メキシコの工場から生産を一部移管へ - TBS NEWS DIG)"
+        },
+        {
+          "point": "1ドル162円台の歴史的な円安水準や、日銀短観における大企業製造業DIの改善（前回比+5.0の22.0）、国内製造業PMIの拡大（54.8）はマクロ環境として強力な追い風ですが、現時点で業績を押し上げる決定打にはなっていません。",
+          "evidence": "macro.indices (ドル円=162.21), macro.boj.tankan.di.large_manufacturing.current_di=22.0, macro.japan_pmi.manufacturing.latest_value=54.8"
+        }
+      ],
+      "cautions": [
+        "2026年8月4日の次回決算発表が迫っており、今期の業績予想や為替前提の修正、あるいは現預金を活用した新たな株主還元策が示されるかが最大の焦点となります。",
+        "2026年7月30日〜31日の日銀金融政策決定会合が22日後に控えており、追加利上げ等の政策変更による急激な円高の進行は、輸出型の同社にとって強い業績下振れ要因となります。",
+        "直近ニュースにおいて、市場予想の今期ROEが9.1%に低下する見通しが報じられており、資本効率の改善を求める市場の声（ROE20%目標との乖離）が株価の重石となる可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "トヨタ自動車(株)【7203】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1EdmpyVngtTjQxZWwxbEhFQ0RiM1VtdzRXWnplQ18yWmhvYlg4MjFlaVUxWW9zU3RlaEdEY1NHSXRwR3VuaW5EcEdYU0kyS2wwTGpvb3luZ243X1A4MGk0?oc=5",
+        "published": "Tue, 07 Jul 2026 06:53:17 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "トランプ大統領「関税の効果」トヨタが米テキサス工場に5800億円投資 メキシコの工場から生産を一部移管へ - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBsNXlSNTMzWkxSUFVRbFltakJDcklJRHZVaU5uTm5GWm5BOHdZQ2NYTmJmdlhVaFphMVN1MUhUeno1YlR1YmVlblItQzE0MTFnZHBXN3JmWQ?oc=5",
+        "published": "Tue, 07 Jul 2026 17:15:36 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "地域交流を通じてスポーツの魅力を発信 トヨタ自動車アンテロープス沖縄市合宿 - Excite エキサイト",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBpVk5XX0lTYmxkUGs3Z3FreVU5cDVwd2xyendlRTJjRVYzMmFRRi0tN2t2bXVvX0NyZHZ2c2sxZnNCdnNfMFRBYmk3TjN5OHN2NW00SlNueFpLSEpKcVp5UDZQbExOTGVMZDJ5dmdXcjlnckFTRUE?oc=5",
+        "published": "Tue, 07 Jul 2026 16:45:00 GMT",
+        "publisher": "Excite エキサイト"
+      },
+      {
+        "title": "【“株時計”で読み解く日本株相場】AI相場の焦点は？／「AI・データセンター関連」は好調継続か／防衛関連の三菱重工の今後／トヨタ自動車の株価動向／注目セクターは「ガラス」「DX」 - 東洋経済オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9uUktiM21oTXR0SVpNdTFFT25QTzhHcUpTN2RENWNXb0NNMHYtNkx4SmJEQWJTa01SSWpmMlh1MTRLR1JXQUo0aUxzZ3NpY0tVcmc?oc=5",
+        "published": "Tue, 07 Jul 2026 10:00:00 GMT",
+        "publisher": "東洋経済オンライン"
+      },
+      {
+        "title": "トヨタ、メキシコから米国へ「タコマ」生産一部移管 36億ドル投資 - 朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBJWno0MXA3RzFkNkdLeVZpWVd6cy1vdXlwYk0tbVdpUkFzZlZMVEVHbHF2WVR1TkN4a0pmdUgwZTRITmpFRGdRQmxTNDFaS2hodU5hczh6cjYwWm16SXpaLWFGTThJTG8?oc=5",
+        "published": "Tue, 07 Jul 2026 03:30:00 GMT",
+        "publisher": "朝日新聞"
+      },
+      {
+        "title": "トヨタ自動車の米テキサス州・サンアントニオ工場の生産ライン - トヨタ、米工場に5800億円 メキシコから一部生産移管 - 写真・画像(1/1) - 西日本新聞me",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5pNkZtdllvSlVZUGhnNUtKdmphMlVxdHdXYTA3ZEpnblBERHQ5Y0VOMFd6MXlPMlZpZEFFUF9QNExjNHZvRjR0RXBBQjUzMUkzMV92T1dEWQ?oc=5",
+        "published": "Tue, 07 Jul 2026 00:55:59 GMT",
+        "publisher": "西日本新聞me"
+      },
+      {
+        "title": "トヨタ「ROE20%」遠く 市場予想、今期9.1%に低下 現預金活用などせかす - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOWmx1ZkZjaTh0VXZjTVNfUEhHSHlKOWhpOU1hczk3V1U0enZmcDM2R016MmFJTGpLOXFhVVpoSlhjd3NlUmdLMklTd0EwanpLcFI1eHZmNDRtR181OEg3WXBtajV3R29KM1JJS2IwTEUtV3lXYWNIdHJBcG5TcHowSWZwZFE4aDdGVDNyMXEzU0xoTmo0T0FNZVp0Z05xSERoUVZJMTRYWFg?oc=5",
+        "published": "Tue, 07 Jul 2026 17:13:12 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "北米トヨタが5800億円をテキサス工場に投資 人気のピックアップトラック生産の一部をメキシコから移管 - 東京新聞デジタル",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5hMEtzYXFpQWNmMFRoOWdENzBfekFwOVdFVXkzMmJGTEJYZHoxd2xweTRZY29RSDNRTHIteERqOGd5c25NWTlkNTZxQWowdFNmUmVz?oc=5",
+        "published": "Tue, 07 Jul 2026 21:00:00 GMT",
+        "publisher": "東京新聞デジタル"
+      },
+      {
+        "title": "トヨタ、５８００億円投資 米テキサス州工場に：時事ドットコム - 時事ドットコム",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBycThaTEFBU3dCclpCdUpxT19jVnZZZzFCR3FKdUhvaWItaG43aXNacFUydnlJUlJ1c2VFYmg4REJpWVc1WGRmSmlicTBFcm9IVG51Q3NpcmlPUm1TaUxLWUdYNA?oc=5",
+        "published": "Tue, 07 Jul 2026 00:48:00 GMT",
+        "publisher": "時事ドットコム"
+      },
+      {
+        "title": "トヨタ、米工場に５８００億円 - 埼玉新聞",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBTWHNCRzZDNFBielE3cDVMSTJpRlU4MW5BdU8xd2VTdmQtS0x6Szhfbmh3aklsVnNFMUFfOFpEeUg0TnE3cl85clkyMmhqTXk2TWJpbm95VQ?oc=5",
+        "published": "Mon, 06 Jul 2026 23:23:00 GMT",
+        "publisher": "埼玉新聞"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "役員人事に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572690.pdf",
+        "date": "2026-06-17 16:00:00"
+      },
+      {
+        "title": "関係会社株式売却益の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260615570435.pdf",
+        "date": "2026-06-15 15:30:00"
+      },
+      {
+        "title": "（開示事項の変更・訂正）「会社分割（簡易吸収分割）に関するお知らせ」の一部変更・訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552805.pdf",
+        "date": "2026-05-28 18:45:00"
+      },
+      {
+        "title": "会社分割（簡易吸収分割）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520542612.pdf",
+        "date": "2026-05-20 19:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260506517369.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "2026年3月期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260508519105.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260508519366.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果ならびに自己株式の取得終了および消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260428513263.pdf",
+        "date": "2026-04-28 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付け及び自己株式の取得に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260330592169.pdf",
+        "date": "2026-03-30 15:30:00"
+      }
+    ]
+  }
+}

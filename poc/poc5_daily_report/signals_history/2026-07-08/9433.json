@@ -1,0 +1,211 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-07-08T08:16:49+09:00",
+  "price_as_of": "2026-07-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "テクニカル面ではゴールデンクロスの形成やMACDの買いシグナルなど非常に強い上昇モメンタムを示しているが、材料織り込み済みのリスクがある。",
+        "evidence": "technical_view.stance=bullish (strength=85), technical_view.points[0], points[1]"
+      },
+      {
+        "reason": "2026年7月7日に発覚した大規模な個人情報流出（1,223万人分）は、ブランド毀損や行政処分を招く重大な悪材料であり、株価の重石となる可能性が高い。",
+        "evidence": "fundamental_view.points[1]: news.headlines[0].title (2026-07-07)"
+      },
+      {
+        "reason": "統合判断ルールに基づき、ファンダメンタルズの確信度が60（注目に値するが懸念あり）に留まり、かつテクニカルが先行して強気である場合は見送りが妥当である。",
+        "evidence": "fundamental_view.strength=60, fundamental_view.summary"
+      }
+    ],
+    "risks": [
+      "情報流出に関する総務省からの行政処分や再発防止策に伴う追加コストの発生",
+      "2026年7月30-31日の日銀会合による長期金利上昇と、高配当銘柄からの資金流出",
+      "2026年8月7日の次回決算発表における、不祥事を受けた通期業績予想への悪影響"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 60,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"テクニカル面ではゴールデンクロスの形成やMACDの買いシグナルなど非常に強い上昇モメンタムを示しているが、材料織り込み済みのリスクがある。\",\n      \"evidence\": \"technical_view.stance=bullish (strength=85), technical_view.points[0], points[1]\"\n    },\n    {\n      \"reason\": \"2026年7月7日に発覚した大規模な個人情報流出（1,223万人分）は、ブランド毀損や行政処分を招く重大な悪材料であり、株価の重石となる可能性が高い。\",\n      \"evidence\": \"fundamental_view.points[1]: news.headlines[0].title (2026-07-07)\"\n    },\n    {\n      \"reason\": \"統合判断ルールに基づき、ファンダメンタルズの確信度が60（注目に値するが懸念あり）に留まり、かつテクニカルが先行して強気である場合は見送りが妥当である。\",\n      \"evidence\": \"fundamental_view.strength=60, fundamental_view.summary\"\n    }\n  ],\n  \"risks\": [\n    \"情報流出に関する総務省からの行政処分や再発防止策に伴う追加コストの発生\",\n    \"2026年7月30-31日の日銀会合による長期金利上昇と、高配当銘柄からの資金流出\",\n    \"2026年8月7日の次回決算発表における、不祥事を受けた通期業績予想への悪影響\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 85,
+      "summary": "5日線と25日線のゴールデンクロス達成やMACDの買いシグナルに加え、前夜ADRの好調など複数の強気指標が合致しており、短中期の買いモメンタムが強まっています。",
+      "points": [
+        {
+          "point": "短期・中期移動平均線がゴールデンクロスを形成し、株価は5日線および25日線の上方に位置して堅調に推移しています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\", price_technical.last_close=2779.0, price_technical.sma5=2719.5, price_technical.sma25=2708.42"
+        },
+        {
+          "point": "MACDがシグナルを明確に上回り、ヒストグラムが6.6とプラス圏で拡大していることから、上昇の勢いが増していると判断できます。",
+          "evidence": "price_technical.macd=8.61, price_technical.macd_signal=2.01, price_technical.macd_histogram=6.6"
+        },
+        {
+          "point": "前夜のNY市場において、ADRが1.06%上昇し、かつ通信サービスセクターETFも0.73%上昇しており、外部環境が追い風となっています。",
+          "evidence": "us_overnight.adr.change_1d_pct=1.06, us_overnight.sector_proxy.change_1d_pct=0.73"
+        }
+      ],
+      "cautions": [
+        "前夜ADRの上昇は当日の寄り付き価格にすでに織り込まれ、寄り付き後の利益確定売りに押される可能性があります。",
+        "株価が直近30日間の期間高値（2809.0円）に近づくにつれて、戻り売り圧力が強まる懸念があります。",
+        "VIX指数が前日比で3.6%上昇しており、全体相場のボラティリティ上昇による急な地合い悪化には警戒が必要です。"
+      ],
+      "key_levels": {
+        "support": 2708.42,
+        "resistance": 2809.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "業績の拡大基調と株主還元は堅調に推移しているが、直近で発覚した大規模な個人情報流出と内部統制の不備という重大なガバナンスリスクが重石となっている。",
+      "points": [
+        {
+          "point": "過去3期にわたる増収増益トレンドと高い資本効率を維持しており、2026年3月期の純利益は7,071億円、ROEは14%とファンダメンタルズは依然として強固である。",
+          "evidence": "fundamentals.earnings_trend.annual[0-2], fundamentals.valuation.return_on_equity=0.14"
+        },
+        {
+          "point": "2026年7月7日に報じられた、未知の脆弱性に起因する1,223万人分のメールアドレス流出は、ブランド毀損および総務省による行政処分のリスクを孕む重大なネガティブ材料である。",
+          "evidence": "news.headlines[0].title (2026-07-07), news.headlines[2].published (2026-07-07)"
+        },
+        {
+          "point": "財務報告に係る内部統制の重要な不備の公表や、東証への改善報告書の提出など、管理体制の脆弱性が顕在化しており、信頼回復までの期間が不透明である。",
+          "evidence": "disclosures.items[1].title (2026-06-25), disclosures.items[4].title (2026-06-02)"
+        },
+        {
+          "point": "自己株式の取得（公開買付け含む）の継続や、auフィナンシャルホールディングスの上場準備開始など、株主価値向上に向けた具体的な施策は継続されている。",
+          "evidence": "disclosures.items[0].title (2026-07-06), disclosures.items[6].title (2026-05-12)"
+        }
+      ],
+      "cautions": [
+        "情報流出に関する総務省からの行政処分や再発防止策に伴う追加費用の発生リスク",
+        "次回決算発表（2026-08-07）における、一連の不祥事を受けた通期業績予想への影響",
+        "日銀金融政策決定会合（2026-07-30〜31）を控えた、長期金利上昇による高配当銘柄への資金流出懸念"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ＫＤＤＩ個人情報流出、メールアドレス１２２３万人分・パスワードは７６２万人分…「未知の脆弱性」が原因（読売新聞オンライン） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE44Sy1kaTlVNEVYcXVGUE1oajAtYWs0S0hZRG1WMU1kSHZ2MVdRVWpJcENid2g5YnVZcDNUekliN2J3U2RWV1REMjVUbnYweEk5YTN2REZ1bXc4M2JpY0gxdFRiYjNVN1FHemF2TzItbUhsSXRFWlR3T2x1Y1kxcGM?oc=5",
+        "published": "Tue, 07 Jul 2026 07:02:00 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "ＫＤＤＩ[9433]：コーポレート・ガバナンスに関する報告書 2026/07/07 2026年7月7日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOdGV4U21mblVqY3c3S3dtaU92VHlmSml3UXp2RmdsRFZseV9NQ3g0M1RSMlV1dndKNktkeGJlM2t3WXRaZ3NKY0I2cVFOVUU0SkdMRDJ1NWZfV3N4dG1XZXpYOEF6cWtkaG80QTlFdzBqX2Z0TFRuWWQyUHBGM2RWbUl2OXlaT3lPaWVIUzZVTU1ELWNSM2h1S3huSm1iYkhXYlFKaEFBRUVGcWdlRk8teFo2bmJLdGNNRkpqMVZIUHpsbVFRWWd4a1BXR2g?oc=5",
+        "published": "Tue, 07 Jul 2026 06:17:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "林総務大臣「今後必要な対応を行う」 KDDIメールアドレス1223万件流出の報告書を受け - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9qV3JqczlwNDZmd2MwZVl1VGg1M0lMWlRIazVZZDlTenNkM20xeHVTbVU5WHYtS2hyY1Zpa2U4bW9PcGNfdkpCWUNzaGVQSktMUDRqV0FxNA?oc=5",
+        "published": "Tue, 07 Jul 2026 03:15:52 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "有望スタートアップが選ぶ 「イノベーティブ大企業ランキング」で9年連続1位を受賞 - MUGENLABO Magazine",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE92OVRQVXQ1dWRzZWJDWW44bGFNZDBZX093RnJkdUYyTTlCeWRJYTk3M2ZwQXY1VHYyZE1jNnNIQldTSHBtdjktNmpJekEwX1FEVmo3Vmh5amEwQWNDUFgxMHR2TdIBY0FVX3lxTE92OVRQVXQ1dWRzZWJDWW44bGFNZDBZX093RnJkdUYyTTlCeWRJYTk3M2ZwQXY1VHYyZE1jNnNIQldTSHBtdjktNmpJekEwX1FEVmo3Vmh5amEwQWNDUFgxMHR2TQ?oc=5",
+        "published": "Tue, 07 Jul 2026 07:38:23 GMT",
+        "publisher": "MUGENLABO Magazine"
+      },
+      {
+        "title": "KDDIのISP向けメール基盤不正アクセス、ニフティは「システムの急激な負荷」を検知 - ケータイ Watch",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5EbjNnak1vNzNDc0REdkRyTV9hRnVRZTczODlJQ2VWSm45MGhPa29aalo1NWZzV3VUVnFkbEJDX0ljbWE0b2NfWjhuRU82RjhFNmo2bjl2ckQwZ2ZIWUdoU3NjQTYybEU?oc=5",
+        "published": "Tue, 07 Jul 2026 10:04:47 GMT",
+        "publisher": "ケータイ Watch"
+      },
+      {
+        "title": "ＫＤＤＩメアド流出「大変遺憾」 林総務相：時事ドットコム - 時事ドットコム",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBteUNrOUhhNC1BRGI4UkV5Y1ktTWFXakhTYVRadG9rWEd5MW0zZDZHdkp5bmJoWWZIbEZvcjdDNEhSN19Ib2Jmb3Fnb2RqV3hPc2Q5SVRuVzNuV1dQNTM5SDB4dw?oc=5",
+        "published": "Tue, 07 Jul 2026 02:17:00 GMT",
+        "publisher": "時事ドットコム"
+      },
+      {
+        "title": "KDDI、1223万人のメアド漏洩。パスワードも流出、au・UQは対象外と説明 - スマートニュース",
+        "url": "https://news.google.com/rss/articles/CBMivwNBVV95cUxPUUF1RURxUDdwdDFtLTctVldlQ2VwdjI2QXNHUWhhRnhvUnpKa29XeDdjN1FlYzdMWEc2UFpTcC1JM2xvb2hwM0lNeWxYZC05ZU9kaFdXWnludkhQMlo2dWttejJVbFV1eHo3eFQwVUxqdDF4ekhkZFhjNEdnYTl3MWhmYmg0bzVCMXJzSVR4ZVNaOGI1Q19VWVFCOGhKTktXampzYnB6S2lrNGV6SlVOaWc4WXZad2tUVGJZa2ZjUl9pN2RscG4xUThFOFRyX1E0ZXppX2xLNjJKYjgxSTU1bG13YzdzSWV3aEpiQW1hcTlKZ3RiSE50bXNBaXF4UWFvN3FzX1pzRkt5aTdEOXk1RDR0VVNuMjY1dkZEM3BEUGVyU2VwLWlQYmhtRFI2bWJHekFxZFl2YzVhZ3F5S3hPekk3WVNOXzFGMXhJRGNLS3E2a05wV2lPcGFEdC0yR0k3VWdLY2dQOXBrUE9xTld3ZF96ZXA5VUJIYjlNdDljUFoxWEZlS3hQWXo5SVRpYW1KUTI3QkVzWnVCV2puV3JlYTFhcXJWRE1SVWRoYmdMVk1ibXlqVW1wZTlmNnVIcjA?oc=5",
+        "published": "Tue, 07 Jul 2026 11:58:52 GMT",
+        "publisher": "スマートニュース"
+      },
+      {
+        "title": "ＫＤＤＩ(株)【9433】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0tRFJFTFdLaDNMbl9vby10YTNwSW1Bc000c3BHR2MtUDVWMXRKMHJsN2xuWU15QkMxRXFrUDUzWTdRQmpMa2JpV0lzZ2Z2azNxY1ZVVElQcVJCUVp3SWpV?oc=5",
+        "published": "Tue, 07 Jul 2026 06:53:06 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "KDDI、不正アクセスでメールアドレス1,223万名とパスワード761万名漏洩 - PC Watch",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8xRFRKUnB1UkptVUVLTXllNmZhdk9EcFNOeGZ5b3Y2SE12d0lrOS1hcFVqSnl1OEJBNnE5ODZrcXdEeG5pWkNWeWlnVk9HMmFWVklFdmJlZ0dwYm9ic3pEUzU1OA?oc=5",
+        "published": "Tue, 07 Jul 2026 10:21:45 GMT",
+        "publisher": "PC Watch"
+      },
+      {
+        "title": "災害時にスマホ使い放射線測定 原子力規制庁、KDDIと8月から実証 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBMNUw2MmxUMkF1M0dOMmZDUTR2bXliNS1rbDZCcGhwSEowa0ktMUo2NWs0ajY3UVQ0VWZ5QXJUZEFWZWM1RVg0QllwSVY1LUdnUE9SeXo4MWpjMEpDYWdSUjFWOVdjcWZzYTVUZg?oc=5",
+        "published": "Tue, 07 Jul 2026 07:20:19 GMT",
+        "publisher": "日本経済新聞"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      },
+      {
+        "title": "東京証券取引所への「改善報告書」の提出に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559424.pdf",
+        "date": "2026-06-02 16:00:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（中期経営戦略）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524146.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "auフィナンシャルホールディングス株式会社の東京証券取引所への株式上場準備の開始について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524156.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "2026年３月期　決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511523545.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524005.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524010.pdf",
+        "date": "2026-05-12 15:45:00"
+      }
+    ]
+  }
+}

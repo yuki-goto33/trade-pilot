@@ -1,0 +1,154 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-07-08T08:19:01+09:00",
+  "price_as_of": "2026-07-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家が見解を neutral (strength 55) としており、製品供給計画の見直しに伴う減益予想など、業績面の不透明感が払拭されていないため。",
+        "evidence": "fundamental_view.stance=neutral / fundamental_view.points[0]: 2026年3月期の純利益減益計画"
+      },
+      {
+        "reason": "テクニカル面で短期的な反転の兆候はあるものの、中期的な下落トレンドを脱却しておらず、強弱が拮抗する局面であるため。",
+        "evidence": "technical_view.summary: 中期的な下落トレンドからは脱却しておらず / technical_view.points[3]: 対TOPIX相対騰落率のマイナス"
+      },
+      {
+        "reason": "3.6%を超える高い配当利回りが下値を支える一方、次回決算および日銀会合を控えて積極的な買い材料に欠ける状況にあるため。",
+        "evidence": "fundamental_view.points[2]: 配当利回り3.63% / fundamental_view.cautions[0]: 2026年7月31日の第1四半期決算発表"
+      }
+    ],
+    "risks": [
+      "2026年7月31日に予定されている第1四半期決算発表における進捗率の低迷",
+      "決算と同日の日銀金融政策決定会合の結果に伴う為替・金利の急変動",
+      "前夜ADRの下落（-1.98%）および市場ボラティリティ（VIX）の上昇による寄り付き後の軟調な推移"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家が見解を neutral (strength 55) としており、製品供給計画の見直しに伴う減益予想など、業績面の不透明感が払拭されていないため。\",\n   \"evidence\": \"fundamental_view.stance=neutral / fundamental_view.points[0]: 2026年3月期の純利益減益計画\"\n  },\n  {\n   \"reason\": \"テクニカル面で短期的な反転の兆候はあるものの、中期的な下落トレンドを脱却しておらず、強弱が拮抗する局面であるため。\",\n   \"evidence\": \"technical_view.summary: 中期的な下落トレンドからは脱却しておらず / technical_view.points[3]: 対TOPIX相対騰落率のマイナス\"\n  },\n  {\n   \"reason\": \"3.6%を超える高い配当利回りが下値を支える一方、次回決算および日銀会合を控えて積極的な買い材料に欠ける状況にあるため。\",\n   \"evidence\": \"fundamental_view.points[2]: 配当利回り3.63% / fundamental_view.cautions[0]: 2026年7月31日の第1四半期決算発表\"\n  }\n ],\n \"risks\": [\n  \"2026年7月31日に予定されている第1四半期決算発表における進捗率の低迷\",\n  \"決算と同日の日銀金融政策決定会合の結果に伴う為替・金利の急変動\",\n  \"前夜ADRの下落（-1.98%）および市場ボラティリティ（VIX）の上昇による寄り付き後の軟調な推移\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "MACDの好転や25日線の回復など短期的な底打ち・反転の兆候が複数見られるものの、中期的な下落トレンドからは脱却しておらず、ADRの下落も相まって強弱が拮抗している。",
+      "points": [
+        {
+          "point": "MACDがシグナルをゴールデンクロスし、ヒストグラムが大幅なプラスに転じるなど、短期的な反転シグナルが明確化している。",
+          "evidence": "price_technical.macd=23.47, price_technical.macd_histogram=23.57"
+        },
+        {
+          "point": "5日線が25日線を上回るゴールデンクロスが発生し、株価も25日線の上位を維持している。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden\", price_technical.last_close=2719.0 > price_technical.sma25=2565.18"
+        },
+        {
+          "point": "7/6に出来高を伴い4%超の大幅な反発を見せており、強い買い戻しの動きが確認できる。",
+          "evidence": "price_technical.recent_5_days[3].change_pct=4.1, price_technical.recent_5_days[3].volume=11572800"
+        },
+        {
+          "point": "中期的なトレンドを示す60日騰落率および対TOPIX相対騰落率は依然としてマイナス圏にあり、構造的な弱さは残っている。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-4.01, price_technical.trend_60d.relative_to_topix_60d_pct=-11.85"
+        }
+      ],
+      "cautions": [
+        "前夜のADRが-1.98%と下落しており、当日の寄り付きが弱含むリスクがある。",
+        "中期トレンドが下向きであるため、SMA25付近までの押し目や、直近高値（2790.0）付近での戻り売り圧力が想定される。",
+        "VIX指数が上昇（+3.6%）しており、市場全体のボラティリティ拡大による下押し圧力に注意が必要。"
+      ],
+      "key_levels": {
+        "support": 2565.18,
+        "resistance": 2790.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "2026年3月期は増収ながらも製品供給計画の見直しに伴う損失計上により減益を見込む計画であり、業績面での不透明感が残る。配当利回りが3.6%超と下値の支えとなる一方、直近2週間以内に株価を押し上げる新規の好材料が確認されず、次回決算を控えて様子見姿勢が強まる展開と判断する。",
+      "points": [
+        {
+          "point": "2026年3月期の通期業績予想は増収ながら、営業利益・純利益ともに前期比で減益となる計画が示されている。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "2026年5月8日に製品供給計画の見直しに伴う損失発生と業績予想の下方修正を発表しており、利益率の低下が懸念される。",
+          "evidence": "disclosures.items[9]"
+        },
+        {
+          "point": "配当利回りが3.63%と相対的に高く、ROEも15.8%を維持している点は、下値の限定要因および資本効率の良さとして評価できる。",
+          "evidence": "fundamentals.valuation.dividend_yield_percent=3.63, fundamentals.valuation.return_on_equity=0.158"
+        },
+        {
+          "point": "製造業PMIが54.8と拡大圏にあり、1ドル162円台の円安環境は、海外売上比率の高い大手製薬業にとって事業環境上の追い風となる。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.8, macro.indices[2].close=162.21"
+        }
+      ],
+      "cautions": [
+        "2026年7月31日に第1四半期決算発表を控えており、通期計画に対する進捗率が注視される。",
+        "決算と同日に日銀金融政策決定会合の結果発表が予定されており、為替や金利の急変動が株価に影響を与えるリスクがある。",
+        "製品供給計画の見直しに関連する追加の損失計上や、開発パイプラインに関するネガティブな進展。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [],
+    "disclosures": [
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584479.pdf",
+        "date": "2026-06-30 16:30:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260620575199.pdf",
+        "date": "2026-06-22 15:30:00"
+      },
+      {
+        "title": "財務上の特約が付された金銭消費貸借契約の締結に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617573095.pdf",
+        "date": "2026-06-17 19:00:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬等の内容の一部改定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515539092.pdf",
+        "date": "2026-05-18 13:00:00"
+      },
+      {
+        "title": "（訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260513530596.pdf",
+        "date": "2026-05-13 17:30:00"
+      },
+      {
+        "title": "自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511521821.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522113.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "決算補足資料（2025年度決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522160.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "2025年度決算および第6期（2026-2030年度）中期経営計画　説明会",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522186.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "製品供給計画の見直しに伴う損失の発生および 2026年3月期通期連結業績予想の修正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260415504962.pdf",
+        "date": "2026-05-08 13:00:00"
+      }
+    ]
+  }
+}

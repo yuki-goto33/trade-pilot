@@ -1,0 +1,207 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-07-08T08:14:23+09:00",
+  "price_as_of": "2026-07-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家は大幅な黒字転換やOpenAIへの追加出資、円安効果を好材料として強気（strength=70）ですが、テクニカル面での下落トレンドが強く、buyエントリーの基準を満たしません。",
+        "evidence": "fundamental_view.stance=bullish (strength=70)"
+      },
+      {
+        "reason": "短期5日移動平均線が25日線を下回るデッドクロスが発生しており、MACDもマイナス圏を拡大しているため、短期的な下落圧力が極めて強い状況にあります。",
+        "evidence": "technical_view.stance=bearish (strength=85), technical_view.points[0].evidence, technical_view.points[1].evidence"
+      },
+      {
+        "reason": "前夜のNY市場でADRが-6.44%と大幅急落しており、寄り付き直後の売り圧力を考慮すると、押し目を確認するまでは静観が妥当と判断されます。",
+        "evidence": "technical_view.points[2].evidence"
+      }
+    ],
+    "risks": [
+      "2026年7月30日〜31日の日銀金融政策決定会合における利上げ懸念と、10年債金利上昇に伴う有利子負債の金利負担増リスク（保有期間内に含む）。",
+      "2026年8月6日の次回決算発表を前に、投資先ポートフォリオの評価損益変動による業績のボラティリティリスク。",
+      "テクニカル上のサポートラインである期間安値5691.0円を下抜けた場合の下落トレンド加速リスク。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家は大幅な黒字転換やOpenAIへの追加出資、円安効果を好材料として強気（strength=70）ですが、テクニカル面での下落トレンドが強く、buyエントリーの基準を満たしません。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=70)\"\n  },\n  {\n   \"reason\": \"短期5日移動平均線が25日線を下回るデッドクロスが発生しており、MACDもマイナス圏を拡大しているため、短期的な下落圧力が極めて強い状況にあります。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=85), technical_view.points[0].evidence, technical_view.points[1].evidence\"\n  },\n  {\n   \"reason\": \"前夜のNY市場でADRが-6.44%と大幅急落しており、寄り付き直後の売り圧力を考慮すると、押し目を確認するまでは静観が妥当と判断されます。\",\n   \"evidence\": \"technical_view.points[2].evidence\"\n  }\n ],\n \"risks\": [\n  \"2026年7月30日〜31日の日銀金融政策決定会合における利上げ懸念と、10年債金利上昇に伴う有利子負債の金利負担増リスク（保有期間内に含む）。\",\n  \"2026年8月6日の次回決算発表を前に、投資先ポートフォリオの評価損益変動による業績のボラティリティリスク。\",\n  \"テクニカル上のサポートラインである期間安値5691.0円を下抜けた場合の下落トレンド加速リスク。\"\n ]\n}\n",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 85,
+      "summary": "移動平均線のデッドクロスやMACDのマイナス圏拡大に加え、前夜の米国市場でADRが急落したことから、短期的な下落圧力が非常に強い状況です。",
+      "points": [
+        {
+          "point": "短期トレンドのデッドクロスと急落。5日移動平均線が25日移動平均線を下回るデッドクロス状態にあり、直近2営業日も連続で3%を超える大幅下落を記録し下値模索が続いています。",
+          "evidence": "price_technical.sma5_vs_sma25=dead(5日線が25日線の下), price_technical.recent_5_days[3].change_pct=-3.08, price_technical.recent_5_days[4].change_pct=-3.48"
+        },
+        {
+          "point": "MACDとRSIの弱気シグナル。MACDはシグナルを下回りマイナス幅を広げており、RSIも33.9と低下傾向にあり、下落のモメンタムが強く継続しています。",
+          "evidence": "price_technical.macd=-344.19, price_technical.macd_signal=-274.39, price_technical.rsi14=33.9"
+        },
+        {
+          "point": "前夜のADRおよび米国テック株の急落。前夜のNY市場でADR（SFTBY）が-6.44%と大幅安となっており、テクノロジーセクターETF（XLK）の下げも逆風です。",
+          "evidence": "us_overnight.adr.change_1d_pct=-6.44, us_overnight.sector_proxy.change_1d_pct=-2.39"
+        }
+      ],
+      "cautions": [
+        "前夜NY市場の急落（ADR -6.44%）は寄り付き価格に大きく織り込まれる可能性があり、寄り付き後の売り一巡後はRSIの売られすぎ水準を意識した自律反発に注意が必要です。",
+        "TOPIXのレジームはuptrend（強気）を維持しており、市場全体の地合い好転に伴う連れ高のリスクがあります。",
+        "期間安値である5691.0円付近が下値支持線として機能し、下げ止まるかどうかの見極めが重要です。"
+      ],
+      "key_levels": {
+        "support": 5691.0,
+        "resistance": 6022.8
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "2025年3月期の通期純利益が大幅な黒字転換を達成したことに加え、直近ではOpenAIへの追加出資を実行するなどAI領域への成長カタリストを有しており、円安基調も外貨建て投資資産の評価にプラスに働く見通しです。",
+      "points": [
+        {
+          "point": "前期の赤字から大幅な黒字転換を達成し、業績トレンドが改善しています。2025年3月期の通期純利益は11,533億円となり、前年同期の赤字（-2,276億円）から回復を見せています。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=11533"
+        },
+        {
+          "point": "AI領域における投資カタリストとして、OpenAIへの追加出資（セカンドトランシェ）を実行したことが確認でき、中長期的な成長ストーリーの強化に繋がっています。",
+          "evidence": "disclosures.items[0].title=\"OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ\""
+        },
+        {
+          "point": "為替相場が1ドル＝162円台という歴史的な円安水準で推移しており、外貨建て投資資産の円建て評価を大きく押し上げるプラス要因として期待されます。",
+          "evidence": "macro.indices[2].close=162.21"
+        }
+      ],
+      "cautions": [
+        "2026年8月6日の次回決算発表を控えており、投資先ポートフォリオの評価損益の変動による業績のボラティリティが懸念されます。",
+        "2026年7月30日〜31日の日銀金融政策決定会合が22日後に迫っており、10年債金利（2.823%）の上昇は高水準な有利子負債を抱える同社にとって金利負担増のリスクとなります。",
+        "直近で日経平均株価が1,338円安となるなど、市場全体のセンチメント悪化が同社ポートフォリオの上場株評価に影響を及ぼす可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソフトバンクグループ(株)【9984】：現物信用売買内訳時系列 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5ueVJneEpLR1NYRnNyNTY4QUVSMklZR0lDbEV2ejBkTEk0ZnZXZndoaVN5bUllTkgxMXdNYVQxTG9RSllBUkFIcTFaQnlDRE1pelBvTXhucVZMRG40WVA4?oc=5",
+        "published": "Tue, 07 Jul 2026 14:11:12 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "山口FG、AI活用前提に業務再設計 営業人員5年で5割増めざす - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQbFRDTXJmV0tma2JMdUtjeE5SdG10SmIzckJxS2xRS05RN0tHZUQ5alk0SFBjOGt2SEVDNEVyT3FzelczQ014SjU0dmV4cTlwMVE1c2pFdDVsRDE1WEV2WXZjY3ltODMtTkFUalR4OEd0UUNoZWVCcGI5aFhoSng2S3Ewb2NTZVBfLTZOdzhtS0VzcDJlMEZFLV94bkduTHpmZ0E?oc=5",
+        "published": "Tue, 07 Jul 2026 20:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "ソフトバンクグループ(株)【9984】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9DZkVwWjE1QUxJT001ekM0SkZLSDQwRTZ3c2JJU1VocDJuQTFoU1Fsb25ySWJWRHpSbHc2a19vdEhnS3NtdkVfeGVTc3FxWVZqbDhENmRGZFB5X1puX24w?oc=5",
+        "published": "Tue, 07 Jul 2026 06:52:56 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "「確実にオープンAIは生き残っていく」10年後を見る孫正義会長兼社長の“鋭さ”とは／ソフトバンクグループ・後藤芳光CFOインタビュー未公開版【WBS】｜ワールドビジネスサテライト（WBS） - テレ東BIZ",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5OUGVhLVJ0R1F5ak9VWU9qTE1VX3V4bF9GWGVOX21RS0xHdmtEbTRtM1FWWWlaN0o3ajVmRlV5XzlMYUg2dGxLcDhVUFhQTmwxcHRIWXBQclhlMjZRblZGbWtR?oc=5",
+        "published": "Tue, 07 Jul 2026 11:00:00 GMT",
+        "publisher": "テレ東BIZ"
+      },
+      {
+        "title": "キオクシアHD、6月売買代金75兆円でプライム市場の4分の1超え、存在感際立つ - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1COEdsUFdKaTNvOE81a25UQTZBeXhmSG1aY3hSZGFhNldYeElXdDhiMjRScFJNeUdSYkZ1S0JVN09xcXpLSGZiSVBnZ21zaUhYNzVLdTlIVVdXTlNxX3FzWjVaVFhFVFpZR3piVGlMT2lSczh6?oc=5",
+        "published": "Tue, 07 Jul 2026 07:27:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "帯広市とソフトバンク DX推進で包括連携 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPS1lvSUdOWnhMY2JleWhIc2swZDg1eW5hMDBwS3BIMVdmRW0zdk9PaHlVYVRFY091d0ZZbzgwNGdJWElzS1ZCQXUzdG9ELXZ4bnRWYkQzQUZKano2ZVd6eUhnd0RHSkp6N3FKUkJERlVrTHNMcGowNUVvQzRFZkpxWVNjZzlCQkxmMnZ0dlBhNDJFRlREUWZBZmhYOEhGMUxPX0tiUXFjUzA?oc=5",
+        "published": "Tue, 07 Jul 2026 16:52:57 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "MICEプラットフォームがバンケット・会議室のマッチングサイトを提供 - 観光経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9yZ1ZtUXhZc0M2VkR2dnlSaURBa3pTa1BFckFieTZMUDQzekt6SkNQajlHRDB4YjB1MHhhZnlKVU95WVhVNGk5amQ2Mk44YWpwQXZUSA?oc=5",
+        "published": "Tue, 07 Jul 2026 04:04:57 GMT",
+        "publisher": "観光経済新聞"
+      },
+      {
+        "title": "ソフトバンクに「強気」評価、米系大手証券が目標株価260円に設定 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFAxc2d2UjNLeGVrZmt0c0oxQ0w4Q09LakNjb0F0Rm9LWDg1ZHdFczlCTk94RkV1X2VqMUVFOWNoNDZNVnRhTGhSWnhZLVpIdzlZdWtFUXlZZi1vVmJoWG15OVplczMyVmxiUHI1RU9NV0FlR0VZ?oc=5",
+        "published": "Tue, 07 Jul 2026 04:46:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "1,000億円超の出資を発表し、東証プライム・上昇率1位となった〈サッポロビール〉の動向…日経平均は「68,256.96円」と続落【7月7日の国内株式市場概況】 - ゴールドオンライン",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBNVHY5X29XelpJQkJnTzJzLUdkSDVZNUtHblpOVnNQT2RLN0UtMndNRE84LVI0NzJqY3Z1bHNqbF9YR3d0aHdmY1ozNUVDbXByc0E?oc=5",
+        "published": "Tue, 07 Jul 2026 08:00:00 GMT",
+        "publisher": "ゴールドオンライン"
+      },
+      {
+        "title": "日経平均は1338円安、米経済指標などに関心 提供 Fisco - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1yWXJaVnFaQTVOSm42X0UycEVyT29XZXFPMVZ6dVZkNDdKMU1ySEhNeUUwc3dVNFlWQmJBbWwzcHhwdDI0RzNpOTY0VWphV3U2UjQ4U25pbXJiUHRsRF9BRW9lX3JsWGlnYmlVZGpoQ2cwRUpWZTRJ?oc=5",
+        "published": "Tue, 07 Jul 2026 06:00:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260701586249.pdf",
+        "date": "2026-07-01 16:00:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577089.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "2021年発行米ドル建普通社債の期限前償還完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566742.pdf",
+        "date": "2026-06-10 11:30:00"
+      },
+      {
+        "title": "国内ハイブリッド社債（利払繰延条項付）の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260605563850.pdf",
+        "date": "2026-06-05 10:30:00"
+      },
+      {
+        "title": "当社の子会社によるT&amp;Dフィナンシャル生命保険株式会社の株式の取得（子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562772.pdf",
+        "date": "2026-06-04 16:00:00"
+      },
+      {
+        "title": "2021年発行米ドル建普通社債の期限前償還に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528551943.pdf",
+        "date": "2026-05-28 15:30:00"
+      },
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得に関するタイ関係当局の許認可等の取得状況および今後の見通しに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260527550260.pdf",
+        "date": "2026-05-27 15:30:00"
+      },
+      {
+        "title": "国内ハイブリッド社債（利払繰延条項付）の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260525545847.pdf",
+        "date": "2026-05-25 10:00:00"
+      },
+      {
+        "title": "（訂正・数値データ訂正）「2026年３月期 決算短信〔ＩＦＲＳ〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538975.pdf",
+        "date": "2026-05-15 18:00:00"
+      },
+      {
+        "title": "2026年３月期 決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507517661.pdf",
+        "date": "2026-05-13 15:30:00"
+      }
+    ]
+  }
+}

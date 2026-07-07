@@ -1,0 +1,216 @@
+{
+  "code": "285A",
+  "name": "キオクシアホールディングス",
+  "generated_at": "2026-07-08T08:19:54+09:00",
+  "price_as_of": "2026-07-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の strength が 55 (neutral) に留まっており、buy 判断の必須条件である 70 を満たさない。",
+        "evidence": "fundamental_view.strength=55"
+      },
+      {
+        "reason": "テクニカル面で 5日線が 25日線を下抜けるデッドクロスが確定し、MACD ヒストグラムも拡大するなど強い下落モメンタムが確認される。",
+        "evidence": "technical_view.points[0]: price_technical.sma5_vs_sma25='dead' / technical_view.points[1]: macd_histogram=-3313.7"
+      },
+      {
+        "reason": "前夜の米国 SOX 指数が大幅下落しており、国内半導体セクター全体のセンチメント悪化が不可避である。",
+        "evidence": "technical_view.points[2]: us_overnight.sox_index.change_1d_pct=-4.65"
+      },
+      {
+        "reason": "PER 71.5倍、PBR 28.2倍という極めて高いバリュエーションに加え、メモリ市況の不透明感から「落ちるナイフ」を掴むリスクが高い。",
+        "evidence": "fundamental_view.cautions: バリュエーション, fundamental_view.points[1]: サムスン株急落とアップル調達先変更懸念"
+      }
+    ],
+    "risks": [
+      "2026-08-07 の次回決算発表において、直近の市況悪化が反映され下方修正されるリスク",
+      "2026-07-30〜31 の日銀会合による円高・金利上昇に伴うバリュエーションのさらなる修正リスク",
+      "RSI14が42.8であり、売られすぎ水準（30以下）に達するまでの調整継続リスク",
+      "60営業日騰落率が+162.32%と高く、需給面での利益確定売りが加速するリスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の strength が 55 (neutral) に留まっており、buy 判断の必須条件である 70 を満たさない。\",\n   \"evidence\": \"fundamental_view.strength=55\"\n  },\n  {\n   \"reason\": \"テクニカル面で 5日線が 25日線を下抜けるデッドクロスが確定し、MACD ヒストグラムも拡大するなど強い下落モメンタムが確認される。\",\n   \"evidence\": \"technical_view.points[0]: price_technical.sma5_vs_sma25='dead' / technical_view.points[1]: macd_histogram=-3313.7\"\n  },\n  {\n   \"reason\": \"前夜の米国 SOX 指数が大幅下落しており、国内半導体セクター全体のセンチメント悪化が不可避である。\",\n   \"evidence\": \"technical_view.points[2]: us_overnight.sox_index.change_1d_pct=-4.65\"\n  },\n  {\n   \"reason\": \"PER 71.5倍、PBR 28.2倍という極めて高いバリュエーションに加え、メモリ市況の不透明感から「落ちるナイフ」を掴むリスクが高い。\",\n   \"evidence\": \"fundamental_view.cautions: バリュエーション, fundamental_view.points[1]: サムスン株急落とアップル調達先変更懸念\"\n  }\n ],\n \"risks\": [\n  \"2026-08-07 の次回決算発表において、直近の市況悪化が反映され下方修正されるリスク\",\n  \"2026-07-30〜31 の日銀会合による円高・金利上昇に伴うバリュエーションのさらなる修正リスク\",\n  \"RSI14が42.8であり、売られすぎ水準（30以下）に達するまでの調整継続リスク\",\n  \"60営業日騰落率が+162.32%と高く、需給面での利益確定売りが加速するリスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 85,
+      "summary": "短期テクニカル指標の急激な悪化に加え、前夜の米国半導体株指数の大幅下落という外部要因が重なり、一段の下落リスクが極めて高い局面です。",
+      "points": [
+        {
+          "point": "直近5営業日中に10%を超える大幅な下落が2度発生しており、5日移動平均線が25日線を下抜けるデッドクロスが確定、短期トレンドが明確に下向いています。",
+          "evidence": "price_technical.recent_5_days[1].change_pct=-13.47, price_technical.recent_5_days[4].change_pct=-11.26, price_technical.sma5_vs_sma25='dead'"
+        },
+        {
+          "point": "MACDがシグナルを大きく下回って推移しており、ヒストグラムのマイナス幅も拡大していることから、下落のモメンタムが強まっています。",
+          "evidence": "price_technical.macd_histogram=-3313.7, price_technical.macd=1431.53, price_technical.macd_signal=4745.23"
+        },
+        {
+          "point": "外部環境において、前夜のSOX指数（-4.65%）および半導体セクターETF（-3.78%）が大幅に下落しており、国内半導体関連株への強い売り圧力が波及する蓋然性が高いです。",
+          "evidence": "us_overnight.sox_index.change_1d_pct=-4.65, us_overnight.sector_proxy.change_1d_pct=-3.78"
+        }
+      ],
+      "cautions": [
+        "RSI14は42.8であり、一般的に「売られすぎ」とされる30ラインまで到達していないため、さらなる調整余地が残されています。",
+        "60営業日騰落率が+162.32%と極めて高いため、急騰後の反動による利益確定売りが加速しやすい需給状況にあります。",
+        "前夜の米国市場の結果が寄り付き価格に大きく織り込まれた後、ボラティリティの高さゆえに乱高下するリスクに注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 56900.0,
+        "resistance": 86602.8
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "業績は赤字脱却から大幅増益への強い回復基調にあるが、直近の競合他社の動向を受けたメモリ市況への不透明感と、極めて高いバリュエーションが重石となっている。",
+      "points": [
+        {
+          "point": "業績は2024年3月期の純損失2,437億円から、2026年3月期には5,545億円の黒字見通しへと劇的なV字回復を遂げている。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "韓国サムスン電子の株価急落や、アップルによる調達先変更の懸念など、メモリ市況の変調を示唆するニュースが直近で相次ぎ、センチメントが悪化している。",
+          "evidence": "news.headlines（韓国サムスン株急落で売り波及、キオクシア株価は11%安 / アップルの中国調達がもたらすメモリーバブル崩壊と業界再々編の予感）"
+        },
+        {
+          "point": "米国証券取引所への上場準備（ADR）を公表しており、中長期的な資本効率向上や資金調達手段の多様化というポジティブなカタリストを保有している。",
+          "evidence": "disclosures（2026-05-15：当社普通株式を対象とした米国預託株式の米国の証券取引所への上場準備に関するお知らせ）"
+        },
+        {
+          "point": "製造業PMIが54.8と拡大圏にあり、大企業製造業DIも改善しているなど、国内のマクロ環境自体は半導体製造業にとって追い風の状況にある。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.8, macro.boj.tankan.di.large_manufacturing.current_di=22.0"
+        }
+      ],
+      "cautions": [
+        "2026年8月7日の決算発表を控えており、直近の市況悪化懸念が数字として表れるリスクがある。",
+        "PBR 28.2倍、PER 71.5倍という極めて高いバリュエーションは、成長期待を大きく織り込んでおり、下方修正時の下落余地が大きい。",
+        "2026年7月30日から31日にかけて日銀金融政策決定会合が予定されており、円高進行や国内金利上昇によるバリュエーション修正リスクに注意が必要。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "キオクシアＨＤ、6月売買代金は75兆円に プライム全体の4分の1超 - ロイター",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNRm1zVldLZWxGb3pkVWxqcDUwNGpTdVRNdkxnUFlSWjduOEp1aTJTYTY5OVJxcVdXWk1hdi05bmU0RXNGaDRJNG9LRkY4RE1wUVdnMVgwaU5WcTBWaU12OG9Zd2Jfa0F6OXFKMHdNX3pNdFQ3Z1VQLXhlNnd4Y3pDYg?oc=5",
+        "published": "Tue, 07 Jul 2026 06:14:00 GMT",
+        "publisher": "ロイター"
+      },
+      {
+        "title": "キオクシアHD「7万円割れからの急反発」は再びの上昇局面への反転シグナルか？ 市場のムードを一変させた「2つの特大IR」を億り人・古賀真人氏が読み解く（マネーポストWEB） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5XN19wdmpQQ2NDOXUwYnBQNVlHYjZOLUI2QzBtUmh4Q0taTTBMRXNueV9KT0dNNXI2czJyaUFHeUgyZXZTbk5BT3oySHBQU3VrVVZ5R1dueHpZSXZmSEl5dXVJTGJtbEE5R0pjREY1SHdndXh3VFBlSkJmN0RMX3c?oc=5",
+        "published": "Tue, 07 Jul 2026 08:15:00 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "韓国サムスン株急落で売り波及、キオクシア株価は11%安（7日の株式市場） - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1PYnRGckMyc1NqZl9ibzR4UDNMd3NOWWt6d09scmdrckxOZWFzZ0JraVJ0OUtXYnNnZ3NFZnBDb3dpODdCbElfaW5iSWFsVHJDOEdNS0xsQVZnUENIM0lhNDFwYk96cFZrWjVWOA?oc=5",
+        "published": "Tue, 07 Jul 2026 07:30:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "キオクシアはどうなる？ アップルの中国調達がもたらすメモリーバブル崩壊と業界再々編の予感 - M＆A Online",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOOVhHQ3ZQMVZ0U2Z5S2tFYmFVVGRVTGU4M3QzNFBOM3o5dHBaRHkyOHdwemhnM3JQSGYyMTF6eThYdEFLXzVGWVAxNEdXWXotbGJQZTlQdHhjejZKMWRGbmw2aVQxX01TYUJrU1hVQmdfczdLSnphN3gzSHhTTFRZOU13dEUzYlAtNmxqVERYQWFSdHhJU18ta1BreWJnYVU?oc=5",
+        "published": "Tue, 07 Jul 2026 21:32:24 GMT",
+        "publisher": "M＆A Online"
+      },
+      {
+        "title": "日経平均は１４００円程度安、売買代金はキオクシア、村田製、太陽誘電が上位 速報 - kabushiki.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE53S1JuWXBwSGZoN3ZfbzZaTXB6T25CZE5sY3ZCb0lOdFUzTzIyMHdCNmZpZi1Fa2FFYUI3Qi1lZVJWZGo2OVVN?oc=5",
+        "published": "Tue, 07 Jul 2026 05:04:00 GMT",
+        "publisher": "kabushiki.jp"
+      },
+      {
+        "title": "10時の日経平均は561円安の6万9175円、キオクシアが150.18円押し下げ - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9UMFQ5c3RBR3p6XzJLMnBVM3hka1JDWk5JSWx2dmVvaUdmOHRXSVBKZFNaM1dyUFZBckJWYkpfS3h4UmtoRzBZdnpQampNOHBuZFpHdmVvTXpQbjNlRk1JdA?oc=5",
+        "published": "Tue, 07 Jul 2026 01:01:01 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "キオクシア---大幅続落、想定以上の暫定決算発表したサムスンの株価下落で 執筆 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5zYVNMTHVjRXZaS2MyX3pkNE1ub09sbzZuYWVyQ3lHUENISUFlS21IUEJaN1gwZUlLOUlpZUFRbGhKOW9xLV9KczJ1OUVnN3FINnhZRENBN2pXak82eWFPMWJXRkdKaDRZcE5TY2NrMmk?oc=5",
+        "published": "Tue, 07 Jul 2026 01:24:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      },
+      {
+        "title": "【東芝・キオクシアと同じ構造なのか】富士通から分離したファナックのほうが時価総額が大きくなるカラクリ 売上に4倍の差があっても株式市場の評価が逆転する理由とは - マネーポストWEB",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE90QzUxOUVuZ1E3bVBhVzJ1SWViSkFMem9oNG4yU2doMkJHR25jRU5VdVNyeWZrNml5aFNZQWpWSFpUa1Q0RGU0?oc=5",
+        "published": "Tue, 07 Jul 2026 22:00:00 GMT",
+        "publisher": "マネーポストWEB"
+      },
+      {
+        "title": "SSDはSamsungやキオクシアなどに特価が見られるも、Sandisk(Western Digital)は大幅上昇 [7月前半のSSD価格] - AKIBA PC Hotline!",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1sajZYWjhqa014b0V1bEE2bUFWTjM1ek5oTVhHX0p2dG9sMFJ0TG5vdmlqZ0l3S2tlZ1JnUkxFYmZDc0hmZnpZMWFfbWMwU25abV9mMHg5Y01MT0Z1YXVjcnh4T09hanJzWTNnX3haVGQ2NDVZdENaR0drMmpSUQ?oc=5",
+        "published": "Tue, 07 Jul 2026 22:05:00 GMT",
+        "publisher": "AKIBA PC Hotline!"
+      },
+      {
+        "title": "キオクシアホールディングス(株)【285A】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE8ycENoQTVJSTA4clBFQ2l0U3phU2NYS0p1TUVaQk9qMktLR19hU1FXSDFOQmhndEdlY2FaTndFb05jZWI0bnhLeGtjU2VvaURiWE1TcjhYaXVhQW9UT21n?oc=5",
+        "published": "Tue, 07 Jul 2026 06:52:40 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "（訂正）「勤務継続型株式報酬制度及び業績連動型株式報酬制度のユニット付与に関するお知らせ」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586951.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "（訂正）「当社及び当社子会社の役員に対する株式報酬制度の改定に関するお知らせ」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260612569674.pdf",
+        "date": "2026-06-12 15:30:00"
+      },
+      {
+        "title": "2026年３月期 決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537803.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "当社普通株式を対象とした米国預託株式の米国の証券取引所への上場準備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537804.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "連結子会社からの配当金及び資本の払戻しに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537809.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537830.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "当社及び当社子会社の役員に対する株式報酬制度の改定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537827.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537849.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "その他の関係会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260326589887.pdf",
+        "date": "2026-03-26 15:30:00"
+      },
+      {
+        "title": "Nanya Technology Corporationの第三者割当増資引受及びDRAM長期供給契約締結に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260325588489.pdf",
+        "date": "2026-03-25 18:00:00"
+      }
+    ]
+  }
+}

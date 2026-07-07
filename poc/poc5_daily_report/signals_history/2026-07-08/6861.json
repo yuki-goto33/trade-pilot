@@ -1,0 +1,212 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-07-08T08:15:07+09:00",
+  "price_as_of": "2026-07-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近（2026-07-04）にbuyシグナルを出したばかりであり、同一銘柄への短期連続エントリーを避ける再エントリー抑制ルールに基づき、現在はholdとして継続監視します。",
+        "evidence": "reference.recent_buy.date=2026-07-04"
+      },
+      {
+        "reason": "ファンダメンタルズは増収増益トレンドの継続や目標株価の引き上げ、良好なマクロ環境（製造業PMI 54.8）を背景に極めて強固です。",
+        "evidence": "fundamental_view.stance=bullish (strength=75)"
+      },
+      {
+        "reason": "テクニカル面では米国市場でのADR急落（-7.4%）の影響により、国内寄り付きからの短期的な調整圧力および25日移動平均線付近への押し目形成プロセスを見極める必要があります。",
+        "evidence": "technical_view.points[2].evidence: us_overnight.adr.change_1d_pct=-7.4, technical_view.stance=neutral"
+      }
+    ],
+    "risks": [
+      "2026年7月28日に予定されている次回決算発表前後の思惑によるボラティリティ急増リスク",
+      "2026年7月30〜31日の日銀金融政策決定会合に伴う金利変動や、為替市場の急激な円高巻き戻しによるハイマルチプル株への影響",
+      "ADR下落に伴う寄り付きのギャップダウンで25日移動平均線（77,312.4円）を大きく割り込み、テクニカル的な下落トレンドへの転換が決定づけられるリスク"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"直近（2026-07-04）にbuyシグナルを出したばかりであり、同一銘柄への短期連続エントリーを避ける再エントリー抑制ルールに基づき、現在はholdとして継続監視します。\",\n      \"evidence\": \"reference.recent_buy.date=2026-07-04\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズは増収増益トレンドの継続や目標株価の引き上げ、良好なマクロ環境（製造業PMI 54.8）を背景に極めて強固です。\",\n      \"evidence\": \"fundamental_view.stance=bullish (strength=75)\"\n    },\n    {\n      \"reason\": \"テクニカル面では米国市場でのADR急落（-7.4%）の影響により、国内寄り付きからの短期的な調整圧力および25日移動平均線付近への押し目形成プロセスを見極める必要があります。\",\n      \"evidence\": \"technical_view.points[2].evidence: us_overnight.adr.change_1d_pct=-7.4, technical_view.stance=neutral\"\n    }\n  ],\n  \"risks\": [\n    \"2026年7月28日に予定されている次回決算発表前後の思惑によるボラティリティ急増リスク\",\n    \"2026年7月30〜31日の日銀金融政策決定会合に伴う金利変動や、為替市場の急激な円高巻き戻しによるハイマルチプル株への影響\",\n    \"ADR下落に伴う寄り付きのギャップダウンで25日移動平均線（77,312.4円）を大きく割り込み、テクニカル的な下落トレンドへの転換が決定づけられるリスク\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "強力な中期上昇トレンドを背景に持ちつつも、直近の急落と前夜の米国市場でのADR大幅安により、短期的には25日移動平均線方向への強い調整圧力が想定されるため、一時的に中立スタンスとします。",
+      "points": [
+        {
+          "point": "中期的なトレンドは非常に強力であり、60営業日騰落率および対TOPIX相対騰落率はともに大幅なプラスを維持しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=29.18, price_technical.trend_60d.relative_to_topix_60d_pct=21.34"
+        },
+        {
+          "point": "短期モメンタムは急激に悪化しており、直近の終値は5日移動平均線を大きく下抜け、25日移動平均線に接近しています。",
+          "evidence": "price_technical.last_close=78180.0, price_technical.sma5=80284.0, price_technical.sma25=77312.4"
+        },
+        {
+          "point": "前夜のNY市場でADRが7%を超える大幅下落となっており、対応セクターETFも下落していることから、国内市場の寄り付きから下押し圧力が強まる可能性が極めて高い状況です。",
+          "evidence": "us_overnight.adr.change_1d_pct=-7.4, us_overnight.sector_proxy.change_1d_pct=-2.39"
+        }
+      ],
+      "cautions": [
+        "ADRの急落が国内寄り付き価格にそのまま織り込まれ、25日移動平均線（77,312.4円）をギャップダウンで割り込んで始まるリスクがあります。",
+        "現在プラス圏にあるMACDですが、寄り付き後の続落によってヒストグラムが急速に縮小し、デッドクロスへ向かうシグナル悪化が懸念されます。"
+      ],
+      "key_levels": {
+        "support": 77312.4,
+        "resistance": 82400.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "堅調な増収増益トレンドに加え、製造業PMIの拡大や日銀短観の改善といったマクロ環境の追い風が吹いています。さらに、直近でのアナリスト予想の上方シフトや目標株価引き上げが観測され、市場の期待感が高まっています。",
+      "points": [
+        {
+          "point": "売上高および営業利益が3期連続で増収増益を達成しており、高い収益性を維持しながら着実に成長を続けています。",
+          "evidence": "fundamentals.earnings_trend.annual (2024-03期から2026-03期にかけて、売上高が9,673億円→10,591億円→11,693億円、営業利益が4,950億円→5,498億円→5,958億円へ拡大)"
+        },
+        {
+          "point": "直近2週間以内（2026年7月7日）に、アナリストによる経常利益予想の引き上げや、目標株価を91,500円に引き上げる動きが報じられ、足元の業績期待が補強されています。",
+          "evidence": "news.headlines (2026年7月7日発表の「キーエンス、27年3月期経常予想。対前週1.7%上昇。」および「キーエンス、レーティング中立を据置き、目標株価91,500円に引上げ」)"
+        },
+        {
+          "point": "製造業PMIが54.8と拡大局面を維持しているほか、日銀短観の大企業製造業DIが前回比+5.0と大きく改善しており、主要顧客である製造業の設備投資意欲の強さが同社の追い風となっています。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.8, macro.boj.tankan.di.large_manufacturing.current_di=22.0, macro.boj.tankan.di.large_manufacturing.change_from_prev=5.0"
+        }
+      ],
+      "cautions": [
+        "次回決算発表が2026年7月28日に迫っており、発表前後の業績評価によってボラティリティが高まるリスクがあります（fundamentals.next_earnings_date=2026-07-28）。",
+        "日銀の金融政策決定会合（2026年7月30〜31日）が22日後に控えており、金利上昇や為替（ドル円162円台）の急激な巻き戻しが、ハイマルチプルなハイテク株である同社にネガティブな影響を与える可能性があります（macro.boj.monetary_policy_meeting.days_until_next=22, macro.indices=162.21）。",
+        "実績PERが42.55倍、PBRが5.46倍と高成長を前提とした高いバリュエーション水準にあるため、成長鈍化の兆候が見られた場合は株価調整が大きくなる可能性があります（fundamentals.valuation.trailing_pe=42.553, price_to_book=5.462）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": 91500
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-04",
+    "days_ago": 4,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)キーエンス【6861】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFAxcU9waXFEc3Q2aFY1YzRVa1Atd0pCMHhuam9mZmgwaUljMkZFNzcxNXRrNzFrM3NtUzFrelFnTVZTUmxLUEJxZHQxOFJSOUhXb3VOcXhRLTZlcG1LNWpJ?oc=5",
+        "published": "Tue, 07 Jul 2026 07:02:14 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "【アナリスト予想】キーエンス、27年3月期経常予想。対前週1.7%上昇。(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNSndrOXNfMFRvTmgzaWJJX0Y4OUZJZllFWHJPang3V2NYRXJRbEJFRjlUQndGWDhCZV9vajl6ekQtcmN1UnB1a3lEX1BvNlR0QkI5bE96ZG1JSmJPSmFTVkQ5a3VDZDVLM1pRVVFwajZPcl9PLVRzOWx4MHBPZnNXdk44a1lmMG8?oc=5",
+        "published": "Tue, 07 Jul 2026 13:46:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "キーエンスはいかにして海外売上7,792億円を築いたか。初代海外事業部長が語る 一枚の顧客カードから7,792億円を創る「顧客獲得の仕組み」を紐解く 特別セミナー、7月22日(水)開催 | 株式会社KYNOVUSのプレスリリース - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFByWFFGcGxKQnA5YUdKQ1FfWWNMSGFRV1MxcEN4NW1SSW9HeV9uZ0gyT3d1cmFmLWtxLXlNQmo5UVRSaGRPOC1VRy11YmNHZkY4U1gwTWZVeENXaFY1OGZNTnRhTnZRRXVTbEE?oc=5",
+        "published": "Tue, 07 Jul 2026 01:00:03 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "【アナリスト評価】キーエンス、レーティング中立を据置き、目標株価91,500円に引上げ（日系大手証券）(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQeFl4dkpzUTNNbDhDbWhqZS1Fa1RVOUlDM2liWlFPbjdWdmxqVDNxeTAyTlFPMThVeUFXME5HdjhYQnYtbG5SRWlfSDdQQUZqMk9rYS03WWs5U2lXYVBHOWZ6ZlMxSWJlbVl1WnBNVnZ1cGJxb2h3VEh6ajRZT3ktMDNkeURIT0U?oc=5",
+        "published": "Tue, 07 Jul 2026 09:32:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "７日のＡＤＲ動向＝円換算値で全面安、住友電工、フジクラ、ディスコなど安い 速報 - kabushiki.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE52SlRlaW1EeVhzYVUtWjFybG1VTmZDVERoV19rNC13MjZmUFJQVWFlNDJPbVRJNzhYUWYwUDdSUWpFUEtyLXVF?oc=5",
+        "published": "Tue, 07 Jul 2026 22:39:00 GMT",
+        "publisher": "kabushiki.jp"
+      },
+      {
+        "title": "｢アメリカの石油に依存｣すると日本は破滅する…米国で高まる｢日本に石油を輸出するな｣論の脅威 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBGM05VN082MWtIeGMtZUVVM2ZkeVNlcTlEdE9yTE5ENkh0RnhqWFk3dm90WjFTd0NPZGM2R0FaUk4wSUw5ZEo3WkxWRG9iTHc?oc=5",
+        "published": "Tue, 07 Jul 2026 21:01:13 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "寄前【成行注文】売り越しランキング キオクシア、ランド、キーエンス [08:35](株探ニュース) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOVUo3aUtuN3REUEYzWldWdmpYSkRuVkZlRnI3QVN6MUpKVHhKcWNhZ0RHVFdwZ2ZLRHVXQ2dwS1hVWF9ldFRVZzM0dTRCckpZWVg0Vl9ESEpDenQ5c3lUa2kxS3lKX1JlODVqMFNEc1dyQkgyUTVsbWQ4ZmJWX3pjVWNWZktaT1k?oc=5",
+        "published": "Mon, 06 Jul 2026 23:51:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "寄前【板状況】注文ランキング 【買いトップ】アスタリスク 【売りトップ】キーエンス [08:33](株探ニュース) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNRm5HZHo4T0hmWllwTDM0OU5rZ29IbzRkQ3dYNXY3ZkZjZmJSMzI5azRjSFVJT2ZQeFk1Y3hpRDQwMWlhWEM1ZjZrc0NuUXVVNVU4a2s4QWdzOTUtdU5RcFRfd29SQ3hma3ZZQUFnVnJoSjVZVVF1RHpqYnZ0NlZTUjJ5dkxFSTg?oc=5",
+        "published": "Mon, 06 Jul 2026 23:48:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "米52週安値－なし(トレーダーズ・ウェブ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOMWYyMHJoT1RqMm13TEgzVFd4bGVnRTk4WnktQlBuQl9fUW5udHZidDlCZFZEUW9VclMzWER4RFpJNWIzQWl1akFqR0RqWVh3TkdFVDBWMG9QLXM5MWVha3hVQnpqTlRoUVBiS0licE1FWXM2U0ozOFhaejYzbFpkOWZELV84U0E?oc=5",
+        "published": "Tue, 07 Jul 2026 22:25:47 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "７日のＡＤＲ動向＝円換算値で全面安、住友電工、フジクラ、ディスコなど安い(ウエルスアドバイザー) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQd1NmeFIyaTdDMWtNOW9pOENhY0Izck9YanhCemIwSWszX004STkwc1ZqNjY1WXFOVVMybnk3MzlHeVpuSWFGaWEtTUpIVDVlb2JES0U0NlhsQ3c2VkxxanRRaTRRRmhnbjdxT24xbXREUWJwXzBWMm4wYjlqUkZ5cnlBRlhjSGs?oc=5",
+        "published": "Tue, 07 Jul 2026 22:43:36 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120250724520054.pdf",
+        "date": "2025-07-29 16:00:00"
+      }
+    ]
+  }
+}
