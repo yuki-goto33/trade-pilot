@@ -1,0 +1,224 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-07-10T08:57:18+09:00",
+  "price_as_of": "2026-07-09",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近で買いシグナルを出しており、現在も継続して監視中であるため、今回はホールドと判断します。",
+        "evidence": "reference.recent_buy.date = \"2026-07-04\""
+      },
+      {
+        "reason": "ファンダメンタルズ専門家は新規事業への注力や国内マクロ環境の好転を背景に強気の見解を示していますが、テクニカル専門家は長期的な下降トレンドと主要移動平均線の下向きを指摘し、弱気の見解です。",
+        "evidence": "fundamental_view.stance = \"bullish\" (strength=70), technical_view.stance = \"bearish\" (strength=75)"
+      },
+      {
+        "reason": "高機能肥料事業やライフサイエンス・創薬支援事業といった新規成長戦略に関する複数のポジティブな事業展開が中長期的な成長期待を高めます。",
+        "evidence": "fundamental_view.points[0]"
+      },
+      {
+        "reason": "過去60営業日での大幅な株価下落とTOPIXへのアンダーパフォーム、および5日線と25日線のデッドクロスが短期・中長期的な下降トレンドの継続を示唆しています。",
+        "evidence": "technical_view.points[0], technical_view.points[1]"
+      }
+    ],
+    "risks": [
+      "市場全体が「downtrend」にあり、個別銘柄の上昇が阻害される可能性があります。",
+      "テクニカル面では中長期的な下降トレンドが継続しており、主要移動平均線も下向きのため、株価のさらなる下落リスクがあります。",
+      "次回決算発表（2026年8月3日）や日本銀行金融政策決定会合（2026年7月30日〜31日）といった重要イベントが控えており、その結果次第で市場や株価が変動する可能性があります。",
+      "今期の業績が減益見込みであることや、現状のバリュエーションが割安とは言えない点が、上値の重しとなる可能性があります。",
+      "RSIが売られすぎ水準にあるため短期的な自律反発の可能性はあるものの、本格的なトレンド転換の兆候は限定的です。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近で買いシグナルを出しており、現在も継続して監視中であるため、今回はホールドと判断します。\",\n   \"evidence\": \"reference.recent_buy.date = \\\"2026-07-04\\\"\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ専門家は新規事業への注力や国内マクロ環境の好転を背景に強気の見解を示していますが、テクニカル専門家は長期的な下降トレンドと主要移動平均線の下向きを指摘し、弱気の見解です。\",\n   \"evidence\": \"fundamental_view.stance = \\\"bullish\\\" (strength=70), technical_view.stance = \\\"bearish\\\" (strength=75)\"\n  },\n  {\n   \"reason\": \"高機能肥料事業やライフサイエンス・創薬支援事業といった新規成長戦略に関する複数のポジティブな事業展開が中長期的な成長期待を高めます。\",\n   \"evidence\": \"fundamental_view.points[0]\"\n  },\n  {\n   \"reason\": \"過去60営業日での大幅な株価下落とTOPIXへのアンダーパフォーム、および5日線と25日線のデッドクロスが短期・中長期的な下降トレンドの継続を示唆しています。\",\n   \"evidence\": \"technical_view.points[0], technical_view.points[1]\"\n  }\n ],\n \"risks\": [\n  \"市場全体が「downtrend」にあり、個別銘柄の上昇が阻害される可能性があります。\",\n  \"テクニカル面では中長期的な下降トレンドが継続しており、主要移動平均線も下向きのため、株価のさらなる下落リスクがあります。\",\n  \"次回決算発表（2026年8月3日）や日本銀行金融政策決定会合（2026年7月30日〜31日）といった重要イベントが控えており、その結果次第で市場や株価が変動する可能性があります。\",\n  \"今期の業績が減益見込みであることや、現状のバリュエーションが割安とは言えない点が、上値の重しとなる可能性があります。\",\n  \"RSIが売られすぎ水準にあるため短期的な自律反発の可能性はあるものの、本格的なトレンド転換の兆候は限定的です。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "三菱商事の株価は中長期的な下落トレンドが継続しており、主要な移動平均線も下向きで、市場全体の地合いも弱いため、引き続き下落圧力が強いと見られます。",
+      "points": [
+        {
+          "point": "過去60営業日で株価が大幅に下落し、TOPIXに対しても大きくアンダーパフォームしているため、中長期的な下降トレンドが明確に継続しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct = -16.88, price_technical.trend_60d.relative_to_topix_60d_pct = -22.58"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線をデッドクロスしており、現在の株価も両移動平均線を下回って推移しているため、短期的な下降トレンドが継続しています。",
+          "evidence": "price_technical.sma5_vs_sma25 = \"dead(5日線が25日線の下)\", price_technical.last_close = 4411.0, price_technical.sma5 = 4467.8, price_technical.sma25 = 4552.2"
+        },
+        {
+          "point": "市場全体もTOPIXが25日移動平均線を下回り、機械判定で「downtrend」とされているため、個別銘柄の上昇には逆風が吹いています。",
+          "evidence": "macro.market_regime.market_regime = \"downtrend\", macro.market_regime.topix_close_vs_sma25 = \"below\""
+        },
+        {
+          "point": "前夜のNY市場でADRと関連セクターETFがともに下落しており、当日の日本市場での寄り付きも軟調に推移する可能性が示唆されます。",
+          "evidence": "us_overnight.adr.change_1d_pct = -1.79, us_overnight.sector_proxy.change_1d_pct = -1.4"
+        }
+      ],
+      "cautions": [
+        "RSIが24.5と売られすぎ水準にあるため、短期的な自律反発の可能性は考慮する必要があります。",
+        "MACDヒストグラムが好転（プラス）しており、短期的には下げ止まりや反発の兆候と見ることができますが、MACD自体は依然としてマイナス圏にあり、本格的なトレンド転換と判断するには時期尚早です。",
+        "前夜の米国市場の結果は寄り付きに織り込まれる可能性があり、その後の値動きを保証するものではありません。"
+      ],
+      "key_levels": {
+        "support": 4286.0,
+        "resistance": 4467.8
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "直近で発表された新規事業に関する複数のニュースは中長期的な成長期待を高めますが、足元の業績は減益見込みです。国内マクロ経済環境は全体として堅調傾向にあります。",
+      "points": [
+        {
+          "point": "直近のニュースでは、高機能肥料事業への注力や、アクセリードとの業務提携によるライフサイエンス・創薬支援事業の拡大、ライフサイエンス研究開発施設「アイパーク神戸」着工など、新たな成長戦略に関わるポジティブな事業展開が複数報じられています。",
+          "evidence": "news.headlines[1].title, news.headlines[2].title, news.headlines[6].title"
+        },
+        {
+          "point": "日本国内のマクロ経済環境は、製造業・サービス業・複合PMIがいずれも50を超えて拡大傾向にあり、日銀短観の大企業業況判断DIも良好を維持していることから、総合商社の事業環境としては追い風となる可能性があります。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.8, macro.japan_pmi.services.latest_value=52.2, macro.japan_pmi.composite.latest_value=52.8, macro.boj.tankan.di.large_all_industries.current_di=29.0"
+        },
+        {
+          "point": "2026年3月期の年次業績見込みでは、純利益が8005億円、希薄化後EPSが209.78円と、前年の9507億円、235.8円から減少する見込みであり、業績トレンドは弱含みである点は懸念材料です。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=8005, fundamentals.earnings_trend.annual[0].diluted_eps=209.78, fundamentals.earnings_trend.annual[1].net_income_oku_jpy=9507, fundamentals.earnings_trend.annual[1].diluted_eps=235.8"
+        }
+      ],
+      "cautions": [
+        "次回決算発表日が2026年8月3日に控えており、その内容によっては株価が変動する可能性があります。",
+        "日本銀行の金融政策決定会合が2026年7月30日〜31日に予定されており、金融政策に関する発表が市場全体のセンチメントに影響を与える可能性があります。",
+        "マクロ市場は「downtrend」と判断されており、全体地合いの悪化が個社株価にも影響を及ぼすリスクがあります。",
+        "足元のバリュエーション（PER 21.024倍、PBR 1.711倍）は、減益見込みの業績トレンドを考慮すると、特に割安とは言えません。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-04",
+    "days_ago": 6,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "三菱商事(株)【8058】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ScXhBTU9DVmdWalgxWWpQcThsOHBreVdENTJLZUh2YU9xMldYU1dJUmw2NjdWVWY0N2tuZmtZWTkySUZocWhkT24xNVU3OC1PYnZjU3FaTjQ1b0NkdGRV?oc=5",
+        "published": "Thu, 09 Jul 2026 06:53:38 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "三菱商事が狙う「高機能肥料」 ホルムズ封鎖が突く食料生産の急所 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNR2hPTmExbXB5NUE5OG9UVno1Snd5aW9aZnNmZG9QTXZzdUtmQjlaMXZEeHpERmlueWUtVGFtUEpEOHhOYjQwSGs5REZYaVVsTDdKOEIzdkI4RHdIa0RjaFZDcWFId2xQS2RLTTZZOC1XTzFJLVItejBoX1A3dFJ5YVFlVUN4MEdlYnNPN244X1BCbUJ1THI4U0R4WXNDSTI2NFAwY2VBRXc?oc=5",
+        "published": "Thu, 09 Jul 2026 17:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "アクセリード、三菱商事と業務提携／スズケン、スペシャリティ薬の院内輸送システム開発 など｜製薬業界きょうのニュースまとめ読み（2026年7月9日） - Answers（アンサーズ）",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFB4NjA1UXVzMGl3emVudU5qM3JQS0xNTjZjWGpWcWZPTXprb1ZGbERwaWkwYi1UMnpSRzl0dmI2UnZ6WEVvY3E4dFBPcUg0cXplTjZ6cHJVMA?oc=5",
+        "published": "Thu, 09 Jul 2026 09:25:45 GMT",
+        "publisher": "Answers（アンサーズ）"
+      },
+      {
+        "title": "アクセリード、三菱商事との業務提携契約締結について - 日経バイオテクONLINE",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBUNFVWMlU0aU0tOWZpTlJodmowTzVMX196WW5vbWRWaGpqU3lpeV81TVA3UFI4T2hqenVsQUlQYl9kdGNDSG5LNnI1c3BkOF9xbFR4VnpTalAwcmdOeFpMM1F4UFFsUQ?oc=5",
+        "published": "Thu, 09 Jul 2026 12:24:41 GMT",
+        "publisher": "日経バイオテクONLINE"
+      },
+      {
+        "title": "アクセリード、三菱商事と提携 事業機会創出を加速 - 化学工業日報 電子版",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5VSHhVcUp0YlJNYmx3SGFwaElWcWxxamRlTlRweVdSWnhHbXJfWWZNdGR4dXZVVHRKSHViNkVkX09maHV5dUFFZW90c0dpWS1DWGhn?oc=5",
+        "published": "Thu, 09 Jul 2026 20:04:24 GMT",
+        "publisher": "化学工業日報 電子版"
+      },
+      {
+        "title": "アクセリード、三菱商事と業務提携 創薬支援事業を拡大へ | 日刊薬業 - 医薬品産業の総合情報サイト - 日刊薬業",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE80MTd0amk5ZmE1S255SWF5OHBVZnMzdUtGTy0xTXNGLWFxVHFzblVueUpMTFpFM01zMXhwNGJQY1pHVjRON2N4RA?oc=5",
+        "published": "Thu, 09 Jul 2026 06:08:33 GMT",
+        "publisher": "日刊薬業"
+      },
+      {
+        "title": "マルチテナント型ライフサイエンス研究開発施設 「アイパーク神戸」着工のお知らせ - アットプレス",
+        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE8tUWxqcWJkSExzU21yMjdyRWEyQ0M5amxsRHpjcEtOZVJ3X3FIcEdQVExHbjNhNFNuVVRBcUJlcmVuOW01TkgtOUZCczRtQQ?oc=5",
+        "published": "Thu, 09 Jul 2026 04:00:00 GMT",
+        "publisher": "アットプレス"
+      },
+      {
+        "title": "兵庫県神戸市で「アイパーク神戸」着工 マルチテナント型のライフサイエンス研究開発施設 - AMP[アンプ]",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1JSjlYVUptS25HNjV0SzEyR1M2Um1lcXlkd2VCSmJqNUhWajV5UHhLc0tPenBpRzdiUld0WDdXdnRzZkdmN0RQSC01U1JwR0JsNkhlNkt1dzBnVUU?oc=5",
+        "published": "Thu, 09 Jul 2026 07:17:11 GMT",
+        "publisher": "AMP[アンプ]"
+      },
+      {
+        "title": "【着工】マルチテナント型ライフサイエンス研究開発施設 三菱商事都市開発株式会社／アイパーク神戸 - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFA0SG54SmRvM0xrQzZVa2J2V0NiTEtrbjRrVzhzRUNrZlFIQWpobUpLTjJQSzdTOTJlQzY1UFZZMFBudlFudHRzcXdXYk5IS1AySGFMVWVKVkFZbnhzd3J0RGh0UFg5LVVxX0VsNEVkVURPMVBDMGc?oc=5",
+        "published": "Thu, 09 Jul 2026 13:30:27 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "三菱商事が狙う「高機能肥料」 ホルムズ封鎖が突く食料生産の急所 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5rdmNFcm83elpabWpVSVp6Y2lXWlRkcmhnRnVKS2hCMG5rTTVVOUdBcXdEdGFPWU56akUwdE1iekZnbnd4OG4tNHktbHRIZkFJY2dRTkxhMm1hOWstMXVqU2kyc042djJ0TVFQdQ?oc=5",
+        "published": "Thu, 09 Jul 2026 17:00:00 GMT",
+        "publisher": "日本経済新聞"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "子会社間の合併及び特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552595.pdf",
+        "date": "2026-05-29 09:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C2プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539898.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C3プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539905.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C4プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539910.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C5プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539918.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C6プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539939.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515679.pdf",
+        "date": "2026-05-01 14:00:00"
+      },
+      {
+        "title": "通期個別業績と前期実績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515675.pdf",
+        "date": "2026-05-01 14:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260416505643.pdf",
+        "date": "2026-04-17 14:00:00"
+      },
+      {
+        "title": "（訂正）「自己株式の取得結果および取得終了並びに消却株式数に関するお知らせ」 の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260325589148.pdf",
+        "date": "2026-03-25 17:20:00"
+      }
+    ]
+  }
+}

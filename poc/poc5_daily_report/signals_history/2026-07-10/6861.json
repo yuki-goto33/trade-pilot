@@ -1,0 +1,218 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-07-10T08:53:36+09:00",
+  "price_as_of": "2026-07-09",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 45,
+    "reasons": [
+      {
+        "reason": "直近（2026-07-04）のbuyシグナルを継続監視中であり、短期連続での新規buyは抑制します。",
+        "evidence": "reference.recent_buy"
+      },
+      {
+        "reason": "ファンダメンタルズは依然として強気であり、AI搭載の新製品「IV4シリーズ」の発売は今後の成長ドライバーとして期待される新規材料です。",
+        "evidence": "fundamental_view.stance=bullish (strength=75), fundamental_view.points[1]"
+      },
+      {
+        "reason": "製造業向けPMIや日銀短観DIの改善など、主要顧客層である製造業におけるマクロ経済環境は追い風です。",
+        "evidence": "fundamental_view.points[2]"
+      },
+      {
+        "reason": "テクニカル的には中期的な上昇トレンドは維持されているものの、直近の大幅な下落により短期移動平均線を下回っており、上値の重さが懸念されます。",
+        "evidence": "technical_view.stance=neutral, technical_view.points[1]"
+      }
+    ],
+    "risks": [
+      "2026年7月28日の次回決算発表、および7月30日〜31日の日銀金融政策決定会合が市場に変動をもたらす可能性があります。",
+      "PERが40倍を超えるなどバリュエーション指標は高水準であり、既に高い成長期待が株価に織り込まれている可能性があります。",
+      "日本市場全体が下降トレンドにあると判定されており、個別の反発力も限定的となる可能性があります。",
+      "中小企業の価格転嫁が進んでいない状況が、顧客である中小企業の設備投資意欲に影響を与える可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 45,\n \"reasons\": [\n  {\n   \"reason\": \"直近（2026-07-04）のbuyシグナルを継続監視中であり、短期連続での新規buyは抑制します。\",\n   \"evidence\": \"reference.recent_buy\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは依然として強気であり、AI搭載の新製品「IV4シリーズ」の発売は今後の成長ドライバーとして期待される新規材料です。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=75), fundamental_view.points[1]\"\n  },\n  {\n   \"reason\": \"製造業向けPMIや日銀短観DIの改善など、主要顧客層である製造業におけるマクロ経済環境は追い風です。\",\n   \"evidence\": \"fundamental_view.points[2]\"\n  },\n  {\n   \"reason\": \"テクニカル的には中期的な上昇トレンドは維持されているものの、直近の大幅な下落により短期移動平均線を下回っており、上値の重さが懸念されます。\",\n   \"evidence\": \"technical_view.stance=neutral, technical_view.points[1]\"\n  }\n ],\n \"risks\": [\n  \"2026年7月28日の次回決算発表、および7月30日〜31日の日銀金融政策決定会合が市場に変動をもたらす可能性があります。\",\n  \"PERが40倍を超えるなどバリュエーション指標は高水準であり、既に高い成長期待が株価に織り込まれている可能性があります。\",\n  \"日本市場全体が下降トレンドにあると判定されており、個別の反発力も限定的となる可能性があります。\",\n  \"中小企業の価格転嫁が進んでいない状況が、顧客である中小企業の設備投資意欲に影響を与える可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "中期的な上昇トレンドは維持されているものの、直近の株価は大幅な下落後、短期移動平均線を下回って推移しており、上値の重い展開が予想されます。",
+      "points": [
+        {
+          "point": "直近60営業日の騰落率および対TOPIX相対騰落率はともにプラスであり、中期的なトレンドは上昇基調を維持しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=21.08, price_technical.trend_60d.relative_to_topix_60d_pct=15.38"
+        },
+        {
+          "point": "直近2営業日で株価が大幅に下落した後、小幅に反発したものの、5日移動平均線（77,938円）および25日移動平均線（76,897.6円）の両方を下回って推移しています。",
+          "evidence": "price_technical.recent_5_days[3].change_pct=-4.45, price_technical.recent_5_days[4].change_pct=1.20, price_technical.last_close=75600.0, price_technical.sma5=77938.0, price_technical.sma25=76897.6"
+        },
+        {
+          "point": "MACDヒストグラムはマイナス圏で推移しており、短期的な下落圧力が継続していることを示唆しています。",
+          "evidence": "price_technical.macd_histogram=-175.24"
+        },
+        {
+          "point": "市場全体が下降トレンドにあると判定されており、銘柄単体の上昇には逆風となる可能性があります。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\""
+        },
+        {
+          "point": "前夜の米国市場では、当該銘柄のADRとテクノロジーセクターETFがともに上昇しており、当日の寄り付きは好転が期待されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=3.89, us_overnight.sector_proxy.change_1d_pct=2.18"
+        }
+      ],
+      "cautions": [
+        "前夜の米国市場での株価上昇は、当日の日本市場の寄り付き価格に織り込まれる可能性があります。",
+        "市場全体の下降トレンドが継続する場合、個別の反発力も限定的となる可能性があります。",
+        "株価が25日移動平均線を明確に上回って推移するようになれば、短期的なトレンド転換の兆候となり得ます。"
+      ],
+      "key_levels": {
+        "support": 74700.0,
+        "resistance": 76897.6
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "キーエンスは、堅調な年次業績成長トレンドを維持しており、直近ではAI搭載の新製品を発表しました。製造業向けに良好なマクロ経済環境が追い風となる中、投資単位の引下げに関する開示も潜在的な好材料と評価できます。",
+      "points": [
+        {
+          "point": "売上高・利益・EPSは年次で継続的に成長しており、安定した収益拡大が確認できます。",
+          "evidence": "fundamentals.earnings_trend.annual[0].revenue_oku_jpy=11693, fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=5958, fundamentals.earnings_trend.annual[0].net_income_oku_jpy=4452, fundamentals.earnings_trend.annual[0].diluted_eps=1835.63 (2026-03期)"
+        },
+        {
+          "point": "AI搭載の新製品「IV4シリーズ」の発売は、今後の成長ドライバーとして期待される明確な新規材料です。",
+          "evidence": "news.headlines[1].title=\"キーエンス、AI搭載画像センサ「IV4シリーズ」を発売 検出と画作りにAIアルゴリズム搭載\", news.headlines[1].published=\"Thu, 09 Jul 2026 06:02:47 GMT\""
+        },
+        {
+          "point": "キーエンスの主要顧客層である製造業において、PMIは景気拡大を示し、日銀短観の大企業製造業DIも改善しており、マクロ経済環境は追い風です。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.8 (2026-06), macro.boj.tankan.di.large_manufacturing.current_di=22.0 (2026-06)"
+        },
+        {
+          "point": "ドル円は円安水準で推移しており、グローバルに展開するキーエンスにとっては収益面でポジティブに作用する可能性があります。",
+          "evidence": "macro.indices[2].close=162.35 (JPY=X, 2026-07-10)"
+        },
+        {
+          "point": "「投資単位の引下げに関する考え方及び方針等について」の開示は、株式の流動性向上を意識したものであり、市場にとって潜在的な好材料となり得ます。",
+          "evidence": "disclosures.items[0].title=\"投資単位の引下げに関する考え方及び方針等について\", disclosures.items[0].date=\"2026-06-18 16:00:00\""
+        }
+      ],
+      "cautions": [
+        "PERが40倍を超えるなどバリュエーション指標は高水準であり、既に高い成長期待が織り込まれている点には注意が必要です。",
+        "日本市場全体は直近5日間で下落しており（日経平均 -2.78%、TOPIX連動ETF -2.92%）、全体的な地合いは軟調です。",
+        "次回決算発表日が2026年7月28日に予定されており、その内容が株価に大きく影響を与える可能性があります。",
+        "2026年7月30日〜31日に日銀金融政策決定会合が控えており、金融政策に関する発表が市場に変動をもたらす可能性があります。",
+        "日本公庫の中小企業景況調査では、販売価格DIと仕入価格DIの差が大きく、中小企業の価格転嫁が進んでいない状況が示されており、顧客である中小企業の設備投資意欲に影響を与える可能性も考慮すべきです。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-04",
+    "days_ago": 6,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)キーエンス【6861】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFAxcU9waXFEc3Q2aFY1YzRVa1Atd0pCMHhuam9mZmgwaUljMkZFNzcxNXRrNzFrM3NtUzFrelFnTVZTUmxLUEJxZHQxOFJSOUhXb3VOcXhRLTZlcG1LNWpJ?oc=5",
+        "published": "Thu, 09 Jul 2026 07:01:53 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "キーエンス、AI搭載画像センサ「IV4シリーズ」を発売 検出と画作りにAIアルゴリズム搭載 - オートメーション新聞",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAyMmx3WWFaSTlZLUxvczFLTUtweXJWNmtXdFdWTFNvWmpCaTE0YmpjUVdubWFQN05rMXpMMVJ3dnd1MEthZ0tlVHhFblBaeGNFRVpHTDJieVRyUQ?oc=5",
+        "published": "Thu, 09 Jul 2026 06:02:47 GMT",
+        "publisher": "オートメーション新聞"
+      },
+      {
+        "title": "カレンダーで実力がバレる…たいていの会社員はしているがキーエンスの営業が決してやらない予定の組み方 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE01NE5RSkRVOXV0ekVGbWU4SEFrNFBVR1UyY0dSc1VEb2g3NTZndmxCVGxjR2tWd1g2YjNhM3A3WW84VzR3Qll4QkFRNjVDQzQ?oc=5",
+        "published": "Thu, 09 Jul 2026 02:00:00 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "カレンダーで実力がバレる…たいていの会社員はしているがキーエンスの営業が決してやらない予定の組み方 - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE53VEEzX3FXNmxwTi1CNF9lc2IyeWJLLTBnZGd6VGRDTzZXQjg2MlkxQjFqRnFXUnFpb08zbkRTQ0JoeVliX2VKYks5cF9acDdMdzc0VzZmM2pEQ1hleG1GMlJra2FrSHRHekpkQVYzMlFZRDZHTHFvaGhGTjByMjg?oc=5",
+        "published": "Thu, 09 Jul 2026 02:15:50 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "画像 | カレンダーで実力がバレる…たいていの会社員はしているがキーエンスの営業が決してやらない予定の組み方 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9xdG1QekltbmVLbXBQTE1Id2NFVVRjdmpVSWRGMmlTT0ZDaDU1RGdDT3NWQmNkZDJXc3BKa1RzOS0xM3UzUlBiaDhiRkRLVm15YjNsdQ?oc=5",
+        "published": "Thu, 09 Jul 2026 07:38:33 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "カレンダーで実力がバレる…たいていの会社員はしているがキーエンスの営業が決してやらない予定の組み方 - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPNnR1OFBlV0tyWUo2bzcwUTFZT1pFVWxDWXB6TE9sYUVvUjB5Vm5iek5kRm5NTTlpRjF5NDFwa29wWmFNTWZ2YnNYbWlmdEc4aWZSRU5iZEZVNnl6VjdnSlAwV29oUUYwaXZaNVJyVTZjczh4TmFqM3B6bV9YM3lhSEt0anJFUVJNUnlxbC1n?oc=5",
+        "published": "Thu, 09 Jul 2026 02:15:50 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "カレンダーで実力がバレる…たいていの会社員はしているがキーエンスの営業が決してやらない予定の組み方 - Excite エキサイト",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBmLThvZWgzOXdkQUZJZG55OUczVGQ0bTZoTWVJY096TjVXRVlrUDZYWE12dGt1dlpESlpxdkJSekF5RWxkMllzenR5WWlMTTYzQ2UwTVBmajZuak1EYm1JWnZkV1dsZzRLT2I1S09VUGM?oc=5",
+        "published": "Thu, 09 Jul 2026 02:15:00 GMT",
+        "publisher": "Excite エキサイト"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120250724520054.pdf",
+        "date": "2025-07-29 16:00:00"
+      }
+    ]
+  }
+}

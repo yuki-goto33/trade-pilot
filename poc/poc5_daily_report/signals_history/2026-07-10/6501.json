@@ -1,0 +1,232 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-07-10T08:58:04+09:00",
+  "price_as_of": "2026-07-09",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近14日以内にbuyシグナルが出ているため、新規のbuyは抑制し、保有継続と判断しました。",
+        "evidence": "reference.recent_buy"
+      },
+      {
+        "reason": "ファンダメンタルズは強気（strength=75）ですが、テクニカルがニュートラル（strength=50）であり、市場全体も下落トレンドにあるため、現時点でのbuyは見送ります。",
+        "evidence": "fundamental_view.stance=bullish (strength=75), technical_view.stance=neutral (strength=50), reference.market_regime=downtrend"
+      },
+      {
+        "reason": "テクニカル面では中期下落トレンドが継続しており、短期的な買い戻しの兆候はあるものの、明確な上昇トレンドへの転換は確認できていません。",
+        "evidence": "technical_view.summary, technical_view.points[0].point, technical_view.points[2].point"
+      },
+      {
+        "reason": "ファンダメンタルズ面では、継続的な事業拡大や株主還元姿勢、新規事業展開などポジティブな材料が多いものの、次回の決算発表（7月29日）や日銀会合（7月30日〜31日）といったイベントリスクに注意が必要です。",
+        "evidence": "fundamental_view.points, fundamental_view.cautions[0], fundamental_view.cautions[1]"
+      }
+    ],
+    "risks": [
+      "次回の決算発表（7月29日）で予想を下回る結果となった場合、株価が下落する可能性があります。",
+      "日銀の金融政策決定会合（7月30日〜31日）で市場の予想と異なる決定がなされた場合、市場全体に影響が及び、株価が下落する可能性があります。",
+      "テクニカル面で、短期的な買い戻しの勢いが失われ、再び下落トレンドに回帰する可能性があります。",
+      "市場全体が下落トレンドにあるため、個別銘柄の好材料も相殺され、株価が伸び悩む可能性があります。",
+      "高評価のファンダメンタルズ材料が、現在の割高感（PER 26.913倍）によって市場に織り込まれていない、あるいは期待先行で下落するリスクがあります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内にbuyシグナルが出ているため、新規のbuyは抑制し、保有継続と判断しました。\",\n   \"evidence\": \"reference.recent_buy\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは強気（strength=75）ですが、テクニカルがニュートラル（strength=50）であり、市場全体も下落トレンドにあるため、現時点でのbuyは見送ります。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=75), technical_view.stance=neutral (strength=50), reference.market_regime=downtrend\"\n  },\n  {\n   \"reason\": \"テクニカル面では中期下落トレンドが継続しており、短期的な買い戻しの兆候はあるものの、明確な上昇トレンドへの転換は確認できていません。\",\n   \"evidence\": \"technical_view.summary, technical_view.points[0].point, technical_view.points[2].point\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ面では、継続的な事業拡大や株主還元姿勢、新規事業展開などポジティブな材料が多いものの、次回の決算発表（7月29日）や日銀会合（7月30日〜31日）といったイベントリスクに注意が必要です。\",\n   \"evidence\": \"fundamental_view.points, fundamental_view.cautions[0], fundamental_view.cautions[1]\"\n  }\n ],\n \"risks\": [\n  \"次回の決算発表（7月29日）で予想を下回る結果となった場合、株価が下落する可能性があります。\",\n  \"日銀の金融政策決定会合（7月30日〜31日）で市場の予想と異なる決定がなされた場合、市場全体に影響が及び、株価が下落する可能性があります。\",\n  \"テクニカル面で、短期的な買い戻しの勢いが失われ、再び下落トレンドに回帰する可能性があります。\",\n  \"市場全体が下落トレンドにあるため、個別銘柄の好材料も相殺され、株価が伸び悩む可能性があります。\",\n  \"高評価のファンダメンタルズ材料が、現在の割高感（PER 26.913倍）によって市場に織り込まれていない、あるいは期待先行で下落するリスクがあります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "中期トレンドは下落基調が継続しており、市場全体も下落トレンドにあるため、積極的な上値追いは難しいでしょう。ただし、短期的な買い戻しの動きも見られます。",
+      "points": [
+        {
+          "point": "過去60営業日における騰落率、およびTOPIXに対する相対騰落率がともにマイナスであり、中期的な下落トレンドの中にあります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-1.08, price_technical.trend_60d.relative_to_topix_60d_pct=-6.78"
+        },
+        {
+          "point": "市場全体はTOPIXが25日線を下回り、機械判定で下落トレンドにあります。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\", macro.market_regime.topix_close_vs_sma25=\"below\""
+        },
+        {
+          "point": "MACDヒストグラムが陽転しており、短期的な買い戻しや勢いの回復を示唆していますが、MACD自体は依然としてマイナス圏で推移しています。",
+          "evidence": "price_technical.macd_histogram=39.7, price_technical.macd=-55.66"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線を上回るゴールデンクロスを維持しているものの、直近の終値は5日移動平均線を下回っています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\", price_technical.last_close=4758.0, price_technical.sma5=4779.6"
+        }
+      ],
+      "cautions": [
+        "中期的な下落トレンドが継続しているため、短期的な反発だけでトレンド転換と判断するのは時期尚早です。",
+        "直近5営業日の値動きは乱高下しており、ボラティリティが高い状態が続いています。",
+        "前夜の米国市場は小幅高でしたが、これが日中の取引にどこまで影響するかは寄り付き後の値動き次第です。"
+      ],
+      "key_levels": {
+        "support": 4736.6,
+        "resistance": 4942.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "日立製作所は、堅調な業績成長と継続的な事業戦略の進展を示す最新の材料があり、全体として強気の見方ができます。",
+      "points": [
+        {
+          "point": "過去3年間の年次業績は売上高、営業利益、純利益、EPS全てにおいて一貫して増加傾向にあり、事業の安定した拡大を示唆しています。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "直近で自己株式の取得状況に関する開示があり、株主還元への積極的な姿勢と株価を下支えする材料として評価できます。",
+          "evidence": "disclosures.items[0].date=\"2026-07-02\", disclosures.items[0].title=\"自己株式の取得状況に関するお知らせ\""
+        },
+        {
+          "point": "顔認証改札機の導入実証、高電圧水素製造システム、エレベーターのフィジカルAI化といったニュースがあり、デジタル・グリーン・モビリティ領域での積極的な事業展開と技術革新が示唆されます。",
+          "evidence": "news.headlines[1].title=\"自動改札機に後付けで「顔パス」機能搭載、東武池袋駅で実証開始へ…全国での導入目指す\", news.headlines[4].title=\"高電圧水素製造システムを実現する絶縁配管技術\", news.headlines[5].title=\"日立、エレベーターを「フィジカルAI」へ 新型機で設備データ活用を加速\""
+        },
+        {
+          "point": "日本の製造業PMIが54.8と景気拡大を示し、大企業の業況判断DIも改善傾向にあるため、日立製作所の主力事業にとって追い風となるマクロ環境です。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.8, macro.boj.tankan.di.large_manufacturing.current_di=22.0"
+        },
+        {
+          "point": "ドル円が162円台と円安水準を維持しており、海外売上比率の高い日立製作所の収益性向上に寄与する可能性があります。",
+          "evidence": "macro.indices[2].close=162.35"
+        }
+      ],
+      "cautions": [
+        "7月29日に次回の決算発表を控えており、内容によっては株価が大きく変動する可能性があるイベントリスクに注意が必要です。",
+        "7月30日〜31日に日銀の金融政策決定会合が予定されており、金融政策に関する予期せぬ発表があった場合、市場全体の地合いに影響を及ぼす可能性があります。",
+        "市場レジームが「downtrend」と評価されており、個別銘柄の好材料が相殺される可能性がある点には留意が必要です。",
+        "現在のPERが26.913倍と、市場平均と比較して割安とは言えない水準であり、業績の期待値が高いことによる割高感には注意が必要です。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-08",
+    "days_ago": 2,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)日立製作所【6501】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4yQ3lneGRPOVV1N3BFRXRGcHFZa3dpWWttOTd2ZWw4dm9FSVU2NXItOUpGOWJyeFpSYm1DWWYtaEpIMDJZZElwbmJwX0FTTDRMZmd2MzZSWDlLMnhnbDRF?oc=5",
+        "published": "Thu, 09 Jul 2026 06:54:31 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "自動改札機に後付けで「顔パス」機能搭載、東武池袋駅で実証開始へ…全国での導入目指す - 読売新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBKc3Y2WENodzQ3T2tHUE1lWWZ0dkZ2bmdnZTJwT0gzNWVGWnRiaWJyTm1EVy16Y2IwYnhoSFY4WUlQNVBySTNzaVZ0Q2cybDZZaGt5SDJXTC1udVM5U2RKRldBVjQ?oc=5",
+        "published": "Thu, 09 Jul 2026 22:46:12 GMT",
+        "publisher": "読売新聞"
+      },
+      {
+        "title": "ソニー・パナソニック・日立、電機メーカー3社「採用大学」ランキング2025【全10位・完全版】 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE95TGp3TktTbzMzd1hwVWd4c0Q1NVRNbUdrTnJ6ZUk5VExabXRmblU2amNhVW40Vzd0YXVEQ3lnMEhBS1hFRkZrUlZhX3jSAU9BVV95cUxONTg4dmRPOS03YWc0bmtvV2FpVXV6cFVDLXlzX0VpU3dxcmppY0lhWk9STDRBb2xscEs5Z3pyVGJkUmlIdUUwb2w0LTg3a0h3?oc=5",
+        "published": "Thu, 09 Jul 2026 21:00:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "【アナリスト予想】日立製作所、27年3月期経常予想。対前週1%上昇。(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNTlJQakZGUnlwU09HVmcySzRPUXdjc0c5ZXFkM2ZtbWpVYzFNM2lYLUpibTJBalBnQVRGTi13dkR4MWRpWnpENjI1WmhnYk9OSmhselJuZ1NuR21lNThNRDIxYkRlUVlWWXJ4WVlsNDBVQzY3UlA3Y1dtdkR1VmtKQ2o0bmpOMUE?oc=5",
+        "published": "Thu, 09 Jul 2026 13:46:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "高電圧水素製造システムを実現する絶縁配管技術 - WirelessWire",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE8tRVdydWM3S1h2a2tZbk5iN3kyVi1kYWFyMGx6SlJPblZaNG1USFptZnlqakw0WjFITUFQeFlMWUZTbzBQc1VZYk13SW0wekE?oc=5",
+        "published": "Thu, 09 Jul 2026 21:03:16 GMT",
+        "publisher": "WirelessWire"
+      },
+      {
+        "title": "日立、エレベーターを「フィジカルAI」へ 新型機で設備データ活用を加速：FM（2/4 ページ） - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBWZGtZVm5fdzQ1ZjF4S2J4eW5QRWhFRHhZZkdwdmJoTmdDb0pCdkFEZjNVdldtV0dSczdiekdwcW5MSXpqYUVjUWJ1TnNTLTdzU0xoMUdlX0ZlSjh1MUJ4QWZkNUVsa1ha?oc=5",
+        "published": "Thu, 09 Jul 2026 05:21:00 GMT",
+        "publisher": "ITmedia"
+      },
+      {
+        "title": "生体認証サービス「SAKULaLa」を活用した、国内の主な改札機と連携可能な顔認証改札の仕組みを実現 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1Jak1rT2F1YUoxVjZFMlFqMGtHLXo5X0VtVnF1RjFDeVVUMFdXa3hiWkxfQVhXdE5DZFZnVzN5LWRlWmF3Wm1GX2NGclpJbExDNTN6NmdkMW1FTThKYWV0TnJvSHl2dGJOaEE?oc=5",
+        "published": "Thu, 09 Jul 2026 02:00:08 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "東武鉄道、池袋駅と上板橋駅に顔認証の自動改札機導入 都内で初 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPdGdrM3JGX2xvZl9GMVZvMzFEaGdQbmJXazR3d1l6YjlQUjJjcm82U2ZYcks5YThlTS02eV9sRDBmQTdOMXhRbkhQRnlJRF9wd2tXbXVVbmtJVVQ2UHNyYmV2Q3lXVExJNy1Va29tNXFFNE1xNXJsczRrVUJVYzNLb3haeTQ0LXJSM0VMRzRHaUV6Sm56eGhBaVpqb3ViTUg5NENhLXdUN3I?oc=5",
+        "published": "Thu, 09 Jul 2026 04:55:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "生体認証サービス活用した主要改札機と連携する顔認証改札 - 電波タイムズ",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE54V21qYVZMbWZJYl9yUU4zSUs3UG92OFNJcW04cE9haU5PSEtfb0dUMDdCaThCMEtHX0FvX0VrLWl1UExyRGVXM2t5RTJLOFpwNEtwWERpOUFIZTV6WXEwVkZLMFZKZw?oc=5",
+        "published": "Thu, 09 Jul 2026 08:09:07 GMT",
+        "publisher": "電波タイムズ"
+      },
+      {
+        "title": "エイジェック、日本製鉄鹿島が第1代表決定戦へ 都市対抗北関東 - 毎日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE4yenpiOGN0N0dqTVNuUzMza2l4QlpySlp6U1lCU3A4MDZucDlnOE1mWVRhV0FoSnpkLWdNVFZQNm93Y08tSGhNdVEtTTNadVpuM2E0TEpTRGdmdXVhS0h5dmNuU1VCb3V4?oc=5",
+        "published": "Thu, 09 Jul 2026 22:30:00 GMT",
+        "publisher": "毎日新聞"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(モビリティ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566288.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(コネクティブインダストリーズ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566292.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(デジタルシステム＆サービス事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566294.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CFO Session)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566296.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559702.pdf",
+        "date": "2026-06-02 15:30:00"
+      },
+      {
+        "title": "剰余金の配当(期末配当)に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533826.pdf",
+        "date": "2026-05-14 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況及び取得終了に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260427511652.pdf",
+        "date": "2026-04-27 15:30:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-07-10T08:55:45+09:00",
+  "price_as_of": "2026-07-09",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家はKDDIの堅調な業績成長、高い株主還元意識、新規事業戦略を高く評価しており、強気の見解を示しています。",
+        "evidence": "fundamental_view.stance=bullish (strength=75)"
+      },
+      {
+        "reason": "テクニカル専門家も中期的な上昇トレンドと短期的な買いシグナルを示しており、株価は堅調に推移していると判断しています。",
+        "evidence": "technical_view.stance=bullish (strength=70)"
+      },
+      {
+        "reason": "統合判断ルールに基づき、ファンダメンタルズ専門家が強気（strength≥70）であっても、テクニカル専門家が中立ではない場合（本件ではテクニカルも強気）、新規の買いシグナルは出さずホールドとします。",
+        "evidence": "integration_rule[1] (technical_view.stance!=neutral)"
+      },
+      {
+        "reason": "日本市場全体の地合いがdowntrendであることも、積極的な買いを抑制し、様子見とする要因です。",
+        "evidence": "reference.market_regime=\"downtrend\""
+      }
+    ],
+    "risks": [
+      "次回決算発表日（2026年8月7日）の内容が期待を下回る場合、株価が変動する可能性があります。",
+      "次回日銀金融政策決定会合（2026年7月30日〜31日）の結果によっては、市場全体の金利動向や株式市場に影響が及ぶ可能性があります。",
+      "日本市場全体のdowntrendが継続または悪化した場合、個別銘柄の好材料も相殺され、株価上昇が抑制される可能性があります。",
+      "ISP事業向けメールシステムへの不正アクセスや、創業者の申告漏れに関するニュースが、短期的に企業イメージや信頼性に影響を与える可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家はKDDIの堅調な業績成長、高い株主還元意識、新規事業戦略を高く評価しており、強気の見解を示しています。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=75)\"\n  },\n  {\n   \"reason\": \"テクニカル専門家も中期的な上昇トレンドと短期的な買いシグナルを示しており、株価は堅調に推移していると判断しています。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=70)\"\n  },\n  {\n   \"reason\": \"統合判断ルールに基づき、ファンダメンタルズ専門家が強気（strength≥70）であっても、テクニカル専門家が中立ではない場合（本件ではテクニカルも強気）、新規の買いシグナルは出さずホールドとします。\",\n   \"evidence\": \"integration_rule[1] (technical_view.stance!=neutral)\"\n  },\n  {\n   \"reason\": \"日本市場全体の地合いがdowntrendであることも、積極的な買いを抑制し、様子見とする要因です。\",\n   \"evidence\": \"reference.market_regime=\\\"downtrend\\\"\"\n  }\n ],\n \"risks\": [\n  \"次回決算発表日（2026年8月7日）の内容が期待を下回る場合、株価が変動する可能性があります。\",\n  \"次回日銀金融政策決定会合（2026年7月30日〜31日）の結果によっては、市場全体の金利動向や株式市場に影響が及ぶ可能性があります。\",\n  \"日本市場全体のdowntrendが継続または悪化した場合、個別銘柄の好材料も相殺され、株価上昇が抑制される可能性があります。\",\n  \"ISP事業向けメールシステムへの不正アクセスや、創業者の申告漏れに関するニュースが、短期的に企業イメージや信頼性に影響を与える可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "KDDIは中期的な上昇トレンドを維持し、短期的な移動平均線やMACDも強気シグナルを示しており、直近の株価は堅調に推移しています。しかし、日本市場全体の地合いが下落トレンドにある点は注意が必要です。",
+      "points": [
+        {
+          "point": "過去60営業日騰落率がプラスであり、TOPIXに対しても優位なパフォーマンスを示していることから、中期的な上昇トレンドにあると判断されます。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=8.64, price_technical.trend_60d.relative_to_topix_60d_pct=2.94"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線を上回るゴールデンクロスを形成しており、株価は両移動平均線より上に位置しているため、短期的な上昇基調を示唆しています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\", price_technical.last_close=2805.0, price_technical.sma5=2766.4, price_technical.sma25=2718.94"
+        },
+        {
+          "point": "MACDはシグナルラインを上回って推移し、MACDヒストグラムもプラス圏で拡大傾向にあるため、買いの勢いが強いことを示しています。",
+          "evidence": "price_technical.macd=15.61, price_technical.macd_signal=1.82, price_technical.macd_histogram=13.8"
+        },
+        {
+          "point": "直近5営業日のうち4営業日で株価が上昇しており、高値圏を維持するなど堅調な推移が見られます。",
+          "evidence": "price_technical.recent_5_days"
+        },
+        {
+          "point": "前夜のNY市場ではKDDIのADRおよび通信サービスセクターETFがともに上昇しており、本日の日本市場での寄り付きにポジティブな影響を与える可能性があります。",
+          "evidence": "us_overnight.adr.change_1d_pct=0.29, us_overnight.sector_proxy.change_1d_pct=0.96"
+        }
+      ],
+      "cautions": [
+        "日本市場全体がTOPIXで「downtrend」と判断されており、日経平均やTOPIXも直近5日間で下落しているため、市場全体の重しによって個別銘柄の上昇が抑制される可能性があります。",
+        "前夜の米国市場での好材料は、当日の寄り付き価格に既に織り込まれる可能性があるため、その後の上値追いは慎重に見極める必要があります。"
+      ],
+      "key_levels": {
+        "support": 2718.94,
+        "resistance": 2845.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "KDDIは堅調な業績成長トレンドと良好な株主還元姿勢を維持しており、複数の新規事業戦略も評価できます。サービス業の景況感も追い風となるでしょう。",
+      "points": [
+        {
+          "point": "売上高、純利益、EPSは年々着実に成長しており、特に2026年3月期の純利益とEPSは過去最高の見通しで、堅調な業績トレンドを示しています。",
+          "evidence": "fundamentals.earnings_trend.annual[0].revenue_oku_jpy=60719, fundamentals.earnings_trend.annual[0].net_income_oku_jpy=7071, fundamentals.earnings_trend.annual[0].diluted_eps=183.55"
+        },
+        {
+          "point": "ROEが14%と高く収益性が良好であることに加え、配当利回りも2.99%と魅力的です。また、直近で自己株式の取得も継続しており、株主還元への意識が高いことが伺えます。",
+          "evidence": "fundamentals.valuation.return_on_equity=0.14, fundamentals.valuation.dividend_yield_percent=2.99, disclosures.items[0].title=\"自己株式の取得状況に関するお知らせ\""
+        },
+        {
+          "point": "競合であるドコモとの5G「ミリ波」展開における協力体制や、金融新会社設立による金融事業強化の動きは、新たな成長機会と効率化に繋がり、中長期的な企業価値向上に寄与する可能性があります。",
+          "evidence": "news.headlines[2].title=\"ドコモやKDDIが金融新会社、ポイント還元など競う 通信補う成長源に\", news.headlines[1].title=\"なぜライバルの「KDDI」と「ドコモ」は手を組むのか 5G「ミリ波」を広げる“割り勘作戦”とは\""
+        },
+        {
+          "point": "国内マクロ環境では、KDDIが属するサービス業のPMIが52.2と景気拡大を示し、日銀短観の大企業非製造業業況判断DIも37.0と高水準であり、事業環境は良好です。",
+          "evidence": "macro.japan_pmi.services.latest_value=52.2, macro.boj.tankan.di.large_nonmanufacturing.current_di=37.0"
+        }
+      ],
+      "cautions": [
+        "次回決算発表日が2026年8月7日に予定されており、その内容によっては株価が変動する可能性があります。",
+        "日銀の金融政策決定会合が2026年7月30日〜31日に控えており、金融政策に関する決定が市場全体の金利動向や株式市場に影響を与える可能性があります。",
+        "ISP事業向けメールシステムへの不正アクセスや、創業者の申告漏れに関するニュースが、短期的に企業イメージや信頼性に影響を与える可能性があります。",
+        "市場全体のレジームがdowntrendにあり、個別銘柄の好材料が相殺される可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "KDDI の ISP 事業者向けメールシステムに不正アクセス、ゼロデイ脆弱性を悪用 - ScanNetSecurity",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBYNzM4SW9hSnl1ajVtNTExU3pQekI2T3dSVEh3UUFmLWhScmlHS2g5SDgwUnJkclp2YUFaV0JHYzZ4NHVDSGlWRk9UdklpclFJM3RUN0RHQ3otSGhZV052cGhmLXFNNXlXZVFRVg?oc=5",
+        "published": "Thu, 09 Jul 2026 23:05:13 GMT",
+        "publisher": "ScanNetSecurity"
+      },
+      {
+        "title": "なぜライバルの「KDDI」と「ドコモ」は手を組むのか 5G「ミリ波」を広げる“割り勘作戦”とは（ITmedia ビジネスオンライン） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5TbnJRRjhhR2FuSlY1NWlxQjFjeWlQSUxsY29JcWRlVHNvZWxMcFU2Y1V5bW9lNVNKWFJjSUtmaDRMM1VzQlcxWndDUVJsQ2dCenNRTlJ6TmY1VWQ3QzhQdEdyeVo5TFRyQng0Tzd3NDgxY1B5VHBpcmdyUkxsRjg?oc=5",
+        "published": "Thu, 09 Jul 2026 20:41:56 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "ドコモやKDDIが金融新会社、ポイント還元など競う 通信補う成長源に - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBMWjVnc1VVRXNzS0Zyc2xkRkRZWFAtbFA1SkdyMXotSDRfLTJZVE5Yby1IR21SUGppQ21NZmExUTZ3SHpOVl9uU2dZeWNJcFk1cXpsdy1DQXdZVi1abDI0NE9uZ0cwQXp1ZnVyRQ?oc=5",
+        "published": "Thu, 09 Jul 2026 02:02:26 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "KDDI館林氏、NTTデータ佐藤氏と見る「イノベーティブ大企業ランキング2026」とOI最新動向 - Biz/Zine",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE92eEkwS1FNTUF5anRsYjhaMnUtNXEzR1RnVlZGQ1NjRFJNblNTUFQxMV9sQVAtR0loYXhIRjdPclpXaHNkY29yUFF2bWY5TGxv?oc=5",
+        "published": "Thu, 09 Jul 2026 22:00:24 GMT",
+        "publisher": "Biz/Zine"
+      },
+      {
+        "title": "なぜライバルの「KDDI」と「ドコモ」は手を組むのか 5G「ミリ波」を広げる“割り勘作戦”とは（1/4 ページ） - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBSQ2dJOGVIQ2RVY3RzN0ZEU3VsSHJNNlc4OFJjNHVLM1J1dTRrUGNmSlRnWEVYSEpfNW1RNVE3SDVEcXBTSUowMVFfblc4SUh5OXZkMXVxUjFNSnF4ekxKXy1vLW1JcHRxR3pRZU9wZkdqdw?oc=5",
+        "published": "Thu, 09 Jul 2026 20:30:00 GMT",
+        "publisher": "ITmedia"
+      },
+      {
+        "title": "KDDIアイレットと AI × クラウドで挑むビジネス変革の航海へ！「Google Cloud Next Tokyo 26」にダイヤモンドスポンサーとして協賛 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9VaGVsTXpGak81TEQ4X29lY1dYOWppdzVBbzJVLXZVZy1EdUx4MVlMXzN3MlJBWEdOTElHeGdYNHlUOHdrMlAxUnJxR0tVVHhaT2RsWThSVjlMb0tSWTdJaFAxeEE2cXVsZFE?oc=5",
+        "published": "Thu, 09 Jul 2026 05:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "「値上げしても客が逃げない」KDDI\"稼ぐチカラ\"の正体【配当太郎氏解説】 - 現代ビジネス",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE0yWnl0MjFtN1Q5cGt0OEtNdENLM0VHZVB5RDNrZEVxRnV5aDliUjlvSldkU2RmOHNEWXZ5YWR5Y3oySFF2bmphN0JnaU1PUkE?oc=5",
+        "published": "Thu, 09 Jul 2026 20:01:42 GMT",
+        "publisher": "現代ビジネス"
+      },
+      {
+        "title": "ＫＤＤＩ共同創業者の子、申告漏れ 生前贈与で７．５億円―東京国税局など - 時事ドットコム",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNRFB0ZkRoS0ZFQjdBODBUTUhUdG95QzNIWDJUZ0lvS3hTUTdUTWFKX3Y5ZG1CbGt3RWxESXFwbWdZMVJFQXZaNkQ5dm9lWGtrUXkzZWJYd09HMEdadGtyOWFTN3dkZ0FKQUplVDc4ZnQ3cVVXRGVvbHBzZ2ZDeGNpdA?oc=5",
+        "published": "Thu, 09 Jul 2026 03:44:00 GMT",
+        "publisher": "時事ドットコム"
+      },
+      {
+        "title": "【速報】KDDI創業者の子4人、7億円超申告漏れ - 47NEWS",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9QZEpNT0xBdnNYdWl1WGo5TGhiVkZYQ2hGYy0yWlNiaHBBOTRKbmFrMTExRXBUM1Y5SDhOeXI3ZjdIRm9qaGpXWVEzaw?oc=5",
+        "published": "Thu, 09 Jul 2026 01:50:58 GMT",
+        "publisher": "47NEWS"
+      },
+      {
+        "title": "生前贈与7億円超申告漏れ KDDI前身創業者の子4人 不動産評価額「著しく不適当」 - 産経ニュース",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9ISllJbExPWDdXMkRwWDVzZzhWd0JxeFRRQ29fQU9NdWdodTB2VzBQalFTY2lWTENyTm9VNGpEbUVrWGswVUxDZUZ1Smc1UWdYa3FoUGpER0FEdVZyTGZSZTFONXRmRHUyZmVJcDZIaXZiQ0xoNWc?oc=5",
+        "published": "Thu, 09 Jul 2026 02:23:45 GMT",
+        "publisher": "産経ニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      },
+      {
+        "title": "東京証券取引所への「改善報告書」の提出に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559424.pdf",
+        "date": "2026-06-02 16:00:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（中期経営戦略）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524146.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "auフィナンシャルホールディングス株式会社の東京証券取引所への株式上場準備の開始について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524156.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "2026年３月期　決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511523545.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524005.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524010.pdf",
+        "date": "2026-05-12 15:45:00"
+      }
+    ]
+  }
+}
