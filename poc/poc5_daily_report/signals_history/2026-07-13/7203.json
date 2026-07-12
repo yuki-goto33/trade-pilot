@@ -1,0 +1,192 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-07-13T07:48:21+09:00",
+  "price_as_of": "2026-07-10",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "売上高は拡大傾向にあるものの、営業利益・純利益が減少傾向にあり、収益性の低下による業績不透明感が存在するため。",
+        "evidence": "fundamental_view.points[0]: fundamentals.earnings_trend.annual, fundamentals.earnings_trend.quarterly"
+      },
+      {
+        "reason": "対TOPIX相対騰落率が大幅にマイナスを記録するなど、テクニカル面で強力な中期下落トレンドを脱却できていないため。",
+        "evidence": "technical_view.points[0]: price_technical.trend_60d.change_60d_pct=-14.94, price_technical.trend_60d.relative_to_topix_60d_pct=-21.86"
+      },
+      {
+        "reason": "市場レジームが下落トレンド（downtrend）にあり、マクロの全体地合いが弱いため、新規エントリーは控えて静観すべき局面であるため。",
+        "evidence": "reference.market_regime=downtrend"
+      }
+    ],
+    "risks": [
+      "2026年8月4日の次回決算発表における、原材料高やコスト増に伴うさらなる減益リスクや下方修正リスク。",
+      "2026年7月30日〜31日の日銀金融政策決定会合前後における、金利上昇に伴う急激なドル安円高への巻き戻しリスク。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 55,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"売上高は拡大傾向にあるものの、営業利益・純利益が減少傾向にあり、収益性の低下による業績不透明感が存在するため。\",\n      \"evidence\": \"fundamental_view.points[0]: fundamentals.earnings_trend.annual, fundamentals.earnings_trend.quarterly\"\n    },\n    {\n      \"reason\": \"対TOPIX相対騰落率が大幅にマイナスを記録するなど、テクニカル面で強力な中期下落トレンドを脱却できていないため。\",\n      \"evidence\": \"technical_view.points[0]: price_technical.trend_60d.change_60d_pct=-14.94, price_technical.trend_60d.relative_to_topix_60d_pct=-21.86\"\n    },\n    {\n      \"reason\": \"市場レジームが下落トレンド（downtrend）にあり、マクロの全体地合いが弱いため、新規エントリーは控えて静観すべき局面であるため。\",\n      \"evidence\": \"reference.market_regime=downtrend\"\n    }\n  ],\n  \"risks\": [\n    \"2026年8月4日の次回決算発表における、原材料高やコスト増に伴うさらなる減益リスクや下方修正リスク。\",\n    \"2026年7月30日〜31日の日銀金融政策決定会合前後における、金利上昇に伴う急激なドル安円高への巻き戻しリスク。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 80,
+      "summary": "中期下落トレンドが継続する中、市場全体の地合い悪化も加わり弱気見通しです。直近の移動平均線のゴールデンクロスや前夜ADRの反発による一時的な上昇局面があっても、戻り売り圧力が勝る可能性が高いと判断します。",
+      "points": [
+        {
+          "point": "直近60営業日騰落率および対TOPIX相対騰落率がともに大幅なマイナスを記録しており、強力な中期下落トレンドから脱却できていません。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-14.94, price_technical.trend_60d.relative_to_topix_60d_pct=-21.86"
+        },
+        {
+          "point": "TOPIX連動ETFが25日線を下回り、5日騰落率もマイナスであるため、市場全体が下落トレンド（downtrend）にあります。",
+          "evidence": "macro.market_regime.market_regime=downtrend"
+        },
+        {
+          "point": "直近5営業日のうち後半3日間で下落・横ばいと上値の重い展開が続いており、短期的な売り圧力が継続しています。",
+          "evidence": "price_technical.recent_5_days[2].change_pct=-1.93, price_technical.recent_5_days[3].change_pct=-2.25, price_technical.recent_5_days[4].change_pct=-0.04"
+        }
+      ],
+      "cautions": [
+        "前夜のADRが+1.22%と上昇しているため、寄り付きは高く始まる可能性がありますが、寄り後に買いが一巡した後は戻り売りに押されるリスクに注意が必要です。",
+        "5日線が25日線の上にあるゴールデンクロス状態にあり、すぐ下に位置する25日線（2798.76円）が下値支持線として機能した場合は一時的な自律反発が強まる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 2798.76,
+        "resistance": 2881.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "売上高は拡大基調にあるものの営業利益・純利益が減益トレンドにあり、歴史的な円安や製造業PMIの回復といったマクロの追い風要因と相殺されています。また、近々に日銀会合や第1四半期決算を控えており、新たなカタリスト不足から様子見姿勢が妥当と判断します。",
+      "points": [
+        {
+          "point": "売上高は2026年3月期に50.6兆円まで拡大しているものの、営業利益は3.76兆円（前年同期は4.79兆円）へと減少しており、直近四半期（2026-03期）の営業利益も5,695億円と収益性の低下傾向が確認されます。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "ドル円相場が162.01円と円安水準を維持していることや、日本の製造業PMIが54.8と拡大局面にあること、日銀短観の大企業製造業DIが22.0（前月比+5.0）へ上昇していることは輸出企業の同社にとって良好な外部環境です。",
+          "evidence": "macro.indices, macro.japan_pmi.manufacturing, macro.boj.tankan"
+        },
+        {
+          "point": "PBR 0.922倍、予想PER 8.707倍とバリュエーション面では割安感が強いものの、直近2週間以内において株価の持続的上昇を促すような重要開示や好材料となるニュースは確認されず、買いを急ぐ理由に乏しい状況です。",
+          "evidence": "fundamentals.valuation, disclosures, news"
+        }
+      ],
+      "cautions": [
+        "2026年8月4日の次回決算発表において、原材料高やコスト増に伴うさらなる減益リスクや通期見通しの下方修正リスクへの警戒が必要です。",
+        "2026年7月30日〜31日の日銀金融政策決定会合を前に、日本の10年債金利（2.866%）の動向やドル円相場の急激な巻き戻し（円高進行）による業績下振れリスクが存在します。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "「2026名古屋グランパス苫小牧キャンプSupported by トヨタ自動車北海道」サッカー教室【無料掲載】7/12苫小牧キャンプ9日目の様子（写真38枚） - targma.jp",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE43R2EyUDZkYWk1RXl1ZkVocDZXNV9JTEEwWlBmbExQWWRQUFpPdnRVbU1UMUQ2LTljY21qV0NZdkh0TVFVYXlPTzFtSW0yOTJpLWRabWNQdzhvSVFOa2IxRjdvZEVHdw?oc=5",
+        "published": "Sun, 12 Jul 2026 12:20:05 GMT",
+        "publisher": "targma.jp"
+      },
+      {
+        "title": "＜画像2 / 3＞トヨタ自動車がヴィッツの特別仕様車を発売 - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBETG5DUGVkYWdrbi1BU0JTNjZJNmRlRlZSQjViY2JsZ2NUVVZDbWU4VE9qbkNMS2hLMlFpMkNYUWNDWEtsWWwtSTF5NFh0MFJMVmtJYjNhMkxTeVp2RjBUWF82ckdlS3hu?oc=5",
+        "published": "Sun, 12 Jul 2026 10:30:11 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "【巨人】荒巻悠が決勝の逆転満塁弾「最高の結果」平山功太は復帰後初のフル出場で２安打…３軍トヨタ自動車戦 (スポーツ報知) - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNbFZHZFhXSnNhT0lzWkNKYWtzcU82ckJmTEtaYkRqTkQ2Yi1LQ3BhejRONF84ZmtfLVhQYlFkSk9XSFg1ZWZnb2hoN2ZXdE1RTXphVjRHOUFiSW1wTV9YdnNFNEZMUTFxUTExV0V1TWVhY2VWeG5uOTJKYmtRVTBDeDFOSFRXbGRhNEdrS1pR?oc=5",
+        "published": "Sun, 12 Jul 2026 06:32:35 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "「激アツやん」「普通にかっこよくて草」トヨタ『アクア』「GR SPORT」グレード追加がSNSで話題に - StartYourEngines",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE85OFNGUnZwcFoxRG1zS3JySUtCQXhlSllZSEk5bWhwai0zTGR2Q2tEYWxPUDRaNVl3M1QwUWVNdmRac0wyT1prUEZvR3JmZzlfbUs2cHozeUhhOXpvLUVGaDU5MA?oc=5",
+        "published": "Sun, 12 Jul 2026 07:02:09 GMT",
+        "publisher": "StartYourEngines"
+      },
+      {
+        "title": "「激アツやん」「普通にかっこよくて草」トヨタ『アクア』「GR SPORT」グレード追加がSNSで話題に 2枚目の写真・画像 - レスポンス（Response.jp）",
+        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQN21xV0dxbmlGb0xFOEloMlBLcGd2TWdsMUxkRzhfbHFFZXkyMnRnRlhSYzY3OVgzblE5UUtiNllIQUFwa28ycldRV09LTDBRYW1FZ2hYZ1B4OF9aQlZaRUEwUC1wZFN4WGE1TVVyS1FaS3I1SDNaUkEwMklKV01ueHAxZDIzUFRBMlNUMUtpTVdBOG1jYzZFbmFsT0xDTzNZODJWNGlfalFxdEIzQ2FHSnpNTjJaNUh6TkJWMk9IWTdqTzlPUm5Nd3VLWkZiUGM?oc=5",
+        "published": "Sun, 12 Jul 2026 06:00:04 GMT",
+        "publisher": "レスポンス（Response.jp）"
+      },
+      {
+        "title": "【巨人】荒巻悠が決勝の逆転満塁弾「最高の結果」平山功太は復帰後初のフル出場で２安打…３軍トヨタ自動車戦 - スポーツ報知",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFA1a2hLbDBSNXg4b3JkZHpBRVMwNW5hMzQ0bHdrOXgySFZucF9pTDltNG5pa0FKZ0Nmb0hRSDJkZGVVVE9VWFdKYTcxVjl1STNLV0l0WUdtUDZKUXhrLU9Xc0NR?oc=5",
+        "published": "Sun, 12 Jul 2026 06:32:00 GMT",
+        "publisher": "スポーツ報知"
+      },
+      {
+        "title": "【巨人】ドラ３山城京平が先発、実戦復帰から２戦連続安打中の平山功太は５番…３軍トヨタ自動車戦スタメン（スポーツ報知） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA0UHJmQm1idmNjMEd0dGFwbEhEUFduR2pjZHdsR3N1V0lpX3VDczMyNklITkJMT2MtNmdDSmpySllHcGNRZTVaWlQ2UEtYU0pwT1Jydnl5aTZoby1CM3pGTGRpRXZWS0RGVVVSUlpxRlJ6NDh1V3cyaUN1enR5WDA?oc=5",
+        "published": "Sun, 12 Jul 2026 01:49:49 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "【巨人】ドラ３山城京平が先発、実戦復帰から２戦連続安打中の平山功太は５番…３軍トヨタ自動車戦スタメン - ライブドアニュース",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE91MjNFN01yV3B5YmhZMnlqVXVGTTd1M0tRZmxvaVl5SnV3LUdkbW1mVmFOdmJYVDI1cDh4MUtwQS1rRm80VUMyM1Uwald1WmNqQkQ0RzA0TVNwTEx6ZEE?oc=5",
+        "published": "Sun, 12 Jul 2026 01:49:00 GMT",
+        "publisher": "ライブドアニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "役員人事に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572690.pdf",
+        "date": "2026-06-17 16:00:00"
+      },
+      {
+        "title": "関係会社株式売却益の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260615570435.pdf",
+        "date": "2026-06-15 15:30:00"
+      },
+      {
+        "title": "（開示事項の変更・訂正）「会社分割（簡易吸収分割）に関するお知らせ」の一部変更・訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552805.pdf",
+        "date": "2026-05-28 18:45:00"
+      },
+      {
+        "title": "会社分割（簡易吸収分割）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520542612.pdf",
+        "date": "2026-05-20 19:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260506517369.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "2026年3月期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260508519105.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260508519366.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果ならびに自己株式の取得終了および消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260428513263.pdf",
+        "date": "2026-04-28 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付け及び自己株式の取得に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260330592169.pdf",
+        "date": "2026-03-30 15:30:00"
+      }
+    ]
+  }
+}

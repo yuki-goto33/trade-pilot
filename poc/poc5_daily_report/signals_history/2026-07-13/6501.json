@@ -1,0 +1,217 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-07-13T07:57:34+09:00",
+  "price_as_of": "2026-07-10",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズの評価は好調（強度65）であるものの、テクニカル専門家が弱気（bearish）であり、かつ株価が25日移動平均線を下回る調整局面にあるため、押し目の確認が必要な段階と判断しました。",
+        "evidence": "fundamental_view.strength=65, technical_view.stance=bearish, reference.last_close=4700.0 vs reference.sma25=4712.6"
+      },
+      {
+        "reason": "直近の2026-07-08（5日前）に buy シグナルを発行した履歴があり、短期での連続エントリーを防ぐための再エントリー抑制ルールに基づき、現在は新規買いを行わず継続監視（ホールド）とします。",
+        "evidence": "reference.recent_buy.date=2026-07-08"
+      },
+      {
+        "reason": "市場レジームが下落トレンド（downtrend）にあり、マクロ的な地合いの悪化による個別株への連れ安リスクを警戒すべき局面です。",
+        "evidence": "reference.market_regime=downtrend, technical_view.points[2]"
+      }
+    ],
+    "risks": [
+      "2026年7月29日の第1四半期決算発表における内容次第での短期的なボラティリティ上昇リスク",
+      "2026年7月30日〜31日の日銀金融政策決定会合での金利・為替（円高方向への修正）の急変動に伴う業績への悪影響",
+      "実績に対してPERが26倍超と割安感が乏しく、高水準の期待値が先行していることによる株価調整リスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズの評価は好調（強度65）であるものの、テクニカル専門家が弱気（bearish）であり、かつ株価が25日移動平均線を下回る調整局面にあるため、押し目の確認が必要な段階と判断しました。\",\n   \"evidence\": \"fundamental_view.strength=65, technical_view.stance=bearish, reference.last_close=4700.0 vs reference.sma25=4712.6\"\n  },\n  {\n   \"reason\": \"直近の2026-07-08（5日前）に buy シグナルを発行した履歴があり、短期での連続エントリーを防ぐための再エントリー抑制ルールに基づき、現在は新規買いを行わず継続監視（ホールド）とします。\",\n   \"evidence\": \"reference.recent_buy.date=2026-07-08\"\n  },\n  {\n   \"reason\": \"市場レジームが下落トレンド（downtrend）にあり、マクロ的な地合いの悪化による個別株への連れ安リスクを警戒すべき局面です。\",\n   \"evidence\": \"reference.market_regime=downtrend, technical_view.points[2]\"\n  }\n ],\n \"risks\": [\n  \"2026年7月29日の第1四半期決算発表における内容次第での短期的なボラティリティ上昇リスク\",\n  \"2026年7月30日〜31日の日銀金融政策決定会合での金利・為替（円高方向への修正）の急変動に伴う業績への悪影響\",\n  \"実績に対してPERが26倍超と割安感が乏しく、高水準の期待値が先行していることによる株価調整リスク\"\n ]\n}\n",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "中期的な下落トレンドが継続する中で、直近3営業日も続落しており、市場全体の地合い悪化も重なって下押し圧力が強い状態にある。",
+      "points": [
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともにマイナスであり、テクニカル的に明確な中期下落トレンドの中に位置している。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-3.05, price_technical.trend_60d.relative_to_topix_60d_pct=-9.97"
+        },
+        {
+          "point": "直近3営業日連続で前日比マイナスを記録しており、終値が25日移動平均線を再び割り込むなど短期的な弱含みが鮮明である。",
+          "evidence": "price_technical.recent_5_days[2-4], price_technical.last_close=4700.0 vs price_technical.sma25=4712.6"
+        },
+        {
+          "point": "TOPIXが25日移動平均線を下回り、市場全体のレジームが「downtrend」と判定されているため、個別株へも売り圧力が波及しやすい。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.market_regime.topix_close_vs_sma25=below"
+        }
+      ],
+      "cautions": [
+        "MACDヒストグラムは32.45とプラス圏にあり、指標の形状自体は改善傾向を示しているため、急な下げ止まりには警戒が必要。",
+        "SMA5がSMA25を上回るゴールデンクロス状態にあるが、株価がこれらの線を下回ったまま推移すると「だまし」となる可能性が高い。",
+        "前夜のADRは-0.78%と軟調であり、寄り付きから売りが先行する可能性がある。"
+      ],
+      "key_levels": {
+        "support": 4422.0,
+        "resistance": 4796.6
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 65,
+      "summary": "2026年3月期の大幅増益を背景に、成長性と収益性が高水準で推移。製造業PMIや日銀短観などマクロ指標も追い風だが、決算発表と日銀会合を目前に控えたイベントリスクがあるため、上値は慎重に見極めるべき局面。",
+      "points": [
+        {
+          "point": "業績の拡大トレンドが顕著であり、収益性が大幅に向上している。2026年3月期の営業利益は前期比約23%増の1.2兆円に達し、ROEも13.3%と高い水準を維持している。",
+          "evidence": "fundamentals.earnings_trend.annual[0]"
+        },
+        {
+          "point": "継続的な自社株買いの実施により、株主還元と資本効率の改善に対する姿勢が明確である。",
+          "evidence": "disclosures[0] (2026-07-02: 自己株式の取得状況に関するお知らせ)"
+        },
+        {
+          "point": "事業環境を示すマクロ指標が極めて良好である。製造業PMIが54.8と拡大圏にあるほか、日銀短観の大企業製造業DIも前回比+5.0と改善しており、産業・インフラ需要の強さが示唆される。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.8, macro.boj.tankan.di.large_manufacturing.current_di=22.0"
+        },
+        {
+          "point": "DX関連の社会実装ニュースなど、実業面での進捗もポジティブ。7月15日から本格始動する「顔パス改札」などの具体的な技術展開が報道されている。",
+          "evidence": "news.headlines[8] (2026-07-12: 「顔パス改札」が7月15日から本格始動)"
+        }
+      ],
+      "cautions": [
+        "2026年7月29日の第1四半期決算発表が迫っており、内容次第で短期的ボラティリティが高まるリスクがある。",
+        "2026年7月30日から始まる日銀金融政策決定会合において、金利上昇や為替の円安修正（現在1ドル162円台）が進んだ場合、輸出企業の側面を持つ同社には逆風となる可能性がある。",
+        "バリュエーション面ではPERが26倍を超えており、過去水準と比較して割安感は乏しく、期待値が先行している側面がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-08",
+    "days_ago": 5,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "【日立製作所】日本の企業文化を変えた「選択と集中」の次に来るもの｜ビジネスパーソンのための占星術 - M＆A Online",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5uckR5SmlXaXp0cFB6Y3FEc0ZkenhVOFIxREVQOXNyZk5aQUYyc2plZDJQaENFbm54WnVzcDRVOXlvNG5ycnRDRFdUTGV0djNnN3Bpdko2bw?oc=5",
+        "published": "Sun, 12 Jul 2026 21:33:13 GMT",
+        "publisher": "M＆A Online"
+      },
+      {
+        "title": "＜日立製作所・日本製鉄鹿島＞9回、安打を放つ日本製鉄鹿島・生田目（撮影・五島 佑一郎） - スポニチ Sponichi Annex",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOQ0xDZmJIMW5HREZBUnJKVHc1ZmdPRzhCMFZmcW1zbHJfczQtbTRLM0haMlBkU3I2MkI0YjFOZ25MdlNBTXpJNVZ5ckE1X2lKSkNsc1lKWFpBOW8wcWc5OHVWamxESWkyYXZLS2xHdGFpbEVBUjBKZ1NJWFhDdDBsMEgtNWR6X3d4eFpGbGNXbw?oc=5",
+        "published": "Sun, 12 Jul 2026 20:33:04 GMT",
+        "publisher": "スポニチ Sponichi Annex"
+      },
+      {
+        "title": "【日立製作所】日本の企業文化を変えた「選択と集中」の次に来るもの｜ビジネスパーソンのための占星術 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE16SzBQNjZtR1RrWm9yaW9wRzZxdFdvWEZSajdxUDZ6QmtWdUVIS2RhU2tQQzg4amt6V3lVdnVEaVc2Tktpb3Z5c3hHWHJjWk9ZeEl4Tm1temFZbWZITXhFX0ZyU2hmcWVPenh5czM0WmdweGNhcGtENkNIMA?oc=5",
+        "published": "Sun, 12 Jul 2026 21:37:08 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "【日立製作所】日本の企業文化を変えた「選択と集中」の次に来るもの｜ビジネスパーソンのための占星術 - 千葉テレビ放送",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1nUGNPOUxsVEFHTGZoRERNXy1vUFl2VW5jYVhNd3NPVkVEVTVUMkNuVUZ2azZfRmVRLVV2Q00xdTdtaENjNzdnTHFDYWl3TmxZRHo3N0d4YzdzLXNMS3pB?oc=5",
+        "published": "Sun, 12 Jul 2026 21:32:36 GMT",
+        "publisher": "千葉テレビ放送"
+      },
+      {
+        "title": "日本製鉄鹿島が日立製作所を3－1で破る 都市対抗野球北関東大会第2代表決定戦 [写真特集1/10] - 毎日新聞",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNcnQyUGttUUZobHMtRUkzVGNUQkhibG5OUENsZ1RYODZnQXF0cE1SaWhWTENIYlV2eWc3dUc5X0p6NW15M2lxZUd1WHc5bHhYVGpkekdRRmdXQ3Q4REllWVdnSUc0R1doU25xUk5BVVdFa0s0Y19VY0dkZF9PTFpKTDZWSm1Oc3c?oc=5",
+        "published": "Sun, 12 Jul 2026 02:58:28 GMT",
+        "publisher": "毎日新聞"
+      },
+      {
+        "title": "日立製作所が2年連続の都市対抗出場に王手 中堅手・鵜沼魁斗が初回に超美技 都市対抗野球大会北関東大会 - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBJcjZwYnExaUdkTko4WGRmMUlDOVBMMDE4SEVUSGZvZ1dnV19CX2dXTmR5THJnTUF1OFJWSXNmcXRDVHRFbTJTdUlXR25zVDFhaHlFT2N3azB6ZmNhdlJlbE16RVRheUhwWUZwS2J6ejBHVHk3MjlkbVZES2VpQUE?oc=5",
+        "published": "Sun, 12 Jul 2026 03:22:00 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "＜日立製作所・日本製鉄鹿島＞胴上げされる日本製鉄鹿島・松田（撮影・五島 佑一郎） - スポニチ Sponichi Annex",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxObWpQbVVsWHFueGYwdVk0ckR1aGZ1dGdJY254UU55ZEg1UkE1azd2SVlNWEJJd1RCeVVtVDlveWRKbEFXbEFGdGE1OFczVkpaYUpOSXM5bGExQlYtanBaXzN4dFdPbnR6aWRUa3JmUXVsTnY4SWZ0d0h5bmpyamw5Q2ZhQUpQaXdKaWFnR0hETQ?oc=5",
+        "published": "Sun, 12 Jul 2026 20:33:04 GMT",
+        "publisher": "スポニチ Sponichi Annex"
+      },
+      {
+        "title": "日本NCP最終声明報告・決起集会 65歳以降の就業実現を！ - 選挙ドットコム",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4tbHllMnNic2JQZ1dYRUJ3eUptVjBYUzhuZTJoWjZuNzVKUEY2dnZYY3dsRHk4LTNVVVNtMk1YYVFWRk9uelNGczZ6dHBfcjBTOUlQZnFYaE5vd2VOOU1Z?oc=5",
+        "published": "Sun, 12 Jul 2026 17:07:25 GMT",
+        "publisher": "選挙ドットコム"
+      },
+      {
+        "title": "スマホもカードも一切不要！ 1日42万人が使う「顔パス改札」が7月15日から本格始動 - DXマガジン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE8zNnRfeGo2eC1NM2d4Sm5xS0R3TkM1dTYxY1IxX3B0NmpKWGlEcE1vZHo2OTZuczFvbm8yZTRjejh5V01rdlFvMkNLWUplcjZUTjVJTWlHaw?oc=5",
+        "published": "Sun, 12 Jul 2026 13:26:13 GMT",
+        "publisher": "DXマガジン"
+      },
+      {
+        "title": "日本製鉄鹿島がラスト1枠つかみ2年連続24度目の都市対抗出場　生田目忍が同点打含む4安打　北関東大会 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPZGVHbFpHVGY2MW9Wd0JHdjM4ci1XR2RnM1kxeVdtaFQzRERZQU1kMDFBbjVMUjhkeEV0c1dnMV8tcDdqcHA3dUZSZ184VFYwV2ZhVjFHOE1XNGMxM0VCTnhoWG14cUZiWFcyQy1ISTJjc2FTSjJhQ09wUFhNU092RmZFNnpFZHUtV2N1eEN30gGTAUFVX3lxTE9laGJtYnZMMFYxM0hTazczNlJSMW8tNmduMjVqcVFtMVY3MUlHUGpTZmE0QXZnT0xYTG9OTy1SRXVUaDFyeG5Qd3N6NE9hZERCQnRfeFlkMjk2akl1NjcybW9jRy1IYlFyZnJzV2JJanhnX1NpTDFBV2lmNG5iUDNPak50NDdaTlFNUnE3Y2lXMERWaw?oc=5",
+        "published": "Sun, 12 Jul 2026 05:36:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(モビリティ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566288.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(コネクティブインダストリーズ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566292.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(デジタルシステム＆サービス事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566294.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CFO Session)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566296.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559702.pdf",
+        "date": "2026-06-02 15:30:00"
+      },
+      {
+        "title": "剰余金の配当(期末配当)に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533826.pdf",
+        "date": "2026-05-14 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況及び取得終了に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260427511652.pdf",
+        "date": "2026-04-27 15:30:00"
+      }
+    ]
+  }
+}

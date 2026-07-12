@@ -1,0 +1,155 @@
+{
+  "code": "4063",
+  "name": "信越化学工業",
+  "generated_at": "2026-07-13T07:54:29+09:00",
+  "price_as_of": "2026-07-10",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 14,
+    "reasons": [
+      {
+        "reason": "直近（2026-07-08）に buy シグナルを発出しており、現在はその後の推移を継続監視すべき期間に該当する。",
+        "evidence": "reference.recent_buy.date=2026-07-08"
+      },
+      {
+        "reason": "ファンダメンタルズ評価が neutral (strength=60) であり、バイアスなしに第1四半期決算での業績底打ちを確認する必要がある。",
+        "evidence": "fundamental_view.stance=neutral, fundamental_view.strength=60"
+      },
+      {
+        "reason": "テクニカル面ではゴールデンクロスが成立し強気だが、市場全体が下落トレンドにあるため、単独でのモメンタム追随はリスクが高い。",
+        "evidence": "technical_view.stance=bullish, reference.market_regime=downtrend"
+      },
+      {
+        "reason": "前夜のADR上昇（+4.2%）は好材料だが、当日の寄り付き価格に織り込まれる可能性が高く、新規エントリーの優位性が低い。",
+        "evidence": "technical_view.cautions[1], us_overnight.adr.change_1d_pct=4.2"
+      }
+    ],
+    "risks": [
+      "2026年7月24日に予定されている第1四半期決算発表に伴うボラティリティ上昇リスク。",
+      "7月30-31日の日銀金融政策決定会合を受けた為替の急激な円高進行による収益圧迫。",
+      "市場全体（TOPIX）の下落レジーム継続による連れ安リスク。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 14,\n \"reasons\": [\n  {\n   \"reason\": \"直近（2026-07-08）に buy シグナルを発出しており、現在はその後の推移を継続監視すべき期間に該当する。\",\n   \"evidence\": \"reference.recent_buy.date=2026-07-08\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ評価が neutral (strength=60) であり、バイアスなしに第1四半期決算での業績底打ちを確認する必要がある。\",\n   \"evidence\": \"fundamental_view.stance=neutral, fundamental_view.strength=60\"\n  },\n  {\n   \"reason\": \"テクニカル面ではゴールデンクロスが成立し強気だが、市場全体が下落トレンドにあるため、単独でのモメンタム追随はリスクが高い。\",\n   \"evidence\": \"technical_view.stance=bullish, reference.market_regime=downtrend\"\n  },\n  {\n   \"reason\": \"前夜のADR上昇（+4.2%）は好材料だが、当日の寄り付き価格に織り込まれる可能性が高く、新規エントリーの優位性が低い。\",\n   \"evidence\": \"technical_view.cautions[1], us_overnight.adr.change_1d_pct=4.2\"\n  }\n ],\n \"risks\": [\n  \"2026年7月24日に予定されている第1四半期決算発表に伴うボラティリティ上昇リスク。\",\n  \"7月30-31日の日銀金融政策決定会合を受けた為替の急激な円高進行による収益圧迫。\",\n  \"市場全体（TOPIX）の下落レジーム継続による連れ安リスク。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "中期トレンドが堅調に推移する中、株価が25日移動平均線を上回り、短期線とのゴールデンクロスやMACDの好転など複数の買いシグナルが点灯しています。前夜の米国市場におけるADRの大幅上昇も追い風となり、短期的な上昇モメンタムが期待されます。",
+      "points": [
+        {
+          "point": "短期トレンドが好転し、株価（7320.0円）が5日移動平均線（7164.6円）および25日移動平均線（7139.32円）を上回る位置にあります。さらに5日線が25日線を上回るゴールデンクロスが成立しています。",
+          "evidence": "price_technical.last_close=7320.0, price_technical.sma5=7164.6, price_technical.sma25=7139.32, price_technical.sma5_vs_sma25=golden"
+        },
+        {
+          "point": "中期トレンドを示す60営業日騰落率は+9.88%とプラスを維持しており、対TOPIX相対騰落率でも+2.96%と市場平均をアウトパフォームしています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=9.88, price_technical.trend_60d.relative_to_topix_60d_pct=2.96"
+        },
+        {
+          "point": "モメンタム指標では、MACDがシグナルを上回り、ヒストグラムが26.2とプラスに拡大したことで反転の動きが確認できます。また前夜の米国ADRが4.2%上昇しており、好地合いを引き継ぐ可能性があります。",
+          "evidence": "price_technical.macd=-85.05, price_technical.macd_signal=-111.24, price_technical.macd_histogram=26.2, us_overnight.adr.change_1d_pct=4.2"
+        }
+      ],
+      "cautions": [
+        "TOPIXが25日線の下にあり、市場全体が「downtrend（下落レジーム）」と判定されているため、地合い悪化に伴う連れ安リスクには警戒が必要です。",
+        "前夜のADR上昇（+4.2%）は当日の寄り付き価格にすでに織り込まれる可能性が高く、寄り付き後の買い一巡後は利食い売りに押されるシナリオも想定されます。"
+      ],
+      "key_levels": {
+        "support": 7139.32,
+        "resistance": 7930.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "株主還元の強化（自己株TOB完了）や製造業PMIの改善、歴史的な円安環境はポジティブだが、直近通期決算での営業減益と2週間後に控える第1四半期決算を前に、業績の底打ちを確認する局面にある。",
+      "points": [
+        {
+          "point": "株主還元の進展。2026年6月18日に自己株式の公開買付け（TOB）結果を開示。ASR（一括取得型自己株式取得）を含め、積極的な資本効率の向上姿勢が示されている。",
+          "evidence": "disclosures.items[0], disclosures.items[4]"
+        },
+        {
+          "point": "マクロ環境の追い風。6月の製造業PMIが54.8と強い拡大を示しており、1ドル162円台の円安水準もグローバル売上比率の高い同社の収益下支え要因となる。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.8, macro.indices[2].close=162.01"
+        },
+        {
+          "point": "バリュエーションの期待感。実績PER28.9倍に対し予想PER22.2倍と、市場は今期の業績回復を織り込み始めているが、ROE10.7%と利益水準の維持が焦点となる。",
+          "evidence": "fundamentals.valuation.trailing_pe=28.986, fundamentals.valuation.forward_pe=22.2, fundamentals.valuation.return_on_equity=0.107"
+        }
+      ],
+      "cautions": [
+        "2026年7月24日に第1四半期決算発表を控えており、目先の利益確定や内容次第での株価変動リスクが高い。 (fundamentals.next_earnings_date)",
+        "2026年3月期通期決算では前年比で営業利益が14.4%減少しており、業績サイクルが明確に上向いたかを見極める必要がある。 (fundamentals.earnings_trend.annual)",
+        "7月30-31日の日銀金融政策決定会合が近く、為替の急激な巻き戻しや金利上昇がバリュエーションに与える影響。 (macro.boj.monetary_policy_meeting.next_meeting)"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-08",
+    "days_ago": 5,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [],
+    "disclosures": [
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573248.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260605563833.pdf",
+        "date": "2026-06-05 15:30:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541941.pdf",
+        "date": "2026-05-20 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541943.pdf",
+        "date": "2026-05-20 15:30:00"
+      },
+      {
+        "title": "一括取得型自己株式取得（Accelerated Share Repurchase）における事後調整完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541656.pdf",
+        "date": "2026-05-20 11:30:00"
+      },
+      {
+        "title": "2026年３月期決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260428512667.pdf",
+        "date": "2026-04-28 15:30:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260428512714.pdf",
+        "date": "2026-04-28 15:30:00"
+      },
+      {
+        "title": "役員の異動（社外取締役、社外監査役）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260428512723.pdf",
+        "date": "2026-04-28 15:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による取得結果および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260217563592.pdf",
+        "date": "2026-02-17 11:00:00"
+      },
+      {
+        "title": "一括取得型自己株式取得（ASR）による自己株式取得のための第三者割当による第26回新株予約権の発行条件の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260217563596.pdf",
+        "date": "2026-02-17 11:00:00"
+      }
+    ]
+  }
+}

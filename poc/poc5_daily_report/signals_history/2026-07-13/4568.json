@@ -1,0 +1,165 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-07-13T07:58:27+09:00",
+  "price_as_of": "2026-07-10",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の strength が 55 と低く、buy の必須条件（70以上）を満たさない。製品供給計画見直しに伴う減益など、目先のカタリストに欠ける状況である。",
+        "evidence": "fundamental_view.strength=55 / fundamental_view.points[0]"
+      },
+      {
+        "reason": "テクニカル面で短期的な反発の兆候は見られるが、60日騰落率がマイナスであり、中期的なトレンドは依然として弱気圏にある。",
+        "evidence": "technical_view.points[2]: change_60d_pct=-0.04"
+      },
+      {
+        "reason": "市場全体が下降レジーム（downtrend）にあり、個別株の材料だけでエントリーするには確信度が不足している。",
+        "evidence": "reference.market_regime=\"downtrend\""
+      }
+    ],
+    "risks": [
+      "2026年7月31日に控える第1四半期決算発表における進捗確認と市場の反応。",
+      "2026年7月30日〜31日の日銀金融政策決定会合に伴う為替相場の急変動。",
+      "市場全体の下降トレンド継続によるヘルスケアセクターへの売り波及。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 55,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 21,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ専門家の strength が 55 と低く、buy の必須条件（70以上）を満たさない。製品供給計画見直しに伴う減益など、目先のカタリストに欠ける状況である。\",\n      \"evidence\": \"fundamental_view.strength=55 / fundamental_view.points[0]\"\n    },\n    {\n      \"reason\": \"テクニカル面で短期的な反発の兆候は見られるが、60日騰落率がマイナスであり、中期的なトレンドは依然として弱気圏にある。\",\n      \"evidence\": \"technical_view.points[2]: change_60d_pct=-0.04\"\n    },\n    {\n      \"reason\": \"市場全体が下降レジーム（downtrend）にあり、個別株の材料だけでエントリーするには確信度が不足している。\",\n      \"evidence\": \"reference.market_regime=\\\"downtrend\\\"\"\n    }\n  ],\n  \"risks\": [\n    \"2026年7月31日に控える第1四半期決算発表における進捗確認と市場の反応。\",\n    \"2026年7月30日〜31日の日銀金融政策決定会合に伴う為替相場の急変動。\",\n    \"市場全体の下降トレンド継続によるヘルスケアセクターへの売り波及。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "MACDの好転や25日移動平均線の回復など短期的な反転の兆候は見られるものの、中期トレンドが依然として弱気であることや市場全体の地合いの悪化を考慮し、中立判断とする。",
+      "points": [
+        {
+          "point": "MACDがシグナルを上回りヒストグラムが拡大しており、短期的な反発モメンタムが継続している。",
+          "evidence": "price_technical.macd=42.42, price_technical.macd_signal=24.08, price_technical.macd_histogram=18.34"
+        },
+        {
+          "point": "株価が25日移動平均線を上回る水準で推移しており、5日線とのゴールデンクロスが形成されている。",
+          "evidence": "price_technical.last_close=2730.5, price_technical.sma25=2596.44, price_technical.sma5_vs_sma25=\"golden\""
+        },
+        {
+          "point": "60日騰落率および対TOPIX騰落率が共にマイナスであり、中期的なトレンドは依然として下落基調にある。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-0.04, price_technical.trend_60d.relative_to_topix_60d_pct=-6.95"
+        }
+      ],
+      "cautions": [
+        "TOPIXが25日線を下回り、市場全体が下降レジームにあるため、連れ安するリスクがある（macro.market_regime=\"downtrend\"）。",
+        "前夜の米ヘルスケアセクターETF（XLV）が下落しており、寄り付きからの売り圧力に注意が必要（us_overnight.sector_proxy.change_1d_pct=-0.82）。",
+        "直近の戻り高値である2,787.5円付近では、中期下落トレンド継続を意識した戻り売りが出やすい（price_technical.period_high=2787.5）。"
+      ],
+      "key_levels": {
+        "support": 2596.44,
+        "resistance": 2787.5
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "直近の業績が製品供給計画の見直しに伴う損失計上で減益着地となっており、新中期経営計画の初年度として1Q決算の進捗を確認したい局面です。配当利回り3.66%やROE15.8%といった資本効率の高さは下値の支えとなりますが、目先で株価を牽引する新規の好材料に欠けています。",
+      "points": [
+        {
+          "point": "2026年3月期は増収を確保したものの、製品供給計画の見直しに伴う損失発生により営業・純利益ともに減益となり、収益性に課題を残しています。",
+          "evidence": "fundamentals.earnings_trend.annual, disclosures(2026-05-08)"
+        },
+        {
+          "point": "ROE 15.8%という高い資本効率に加え、配当利回りが3.66%と一定の水準にあり、バリュエーション面では下値の硬さが期待されます。",
+          "evidence": "fundamentals.valuation.return_on_equity=0.158, fundamentals.valuation.dividend_yield_percent=3.66"
+        },
+        {
+          "point": "1ドル162円台の円安水準はグローバルに展開する製薬大手にとって収益押し上げ要因ですが、市場全体が下降トレンドにありマクロ環境の追い風は限定的です。",
+          "evidence": "macro.indices.JPY=X, macro.market_regime.market_regime=downtrend"
+        }
+      ],
+      "cautions": [
+        "2026年7月31日に第1四半期決算発表を控えており、通期計画に対する進捗率や損失の影響度合いが注目されます。",
+        "日銀の金融政策決定会合（7月30日〜31日）が近く、為替市場の変動が業績予想に与える影響に注意が必要です。",
+        "製造業PMIは54.8と拡大圏にあるものの、中小企業の仕入価格DIと販売価格DIの差が大きく、コスト負担の転嫁状況が懸念材料です。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "製薬業界「役員報酬1億円以上」25年度は20社50人…前年度から2人減、最高は武田・ウェバー氏の23億円 - Answers（アンサーズ）",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE50dUJxZFV5UktsR2pKeUZucEtJNWxDN1VmNFQ4dXV3QTBBTzZMVVp3NkNMUHluRkdyS3FOc0E4dWVYLUx2TFB4NVZPaDd5OFV1Zk84dHppYw?oc=5",
+        "published": "Sun, 12 Jul 2026 21:05:13 GMT",
+        "publisher": "Answers（アンサーズ）"
+      },
+      {
+        "title": "画像1 / 20＞石原さとみが「みんなの生理痛プロジェクト」説明会に登壇！「自身の身体や生理痛の原因を知ることが大切」 - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBZVmFEVnkxeVJ2Rzc4UURvTllteTM0aFYwQlZvZ0MyMkJablBNN25PMXRubFRrN2xOYWxta2NWUHJBSFE2ZTFWdGVxY3NDbmNZRkJHbTVIRkZlT2dvWFlPMDZmV3RvRnR3R3RnVXlR?oc=5",
+        "published": "Sat, 11 Jul 2026 22:58:46 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "国内製薬のパイプライン、がん領域が6件減も50％超を維持 - 日経バイオテクONLINE",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFAyekZ3MUs3UkFEUjViUUxKTFlLRkFBUDlTVTVjc0c3TEM0dVpGTldSOVU5S3VtWXV6Z29YeHhsaHkzVk5jTExhWVh4c2c2N2g5STR0aG05M01FM1hfeEtxQThyMVJGOVlkRTlkNWI2VQ?oc=5",
+        "published": "Sun, 12 Jul 2026 21:54:50 GMT",
+        "publisher": "日経バイオテクONLINE"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584479.pdf",
+        "date": "2026-06-30 16:30:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260620575199.pdf",
+        "date": "2026-06-22 15:30:00"
+      },
+      {
+        "title": "財務上の特約が付された金銭消費貸借契約の締結に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617573095.pdf",
+        "date": "2026-06-17 19:00:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬等の内容の一部改定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515539092.pdf",
+        "date": "2026-05-18 13:00:00"
+      },
+      {
+        "title": "（訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260513530596.pdf",
+        "date": "2026-05-13 17:30:00"
+      },
+      {
+        "title": "自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511521821.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522113.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "決算補足資料（2025年度決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522160.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "2025年度決算および第6期（2026-2030年度）中期経営計画　説明会",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522186.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "製品供給計画の見直しに伴う損失の発生および 2026年3月期通期連結業績予想の修正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260415504962.pdf",
+        "date": "2026-05-08 13:00:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-07-13T07:51:43+09:00",
+  "price_as_of": "2026-07-10",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家は黒字化やOpenAIへの出資完了を背景に強気（strength=70）ですが、市場レジームがdowntrend（下降トレンド）のため、buyの実行基準（strength 75以上）に達せずholdとします。",
+        "evidence": "fundamental_view.stance=bullish (strength=70) / reference.market_regime=\"downtrend\""
+      },
+      {
+        "reason": "テクニカル面では直近10%超の大幅反発が見られたものの、依然として5日線・25日線のデッドクロス状態が継続しており、25日線（6,492.44円）が上値抵抗線として機能する懸念があります。",
+        "evidence": "technical_view.points[3] / technical_view.cautions[2]"
+      },
+      {
+        "reason": "セブン＆アイへの大型出資検討などの思惑はあるものの、まだ具体化していないため、より確実なカタリストの発現やテクニカルな底打ちの確認を待つ局面と判断しました。",
+        "evidence": "fundamental_view.points[1]"
+      }
+    ],
+    "risks": [
+      "次回決算発表（2026-08-06）および日銀金融政策決定会合（2026-07-30〜31）が想定保有期間内に含まれており、ボラティリティ急増のリスクがあります。",
+      "TOPIX 25日線を下回るdowntrendレジームにあり、地合い悪化による全体の連れ安リスクが依然として高い状態です。",
+      "日本の10年国債金利が高水準で推移しており、積極的な投資や調達活動を行う同社の金利コスト増につながる懸念があります。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ専門家は黒字化やOpenAIへの出資完了を背景に強気（strength=70）ですが、市場レジームがdowntrend（下降トレンド）のため、buyの実行基準（strength 75以上）に達せずholdとします。\",\n      \"evidence\": \"fundamental_view.stance=bullish (strength=70) / reference.market_regime=\\\"downtrend\\\"\"\n    },\n    {\n      \"reason\": \"テクニカル面では直近10%超の大幅反発が見られたものの、依然として5日線・25日線のデッドクロス状態が継続しており、25日線（6,492.44円）が上値抵抗線として機能する懸念があります。\",\n      \"evidence\": \"technical_view.points[3] / technical_view.cautions[2]\"\n    },\n    {\n      \"reason\": \"セブン＆アイへの大型出資検討などの思惑はあるものの、まだ具体化していないため、より確実なカタリストの発現やテクニカルな底打ちの確認を待つ局面と判断しました。\",\n      \"evidence\": \"fundamental_view.points[1]\"\n    }\n  ],\n  \"risks\": [\n    \"次回決算発表（2026-08-06）および日銀金融政策決定会合（2026-07-30〜31）が想定保有期間内に含まれており、ボラティリティ急増のリスクがあります。\",\n    \"TOPIX 25日線を下回るdowntrendレジームにあり、地合い悪化による全体の連れ安リスクが依然として高い状態です。\",\n    \"日本の10年国債金利が高水準で推移しており、積極的な投資や調達活動を行う同社の金利コスト増につながる懸念があります。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "大商いを伴う直近の大幅反発とMACDの改善から底打ちの兆しが見られるものの、移動平均線は依然デッドクロス状態であり、25日線の下に位置しているため、まずは戻り売りの圧力をこなせるかを見極める中立局面と判断します。",
+      "points": [
+        {
+          "point": "直近営業日（7月10日）に出来高が72,262,000株に急増し、終値ベースで10.65%の大幅な反発を見せており、目先の下げ止まり感が出ています。",
+          "evidence": "price_technical.recent_5_days"
+        },
+        {
+          "point": "MACDヒストグラムが30.49とプラスに転じており、MACD（-435.24）がシグナル（-465.73）を上回る形でゴールデンクロスを形成し、底打ちのサインを示しています。",
+          "evidence": "price_technical.macd, price_technical.macd_histogram"
+        },
+        {
+          "point": "60営業日騰落率が+69.23%、対TOPIX相対騰落率が+62.32%と非常に高く、中期的な上昇トレンドの基調自体は維持されています。",
+          "evidence": "price_technical.trend_60d"
+        },
+        {
+          "point": "一方で、短期的なトレンドを示す5日線と25日線はデッドクロス状態にあり、終値（6370.0円）も依然として25日移動平均線（6492.44円）を下回っています。",
+          "evidence": "price_technical.sma5_vs_sma25, price_technical.sma25"
+        }
+      ],
+      "cautions": [
+        "全体市場がTOPIX 25日線を下回るdowntrendレジームにあり、地合い悪化による連れ安リスクが残ります（macro.market_regime）。",
+        "前夜NYでのADR（SFTBY）は+4.06%と上昇していますが、これが週明け寄り付きで買い先行として織り込まれた後、利食い売りに押される「寄り天井」となる懸念があります（us_overnight.adr）。",
+        "25日移動平均線（6492.44円）付近は強力なレジスタンスとして意識されやすく、明確に上抜けるまでは戻り売り圧力が勝る可能性があります（price_technical.sma25）。"
+      ],
+      "key_levels": {
+        "support": 5757.0,
+        "resistance": 6492.44
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "2025年3月期の通期黒字化に加え、直近でのOpenAIへの追加出資実行やセブン＆アイへの大型出資検討報道など、投資活動の具体化がカタリストとして意識されます。また、堅調な米国株式市場も保有資産の評価改善において追い風です。",
+      "points": [
+        {
+          "point": "AI分野の核となるOpenAIへの追加出資（セカンドトランシェ）実行が正式に完了しており、投資戦略の具体的な進捗が確認できます。",
+          "evidence": "disclosures.items[0]（2026-07-01 16:00:00 OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ）"
+        },
+        {
+          "point": "ソフトバンク・ペイペイ連合によるセブン＆アイへの大型出資検討が報じられており、国内決済や流通エコシステムにおけるシナジー期待が思惑を呼ぶ可能性があります。",
+          "evidence": "news.headlines[1]（ソフトバンク・ペイペイ連合、セブン＆アイに大型出資検討 - 東京報道新聞）、news.headlines[3]（セブン、苦肉の資本提携 ソフトバンクの出資 協議 成長戦略示せるか - 日本経済新聞）"
+        },
+        {
+          "point": "2025年3月期は大幅な通期黒字転換（純利益1,153億円）を達成しており、さらに主要投資先が位置する米国の株式市場（S&P500）が堅調に推移していることも資産評価額の観点からポジティブです。",
+          "evidence": "fundamentals.earnings_trend.annual[0]（net_income_oku_jpy=11533）、macro.indices[3]（S&P500 close=7575.39）"
+        }
+      ],
+      "cautions": [
+        "次回決算発表（2026-08-06）および日銀金融政策決定会合（2026-07-30〜31）が控えており、短期的なボラティリティ上昇や金利政策の変更に伴うイベントリスクが存在します（fundamentals.next_earnings_date、macro.boj.monetary_policy_meeting.next_meeting）。",
+        "日本の10年国債金利が2.866%と高い水準にあり、ハイブリッド社債等の発行など資金調達を活発に行う同社において、金利上昇に伴う将来的な財務コスト増が懸念されます（macro.rates.jgb_10y_percent.value、disclosures.items[3]、disclosures.items[7]）。",
+        "足元の日本市場（TOPIX連動ETF）が機械判定でdowntrend（下降トレンド）に分類されており、相場全体の地合い悪化に連れ安するリスクがあります（macro.market_regime.market_regime）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "285AキオクシアHD・6740ジャパンディスプレイ・9984ソフトバンク・3350メタプラネット・5803フジクラ・6480日本トムソン・4392FIGなど前回の続き株価解説。(2026/5/12) Rand (voVVVthbfL) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBVcHpfLTVSWVB0Z1RBNDEzNF9PZnN1czN2cjNpVnNfR0JWQS1ZUGktZHlpOTlSWk4zYV9sRUZld2xKTzZnb0NNanZUV0NvR21XMXJLazRYeWdqcUVWaDNyUg?oc=5",
+        "published": "Sun, 12 Jul 2026 20:07:28 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "ソフトバンク・ペイペイ連合、セブン＆アイに大型出資検討 - 東京報道新聞",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1sQ21DOGFyY0paTzFIdWJMM2VPQlItQXd1UXJvTFVRWU9QV2N6dzhvQ2d6QlJ6TU56c2hob0NQYzJyZFpXRVVreWtYMDBVUFkySWFJ?oc=5",
+        "published": "Sun, 12 Jul 2026 02:01:42 GMT",
+        "publisher": "東京報道新聞"
+      },
+      {
+        "title": "「オタク文化」から「日常文化」へ 権利の壁を越えられるか 日本コンテンツ世界展開の最前線 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5ubVhmTXVMbThKR2NoLWdpbmRxY281NmU2NGdfaUFWTmREbUhsSU5GVHJ4b29kdjRCT2l3U0NVbERmbzRyVkQtM1R4QV9LWW4weXU1VVYyZEdLTmpkNmxhWlN0T3NpVlRUR0UzRFNjQVlJSnYzN3pDUEJ1aw?oc=5",
+        "published": "Sun, 12 Jul 2026 07:01:00 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "セブン、苦肉の資本提携 ソフトバンクの出資 協議 成長戦略示せるか - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOeDFiUHdBQ3R4S2xhb0hOXzFGSzFIc01SbERFVkhoSUQwUVA1bGs4WHBwS1NGTlJKQ0h2MldBNVlGNjFBX3lwZGpLRmZ3c2k5dVlzeWg4Q3VNazUyMEVDdVM1LXhqOU00MW5qNW5fUXRJYVBRa2Jvd2hycktFTEc3Rm1pY0g1T3FrVE1ybFVEM2ZRZmV0WWpCNGZKUjAxZzVBRXg3QnJ0QzM?oc=5",
+        "published": "Sat, 11 Jul 2026 22:54:15 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "ふたりで話がしたい… 孫正義の「年俸5000万の側近」が突如辞めた理由 - クーリエ・ジャポン",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1qR0dDZ2VRVUtHYnRMNWhDRERfVHVjaEg5YzNVYWNMX19XZUpkUm1DcmlhemhUbEJYdGJaUFFINXQtcTdvZW1WUlpjdUdMSmNSdkZV?oc=5",
+        "published": "Sun, 12 Jul 2026 21:35:34 GMT",
+        "publisher": "クーリエ・ジャポン"
+      },
+      {
+        "title": "【杉村富生の短期相場観測】 ─夏相場のターゲットになる特選銘柄群！(株探ニュース) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPRWZRQUU3cnpCNGpMZU5aYjMzanRuaDdOSThwWFNVa1JYZGpRY3E2N2xWOTVvMF81MzBBdzFuYUdnS1gzVGdTREJRVy1FMmFKb3J4Ykxqak1sMTU0X3dhRTJGdDBhYnA5cUtJNGNPZjJOYm0zM1VCUXpiVE45cGtoWUpDZXhYYzQ?oc=5",
+        "published": "Sun, 12 Jul 2026 00:15:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "政府、同志国とＡＩ分野で協力加速…先行するアメリカ・中国に依存しない供給網構築と新市場獲得が狙い - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNMVAzOWV4NHlRcGkyYzRYN2xteGR6dlRRdkdOR0Y2ZlZFNmp1ZENnY2pvY0lwQlJRWFYzc0c3T2JVSlB4ZzFWY1VKb3ZQM1Z1NngyRGZaZm9XN0ZxVmdYM0tWZFdMeW1XZ0RuaTdoYkt0elJCYTJDUl94LVdrR1lyMmJSMlFydXpQYmFySdIBjAFBVV95cUxNMVAzOWV4NHlRcGkyYzRYN2xteGR6dlRRdkdOR0Y2ZlZFNmp1ZENnY2pvY0lwQlJRWFYzc0c3T2JVSlB4ZzFWY1VKb3ZQM1Z1NngyRGZaZm9XN0ZxVmdYM0tWZFdMeW1XZ0RuaTdoYkt0elJCYTJDUl94LVdrR1lyMmJSMlFydXpQYmFySQ?oc=5",
+        "published": "Sun, 12 Jul 2026 08:01:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260701586249.pdf",
+        "date": "2026-07-01 16:00:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577089.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "2021年発行米ドル建普通社債の期限前償還完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566742.pdf",
+        "date": "2026-06-10 11:30:00"
+      },
+      {
+        "title": "国内ハイブリッド社債（利払繰延条項付）の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260605563850.pdf",
+        "date": "2026-06-05 10:30:00"
+      },
+      {
+        "title": "当社の子会社によるT&amp;Dフィナンシャル生命保険株式会社の株式の取得（子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562772.pdf",
+        "date": "2026-06-04 16:00:00"
+      },
+      {
+        "title": "2021年発行米ドル建普通社債の期限前償還に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528551943.pdf",
+        "date": "2026-05-28 15:30:00"
+      },
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得に関するタイ関係当局の許認可等の取得状況および今後の見通しに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260527550260.pdf",
+        "date": "2026-05-27 15:30:00"
+      },
+      {
+        "title": "国内ハイブリッド社債（利払繰延条項付）の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260525545847.pdf",
+        "date": "2026-05-25 10:00:00"
+      },
+      {
+        "title": "（訂正・数値データ訂正）「2026年３月期 決算短信〔ＩＦＲＳ〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538975.pdf",
+        "date": "2026-05-15 18:00:00"
+      },
+      {
+        "title": "2026年３月期 決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507517661.pdf",
+        "date": "2026-05-13 15:30:00"
+      }
+    ]
+  }
+}

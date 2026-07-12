@@ -1,0 +1,186 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-07-13T07:56:16+09:00",
+  "price_as_of": "2026-07-10",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "直近 2026-07-04 に buy シグナルを発出しており、現在はその継続監視期間中であるため、ルールに基づき新規エントリーを抑制し hold とする。",
+        "evidence": "reference.recent_buy.date=2026-07-04"
+      },
+      {
+        "reason": "ファンダメンタルズ面で減益トレンドが継続しており、PER 20倍超と商社セクター内で割安感が乏しいため、積極的な買い増し根拠に欠ける。",
+        "evidence": "fundamental_view.points[0]: 15.8%の減益計画, fundamental_view.points[1]: 予想PER 20.79倍"
+      },
+      {
+        "reason": "テクニカル面では中期下落トレンドが極めて強く、対TOPIXでも大幅な劣後を示しており、下げ止まりの確認が必要な局面である。",
+        "evidence": "technical_view.stance=bearish (strength=80), technical_view.points[0]: 相対騰落率 -23.33%"
+      },
+      {
+        "reason": "市場全体が downtrend レジームにあり、個別銘柄の材料だけで反発を狙うには地合いの逆風が強すぎる。",
+        "evidence": "reference.market_regime=downtrend"
+      }
+    ],
+    "risks": [
+      "2026年8月3日に予定されている第1四半期決算発表における業績進捗の遅れ",
+      "2026年7月30-31日の日銀金融政策決定会合に伴う金利・為替のボラティリティ上昇",
+      "テクニカル的な支持線である 4286.0円を割り込んだ場合の下落加速",
+      "市場全体の調整局面継続による資金流出リスク"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 55,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 21,\n  \"reasons\": [\n    {\n      \"reason\": \"直近 2026-07-04 に buy シグナルを発出しており、現在はその継続監視期間中であるため、ルールに基づき新規エントリーを抑制し hold とする。\",\n      \"evidence\": \"reference.recent_buy.date=2026-07-04\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズ面で減益トレンドが継続しており、PER 20倍超と商社セクター内で割安感が乏しいため、積極的な買い増し根拠に欠ける。\",\n      \"evidence\": \"fundamental_view.points[0]: 15.8%の減益計画, fundamental_view.points[1]: 予想PER 20.79倍\"\n    },\n    {\n      \"reason\": \"テクニカル面では中期下落トレンドが極めて強く、対TOPIXでも大幅な劣後を示しており、下げ止まりの確認が必要な局面である。\",\n      \"evidence\": \"technical_view.stance=bearish (strength=80), technical_view.points[0]: 相対騰落率 -23.33%\"\n    },\n    {\n      \"reason\": \"市場全体が downtrend レジームにあり、個別銘柄の材料だけで反発を狙うには地合いの逆風が強すぎる。\",\n      \"evidence\": \"reference.market_regime=downtrend\"\n    }\n  ],\n  \"risks\": [\n    \"2026年8月3日に予定されている第1四半期決算発表における業績進捗の遅れ\",\n    \"2026年7月30-31日の日銀金融政策決定会合に伴う金利・為替のボラティリティ上昇\",\n    \"テクニカル的な支持線である 4286.0円を割り込んだ場合の下落加速\",\n    \"市場全体の調整局面継続による資金流出リスク\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 80,
+      "summary": "中期的に対TOPIXで大幅な劣後を示す強い下落トレンドの中にあり、移動平均線のデッドクロスや市場全体の弱気レジームが重石となっている。前夜ADRの反発はあるものの、主要な抵抗線を回復するまでは弱気の見通しを維持する。",
+      "points": [
+        {
+          "point": "60営業日騰落率が-16.42%、対TOPIX相対騰落率が-23.33%と共に大幅なマイナスであり、中期的な下落トレンドが極めて明白である。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-16.42, price_technical.trend_60d.relative_to_topix_60d_pct=-23.33"
+        },
+        {
+          "point": "5日線が25日線を下回るデッドクロス状態が継続しており、株価は25日線（4534.2円）から下方に乖離している。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.last_close=4409.0, price_technical.sma25=4534.2"
+        },
+        {
+          "point": "市場全体のレジームがdowntrend（下降局面）と判定されており、テクニカル的な逆風が強い環境にある。",
+          "evidence": "macro.market_regime.market_regime=downtrend"
+        },
+        {
+          "point": "直近5営業日中4日で前日比マイナスとなっており、短期的なモメンタムも依然として弱い。",
+          "evidence": "price_technical.recent_5_days"
+        }
+      ],
+      "cautions": [
+        "前夜のADRが+2.2%と上昇しており、寄り付き時に短期的買い戻しが発生し、窓を開けて上昇して始まる可能性がある。",
+        "MACDヒストグラムが11.09と改善傾向（ゴールデンクロス接近）を示しており、下げ止まりの予兆となるか注視が必要。",
+        "RSI14が35.9と「売られすぎ」の目安とされる30に近づいており、自律反発が発生しやすい価格帯にある。"
+      ],
+      "key_levels": {
+        "support": 4286.0,
+        "resistance": 4534.2
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "純利益が3期連続の減少傾向にある中、PER20倍超と商社セクターとしては評価が進んだ水準にあり、積極的な買い材料に乏しい。次回決算と日銀会合を控え、様子見姿勢が妥当と判断します。",
+      "points": [
+        {
+          "point": "2026年3月期の純利益は8,005億円と前期比約15.8%の減益計画であり、2024年3月期をピークとした減益トレンドが継続している。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "予想PER 20.79倍、PBR 1.71倍は、従来の総合商社株に期待される低バリュエーション水準を上回っており、割安感を背景とした買いが入りにくい。",
+          "evidence": "fundamentals.valuation"
+        },
+        {
+          "point": "2026年7月12日のニュースでインド市場への戦略や新規物件着工が報じられているが、直近の減益トレンドを反転させるほどの具体的な利益貢献規模は示されていない。",
+          "evidence": "news.headlines[0], news.headlines[2]"
+        }
+      ],
+      "cautions": [
+        "2026年8月3日に控える第1四半期決算発表（fundamentals.next_earnings_date）",
+        "7月30-31日の日銀金融政策決定会合に伴う金利上昇および為替変動リスク（macro.boj.monetary_policy_meeting）",
+        "TOPIXが25日移動平均線を下回り、市場全体が調整局面（downtrend）にあること（macro.market_regime）"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-04",
+    "days_ago": 9,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "勝者はスズキだけ！“鬼門”インド自動車市場に挑む三菱商事と三井物産、メーカーとは異なる「勝ち筋」とは？ - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBVNEc5MU9ET3NwLVVKczY1WmpZUUgyano0Wmdla2N1QzIxUXpYQkhXa1d5QW04WWxsdENDYVRjbVd2SEFqM05pcEZfNjXSAU9BVV95cUxPWEotMm5LWnV2RWxCWkhLZDF5NmxITWI2N3RpYmVPQ09XNm5lcUEtVkk2Wk9TSjhMd2lRSUlsaE1JVnd0eVctY0NEQUVUV2tB?oc=5",
+        "published": "Sun, 12 Jul 2026 19:30:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "日鉄エンジで着工/三菱商事都市開発のアイパーク神戸 - 建設通信新聞Digital",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1na2sxNERncVVkSVpxMTlBRXJ0YmVZWkQ2clZmbTlYSV9vVlFnN0Q3UW10R3JhbTR5Z0NkM2JsSFZ2RXJvQXloQ055NkkxdUluY1FiSTFGNUg?oc=5",
+        "published": "Sun, 12 Jul 2026 20:30:32 GMT",
+        "publisher": "建設通信新聞Digital"
+      },
+      {
+        "title": "三菱商事系など、アイパーク神戸着工 ２７年秋竣工 - 化学工業日報 電子版",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9OTDRocG12Z3F6MlBzdHA2aDMxVFlJekY5TG5iZlNLMXlYYTltYS1iNjllOGRqNmtITkFBcTRqVTlwb19XUjBhNE12UkYteXh4WnJn?oc=5",
+        "published": "Sun, 12 Jul 2026 20:05:28 GMT",
+        "publisher": "化学工業日報 電子版"
+      },
+      {
+        "title": "就活人気復活「5大商社」 慶應大卒「若手社員」が語る“商社ライフ”のリアル - 新潮QUE",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBGZFV4RmhVSUVrdkt6R2M3TUVrUEtYb0ZJX2Rjc2p4Szc4NElWNVF0dkNjbmNOWGl2QzFoLWM2WlZ5NHloSDFEOFdSYlVobHFI?oc=5",
+        "published": "Sun, 12 Jul 2026 21:02:00 GMT",
+        "publisher": "新潮QUE"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "子会社間の合併及び特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552595.pdf",
+        "date": "2026-05-29 09:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C2プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539898.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C3プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539905.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C4プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539910.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C5プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539918.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C6プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539939.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515679.pdf",
+        "date": "2026-05-01 14:00:00"
+      },
+      {
+        "title": "通期個別業績と前期実績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515675.pdf",
+        "date": "2026-05-01 14:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260416505643.pdf",
+        "date": "2026-04-17 14:00:00"
+      },
+      {
+        "title": "（訂正）「自己株式の取得結果および取得終了並びに消却株式数に関するお知らせ」 の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260325589148.pdf",
+        "date": "2026-03-25 17:20:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "code": "285A",
+  "name": "キオクシアホールディングス",
+  "generated_at": "2026-07-13T07:59:06+09:00",
+  "price_as_of": "2026-07-10",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズは業績V字回復やADR上場準備など非常に強力（Strength 75）ですが、テクニカル面で下落トレンドが鮮明であり、統合判断ルール（テクニカルが bearish の場合は hold）に基づき見送ります。",
+        "evidence": "fundamental_view.strength=75 / technical_view.stance=\"bearish\""
+      },
+      {
+        "reason": "SMA5とSMA25のデッドクロスに加え、MACDのマイナス圏拡大が下落モメンタムの強さを示しており、底打ちが確認できていません。",
+        "evidence": "technical_view.points[0]: SMA5がSMA25を大きく下回るデッドクロス / technical_view.points[1]: MACDヒストグラムのマイナス幅拡大"
+      },
+      {
+        "reason": "市場全体が downtrend レジームにあり、地合いの悪化が個別銘柄の好材料を打ち消すリスクが高い局面です。",
+        "evidence": "reference.market_regime=\"downtrend\""
+      }
+    ],
+    "risks": [
+      "2026年7月31日の次回決算発表および日銀金融政策決定会合に伴う極めて高いボラティリティリスク",
+      "PBR 30倍超という過熱感のあるバリュエーションによる、期待値に届かない場合の急落リスク",
+      "信用買い残の増加による、リバウンド局面での戻り売り圧力（需給悪化）"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 21,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズは業績V字回復やADR上場準備など非常に強力（Strength 75）ですが、テクニカル面で下落トレンドが鮮明であり、統合判断ルール（テクニカルが bearish の場合は hold）に基づき見送ります。\",\n      \"evidence\": \"fundamental_view.strength=75 / technical_view.stance=\\\"bearish\\\"\"\n    },\n    {\n      \"reason\": \"SMA5とSMA25のデッドクロスに加え、MACDのマイナス圏拡大が下落モメンタムの強さを示しており、底打ちが確認できていません。\",\n      \"evidence\": \"technical_view.points[0]: SMA5がSMA25を大きく下回るデッドクロス / technical_view.points[1]: MACDヒストグラムのマイナス幅拡大\"\n    },\n    {\n      \"reason\": \"市場全体が downtrend レジームにあり、地合いの悪化が個別銘柄の好材料を打ち消すリスクが高い局面です。\",\n      \"evidence\": \"reference.market_regime=\\\"downtrend\\\"\"\n    }\n  ],\n  \"risks\": [\n    \"2026年7月31日の次回決算発表および日銀金融政策決定会合に伴う極めて高いボラティリティリスク\",\n    \"PBR 30倍超という過熱感のあるバリュエーションによる、期待値に届かない場合の急落リスク\",\n    \"信用買い残の増加による、リバウンド局面での戻り売り圧力（需給悪化）\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "SMA5/25のデッドクロスおよびMACDのマイナス圏拡大により、短期的な下落トレンドが鮮明です。市場全体の地合いも悪化しており、直近のリバウンドも自律反発の域を出ておらず、下値模索の展開を警戒します。",
+      "points": [
+        {
+          "point": "SMA5がSMA25を大きく下回るデッドクロス状態にあり、株価も25日移動平均線から大幅に乖離した下方位置で推移しています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\", price_technical.last_close=77000.0, price_technical.sma25=86346.4"
+        },
+        {
+          "point": "MACDがシグナルを大きく下回り、ヒストグラムのマイナス幅が拡大傾向にあるため、下落モメンタムが依然として強いことを示唆しています。",
+          "evidence": "price_technical.macd=-1602.84, price_technical.macd_histogram=-2499.56"
+        },
+        {
+          "point": "TOPIXが25日線を下回り、5日騰落率もマイナスの「downtrend」レジームにあるため、市場全体のセンチメントが重荷となっています。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\", macro.market_regime.topix_close_vs_sma25=\"below\""
+        }
+      ],
+      "cautions": [
+        "RSI14が51.3と中立圏にあり、売られすぎ指標からの反発シグナルが出ていないため、底打ちの確認には時間を要する可能性があります。",
+        "前夜の米国市場で半導体ETF(SMH)が上昇しており、寄り付きでの買い戻しが期待されますが、25日線を回復しない限り戻り売りに押されるリスクがあります。"
+      ],
+      "key_levels": {
+        "support": 67190.0,
+        "resistance": 86346.4
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "大幅な業績回復と米国預託証券（ADR）の上場準備開始という強力な材料に加え、競合のストライキ報道などの外部環境の追い風を背景に、一段の成長が期待されます。一方でバリュエーションは過熱気味であり、月内の日銀会合と決算発表を控えたイベントリスクには注意が必要です。",
+      "points": [
+        {
+          "point": "V字回復を遂げた強力な業績トレンド。2026年3月期の純利益は前期比で約2倍に拡大しており、2024年3月期の赤字転落から完全な復活を遂げています。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=5545, fundamentals.earnings_trend.annual[2].net_income_oku_jpy=-2437"
+        },
+        {
+          "point": "米国市場へのADR上場準備という資本政策上の好材料。投資家層の拡大と市場評価の適正化を促す強力なカタリストとなります。",
+          "evidence": "disclosures.items[3].title=当社普通株式を対象とした米国預託株式の米国の証券取引所への上場準備に関するお知らせ"
+        },
+        {
+          "point": "製造業PMIの拡大と競合他社の不透明感。国内製造業PMIが54.8と拡大局面にある中、サムスンのストライキ報道が市況需給の引き締まりを通じた同社への追い風となる期待があります。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.8, news.headlines[9].title=サムスン大規模ストライキでさらに株価上昇か"
+        }
+      ],
+      "cautions": [
+        "2026年7月31日に次回決算発表と日銀金融政策決定会合が重なっており、ボラティリティが急増する極めて高いイベントリスクがあります。",
+        "PBRが30倍を超えており、市場の期待値が極めて高い水準にあります。期待を下回る開示があった場合、調整幅が大きくなるリスクがあります。",
+        "信用買い残の増加が指摘されており、将来的な戻り売り圧力（需給悪化）となる可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "株の信用買い、平均単価が最高水準 キオクシアに存在感 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9tc21aaWt3Y2pMSnRvVERvcnZHYWVNZWh5Si1SX1lpZ2xtQXYxVU9wNGVXT05WMjBZUWtFcXAtSXVUOXZGQVF4VzJWbkJqeHpjNjJKTmFRYVdYRm9PVmoyZHo2eUo1Z19ycWExTQ?oc=5",
+        "published": "Sun, 12 Jul 2026 22:30:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "１０日のＡＤＲ動向＝円換算値で全面高、キオクシア、日本製鉄、キーエンスなど高い 速報 - kabushiki.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFBhbVNfdU82RVZHOHI0eC1xblJLalRYM3B1c3o3OUxzeWJMXzR3UDVtY2ZuMHBTNS03ZHpQa3YtMWdKdTNDRFNB?oc=5",
+        "published": "Sun, 12 Jul 2026 22:40:00 GMT",
+        "publisher": "kabushiki.jp"
+      },
+      {
+        "title": "１０日のＡＤＲ動向＝円換算値で全面高、キオクシア、日本製鉄、キーエンスなど高い(ウエルスアドバイザー) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOWXRKanBEdXdlNDJ1R3hyWWZHUDZRcXJaamFyM2ZrbWJVNl9LUG5tMWNGUV9lSjBhMGJKaVJSeWUyYlJubXRieEJZTlFYaWpxajNhSWd0Y09oU3RLcjdTVkdta2tRMVE2Y1lfeWJKelBibnhkVko1UVF0bndkWGl5OEtOTXowRXc?oc=5",
+        "published": "Sun, 12 Jul 2026 22:42:39 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "株価急騰で〝長者〟を生んだキオクシア トヨタ抜き時価総額トップは市場からのメッセージ - 産経ニュース",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFA1ZE1vLTZINDdMOXdpRnQ4LXBVQkppdUNGNTMydVBPeC10T3pUOHV5UzMzNzRBX0RYZUhLTDBFbGcxbmI2NnBRUC01WENKLWphd1dhc0syZnBsbHFvekVSMnJ0VHVwQVVwUlAzRElaZlVFZnZ3M3c?oc=5",
+        "published": "Sun, 12 Jul 2026 02:00:00 GMT",
+        "publisher": "産経ニュース"
+      },
+      {
+        "title": "【キオクシアを一時10万株保有した億り人の狙いは？】凄腕投資家が狙う「キオクシアの次」に急騰期待の22銘柄 まつのすけさん、かんちさん、なのなのさんが厳選 - マネーポストWEB",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFB5dGJxX2EwRWd1RjlZZnNFdWp5ME5MbTNFVWJYOFhwSG9VVnVCaG1qZ1RTX1dWaG9uTUFZaHNMN2RHQkN6Nzhz?oc=5",
+        "published": "Sun, 12 Jul 2026 22:00:00 GMT",
+        "publisher": "マネーポストWEB"
+      },
+      {
+        "title": "285AキオクシアHD・6740ジャパンディスプレイ・9984ソフトバンク・3350メタプラネット・5803フジクラ・6480日本トムソン・4392FIGなど前回の続き株価解説。(2026/5/12) Rand (voVVVthbfL) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBVcHpfLTVSWVB0Z1RBNDEzNF9PZnN1czN2cjNpVnNfR0JWQS1ZUGktZHlpOTlSWk4zYV9sRUZld2xKTzZnb0NNanZUV0NvR21XMXJLazRYeWdqcUVWaDNyUg?oc=5",
+        "published": "Sun, 12 Jul 2026 20:07:28 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "「東芝傘下なら今のキオクシアはない」を考えてみる｜BRIDGE VIEW ロケットスター荻原猛 - note",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1JTEhXYWdJNXRxRExZc1Ezbzl1RVZURXFRTm1lXzR1ejg4cDdpUGhzX09idWd4MmZael9JdlFNZkJYUy0yVDcta1Z0S01jS0hXRjVZZFpzbndkcEU?oc=5",
+        "published": "Sun, 12 Jul 2026 03:51:12 GMT",
+        "publisher": "note"
+      },
+      {
+        "title": "キオクシアホールディングスの看板＝東京都港区 - 産経ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOeGFiLW5rZEJrZG5peUdGdVh5TU1HTTNEeHdhZElfVHpNNlB2dEtxbVNYaGVnenpHMEp6OUV4Vl8xM3kxTldqcHA2eUc4WTdEMWVhdnB4SlNMMGdVTTBSazBCaU55OV83U2lGZjVBaGgyUjJJb0VYX3NocUowREZpMndRS2wwN19xRUNTTDJIN1c0bEhzX19yZl9SMzR4b3BxZlE?oc=5",
+        "published": "Sun, 12 Jul 2026 02:00:00 GMT",
+        "publisher": "産経ニュース"
+      },
+      {
+        "title": "2025.12.26(金) 285A キオクシア前場の底の瞬間を解説 Galatasaray Vs Antalyaspor (PH5ftydMKq) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5weTRKMVhZOEVlZHVGWUZSSDRpbW56c3FYU3FPelc0a1FzZUJGUWZkeHJtSFdZU1ZVajRzd2gydWJJS2hWNTlfQUhtVmk0Rm5XMDcxS3RYTDBRaU1KeHhoVw?oc=5",
+        "published": "Sun, 12 Jul 2026 20:45:32 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "【緊急】キオクシアの株価が5万円突破！サムスン大規模ストライキでさらに株価上昇か Malvern Spring Show (cmNlzqIsYn) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1NVHhLTF9GUjFlZXA4MlhxaXNPdnd3dHF1eVFfQm9SX3ZxSm1CZERveXlWVGJFbW9ZOVlCVUN0VTBIaDVwYjJlcFpsOGJsbnJEd1pHWU91OTlHSk1ZRkswTg?oc=5",
+        "published": "Sun, 12 Jul 2026 17:14:10 GMT",
+        "publisher": "Mshale"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "（訂正）「勤務継続型株式報酬制度及び業績連動型株式報酬制度のユニット付与に関するお知らせ」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586951.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "（訂正）「当社及び当社子会社の役員に対する株式報酬制度の改定に関するお知らせ」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260612569674.pdf",
+        "date": "2026-06-12 15:30:00"
+      },
+      {
+        "title": "2026年３月期 決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537803.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "当社普通株式を対象とした米国預託株式の米国の証券取引所への上場準備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537804.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "連結子会社からの配当金及び資本の払戻しに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537809.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537830.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "当社及び当社子会社の役員に対する株式報酬制度の改定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537827.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537849.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "その他の関係会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260326589887.pdf",
+        "date": "2026-03-26 15:30:00"
+      },
+      {
+        "title": "Nanya Technology Corporationの第三者割当増資引受及びDRAM長期供給契約締結に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260325588489.pdf",
+        "date": "2026-03-25 18:00:00"
+      }
+    ]
+  }
+}

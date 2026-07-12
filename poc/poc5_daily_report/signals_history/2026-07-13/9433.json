@@ -1,0 +1,217 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-07-13T07:55:16+09:00",
+  "price_as_of": "2026-07-10",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 28,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ評価が neutral (strength 55) であり、buy 条件（bullish かつ strength 70以上）を満たさないため。",
+        "evidence": "fundamental_view.stance=neutral, fundamental_view.strength=55"
+      },
+      {
+        "reason": "762万人の大規模な情報漏洩リスクと内部統制の不備という重大なガバナンス懸念が浮上しており、業績への悪影響が不透明であるため。",
+        "evidence": "fundamental_view.points[1]: news.headlines (published: Sun, 12 Jul 2026), fundamental_view.points[3]: disclosures.items (date: 2026-06-25)"
+      },
+      {
+        "reason": "テクニカル面ではゴールデンクロスが形成されているが、市場レジームが downtrend であり、地合いによる押し下げリスクが高い局面であるため。",
+        "evidence": "technical_view.stance=bullish (strength 70), reference.market_regime=downtrend"
+      },
+      {
+        "reason": "直近2営業日が続落しており、テクニカル専門家も戻り売りへの注意を促しているため、押し目を確認する段階にある。",
+        "evidence": "technical_view.cautions[1]: price_technical.recent_5_days"
+      }
+    ],
+    "risks": [
+      "大規模な不正アクセスに伴う対策コストの計上や社会的信用の低下による解約増のリスク",
+      "2026年7月30日からの日銀金融政策決定会合に伴う金利上昇および市場の変動性拡大",
+      "2026年8月7日の決算発表における、ガバナンス不備を受けた業績見通しの下方修正リスク",
+      "市場全体の downtrend 継続による、好需給銘柄への連れ安の可能性"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 28,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ評価が neutral (strength 55) であり、buy 条件（bullish かつ strength 70以上）を満たさないため。\",\n   \"evidence\": \"fundamental_view.stance=neutral, fundamental_view.strength=55\"\n  },\n  {\n   \"reason\": \"762万人の大規模な情報漏洩リスクと内部統制の不備という重大なガバナンス懸念が浮上しており、業績への悪影響が不透明であるため。\",\n   \"evidence\": \"fundamental_view.points[1]: news.headlines (published: Sun, 12 Jul 2026), fundamental_view.points[3]: disclosures.items (date: 2026-06-25)\"\n  },\n  {\n   \"reason\": \"テクニカル面ではゴールデンクロスが形成されているが、市場レジームが downtrend であり、地合いによる押し下げリスクが高い局面であるため。\",\n   \"evidence\": \"technical_view.stance=bullish (strength 70), reference.market_regime=downtrend\"\n  },\n  {\n   \"reason\": \"直近2営業日が続落しており、テクニカル専門家も戻り売りへの注意を促しているため、押し目を確認する段階にある。\",\n   \"evidence\": \"technical_view.cautions[1]: price_technical.recent_5_days\"\n  }\n ],\n \"risks\": [\n  \"大規模な不正アクセスに伴う対策コストの計上や社会的信用の低下による解約増のリスク\",\n  \"2026年7月30日からの日銀金融政策決定会合に伴う金利上昇および市場の変動性拡大\",\n  \"2026年8月7日の決算発表における、ガバナンス不備を受けた業績見通しの下方修正リスク\",\n  \"市場全体の downtrend 継続による、好需給銘柄への連れ安の可能性\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "主要な移動平均線がゴールデンクロスを形成しMACDも強い上昇シグナルを維持しているが、全体相場の地合い悪化が重石となっている。",
+      "points": [
+        {
+          "point": "5日線が25日線を上回るゴールデンクロスを形成しており、短期・中期のトレンドが上向いている。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.sma5=2784.0, price_technical.sma25=2724.5"
+        },
+        {
+          "point": "MACDがシグナルを大きく上回り、ヒストグラムもプラス圏で拡大していることから、上昇の勢いが強い。",
+          "evidence": "price_technical.macd=23.32, price_technical.macd_signal=11.89, price_technical.macd_histogram=11.43"
+        },
+        {
+          "point": "60営業日の騰落率がプラス圏を維持しており、V5基準の中期下落トレンド（両指数マイナス）には該当しない。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=6.51"
+        }
+      ],
+      "cautions": [
+        "市場レジームがdowntrend（TOPIXが25日線の下かつ5日騰落マイナス）であり、地合いに押されるリスクがある（macro.market_regime）。",
+        "直近2営業日は続落しており、2800円台回復後の戻り売りが意識されている（price_technical.recent_5_days）。",
+        "前夜のADRがほぼ横ばいであり、寄り付きでの強い買い材料には乏しい（us_overnight.adr.change_1d_pct=-0.06）。"
+      ],
+      "key_levels": {
+        "support": 2724.5,
+        "resistance": 2845.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "業績は増収増益基調で着実な成長を示しているものの、直近で大規模な顧客情報の漏洩リスクが浮上しており、ガバナンスおよび内部統制への懸念が短中期の重石となる可能性があります。",
+      "points": [
+        {
+          "point": "過去3期で売上高・EPSともに右肩上がりの成長を継続しており、2026年3月期のEPSは183.55円と安定した成長力を見せています。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "762万人のパスワード漏洩という大規模な不正アクセス問題が直近で報じられており、社会的信用の失墜や対策コスト増による業績への影響が懸念されます。",
+          "evidence": "news.headlines (published: Sun, 12 Jul 2026)"
+        },
+        {
+          "point": "3,000億円規模の自己株式取得枠を設定しているものの、直近6月の取得実績が0株となっており、株主還元による株価下支え効果がまだ十分に発揮されていません。",
+          "evidence": "fundamentals.recent_important_disclosures (date: 2026-07-06)"
+        },
+        {
+          "point": "「財務報告に係る内部統制の開示すべき重要な不備」を公表しており、東証へ改善報告書を提出するなど、組織統制面でのリスクが顕在化しています。",
+          "evidence": "disclosures.items (date: 2026-06-25, 2026-06-02)"
+        }
+      ],
+      "cautions": [
+        "2026年8月7日に予定されている決算発表での不正アクセス関連コストの計上や業績見通しの修正",
+        "2026年7月30日から開催される日銀金融政策決定会合に伴う国内長期金利の上昇リスク（JGB10年：2.866%）",
+        "市場全体が「downtrend」レジームにある中での投資心理の冷え込み",
+        "データに含まれる予想PER（forward_pe: 1197.639）の異常値が示す、将来的な利益急減の可能性（要確認）"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ローソン、ステーブルコインでの店頭決済検討 小売りにも普及 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQMk1fNS1GN0lOTTJtMEpsc0RxSDRnVWhWOTU5UnFBd1Z5MzNfR3N4X2paUnZFRHFuN0d3SmNXUURxV1J3TFItM2c0UndMMzBvNGVHWXlYelJQWXdidGNndDNLRzJLeFBsS2RGVVFqcGxZajRhdmdMWTdMN1puQ2p5akVyejZ0Z2k0eGdiMFFteVR1YjJnZDV4OXlyODhfOEFhSnYzd0pzczk?oc=5",
+        "published": "Sun, 12 Jul 2026 20:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "KDDI MUSEUMで「謎解きラジオ探偵団2」開催！FMラジオ片手に館内を巡る体験型イベント - 多摩ポン",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBvS3k2cWlqcENMQjc2bnlhcWFOcF9RQ0JaV2ZYWXB4Zjg5Wi0wbGZDTHBldzBpQlFaYl8tMDNmZjJMZzA4bTZyb295eGVCZ0V2NzNydC04bzBiZ2Q5Z0NTMWZ3?oc=5",
+        "published": "Sun, 12 Jul 2026 13:39:27 GMT",
+        "publisher": "多摩ポン"
+      },
+      {
+        "title": "東証上場企業が消失？ 「実印も通帳も帳簿もない…」異例の発表 - 朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1VUXNZa29Ndnk0SGpOZU5uamtqMzY4V0QzbmtZTVlyajlubkhFa2l1Z25pN2ZpalVkRVByVWxUTm1QZnh6VG5ZcjF1eDQwTjZBNmkxVmFXYmxfOFY3VlZlZExGdVI0NEE?oc=5",
+        "published": "Sun, 12 Jul 2026 21:00:00 GMT",
+        "publisher": "朝日新聞"
+      },
+      {
+        "title": "パスワード漏れ７６２万人 ＫＤＤＩ、不正アクセス問題で - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE03YTV5dExVUG1DMlJybmlxRHVvTTJDcFY1TGhTTXBpZDI5dUl1dU05cGpJTnFmMDk4WnlVcF9ENHh4SFJxTGd1VW44d0k4cGtnamR4enR5ZGQ3Q2p3TzNlcnRsQTgxQXBMTGVV?oc=5",
+        "published": "Sun, 12 Jul 2026 05:08:00 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "LINEヤフー｢カカクコム争奪｣で買収金額の引き上げに透ける本気度…来るAI時代に｢食べログ｣を手に入れたい巨人の本音 - 東洋経済オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE90NDZUQVJqSWVvVHNVTzh6al93aWk0VVZmbDI5Nzg1Ni1zRHJkWnZqWWlCZkhubkNtTlo1SFpIYW16T3V3VkcwWUZFWDJUR2ZlT08wZ2locFJaS1U?oc=5",
+        "published": "Sun, 12 Jul 2026 20:40:00 GMT",
+        "publisher": "東洋経済オンライン"
+      },
+      {
+        "title": "[石川温の「スマホ業界 Watch」] ドコモが仕掛ける金融の反転攻勢、脳裏をよぎる“5つの不安” - ケータイ Watch",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9lVmFvV0NxSERseC03SHRrcTdnNlcyQjI5OTlMVjFESURJUU1vSExGZU95NHJvS1RrbkdjeFNyMWxoWjNaSTRJQVJtQWY4dkRXU2dEOWRvdm1aNWhFM2REdElzdTdDMHJmUFZsQVVfc3Y5QlU3Ymc?oc=5",
+        "published": "Sun, 12 Jul 2026 15:00:00 GMT",
+        "publisher": "ケータイ Watch"
+      },
+      {
+        "title": "【試合結果】福岡大大濠―博多工（3回戦） - 第108回全国高校野球選手権福岡大会 - バーチャル高校野球",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5WQXZ4WTh4SEhJQVZaRWtXeGJ2SUlFb3daSHFoVWg2YWQxRldrZEY2S3l6LW9ITHpIQTRSSWdRX2NwMnZGX3l5eWg5RXhhc3lzOVhWZUFXWi1YZ3B2ZGNocEk0ejQzVGpC?oc=5",
+        "published": "Sun, 12 Jul 2026 06:44:21 GMT",
+        "publisher": "バーチャル高校野球"
+      },
+      {
+        "title": "「携帯大手×ネット銀行」連携深化…自社経済圏に誘導、優遇プラン競争激化（ニュースイッチ） - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1TMDZQX0ZZRXFRZEU0WjF1OUJMSXlabDNIZUpWcGRRaFJYeFVKSXRzZk5hM0NGdW9Kc0tWQlV0c3UyWTQ2WW1tVWlvVGdXOGRYU1pobXh2Ulp1TFBfX0xacG5HMVNsQkozRklLUjkzWTBxMk9xa3VMdDRtZlRWSGc?oc=5",
+        "published": "Sun, 12 Jul 2026 05:03:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "＜画像6 / 6＞よみうりランドに体験型迷路アトラクションOPEN！ - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBqbEFuYV93WjR0NE9KRG9fMkszWDhWOVNyZ3JOeEhKTWdzakducTM3blFOdVUzc3YydC1mczVhY2hzeXp6OVpuUlRQWlJfZXM5UU5zNzNOWUtoSktoWkZpa3NLQ2ZNMFNF?oc=5",
+        "published": "Sun, 12 Jul 2026 01:06:42 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "映画が毎日1,200円に！ Pontaパス「シアター割 夏キャンペーン’26」7月17日から8月27日まで開催 - AppBank",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBBT3llMmV2dTVNdnRBRVFFaHgtN2hDR1IwNm1NWUg0Uk5ORW0wb0J6M201cFo3WGpzT2h5ZWFxRXUzTV9rOXBfbE9lbHhKX2NpME9tdVRmZlBRbEhtRkJSWVQwTWJiNTlQdWc?oc=5",
+        "published": "Sun, 12 Jul 2026 07:04:30 GMT",
+        "publisher": "AppBank"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      },
+      {
+        "title": "東京証券取引所への「改善報告書」の提出に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559424.pdf",
+        "date": "2026-06-02 16:00:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（中期経営戦略）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524146.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "auフィナンシャルホールディングス株式会社の東京証券取引所への株式上場準備の開始について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524156.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "2026年３月期　決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511523545.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524005.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524010.pdf",
+        "date": "2026-05-12 15:45:00"
+      }
+    ]
+  }
+}
