@@ -1,0 +1,216 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-07-14T08:15:46+09:00",
+  "price_as_of": "2026-07-13",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "直近（2026-07-04）に buy シグナルを発出しており、現在はその継続監視期間中であるため、ルールに基づき新規エントリーは行わず静観する。",
+        "evidence": "reference.recent_buy (date: 2026-07-04)"
+      },
+      {
+        "reason": "ファンダメンタルズ面で2026年3月期の2桁減益計画やPER20倍超の割高感が指摘されており、買い向かうためのカタリストが不足している。",
+        "evidence": "fundamental_view.points[1] (2026-03 net_income_oku_jpy=8005), fundamental_view.points[2] (forward_pe=20.939)"
+      },
+      {
+        "reason": "テクニカル面では25日移動平均線を下回るデッドクロス状態が継続しており、中期的な下落トレンドからの脱却が確認できていない。",
+        "evidence": "technical_view.points[1] (sma5_vs_sma25=dead), technical_view.points[0] (change_60d_pct=-14.5)"
+      }
+    ],
+    "risks": [
+      "2026年7月30-31日の日銀金融政策決定会合に伴う円高進行および金利上昇による資金調達コスト増大のリスク。",
+      "2026年8月3日に予定されている第1四半期決算において、進捗率が市場期待を下回るリスク。",
+      "市場レジームがdowntrendにあり、地合いの悪化に伴うセクター全体の連れ安リスク。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 55,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 21,\n  \"reasons\": [\n    {\n      \"reason\": \"直近（2026-07-04）に buy シグナルを発出しており、現在はその継続監視期間中であるため、ルールに基づき新規エントリーは行わず静観する。\",\n      \"evidence\": \"reference.recent_buy (date: 2026-07-04)\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズ面で2026年3月期の2桁減益計画やPER20倍超の割高感が指摘されており、買い向かうためのカタリストが不足している。\",\n      \"evidence\": \"fundamental_view.points[1] (2026-03 net_income_oku_jpy=8005), fundamental_view.points[2] (forward_pe=20.939)\"\n    },\n    {\n      \"reason\": \"テクニカル面では25日移動平均線を下回るデッドクロス状態が継続しており、中期的な下落トレンドからの脱却が確認できていない。\",\n      \"evidence\": \"technical_view.points[1] (sma5_vs_sma25=dead), technical_view.points[0] (change_60d_pct=-14.5)\"\n    }\n  ],\n  \"risks\": [\n    \"2026年7月30-31日の日銀金融政策決定会合に伴う円高進行および金利上昇による資金調達コスト増大のリスク。\",\n    \"2026年8月3日に予定されている第1四半期決算において、進捗率が市場期待を下回るリスク。\",\n    \"市場レジームがdowntrendにあり、地合いの悪化に伴うセクター全体の連れ安リスク。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "中期的な下落トレンドが継続しており、主要移動平均線のデッドクロスや市場全体の地合いの悪化が重荷となっています。前夜の米国市場やADRの好転による短期的な反発期待はあるものの、テクニカル面での明確な反転シグナルは不足しています。",
+      "points": [
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともに大幅なマイナスであり、中期的な下落トレンドから脱却できていません。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-14.5, relative_to_topix_60d_pct=-19.42"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線を下回るデッドクロス状態が継続しており、戻り売りの圧力が強い形状です。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, sma25=4518.48"
+        },
+        {
+          "point": "市場全体の地合いを示すレジーム判定がdowntrendとなっており、個別銘柄にとっても厳しい市場環境です。",
+          "evidence": "macro.market_regime.market_regime=downtrend"
+        }
+      ],
+      "cautions": [
+        "前夜のADRおよびセクターETF（XLE）が大幅に上昇しており、寄り付きで窓を開けて上昇し、短期的な踏み上げが発生する可能性があります。",
+        "MACDヒストグラムがプラス圏で改善傾向（13.03）にあり、売られすぎからの自律反発が強まる局面も想定されます。"
+      ],
+      "key_levels": {
+        "support": 4286.0,
+        "resistance": 4518.48
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "2026年3月期の減益計画に加え、PER20倍超と商社セクター内での割安感が薄れている。直近の良品計画との資本提携解消による事業整理は進展しているが、日銀会合を控えたマクロの不透明感もあり中立的な判断とする。",
+      "points": [
+        {
+          "point": "良品計画との資本提携を解消し、保有株式を売却。ポートフォリオの最適化と資産効率の向上が図られているが、収益への直接的な寄与度は精査が必要。",
+          "evidence": "news.headlines (良品計画、三菱商事と資本関係解消 業務提携は継続 - 2026-07-13)"
+        },
+        {
+          "point": "2026年3月期の純利益およびEPSが前期比で2桁の減益計画となっており、利益成長トレンドが一時的に停滞している。",
+          "evidence": "fundamentals.earnings_trend.annual (2026-03 net_income_oku_jpy=8005, diluted_eps=209.78 vs 2025-03 net_income_oku_jpy=9507, diluted_eps=235.8)"
+        },
+        {
+          "point": "バリュエーション面に過熱感がある。PER20.9倍、PBR1.72倍は総合商社の歴史的・相対的水準として割安とは言えず、下値余地の限定を根拠にした買いが入りにくい。",
+          "evidence": "fundamentals.valuation (forward_pe=20.939, price_to_book=1.722)"
+        },
+        {
+          "point": "マクロ環境は、製造業PMIの拡大や歴史的な円安水準が輸出・海外事業の収益を支える要因となるが、JGB10年金利の2.7%台への上昇は有利子負債コストの観点から注視が必要。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.8, macro.indices (JPY=X=162.45), macro.rates.jgb_10y_percent.value=2.761"
+        }
+      ],
+      "cautions": [
+        "2026年8月3日に控える第1四半期決算発表における、進捗率と通期計画に対する修正の有無。",
+        "2026年7月30-31日の日銀金融政策決定会合に伴う、円高進行リスクおよび金利上昇による資金調達コストへの影響。",
+        "市場全体が25日移動平均線を下回るダウントレンド（market_regime=downtrend）にあり、外部環境悪化に伴う連れ安リスク。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-04",
+    "days_ago": 10,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "三菱商事(株)【8058】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ScXhBTU9DVmdWalgxWWpQcThsOHBreVdENTJLZUh2YU9xMldYU1dJUmw2NjdWVWY0N2tuZmtZWTkySUZocWhkT24xNVU3OC1PYnZjU3FaTjQ1b0NkdGRV?oc=5",
+        "published": "Mon, 13 Jul 2026 06:53:14 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "良品計画と三菱商事、物流機能強化などで提携 - LOGISTICS TODAY",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBRUUx0YjlWSEN5aVBTYmNlbF9GdEc5aUJOUDZ4dHdObUtpWnhzN2o5clhEd2tzMW5QN0h3TkJOblFlY0FjRGhQZA?oc=5",
+        "published": "Mon, 13 Jul 2026 18:40:44 GMT",
+        "publisher": "LOGISTICS TODAY"
+      },
+      {
+        "title": "良品計画、三菱商事と資本関係解消 業務提携は継続 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNa0VSVktpblMwWEgycGFFQl81VUNrei1ZRzhEeXAxOGsxTy1OQTBpMllIYnpDMmFMLUlCOG4xODZiRWR6dFdabVlHYTNGaGd1X2F3MkkwUXc1ZE11aDlRTlRkS2FfZXB6UEpkWjcwbHpMY3BoVnNFTEFyWGxJWE5mWG90MDRmVWlSbHdqLUhuOEVITXVnb2xrUnJEWDVpZlNCYXc?oc=5",
+        "published": "Mon, 13 Jul 2026 18:03:51 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "良品計画と三菱商事／戦略的提携で物流・海外食品事業を強化 - 物流ニュースのLNEWS",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBGWlNvbklpSWNSU0MwUExmaWtPSEdsYVk0LThtcGpSZ3E4LXAzN1haRUxXMUd0bGR6RWd3VHF1XzQ5TUZNODFLYXFPelBLd2NiTnJ3ZA?oc=5",
+        "published": "Mon, 13 Jul 2026 08:16:24 GMT",
+        "publisher": "物流ニュースのLNEWS"
+      },
+      {
+        "title": "良品計画、三菱商事と四半世紀ぶりに資本提携解消 - LOGI-BIZ online",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9JZWlyZ0w5dmNwbEhPeG5aeDZsUWNvZl9TZlREcXM4OXN2QU5VRGZkTlFRT3c3aTk0dFUtdlI1eUFIcjAwRDF5MUNFcw?oc=5",
+        "published": "Mon, 13 Jul 2026 09:57:36 GMT",
+        "publisher": "LOGI-BIZ online"
+      },
+      {
+        "title": "良品計画、三菱商事と株式保有関係を解消－戦略的業務提携契約を締結 - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9CMFZOWnJ3VXJjTC1kd1Y2YzBwaTFjNmFoUUYwQks3R0lycjM3b014X2tWeFQzWWJDVzAtcW9LVjVSVEJVVFJMM1U0MXUwMUV1Z3dtNnJERUFzVzJkRVRNcHQtd1lHRnVUMW9pX1R1bVVkSFow?oc=5",
+        "published": "Mon, 13 Jul 2026 07:21:00 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "三菱商事ロジスティクス 物流eラーニング講座で法人版 - daily-cargo.com",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9BaDI3UGJVZ09TMmo3T0sxT3E4ZTEzME5SZ0xia2ZYQmJ4VldVZGNYRnY4QXd4amN2VnZPVFd6MVlrR09xMWx4Q0RyZWxRMEZCVVJiUmVvTUJCWFlFVDhTVzNoNG1SUWFpbXc?oc=5",
+        "published": "Mon, 13 Jul 2026 15:06:23 GMT",
+        "publisher": "daily-cargo.com"
+      },
+      {
+        "title": "三菱商事が良品計画の株式保有を解消、新たな業務提携を締結 - 激流オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB1dVh1X0xPNlg1Rnh0dHlaVkp2RDNtS2ROMllMNXJHVWVMS0xhVjR1cFRMbE1sLXFRUlRRREp6M190ZnJhMDhKQWZsU0NmVmxOZWc?oc=5",
+        "published": "Mon, 13 Jul 2026 07:09:08 GMT",
+        "publisher": "激流オンライン"
+      },
+      {
+        "title": "三菱商事ロジスティクス、物流ビジネスに関わる人材の 実務理解を支援する「ロジスタ」法人版を提供開始 - アットプレス",
+        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBVTVc2T1BOdngzbFBqU3JzVEliem1jVGdzZ2VrQThrZnpESXp0RXZwN0lrSGREcWJEcHFpWHdIZUp5N0NQRG4tQ0FDNEh1QQ?oc=5",
+        "published": "Mon, 13 Jul 2026 00:30:00 GMT",
+        "publisher": "アットプレス"
+      },
+      {
+        "title": "三菱商事ロジ／物流実務を学べる法人向け教育プラットフォームを展開 - 物流ニュースのLNEWS",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9mZi12bWtTU2NBSWJWSDMtR2hYaU01dWlOcXI4cGVZYTJxZWhUTktIOWdRVWwxU3REOTlkWWNpNXNvbW5YUV9sVEFmdnBJTlI1YUp1Tw?oc=5",
+        "published": "Mon, 13 Jul 2026 05:31:06 GMT",
+        "publisher": "物流ニュースのLNEWS"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "子会社間の合併及び特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552595.pdf",
+        "date": "2026-05-29 09:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C2プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539898.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C3プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539905.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C4プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539910.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C5プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539918.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C6プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539939.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515679.pdf",
+        "date": "2026-05-01 14:00:00"
+      },
+      {
+        "title": "通期個別業績と前期実績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515675.pdf",
+        "date": "2026-05-01 14:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260416505643.pdf",
+        "date": "2026-04-17 14:00:00"
+      },
+      {
+        "title": "（訂正）「自己株式の取得結果および取得終了並びに消却株式数に関するお知らせ」 の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260325589148.pdf",
+        "date": "2026-03-25 17:20:00"
+      }
+    ]
+  }
+}

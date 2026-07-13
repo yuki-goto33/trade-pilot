@@ -1,0 +1,213 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-07-14T08:14:02+09:00",
+  "price_as_of": "2026-07-13",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ評価が neutral かつ strength 60 に留まり、確信度の高い buy 条件である 70 を下回っている。",
+        "evidence": "fundamental_view.stance=neutral, fundamental_view.strength=60"
+      },
+      {
+        "reason": "テクニカル面では bullish とされているが、株価への織り込みが進んでいる可能性が高く、ルール上のエントリー基準（テクニカルが中立であること）に合致しない。",
+        "evidence": "technical_view.stance=bullish (strength=75)"
+      },
+      {
+        "reason": "ガバナンスリスク（内部統制の不備）や異常値を示す予想PERなど、ファンダメンタルズ面での懸念材料が解消されていない。",
+        "evidence": "fundamental_view.cautions: 内部統制の不備, forward_pe=1205.794"
+      },
+      {
+        "reason": "市場全体が下落レジームにあり、地合いの悪化による連れ安リスクを考慮すべき局面である。",
+        "evidence": "reference.market_regime=\"downtrend\""
+      }
+    ],
+    "risks": [
+      "2026年7月30-31日の日銀金融政策決定会合による金利上昇が、高配当銘柄としての相対的魅力を低下させるリスク",
+      "2026年8月7日の決算発表において、内部統制の不備に関連する追加の悪材料や業績修正が発表されるリスク",
+      "RSIが買われすぎ水準の70に接近しており、地合いの悪化をきっかけとした短期的な利確売りの加速",
+      "VIX指数の急上昇に伴う市場全体のボラティリティ増大"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ評価が neutral かつ strength 60 に留まり、確信度の高い buy 条件である 70 を下回っている。\",\n   \"evidence\": \"fundamental_view.stance=neutral, fundamental_view.strength=60\"\n  },\n  {\n   \"reason\": \"テクニカル面では bullish とされているが、株価への織り込みが進んでいる可能性が高く、ルール上のエントリー基準（テクニカルが中立であること）に合致しない。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=75)\"\n  },\n  {\n   \"reason\": \"ガバナンスリスク（内部統制の不備）や異常値を示す予想PERなど、ファンダメンタルズ面での懸念材料が解消されていない。\",\n   \"evidence\": \"fundamental_view.cautions: 内部統制の不備, forward_pe=1205.794\"\n  },\n  {\n   \"reason\": \"市場全体が下落レジームにあり、地合いの悪化による連れ安リスクを考慮すべき局面である。\",\n   \"evidence\": \"reference.market_regime=\\\"downtrend\\\"\"\n  }\n ],\n \"risks\": [\n  \"2026年7月30-31日の日銀金融政策決定会合による金利上昇が、高配当銘柄としての相対的魅力を低下させるリスク\",\n  \"2026年8月7日の決算発表において、内部統制の不備に関連する追加の悪材料や業績修正が発表されるリスク\",\n  \"RSIが買われすぎ水準の70に接近しており、地合いの悪化をきっかけとした短期的な利確売りの加速\",\n  \"VIX指数の急上昇に伴う市場全体のボラティリティ増大\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "中期および短期のトレンドが上向きで市場をアウトパフォームしていますが、市場全体の下落レジームが上値を抑える要因となります。",
+      "points": [
+        {
+          "point": "5日線が25日線を上回るゴールデンクロス状態にあり、短期・中期ともに上昇トレンドを維持しています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\""
+        },
+        {
+          "point": "MACDがシグナルを上回りヒストグラムも拡大傾向にあり、上昇モメンタムの強まりが示唆されています。",
+          "evidence": "price_technical.macd=28.45, price_technical.macd_histogram=10.87"
+        },
+        {
+          "point": "60日間の騰落率がプラスかつ対TOPIXでもプラスを維持しており、中期的な買い意欲が継続しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=7.77, price_technical.trend_60d.relative_to_topix_60d_pct=2.85"
+        }
+      ],
+      "cautions": [
+        "市場全体（TOPIX）が25日線を下回るdowntrend判定であり、地合いの悪化による連れ安に警戒が必要です（macro.market_regime.market_regime=\"downtrend\"）。",
+        "RSI14が68.4と買われすぎ水準の70に接近しており、短期的な利確売りが出やすい水準です。",
+        "VIX指数が急上昇しており、マクロ環境の不透明感が投資家心理を冷やす可能性があります（macro.indices[3].change_1d_pct=14.17）。"
+      ],
+      "key_levels": {
+        "support": 2727.92,
+        "resistance": 2845.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "業績は増益基調にあり、ローソンとの連携深化（ステーブルコイン決済等）といった新規材料も確認されるものの、内部統制の不備や極端に高い予想PER、さらには日銀会合を控えた金利上昇局面といったマクロ環境の不透明感が重石となります。",
+      "points": [
+        {
+          "point": "ローソン店舗でのステーブルコイン決済の実証実験など、非通信分野での提携材料が相次いで発表されており、中長期的なシナジーへの期待感がある。",
+          "evidence": "news.headlines (2026-07-13の複数見出し)"
+        },
+        {
+          "point": "年次業績は売上・純利益ともに拡大傾向にあり、2026年3月期には純利益7,071億円（前期比約7.8%増）を達成している。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "3,000億円規模の自己株式取得枠を設定しているが、直近1ヶ月（2026年6月）の取得実績は0株であり、需給の下支え効果は現時点では発現していない。",
+          "evidence": "fundamentals.recent_important_disclosures (2026-07-06発表)"
+        }
+      ],
+      "cautions": [
+        "財務報告に係る内部統制の開示すべき重要な不備および、東京証券取引所への改善報告書の提出といったガバナンスリスクが継続している（disclosures 2026-06-02, 06-25）。",
+        "データ上の予想PER（forward_pe=1205.794）が異常値を示しており、市場予想と実績の乖離や急激な業績悪化懸念を精査する必要がある。",
+        "日本10年債利回りが2.761%と上昇傾向にあり、高配当銘柄としての相対的な魅力低下や、有利子負債コストへの影響を注視すべき局面である（macro.rates）。",
+        "2026年8月7日の決算発表および7月末の日銀金融政策決定会合が近く、イベントリスクが高い状況にある（fundamentals.next_earnings_date, macro.boj.monetary_policy_meeting）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ローソン、ステーブルコイン決済導入検討 円建て「JPYC」活用 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQcWdmV0szLTVIb1hEbkt4bzJFQzBPcEgzbExoNVZPTVVLdV90VVBYaEJHTk5tVzluR0V5eThuVzBqMFJ1czJiUXR1RV95ZmVRR2JXOHZlM2JiWjBvNWxtQ2ZjQ3p2UDhrdy1mR080YThqeDdzT1JLM1VRV0p6bzc2bm92dTBqRUJDNVVLZTRTYTBRRTFSTnJKc2ZyR2ZVVlVNNmc?oc=5",
+        "published": "Mon, 13 Jul 2026 20:14:50 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "HashPort、KDDI・ローソンと連携し、ローソン店舗で日本円ステーブルコインによる店頭決済の技術実証を実施 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5JZ0ZyMTlFekVvallZakg1aTZJNTNWTjNaVzdzRkhoaWFIWWFvclp0UDVFN3ExeXVLekZPX1U4R2tIbUFEU2c5bmZyQVBBOWkwcER0OHNGcmM0UVNidDhPWk8xTmxVUjRua2c?oc=5",
+        "published": "Mon, 13 Jul 2026 01:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "ローソンでステーブルコイン支払い KDDI・HashPortが技術実証へ 高輪ゲートウェイ店で8月実施 - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5vbWlESTNGUGE0aENjZW9BT0tYeTkzWm50RnIwSS1CSTIzRTNfWVpnUE9meUNVc3B5VmtCMlVZa25WbGtWeHVHbUNyYUZVVGxNck9VUWJUeDhobGlnS1BSTFBMbWI5LU50aThLTw?oc=5",
+        "published": "Mon, 13 Jul 2026 05:35:00 GMT",
+        "publisher": "ITmedia"
+      },
+      {
+        "title": "ハッシュポート、KDDI・ローソンと円ステーブルコイン店頭決済実証へ。8月に一部社員対象（あたらしい経済） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE15VkNBN0oxTTFPSmZUZHNoeGNmTlNIY3ZueExQNFQ5Wm5kYnhMYXRKeWhoYXA4SFhxcWJrQTcxUV9sU0xGNFdsenVNNVdtSWZjbkFYVkdwVmI2Qmc2LUlKeGkyOUhWc1E0WEVXVUVnQlQ0dUJZTWZZaGNOS3dqOFE?oc=5",
+        "published": "Mon, 13 Jul 2026 03:56:31 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "HashPort Wallet×JPYC、ローソンのレジへ─KDDI・ローソンと8月に店頭決済実証 - innovaTopia",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBTMzBLLXREVXg4Qi1NWXFiYTZZZzdpTFhtcXI5ZHloc3Ywc1BMSXo5bVM1SGUwbVVhSjhtNmZFMnFXSVZrY08tSUhtd2VwU2o5VVJMNGZNTkE2T2M5V2E4c1M5aXRfY0Ft?oc=5",
+        "published": "Mon, 13 Jul 2026 21:48:10 GMT",
+        "publisher": "innovaTopia"
+      },
+      {
+        "title": "ローソン／クマ対策の注意喚起シール2800店に貼付、KDDIと連携しドローン監視も検討 - 流通ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBNV1dHb1VrcUhtLUNCdmJfak4wWEJuWnBaei11UmtzRXk4UE9MMXNKTy12Wmk5bldZa1hnaTZPQWoxYlFWSklDOUczZVRWWFZMcUttZk92Q0g?oc=5",
+        "published": "Mon, 13 Jul 2026 01:36:00 GMT",
+        "publisher": "流通ニュース"
+      },
+      {
+        "title": "ローソンでステーブルコイン支払い　KDDI・HashPortが技術実証へ　高輪ゲートウェイ店で8月実施 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxObVFzLTF4V0duWjFsRTVvYWtmUVgyUEJSVC1LQWtzeUFHeTBYaTlxaDc4LTZzZlVOVmtWVDNwTzQ2SUZ3UHcwRkFvLWhyOXJ0UlQ1YU1LbjUzelc3S2VTR0RIZzdHZWMzZkthcUxrREpkOEVNSEQ4Z1pjUU9YZmZzcGt6YW5nN3JjUllvbW0ybk9zQdIBkgFBVV95cUxObVFzLTF4V0duWjFsRTVvYWtmUVgyUEJSVC1LQWtzeUFHeTBYaTlxaDc4LTZzZlVOVmtWVDNwTzQ2SUZ3UHcwRkFvLWhyOXJ0UlQ1YU1LbjUzelc3S2VTR0RIZzdHZWMzZkthcUxrREpkOEVNSEQ4Z1pjUU9YZmZzcGt6YW5nN3JjUllvbW0ybk9zQQ?oc=5",
+        "published": "Mon, 13 Jul 2026 05:40:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "KDDIアイレット、Oracle Cloud の認知拡大と技術力が評価され2つのアワードを同時受賞 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1nWUtsRmZUUE1vRXRJRkxHTWVHNEZYMk9id29RYjB1d2tZWDZyNFhHQW51eUFzdmpzNnZZZlNOcGJGdjlKNExuVmVTWWtBcEl3RDZSVGxCWE8zeDdIOXNjejlHMFRrRWhGUkE?oc=5",
+        "published": "Mon, 13 Jul 2026 05:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "ローソンでステーブルコイン支払い KDDI・HashPortが技術実証へ 高輪ゲートウェイ店で8月実施 (ITmedia NEWS) - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOSkdmb2poRTZ6TzI2VTlWVEZUVkRfTTJkaFViaHhsZkxDTGgzT2FRNVh5ZFQ2RXA4Tjkza0EtckZyck5sRUwyZ0hNWEp2VGR0SUxJaUxxRWNKeE5vd3pyN2NOakZvRWN3VUViR0NQTHBXWnpiQUp5UTNiQ0RYVTdzQ09lRUJLOWlwSnJiei1n?oc=5",
+        "published": "Mon, 13 Jul 2026 05:40:49 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "ローソンで円ステーブルコイン決済を実証へ──HashPort・KDDIと連携 - JinaCoin",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9neVF4bTFxOUZwTlJXTWZ1b2VFMGh6Z0N3ckRwU3hPV2R0NWliN0RDUjFqQWJyT19YNUNIb1RMVHpDQlJtZzBTU0dyXzJPVEtLbDAtU1UxbGxVWVZ2NkNWampUNA?oc=5",
+        "published": "Mon, 13 Jul 2026 01:58:01 GMT",
+        "publisher": "JinaCoin"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      },
+      {
+        "title": "東京証券取引所への「改善報告書」の提出に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559424.pdf",
+        "date": "2026-06-02 16:00:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（中期経営戦略）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524146.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "auフィナンシャルホールディングス株式会社の東京証券取引所への株式上場準備の開始について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524156.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "2026年３月期　決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511523545.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524005.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524010.pdf",
+        "date": "2026-05-12 15:45:00"
+      }
+    ]
+  }
+}

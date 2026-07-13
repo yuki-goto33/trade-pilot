@@ -1,0 +1,193 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-07-14T08:20:15+09:00",
+  "price_as_of": "2026-07-13",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "テクニカル専門家がBearish（強度75）であり、中期的な下落トレンド継続に加え、ADRの大幅下落から短期的にも下押し圧力が強いと判断されるため。",
+        "evidence": "technical_view.stance=bearish, technical_view.points[0], us_overnight.adr.change_1d_pct=-1.99"
+      },
+      {
+        "reason": "ファンダメンタルズ面で新規提携の好材料はあるものの、今期の営業利益大幅減益計画（前期比約31%減）が依然として株価の重石となっている。",
+        "evidence": "fundamental_view.points[1]: 営業利益2,291億円と大幅な減益計画"
+      },
+      {
+        "reason": "市場全体が下落トレンド（downtrend）にあり、VIX指数の急騰などマクロ環境が悪化している中で新規買いを行うべき局面ではない。",
+        "evidence": "reference.market_regime=downtrend, macro.indices.vix.change_1d_pct=14.17"
+      }
+    ],
+    "risks": [
+      "2026年7月31日の第1四半期決算発表において、今期減益計画に対する進捗が低調であった場合の失望売りリスク。",
+      "決算と同日の日銀金融政策決定会合の結果公表に伴う、為替市場および株式市場全体のボラティリティ急増。",
+      "テクニカル上のサポートライン（2602.96円）を割り込んだ場合の下落加速リスク。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 60,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"テクニカル専門家がBearish（強度75）であり、中期的な下落トレンド継続に加え、ADRの大幅下落から短期的にも下押し圧力が強いと判断されるため。\",\n      \"evidence\": \"technical_view.stance=bearish, technical_view.points[0], us_overnight.adr.change_1d_pct=-1.99\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズ面で新規提携の好材料はあるものの、今期の営業利益大幅減益計画（前期比約31%減）が依然として株価の重石となっている。\",\n      \"evidence\": \"fundamental_view.points[1]: 営業利益2,291億円と大幅な減益計画\"\n    },\n    {\n      \"reason\": \"市場全体が下落トレンド（downtrend）にあり、VIX指数の急騰などマクロ環境が悪化している中で新規買いを行うべき局面ではない。\",\n      \"evidence\": \"reference.market_regime=downtrend, macro.indices.vix.change_1d_pct=14.17\"\n    }\n  ],\n  \"risks\": [\n    \"2026年7月31日の第1四半期決算発表において、今期減益計画に対する進捗が低調であった場合の失望売りリスク。\",\n    \"決算と同日の日銀金融政策決定会合の結果公表に伴う、為替市場および株式市場全体のボラティリティ急増。\",\n    \"テクニカル上のサポートライン（2602.96円）を割り込んだ場合の下落加速リスク。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "中期的な下落トレンドが継続する中で、市場全体の地合い悪化と前夜ADRの大幅下落が重なり、短期的にも5日線を割り込むなど弱気な展開が予想されます。",
+      "points": [
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともにマイナスであり、中期的な下落トレンドの中にあります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-1.55, price_technical.trend_60d.relative_to_topix_60d_pct=-6.48"
+        },
+        {
+          "point": "市場レジームが下降トレンドと判定されており、VIX指数の急騰も重なって市場全体の投資心理が悪化しています。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.indices.vix.change_1d_pct=14.17"
+        },
+        {
+          "point": "前夜のADRが大きく下落しており、国内市場の寄り付きから下押し圧力を受ける可能性が高い状況です。",
+          "evidence": "us_overnight.adr.change_1d_pct=-1.99"
+        },
+        {
+          "point": "直近の終値が5日移動平均線を下回っており、短期的にも上昇の勢いが失速しています。",
+          "evidence": "price_technical.last_close=2691.5, price_technical.sma5=2718.2"
+        }
+      ],
+      "cautions": [
+        "MACDヒストグラムは依然としてプラス圏（12.4）を維持しており、25日移動平均線付近で下げ止まる可能性があります。",
+        "米国ヘルスケアセクターETF（XLV）はプラス圏（+0.35%）で引けており、セクター買いによる下値支えが意識される可能性があります。",
+        "ADRの下落分が寄り付き価格に完全に織り込まれた後、自律反発が起こるリスクに注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 2602.96,
+        "resistance": 2787.5
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 70,
+      "summary": "がん領域におけるAI提携などの好材料がある一方、今期の減益計画や過去の供給問題に伴う損失計上が重石となっており、強弱材料が拮抗しています。次回決算と日銀会合を直近に控え、不透明感の強い局面です。",
+      "points": [
+        {
+          "point": "2026年7月13日にイスラエルのImagene AI社と、がん領域におけるバイオマーカー探索での提携が報じられました。主力のがん事業における開発精度の向上が期待される新規材料です。",
+          "evidence": "news.headlines[1]"
+        },
+        {
+          "point": "2026年3月期の通期業績予想は、売上高は成長を維持するものの、営業利益は2,291億円と前期（3,319億円）から大幅な減益となる計画であり、収益性の低下が懸念されます。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "製造業PMIが54.8と拡大圏で推移し、ドル円相場が162円台の円安水準にあることは、海外売上比率の高い同社の業績にとってプラスのマクロ環境です。",
+          "evidence": "macro.japan_pmi.manufacturing, macro.indices[2]"
+        }
+      ],
+      "cautions": [
+        "2026年7月31日に第1四半期決算発表を控えており、今期減益計画に対する進捗状況を確認する必要があります。",
+        "決算発表と同日に日銀金融政策決定会合の結果公表が予定されており、為替や市場全体のボラティリティ上昇に注意が必要です。",
+        "2026年5月8日に製品供給計画の見直しに伴う損失発生を公表しており、サプライチェーンや製造工程におけるリスクが完全に払拭されているか注視が必要です。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "第一三共(株)【4568】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBIS2NSZTVoVDllRlVKSHozNnpLbWdVNkIwNl9GXzEtSkFNbzVSVFFvYTlBWnFsNlA4SFY2N29xNnhwcWhieWJGdlVNZGdCbFp3ZmE1R0pYRXVOOExmcFdr?oc=5",
+        "published": "Mon, 13 Jul 2026 06:54:21 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "イスラエルの「Imagene AI」、第一三共とがん領域のバイオマーカー探索で提携 - 駐日イスラエル大使館 経済部 -",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9aajlSNGljNTIzVmw5N25xRmkxTEJtRnVyekxGS0NwQXM3UEhnN3pTX1dlV0hXbHdtX05vYThFcTI1NnB3RU5XaGRWX3BuSWw1YjVCNERnbThQLVc3eHl5QlpvWVl5dw?oc=5",
+        "published": "Mon, 13 Jul 2026 09:13:40 GMT",
+        "publisher": "駐日イスラエル大使館 経済部 -"
+      },
+      {
+        "title": "コンピュータセンター株が本日急騰した理由とは - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPNnhxVHZMbkt3ckVuTHZRTlNsMS1Yb1hCNXU0YWJVOVRKQXViSlI2WlRfZzNsdWFvZWQwOHNXNThlckRDVzI1NGpsNjQtM0psUVBUbGNZQXIzaEU2dGRFVkpldE1YSGpkT1VJaVo0YmJFanBvNnhLODkweFh2TXIzVVU2dVRCMzQ?oc=5",
+        "published": "Mon, 13 Jul 2026 13:32:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      },
+      {
+        "title": "画像8 / 20＞石原さとみが「みんなの生理痛プロジェクト」説明会に登壇！「自身の身体や生理痛の原因を知ることが大切」 - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBMLUZ2UGNJQ3pVM1NENW9ROVhOZmhTU3ZvWHpBSU9FUTlGLWFhYmN5NW5SVUU4QlR0T28ybnRtZVg2WE4xZnY0UnlROU1QVndKYnpYelNWSHNYNnJlMXdSV1l2QjZncHFzel91UmR3?oc=5",
+        "published": "Sun, 12 Jul 2026 23:45:22 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "1mlあたり23円以下!? ミノンで肌にも海にも優しい「コスパ最強のノンケミカルUV」を見つけたよ - ROOMIE（ルーミー）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5WWXZia3pGbGl4VXdOeTFBSEpKbEVId3hISmVvTXppM3hwS1RwWjFyX2EwWF82VUhqaEJHd3lMTTVaNTh0bkVMd1I2SDU0cFU?oc=5",
+        "published": "Mon, 13 Jul 2026 10:30:46 GMT",
+        "publisher": "ROOMIE（ルーミー）"
+      },
+      {
+        "title": "米国株式市場は続伸、対イラン和平協議の継続を好感 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOMHliYlp3UnlpWlRzTklZY2xZRkthem9abkdrU0g5TzR6d3J3ODA2VjUtaVRZTTdSbXpzZ2RVUWNVLTRITUJwQmlfNm5BelgycWowdEtUUmdfV052T0JWZW9qbDNCLXY0NlhaVmpvWG5XTjk3ekItcDhScWc5bG5lZC1oRXJRUTDSAYwBQVVfeXFMUGQ3ZE5BODZ2aEVwdHhjY3piWjZVelJzVVQwbTlId1RrUzk2U2FiNzh6em55NXI5UUpFUUttemRMT2lNVV9ndmJtYzdRSVNuM3Roazh0dmU3SHk1RS1jbl9HbnEzeEI1TnFMZVdmaWZBMHFoV2ZVZmNiSHZDTHlPRmpnWTVpTnNXSnotODI?oc=5",
+        "published": "Sun, 12 Jul 2026 23:14:31 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "【アナリスト評価】住友ファーマ、レーティング中立に引上げ、目標株価1,500円継続（米系大手証券）(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxObVdwNkk3eTlycXBvWVNtaGJBQy02QmpEeVAwbFlQZ0xRYlJTZlE5c25aUWhoRXpmenVzRVZUV3RrVDF3NGZsQl9LN1U1TkNJWTZVcTZ4bGUyRTFubENmMDA1WGozNHdkNFBvdmVkUl9KVU1wOFRqRk1MNC0wdmsxb0o1OC1FMjA?oc=5",
+        "published": "Mon, 13 Jul 2026 07:07:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584479.pdf",
+        "date": "2026-06-30 16:30:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260620575199.pdf",
+        "date": "2026-06-22 15:30:00"
+      },
+      {
+        "title": "財務上の特約が付された金銭消費貸借契約の締結に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617573095.pdf",
+        "date": "2026-06-17 19:00:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬等の内容の一部改定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515539092.pdf",
+        "date": "2026-05-18 13:00:00"
+      },
+      {
+        "title": "（訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260513530596.pdf",
+        "date": "2026-05-13 17:30:00"
+      },
+      {
+        "title": "自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511521821.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522113.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "決算補足資料（2025年度決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522160.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "2025年度決算および第6期（2026-2030年度）中期経営計画　説明会",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522186.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "製品供給計画の見直しに伴う損失の発生および 2026年3月期通期連結業績予想の修正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260415504962.pdf",
+        "date": "2026-05-08 13:00:00"
+      }
+    ]
+  }
+}

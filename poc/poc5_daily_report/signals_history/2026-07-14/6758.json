@@ -1,0 +1,206 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-07-14T08:03:17+09:00",
+  "price_as_of": "2026-07-13",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズにおいて本業の営業利益は拡大傾向を示しているものの、前々期からの影響で通期純損益が赤字転落しており、本業の強さと最終利益の安定性にギャップが存在するため、様子見が妥当と判断されます。",
+        "evidence": "fundamental_view.points[0]: 2026年3月期通期営業利益15,537億円、純損益3,269億円の赤字"
+      },
+      {
+        "reason": "テクニカル面ではゴールデンクロスが維持される一方で、直近4日連続の下落や市場レジームのdowntrend転換など強弱シグナルが拮抗しており、方向感が定まっていません。",
+        "evidence": "technical_view.points[0]: price_technical.sma5_vs_sma25=golden, technical_view.points[1]: price_technical.recent_5_days"
+      },
+      {
+        "reason": "直近の自社株買い開示が下値を支える要因として機能する可能性がある一方、市場全体の地合い悪化やゲーム事業の先行き懸念から積極的に買い進む材料に欠けます。",
+        "evidence": "fundamental_view.points[1]: disclosures, fundamental_view.points[2]: macro.market_regime.market_regime=downtrend"
+      }
+    ],
+    "risks": [
+      "2026年7月31日に予定されている次回決算発表における業績進捗や見通しの不確実性",
+      "2026年7月30日〜31日の日銀金融政策決定会合に伴う金利や為替（ドル円）の変動が海外売上比率の高い業績に与える影響",
+      "テクニカル上のサポートラインである25日移動平均線（3311.52）を割り込んだ場合の売り圧力の加速"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズにおいて本業の営業利益は拡大傾向を示しているものの、前々期からの影響で通期純損益が赤字転落しており、本業の強さと最終利益の安定性にギャップが存在するため、様子見が妥当と判断されます。\",\n   \"evidence\": \"fundamental_view.points[0]: 2026年3月期通期営業利益15,537億円、純損益3,269億円の赤字\"\n  },\n  {\n   \"reason\": \"テクニカル面ではゴールデンクロスが維持される一方で、直近4日連続の下落や市場レジームのdowntrend転換など強弱シグナルが拮抗しており、方向感が定まっていません。\",\n   \"evidence\": \"technical_view.points[0]: price_technical.sma5_vs_sma25=golden, technical_view.points[1]: price_technical.recent_5_days\"\n  },\n  {\n   \"reason\": \"直近の自社株買い開示が下値を支える要因として機能する可能性がある一方、市場全体の地合い悪化やゲーム事業の先行き懸念から積極的に買い進む材料に欠けます。\",\n   \"evidence\": \"fundamental_view.points[1]: disclosures, fundamental_view.points[2]: macro.market_regime.market_regime=downtrend\"\n  }\n ],\n \"risks\": [\n  \"2026年7月31日に予定されている次回決算発表における業績進捗や見通しの不確実性\",\n  \"2026年7月30日〜31日の日銀金融政策決定会合に伴う金利や為替（ドル円）の変動が海外売上比率の高い業績に与える影響\",\n  \"テクニカル上のサポートラインである25日移動平均線（3311.52）を割り込んだ場合の売り圧力の加速\"\n ]\n}\n",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "テクニカル指標におけるゴールデンクロスの維持と、直近4営業日連続の下落や市場地合いの急速な悪化という弱気シグナルが拮抗しており、現在は方向感を探るニュートラルな局面にあります。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日移動平均線を上回るゴールデンクロスを維持しており、MACDもシグナルを上回って推移するなど、中長期のトレンド修復の兆しは残されています。",
+          "evidence": "price_technical.sma5_vs_sma25=golden(5日線が25日線の上), price_technical.macd=-14.27, price_technical.macd_signal=-38.03"
+        },
+        {
+          "point": "しかし直近では4日連続で下落しており、株価は5日線（3415.8）を下回りRSI14も40.9まで低下するなど、短期のモメンタムは弱含んでいます。",
+          "evidence": "price_technical.recent_5_days, price_technical.rsi14=40.9, price_technical.sma5=3415.8"
+        },
+        {
+          "point": "TOPIXレジームがdowntrendに転じ、VIX指数が大幅上昇するなど、国内市場全体の外部環境が悪化しています。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.indices (VIX).change_1d_pct=14.17"
+        }
+      ],
+      "cautions": [
+        "前夜のNY市場でSONY ADRが-0.82%、テクノロジーセクターETF（XLK）が-2.42%と軟調であったため、当日の寄り付き段階で下落が織り込まれ、安く始まる可能性に注意が必要です。",
+        "現在維持している25日移動平均線（3311.52）を終値で明確に割り込んだ場合、下落トレンドへの回帰懸念から売り圧力が強まるリスクがあります。"
+      ],
+      "key_levels": {
+        "support": 3311.52,
+        "resistance": 3502.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "本業の営業利益は拡大傾向にあり、継続的な自己株買いによる下支えが期待される一方、直近通期での最終赤字や主力ゲーム事業を巡る不確実性があり、さらに決算発表と日銀会合を間近に控えていることから、様子見姿勢が妥当と判断します。",
+      "points": [
+        {
+          "point": "2026年3月期の通期営業利益は15,537億円と成長傾向を示しているものの、2025年12月期の巨額赤字が響き通期純損益は3,269億円の赤字に転落しており、本業の稼ぐ力と最終利益の安定性にギャップが存在します。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "直近の2026年7月3日にも自己株式の取得状況を開示するなど、継続的な自社株買いの実施が株価の下値支持要因として機能しています。",
+          "evidence": "disclosures"
+        },
+        {
+          "point": "日本の製造業PMIが54.8と拡大基調を示しておりマクロ環境の追い風はあるものの、市場全体が下降トレンドにあり、主力ゲーム事業の先行きに対する警戒感がニュース等で指摘されています。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.8, macro.market_regime.market_regime=downtrend, news.headlines"
+        }
+      ],
+      "cautions": [
+        "2026年7月31日に次回決算発表を控えており、直近四半期の業績動向や今期見通しの進捗に関する不確実性があります。",
+        "2026年7月30日〜31日の日銀金融政策決定会合による金利や為替（ドル円＝162.45円からの変動）への影響が、海外売上比率の高い同社の業績に逆風となるリスクがあります。",
+        "プレイステーションのディスク生産終了報道など、ゲーム事業のビジネスモデル変革期における構造的なコストや需要の変化によるリスクが存在します。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソニーグループの40代前半・I5級の年収は？【5000件の口コミ情報データ】 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBKTXFQS3A4NEhxdXVaUUFkWU5BZDdVWmN2aVZHblBhTTFlX1hySXBNUFdlZ3pZbWhDREUyY0pCT3I5TVB1b293R25raXXSAU9BVV95cUxQZXNLN2JibGt0WGVHTzFENmRTSEJvdkhaS0xZZUxLVHdpQm1wdzRmVkRIdXlLRUU3SkFWNjd4Ui10WjhBOVhweFI0OF8ta1hj?oc=5",
+        "published": "Mon, 13 Jul 2026 10:45:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "$ソニーグループ (SONY.US)$ - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1CNWRNcWZOSXBtYTBPQzNxVFVDamdmbGM4X1VaSHBkVjZ0LVh5M2dYbmdkVjF2dFRMSWRDcl9mNmlUd0UxLWdtRzZWV1ZLZTgxT1hYajdmekVKYUo0N2R2T2JiaDVaeVNtMWo3ajQ4T2hybXdMZ2t5aw?oc=5",
+        "published": "Mon, 13 Jul 2026 05:55:38 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "＜ソニーグループ総力キャンペーン＞映画『スパイダーマン：ブランド・ニュー・デイ』公開記念キャンペーン！Xperia Lounge限定 NURO＆So-net限定キャンペーンも！ - コール徳島店",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBNLW1WakM3SGRCc1RWM283bEVkSEhXaXdfVGQtbE0yTlRlenBsYXFlMTQ4amk5SUt2WVVzbkVGejd3SnE0VV9jNERHTzQwazF5R1F4VzNOX1RwcHNxWFJzcjJ3?oc=5",
+        "published": "Mon, 13 Jul 2026 10:34:48 GMT",
+        "publisher": "コール徳島店"
+      },
+      {
+        "title": "ソニー、日本自然保護協会とネイチャーポジティブ実現に向けたパートナーシップ協定を締結 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQR1ZzSlgtNzNBX0lVcy01ZkhBYWVJTlZkREJ2b1llWG9tOHhEY09jaGdUVTV4aU84Y0JMbEt4cVdxUFAyTDdhOUxRM05XSF9xdXRwckVBenhOS1ptSWo4aFp2a3l5R3p1SWMwODF6dUZ2cUFzd3VOU2QxaVNsWWxXMGxXcktVcmZiTmxSQW9YY01mS1pBVlVBVXl3VFBVRV9nVHpn?oc=5",
+        "published": "Mon, 13 Jul 2026 05:43:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "ソニーの「新・名門事業」ゲームビジネスが抱える“3つのリスク”を徹底解説、プレイステーション6が逆風下の船出になりそうな理由 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBHMTZXTy1ZekhKdjFrRTVpbXBGdFBkVEIyZjdHX0tPekhtemxMWGVpSUpJaUtLQW5XTWgwQk9OTlFHeW15eFhHYVpOeWc?oc=5",
+        "published": "Mon, 13 Jul 2026 19:55:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "映画『スパイダーマン：ブランド・ニュー・デイ』公開記念オリジナルグッズが当たるキャンペーンを実施 - ASCII.jp",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5jODEybWduOWl2dGE1UWQ4cy1nbkc4YWhUSDhibkVvMm1INXdlQ3BCQ1BBV2RBQ29PM0dUOTZTZTlzZU5QNW80VHhBcXZWR2pSdmJ3MA?oc=5",
+        "published": "Mon, 13 Jul 2026 10:23:06 GMT",
+        "publisher": "ASCII.jp"
+      },
+      {
+        "title": "ソニーグループはなぜ10年で利益率を3倍に高められたのか - DIAMOND ハーバード・ビジネス・レビュー",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE90cl9TQ1pMcXZTQ3Y4Q0JOSzZxTHlsY2kwTGxfeGR6Qm9GWnY4dktjZXdHRG90elB0b295YkV2V0JaZU8zN2VrWUJYcWxBTzVqNmc?oc=5",
+        "published": "Sun, 12 Jul 2026 23:00:00 GMT",
+        "publisher": "DIAMOND ハーバード・ビジネス・レビュー"
+      },
+      {
+        "title": "【キオクシア乱高下】人気株に飛びつく投資家の｢末路｣を検証した - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5nOF9zYk1WV0tBQ2tzZTVGcTlFSEg4WFdyb2ZFdjBUMFR6VGJHSUU4YUE1bElMbC1GcVpmRnZDc0N6ZWVpTUo5QlRTTlNlQjdQZmFUTTEwOA?oc=5",
+        "published": "Mon, 13 Jul 2026 22:30:00 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "ゲームソフトを個人で所有する時代は過去のものに？ プレイステーション「ディスク生産終了」の衝撃（東洋経済オンライン） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9ldWhtVTA0LXJ1WHJ0MS1DUF9sX1hTTjI3eFhleEFvRkZpdzNYS0RjUzE1YTBUbGJHM2dWcmdWd3hyQ1p5bEljT0JPSHpUNHYwc1NQOXE5SFB3VWY2dmlDeFNxNG82dGlYY1NRU0dSSzM5SE9kUm55Mi1vZERDTkk?oc=5",
+        "published": "Mon, 13 Jul 2026 02:30:38 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "ソニーGドル債：実質初で最もタイト - c-eye.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBRQU9vUDNRbWozSUwtZGFid2lHTXk2eVNzTVBDcmp0RUF6QVZ2Wm5GazRxQzNwTC1ZZkQ1djZDY3BfSG5qY3VELVJ2UF8?oc=5",
+        "published": "Mon, 13 Jul 2026 02:54:15 GMT",
+        "publisher": "c-eye.co.jp"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587315.pdf",
+        "date": "2026-07-03 11:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584099.pdf",
+        "date": "2026-06-30 15:30:00"
+      },
+      {
+        "title": "米ドル建て無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577032.pdf",
+        "date": "2026-06-24 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260603560934.pdf",
+        "date": "2026-06-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの次世代イメージセンサーに関する戦略的提携に向けた基本合意のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518510.pdf",
+        "date": "2026-05-08 16:15:00"
+      },
+      {
+        "title": "2026年３月期 決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518952.pdf",
+        "date": "2026-05-08 12:00:00"
+      },
+      {
+        "title": "2025年度 連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518955.pdf",
+        "date": "2026-05-08 12:00:00"
+      },
+      {
+        "title": "自己株式の取得枠設定及び自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518814.pdf",
+        "date": "2026-05-08 12:00:00"
+      },
+      {
+        "title": "2025年度個別決算における関係会社株式評価損及び関係会社事業損失引当金繰入額計上のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518857.pdf",
+        "date": "2026-05-08 12:00:00"
+      },
+      {
+        "title": "ソニー・ホンダモビリティの今後の事業の方向性について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260421507465.pdf",
+        "date": "2026-04-21 16:00:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-07-14T08:11:05+09:00",
+  "price_as_of": "2026-07-13",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-07-04）に本銘柄への buy シグナルを出しているため、再エントリー抑制ルールに従い、新規エントリーはせずホールドとして継続監視します。",
+        "evidence": "reference.recent_buy.date=2026-07-04"
+      },
+      {
+        "reason": "テクニカル面で5日線が25日線を下回るデッドクロスが発生しており、短期的な下落トレンドへの移行を示唆しているためです。",
+        "evidence": "technical_view.points[0].evidence"
+      },
+      {
+        "reason": "ファンダメンタルズは堅調ですが、実績PER41.87倍とバリュエーションが高く、次回決算を控えて市場の様子見姿勢が強まる可能性が高いためです。",
+        "evidence": "fundamental_view.stance=neutral (strength=55), fundamental_view.cautions[0]"
+      }
+    ],
+    "risks": [
+      "2026年7月28日に予定される次回決算発表。高いバリュエーションを正当化するガイダンスが出ない場合の失望売りリスク。",
+      "2026年7月30〜31日の日銀金融政策決定会合に伴う金利・為替市場の急変動リスク。",
+      "市場全体が downtrend（下落トレンド）にある中、電気機器セクターからの資金流出が継続するリスク。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 55,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"直近14日以内（2026-07-04）に本銘柄への buy シグナルを出しているため、再エントリー抑制ルールに従い、新規エントリーはせずホールドとして継続監視します。\",\n      \"evidence\": \"reference.recent_buy.date=2026-07-04\"\n    },\n    {\n      \"reason\": \"テクニカル面で5日線が25日線を下回るデッドクロスが発生しており、短期的な下落トレンドへの移行を示唆しているためです。\",\n      \"evidence\": \"technical_view.points[0].evidence\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズは堅調ですが、実績PER41.87倍とバリュエーションが高く、次回決算を控えて市場の様子見姿勢が強まる可能性が高いためです。\",\n      \"evidence\": \"fundamental_view.stance=neutral (strength=55), fundamental_view.cautions[0]\"\n    }\n  ],\n  \"risks\": [\n    \"2026年7月28日に予定される次回決算発表。高いバリュエーションを正当化するガイダンスが出ない場合の失望売りリスク。\",\n    \"2026年7月30〜31日の日銀金融政策決定会合に伴う金利・為替市場の急変動リスク。\",\n    \"市場全体が downtrend（下落トレンド）にある中、電気機器セクターからの資金流出が継続するリスク。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "国内市場の地合い悪化に加え、前夜の米国市場におけるADRの急落やハイテク株安が逆風となり、短期的には下押し圧力が強まりやすいテクニカル形状です。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日移動平均線を下回るデッドクロスが発生しており、直近終値も25日線を下回るなど短期的なトレンドが弱転しています。",
+          "evidence": "price_technical.sma5_vs_sma25=dead(5日線が25日線の下), price_technical.last_close=76700.0, price_technical.sma25=76922.4"
+        },
+        {
+          "point": "前夜の米国市場でADR（KYCCF）が-4.67%と大幅に下落し、セクター代理のXLKも-2.42%と軟調なことから、国内寄り付きでの強い売り圧力が警戒されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=-4.67, us_overnight.sector_proxy.change_1d_pct=-2.42"
+        },
+        {
+          "point": "MACDおよびヒストグラムがマイナス圏に沈んでおり、短期的な下落モメンタムが依然として残っていることを示唆しています。",
+          "evidence": "price_technical.macd=-28.03, price_technical.macd_histogram=-274.47"
+        },
+        {
+          "point": "市場全体のレジームがdowntrend（下落トレンド）に判定されており、地合いの悪化が個別銘柄の上値を抑える要因となります。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.market_regime.topix_close_vs_sma25=below"
+        }
+      ],
+      "cautions": [
+        "前夜NY市場でのADR急落は寄り付き時点で織り込まれる可能性が高く、寄り付き後の売り一巡後に下げ渋る動きが出るか注視する必要があります。",
+        "60日騰落率は+22.04%と中期的な上昇トレンド自体は維持されているため、下値では押し目買いが誘発されやすい点に注意が必要です。",
+        "ボラティリティ指数（VIX）が前日比14.17%上昇と急反発しており、市場全体のセンチメント急悪化による乱高下に警戒が必要です。"
+      ],
+      "key_levels": {
+        "support": 69000.0,
+        "resistance": 82400.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "業績は連続増収増益トレンドを維持し、国内製造業の景況感も追い風であるものの、41倍を超える高いPER水準や直近の電気機器セクターからの資金流出懸念、そして間近に迫る決算発表を前に、目先は中立的なスタンスとします。",
+      "points": [
+        {
+          "point": "業績は堅調な増収・営業増益トレンドを維持しており、ROEも13.5%と高い資本効率・収益性を誇っています。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.valuation.return_on_equity=0.135"
+        },
+        {
+          "point": "2026年6月の製造業PMIが54.8と拡大基調にあり、日銀短観の大企業製造業DIも22.0と改善していることから、主力のFA（ファクトリーオートメーション）機器を取り巻く外部環境は良好です。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.8, macro.boj.tankan.di.large_manufacturing.current_di=22.0"
+        },
+        {
+          "point": "直近の2026年7月13日に、PLC「KV-Xシリーズ」の新機能追加や組み込み機器テスト支援システム「TC-3000シリーズ」の発売など、製品力強化に繋がる新規材料が相次いで報じられています。",
+          "evidence": "news.headlines[1], news.headlines[2]"
+        }
+      ],
+      "cautions": [
+        "実績PERが41.87倍、PBRが5.36倍と高水準なバリュエーションであり、期待値の高さゆえに決算内容やガイダンスへのハードルが上がっています（fundamentals.valuation.trailing_pe=41.869、fundamentals.valuation.price_to_book=5.358）。",
+        "2026年7月28日に次回決算発表を控えており、さらにその直後の7月30〜31日には日銀金融政策決定会合が予定されているため、短期的にはイベントリスクが高まりやすい状況です（fundamentals.next_earnings_date=2026-07-28、macro.boj.monetary_policy_meeting.next_meeting=2026-07-30〜2026-07-31）。",
+        "市場全体が調整局面（downtrend）にある中、直近のニュースでは「電気機器安、業種ローテが鮮明」と報じられており、セクターからの資金流出が株価の重石となるリスクがあります（macro.market_regime.market_regime=downtrend、news.headlines[9]）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-04",
+    "days_ago": 10,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)キーエンス【6861】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFAxcU9waXFEc3Q2aFY1YzRVa1Atd0pCMHhuam9mZmgwaUljMkZFNzcxNXRrNzFrM3NtUzFrelFnTVZTUmxLUEJxZHQxOFJSOUhXb3VOcXhRLTZlcG1LNWpJ?oc=5",
+        "published": "Mon, 13 Jul 2026 07:01:06 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "キーエンス、PLC「KV-Xシリーズ」に産業用ロボット向け「Robot Library」機能追加 - オートメーション新聞",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE12ZmxVZFdaZGw3OVhaYXFueW1BQkRtTlNrUEJYajVGclhyRnIzTlNEYkhPbm1FZnJqWlc2MEZsV2d2RmRSLWQ1ZWUxWW5VY0tqWEJyM2FHcWpKZw?oc=5",
+        "published": "Mon, 13 Jul 2026 10:54:36 GMT",
+        "publisher": "オートメーション新聞"
+      },
+      {
+        "title": "キーエンス、組み込み機器テスト支援システム「TC-3000シリーズ」発売 開発序盤からリリースまでのテスト不足を解消 - オートメーション新聞",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBNelYyZnRCLVpXVUp5WTktWkQteFhULTZuR1ZiNjBZbmFYMmpNRXBfLVFCMEd6VEU2Njd5bEozeWJiN3RwLVBfaFRwQ2pUdUxXeDRha1d6LTRLdw?oc=5",
+        "published": "Mon, 13 Jul 2026 10:26:48 GMT",
+        "publisher": "オートメーション新聞"
+      },
+      {
+        "title": "１３日のＡＤＲ動向＝円換算値で高安まちまち、ＩＮＰＥＸ、ＥＮＥＯＳ、三井住友など高い 速報 - kabushiki.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9XMGp5UEw4Z2ItZjEyalAtODU2MFZ5U2FyWXNCbUcwUk9VZjhnWmR6ck5JSG9IZ3Fscm8wMVdSMEpDaE5VaUYw?oc=5",
+        "published": "Mon, 13 Jul 2026 22:39:00 GMT",
+        "publisher": "kabushiki.jp"
+      },
+      {
+        "title": "｢中居正広問題｣の反省が逆効果に…文春報道翌日に佐藤二朗を見捨てたフジテレビの\"致命的な大失策\" - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9wVF9qdlF2NmN5YjBNT1l5bDU4YzFrdEpwQ0dIWF9ILWJrQk10Q2Vid3FiM09JcF9wV1ZkNE5qZ1p1QW03bFdnd0YyQWkyWnc?oc=5",
+        "published": "Mon, 13 Jul 2026 11:02:39 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "１３日のＡＤＲ動向＝円換算値で高安まちまち、ＩＮＰＥＸ、ＥＮＥＯＳ、三井住友など高い(ウエルスアドバイザー) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQQzk5T2pfcmlWUU1BTzNsMWpsT2ZDM1d6VExPbHBvVDZfME5BUlpKM3JMZDRvOGdBS2NQX1ZKMmo3d1hLYV80Q21EYmRQeWdyUUNpektqcDgtMUZKRFFkOS1zLUhQLWcxOVQyeWtodDFGcWRjSXE5TXBnTkhvOHpCaXlNSUJDZ00?oc=5",
+        "published": "Mon, 13 Jul 2026 22:41:52 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ドル円162円台で底堅い、イランがホルムズ海峡封鎖宣言で原油高と円売り先行 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFA4SWlrRnBtT0g1aFBfZ1lybmRrOWtsdjYzY0JkV1VQYUswbWhFYWhuMVNuRXE4LVRZemw2WlJmeGE2NDhxV0toMU84ajJSekNvWnR4U05qb2xVQzJ3NHpTczlwWTlBRzhYUlFBOTRydXpJQkhf?oc=5",
+        "published": "Mon, 13 Jul 2026 01:05:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "｢中居正広問題｣の反省が逆効果に…文春報道翌日に佐藤二朗を見捨てたフジテレビの\"致命的な大失策\" (4ページ目) - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE55NEQ3VEQ2ZTU5bXVncXlZX2Y1dUtiMXdXSWhxNjBrbk5pazlZcW9kYmdLdVBkaGktLVdPTGJTQUxpNnNWeUZONjBpWmFjLVJxaFRWSVYxTG4?oc=5",
+        "published": "Mon, 13 Jul 2026 11:00:00 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "カナデン、5本指のロボットハンド「Realhand」製品の国内代理店契約を獲得 - オートメーション新聞",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB2THVHWWhYSFBpUjVfV3hDMDdZXzR0X3FaaHhwVVBpQ1ZRMFdMTUNoNzV5MUxCRnBGbWRTeDdNYW5VWmxPeG44ZFA2WXVadjk3SkpDSGF2czNMQQ?oc=5",
+        "published": "Mon, 13 Jul 2026 10:39:51 GMT",
+        "publisher": "オートメーション新聞"
+      },
+      {
+        "title": "銀行高・電気機器安、業種ローテが鮮明【今日の市場はどう動いた？】 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5jbTBwR0duWU5pWVNxSkRqT2NBclFwY1RSVU1XYXltUWhPclB0TUcteUJSZ1lyc1d3T1BWa1RyXzFNVDB2Ym45bFNtSzA2QThXYWFXYm5KcFcteGJpZklNLUdXcGs?oc=5",
+        "published": "Mon, 13 Jul 2026 02:56:46 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120250724520054.pdf",
+        "date": "2025-07-29 16:00:00"
+      }
+    ]
+  }
+}
