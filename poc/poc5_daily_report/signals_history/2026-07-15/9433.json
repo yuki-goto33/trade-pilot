@@ -1,0 +1,213 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-07-15T08:14:50+09:00",
+  "price_as_of": "2026-07-14",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズの確信度が55（neutral）であり、buy判断の必須条件であるstrength 70以上に達していない。業績の伸びとガバナンスリスクが相殺している。",
+        "evidence": "fundamental_view.strength=55, fundamental_view.stance=neutral"
+      },
+      {
+        "reason": "テクニカルは強気を示唆しているが、統合判断ルールにより『両者強気』でない場合やファンダメンタルズが伴わない場合は織り込み済み、またはリスク含みと判断しエントリーを見送る。",
+        "evidence": "technical_view.stance=bullish, fundamental_view.points[2,3]"
+      },
+      {
+        "reason": "市場レジームがdowntrendであり、個別銘柄のテクニカル的な強さが地合いの悪化によって打ち消される蓋然性が高い。",
+        "evidence": "reference.market_regime=downtrend"
+      }
+    ],
+    "risks": [
+      "2026年7月30日の日銀金融政策決定会合による金利変動およびバリュー株への資金流出入リスク",
+      "259万件超のメールアドレス漏えい事案に伴うブランド毀損および追加コストの発生",
+      "2026年8月7日の決算発表における、内部統制の不備や不祥事に関するネガティブなガイダンスの提示",
+      "市場全体の地合い悪化（downtrend）に伴う、25日移動平均線（2732.48円）への回帰または割り込み"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 55,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 21,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズの確信度が55（neutral）であり、buy判断の必須条件であるstrength 70以上に達していない。業績の伸びとガバナンスリスクが相殺している。\",\n      \"evidence\": \"fundamental_view.strength=55, fundamental_view.stance=neutral\"\n    },\n    {\n      \"reason\": \"テクニカルは強気を示唆しているが、統合判断ルールにより『両者強気』でない場合やファンダメンタルズが伴わない場合は織り込み済み、またはリスク含みと判断しエントリーを見送る。\",\n      \"evidence\": \"technical_view.stance=bullish, fundamental_view.points[2,3]\"\n    },\n    {\n      \"reason\": \"市場レジームがdowntrendであり、個別銘柄のテクニカル的な強さが地合いの悪化によって打ち消される蓋然性が高い。\",\n      \"evidence\": \"reference.market_regime=downtrend\"\n    }\n  ],\n  \"risks\": [\n    \"2026年7月30日の日銀金融政策決定会合による金利変動およびバリュー株への資金流出入リスク\",\n    \"259万件超のメールアドレス漏えい事案に伴うブランド毀損および追加コストの発生\",\n    \"2026年8月7日の決算発表における、内部統制の不備や不祥事に関するネガティブなガイダンスの提示\",\n    \"市場全体の地合い悪化（downtrend）に伴う、25日移動平均線（2732.48円）への回帰または割り込み\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "個別銘柄のテクニカル面では、移動平均線のゴールデンクロスとMACDの好転により上昇トレンドが示唆されている。市場全体が弱気局面にある中、対TOPIXでのアウトパフォームを継続しており、個別株としての堅調さが目立つ。",
+      "points": [
+        {
+          "point": "SMA5がSMA25を上回るゴールデンクロス状態にあり、MACDヒストグラムも13.3とプラス圏で拡大していることから、短期的な上昇モメンタムが強い。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, macd_histogram=13.3"
+        },
+        {
+          "point": "中期トレンド（60日騰落率）が+7.63%とプラスで、さらに対TOPIX相対騰落率でも+2.2%と市場平均を上回る推移を見せている。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=7.63, relative_to_topix_60d_pct=2.2"
+        },
+        {
+          "point": "前夜のNY市場でADRが+1.27%と上昇しており、直近5営業日の終値ベースでも着実に下値を切り上げている。",
+          "evidence": "us_overnight.adr.change_1d_pct=1.27, price_technical.recent_5_days"
+        }
+      ],
+      "cautions": [
+        "TOPIXが25日線を下回るdowntrendレジームにあり、市場全体の地合い悪化が上値を抑えるリスクがある。",
+        "直近の期間高値である2877.5円付近では、戻り売りの圧力が強まる可能性がある。",
+        "RSI14が49.8と中立圏にあり、明確な過熱感はないものの、さらなる上昇には出来高の伴うブレイクが必要。"
+      ],
+      "key_levels": {
+        "support": 2732.48,
+        "resistance": 2877.5
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "持続的なEPSの成長トレンドと大規模な自社株買い枠の設定はポジティブだが、直近の個人情報漏えいニュースや内部統制の不備開示といったガバナンスリスクが短期的重石となる。",
+      "points": [
+        {
+          "point": "過去3期の業績推移においてEPSが150.59円から183.55円へと着実に増加しており、収益性は安定的に向上している。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "上限3,000億円の自社株買い枠を設定しており、将来的な需給の下支えと株主還元への意欲が確認できる。ただし、6月時点での取得実績は0円であり、実際の執行待ちの状態である。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "259万件超のメールアドレス漏えいという重大なセキュリティ事案が発生しており、ブランド毀損や追加コスト発生の懸念がある。",
+          "evidence": "news.headlines[1].title"
+        },
+        {
+          "point": "財務報告に係る内部統制の重要な不備が報告されており、企業の管理体制に対する市場の信頼低下が懸念される。",
+          "evidence": "disclosures.items[1].title"
+        }
+      ],
+      "cautions": [
+        "2026年7月30日から始まる日銀金融政策決定会合が15日後に迫っており、金利上昇に伴う高配当・バリュー株への資金流出入リスクがある。",
+        "2026年8月7日に次回決算発表を控えており、直近の不正アクセス事案による影響や通期見通しへの言及を注視する必要がある。",
+        "市場全体がdowntrend（25日線以下かつ5日騰落率マイナス）にあり、個別材料に関わらず外部環境に引きずられるリスクが高い。",
+        "forward_peが1216.738と極めて高い数値を示しており、入力データ内の年次EPS成長予測と乖離している点に不透明感がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ＫＤＤＩ(株)【KDDIY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5UeXNVcVVoNnBzaHVrVDJRR3VqcmJrUDk1T0h1dDRJT0ttelAwWVk0UWZWT0JaQTIxMkRtQUxzLW1FdnNRVXpvUWZRb0p4cVlJ?oc=5",
+        "published": "Tue, 14 Jul 2026 13:42:49 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "KDDI の ISP 事業者向けメールシステムへの不正アクセス、JCOM の顧客 2,593,076 名分のメールアドレスが漏えい - ScanNetSecurity",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1ackljTHJ6WlhfZ2hlejF3T2QzRXNOMVBMcm42Y1BQaTJ6YlVkbWhLZFhaX2VoVDlPRlBhbHJnQjljT1VHcy1CMWtVS0FvXzV3Um5fc0hzTGVIUUpwTVBGcXpVN3VsUUR3MDlJcQ?oc=5",
+        "published": "Mon, 13 Jul 2026 23:05:13 GMT",
+        "publisher": "ScanNetSecurity"
+      },
+      {
+        "title": "KDDIとdentsu Japan 、世界最大級のマーケティング・プロモーションの祭典「NRF APAC 2026」に初の共同出展 - 北海道新聞デジタル",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNODdwaVJrbk82cDlHemdpUlp0TlZRa1BNWk9uUDhEWG42ektYaU55TjQwUmtZV1dNbU0yS19WSnpBLTY1SlVhamdhQzZsX2hEYXNZd0RPNURjTzVacklYZ3NYMmZ4MVpkVGlZZkM2eUVMM18tT2FXa2VnUTdDVjJHN1RPMjlucFd1?oc=5",
+        "published": "Tue, 14 Jul 2026 21:29:42 GMT",
+        "publisher": "北海道新聞デジタル"
+      },
+      {
+        "title": "災害支援コンビニって何？ もしもの時の頼れる存在に - 読売新聞",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5GbUZTM1hjc0JQQzh0M3lPaXpYNlBncTVQRmdweV92aVRMWExwNFl4bjZSTTlENWZMWkcxdnlDY3pMZlVFanFDbmpwQ3JneVdxb2VZNlVIamJXaGlyMnJaRXFB?oc=5",
+        "published": "Tue, 14 Jul 2026 21:00:43 GMT",
+        "publisher": "読売新聞"
+      },
+      {
+        "title": "Pacific Meta Group主催「Blockchain Summit 2026 Autumn」にSMFG・KDDI・三井物産が特別協力企業として参画 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9PdEJ0aFBUZDNvQ1BwSEcxdktKRkVqa0RPV0h1X2p4UElHSEJVcHlZMmVrUlFwUmRhNkhtWWRBbUpTMVJQRndReHFCRlNkdU1yS2FYbFRMNDRRZUVpaXNSQlVISXFlTHlBRUE?oc=5",
+        "published": "Tue, 14 Jul 2026 04:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "第二電電（現ＫＤＤＩ）共同創業者の生前贈与、７・５億円申告漏れ…マンション評価額「低すぎる」と子４人に追徴 - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE55Q1VBQnZzS3NJcUVDWkdaTzhYblBVeTdrUjVEZFJ5bi11UnZSaG9kMEZjY0ZNYm00SnFIYXVVekVQRWZwamNEUEl0MEFSUXVKUVVON1dMdUJ4YURPMXNEVDdfR2hnZ2NIWGo1M2dXVEMxWDNaMGJETzYtNEVOczQ?oc=5",
+        "published": "Tue, 14 Jul 2026 03:02:00 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "日経平均は続落、前引け564円安の6万6678円 東エレクとファストリが重荷、値上がり銘柄は全体の6割超 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBFUXNaZkZ3N2JBWkJ1LWlKRUR1T3h0Z3ZjSGsyOGhmZnJucnV5TWE3dnAwZURqNUJvN1VnbmlRZEdjMDU3aXZrUDJZVWlIbEJZSkdBOXJ1TTNRaEpWUjBXX3pTaEEydldXUi1pSVRHUEtENW1j?oc=5",
+        "published": "Tue, 14 Jul 2026 03:16:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "株式会社旅行新聞新社 - 株式会社旅行新聞新社",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9GUHV1ZDJ1Q0FvVEsxWnp1a244dTd5dzFZWVdsNU1aOW5Gbl9tMjZDbGx6d29SQm4yaXktQXpuRkpIQ3FwTXotYzdCa21uZGRUUFZSMFItRnVSNmNiWTNsZkt5aklpWHlGRVZR?oc=5",
+        "published": "Tue, 14 Jul 2026 02:35:52 GMT",
+        "publisher": "株式会社旅行新聞新社"
+      },
+      {
+        "title": "povo2.0、海外データトッピングを買うともう1つもらえる海外ローミングキャンペーン - マイナビニュース",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1QV09oaXdacGlGNFNUSU9VRHl2eURIWWRSTS1sY3kweGJJVDdTZkd1eDlaY3drVUpBUFd6c1lURVlYUDBnOVl5c2VRNkdGaFlBZ1Z4cXBfOHRvU0s2?oc=5",
+        "published": "Tue, 14 Jul 2026 04:50:44 GMT",
+        "publisher": "マイナビニュース"
+      },
+      {
+        "title": "ドコモ500万人突破で注目「Starlink Direct」はauと単純比較できるのか？ - まぐまぐ",
+        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9XcGdoQThKeFN4U2RLQTB2VlQtTFBjbFZMamE1TDJUb1RvYU9LVHZRS0FFX21BbDIxd2REUTdWQjktRTBMS01VU3dn?oc=5",
+        "published": "Tue, 14 Jul 2026 07:55:29 GMT",
+        "publisher": "まぐまぐ"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      },
+      {
+        "title": "東京証券取引所への「改善報告書」の提出に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559424.pdf",
+        "date": "2026-06-02 16:00:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（中期経営戦略）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524146.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "auフィナンシャルホールディングス株式会社の東京証券取引所への株式上場準備の開始について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524156.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "2026年３月期　決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511523545.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524005.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524010.pdf",
+        "date": "2026-05-12 15:45:00"
+      }
+    ]
+  }
+}

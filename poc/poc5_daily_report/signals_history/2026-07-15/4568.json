@@ -1,0 +1,211 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-07-15T08:18:49+09:00",
+  "price_as_of": "2026-07-14",
+  "signal": {
+    "signal": "hold",
+    "confidence": 58,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家が見極め局面（strength=55）としており、成長鈍化への警戒感から buy の必須条件を満たさない。",
+        "evidence": "fundamental_view.summary / fundamental_view.points[0]"
+      },
+      {
+        "reason": "テクニカル面で中期的な下落トレンドが継続しており、かつ5日移動平均線を下回るなど短期的モメンタムも弱い。",
+        "evidence": "technical_view.stance=bearish (strength=75) / technical_view.points[1]"
+      },
+      {
+        "reason": "市場全体がダウントレンドにあり、外部環境（ADR・セクターETF下落）も重石となっている。",
+        "evidence": "reference.market_regime=downtrend / technical_view.points[2]"
+      },
+      {
+        "reason": "7月末に次回決算発表と日銀金融政策決定会合という重大なイベントを控えており、不透明感が非常に強い。",
+        "evidence": "reference.next_earnings_date=2026-07-31 / reference.next_boj_meeting=2026-07-30〜2026-07-31"
+      }
+    ],
+    "risks": [
+      "7月31日の決算発表における業績見通しの下方修正や供給計画損失の影響拡大。",
+      "日銀会合後の円高進行による、海外売上比率の高い製薬セクターへのネガティブインパクト。",
+      "直近サポートラインである25日移動平均線（2607.78円）を明確に下抜けた場合の下値加速。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 58,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 21,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家が見極め局面（strength=55）としており、成長鈍化への警戒感から buy の必須条件を満たさない。\",\n   \"evidence\": \"fundamental_view.summary / fundamental_view.points[0]\"\n  },\n  {\n   \"reason\": \"テクニカル面で中期的な下落トレンドが継続しており、かつ5日移動平均線を下回るなど短期的モメンタムも弱い。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=75) / technical_view.points[1]\"\n  },\n  {\n   \"reason\": \"市場全体がダウントレンドにあり、外部環境（ADR・セクターETF下落）も重石となっている。\",\n   \"evidence\": \"reference.market_regime=downtrend / technical_view.points[2]\"\n  },\n  {\n   \"reason\": \"7月末に次回決算発表と日銀金融政策決定会合という重大なイベントを控えており、不透明感が非常に強い。\",\n   \"evidence\": \"reference.next_earnings_date=2026-07-31 / reference.next_boj_meeting=2026-07-30〜2026-07-31\"\n  }\n ],\n \"risks\": [\n  \"7月31日の決算発表における業績見通しの下方修正や供給計画損失の影響拡大。\",\n  \"日銀会合後の円高進行による、海外売上比率の高い製薬セクターへのネガティブインパクト。\",\n  \"直近サポートラインである25日移動平均線（2607.78円）を明確に下抜けた場合の下値加速。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "中期的な下落トレンドが継続する中、直近の戻り歩調も5日線を割り込み失速。外部環境の悪化も重なり、弱含みの展開が予想されます。",
+      "points": [
+        {
+          "point": "60日騰落率および対TOPIX相対騰落率がいずれもマイナスであり、中期的な下落トレンドから脱却できていない。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-5.38, price_technical.trend_60d.relative_to_topix_60d_pct=-10.82"
+        },
+        {
+          "point": "直近2営業日連続で下落し、株価が5日移動平均線を下回るなど、短期的モメンタムが低下している。",
+          "evidence": "price_technical.last_close=2679.5, price_technical.sma5=2710.3, price_technical.recent_5_days[4].change_pct=-0.45"
+        },
+        {
+          "point": "市場全体のレジームがダウントレンドであることに加え、前夜の米国市場でADRおよび同セクターETFが下落しており、さらなる押し下げ要因となる。",
+          "evidence": "macro.market_regime.market_regime=downtrend, us_overnight.adr.change_1d_pct=-0.9, us_overnight.sector_proxy.change_1d_pct=-1.93"
+        }
+      ],
+      "cautions": [
+        "MACDは依然としてシグナルを上回って推移しており（5.64）、25日移動平均線付近での下げ渋りには注意が必要。",
+        "RSIが39.1と売られすぎ圏に近づいており、突発的なリバウンドが起こる可能性がある。",
+        "前夜のADRの下落は寄り付き段階で織り込まれるため、寄り付き後の売り一巡感に注意。"
+      ],
+      "key_levels": {
+        "support": 2607.78,
+        "resistance": 2710.3
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "2026年3月期が前期比で大幅な営業減益となり成長鈍化への警戒感が残る中、次回決算と日銀金融政策決定会合が重なる7月末を前に、現在はファンダメンタルズ面での見極めが必要な局面である。",
+      "points": [
+        {
+          "point": "2026年3月期は増収を確保したものの、営業利益は前期比約31%減と利益成長にブレーキがかかっている。",
+          "evidence": "fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=2291, fundamentals.earnings_trend.annual[1].operating_income_oku_jpy=3319"
+        },
+        {
+          "point": "直近のニュースでFRONTEOとのAI予測モデル構築が発表されており、中長期的な研究開発（R&D）の効率化とコスト抑制が期待される材料が出ている。",
+          "evidence": "news.headlines[2].title (2026-07-14)"
+        },
+        {
+          "point": "ROE 15.8%と資本効率が高く、配当利回りも3.72%と医薬品セクター内では一定の株主還元姿勢が示されており、下値の支えとなる可能性がある。",
+          "evidence": "fundamentals.valuation.return_on_equity=0.158, fundamentals.valuation.dividend_yield_percent=3.72"
+        }
+      ],
+      "cautions": [
+        "2026年7月31日に次回決算発表を控えており、直近の供給計画見直しに伴う損失の影響など、業績の不透明感がある（fundamentals.next_earnings_date, disclosures.items[9]）。",
+        "日銀の金融政策決定会合が決算発表と同日の7月30-31日に開催される予定で、金利上昇に伴う為替変動（円高進行）が輸出企業の採算に悪影響を及ぼすリスクがある（macro.boj.monetary_policy_meeting.next_meeting）。",
+        "ドル円が162円台の高水準にあり、為替のトレンド転換が発生した場合、海外売上比率の高い製薬業にとって収益の下押し要因となる（macro.indices[2]）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "第一三共(株)【4568】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBIS2NSZTVoVDllRlVKSHozNnpLbWdVNkIwNl9GXzEtSkFNbzVSVFFvYTlBWnFsNlA4SFY2N29xNnhwcWhieWJGdlVNZGdCbFp3ZmE1R0pYRXVOOExmcFdr?oc=5",
+        "published": "Tue, 14 Jul 2026 06:54:05 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "国内製薬パイプライン分析、第一三共の新中計の成否の鍵はダトロウェイ - 日経バイオテクONLINE",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE42c3YzNGcyNGJiYTdfenc2ZG5aRnloSzMtZWlnWV9xeEVYXzI5b2VReVNzYUZESFBJai11cEhUMkdqX1VuRHBQVjlWWnhud2tTTXlSZ2VVT3c1Vmx0MUlodDNnanBZMS1zaXQ4TlZ6NA?oc=5",
+        "published": "Tue, 14 Jul 2026 22:02:35 GMT",
+        "publisher": "日経バイオテクONLINE"
+      },
+      {
+        "title": "ＦＲＯＮＴＥＯ[2158]：FRONTEOと第一三共、毒性試験報告書から 毒性学的解釈を自動抽出する予測モデルを構築 2026年7月14日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNUVBlRUtTcXNIMjBTMGMtRE85U25Wb1Item1yZ1NKNk45ZV9NZ19BYVJUb09aY2tBY2VYMDRJUDI4b2JnendXamRFcEdIS0o4czZTWWdwY09PSy03NGdHSTJVX1lFOElRbUlvSG5YZ3pyWjM1U2pEcExNQkhreEVGU3N6TVU5TllSY2pla01XT0NCdy1LUGVsd0x2RnJkaXlKczBGenBQMXpPSzZEUHRBMWtYTWh0SXpxeHE3elNnN2ZzZFVSNGt2YmtsSVg?oc=5",
+        "published": "Tue, 14 Jul 2026 07:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "FRONTEOと第一三共、毒性試験報告書から毒性学的解釈を自動抽出する予測モデルを構築 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFAtcnZLNFJ5R3A2X0tZb0xWcFdhRm5va0VISS02aXdrb1FybDM0bUJyRVllQnQzTm1LZjU3WkhnYVpOb1pZSTJnMm52bnktcnlsaklyUU1mdXBXUXQ2RGlxZ0daTkhSUno4SHc?oc=5",
+        "published": "Tue, 14 Jul 2026 07:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "第一三共(株)【DSNKY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1LdkZxbEN5Vm9Scm5nSFgzTDZJZlNtcVFXR0dkU1J3c2RfRFBuNmNiOGFibVNVTE1zT2lad2dyNnA0TFRoT3RVZktKcGRiMVVV?oc=5",
+        "published": "Tue, 14 Jul 2026 09:51:10 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "FRONTEOと第一三共、毒性試験報告書のAI自動抽出モデルを構築 - ニュースメディアVOIX",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9ONmM1UjZzd3ZISWVaRUd3eXZqazAzX256NmhfV25PU2tJc2JsWnFhR2p1bUVXMDRuNDRVWEZURjMzWmg3eUxYMW1DaXl2TW1PSS1r?oc=5",
+        "published": "Tue, 14 Jul 2026 07:03:45 GMT",
+        "publisher": "ニュースメディアVOIX"
+      },
+      {
+        "title": "第一三共(株)【4568】：株つぶやき - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1NS0ZnMTdCNDFBWkw1NXlLWTdVTWZUdmQ1R1ZzU1djVFM1U2FjUmFOelh6VEl0WE96Nm1wNTdhbnNUVUhONDJESGs0WDI0eUxKQXNidHUtVS0?oc=5",
+        "published": "Tue, 14 Jul 2026 09:47:28 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "岐阜薬科大、「岐阜市立大薬学部」へ - PHARMACY NEWSBREAK",
+        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE12MUh4Qk9lc094RkdEZjU5VXQ1UjdOVlExVzItTVE3MWw1UkZkMk9IRldTQ3Nfc0dNcnNsTXNmX2xtT0Z3Z29sOFpB0gFPQVVfeXFMTmNDQS00M182bGgxS2N2Z0dJOWNnUDd0N21zUEVieVp1YUZyMTBuUDBFVmlURFlfLUxsWFc5Tk5ZemdxMHMtcnd3MlVtTmR0TQ?oc=5",
+        "published": "Tue, 14 Jul 2026 04:32:00 GMT",
+        "publisher": "PHARMACY NEWSBREAK"
+      },
+      {
+        "title": "米国株式市場は反落、原油高やAI懸念が再燃 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNU2VVRjF2OW9tVUN6S3FiRmtVYXRSVmQ2Q09pX1l0Z0xDemZOLTVhYnk1RUh2SnN4X2FFOHZKMkhmcksyU2ZJSHRKUm5KeUhPMGZ1Zno0VU1ER2pEZ3VETTg1RG01V2t3YnhzMDFwTHdpN3dWeHNIX2J4MGlQX2FNUUk3MHNLOWdHOTZsdNIBjAFBVV95cUxNU2VVRjF2OW9tVUN6S3FiRmtVYXRSVmQ2Q09pX1l0Z0xDemZOLTVhYnk1RUh2SnN4X2FFOHZKMkhmcksyU2ZJSHRKUm5KeUhPMGZ1Zno0VU1ER2pEZ3VETTg1RG01V2t3YnhzMDFwTHdpN3dWeHNIX2J4MGlQX2FNUUk3MHNLOWdHOTZsdA?oc=5",
+        "published": "Mon, 13 Jul 2026 23:02:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "今売れている「シャンプー」おすすめ3選＆ランキング　成分や使用感にこだわったものが人気【2025年10月版】 | ヘアケア・スタイリング Fav-Log by ITmedia - ねとらぼ",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5hVFJSUHozUzh6ZXUtdlZsT0YzaERfSVFyZnpKeHNHbEZ1TEQ5SWZPa05qY0pVY252bzY2UHBva2Q5XzVHTjlOUE50ZFhLa240dlI2cWctSDhreTRu0gFiQVVfeXFMTTN3Rmc2OWhWS3pLNHYybDJWeVUwTEs5cmtxWk9mX3dBVzl1azhzVEpZS01DUDBVWGw1aGN2LVR5cDBjb1VsRlFGMWdDc1JTSGRWdUNIVVd4eGdrMzhKSWJLUnc?oc=5",
+        "published": "Tue, 14 Jul 2026 04:04:21 GMT",
+        "publisher": "ねとらぼ"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584479.pdf",
+        "date": "2026-06-30 16:30:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260620575199.pdf",
+        "date": "2026-06-22 15:30:00"
+      },
+      {
+        "title": "財務上の特約が付された金銭消費貸借契約の締結に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617573095.pdf",
+        "date": "2026-06-17 19:00:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬等の内容の一部改定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515539092.pdf",
+        "date": "2026-05-18 13:00:00"
+      },
+      {
+        "title": "（訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260513530596.pdf",
+        "date": "2026-05-13 17:30:00"
+      },
+      {
+        "title": "自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511521821.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522113.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "決算補足資料（2025年度決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522160.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "2025年度決算および第6期（2026-2030年度）中期経営計画　説明会",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522186.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "製品供給計画の見直しに伴う損失の発生および 2026年3月期通期連結業績予想の修正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260415504962.pdf",
+        "date": "2026-05-08 13:00:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-07-15T08:11:17+09:00",
+  "price_as_of": "2026-07-14",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-07-04）に買付シグナルが発出されており、現在はその継続監視期間に該当するため、統合判断ルールに基づき新規の買いは行わず維持とする。",
+        "evidence": "reference.recent_buy.date=2026-07-04"
+      },
+      {
+        "reason": "ファンダメンタルズ専門家の確信度が60であり、新規buyの必須条件である70以上に達していないため、カタリスト不足と判断する。",
+        "evidence": "fundamental_view.strength=60"
+      },
+      {
+        "reason": "テクニカル面でADRの大幅高という好材料はあるものの、国内チャートでは5日線が25日線を下回るデッドクロスが発生しており、反転を確認する段階にある。",
+        "evidence": "technical_view.points[0]: price_technical.sma5_vs_sma25=\"dead\""
+      }
+    ],
+    "risks": [
+      "2026年7月28日に予定されている決算発表に伴う業績への反応リスク。",
+      "2026年7月30-31日の日銀金融政策決定会合による金利・為替変動とグロース株のバリュエーション調整リスク。",
+      "市場レジームがdowntrendにあり、マクロ地合いの悪化による連れ安の可能性。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 60,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"直近14日以内（2026-07-04）に買付シグナルが発出されており、現在はその継続監視期間に該当するため、統合判断ルールに基づき新規の買いは行わず維持とする。\",\n      \"evidence\": \"reference.recent_buy.date=2026-07-04\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズ専門家の確信度が60であり、新規buyの必須条件である70以上に達していないため、カタリスト不足と判断する。\",\n      \"evidence\": \"fundamental_view.strength=60\"\n    },\n    {\n      \"reason\": \"テクニカル面でADRの大幅高という好材料はあるものの、国内チャートでは5日線が25日線を下回るデッドクロスが発生しており、反転を確認する段階にある。\",\n      \"evidence\": \"technical_view.points[0]: price_technical.sma5_vs_sma25=\\\"dead\\\"\"\n    }\n  ],\n  \"risks\": [\n    \"2026年7月28日に予定されている決算発表に伴う業績への反応リスク。\",\n    \"2026年7月30-31日の日銀金融政策決定会合による金利・為替変動とグロース株のバリュエーション調整リスク。\",\n    \"市場レジームがdowntrendにあり、マクロ地合いの悪化による連れ安の可能性。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "テクニカル指標はデッドクロスの発生やMACDの弱気形状を示しており短期トレンドは下向きですが、前夜NY市場のADRが大幅高となっているため、寄り付き後の自律反発と地合いの悪化懸念が拮抗する見通しです。",
+      "points": [
+        {
+          "point": "5日線が25日線を下回り、MACDヒストグラムもマイナス圏で拡大を続けており、短期的な調整圧力が強い状態にあります。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead\", price_technical.macd_histogram=-285.28"
+        },
+        {
+          "point": "前夜のNY市場でADRが5%を超える大幅上昇を見せており、国内市場でも寄り付きの大幅なギャップアップが期待されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=5.19"
+        },
+        {
+          "point": "中期（60日）ではTOPIXを大幅にアウトパフォームしており、長期的な上昇トレンドの中での一時的な押し目形成の局面にあります。",
+          "evidence": "price_technical.trend_60d.relative_to_topix_60d_pct=14.71"
+        },
+        {
+          "point": "TOPIXが25日線を下回り、市場全体がdowntrendレジームにあるため、個別株の反発も限定的になるリスクがあります。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\""
+        }
+      ],
+      "cautions": [
+        "ADRの大幅高は寄り付き価格に織り込まれるため、寄り付き後の利益確定売りによる「寄り天」のリスクに注意が必要です。",
+        "MACDのゴールデンクロスや25日線の回復など、明確な反転シグナルが出るまでは、下値模索が続く可能性があります。",
+        "RSIが39.7と弱含んでいますが、売られすぎ水準（30以下）には到達しておらず、調整が長引く余地があります。"
+      ],
+      "key_levels": {
+        "support": 69000.0,
+        "resistance": 76947.2
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 60,
+      "summary": "持続的な増収増益トレンドと製造業景況感の改善が追い風。投資単位引下げの検討など需給改善期待もあるが、決算発表を2週間後に控え、新たな確実な材料を待つ局面。",
+      "points": [
+        {
+          "point": "売上高・利益ともに過去3期連続で右肩上がりの増収増益を維持しており、50%を超える極めて高い営業利益率を維持している。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "製造業PMIが54.8と拡大圏を維持し、日銀短観でも大企業製造業の業況判断DIが改善しており、主力事業であるFA関連需要の底堅さが示唆されている。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.8, macro.boj.tankan.di.large_manufacturing.change_from_prev=5.0"
+        },
+        {
+          "point": "株式分割に繋がる「投資単位の引下げに関する考え方」の開示や、寄前注文ランキングでの買い優勢など、投資家からの関心と需給改善への期待が高い。",
+          "evidence": "disclosures.items[0], news.headlines[0]"
+        }
+      ],
+      "cautions": [
+        "次回決算発表（2026年7月28日）が目前に迫っており、内容次第で短期的ボラティリティが高まるリスクがある。",
+        "日銀金融政策決定会合（2026年7月30-31日）が近く、金利上昇や円高進行がグロース株である同社のバリュエーション調整を招く可能性がある。",
+        "市場全体が25日移動平均線を下回るダウントレンドにあり、マクロ環境の悪化に引きずられる懸念がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-04",
+    "days_ago": 11,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "寄前【板状況】注文ランキング 【買いトップ】キーエンス 【売りトップ】キオクシア [08:53](株探ニュース) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPRHE3QUliMGZmVEZhLVJhSURfNUk5bXNWS1RHTVZNRGgzZElnVFp4UHNvNmRJVFdUeEZaMC1fenNsZU1wUFZZcW1COWNsRFBBQkU5NTBFYS1SbUhZVUV2bHlXQ0wtQl9XZHFNV3dHNzBZb2lYNUZuZjBuMW0tY3Z0NUxmLUQySU0?oc=5",
+        "published": "Tue, 14 Jul 2026 00:08:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "【業界レポート Vol.1（増補改訂版 Ver.2）】半導体・電子部品業界の新規事業・多角化 - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE0zOU1CWVUyamNVajhJY0tzNmxvTmpYS0JjaThLdWdpZEFOSkU4TjNaT19ObjlFQjNHdy1zMEhHMjMtSU5Rb2QtUjZmQUpPaEFQbWY4dA?oc=5",
+        "published": "Tue, 14 Jul 2026 06:30:29 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "日経平均寄与度ランキング（大引け）〜日経平均は反発、アドバンテストやソフトバンクGが2銘柄で約399円分押し上げ - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPeTVaQXYzam1RS1EtUy1IV2E1R20wbkp1NmF3SWQ2dFlPOEUzWW5ta2NOaEZxM3hvZUVlMXlxdlVBN01kRFNFMDVfWjQyNHR2SC02NWNyT0owRzY4aERlSmVreWlDRkJNREdMYUxsdnk4T3Myd2RmQVhNSi1XQll0Z2s4UGsyMng3MlZvNzFmbjbSAYwBQVVfeXFMT3JZZl9ScWV6QWlLOEJ3ZEZEOXJKWm1rbDB2Z1VxeDQ2MWdqNmhkQVhKQVpGVElfTG5BTlNLcXJfdU5YQ3FXYzRnaHNVZWlBWFotQ05Ta0tQVWIzRXpNR0Nvak92bDE1dE1ndEIwNkxVck1NYjRPa0lEdnRWWWx1OHhRWkJuak4xVzQtREI?oc=5",
+        "published": "Tue, 14 Jul 2026 07:49:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120250724520054.pdf",
+        "date": "2025-07-29 16:00:00"
+      }
+    ]
+  }
+}

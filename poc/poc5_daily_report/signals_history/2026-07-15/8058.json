@@ -1,0 +1,225 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-07-15T08:15:59+09:00",
+  "price_as_of": "2026-07-14",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "直近 buy（2026-07-04）の継続監視中であり、同一銘柄への短期連続エントリーを避けるルールに基づき、現在はポジションを維持する局面と判断する。",
+        "evidence": "reference.recent_buy.date=2026-07-04"
+      },
+      {
+        "reason": "ファンダメンタルズ面において、PER21倍・PBR1.7倍超という水準はセクター比で割安感がなく、減益トレンドの中で上値を追う決定的な材料に欠ける。",
+        "evidence": "fundamental_view.points[2]: fundamentals.valuation.trailing_pe=21.414"
+      },
+      {
+        "reason": "テクニカル面では25日移動平均線を下回る中期下落トレンドが継続しており、TOPIXに対しても大幅に劣後しているため、反発の確信度が低い。",
+        "evidence": "technical_view.points[0]: relative_to_topix_60d_pct=-15.31"
+      },
+      {
+        "reason": "市場全体がダウントレンド・レジームにあり、個別銘柄の好材料よりも地合いの悪化による下押し圧力が優先されやすい環境である。",
+        "evidence": "reference.market_regime=\"downtrend\""
+      }
+    ],
+    "risks": [
+      "2026年8月3日に予定されている第1四半期決算発表における業績進捗の鈍化リスク。",
+      "7月30-31日の日銀金融政策決定会合に伴う、金利上昇や円高進行による商社セクターへのネガティブな影響。",
+      "エヌビディア関連の提携期待が市場の噂に留まり、具体化しない場合の失望売り。",
+      "ADRのプラス推移を受けた窓開け反発が、テクニカル的な戻り売り圧力に押されるリスク。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 55,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 21,\n  \"reasons\": [\n    {\n      \"reason\": \"直近 buy（2026-07-04）の継続監視中であり、同一銘柄への短期連続エントリーを避けるルールに基づき、現在はポジションを維持する局面と判断する。\",\n      \"evidence\": \"reference.recent_buy.date=2026-07-04\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズ面において、PER21倍・PBR1.7倍超という水準はセクター比で割安感がなく、減益トレンドの中で上値を追う決定的な材料に欠ける。\",\n      \"evidence\": \"fundamental_view.points[2]: fundamentals.valuation.trailing_pe=21.414\"\n    },\n    {\n      \"reason\": \"テクニカル面では25日移動平均線を下回る中期下落トレンドが継続しており、TOPIXに対しても大幅に劣後しているため、反発の確信度が低い。\",\n      \"evidence\": \"technical_view.points[0]: relative_to_topix_60d_pct=-15.31\"\n    },\n    {\n      \"reason\": \"市場全体がダウントレンド・レジームにあり、個別銘柄の好材料よりも地合いの悪化による下押し圧力が優先されやすい環境である。\",\n      \"evidence\": \"reference.market_regime=\\\"downtrend\\\"\"\n    }\n  ],\n  \"risks\": [\n    \"2026年8月3日に予定されている第1四半期決算発表における業績進捗の鈍化リスク。\",\n    \"7月30-31日の日銀金融政策決定会合に伴う、金利上昇や円高進行による商社セクターへのネガティブな影響。\",\n    \"エヌビディア関連の提携期待が市場の噂に留まり、具体化しない場合の失望売り。\",\n    \"ADRのプラス推移を受けた窓開け反発が、テクニカル的な戻り売り圧力に押されるリスク。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "中期的な下落トレンドが鮮明であり、25日移動平均線を下回る推移が続いています。直近2日間で反発の兆しは見られるものの、トレンド転換を示す決定的な根拠には乏しく、戻り売りの圧力が強い局面と判断します。",
+      "points": [
+        {
+          "point": "60営業日騰落率がマイナスであり、かつTOPIXに対しても大幅に劣後していることから、中期的な下落トレンドが継続していると判断されます。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-9.88, relative_to_topix_60d_pct=-15.31"
+        },
+        {
+          "point": "5日線が25日線を下回るデッドクロス状態にあり、終値も25日線を回復できていません。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead\", last_close=4496.0, sma25=4506.12"
+        },
+        {
+          "point": "市場全体の地合いが「downtrend」レジームにあり、個別銘柄への下押し圧力となりやすい環境です。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\""
+        },
+        {
+          "point": "MACDヒストグラムは改善傾向にあり下落の勢いは鈍化していますが、MACD本体は依然として大幅なマイナス圏で推移しています。",
+          "evidence": "price_technical.macd=-79.07, macd_histogram=19.69"
+        }
+      ],
+      "cautions": [
+        "前夜のADR（米国預託証券）が+5.49%と大幅に上昇しており、寄り付きでの窓開けによる25日線の突破には注意が必要です。",
+        "RSI14が35.7と売られすぎ水準に接近しており、自律反発が強まるリスクがあります。"
+      ],
+      "key_levels": {
+        "support": 4286.0,
+        "resistance": 4506.12
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "良品計画の株式売却による資産効率化やエヌビディア関連の提携期待といった個別材料が浮上しているが、2026年3月期の減益計画に加え、商社セクターとしては高水準なバリュエーションが上値を抑える要因となっている。",
+      "points": [
+        {
+          "point": "資産の効率化と戦略的提携への移行。良品計画の全株式（3.9％）を売却し、資本関係を解消する一方で業務提携を継続。保有資産の整理と資本効率の改善が示唆された。",
+          "evidence": "news.良品計画、三菱商事と資本関係解消 業務提携は継続 / news.三菱商事が良品計画の全株式3.9％を売却"
+        },
+        {
+          "point": "先端技術・エネルギー分野での新規カタリスト。エヌビディアがデータセンター向け技術として同社のシステムを検討しているとの報道や、グリーン水素実証の開始など、非資源・次世代分野での思惑が強い。",
+          "evidence": "news.市場の噂：エヌビディア、データセンター向け冷却・電源システムに三菱商事の技術を検討 / news.キリンビール、千歳工場で グリーン水素実証を開始"
+        },
+        {
+          "point": "業績トレンドの鈍化と割安感の欠如。2024年3月期をピークに純利益は減少傾向にあり、2026年3月期も減益を計画している。また、PER21倍超、PBR1.7倍超は総合商社セクターの歴史的水準から見て割安とは言えない。",
+          "evidence": "fundamentals.earnings_trend.annual.net_income_oku_jpy(9640 -> 8005) / fundamentals.valuation.trailing_pe=21.414 / fundamentals.valuation.price_to_book=1.744"
+        },
+        {
+          "point": "マクロ環境の不透明感。製造業・非製造業PMIは拡大圏にあるものの、市場全体がダウントレンドにあり、国内金利上昇や日銀政策決定会合を前に警戒感が強まりやすい地合いである。",
+          "evidence": "macro.market_regime.market_regime=downtrend / macro.boj.monetary_policy_meeting.days_until_next=15 / macro.rates.jgb_10y_percent=2.786"
+        }
+      ],
+      "cautions": [
+        "2026年8月3日に予定されている決算発表（1Q）による業績進捗の確認が必要。進捗率が想定を下回る場合、高めのバリュエーションを維持できず調整が深まるリスクがある。",
+        "7月30-31日の日銀金融政策決定会合。金利上昇や円安修正の進行は、外貨建て資産や輸出入比率の大きい総合商社にとって収益・株価両面でのボラティリティ要因となる。",
+        "エヌビディアによる技術検討は「市場の噂」段階であり、正式な開示がない限り期待先行の反動売りに注意が必要。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-04",
+    "days_ago": 11,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "三菱商事(株)【8058】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ScXhBTU9DVmdWalgxWWpQcThsOHBreVdENTJLZUh2YU9xMldYU1dJUmw2NjdWVWY0N2tuZmtZWTkySUZocWhkT24xNVU3OC1PYnZjU3FaTjQ1b0NkdGRV?oc=5",
+        "published": "Tue, 14 Jul 2026 06:52:58 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "三菱商事ロジスティクス 物流eラーニング講座で法人版 - daily-cargo.com",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9BaDI3UGJVZ09TMmo3T0sxT3E4ZTEzME5SZ0xia2ZYQmJ4VldVZGNYRnY4QXd4amN2VnZPVFd6MVlrR09xMWx4Q0RyZWxRMEZCVVJiUmVvTUJCWFlFVDhTVzNoNG1SUWFpbXc?oc=5",
+        "published": "Tue, 14 Jul 2026 09:04:35 GMT",
+        "publisher": "daily-cargo.com"
+      },
+      {
+        "title": "良品計画、三菱商事と資本関係解消 業務提携は継続 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNbGM0QUdwTldpSVp5WnJlVVZXTzJKS1Foc0JUZzNhd21FZGhZRTVKcWhqNEtxTWdLbERySTAtWEdYRnZNVE1jcmMxcklXWUxQMU1OdEc5d1JxMnlsdTVzeGtSVW1FY1dYWjNiTEdlX1cwY1Q3RHZHaEwwTzc2SnJha05LeDUwc1FyRzVNbmc1OGY0RUxEYmJrT2tDTzhyelh4c2c?oc=5",
+        "published": "Mon, 13 Jul 2026 23:29:26 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "市場の噂：エヌビディア、データセンター向け冷却・電源システムに三菱商事の技術を検討 - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQRS1kSnBFaUJ4SnJQOU9pSXo1VDJPc1luQ0lQdlZlVmVTVjBuZFZFLVNMbEJ4YWR2aGZkQ3hwX1Q3R19rTzdvX0pQWnppRWxQblZRR3d2YURpOVA1clhBd1hXWE9EaVUyWnpjZzhRQ3pNYXVQNzhsa1Z6cjIwVDFKbU5xcFVwRkxXNTdUMnhwOWltXzNBVjFKWlM1SGI5MEFTT1NLdm95OThsakZjM2tSVFlTemRZUjBS?oc=5",
+        "published": "Tue, 14 Jul 2026 15:59:12 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "《商社の大学別就職者数ランキングを解剖》三菱商事、三井物産、住友商事への就職者は「東大・早大・慶大で約6割」の現実　3大学以外で強い大学はどこか - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNMVhSUmpicjZyUFZBT054NWNXSk5zZldaOUpqdHRlSFY1NVhtTFgzTjZ2cDc2TVdzckl6Zkk3cjRnV290bjdjS3RfSWFTOWZjOC1FVDJvZ29xUmpLREdTMUE3MlRjQk1IQ2QtNV9NUXhyeXdvOG56dVd3WFM4WUlwMzNPTkdYUdIBggFBVV95cUxPOFRWdkNFYUN4MzZPa2Nna2RqbVFjeTRaaGp6MDlxQzR0eUVFTnVMWlFUS08xNEZoX2pGQjFPM1owVGNyVTUxNkQzNi1INDhWWVRWQ0Z6M2xud1pyc1dvNEw1ZFNzREg5NmtQblptRkZrTGg4RHFRUDJTRlRKazcteW1n?oc=5",
+        "published": "Tue, 14 Jul 2026 02:15:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "良品計画－買い気配 三菱商事と戦略的業務提携 資本関係は解消(トレーダーズ・ウェブ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPRTRKX09kMmM0Q2JGZDVmTU5Qa3ludmtlZGREdk1CemltMWlXUHdieWZRZnlGRHpNeFhiWF96dGpMbGZ3MkFzMTMzN2JyWmlZRHI0QzFRU1RfanljN2N3UHNFQVozRGlOSDA5YzZDRXZTNmRnbW5NTTlNSmg5b3JNVzRxdDdyd1k?oc=5",
+        "published": "Tue, 14 Jul 2026 00:01:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "三菱商が保有する良品計画株を売却、戦略的業務提携を締結 - ロイター",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFA3bzdiSlVLNVNxQVBycDQ1TjNIQjNZV191U3c0dF9YTjNXb1JNVzVpeFdTZmlrRERRbmUycHBYMXp0bTk4Unk2SVlmWmNwSDM4OHlnTnVkN2N1b0dOWE1jNUlIbDNZNVFIZEtVcV9nSHNtQmRrclE?oc=5",
+        "published": "Mon, 13 Jul 2026 23:31:57 GMT",
+        "publisher": "ロイター"
+      },
+      {
+        "title": "《商社の大学別就職者数ランキングを解剖》三菱商事、三井物産、住友商事への就職者は「東大・早大・慶大で約6割」の現実 3大学以外で強い大学はどこか - マネーポストWEB",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5xOUtzUEtQYnlMM3JUaFd0ZmFLcWhETy1DQVZ1dFRxd25ncFA4dFdLek9tbzUyMnh4Yk1MSTd0VTRjbGxIMzJF?oc=5",
+        "published": "Tue, 14 Jul 2026 02:00:00 GMT",
+        "publisher": "マネーポストWEB"
+      },
+      {
+        "title": "【2026年7月14日更新】キリンビール、千歳工場で グリーン水素実証を開始 - 産報出版",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9pQnJZekVXTDVzNDIwZnpobzQyZ3ZhNzYzeTNhclVqclF6dmdWNWxDVzB0VUpfaTVWbnA4UUt3aUNqMFhfMWEzbmFiMU5ycmxmcEl6NDV0QmFLdkFMQmVEanhvUQ?oc=5",
+        "published": "Tue, 14 Jul 2026 08:11:20 GMT",
+        "publisher": "産報出版"
+      },
+      {
+        "title": "三菱商事が良品計画の全株式3.9％を売却 第4位株主から協業パートナーへ - SEVENTIE TWO",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE4yMlMzTE56Ql9oNEZwTWRld0VMSXZwQ0FOcHFGMTRSME5zc1ZPaDFGbTItcUtXNy1iQ1lPd0w0WFY5bFJzQS0wS2QtUlBlQnEyeVdXdFNtMUl2NDJzLV9oN0N6eWVfdndLZkowVVpUUW1rUQ?oc=5",
+        "published": "Mon, 13 Jul 2026 23:48:15 GMT",
+        "publisher": "SEVENTIE TWO"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "子会社間の合併及び特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552595.pdf",
+        "date": "2026-05-29 09:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C2プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539898.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C3プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539905.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C4プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539910.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C5プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539918.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C6プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539939.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515679.pdf",
+        "date": "2026-05-01 14:00:00"
+      },
+      {
+        "title": "通期個別業績と前期実績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515675.pdf",
+        "date": "2026-05-01 14:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260416505643.pdf",
+        "date": "2026-04-17 14:00:00"
+      },
+      {
+        "title": "（訂正）「自己株式の取得結果および取得終了並びに消却株式数に関するお知らせ」 の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260325589148.pdf",
+        "date": "2026-03-25 17:20:00"
+      }
+    ]
+  }
+}
