@@ -1,0 +1,216 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-07-16T08:13:50+09:00",
+  "price_as_of": "2026-07-15",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "テクニカル面では非常に強い上昇トレンドにあるが、RSIが過熱圏に迫り直近高値の抵抗感も強いため、追随買いは高値掴みのリスクがある。",
+        "evidence": "technical_view.stance=bullish (strength=85), technical_view.cautions[0]: RSI 68.6"
+      },
+      {
+        "reason": "大規模な情報漏洩報道という重大な悪材料があり、ガバナンスへの不信感が短期的には株価の重石となる可能性が高い。",
+        "evidence": "fundamental_view.points[1]: 762万人分のパスワード漏洩"
+      },
+      {
+        "reason": "ファンダメンタルズの確信度が低く、統合判断ルール（v5）に基づき、テクニカルが既に強気な局面での買いエントリーは「織り込み済み」と判断し見送る。",
+        "evidence": "fundamental_view.strength=50, technical_view.stance=bullish"
+      },
+      {
+        "reason": "自社株買い実績の不在や国債利回り上昇に伴う配当利回りの相対的魅力低下など、需給・バリュエーション面での下支えが弱い。",
+        "evidence": "fundamental_view.points[2], fundamental_view.points[3]"
+      }
+    ],
+    "risks": [
+      "2026年7月30〜31日の日銀金融政策決定会合に伴う国内金利の急変動リスク",
+      "2026年8月7日の決算発表における、情報漏洩に関連するコスト増や通期見通しへの影響",
+      "情報漏洩に伴う行政処分や顧客流出によるブランド毀損の深刻化",
+      "米国市場の通信セクター軟化による国内同セクターへの波及"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 50,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"テクニカル面では非常に強い上昇トレンドにあるが、RSIが過熱圏に迫り直近高値の抵抗感も強いため、追随買いは高値掴みのリスクがある。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=85), technical_view.cautions[0]: RSI 68.6\"\n  },\n  {\n   \"reason\": \"大規模な情報漏洩報道という重大な悪材料があり、ガバナンスへの不信感が短期的には株価の重石となる可能性が高い。\",\n   \"evidence\": \"fundamental_view.points[1]: 762万人分のパスワード漏洩\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズの確信度が低く、統合判断ルール（v5）に基づき、テクニカルが既に強気な局面での買いエントリーは「織り込み済み」と判断し見送る。\",\n   \"evidence\": \"fundamental_view.strength=50, technical_view.stance=bullish\"\n  },\n  {\n   \"reason\": \"自社株買い実績の不在や国債利回り上昇に伴う配当利回りの相対的魅力低下など、需給・バリュエーション面での下支えが弱い。\",\n   \"evidence\": \"fundamental_view.points[2], fundamental_view.points[3]\"\n  }\n ],\n \"risks\": [\n  \"2026年7月30〜31日の日銀金融政策決定会合に伴う国内金利の急変動リスク\",\n  \"2026年8月7日の決算発表における、情報漏洩に関連するコスト増や通期見通しへの影響\",\n  \"情報漏洩に伴う行政処分や顧客流出によるブランド毀損の深刻化\",\n  \"米国市場の通信セクター軟化による国内同セクターへの波及\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 85,
+      "summary": "短期・中期ともに上昇トレンドが鮮明であり、複数のテクニカル指標が強い買いシグナルを示しています。米国市場でのセクター動向も良好で、さらなる高値更新が期待される局面です。",
+      "points": [
+        {
+          "point": "短期・中期の移動平均線がゴールデンクロスを維持し、MACDもシグナルを上抜けてヒストグラムが拡大しており、上昇モメンタムが強いです。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, macd=38.52, macd_signal=26.34, macd_histogram=12.18"
+        },
+        {
+          "point": "中期トレンド（60日騰落率）がプラスかつTOPIXをアウトパフォームしており、市場平均を上回る堅調な推移が継続しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=8.58, relative_to_topix_60d_pct=3.34"
+        },
+        {
+          "point": "前夜の米国市場において通信サービスセクターETFが大幅に上昇しており、国内同セクターへのポジティブな波及が期待されます。",
+          "evidence": "us_overnight.sector_proxy.change_1d_pct=1.73"
+        }
+      ],
+      "cautions": [
+        "RSIが68.6と過熱圏である70に接近しており、直近高値（2877.5円）付近では利益確定売りに押される可能性があります。",
+        "前夜のADR（KDDIY）が0.0%と横ばいであったため、日本市場寄り付きでの急騰は限定的となる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 2736.5,
+        "resistance": 2877.5
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "業績は増益基調を維持しておりファンダメンタルズは堅実だが、大規模な情報漏洩ニュースや内部統制の不備といったガバナンスリスクが短期的重石となる。また、高水準な国債利回りに対し配当利回りの優位性が低下しており、積極的な買い材料に欠ける。",
+      "points": [
+        {
+          "point": "2024年3月期から2026年3月期にかけて売上高・純利益ともに右肩上がりの成長が続いており、収益基調は極めて堅調である。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "直近（2026年7月15日）で762万人分のパスワード漏洩が報じられており、顧客基盤への信頼毀損やセキュリティ対策費用の増大が懸念される。",
+          "evidence": "news.headlines[5]"
+        },
+        {
+          "point": "自己株式取得の決議はなされているものの、2026年6月中の取得実績が0株であり、当面の株価下支え効果が限定的となっている。",
+          "evidence": "fundamentals.recent_important_disclosures[0]"
+        },
+        {
+          "point": "国内10年債利回りが2.713%まで上昇している中、配当利回り2.96%は相対的な魅力に乏しく、金利上昇局面でのディフェンシブ株への資金流入を抑制する要因となる。",
+          "evidence": "macro.rates.jgb_10y_percent, fundamentals.valuation.dividend_yield_percent"
+        }
+      ],
+      "cautions": [
+        "2026年8月7日の決算発表における通期進捗と情報漏洩の影響確認",
+        "2026年7月30〜31日の日銀金融政策決定会合に伴う金利変動リスク",
+        "内部統制の不備（2026年6月25日開示）に関連する改善報告の進捗状況",
+        "Gunosyとの業務提携解消による非通信分野への戦略的影響"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "KDDI Open Innovation Fund V、フュージョンエネルギーの社会実装を目指すStarlight Engineに出資 - KDDI",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9ybUdzei0wNk1kZ3dDbEd4UVIxWGdYdUprRDV4ekh6V2h1b0lWOWhjN2dacmFpS2I3RFJmb2MzU2VKQ0lZb3VQd2hUV2ZERWpEQUZEWVh1akhMbm1OYmc3aFRubW1hMWNlRmlGSA?oc=5",
+        "published": "Wed, 15 Jul 2026 04:02:38 GMT",
+        "publisher": "KDDI"
+      },
+      {
+        "title": "Ｇｕｎｏｓｙ[6047]：KDDI株式会社との業務提携解消のお知らせ 2026年7月15日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9HTkNmUzZzemJwMkFvU2poOHJncnZxVGVRUkd5bFNFelNkMU0xeks0SjNTbEVVTkhjVGhDWjExcmRwd1ZhYkFqSWw1SUlZaXJqVnZfT2NPV2JlZ20yOVBIeHMzeWg0dFNleXc?oc=5",
+        "published": "Wed, 15 Jul 2026 06:30:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "【人事研修担当者様向けウェビナー】2026年7月22日（水）開催 なぜKDDI×イーオンの英語研修は成果が出るのか？徹底解説！ - 時事ドットコム",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1GaFdhMzF5cVp5SFV4d0ppX205ajViWHNJRWVyeDhBdHNxeXp0aTl2ZVBEZVI5UTdWaEtud0N6WGd2NTBrcDhRNk5Uc2RkbkdSUTBCUHRBaVJzMzc2U0lTTXAtTFJzVDNFd3JZ?oc=5",
+        "published": "Wed, 15 Jul 2026 18:40:00 GMT",
+        "publisher": "時事ドットコム"
+      },
+      {
+        "title": "KDDI MUSEUM、特別企画展「動く・転がる・つながる からくりの科学展」を開催 | KDDI News Room - KDDI ニュースルーム",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5TVEl3Y1R4ak1TdjdDOEV5XzZoNmo3S0V4YU9MbmRPbU4zczdscmVuR2dvS0NBVjlOSm0xN0hRX1BWb2ZDeW43VHVWcjNyZjE5TlBQLXk2azlCbHNaS2dtY1R3RDdHT241VXctRQ?oc=5",
+        "published": "Wed, 15 Jul 2026 01:00:00 GMT",
+        "publisher": "KDDI ニュースルーム"
+      },
+      {
+        "title": "KDDI MUSEUM、からくりの科学展を開催2026年8月から11月 - Koubo",
+        "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTE52X1Iyd2JBV2VMZFdqaXJ2UElPQjBYRThNSjk5YVBMZ1owclJiRjJ4RU5pUHdGckJXdjFtMUd3b3ZXLVg1?oc=5",
+        "published": "Wed, 15 Jul 2026 06:53:05 GMT",
+        "publisher": "Koubo"
+      },
+      {
+        "title": "パスワード漏れ７６２万人 ＫＤＤＩ、不正アクセス問題で - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5tODFHNmZ5ZW5yS0RIem9uUTZJOXJCRk1QeGhmd1VQelM2SGdKN1F3bmFUci1FMXdranRSelFjdEtQQ2tGU29yNV9lS2Znc2pLRFZYcG1xZmhuOUIxeFAwQVhwZmt5anc?oc=5",
+        "published": "Wed, 15 Jul 2026 03:08:25 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "Gunosy、KDDIとの提携解消を発表 12年間の提携終了で業績懸念も - RTB SQUARE",
+        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE8wcXpGUGx0d2JuN2Rxa3lMTGoxeFVYQWZfNl9nR2MwbDNpdHRXTHFNNk5yM0RyUDJJMXh6eTNkc1hEbW5GZG9lV2RpTFhCQQ?oc=5",
+        "published": "Wed, 15 Jul 2026 07:05:52 GMT",
+        "publisher": "RTB SQUARE"
+      },
+      {
+        "title": "プレスリリース - 旅行新聞 – 株式会社旅行新聞新社 - 旅行新聞",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE8zeHZQTnJUTGlUR1gtNlE1emtTYmNRVGRfX1VXbGJlQVZIOEM0MEtoT2dtendIRlE4Vjh2UzNKVUkwWXVQeXQ2NlM1MU82TUJYaVJieE4zamlJMmVRMG4zTHRUQkMteWU4VlE?oc=5",
+        "published": "Wed, 15 Jul 2026 04:40:11 GMT",
+        "publisher": "旅行新聞"
+      },
+      {
+        "title": "【2026年10月以降】楽天モバイルのauネットワークへのローミングはどうなる？（マウス） - エキスパート - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQckk1dnFjRE9PZkJZeWRtTU1wdkhwNURic0RLMGM1ODdtZHRhQmtqbkNtanNoczFRcGZnMmVYTVJrQVJXS3diNzI0bVJIcExFTDNMZlg1TXB2U2FjWjJ4MlBSdUVUbVpjRUZ3ZXhXZ0hWcFFwcVdwT2IzcExtMjRydUliaUdhTFlZ?oc=5",
+        "published": "Tue, 14 Jul 2026 23:10:37 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "フュージョンエネルギーを国家プロジェクトから産業へ。Starlight Engineが担う“実装のハブ” - MUGENLABO Magazine",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBMUFhkbUl5RGZ0WnVTd29EbWZ6UU9td3UtLVVIYm1SLXpLYUdfX0p6MjVOY1A5VkVTTmx4ZkxLZGFQSTFvT0hHS191OE1tcUk2bGlPZzRyWG9zdExTY1JEVXkyeVFJejBQTzJKUXFIMNIBb0FVX3lxTFBMUFhkbUl5RGZ0WnVTd29EbWZ6UU9td3UtLVVIYm1SLXpLYUdfX0p6MjVOY1A5VkVTTmx4ZkxLZGFQSTFvT0hHS191OE1tcUk2bGlPZzRyWG9zdExTY1JEVXkyeVFJejBQTzJKUXFIMA?oc=5",
+        "published": "Wed, 15 Jul 2026 04:00:21 GMT",
+        "publisher": "MUGENLABO Magazine"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      },
+      {
+        "title": "東京証券取引所への「改善報告書」の提出に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559424.pdf",
+        "date": "2026-06-02 16:00:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（中期経営戦略）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524146.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "auフィナンシャルホールディングス株式会社の東京証券取引所への株式上場準備の開始について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524156.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "2026年３月期　決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511523545.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524005.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524010.pdf",
+        "date": "2026-05-12 15:45:00"
+      }
+    ]
+  }
+}

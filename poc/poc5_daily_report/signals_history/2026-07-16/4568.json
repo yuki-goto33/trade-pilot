@@ -1,0 +1,206 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-07-16T08:16:06+09:00",
+  "price_as_of": "2026-07-15",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家が neutral かつ strength 65 であり、買い推奨の基準（strength 70以上）を満たしていない。",
+        "evidence": "fundamental_view.strength = 65, fundamental_view.stance = neutral"
+      },
+      {
+        "reason": "テクニカル専門家が bearish (strength 75) であり、中期的な下落トレンドと短期的なモメンタム低下が確認されるため、押し目を確認する段階にある。",
+        "evidence": "technical_view.stance = bearish, technical_view.points[1]: last_close=2677.0 < sma5=2702.3"
+      },
+      {
+        "reason": "7月31日に次回決算発表と日銀金融政策決定会合が重なっており、重要な不確実性が存在するため、現時点でのエントリーはリスクが高い。",
+        "evidence": "reference.next_earnings_date = 2026-07-31, reference.next_boj_meeting = 2026-07-30〜2026-07-31"
+      }
+    ],
+    "risks": [
+      "2026年7月31日の決算発表における通期大幅減益計画へのネガティブ反応",
+      "日銀会合に伴う為替変動（1ドル162円台からの円高進行）による業績期待の剥落",
+      "テクニカル上の節目である25日線（2615.36円）を維持できず下落が加速する可能性"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ専門家が neutral かつ strength 65 であり、買い推奨の基準（strength 70以上）を満たしていない。\",\n      \"evidence\": \"fundamental_view.strength = 65, fundamental_view.stance = neutral\"\n    },\n    {\n      \"reason\": \"テクニカル専門家が bearish (strength 75) であり、中期的な下落トレンドと短期的なモメンタム低下が確認されるため、押し目を確認する段階にある。\",\n      \"evidence\": \"technical_view.stance = bearish, technical_view.points[1]: last_close=2677.0 < sma5=2702.3\"\n    },\n    {\n      \"reason\": \"7月31日に次回決算発表と日銀金融政策決定会合が重なっており、重要な不確実性が存在するため、現時点でのエントリーはリスクが高い。\",\n      \"evidence\": \"reference.next_earnings_date = 2026-07-31, reference.next_boj_meeting = 2026-07-30〜2026-07-31\"\n    }\n  ],\n  \"risks\": [\n    \"2026年7月31日の決算発表における通期大幅減益計画へのネガティブ反応\",\n    \"日銀会合に伴う為替変動（1ドル162円台からの円高進行）による業績期待の剥落\",\n    \"テクニカル上の節目である25日線（2615.36円）を維持できず下落が加速する可能性\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "中期的な下落トレンドが継続する中、直近5営業日連続での下落により短期的な調整圧力が強まっており、MACDのシグナル下抜けも確認されます。",
+      "points": [
+        {
+          "point": "中期トレンドが明確な下落基調にあり、市場全体に対しても大幅に劣後しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct = -7.34, relative_to_topix_60d_pct = -12.58"
+        },
+        {
+          "point": "直近5営業日連続で価格が切り下がっており、5日移動平均線を割り込むなど短期的なモメンタムが低下しています。",
+          "evidence": "price_technical.recent_5_days (5日連続マイナスまたは微減), last_close=2677.0 < sma5=2702.3"
+        },
+        {
+          "point": "MACDヒストグラムがマイナス圏で推移し、RSIも高値圏から低下を始めており、テクニカル的な売りシグナルが出ています。",
+          "evidence": "price_technical.macd_histogram = -2.04, price_technical.rsi14 = 70.0 (調整開始を示唆)"
+        }
+      ],
+      "cautions": [
+        "25日移動平均線(2615.36)が下値支持線として機能し、下げ止まる可能性があります。",
+        "前夜のADR(DSNKY)の下げ幅は限定的であり、寄り付きでの大幅なギャップダウンは想定しにくい状況です。"
+      ],
+      "key_levels": {
+        "support": 2615.36,
+        "resistance": 2787.5
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 65,
+      "summary": "2026年3月期の減益予想が重石となる一方、直近でライセンス契約やAI活用等の好材料が相次いでおり、業績懸念と材料への期待が拮抗しています。2週間後に決算発表と日銀会合を控えており、短期的には様子見姿勢が妥当と判断します。",
+      "points": [
+        {
+          "point": "2026年7月15日に、バイエル薬品との「クラリチンEX」ライセンス契約や、FRONTEOとのAI予測モデル構築など、事業拡大・効率化に寄与する複数の材料が公表された。",
+          "evidence": "news.headlines (published: Wed, 15 Jul 2026)"
+        },
+        {
+          "point": "ROE 15.8%と高い資本効率を維持しており、配当利回りも3.73%と高水準にあるため、バリュエーション面での下値の堅さが期待される。",
+          "evidence": "fundamentals.valuation (return_on_equity=0.158, dividend_yield_percent=3.73)"
+        },
+        {
+          "point": "製造業PMIが54.8と拡大圏にあり、1ドル162円台の円安環境は、グローバルに展開する製薬大手にとってマクロ経済的な追い風となる。",
+          "evidence": "macro.japan_pmi.manufacturing (latest_value=54.8), macro.indices (USD/JPY close=162.13)"
+        }
+      ],
+      "cautions": [
+        "2026年3月期の通期計画において、営業利益が前期比で約31%の大幅減益となる見通しであること (fundamentals.earnings_trend.annual)",
+        "次回決算発表（2026年7月31日）と日銀金融政策決定会合が同日に重なっており、ボラティリティが急増するリスクがある (fundamentals.next_earnings_date, macro.boj.monetary_policy_meeting.next_meeting)",
+        "2026年5月8日に製品供給計画の見直しに伴う損失発生と業績修正を開示しており、供給体制の安定性に不透明感が残る (disclosures.items)"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "第一三共(株)【4568】：現物信用売買内訳時系列 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5ReWl3YmhHcmlGek1RajFERmpQaVdWOWxHV3pFaVRHR2lHZmxtRVowM1Z6S3MtWl9aRlVEYklrZ21JUEF5ZWViWGhpRXZfSzN6WUNuNnB4OW41UVF3WXlB?oc=5",
+        "published": "Wed, 15 Jul 2026 18:21:43 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "製薬3社の中計を「三匹の子ぶた」にたとえると…レンガの家は第一三共、じゃあワラの家は？ - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE0wWWFuWDFSMW0wRFBoWnVjd2hIVDRSUG0xQVM5azJlMmdSbnhoQ0dUWFFXMmpNaTY0LVdUSDAwVnZWc2hnbXdLVS1kVDDSAU9BVV95cUxObXZyZmFpUUNYVHdaeVFoelNPV2kxSlNlaFNQZEp6N25ROGlrTEJoVkwyNFpxX2htRmdlYm01elBOZXllVkl5Y1JYVjZzdkhv?oc=5",
+        "published": "Wed, 15 Jul 2026 20:25:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "第一三共と「毒性試験報告書から毒性学的解釈を自動抽出する予測モデル」構築 FRONTEO - 医薬通信社",
+        "url": "https://news.google.com/rss/articles/CBMi2gJBVV95cUxNcGtMQnMxcjAtX2hTNzc0NkZHZGpjVWQ1VnFHM0dMYVY2V1Y0cmQ1OFB6Z0s1bUVkMGppODVtcUUwSFlxMElUSXBXTVNfRzFuMkxLdGZYNmlVRk0xX01oLUw1eHhMQWNvWXN6d204cHVYNWJUQlFLY0tSdlp1TkRwbjRsRlRoSHViNk1ITGRHb1dnSmFBWVdFNWpiNDhMSldpSXJhbmRCQXJJUms5QmQ3YXVqT05wTXVVeHNteTRtd3ZsXzNUOTd6S1djTmM5SFVZQXAyeEhqb3dFRDJPZVFFN1I4WWc2WHlZMEZfdUhyUjFoMVYtQl9leVczQUxYQTVGa1VqQ3ZEQVhjcE1meVl6NjdteDM3bHJkclF2VUM2RkRUUU90OFY0VGhsOHZWRG5KVFBRU09RZ1ZaUWFUcjY4Tk5Uc0tuandKUF9HZ05leE1lcnUtdjBHOE9R?oc=5",
+        "published": "Wed, 15 Jul 2026 15:00:00 GMT",
+        "publisher": "医薬通信社"
+      },
+      {
+        "title": "バイエル薬品と第一三共ヘルスケア、「クラリチン®EX」のライセンス契約を締結 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBvaVc3dEh5LVR5MEF6UnJZMjdSZGo0dy11OUhEZGMwakdFSFRkb1dRcUdraUxDZUxrTTlRYUJBSXQ2Mmp4VkpXdDZoaWt3d0NYaGI2NWY1SzdPYUE2bGVNVkhfOFlTazM5MWc?oc=5",
+        "published": "Wed, 15 Jul 2026 05:20:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "第一三共(株)【4568】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBIS2NSZTVoVDllRlVKSHozNnpLbWdVNkIwNl9GXzEtSkFNbzVSVFFvYTlBWnFsNlA4SFY2N29xNnhwcWhieWJGdlVNZGdCbFp3ZmE1R0pYRXVOOExmcFdr?oc=5",
+        "published": "Wed, 15 Jul 2026 06:54:26 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "エクサウィザーズとExaMD、米国臨床腫瘍学会「ASCO 2026」にて、関西医大・第一三共らとの共同研究である乳がん患者を対象としたウェアラブル研究成果を発表 〜解析結果を基盤にAI技術の利活用による新しいデジタル医療サービスの開発を目指す - 株式会社エクサウィザーズ",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5IS1hWS3BYYTY1eHNETlVWXy1oWlRjWGtlaUV6NFgySHNYVmh0eURwa1R1ekJRU0RRRDFONHBLS1NqLXdONk1IQS1mRkdGSlk?oc=5",
+        "published": "Wed, 15 Jul 2026 06:33:02 GMT",
+        "publisher": "株式会社エクサウィザーズ"
+      },
+      {
+        "title": "クラリチンEXで販売提携契約を締結 バイエルと第一三共ヘルスケア | 日刊薬業 - 医薬品産業の総合情報サイト - 日刊薬業",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE8xM1NPbGZFdGlpN040V3c5QU5Cc0xZTjQ3SXBFNjl3WkRHVXA3Z0pfVGthbG8yX3pqUWtRS0Zma25rVEUzUHBXVQ?oc=5",
+        "published": "Wed, 15 Jul 2026 09:41:38 GMT",
+        "publisher": "日刊薬業"
+      },
+      {
+        "title": "【OTC薬『クラリチンEX』】第一三共ヘルスケアが販売へ - dgs-on-line.com",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9QMDl0dDhtdU54eFl3MktGVVRJclM1VjZ6U1BNQ1hrRDYwbVpnQ29CMWQwdDVGbjk5aHV2QWM0LVcwZGNIOGNlT19LY2lkRi1WbGlr?oc=5",
+        "published": "Wed, 15 Jul 2026 07:36:40 GMT",
+        "publisher": "dgs-on-line.com"
+      },
+      {
+        "title": "ＦＲＯＮＴＥＯ、第一三共と「毒性学的解釈に関連する記述を自動抽出する予測モデル」を構築し有効性を確認 速報 - kabushiki.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5aXzhGbE5iZGQ5RUFOUDVGNkZOZnk4Z0dCTFRJNjVrc0J6S08wN0hBNWw5TllkZUxMbXJWM2xYZ1RZTE8yc3Ew?oc=5",
+        "published": "Tue, 14 Jul 2026 23:37:00 GMT",
+        "publisher": "kabushiki.jp"
+      },
+      {
+        "title": "第一三共ヘルスケアと「クラリチンＥＸ」のライセンス契約締結 バイエル薬品 - 医薬通信社",
+        "url": "https://news.google.com/rss/articles/CBMi2gJBVV95cUxPUTBld2Nza0ZPN1lhTzYtTWhfQU96U0o0VEs5X1RIbHZwcFhoRmZLREo4SDZaUHdwTDRYeEdhR0hUenVYaGhGYlVreEEtZXNodldDWGtSaDRtaTJVVVJWeF9ibk1XQ3VhTU1leU1UWjFyb3E0MXZXaWtTQ0JOZUNvaUJJM1ZzemlBcDBqUmtWS1pXejNaN01DRjdpOFJDVGxSdlNWY2hMMkFrT3ZrWDRaM0hPODlHUlpvd2VBUFFtNWdmTllZQ1hNMjJNdW5NVXRmalB4WXdaUXQxUkhaYjRiMmIyNVZ1OTdDbUhQay1rNXlrUnV6MXl1SDhwd1I4X2l1bXBjT052aG45OTZQVWhpZmVLdHpmZDJqTGNMeUEwMDhjLVVYa0Y3UkdqeWFRNGp2S3N0aHBUd3RFMGJlc1ZmczhQZUZlYnRveWxJZXR1NmxFWEs0WnZ6UVl3?oc=5",
+        "published": "Wed, 15 Jul 2026 15:15:00 GMT",
+        "publisher": "医薬通信社"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584479.pdf",
+        "date": "2026-06-30 16:30:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260620575199.pdf",
+        "date": "2026-06-22 15:30:00"
+      },
+      {
+        "title": "財務上の特約が付された金銭消費貸借契約の締結に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617573095.pdf",
+        "date": "2026-06-17 19:00:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬等の内容の一部改定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515539092.pdf",
+        "date": "2026-05-18 13:00:00"
+      },
+      {
+        "title": "（訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260513530596.pdf",
+        "date": "2026-05-13 17:30:00"
+      },
+      {
+        "title": "自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511521821.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522113.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "決算補足資料（2025年度決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522160.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "2025年度決算および第6期（2026-2030年度）中期経営計画　説明会",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522186.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "製品供給計画の見直しに伴う損失の発生および 2026年3月期通期連結業績予想の修正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260415504962.pdf",
+        "date": "2026-05-08 13:00:00"
+      }
+    ]
+  }
+}

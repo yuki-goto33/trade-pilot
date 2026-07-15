@@ -1,0 +1,217 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-07-16T08:15:24+09:00",
+  "price_as_of": "2026-07-15",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 14,
+    "reasons": [
+      {
+        "reason": "直近（2026-07-08）に buy シグナルを発出しており、現在はその経過観察期間（14日以内）に該当するため、ルールに基づき新規エントリーを抑制し継続監視とする。",
+        "evidence": "reference.recent_buy.date=2026-07-08"
+      },
+      {
+        "reason": "ファンダメンタルズ評価は strength 75 と極めて強力だが、テクニカル評価が bearish であり、下落トレンドが継続しているため「落ちるナイフを掴まない」原則を適用する。",
+        "evidence": "fundamental_view.strength=75, technical_view.stance=bearish"
+      },
+      {
+        "reason": "前夜ADRが1.82%下落しており、寄り付きからの売り圧力や、中期的な対TOPIX相対騰落率の劣後（-13.36%）による上値の重さが懸念される。",
+        "evidence": "technical_view.points[2]: us_overnight.adr.change_1d_pct=-1.82, technical_view.points[0]"
+      }
+    ],
+    "risks": [
+      "2026年7月29日に控える決算発表に伴う価格変動リスク",
+      "2026年7月30日からの日銀金融政策決定会合による為替（円高）および金利変動の影響",
+      "MACDが依然としてマイナス圏にあり、テクニカル的な下げ止まりが確認できていない点"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 14,\n  \"reasons\": [\n    {\n      \"reason\": \"直近（2026-07-08）に buy シグナルを発出しており、現在はその経過観察期間（14日以内）に該当するため、ルールに基づき新規エントリーを抑制し継続監視とする。\",\n      \"evidence\": \"reference.recent_buy.date=2026-07-08\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズ評価は strength 75 と極めて強力だが、テクニカル評価が bearish であり、下落トレンドが継続しているため「落ちるナイフを掴まない」原則を適用する。\",\n      \"evidence\": \"fundamental_view.strength=75, technical_view.stance=bearish\"\n    },\n    {\n      \"reason\": \"前夜ADRが1.82%下落しており、寄り付きからの売り圧力や、中期的な対TOPIX相対騰落率の劣後（-13.36%）による上値の重さが懸念される。\",\n      \"evidence\": \"technical_view.points[2]: us_overnight.adr.change_1d_pct=-1.82, technical_view.points[0]\"\n    }\n  ],\n  \"risks\": [\n    \"2026年7月29日に控える決算発表に伴う価格変動リスク\",\n    \"2026年7月30日からの日銀金融政策決定会合による為替（円高）および金利変動の影響\",\n    \"MACDが依然としてマイナス圏にあり、テクニカル的な下げ止まりが確認できていない点\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 65,
+      "summary": "中期的な下落トレンドが継続しており、直近の25日線回復やSMAのゴールデンクロスだけでは明確な反転の証拠として不十分です。前夜ADRの下落も踏まえると、上値の重さが意識されます。",
+      "points": [
+        {
+          "point": "中期的なトレンドを示す60日騰落率および対TOPIX相対騰落率がともに大幅なマイナスであり、中期下落トレンドが継続していると判断されます。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-8.12, price_technical.trend_60d.relative_to_topix_60d_pct=-13.36"
+        },
+        {
+          "point": "MACDヒストグラムは改善しているものの、MACD本体は依然としてマイナス圏に沈んでおり、本格的な上昇トレンドへの転換には至っていません。",
+          "evidence": "price_technical.macd=-32.52, price_technical.macd_histogram=32.93"
+        },
+        {
+          "point": "前夜のADRが大幅に下落しており、寄り付きからの下押し圧力や戻り売りの強さが懸念される状況です。",
+          "evidence": "us_overnight.adr.change_1d_pct=-1.82"
+        }
+      ],
+      "cautions": [
+        "ADRの下落が寄り付き時点で織り込まれ、25日線を支持線として下げ止まる可能性",
+        "SMA5がSMA25を上抜けるゴールデンクロスが形成されており、短期的には下値が切り上がるリスク",
+        "市場レジームがneutralであり、TOPIXが25日線を維持している中での連れ高"
+      ],
+      "key_levels": {
+        "support": 4697.28,
+        "resistance": 5369.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "右肩上がりの業績トレンドに加え、DX・鉄道システム分野での相次ぐ新規プロジェクト獲得や「Lighthouse（先進工場）」選出など、直近の好材料が豊富。日銀会合と決算発表を目前に控えているものの、大企業製造業の景況感改善と強い成長性が株価を支える公算が高い。",
+      "points": [
+        {
+          "point": "純利益とEPSが顕著な拡大傾向にあり、収益性が大幅に向上している。2026年3月期の純利益は前年比で約30%増益を達成しており、ROEも13.3%と高水準を維持している。",
+          "evidence": "fundamentals.earnings_trend.annual.2026-03 (net_income_oku_jpy=8024, diluted_eps=176.63), fundamentals.valuation.return_on_equity=0.133"
+        },
+        {
+          "point": "直近1〜2日以内に、疑似量子コンピュータを活用した鉄道運用システムや顔認証改札など、デジタル・トランスフォーメーション（DX）分野での具体的な社会実装ニュースが集中しており、成長カタリストが豊富である。",
+          "evidence": "news.headlines (published=2026-07-15, \"南海電鉄・日立製作所，疑似量子コンピューター技術を活用した...\", \"池袋駅に都内初の顔認証改札... \")"
+        },
+        {
+          "point": "マクロ環境において製造業PMIが54.8と拡大圏にあり、日銀短観の大企業製造業DIも前回調査から5ポイント改善するなど、主力事業を取り巻く外部環境が良好である。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.8, macro.boj.tankan.di.large_manufacturing.current_di=22.0"
+        },
+        {
+          "point": "継続的な自己株式の取得による株主還元姿勢が明確であり、需給面での下支えが期待できる。",
+          "evidence": "disclosures.items (date=2026-07-02, \"自己株式の取得状況に関するお知らせ\")"
+        }
+      ],
+      "cautions": [
+        "2026年7月29日に決算発表を控えており、内容次第でボラティリティが急増するリスクがある。",
+        "2026年7月30日から開催される日銀金融政策決定会合において、利上げ等の政策変更が発表された場合、円高や金利上昇を通じて輸出・金融コストに影響を与える可能性がある。",
+        "ドル円レートが162.13円と歴史的な円安水準にあり、為替介入や日銀のタカ派姿勢による急激な円高への巻き戻しが利益押し下げ要因となるリスクがある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-08",
+    "days_ago": 8,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "南海電鉄・日立製作所，疑似量子コンピューター技術を活用した乗務員・車両運用計画の自動作成システムの構築を開始 - 鉄道ファン・railf.jp",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9wYjlXRG5VbEpFRlYzYVloZktiMWJic0pjQzVMNWs4TFZHYURmVDlKVlJ3YW5keDFvZjNWbkxOeU1HbllzVUpsZ2REd0w4LWsxWmJCQkx4QQ?oc=5",
+        "published": "Wed, 15 Jul 2026 16:24:50 GMT",
+        "publisher": "鉄道ファン・railf.jp"
+      },
+      {
+        "title": "「定期忘れた！」がなくなる 「東武と日立、都内初の顔パス改札」など3本をお届けします - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1vbHhMLUNhQ2VzNlF0amotdjJlSkRhTEc0WVRjODc1Y1FqcjBMZ1JWS0QzTjlDR0RNVVdGdklCY0lpT3R2aVh1OEVKMmduLW1fMnFDaVRNQ0NmTFQwNGNqTHlOZEl3YUpsNXZmMFQtNXZnWWt6OENmLWo4XzRNZw?oc=5",
+        "published": "Wed, 15 Jul 2026 20:00:02 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "(株)日立製作所【6501】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5FOGFhZTRqdlZZOUdHOFdVVmNKdzRFZEhobkFIaW5uR3VtY1lyaHMybXppSmI1M2FpRXN5eVNMTmZwUXhtNXkzQTdGLVNkQ3lkNW9ZTUlRNEZrMU5GQ2hZ?oc=5",
+        "published": "Wed, 15 Jul 2026 02:54:18 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "池袋駅に都内初の顔認証改札、日立・東武が「顔パス経済圏」始動 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE11TldoeUdtMDZONUJqdldsbVoydmdMcXpSZDJneklSUWRrbGJpVDZDZE03WW8xcnV3T0tFVGx0OUNBdFFqY01VdlJiNWtKOV8xOGdoV3o0THJHMERYRVdNb0ppNlpBQk1CUjVSUEpoSHFGMWty?oc=5",
+        "published": "Wed, 15 Jul 2026 09:45:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "世界経済フォーラム(WEF)が選出する先進工場「Lighthouse」において日立グループが2拠点目の選出 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB4NzBhQnlwNUF4VURaQnFEcFkzREtQUjVLNzdCOExZbi02OFNYdmU3Q21acWl0R1ZIT09VanNXSV9oTkgydnNyNjBWcHBDd09NWkNGdmtIbHVWckNTcUdEVUhNekY0Nng1T0E?oc=5",
+        "published": "Wed, 15 Jul 2026 00:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "東武線「最大のターミナル」に未来感あふれる改札機が登場！ 全国の鉄道事業者へ普及目指す 手ぶらで通過が可能 - 乗りものニュース",
+        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBwdjU2TnNuTjV2NUhpQkQzcFVSdWlqX0FRWU5jUlVfamkzS05PbkNrZ3pRc0g5TENlZmxuZ2JDZ3VJTXlVTV9SQTd3?oc=5",
+        "published": "Wed, 15 Jul 2026 22:12:00 GMT",
+        "publisher": "乗りものニュース"
+      },
+      {
+        "title": "画像・写真：池袋駅、手ぶらで改札：時事ドットコム - 時事ドットコム",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBwX1I0MnlONDh0X1dGUmIyQmJiemhFM2IxZjFRYi1fZkp3UFFvalZvRmgzLVZac3JXT1dkTGtYS1pwVDlIaHh6eGxxOWkwSExYSXdOMFctMmx3Z1BHd3MyNmkwWG0?oc=5",
+        "published": "Wed, 15 Jul 2026 08:40:42 GMT",
+        "publisher": "時事ドットコム"
+      },
+      {
+        "title": "池袋駅、手ぶらで改札 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQeDB4eEtBTWE4ZHNpTW5OX19QdHFXWlN5MU9iTTBMdk02SDVxSnhnOEI2VTZ0TTZUNnA4dEVQLVlrdXo4MkxqXzBFN1ZXcmY3c093Tm1oRzNjdG1QWS15N1JnU1kycWZNYWhlLXBTVURvenVfTDRDQm5jd01ZM0xxdNIBgAFBVV95cUxQeDB4eEtBTWE4ZHNpTW5OX19QdHFXWlN5MU9iTTBMdk02SDVxSnhnOEI2VTZ0TTZUNnA4dEVQLVlrdXo4MkxqXzBFN1ZXcmY3c093Tm1oRzNjdG1QWS15N1JnU1kycWZNYWhlLXBTVURvenVfTDRDQm5jd01ZM0xxdA?oc=5",
+        "published": "Wed, 15 Jul 2026 07:23:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "【本日の買い売り優勢状況】07/15キオクシアホールディングスの買い優勢金額は602.19億円 - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNaGNzT3RKT05HQTVVbkZMYTlVMnppNjNnbTNldW8yWFJFWTdpVTlUcmg5RlVkWDhBRUF2T0ZYcUlTRTE2ZElXZkx0X19LVkVrLWhoWjZybVY2WDRKQUd3ajM2czF5dFc1T19TR0lHS2NncmljOHRnQ3BucUZuSjVKVHRMUkRETDZMWThaSjlPOGhuU09yNGdWNWtB?oc=5",
+        "published": "Wed, 15 Jul 2026 06:45:00 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "南海電鉄と日立、疑似量子技術で乗務員・車両運用計画を自動化 - kabu-ir.com",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBSYmRDOHVWTHhXTW45ZDQ2ZlA4Y3VKRFRYSU56MlQ1b183UTFUT3N2M0w0VHNoOURQN1dhbnhXcUR1NngtcGRZNVowamRNN0tuSVcxOQ?oc=5",
+        "published": "Tue, 14 Jul 2026 23:16:13 GMT",
+        "publisher": "kabu-ir.com"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(モビリティ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566288.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(コネクティブインダストリーズ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566292.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(デジタルシステム＆サービス事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566294.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CFO Session)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566296.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559702.pdf",
+        "date": "2026-06-02 15:30:00"
+      },
+      {
+        "title": "剰余金の配当(期末配当)に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533826.pdf",
+        "date": "2026-05-14 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況及び取得終了に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260427511652.pdf",
+        "date": "2026-04-27 15:30:00"
+      }
+    ]
+  }
+}
