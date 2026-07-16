@@ -1,0 +1,210 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-07-17T08:06:44+09:00",
+  "price_as_of": "2026-07-16",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズはGoogleとの提携や2026年3月期の好決算、目標株価引き上げなど極めて強力な材料が揃っており、中長期的な期待値は高い。",
+        "evidence": "fundamental_view.points[0], fundamental_view.points[2]"
+      },
+      {
+        "reason": "テクニカル指標が既に強気（bullish）に揃っており、材料が相当程度株価に織り込まれている可能性が高いため、新規エントリーとしては遅い局面と判断される。",
+        "evidence": "technical_view.stance=bullish (strength=75)"
+      },
+      {
+        "reason": "前夜のADRが大幅下落（-2.81%）しており、短期的には寄り付きからの下押し圧力や押し目形成の安定を確認する必要がある。",
+        "evidence": "technical_view.cautions[0]"
+      }
+    ],
+    "risks": [
+      "2026年7月30〜31日の日銀金融政策決定会合における政策変更の内容と市場予想の乖離",
+      "2026年8月3日に予定されている決算発表での材料出尽くし感や今期予想の保守化",
+      "VIX指数の上昇（16.73）に伴う市場全体のリスクオフ姿勢の強まりと相場連動的な下落"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズはGoogleとの提携や2026年3月期の好決算、目標株価引き上げなど極めて強力な材料が揃っており、中長期的な期待値は高い。\",\n   \"evidence\": \"fundamental_view.points[0], fundamental_view.points[2]\"\n  },\n  {\n   \"reason\": \"テクニカル指標が既に強気（bullish）に揃っており、材料が相当程度株価に織り込まれている可能性が高いため、新規エントリーとしては遅い局面と判断される。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=75)\"\n  },\n  {\n   \"reason\": \"前夜のADRが大幅下落（-2.81%）しており、短期的には寄り付きからの下押し圧力や押し目形成の安定を確認する必要がある。\",\n   \"evidence\": \"technical_view.cautions[0]\"\n  }\n ],\n \"risks\": [\n  \"2026年7月30〜31日の日銀金融政策決定会合における政策変更の内容と市場予想の乖離\",\n  \"2026年8月3日に予定されている決算発表での材料出尽くし感や今期予想の保守化\",\n  \"VIX指数の上昇（16.73）に伴う市場全体のリスクオフ姿勢の強まりと相場連動的な下落\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "中期的な上昇トレンドが非常に強力であり、テクニカル指標も買いシグナルを維持しているが、足元ではADRの大落を受け短期的な押し目形成の局面にある。",
+      "points": [
+        {
+          "point": "中期トレンドが極めて強固。60日騰落率が+26.45%、対TOPIX相対騰落率も+21.28%と大幅なアウトパフォームを継続している。",
+          "evidence": "price_technical.trend_60d"
+        },
+        {
+          "point": "短期・中期のトレンド転換シグナルが点灯中。SMA5がSMA25を上回るゴールデンクロス状態にあり、MACDもシグナルを大きく上抜けて上昇している。",
+          "evidence": "price_technical.sma5_vs_sma25, price_technical.macd=99.47, price_technical.macd_signal=64.26"
+        },
+        {
+          "point": "直近の反落により過熱感が緩和。RSI14が62.8まで低下しており、上昇トレンドの中での健全な調整の範囲内にある。",
+          "evidence": "price_technical.rsi14=62.8, price_technical.recent_5_days"
+        }
+      ],
+      "cautions": [
+        "前夜のNY市場でADRが-2.81%と大幅に下落しており、当日の寄り付き価格が大きく下押しされるリスクがある。",
+        "VIX指数が16.73へ上昇（前日比+6.76%）しており、市場全体のボラティリティ拡大による地合い悪化に注意が必要。"
+      ],
+      "key_levels": {
+        "support": 3585.6,
+        "resistance": 3733.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "2026年3月期の大幅増益という強い実績に加え、Googleとの戦略的提携や目標株価の引き上げといった直近の好材料が重なっており、日銀会合を控えた金利先高観も追い風となっている。",
+      "points": [
+        {
+          "point": "Googleとの戦略的提携によるリテール金融およびAI活用の高度化。競合他社に対する競争優位性の確保が期待される新規材料である。",
+          "evidence": "news.headlines[1]（2026-07-16）"
+        },
+        {
+          "point": "2026年3月期連結業績の好調。純利益が前年比で大幅に増加しており、収益拡大トレンドが継続していることが確認された。",
+          "evidence": "fundamentals.earnings_trend.annual[0], fundamentals.recent_important_disclosures[0]"
+        },
+        {
+          "point": "アナリストによる目標株価の引き上げ。日系中堅証券による4,300円への目標株価引き上げが報じられており、市場の評価改善が示唆されている。",
+          "evidence": "news.headlines[5]（2026-07-16）"
+        },
+        {
+          "point": "日本の長期金利上昇と日銀の金融政策正常化への期待。JGB10年金利が2.697%と高水準で、日銀会合も13日後に控えており、利ざや改善期待が強い。",
+          "evidence": "macro.rates.jgb_10y_percent, macro.boj.monetary_policy_meeting.days_until_next"
+        }
+      ],
+      "cautions": [
+        "2026年7月30〜31日の日銀金融政策決定会合の結果。市場予想との乖離があった場合に株価が急落するイベントリスクがある。",
+        "2026年8月3日に予定されている次回決算発表。今期予想や株主還元策の具体的内容が市場期待に届かないリスクに注意が必要。",
+        "日経平均の急落（2000円超）など、市場全体のリスクオフ姿勢が強まった場合の相場連動的な下落。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": 4300.0
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)三菱ＵＦＪフィナンシャル・グループ【MUFG】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1fb09UZ016WWhiUVBjc0RvWFltWjhxVkhJbkpyOEhKLXMzR2JuMk0wY1MybnpuUWNldldDSTJMak1rZV83N2JYNGFMWktSU3M?oc=5",
+        "published": "Thu, 16 Jul 2026 19:12:28 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "MUFGがGoogleと戦略的提携 リテール総合金融、AIでSMBCより「先行」狙う - 日経クロステック",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9XN2QxaHU1TGU1TlcyNDk4a1FjWkhWd2laQ056bGUxSDdsY0NMbGJKQk5vWmhKTEowQVUxQ19MeU16bHctUmxGdHhSWHFYS05PN3RpWHl5MHBLQ21fLVg2R0tveDRZVUk?oc=5",
+        "published": "Thu, 16 Jul 2026 10:30:24 GMT",
+        "publisher": "日経クロステック"
+      },
+      {
+        "title": "銀行に問う！儲けをもっと国民に還元せよ ～空前の最高益を中小企業や家計支援に～ - innovations-i.com",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBaOWNZY3FERU1JcDlneEFDTkNUMUd0VWJrODVwZzJsTEVZTW82aUU1RTFfZk51UldvclZwdTJZeGJzalJKWTlqZHdjUXh4MXBNbmZvM1FCMDlnemZ2TWhkV29B?oc=5",
+        "published": "Thu, 16 Jul 2026 21:00:00 GMT",
+        "publisher": "innovations-i.com"
+      },
+      {
+        "title": "日経平均が2000円超急落、半導体関連銘柄に売買集中 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9VaHBMcUVmOWkxbmtHeFlkcGlHRXZrQlFPRFdGcV9QczFkRU9DelV0MDZWNi04YVEtaGxQX1U4SUlJX1Nnd1ZfaG9ZV01oWlBaRkRrcnc0blVjakdpVkE4X09CdHRpV0dmWDE0ZHJJRWtvSUJO?oc=5",
+        "published": "Thu, 16 Jul 2026 05:37:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "上半期の訪日客2108万4800人、コロナ禍以来の前年割れ、中国人56.4%減［新聞ウォッチ］ 1枚目の写真・画像 - レスポンス（Response.jp）",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5GalhHd216cDNOQTFXRy1SY19NeS02c2lsdVBhRnlhY1R4V0dQVWtaVm1fenQ1V0FTOGxDWExYN3JWVlBlTDZvWlRyb3hnSHdxQ1M4TlZNQTdjZTJheWRJb2VGRWUwSTlWanVmNQ?oc=5",
+        "published": "Thu, 16 Jul 2026 04:14:15 GMT",
+        "publisher": "レスポンス（Response.jp）"
+      },
+      {
+        "title": "【アナリスト評価】三菱ＵＦＪＦＧ、レーティング強気を継続、目標株価4,300円に引上げ（日系中堅証券）(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQdVVNOTVDZXRBOWpiRjl4emJ5czFhdEFiYVA1TS1iR1Y2aVA4b21xcTJwRjlUMllOcnBKc2RKYlpkalFNYlZDVENUSWNpTzRmVW9yUWVlcUxRQ1hucG8xSnVDbXo2LVdHSWk3bTFLb2UyZEttNlBvaVNRbl8xY0w1eXdHTlRhOTA?oc=5",
+        "published": "Thu, 16 Jul 2026 09:40:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "DOMOTO堂本光一＆堂本剛、ライブなのに“漫談”止まらず「ACEesじゃなくていいんですか？」「最近僕らを知ってくれた人は漫才師だと思ってるかも」【MCレポート／DOMOTO Concert 2026 ～Stay with me～】 - モデルプレス",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE13NFBHcFE0OXBlTmJnLWk5ODRsN2dJbjF2eENjMmFVQS1Tbk91XzBocGtCaFpTOFg5Q0pxMS1VYkloMFdvVVNMcjVSYnnSAUhBVV95cUxQc1FyeGs0RTVGdmxUSnFUUmctRU9wZWtOUXVxN1NrQlN2ZnZEdkxKVG04YXN5TWxfZGkteUFzNF81MkIyWkFINWE?oc=5",
+        "published": "Thu, 16 Jul 2026 19:00:00 GMT",
+        "publisher": "モデルプレス"
+      },
+      {
+        "title": "銀行株に向かうAI集中マネー、好業況で再評価－日本株高持続の援軍に - Bloomberg.com",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBlMEg4RngxYU9PUk54SUZuMUhsOEJrcjJUUUFZN0hnZjNiYzFJTFh5Q1lvLWtxamJINERrcFFGMEdGcVpaZHo5NzZoZmlhOV9paUF0MUEycWtjdXJQUlRkNmVMZnJ4amJDV3ZtRVRiLUpwRnc5M2xJ?oc=5",
+        "published": "Wed, 15 Jul 2026 23:15:26 GMT",
+        "publisher": "Bloomberg.com"
+      },
+      {
+        "title": "JPモルガン、時価総額1兆ドル目前…韓国銀行株も「避難先」として急浮上 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFA2RExXUU9BYWt4TThCNkhWdi1yclFKSllSQ2dkN01EN3JsUG1JRmtzTmVjRmJBRUFBZTgwYUtaMWkxUXRmVnRwbWRZVnQ5VXFmclVieXpmak1KZklsQ0VWRkV1aFhwMFE4Znl2ZF95bTRwM2NG?oc=5",
+        "published": "Thu, 16 Jul 2026 10:26:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "2026豊明夏まつり - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNQW11RmVvZlEzb1RoRUVoNHFTREdodHFtbHozc2JvM0tiLUk5LXlaNU9lb0Z3YURrd1M1LUxTNk9Ub1V5endhNk01b05yNU9ORGc1YVRJN194eENRX0pkOUVYLU1uakp0LV9HOWFuS3pjbi1aMTVpalljS1h5Q210RnlYS29GQdIBhgFBVV95cUxNQW11RmVvZlEzb1RoRUVoNHFTREdodHFtbHozc2JvM0tiLUk5LXlaNU9lb0Z3YURrd1M1LUxTNk9Ub1V5endhNk01b05yNU9ORGc1YVRJN194eENRX0pkOUVYLU1uakp0LV9HOWFuS3pjbi1aMTVpalljS1h5Q210RnlYS29GQQ?oc=5",
+        "published": "Thu, 16 Jul 2026 01:00:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "中期経営計画における財務目標の修正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538305.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "代表執行役の異動について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260305576744.pdf",
+        "date": "2026-03-05 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260302573608.pdf",
+        "date": "2026-03-02 16:00:00"
+      }
+    ]
+  }
+}

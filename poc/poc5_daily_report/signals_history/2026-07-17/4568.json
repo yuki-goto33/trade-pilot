@@ -1,0 +1,217 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-07-17T08:16:20+09:00",
+  "price_as_of": "2026-07-16",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 60,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家は中立（strength 55）であり、特に2026年3月期の減益・EPS減少予想や直近の株価を動かす新規材料の不足を指摘しており、積極的な買い材料に乏しい状況です。",
+        "evidence": "fundamental_view.stance=neutral (strength=55), fundamental_view.points[0], fundamental_view.points[1]"
+      },
+      {
+        "reason": "テクニカル専門家も中立（strength 60）であり、短期的な反発は認めるものの、中期的な下落トレンドの中での動きであり、RSIの高水準による過熱感も指摘されているため、積極的な買いの根拠とはなりません。",
+        "evidence": "technical_view.stance=neutral (strength=60), technical_view.points[0], technical_view.points[3], technical_view.cautions[0], technical_view.cautions[1]"
+      },
+      {
+        "reason": "統合判断ルールにおいて、ファンダメンタルズ専門家の強気確信度がbuyシグナル発出の基準値（70）を下回るため、holdと判断します。",
+        "evidence": "fundamental_view.strength=55 (below rule's threshold of 70)"
+      }
+    ],
+    "risks": [
+      "7月31日に次回決算発表を控えており、業績動向や今後の見通しが市場の期待を下回る場合、株価にネガティブな影響を与える可能性があります。",
+      "7月30日から31日にかけて開催される日本銀行金融政策決定会合の結果が、市場全体に不透明感をもたらす可能性があります。",
+      "中期的な下落トレンドが継続しており、短期的な反発が持続せずに上値が重くなるリスクがあります。",
+      "RSIが高水準で推移しており、短期的な過熱感からの調整局面に入る可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 60,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家は中立（strength 55）であり、特に2026年3月期の減益・EPS減少予想や直近の株価を動かす新規材料の不足を指摘しており、積極的な買い材料に乏しい状況です。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=55), fundamental_view.points[0], fundamental_view.points[1]\"\n  },\n  {\n   \"reason\": \"テクニカル専門家も中立（strength 60）であり、短期的な反発は認めるものの、中期的な下落トレンドの中での動きであり、RSIの高水準による過熱感も指摘されているため、積極的な買いの根拠とはなりません。\",\n   \"evidence\": \"technical_view.stance=neutral (strength=60), technical_view.points[0], technical_view.points[3], technical_view.cautions[0], technical_view.cautions[1]\"\n  },\n  {\n   \"reason\": \"統合判断ルールにおいて、ファンダメンタルズ専門家の強気確信度がbuyシグナル発出の基準値（70）を下回るため、holdと判断します。\",\n   \"evidence\": \"fundamental_view.strength=55 (below rule's threshold of 70)\"\n  }\n ],\n \"risks\": [\n  \"7月31日に次回決算発表を控えており、業績動向や今後の見通しが市場の期待を下回る場合、株価にネガティブな影響を与える可能性があります。\",\n  \"7月30日から31日にかけて開催される日本銀行金融政策決定会合の結果が、市場全体に不透明感をもたらす可能性があります。\",\n  \"中期的な下落トレンドが継続しており、短期的な反発が持続せずに上値が重くなるリスクがあります。\",\n  \"RSIが高水準で推移しており、短期的な過熱感からの調整局面に入る可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "中期的な下落トレンドにあるものの、直近では複数のテクニカル指標が好転し、短期的な反発が期待されます。ただし、市場全体の地合いは中立であり、上値には注意が必要です。",
+      "points": [
+        {
+          "point": "過去60営業日で株価が下落しており、TOPIXに対してもパフォーマンスが劣後しているため、中期的な下落トレンドにあります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct = -6.55%, price_technical.trend_60d.relative_to_topix_60d_pct = -11.71%"
+        },
+        {
+          "point": "直近の取引日（7月16日）に株価が大幅に反発し、5日移動平均線と25日移動平均線を上回りました。",
+          "evidence": "price_technical.recent_5_days[4].change_pct = 2.6%, price_technical.last_close = 2746.5, price_technical.sma5 = 2705.0, price_technical.sma25 = 2625.42"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線を上回るゴールデンクロスを形成しており、MACDもシグナルラインを上回って推移しているため、短期的な上昇モメンタムが見られます。",
+          "evidence": "price_technical.sma5_vs_sma25 = 'golden(5日線が25日線の上)', price_technical.macd_histogram = 2.84"
+        },
+        {
+          "point": "RSIが68.4と高水準で、買いの勢いが強いことを示唆しています。",
+          "evidence": "price_technical.rsi14 = 68.4"
+        },
+        {
+          "point": "前夜のNY市場で当該銘柄のADRとヘルスケアセクターETFがともに大きく上昇しており、翌日の日本市場での寄り付きは好材料となる可能性があります。",
+          "evidence": "us_overnight.adr.change_1d_pct = 3.38%, us_overnight.sector_proxy.change_1d_pct = 2.22%"
+        }
+      ],
+      "cautions": [
+        "中期的な下落トレンドの中にあり、短期的な反発が持続せずに上値が重くなる可能性があります。",
+        "RSIが買われすぎ水準に近いことから、短期的な過熱感からの調整が入る可能性もあります。",
+        "前夜のNY市場での好材料は、当日の寄り付き価格に織り込まれる可能性が高く、その後の値動きには注意が必要です。",
+        "市場全体の地合いは中立であり、個別銘柄を力強く押し上げるほどの明確な追い風はありません。"
+      ],
+      "key_levels": {
+        "support": 2625.42,
+        "resistance": 2787.5
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "第一三共は2026年3月期の業績予想において増収ながら減益・EPS減少を見込んでおり、業績トレンドに一部減速感があります。直近で株価を大きく動かすような新規の好材料は見当たらず、中立的な見解です。",
+      "points": [
+        {
+          "point": "2026年3月期は増収となるものの、営業利益および純利益は減益、希薄化後EPSも減少するとの予想が示されており、業績トレンドに一部減速感が見られます。",
+          "evidence": "fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=2291, fundamentals.earnings_trend.annual[0].net_income_oku_jpy=2599, fundamentals.earnings_trend.annual[0].diluted_eps=140.37 (前年比減少)"
+        },
+        {
+          "point": "直近の適時開示やニュースは「譲渡制限付株式報酬としての自己株式の処分の払込完了」に関するものであり、企業の事業活動や業績に直接的な影響を与える性質の材料ではありません。",
+          "evidence": "disclosures.items[0].title='譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ', news.headlines[0].title='第一三共[4568]：譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ 2026年7月16日(適時開示)'"
+        },
+        {
+          "point": "日本国内のマクロ経済環境は、日銀短観の大企業製造業DIや製造業PMIが堅調に推移しており、全体としては景気拡大基調が示唆されています。",
+          "evidence": "macro.boj.tankan.di.large_manufacturing.current_di=22.0, macro.japan_pmi.manufacturing.latest_value=54.8"
+        }
+      ],
+      "cautions": [
+        "2026年7月31日に次回決算発表を控えており、業績動向や今後の見通しには注意が必要です。",
+        "2026年7月30日から31日にかけて日本銀行金融政策決定会合が予定されており、政策金利の変更など金融政策に関する発表は市場全体に影響を与える可能性があります。",
+        "2026年3月期の業績予想が減益である点が、今後の株価の重しとなる可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "第一三共[4568]：譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ 2026年7月16日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQZE5UdTdhWVlrRlFoV0l0cXM3ZkJHVDIxLTRCTjJlUTZ5NmY3OEwzMkNPemNNTnI4Xzljb3ZmX0oxeTJjM0dneEF6bnlWcnVsMEl6aXA1TEFHZi1VVmJaOVM5bVlKTUlIZmdmaUNobDJMOVdTNGJqNHFTMERiTGowTk1Xd3RFY2VYaGk3bDk2cVMxcTNsREV0TzJJc21hZHktU0h6REtSVUdjcHFwc0ZHT1BrSHJxN0VLLWJEWk5QdmpVMjZkdVZha1BMUXc?oc=5",
+        "published": "Thu, 16 Jul 2026 06:30:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "国内製薬パイプライン分析、エーザイ「レケンビ」の市場拡大、武田のOXR2作動薬の承認に注目 - 日経バイオテクONLINE",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE84UEY0aGRlMnQyS1VyYjEwazAxRm1EX0dQLUpLTnRtVVUwdkd1RWRuUG9sUzJlM2FGbUhBOW5pTWRMd0VvS2FuZTY2S1dfbHhBeldrcGZGXzNyWUtGb21Edlp2Z0R4cWZwNGljYzdkTQ?oc=5",
+        "published": "Thu, 16 Jul 2026 22:01:13 GMT",
+        "publisher": "日経バイオテクONLINE"
+      },
+      {
+        "title": "本日の【均衡表 《雲》｜上抜け／下抜け】引け 上抜け＝ 93 銘柄 下抜け＝ 127 銘柄 (7月16日)(株探ニュース) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQWllkelpEUWt3WXFtQWtxVFpaWmNCV050bnJWSUstM2UweXFqNkpqNnZfb2pSNWgyamtjZEhmeU5rbzlpRVhpSUNqUTBaS3lQeGR2NjJCa2JHejh0SHZZNWV6N1ZGaU9ua3pWa3FOSDNJSzljV0NJeWpuNU9mc0dVQlNUeFh4QlU?oc=5",
+        "published": "Thu, 16 Jul 2026 06:45:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "2026年版科学技術・イノベーション白書、ノーベル賞の成果と社会実装に向けた取り組みをアピール - 日経バイオテクONLINE",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBEQV9QY3VFOC1faHg1OHNpT3hhTXhzT2JubnpjUUxiQ2hvbUZEeHJncFMwWFlaaGQ4MklueWlIRWdsamxqQWxfOWFYOEZGeGJJVS1KSm9uQTRQUlFCck9INjhrSEdZQQ?oc=5",
+        "published": "Thu, 16 Jul 2026 22:01:14 GMT",
+        "publisher": "日経バイオテクONLINE"
+      },
+      {
+        "title": "JCRファーマは2027年にDMD治療薬の上市目指す、遺伝子変異に依存しない治療で300億円規模の売上高狙う - 日経バイオテクONLINE",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5MU3pVYUMwdUJ2NkVZa1kwNk5ISEYwOHNHT2xvMms2RHRETjNQQ2hFZXFMYkJWODZpWmJiX0VGYUVOTzhwSkVwNGVxalFuNmxZTEZIbjVVSHlhcFNCNGM2QVVTT0tCQQ?oc=5",
+        "published": "Thu, 16 Jul 2026 10:46:33 GMT",
+        "publisher": "日経バイオテクONLINE"
+      },
+      {
+        "title": "九州大学病院とUbie、肥満症診療における生成AI活用に向けた連携を開始 - 日経バイオテクONLINE",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFB0YjVKQ1NnOVlvS2ZCaUUxcVAxa0xoUE1nYVRNUUhvdmVwdTY0dGJncW51TXZIcDhpN3d2NkRKUW4yLTV3T0o5OHhXXzhwVENFTXd5cHI2OXU2eXgtcDNhX3ExaTNMUQ?oc=5",
+        "published": "Thu, 16 Jul 2026 10:41:33 GMT",
+        "publisher": "日経バイオテクONLINE"
+      },
+      {
+        "title": "EFポリマー、The Morning Star Companyおよび兼松と共同で、米国カリフォルニア州の加工用トマト栽培における実証評価を開始 - 日経バイオテクONLINE",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBJc3l1WjBNam8zbmE2azZhVGpGSUdoNTBtbVFPOV9KY0VnajJ0ZUdNNFhhUVQ3bXR0dkhELWlMSFFwakdDYkR2WnZWeS1KbFNlV2dVOVFGUmJlbjVTWVZUa3lkQUpWdw?oc=5",
+        "published": "Thu, 16 Jul 2026 10:35:47 GMT",
+        "publisher": "日経バイオテクONLINE"
+      },
+      {
+        "title": "大日本印刷、協和ファーマケミカルの株式取得（子会社化）に向けた株式譲渡契約締結のお知らせ - 日経バイオテクONLINE",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1CcF9kT0FwRmxQaGJSUEFiUEVDX2Z0VWViT2x2SWxhbWpseHlqTGxFTHlDU0V1X2xYNFRDOXRfazlwQ2ZMdmNITXdLbmpwZGNMNWVfa2tFV080alI2SlloejB1aFAtQQ?oc=5",
+        "published": "Thu, 16 Jul 2026 10:46:33 GMT",
+        "publisher": "日経バイオテクONLINE"
+      },
+      {
+        "title": "給付付き控除、導入合意　現役世代の税社保負担軽減 - PHARMACY NEWSBREAK",
+        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE4xdG1UWEhVWWdYUU1keTNBdkVlM0Q3T2lwbmhwenJSTElFM29yVWJqeEJHZWd0RVAyX3NaZ1IwNDI4dDhoOVZGY1pB0gFPQVVfeXFMT0xOLTRvdnZhSkd1VkN3Q3l1UUtqMUdTTDFXdFl5QkluQTlLS1R2a3ZxLWhicXlsSDFhdEFSTlBUd0dhM2Y0VlRCWVgyZ3dWOA?oc=5",
+        "published": "Thu, 16 Jul 2026 05:17:00 GMT",
+        "publisher": "PHARMACY NEWSBREAK"
+      },
+      {
+        "title": "日経平均は大幅反落、売り優勢で下げ幅拡大 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQRmlXbkg2cGZXenhZZGxDbzdQbVl5NGNlN29GWnlOOFphOERnU21HQkd4ZWhoeWcyWGg4emxoSmpGU0dxRy1SczVPZFBqYkxGOE9PX3lfVndfTHc2WHJLMWpRZnNrUGlXdFo5bmk4aUtEaEo1SVJaRUtHaE11Y00zOU1aMk0xbkhnbDNhd9IBjAFBVV95cUxQRmlXbkg2cGZXenhZZGxDbzdQbVl5NGNlN29GWnlOOFphOERnU21HQkd4ZWhoeWcyWGg4emxoSmpGU0dxRy1SczVPZFBqYkxGOE9PX3lfVndfTHc2WHJLMWpRZnNrUGlXdFo5bmk4aUtEaEo1SVJaRUtHaE11Y00zOU1aMk0xbkhnbDNhdw?oc=5",
+        "published": "Thu, 16 Jul 2026 07:21:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587542.pdf",
+        "date": "2026-07-16 15:30:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584479.pdf",
+        "date": "2026-06-30 16:30:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260620575199.pdf",
+        "date": "2026-06-22 15:30:00"
+      },
+      {
+        "title": "財務上の特約が付された金銭消費貸借契約の締結に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617573095.pdf",
+        "date": "2026-06-17 19:00:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬等の内容の一部改定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515539092.pdf",
+        "date": "2026-05-18 13:00:00"
+      },
+      {
+        "title": "（訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260513530596.pdf",
+        "date": "2026-05-13 17:30:00"
+      },
+      {
+        "title": "自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511521821.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522113.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "決算補足資料（2025年度決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522160.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "2025年度決算および第6期（2026-2030年度）中期経営計画　説明会",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522186.pdf",
+        "date": "2026-05-11 15:30:00"
+      }
+    ]
+  }
+}

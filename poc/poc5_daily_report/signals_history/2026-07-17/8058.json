@@ -1,0 +1,222 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-07-17T08:14:03+09:00",
+  "price_as_of": "2026-07-16",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "直近14日以内（7月4日）に同一銘柄への buy 判断が出ており、統合判断ルールに従い新規エントリーを控え継続監視とする。",
+        "evidence": "reference.recent_buy.date=2026-07-04"
+      },
+      {
+        "reason": "ファンダメンタルズ強度が60であり、buy の必須条件である確信度（strength 70以上）を満たしていない。",
+        "evidence": "fundamental_view.strength=60"
+      },
+      {
+        "reason": "テクニカル面で中期下落トレンドが継続中であり、ADRの急落を考慮すると戻り売り圧力が強く、押し目確認が必要な局面である。",
+        "evidence": "technical_view.stance=bearish (strength=75) / us_overnight.adr.change_1d_pct=-2.85"
+      },
+      {
+        "reason": "PERが21倍を超えており、商社株としてのバリュエーションに割安感が乏しく、上値が重いと判断される。",
+        "evidence": "fundamental_view.points[2]: forward_pe=21.364"
+      }
+    ],
+    "risks": [
+      "2026年8月3日に予定されている第1四半期決算発表における進捗リスク",
+      "7月30日〜31日の日銀金融政策決定会合に伴う為替の円高進行リスク",
+      "ADRの急落が寄り付きで織り込まれた後の下値模索継続の可能性",
+      "中期的なTOPIXに対する相対的なパフォーマンスの悪化"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 60,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"直近14日以内（7月4日）に同一銘柄への buy 判断が出ており、統合判断ルールに従い新規エントリーを控え継続監視とする。\",\n      \"evidence\": \"reference.recent_buy.date=2026-07-04\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズ強度が60であり、buy の必須条件である確信度（strength 70以上）を満たしていない。\",\n      \"evidence\": \"fundamental_view.strength=60\"\n    },\n    {\n      \"reason\": \"テクニカル面で中期下落トレンドが継続中であり、ADRの急落を考慮すると戻り売り圧力が強く、押し目確認が必要な局面である。\",\n      \"evidence\": \"technical_view.stance=bearish (strength=75) / us_overnight.adr.change_1d_pct=-2.85\"\n    },\n    {\n      \"reason\": \"PERが21倍を超えており、商社株としてのバリュエーションに割安感が乏しく、上値が重いと判断される。\",\n      \"evidence\": \"fundamental_view.points[2]: forward_pe=21.364\"\n    }\n  ],\n  \"risks\": [\n    \"2026年8月3日に予定されている第1四半期決算発表における進捗リスク\",\n    \"7月30日〜31日の日銀金融政策決定会合に伴う為替の円高進行リスク\",\n    \"ADRの急落が寄り付きで織り込まれた後の下値模索継続の可能性\",\n    \"中期的なTOPIXに対する相対的なパフォーマンスの悪化\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "中期的にTOPIXを大幅に下回る下落トレンドが継続しており、直近の自律反発も25日移動平均線付近で失速し、前夜ADRの急落を考慮すると再び下値を試す可能性が高いと判断します。",
+      "points": [
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともにマイナスであり、明確な中期下落トレンドの中にあります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-8.52, price_technical.trend_60d.relative_to_topix_60d_pct=-13.68"
+        },
+        {
+          "point": "前夜のNY市場でADRが大幅に下落しており、寄り付きから売り圧力が強まる可能性が極めて高い状況です。",
+          "evidence": "us_overnight.adr.change_1d_pct=-2.85"
+        },
+        {
+          "point": "5日線が25日線を下回るデッドクロス状態が続いており、短期的な戻りもSMA25（4501.92円）付近で上値を抑えられています。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.sma25=4501.92"
+        }
+      ],
+      "cautions": [
+        "ADRの下落が寄り付きで過剰に織り込まれた場合、セクターETF（XLE）のプラス圏推移を背景に下げ渋る可能性があります",
+        "MACDヒストグラムは改善傾向（25.81）にあり、4409円付近で底打ちを形成する動きには注意が必要です",
+        "VIX指数が上昇しており、市場全体のボラティリティ拡大による乱高下のリスクがあります"
+      ],
+      "key_levels": {
+        "support": 4409.0,
+        "resistance": 4585.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "良品計画との戦略的業務提携などの新規材料が出ているものの、2026年3月期の減益計画およびPER21倍超という商社株としては高水準なバリュエーションが重石となり、強気判断には至らない。",
+      "points": [
+        {
+          "point": "リテイル分野の強化に繋がる良品計画との戦略的業務提携が発表されており、中長期的な収益基盤の多様化に寄与する可能性がある。",
+          "evidence": "news[1].title（良品計画、三菱商事と戦略的業務提携契約を締結）"
+        },
+        {
+          "point": "2026年3月期の純利益は前期比約15.8%減の8,005億円を見込んでおり、数年単位での減益トレンドが継続している点は懸念材料である。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=8005"
+        },
+        {
+          "point": "予想PERが21.36倍、PBRが1.75倍に達しており、ROE 9%という水準に照らしてバリュエーションの割安感は乏しい。",
+          "evidence": "fundamentals.valuation.forward_pe=21.364, fundamentals.valuation.price_to_book=1.757, fundamentals.valuation.return_on_equity=0.09"
+        },
+        {
+          "point": "ドル円が162円台という記録的な円安水準にあり、外貨建資産や輸出関連収益の円換算額を押し上げるマクロ環境は下支え要因となる。",
+          "evidence": "macro.indices[2].close=162.37"
+        }
+      ],
+      "cautions": [
+        "2026年8月3日に第1四半期決算発表を控えており、通期減益計画に対する進捗率次第で株価が大きく変動するリスクがある。",
+        "7月30日〜31日の日銀金融政策決定会合において利上げ等の政策変更があった場合、為替の円高進行を通じて業績及び株価に下押し圧力がかかる懸念がある。",
+        "特定子会社の異動（2026年7月15日開示）など、組織再編に伴う一時的な費用発生や構造変化の不確実性が存在する。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-04",
+    "days_ago": 13,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "三菱商事(株)【8058】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ScXhBTU9DVmdWalgxWWpQcThsOHBreVdENTJLZUh2YU9xMldYU1dJUmw2NjdWVWY0N2tuZmtZWTkySUZocWhkT24xNVU3OC1PYnZjU3FaTjQ1b0NkdGRV?oc=5",
+        "published": "Thu, 16 Jul 2026 06:53:04 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "良品計画、三菱商事と戦略的業務提携契約を締結 国内外リテイル分野で協業強化 - ダイヤモンド・チェーンストアオンライン",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9DZnA5a3hEZVlJeWhkU3lxNUZfQ2MtZjZpVmZxM0JJS2ZVTDRJWE9DcUI4QWU4S2hWbW5yaXZtbHhwblc2U1hGTGcxb3lvZUotWTBV?oc=5",
+        "published": "Thu, 16 Jul 2026 19:22:12 GMT",
+        "publisher": "ダイヤモンド・チェーンストアオンライン"
+      },
+      {
+        "title": "三菱商事(株)【MTSUY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1mS2dERDhJUEpRcDJORFk4NEpnS01xNlVJZ0hkMnlWMDQzLWt0cXlDV3dZSUs2NFRkTlFFRUR2SnRNRkRBeVBFT1Z6elA4UURB?oc=5",
+        "published": "Thu, 16 Jul 2026 15:50:24 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "樹脂素材の削減実績量､生産変動で補正 住友化学が検証 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE44dVFBUnM4bjNaNkJjUGpXN1U0LVFfOXVfbE1kckh2M0x0WE5MY1Z5aW9DMFg1Um9fTVBqSzZjbldNVmIwLTYzQ2VtNUo1TkVBNzg3TTMzU084STZ2X2tuLU9uemZvVF8xUUpYR01vZlN1ZnVZUFhn?oc=5",
+        "published": "Thu, 16 Jul 2026 20:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "三菱商事都市開発、初の冷凍自動倉庫「MCUD Logistics東扇島」竣工…1万パレットの保管が可能 - レスポンス（Response.jp）",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5TbVdMMmVYWm1ENjNOR1VFZlI0YTl5dU5UUjJnMVpWaS1DbnFIZE81RUIzZzZmdVp5SkpHYUctaVJoNlFneU1NZXhWbFpMbHo4NjdRWXZWZ2d2TXZFWVhz?oc=5",
+        "published": "Thu, 16 Jul 2026 08:30:03 GMT",
+        "publisher": "レスポンス（Response.jp）"
+      },
+      {
+        "title": "《人事・機構》横浜赤レンガ（9月1日） - 繊研新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBqR1JhclF3dVR1WXVHN2pKZTBnbmlkVjN4UzVCekl1d1ozMzFFSWg3Sk8wTEk2XzVSOEVGR0s1QjhqeXhpLTFMM2YybW1fZWVEUjdiSEVVUWY1NlJiUmw4MllWREc?oc=5",
+        "published": "Thu, 16 Jul 2026 21:23:00 GMT",
+        "publisher": "繊研新聞"
+      },
+      {
+        "title": "有報100ページ、まず3行で。カブヨミ『AI要約』の使い方｜日本個別株デューデリジェンスセンター - note",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8zbGR0b2xhODdvV0YxSnlKQ2NqLXN3dWZaNVB5Q2x3OFRNVVEtUHNpX3p1TjYzc0lFQ0ozMEd4X2ZWamRJcHdFS0RvT1I5ZmNCd1ZjY3pJcWxhVUU?oc=5",
+        "published": "Thu, 16 Jul 2026 09:42:32 GMT",
+        "publisher": "note"
+      },
+      {
+        "title": "この夏だけの味わい！夏季限定ドリンクが新登場！｜ショップニュース - marunouchi.com",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1Od0dhVFVuOVExX25DS1dxekhlVzl6Q1g2dTNneXZPajhnUVotOVRPTjFEZ3RCMlBxd18yVWc1OXpEdWd6MW9PUkNjLWxRYjNQdEdGdWFhMmQ?oc=5",
+        "published": "Wed, 15 Jul 2026 23:45:40 GMT",
+        "publisher": "marunouchi.com"
+      },
+      {
+        "title": "日経平均寄与度ランキング（大引け）〜日経平均は4日日経平ぶり反落、アドバンテストや東エレクが2銘柄で約481円分押し下げ - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPcndreUkzYXNEMzJZak9vVlNRdDhIZzVTZDJwUl9sUktHSU5GTUJxMW96VVEwS1RvdGpyRUFOczdGdXh2NEZZR1loQUVsaFdVUTd6MEV5MnQwMWVDWnVoeTd5bmpsMnFQNDFhZDE5ZUV0SkJmWmVfeWtiQkpCZjdxOElxNjZoRnpvbkVSMlNrQlnSAYwBQVVfeXFMT3c5akUxc2xGa0FNalNlMXo1MERzd1U3cFdPYmNOWWtjbnRrWEVHNFdKcEtXMnkwaVpGWUdLVkh3OGpxMzhKclIxNkZ2YmNtMVJFdUd6alE3ckxoSVNQRElmMmVHb3FQbFN6ci0zRGs4X1RiZF9JXzNtZVdJOEJHb3hRNTZ5VmNSU1JFRV8?oc=5",
+        "published": "Thu, 16 Jul 2026 10:12:57 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "三菱商事ロジスティクス、物流教育プラットフォーム「ロジスタ」に法人版…サービス開始 - レスポンス（Response.jp）",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5IOEZYU3ZReEN6ZHZjYlhISGYtRWtjUlVOV21TUkFUTTlCOXB1MFlVWXhlWlFhZjY1MThQQXVxdFdYQVhDb0FTaEdGUlNibEJ2QmRoSFFtTk8yeDRFU3R3?oc=5",
+        "published": "Thu, 16 Jul 2026 06:15:03 GMT",
+        "publisher": "レスポンス（Response.jp）"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "特定子会社の異動（子会社の特定子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260714593288.pdf",
+        "date": "2026-07-15 10:00:00"
+      },
+      {
+        "title": "子会社間の合併及び特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552595.pdf",
+        "date": "2026-05-29 09:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C2プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539898.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C3プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539905.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C4プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539910.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C5プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539918.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C6プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539939.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515679.pdf",
+        "date": "2026-05-01 14:00:00"
+      },
+      {
+        "title": "通期個別業績と前期実績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515675.pdf",
+        "date": "2026-05-01 14:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260416505643.pdf",
+        "date": "2026-04-17 14:00:00"
+      }
+    ]
+  }
+}

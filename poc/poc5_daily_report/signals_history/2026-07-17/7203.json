@@ -1,0 +1,208 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-07-17T08:05:13+09:00",
+  "price_as_of": "2026-07-16",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズの確信度が基準値（70）に届かず、業績の減益トレンドと新規の好材料が拮抗しているため、エントリーの優位性が低いと判断しました。",
+        "evidence": "fundamental_view.strength=55, fundamental_view.points[0]: 2026年3月期の大幅な営業減益"
+      },
+      {
+        "reason": "テクニカル面で25日線を回復する反転シグナルはあるものの、中期トレンド（60日騰落率）は依然として大幅なマイナス圏にあります。",
+        "evidence": "technical_view.points[0]: last_close=2909.0 > sma25=2807.38, technical_view.points[2]: change_60d_pct=-12.98"
+      },
+      {
+        "reason": "日銀会合や次回決算発表といった重要なイベントを直近に控えており、マクロおよび個別要因の両面で不確実性が高い局面です。",
+        "evidence": "reference.next_boj_meeting=2026-07-30, reference.next_earnings_date=2026-08-04"
+      }
+    ],
+    "risks": [
+      "2026年7月30日〜31日の日銀会合に伴う為替の円高急進リスク",
+      "2026年8月4日の決算発表における業績下方修正や下げ止まり不透明感",
+      "中期下落トレンドに伴う、期間高値（2980.0円）付近での戻り売り圧力",
+      "地合い悪化時における、TOPIX連動ETFに引きずられる形での下押し"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 50,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズの確信度が基準値（70）に届かず、業績の減益トレンドと新規の好材料が拮抗しているため、エントリーの優位性が低いと判断しました。\",\n      \"evidence\": \"fundamental_view.strength=55, fundamental_view.points[0]: 2026年3月期の大幅な営業減益\"\n    },\n    {\n      \"reason\": \"テクニカル面で25日線を回復する反転シグナルはあるものの、中期トレンド（60日騰落率）は依然として大幅なマイナス圏にあります。\",\n      \"evidence\": \"technical_view.points[0]: last_close=2909.0 > sma25=2807.38, technical_view.points[2]: change_60d_pct=-12.98\"\n    },\n    {\n      \"reason\": \"日銀会合や次回決算発表といった重要なイベントを直近に控えており、マクロおよび個別要因の両面で不確実性が高い局面です。\",\n      \"evidence\": \"reference.next_boj_meeting=2026-07-30, reference.next_earnings_date=2026-08-04\"\n    }\n  ],\n  \"risks\": [\n    \"2026年7月30日〜31日の日銀会合に伴う為替の円高急進リスク\",\n    \"2026年8月4日の決算発表における業績下方修正や下げ止まり不透明感\",\n    \"中期下落トレンドに伴う、期間高値（2980.0円）付近での戻り売り圧力\",\n    \"地合い悪化時における、TOPIX連動ETFに引きずられる形での下押し\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "中期トレンドは下落基調にあるものの、足元では出来高を伴う3日続伸で25日線を回復し、MACD好転などの反転シグナルが複数確認されるため、中立の見方に移行します。",
+      "points": [
+        {
+          "point": "直近3営業日で出来高を増加させながら連続上昇し、終値ベースで25日移動平均線を上抜けて推移しています。",
+          "evidence": "price_technical.last_close=2909.0, price_technical.sma25=2807.38, price_technical.recent_5_days"
+        },
+        {
+          "point": "MACDがシグナルを上回って推移し、5日線と25日線のゴールデンクロスが発生するなど短期的な反転シグナルが点灯しています。",
+          "evidence": "price_technical.macd=17.67, price_technical.macd_signal=7.16, price_technical.sma5_vs_sma25=golden(5日線が25日線の上)"
+        },
+        {
+          "point": "一方で、60営業日騰落率および対TOPIX相対騰落率はともに大幅なマイナスであり、中期的な下落トレンドの圧力は依然として残存しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-12.98, price_technical.trend_60d.relative_to_topix_60d_pct=-18.14"
+        }
+      ],
+      "cautions": [
+        "前夜のNY市場でADRが1.61%上昇しており、寄り付き直後は上昇して始まる可能性がありますが、その水準に織り込まれて寄り天となるリスクがあります。",
+        "中期下落トレンドが継続しているため、期間高値2980.0円に接近するにつれて戻り売り圧力が強まる可能性があります。",
+        "TOPIX連動ETFが25日線を下回る中立レジームであり、地合い悪化による下押し懸念が残ります。"
+      ],
+      "key_levels": {
+        "support": 2807.38,
+        "resistance": 2980.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "本業の業績は年次・四半期ともに減益トレンドにあり、目前に日銀会合や次回決算発表を控えて様子見姿勢が強まりやすい。一方、米エヌビディアとの協業拡大など中長期的なポジティブ材料も浮上しており、強弱材料が拮抗しています。",
+      "points": [
+        {
+          "point": "業績は2024年3月期をピークに売上高が増加する一方で、営業利益・純利益ともに減少傾向が続いており、直近の2026年3月期も大幅な営業減益（37,662億円）となっています。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "直近の2026年7月16日に、米エヌビディアとのフィジカルAIや自動運転領域における協業拡大が複数メディアで報じられ、中長期の成長期待を刺激する新規カタリストとなっています。",
+          "evidence": "news"
+        },
+        {
+          "point": "大企業製造業の業況判断DIが22.0へ改善し、日本の製造業PMIも54.8と拡大基調を維持するなど、業界を取り巻くマクロの事業環境は底堅く推移しています。",
+          "evidence": "macro.boj.tankan, macro.japan_pmi.manufacturing"
+        }
+      ],
+      "cautions": [
+        "2026年8月4日に次回決算発表が予定されており、業績の下げ止まりを確認するまでは重要なイベントリスクとなります。",
+        "2026年7月30日〜31日の日銀金融政策決定会合が近づいており、追加利上げ等の観測によって為替（ドル円162.37円）が円高方向に急変した場合、輸出採算の悪化要因となります。",
+        "中小企業景況調査（2026年6月）において、仕入価格DI（59.7）と販売価格DI（21.3）の乖離が続いており、下請け企業への価格転嫁やサプライチェーン全体のコスト負担が課題となっています。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "トヨタ自動車(株)【7203】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1EdmpyVngtTjQxZWwxbEhFQ0RiM1VtdzRXWnplQ18yWmhvYlg4MjFlaVUxWW9zU3RlaEdEY1NHSXRwR3VuaW5EcEdYU0kyS2wwTGpvb3luZ243X1A4MGk0?oc=5",
+        "published": "Thu, 16 Jul 2026 06:52:34 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "日エンター - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxONWZUM3B4NmJlaWEwMTNMc21HRmx0YTN4d1JJU2EzRnhhZEtpU2VsMUxBNFB2bEhGZHNRMEdwel9WTEp3WGJFM1FKc0VuZVRGT294NW5hOXdoQXhKczRodFRsVWtEVDl1cjc1UjlXc1ZLLTRRNGlvWEVrcFIwRUkzOHdpdkN0TnhWZDVkOXg3bW5mUXZfV290UEZkaHBnUTd4Nm9hZlVBVGR4QWU2YTNRaHF2cGh3cWZodmxhcDRwLUZlcHY4M0FSTVBoaGM?oc=5",
+        "published": "Thu, 16 Jul 2026 05:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "交通事故遺児の就学に役立てて 岡山トヨタ自動車が１００万円寄付 - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9MUnM5NDhBWjR1ZjUydG0yMnFfUHFwZ1Zna2tPNnJfN3lPOWxsQlZFUmtkbWw2Z0FRVlRrV0ZlZVhIdWdpMXFENmRUSFFIY0g4X0E?oc=5",
+        "published": "Thu, 16 Jul 2026 05:45:56 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "米エヌビディア､トヨタ自動車との協業を拡大 - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE8zcjVhUXNDNWpjUnRqUDI5aDhXdW0weW8ybzlaaVdsczJFWnFvdDNWVXFjdXZyLWt3TWVxVkswMWNYWU9iOHJNOW4zejVxSmNVbVI3bl9rbw?oc=5",
+        "published": "Thu, 16 Jul 2026 00:10:00 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "NVIDIAとトヨタが協業拡大を発表---フィジカルAI、自動運転、工場・都市を連携する「次世代モビリティ戦略」 1枚目の写真・画像 - レスポンス（Response.jp）",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1WUFdIdjdnVXFUR3RqMEFiZHdCbGdYNVdjT19TcFBnTEltNC1pNk1GR0pDSk0xVGFNVEttYmY1Rk1xekU4eTN4UDJqS2Q5cjVXNVAtZm5SNUYxRzQ0b24wd1VzRHp1TEdKWnN0Vw?oc=5",
+        "published": "Thu, 16 Jul 2026 07:22:17 GMT",
+        "publisher": "レスポンス（Response.jp）"
+      },
+      {
+        "title": "NVIDIAがトヨタなど日本産業界と連携強化、フィジカルAI向け新製品も発表 - 日経クロステック Active",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1HdjdsV3FCM1FycGlRbGlaQ1VVeEVmODl1UWVYZnRNX1A1T0RjQW84VGxmTGthdVQ1c0k0LWlPdENvYWRMbEp4ODc1SEVRT0VyWFJEaVN1Nm05ZDVQZkpPWndaMHFfcG1xaEE?oc=5",
+        "published": "Thu, 16 Jul 2026 03:40:00 GMT",
+        "publisher": "日経クロステック Active"
+      },
+      {
+        "title": "「ポケモンスリープ」とタイアップ、トヨタ自動車の“昼寝ソリューション装置”を横浜で体験してきた（GAME Watch） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1RQUIweVhqOFkyRnNXQWRFMXJ4czVOMzFKZG8wV2JDbERWeTNPajQ5bVpOcldicV9XdmxBRlpjODROZWh4Y19ZVHFsbklRQ0t2bkVKcDRGWE0xZjVLcC1JYkw3WEFCQnBHdUxtek54amc3Wlk4d3pFOVJIZXNZUkU?oc=5",
+        "published": "Thu, 16 Jul 2026 05:23:00 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "エヌビディア、日本企業と連携拡大＝富士通など、フィジカルＡＩ実装へ - 時事通信ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE81VldEX2dVR0NvSndMUXpQV3dFOVV1aXdsZzJhSnRxb2VfUGhjT1hTQzdQeWJqYnE2OG9CMUI3Y1JzZkRPN3RVVnJ3LWJJWkRzNjc2a1J4NnhJeHN0UHc?oc=5",
+        "published": "Thu, 16 Jul 2026 08:19:00 GMT",
+        "publisher": "時事通信ニュース"
+      },
+      {
+        "title": "エヌビディア、トヨタや三菱重工と提携拡大 日本AI戦略の基盤強化へ - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5rQzRJc0JtM2dTNVdTU0hFeWE0Q2RVemZOenpkd0lEcjBXYmtITGN2cDRlQUVhSEdYRENxWjZjLS1QQ3hja293enVmeVNSWXljQlZscGNUdzZ0eFZXQ19hbHVxQ3RGTmJOaDlkemJmWEdEVVJz?oc=5",
+        "published": "Thu, 16 Jul 2026 01:06:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "戸塚、村瀬心らSランク　強化指定選手／スキー - サンスポ",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQenRpMU1jLVJ0N1gyZkgxRnhORzdJN0Y4V29DNWdKTmJhUlVRTWJYNVZ2RWhFeUdQNDlkY1hsYUlLZXh2aHYyeUsxMjl3dXdRVWo2Y2tMUlZsdXoxazdCMTF2dkFJbzNQYXZ0MXBrLWp4OU8yZy1WU3JTWWNhRmJsWmJPVnltaHB6NmfSAYoBQVVfeXFMUHp0aTFNYy1SdDdYMmZIMUZ4Tkc3STdGOFdvQzVnSk5iYVJVUU1iWDVWdkVoRXlHUDQ5ZGNYbGFJS2V4dmh2MnlLMTI5d3V3UVVqNmNrTFJWbHV6MWs3QjExdnZBSW8zUGF2dDFway1qeDlPMmctVlNyU1ljYUZibFpiT1Z5bWhwejZn?oc=5",
+        "published": "Thu, 16 Jul 2026 12:41:18 GMT",
+        "publisher": "サンスポ"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "役員人事に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572690.pdf",
+        "date": "2026-06-17 16:00:00"
+      },
+      {
+        "title": "関係会社株式売却益の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260615570435.pdf",
+        "date": "2026-06-15 15:30:00"
+      },
+      {
+        "title": "（開示事項の変更・訂正）「会社分割（簡易吸収分割）に関するお知らせ」の一部変更・訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552805.pdf",
+        "date": "2026-05-28 18:45:00"
+      },
+      {
+        "title": "会社分割（簡易吸収分割）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520542612.pdf",
+        "date": "2026-05-20 19:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260506517369.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "2026年3月期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260508519105.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260508519366.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果ならびに自己株式の取得終了および消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260428513263.pdf",
+        "date": "2026-04-28 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付け及び自己株式の取得に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260330592169.pdf",
+        "date": "2026-03-30 15:30:00"
+      }
+    ]
+  }
+}

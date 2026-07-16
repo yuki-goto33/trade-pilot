@@ -1,0 +1,211 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-07-17T08:06:01+09:00",
+  "price_as_of": "2026-07-16",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 14,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズは国産AI「Noetra」開発主導や営業利益21.4%増の収益改善など極めて強力だが、テクニカル面でも既にゴールデンクロス等の強気サインが揃っており、材料が一定程度織り込まれている局面と判断される。",
+        "evidence": "fundamental_view.points[0]:国産AI基盤モデル / technical_view.stance=bullish (strength=75)"
+      },
+      {
+        "reason": "統合判断ルールに基づき、テクニカルが既にbullishに転じている場合は、モメンタム追随によるエントリー遅延のリスク（的中率低下）を避けるため、新規buyは見送る。",
+        "evidence": "technical_view.points[0]:SMA5がSMA25を上回るゴールデンクロス状態"
+      },
+      {
+        "reason": "15日後に第1四半期決算発表と日銀金融政策決定会合という極めて重要なイベントが控えており、現状での新規参戦はリスク・リワードの観点から最適ではない。",
+        "evidence": "reference.next_earnings_date=2026-07-31 / reference.next_boj_meeting=2026-07-30〜31"
+      }
+    ],
+    "risks": [
+      "2026年7月31日の決算発表における一時的損失の再計上リスク",
+      "日銀会合による利上げ決定に伴う急激な円高（1ドル162円台からの反転）による輸出採算悪化",
+      "米テクノロジーセクター（XLK）の下落トレンド波及およびVIX指数上昇による市場全体の調整"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 14,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズは国産AI「Noetra」開発主導や営業利益21.4%増の収益改善など極めて強力だが、テクニカル面でも既にゴールデンクロス等の強気サインが揃っており、材料が一定程度織り込まれている局面と判断される。\",\n   \"evidence\": \"fundamental_view.points[0]:国産AI基盤モデル / technical_view.stance=bullish (strength=75)\"\n  },\n  {\n   \"reason\": \"統合判断ルールに基づき、テクニカルが既にbullishに転じている場合は、モメンタム追随によるエントリー遅延のリスク（的中率低下）を避けるため、新規buyは見送る。\",\n   \"evidence\": \"technical_view.points[0]:SMA5がSMA25を上回るゴールデンクロス状態\"\n  },\n  {\n   \"reason\": \"15日後に第1四半期決算発表と日銀金融政策決定会合という極めて重要なイベントが控えており、現状での新規参戦はリスク・リワードの観点から最適ではない。\",\n   \"evidence\": \"reference.next_earnings_date=2026-07-31 / reference.next_boj_meeting=2026-07-30〜31\"\n  }\n ],\n \"risks\": [\n  \"2026年7月31日の決算発表における一時的損失の再計上リスク\",\n  \"日銀会合による利上げ決定に伴う急激な円高（1ドル162円台からの反転）による輸出採算悪化\",\n  \"米テクノロジーセクター（XLK）の下落トレンド波及およびVIX指数上昇による市場全体の調整\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "SMA5が25日線を上回るゴールデンクロス状態で、MACDも好転。米国ADRの大幅上昇もあり、短期的な上昇モメンタムが強まっている。",
+      "points": [
+        {
+          "point": "SMA5（3382.0）がSMA25（3312.04）を上回るゴールデンクロス状態にあり、短期的なトレンドが上向いている。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\""
+        },
+        {
+          "point": "MACDがシグナルを上回り、ヒストグラムが16.85とプラス圏で拡大しており、テクニカルな買いシグナルが点灯している。",
+          "evidence": "price_technical.macd=6.22, price_technical.macd_histogram=16.85"
+        },
+        {
+          "point": "前夜の米国ADRが3.28%の大幅上昇となっており、寄り付きからの強い買い需要が示唆される。",
+          "evidence": "us_overnight.adr.change_1d_pct=3.28"
+        }
+      ],
+      "cautions": [
+        "対TOPIX相対騰落率が-3.9%と劣後しており、市場全体と比較した際の買いの強さは限定的である可能性がある。",
+        "米国のテクノロジーセクターETF(XLK)が2.24%下落しており、同セクターへの売り圧力が国内市場にも波及するリスクがある。",
+        "VIX指数が16.73と上昇傾向にあり、市場全体のボラティリティ拡大による下押し圧力に注意が必要。"
+      ],
+      "key_levels": {
+        "support": 3312.04,
+        "resistance": 3633.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "本業の営業利益が20%を超える高い成長率を示していることに加え、国内連合によるAI基盤モデル開発という強力な新規カタリストが浮上しています。自社株買いによる継続的な株主還元も下値を支える要因ですが、決算と日銀会合が重なる7月末のイベントリスクには厳重な警戒が必要です。",
+      "points": [
+        {
+          "point": "国産AI基盤モデル「Noetra」の本格始動という強力な成長材料。NVIDIAの最新半導体提供や国内大手44社との連携を主導する立場にあり、次世代成長領域でのプレゼンス向上が期待されます。",
+          "evidence": "news.headlines[1].title=国産マルチモーダル基盤モデルの開発に向けて本格始動, news.headlines[9].title=国産AI「ノエトラ」が本格始動"
+        },
+        {
+          "point": "本業の稼ぐ力を示す営業利益が大幅な増益基調にあること。2026年3月期は売上高が3.7%増に対し、営業利益は21.4%増と収益性が大きく改善しており、1.5兆円規模に到達しています。",
+          "evidence": "fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=15537, fundamentals.earnings_trend.annual[1].operating_income_oku_jpy=12803"
+        },
+        {
+          "point": "積極的な自社株買いの継続。2026年5月の取得枠設定以降、6月・7月と継続的に自己株式の取得状況を開示しており、需給面でのサポートが機能しています。",
+          "evidence": "disclosures.items[0].title=自己株式の取得状況に関するお知らせ（2026-07-03）, disclosures.items[7].title=自己株式の取得枠設定及び自己株式の消却に関するお知らせ"
+        },
+        {
+          "point": "良好な製造業マクロ環境と円安メリット。日本の製造業PMIが拡大圏を維持しているほか、1ドル162円台の円安水準はグローバル展開する同社の収益を押し上げる要因となります。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.8, macro.indices[2].close=162.37"
+        }
+      ],
+      "cautions": [
+        "2026年7月31日に予定されている第1四半期決算発表。2026年3月期の最終赤字要因（関係会社株式評価損等）が一時的なものに留まっているかの確認が求められます。",
+        "決算発表日と同日に日銀金融政策決定会合の結果発表が重なる極めて高いイベントリスク。利上げ観測に伴う急激な円高進行は、輸出採算の悪化懸念に直結します。",
+        "米ドル建て社債の発行による金利コスト負担。金利上昇局面において財務コストの増大が利益を圧迫するリスクがあります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソニーグループ(株)【6758】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1MMXVSSGZKbTVWLVg1Wjc5MWxGQ1RzVVNrN25OcndmRklVOE5ueWZrLVdkMXlRcWxpUk5qbTJYTDVkRnluSWtyOENaOGMtSXJhTUVCMFZKVUJHSkItNWVF?oc=5",
+        "published": "Thu, 16 Jul 2026 06:53:15 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "国産マルチモーダル基盤モデルの開発に向けて本格始動 | ニュースリリース | ソニーグループポータル - Sony",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE4yakQ3VnlPZGMydDc1WUZPb2F0NzV1UGNPQWFxQmp0YWVyaVZJVXF3bVVrajNCWExOM1FsanowTnNsM2hWNHpFaTA1ekFhTDZBVEFZUzQ2enNUc1ZlODk2VDR2RThLbE43LVBF?oc=5",
+        "published": "Thu, 16 Jul 2026 11:39:02 GMT",
+        "publisher": "Sony"
+      },
+      {
+        "title": "ソニーがスマホ事業から撤退しない明確な理由、モバイル凋落の歴史を経て超ハイスペック＆ニッチなXperiaに至るまで - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9BODFfdGhnT1M5bkkxMEVhUFRFVzN0eWJqaG85YjBzY0FJMGJiSmhsZ1podzZmRUdnMVdOMjV6UXdSbkRKY2NnNklHZGXSAU9BVV95cUxPeklweXZyUU9YZER2cHE2dWJOdlNmWTlwazlsREhWbEU4clBvNlAzZnFWS1RnS3RmbXlWaUltVHFXYVlMYWRaeUw1bFpXcnU4?oc=5",
+        "published": "Thu, 16 Jul 2026 19:40:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "ソフトバンク、ソニー、ホンダ主導、44社がエヌビディア製チップで日本のソブリンAI構築へ - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1xazg0a2xkMzlzQ3NLOWxucVB4dnpZRHdpMzA2OGFaMW4xdGVwS3ZTejltZElxZ3JJS1d4VFNrNm8xN3VxYVhMdVJrM3R0UXQwQkVOUldfVzBqWnM5SkZsU0hPTlZKTzZnd21mTV9Tek14cFdq?oc=5",
+        "published": "Thu, 16 Jul 2026 17:27:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "ソニー(株)【6758】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9BQlVRa0U3WXp0ZG1yTzhsVk1OWkItckZaUV8wRkcxNkV4eVdoNWVlT2xWS25IbXR5em1xcThhQXhFWWJxWk1VbmMtZEpPUV9hMHBreXNYNVV2bkFiT1pB?oc=5",
+        "published": "Thu, 16 Jul 2026 02:54:01 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ソニーやホンダなど、国産AI開発を本格化。マルチモーダル基盤モデル研究開発を本格始動 - PHILE WEB",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBCaTE2YXlMUWtBTVhWTWdLRnFjakE4akdCRHdfdHh0WHZ2NmstM01NYnhZaVYzb3VRRE00MjkxRE5lSHhwa2NiUlZjTTVkZ0JRMDZCbkItaWtmN2tSaVFmaUdJX0VnUQ?oc=5",
+        "published": "Thu, 16 Jul 2026 10:42:19 GMT",
+        "publisher": "PHILE WEB"
+      },
+      {
+        "title": "エヌビディアCEOが国産AI支援を明言、「Noetra」に最新半導体提供へ - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1BSGlrZW96Q2xadG5WcGlrclYxaFB3TWVkUUw4clJEdXlmeGNNUmV3N1lvQWJ6MlhxS1I1LW5VQkVGY3FoeWZGSjQ1Y3F0TWZpb0pxNHJtSzRBRVpaVW9ISmV0aWtXUzM3SVR2Vm0tWHlMY2dq?oc=5",
+        "published": "Thu, 16 Jul 2026 18:26:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "ソニーグループ4社が共創する写真・映像アワード「THE NEW CREATORS」第2回グランプリが決定 - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE4taFUxSHlzVHNNSjh6ZGV6SUxaY0ZHZ1hGNTF1UGE0ZG9MbjF3WHNjNjN0TC1rMmp4MnlLR1JOcWYtX2xIMnJpZWNwX29wbTVYSjJvNmhHQjhMTHV0bFFFQnFnOFpMSDQtYW9nQ0tzdjZPQUJySmc?oc=5",
+        "published": "Thu, 16 Jul 2026 00:18:17 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "キンドリルジャパンの30代後半・シニアコンサルタント級の年収は？【5000件の口コミ情報データ】 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBsX24tMzNMem53NkdTRml5d1FJcExOb2t5bG5PQzVMTzcwTV9RcU41aXRwSnJSSmVEY1JIcm5OS05hTjhsU2lNakV5eFXSAU9BVV95cUxPdGlvQ3E2bDdCLVlCdHQzUFowZnV1aFE2R1Z4dU12THdQYUdoM1hKRnhxRE5VZ3ZPMm13TUNNUHNkTDFxdTlOVU13Z2tVa3dF?oc=5",
+        "published": "Thu, 16 Jul 2026 10:00:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "国産AI「ノエトラ」が本格始動、NVIDIA製GPU2.75万基で「実世界ネイティブAI」へ - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5oQXFPVkxYejdJcElhdXFMNjNGdDJKdUxSX0pyaDBrUWtjX1Rtc3pESkhBVms0LUNwUXFkeGRiQTYxRjRvbThIdWFVaENhLU1hTnkzdVhPRm1HNllKU2pVLUJ0eDBJYUZCX0VZRlFDM19iUmtL?oc=5",
+        "published": "Thu, 16 Jul 2026 18:33:59 GMT",
+        "publisher": "BigGo ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587315.pdf",
+        "date": "2026-07-03 11:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584099.pdf",
+        "date": "2026-06-30 15:30:00"
+      },
+      {
+        "title": "米ドル建て無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577032.pdf",
+        "date": "2026-06-24 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260603560934.pdf",
+        "date": "2026-06-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの次世代イメージセンサーに関する戦略的提携に向けた基本合意のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518510.pdf",
+        "date": "2026-05-08 16:15:00"
+      },
+      {
+        "title": "2026年３月期 決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518952.pdf",
+        "date": "2026-05-08 12:00:00"
+      },
+      {
+        "title": "2025年度 連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518955.pdf",
+        "date": "2026-05-08 12:00:00"
+      },
+      {
+        "title": "自己株式の取得枠設定及び自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518814.pdf",
+        "date": "2026-05-08 12:00:00"
+      },
+      {
+        "title": "2025年度個別決算における関係会社株式評価損及び関係会社事業損失引当金繰入額計上のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518857.pdf",
+        "date": "2026-05-08 12:00:00"
+      },
+      {
+        "title": "ソニー・ホンダモビリティの今後の事業の方向性について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260421507465.pdf",
+        "date": "2026-04-21 16:00:00"
+      }
+    ]
+  }
+}

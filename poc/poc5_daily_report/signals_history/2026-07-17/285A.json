@@ -1,0 +1,226 @@
+{
+  "code": "285A",
+  "name": "キオクシアホールディングス",
+  "generated_at": "2026-07-17T08:17:40+09:00",
+  "price_as_of": "2026-07-16",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近14日以内に買付シグナルが発行されているため、再エントリー抑制ルールに基づき、新規の買いは出さず継続監視とする。",
+        "evidence": "reference.recent_buy"
+      },
+      {
+        "reason": "ファンダメンタルズは半導体市場回復とAI需要を背景に、業績のV字回復と高い成長期待を示している。",
+        "evidence": "fundamental_view.stance=bullish (strength=75), fundamental_view.points[0], fundamental_view.points[1]"
+      },
+      {
+        "reason": "一方でテクニカルは、デッドクロス形成、MACDの売りシグナル、直近の大幅な株価下落により、明確な下降トレンドにあることを示唆している。",
+        "evidence": "technical_view.stance=bearish (strength=80), technical_view.points[0], technical_view.points[1], technical_view.points[2]"
+      },
+      {
+        "reason": "現在のバリュエーションはPER、PBRともに高水準であり、業績の成長が既に株価に織り込まれている可能性も指摘される。",
+        "evidence": "fundamental_view.cautions[0]"
+      }
+    ],
+    "risks": [
+      "次回決算発表日（2026年7月31日）および日本銀行金融政策決定会合（2026年7月30日〜31日）が間近に迫っており、これら重要イベント前後の市場変動リスク。",
+      "テクニカル指標が示す下降トレンドが継続し、さらなる株価下落が進む可能性。",
+      "現在の高バリュエーションが株価の上値抵抗となる、または業績悪化時に下落幅を拡大させるリスク。",
+      "前夜の米国半導体セクターの大幅下落など、外部要因による市場センチメントの悪化が株価に悪影響を与える可能性。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内に買付シグナルが発行されているため、再エントリー抑制ルールに基づき、新規の買いは出さず継続監視とする。\",\n   \"evidence\": \"reference.recent_buy\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは半導体市場回復とAI需要を背景に、業績のV字回復と高い成長期待を示している。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=75), fundamental_view.points[0], fundamental_view.points[1]\"\n  },\n  {\n   \"reason\": \"一方でテクニカルは、デッドクロス形成、MACDの売りシグナル、直近の大幅な株価下落により、明確な下降トレンドにあることを示唆している。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=80), technical_view.points[0], technical_view.points[1], technical_view.points[2]\"\n  },\n  {\n   \"reason\": \"現在のバリュエーションはPER、PBRともに高水準であり、業績の成長が既に株価に織り込まれている可能性も指摘される。\",\n   \"evidence\": \"fundamental_view.cautions[0]\"\n  }\n ],\n \"risks\": [\n  \"次回決算発表日（2026年7月31日）および日本銀行金融政策決定会合（2026年7月30日〜31日）が間近に迫っており、これら重要イベント前後の市場変動リスク。\",\n  \"テクニカル指標が示す下降トレンドが継続し、さらなる株価下落が進む可能性。\",\n  \"現在の高バリュエーションが株価の上値抵抗となる、または業績悪化時に下落幅を拡大させるリスク。\",\n  \"前夜の米国半導体セクターの大幅下落など、外部要因による市場センチメントの悪化が株価に悪影響を与える可能性。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 80,
+      "summary": "5日移動平均線が25日移動平均線を下抜けデッドクロスを形成し、MACDも売りシグナルを示しています。前夜の米国半導体セクターの大幅下落に加え、本日終値で-15.03%の大幅安となり、下落トレンドが鮮明です。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日移動平均線を下抜け、デッドクロスを形成しており、明確な下降トレンドを示唆しています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\""
+        },
+        {
+          "point": "MACDはシグナルを下回り、ヒストグラムもマイナス圏で拡大しており、売り圧力が強いことを示しています。",
+          "evidence": "price_technical.macd=-4727.14, price_technical.macd_signal=-2304.4, price_technical.macd_histogram=-2422.73"
+        },
+        {
+          "point": "直近の取引日には終値で-15.03%もの大幅な下落を記録し、直近の小反発を打ち消す強い売りが出ました。",
+          "evidence": "price_technical.recent_5_days[4].change_pct=-15.03"
+        },
+        {
+          "point": "前夜の米国市場では半導体セクターETFが-3.7%、SOX指数が-4.29%と大幅に下落しており、関連銘柄へのネガティブな影響が予想されます。",
+          "evidence": "us_overnight.sector_proxy.change_1d_pct=-3.7, us_overnight.sox_index.change_1d_pct=-4.29"
+        }
+      ],
+      "cautions": [
+        "直近の株価は期間安値 (61520.0円) に非常に接近しており、売られすぎによる一時的な自律反発の可能性があります。",
+        "前夜の米国市場での半導体セクターの下落は、本日の寄り付き価格に既に織り込まれている可能性があります。",
+        "中期的な60日間の騰落率は+103.44%と依然として上昇を維持している点は留意が必要です。"
+      ],
+      "key_levels": {
+        "support": 61520.0,
+        "resistance": 69682.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "キオクシアは、半導体市場の回復とAI需要を背景に、2024年3月期の赤字から大幅なV字回復と将来的な高成長が見込まれます。直近のニュースでは純利益の大幅な増加が報じられており、これは強いポジティブ材料となるものの、現在のバリュエーションは非常に高く、直近の株価下落も警戒されます。",
+      "points": [
+        {
+          "point": "2024年3月期の大幅赤字から一転、2025年3月期以降は黒字転換し、2026年3月期には純利益が5545億円と大幅な増益を見込むなど、業績のV字回復と高い成長期待があります。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=5545, fundamentals.earnings_trend.annual[1].net_income_oku_jpy=2723, fundamentals.earnings_trend.annual[2].net_income_oku_jpy=-2437"
+        },
+        {
+          "point": "直近のニュースでは、2026年4月から6月期において純利益が48倍となる見込みであり、AI需要がその追い風になっていると報じられており、強い業績上振れ期待とテーマ性が見られます。",
+          "evidence": "news.headlines[0].title='キオクシア純利益48倍見込む、AI需要追い風で26年4〜6月期 - 日経クロステック', news.headlines[0].published='Thu, 16 Jul 2026 20:00:00 GMT'"
+        },
+        {
+          "point": "マクロ経済環境では、大企業製造業の業況判断DIが改善傾向にあり、製造業PMIも50を上回る拡大を示しているため、半導体関連企業である当社にとって事業環境は良好です。また、ドル円が高値で推移しており、輸出企業には有利に働きます。",
+          "evidence": "macro.boj.tankan.di.large_manufacturing.current_di=22.0, macro.japan_pmi.manufacturing.latest_value=54.8, macro.indices[2].close=162.37"
+        },
+        {
+          "point": "2026年5月には米国証券取引所への上場準備に関する開示があり、資金調達の機会拡大やグローバルな認知度向上が中長期的なポジティブ材料となる可能性があります。",
+          "evidence": "disclosures.items[3].title='当社普通株式を対象とした米国預託株式の米国の証券取引所への上場準備に関するお知らせ', disclosures.items[3].date='2026-05-15 15:30:00'"
+        }
+      ],
+      "cautions": [
+        "現在のバリュエーションはPER 61.569倍、PBR 24.245倍と非常に高水準であり、業績の成長が既に株価に織り込まれている可能性があります。",
+        "米半導体株安や中国競合の上場報道を受け、直近で株価が一時13.6%安となったとのニュースがあり、市場のセンチメントや外部要因による変動リスクには警戒が必要です。",
+        "次回決算発表日が2026年7月31日、日本銀行金融政策決定会合が2026年7月30日〜31日と間近に迫っており、これら重要イベント前後の市場変動には注意が必要です。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-16",
+    "days_ago": 1,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "キオクシア純利益48倍見込む、AI需要追い風で26年4〜6月期 - 日経クロステック",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9tX3p5OHlZZXEzWXg5Tjc2WDI0M1Zsb0liTDBhWVlVQ2lrZ25IT283a2pKalhDM0ZZb0E5U2lRcVVibDBjWkloU3NxWkRrdXA0V2lwV3dFd3JuQ29SM3d1aWxRb1REZTA?oc=5",
+        "published": "Thu, 16 Jul 2026 20:00:00 GMT",
+        "publisher": "日経クロステック"
+      },
+      {
+        "title": "半導体株に陰り？ 識者どう見る キオクシア株はピークの半値近くに - 朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5FMkZmcGVMOWxHX2dyeHJjQnkyOUxSUUhsSXJrc2hRbGUzYktQNU54X01nNGpDTUpQSVVXSVlBNHRTSlpTck50blB2S29DblZacjltZ3AxX05HLUZBSEZLNnNZd0FtcEU?oc=5",
+        "published": "Thu, 16 Jul 2026 09:12:35 GMT",
+        "publisher": "朝日新聞"
+      },
+      {
+        "title": "前日に動いた銘柄 part1サイゼリヤ、ユニシアHD、キオクシアHDなど(フィスコ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOalBEQXBwak1PQ09BZlhpakpacHNITGE1OUUtY09nX1V2TkptdWkxNmUtbHBJZ0FZbDFKbEVtNTVodTlnb2J1UjBkNzlzazJucUFYeW8zMHo3Y3RxRjhIdnM4VlR6bmZ5OGNBWjRRUlRGWUVjb3hwLUxiMjU0eXBNd2tEZkRnT1U?oc=5",
+        "published": "Thu, 16 Jul 2026 22:18:36 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "１６日のＡＤＲ動向＝円換算値で全面安、キオクシア、古河電工、フジクラなど安い 速報 - kabushiki.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFBPbThweWUxcUg4czlnS1AxM05SdGRXUXE5cGJxTGFrbGZHeFBCSng1TmxBbFFScmdnVjdSdXF3Wmg1UnlEYl80?oc=5",
+        "published": "Thu, 16 Jul 2026 22:39:00 GMT",
+        "publisher": "kabushiki.jp"
+      },
+      {
+        "title": "前日に動いた銘柄 part1サイゼリヤ、ユニシアHD、キオクシアHDなど 執筆： Fisco - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE50R29OSXJOSjJKX2VtZXZDdDJOcVlXd3c0dXl4Y3Jqa3A1R2JLeG52M0FrbmtXNHZOTllWbUpoT3I3MklLZ2tfeDVULW01ZkFKNW10bkZJcGNWOUxBeUlVRWNfUTUzUld1Vl94R1kyYkg?oc=5",
+        "published": "Thu, 16 Jul 2026 22:15:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      },
+      {
+        "title": "キオクシアほか「今年前半の相場の主役」AI関連株の見通し アノマリー投資の達人は“モメンタム株の夏休み”の可能性を指摘 「そうなった場合は、割安株に注目したい」（マネーポストWEB） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE03Q3ZZcTItZzg4UlRZTEEtamk2ZDMyODVpZVRiamIyN2FBNVBRTWN4WjZiZ1VVcTI4Y1o2UGxKZHczNWxqY1ItZVpDMFEwb2ozWnFuTnllSy1yaHJxY3YxLVZLYkM3QUVHcE5RcmJCeFRGd2x5SC1OOUsxUmIzTkU?oc=5",
+        "published": "Thu, 16 Jul 2026 22:27:09 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "キオクシアHD株価一時13.6%安 米半導体株安、中国競合上場へ - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1yT3JjOVBCbVc1LW9pM0F3ZHYyNFNoMWFzU19xcTJOLUNaNU1aUDBWcGRtVTJIR2QxNmpFQTFteWE2aEFYTjltUXY5SFFIVXRueWkwajNHQ1B0RldKNjNPX3p3T1pwQl9rUy14Rw?oc=5",
+        "published": "Thu, 16 Jul 2026 01:32:02 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "半導体株に陰り? 識者どう見る キオクシア株はピークの半値近くに - 朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxORURfOHJ1ZFVjTUczeENYVzlMcUVZMngzSV8teVQzNkR0RWRjNDQ4bWZfbDJHRHp1cHZzUl9ocUZ1VXRXbVVzdF9JbW43WGR6OXdVMlgtUk1SLUFnNmFrV05ZNkpqbWdqbzJFQk5YT3lUNUpRcXB5S2dVa3FuR2hHOEhNRE1IeXVoNUJ4NWt1bw?oc=5",
+        "published": "Thu, 16 Jul 2026 09:12:35 GMT",
+        "publisher": "朝日新聞"
+      },
+      {
+        "title": "話題株ピックアップ【夕刊】（2）：富士通、キオクシア、マニー - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1KeThmV2FxOVZBTUZydFdhcHQ1WjhRWFh6R1c0Q0lSYUFERTBpSmJJUzZzWERFX0g0RjZnM28tTmR0Z2lQYjlKNGYzeXZoWTZNd0wxSDdlcE1mSVlwU183NQ?oc=5",
+        "published": "Thu, 16 Jul 2026 06:50:28 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "日経平均は２０００円程度安、売買代金はキオクシア、太陽誘電、東エレクが上位 速報 - kabushiki.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5ILWpxcUFDWTB2SlhMTkE2ZVNRa2RBQnhFMU1OWkNESlVSek12WFJnVTNVdmIyaWxlVzFBcnB0aFZJS1VZS2RB?oc=5",
+        "published": "Thu, 16 Jul 2026 05:03:00 GMT",
+        "publisher": "kabushiki.jp"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "（訂正）「勤務継続型株式報酬制度及び業績連動型株式報酬制度のユニット付与に関するお知らせ」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586951.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "（訂正）「当社及び当社子会社の役員に対する株式報酬制度の改定に関するお知らせ」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260612569674.pdf",
+        "date": "2026-06-12 15:30:00"
+      },
+      {
+        "title": "2026年３月期 決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537803.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "当社普通株式を対象とした米国預託株式の米国の証券取引所への上場準備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537804.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "連結子会社からの配当金及び資本の払戻しに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537809.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537830.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "当社及び当社子会社の役員に対する株式報酬制度の改定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537827.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537849.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "その他の関係会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260326589887.pdf",
+        "date": "2026-03-26 15:30:00"
+      },
+      {
+        "title": "Nanya Technology Corporationの第三者割当増資引受及びDRAM長期供給契約締結に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260325588489.pdf",
+        "date": "2026-03-25 18:00:00"
+      }
+    ]
+  }
+}
