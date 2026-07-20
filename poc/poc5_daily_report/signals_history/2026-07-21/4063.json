@@ -1,0 +1,175 @@
+{
+  "code": "4063",
+  "name": "信越化学工業",
+  "generated_at": "2026-07-21T08:10:05+09:00",
+  "price_as_of": "2026-07-17",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "2026-07-08に出された直近のbuyシグナルから14日以内であるため、再エントリー抑制ルールに基づき継続監視とする。",
+        "evidence": "reference.recent_buy.date=2026-07-08"
+      },
+      {
+        "reason": "ファンダメンタルズ評価がstrength 55のneutralであり、buyの必須条件（strength 70以上）を満たさない。",
+        "evidence": "fundamental_view.strength=55"
+      },
+      {
+        "reason": "25日移動平均線を割り込んでおり、テクニカル的なモメンタムが悪化しているため、自立反発を確認するまで静観が妥当である。",
+        "evidence": "technical_view.points[0]: sma25=7242.48を下抜けている"
+      },
+      {
+        "reason": "3日後に決算発表を控えており、今期の成長回復を確認するまでは新規ポジション構築にはリスクが高い局面である。",
+        "evidence": "fundamental_view.points[2], reference.next_earnings_date=2026-07-24"
+      }
+    ],
+    "risks": [
+      "2026-07-24の次回決算発表において業績進捗が市場予想を下回るリスク",
+      "2026-07-30〜31の日銀金融政策決定会合に伴う金利上昇および円安修正の影響",
+      "市場レジームがdowntrend（TOPIX 25日線下）にあることによる地合いの悪化"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"2026-07-08に出された直近のbuyシグナルから14日以内であるため、再エントリー抑制ルールに基づき継続監視とする。\",\n   \"evidence\": \"reference.recent_buy.date=2026-07-08\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ評価がstrength 55のneutralであり、buyの必須条件（strength 70以上）を満たさない。\",\n   \"evidence\": \"fundamental_view.strength=55\"\n  },\n  {\n   \"reason\": \"25日移動平均線を割り込んでおり、テクニカル的なモメンタムが悪化しているため、自立反発を確認するまで静観が妥当である。\",\n   \"evidence\": \"technical_view.points[0]: sma25=7242.48を下抜けている\"\n  },\n  {\n   \"reason\": \"3日後に決算発表を控えており、今期の成長回復を確認するまでは新規ポジション構築にはリスクが高い局面である。\",\n   \"evidence\": \"fundamental_view.points[2], reference.next_earnings_date=2026-07-24\"\n  }\n ],\n \"risks\": [\n  \"2026-07-24の次回決算発表において業績進捗が市場予想を下回るリスク\",\n  \"2026-07-30〜31の日銀金融政策決定会合に伴う金利上昇および円安修正の影響\",\n  \"市場レジームがdowntrend（TOPIX 25日線下）にあることによる地合いの悪化\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "直近2営業日の急落で25日移動平均線を割り込み短期的なモメンタムは悪化しているが、中期騰落率は市場をアウトパフォームしており、調整局面の域を脱していないため中立判断とする。",
+      "points": [
+        {
+          "point": "直近2日間で大幅な続落（-4.28%、-2.77%）を記録し、株価は5日線（7403.8）および25日線（7242.48）を明確に下抜けている。",
+          "evidence": "price_technical.recent_5_days, price_technical.sma5=7403.8, price_technical.sma25=7242.48"
+        },
+        {
+          "point": "中期（60日）騰落率は+5.67%であり、対TOPIX相対騰落率も+3.85%とプラスを維持しているため、中期下落トレンドには該当しない。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=5.67, price_technical.trend_60d.relative_to_topix_60d_pct=3.85"
+        },
+        {
+          "point": "MACD（80.25）がシグナル（66.7）を上回る状態は維持しているものの、足元の急落によりモメンタムの悪化が顕著である。",
+          "evidence": "price_technical.macd=80.25, price_technical.macd_signal=66.7, price_technical.recent_5_days"
+        }
+      ],
+      "cautions": [
+        "市場レジームがdowntrend（TOPIX 1306.T が25日線の下）に転じており、地合い悪化による更なる押し下げリスクがある。",
+        "前夜のSOX指数は+0.6%と小幅反発しているが、ADR（-0.14%）は依然として軟調であり、寄り付き後の戻りが限定的となる可能性がある。",
+        "RSI14が48.4と低下しており、売られすぎ水準（30以下）に到達するまでの下値余地が存在する。"
+      ],
+      "key_levels": {
+        "support": 6473.0,
+        "resistance": 7242.48
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "強力な株主還元策（自社株買い）が下値を支える一方、直近の業績トレンドは減益傾向にあり、3日後に控えた決算発表の内容を見極める必要がある局面である。",
+      "points": [
+        {
+          "point": "大規模な自己株式の公開買付けやASR（一括取得型自己株式取得）を相次いで実行しており、資本効率向上と株主還元に対する姿勢は極めて強力である。",
+          "evidence": "disclosures.items[0]: 自己株式の公開買付けの結果に関するお知らせ（2026-06-18）, disclosures.items[6]: 自己株式取得に係る事項の決定に関するお知らせ（2026-04-28）"
+        },
+        {
+          "point": "日本の製造業PMIが54.8と拡大圏を維持しており、主力製品である塩化ビニル樹脂や半導体材料の需要背景となる製造業全体の景況感は良好である。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.8"
+        },
+        {
+          "point": "2026年3月期（実績）は前期比で減収・営業減益となっており、バリュエーション面（予想PER 21.7倍）で正当化されるだけの成長回復が今期示せるかが焦点となる。",
+          "evidence": "fundamentals.earnings_trend.annual[0, 1], fundamentals.valuation.forward_pe=21.706"
+        }
+      ],
+      "cautions": [
+        "2026年7月24日に次回決算発表を控えており、直近の業績進捗が市場予想を下回るリスクに注意が必要（news.headlines[0]）",
+        "市場全体がdowntrend（TOPIX 25日線下回る）にあり、日経平均の急落（直近5日-4.61%）に伴うリスクオフの流れ（macro.market_regime, macro.indices[0]）",
+        "7月30〜31日の日銀金融政策決定会合において、金利上昇や円安修正の観測が強まった場合、株価にネガティブな影響を及ぼす可能性がある（macro.boj.monetary_policy_meeting）"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-08",
+    "days_ago": 13,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "7月21～24日に決算発表を予定している企業リスト - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBiN1doX2dfLXF6dGc4OTlMZWdMajdwamtDSWpqLXFQcnotTkx3c18wTjdDLWRnUHFPV3QyOHJGRFZVQlZNdDh1cHdCTExPVmZNMEZ0RjBOVQ?oc=5",
+        "published": "Mon, 20 Jul 2026 09:00:00 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "シリコン系シリコンカーボン負極材料の世界市場（2026年～2032年）、市場規模（研磨シリコンカーボン材料、蒸着シリコンカーボン材料、その他）・分析レポートを発表 - アットプレス",
+        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5pckN5aFlWTXZRWXlwVjdwb1dLV3ZsdTZ0aHowM2NCdFZVSXBPN1kwV3d2NF94a0FUXzRSMTkzQjc3cTZONUxVX3BrY0c2UQ?oc=5",
+        "published": "Mon, 20 Jul 2026 04:00:00 GMT",
+        "publisher": "アットプレス"
+      },
+      {
+        "title": "【NTT(9432)】今買うべき？数年後に後悔しないための投資戦略を徹底解説 Daniel Rochefort (Ve30tRdlGb) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1NTWJJRFBUVnBadnp3T1hEd2VybXhvX3IzYnRVOElqQnZEWVNGeHExYV9uaGRjTjNYYVUzWEhPRThxN0pHdXpzMF9zMl9ZaUZDV2FjcWZmMjIzOEU?oc=5",
+        "published": "Mon, 20 Jul 2026 04:49:35 GMT",
+        "publisher": "Mshale"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573248.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260605563833.pdf",
+        "date": "2026-06-05 15:30:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541941.pdf",
+        "date": "2026-05-20 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541943.pdf",
+        "date": "2026-05-20 15:30:00"
+      },
+      {
+        "title": "一括取得型自己株式取得（Accelerated Share Repurchase）における事後調整完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541656.pdf",
+        "date": "2026-05-20 11:30:00"
+      },
+      {
+        "title": "2026年３月期決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260428512667.pdf",
+        "date": "2026-04-28 15:30:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260428512714.pdf",
+        "date": "2026-04-28 15:30:00"
+      },
+      {
+        "title": "役員の異動（社外取締役、社外監査役）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260428512723.pdf",
+        "date": "2026-04-28 15:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による取得結果および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260217563592.pdf",
+        "date": "2026-02-17 11:00:00"
+      },
+      {
+        "title": "一括取得型自己株式取得（ASR）による自己株式取得のための第三者割当による第26回新株予約権の発行条件の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260217563596.pdf",
+        "date": "2026-02-17 11:00:00"
+      }
+    ]
+  }
+}

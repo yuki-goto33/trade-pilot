@@ -1,0 +1,190 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-07-21T08:04:01+09:00",
+  "price_as_of": "2026-07-17",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家が中立姿勢であり、通期の最終赤字に対する警戒感や、7月末の第1四半期決算および日銀会合を直前に控えた様子見姿勢を推奨しているため。",
+        "evidence": "fundamental_view.stance=neutral (strength=55)"
+      },
+      {
+        "reason": "テクニカル面ではゴールデンクロス発生など強い上昇トレンドを示しているものの、市場レジームが下落トレンド（downtrend）にあり、買いエントリーの必須条件（テクニカルが中立、ファンダが強気）を満たさないため。",
+        "evidence": "technical_view.stance=bullish (strength=70), reference.market_regime='downtrend'"
+      }
+    ],
+    "risks": [
+      "2026年7月31日の第1四半期決算発表における、半導体事業等の業績進捗への懸念。",
+      "2026年7月30日〜31日の日銀金融政策決定会合に伴う為替レート（ドル円）の急変動リスク。",
+      "市場レジームがdowntrend（下落トレンド）に判定されていることによる、全体相場の急な連れ安。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 55,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ専門家が中立姿勢であり、通期の最終赤字に対する警戒感や、7月末の第1四半期決算および日銀会合を直前に控えた様子見姿勢を推奨しているため。\",\n      \"evidence\": \"fundamental_view.stance=neutral (strength=55)\"\n    },\n    {\n      \"reason\": \"テクニカル面ではゴールデンクロス発生など強い上昇トレンドを示しているものの、市場レジームが下落トレンド（downtrend）にあり、買いエントリーの必須条件（テクニカルが中立、ファンダが強気）を満たさないため。\",\n      \"evidence\": \"technical_view.stance=bullish (strength=70), reference.market_regime='downtrend'\"\n    }\n  ],\n  \"risks\": [\n    \"2026年7月31日の第1四半期決算発表における、半導体事業等の業績進捗への懸念。\",\n    \"2026年7月30日〜31日の日銀金融政策決定会合に伴う為替レート（ドル円）の急変動リスク。\",\n    \"市場レジームがdowntrend（下落トレンド）に判定されていることによる、全体相場の急な連れ安。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "ソニーグループは移動平均線のゴールデンクロスやMACDの好転に加え、直近5日間の4連騰など、テクニカル面で強い上昇モメンタムを示しています。ただし、全体相場の急激な調整地合いが重石となる可能性があります。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日線を上回るゴールデンクロスが発生しており、直近終値も両移動平均線を上回るなど、短期・中期的に強い上昇トレンドが確認できます。",
+          "evidence": "price_technical.sma5_vs_sma25=golden(5日線が25日線の上), price_technical.last_close=3470.0, price_technical.sma5=3404.2, price_technical.sma25=3319.16"
+        },
+        {
+          "point": "MACDヒストグラムが大幅なプラスとなっており、さらに直近5営業日で4日連続の上昇を見せ、最終日には出来高を伴って買われています。",
+          "evidence": "price_technical.macd=17.69, price_technical.macd_histogram=17.25, price_technical.recent_5_days"
+        },
+        {
+          "point": "60営業日の騰落率および対TOPIX相対騰落率がともにプラスを維持しており、中期的にも相場のアウトパフォームが継続しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=2.54, price_technical.trend_60d.relative_to_topix_60d_pct=0.72"
+        }
+      ],
+      "cautions": [
+        "TOPIXが25日線を下回り、市場レジームはdowntrend（下落トレンド）と機械判定されています。日経平均の大幅な下落（-4.03%）など、全体地合いの悪化に伴う連れ安リスクには警戒が必要です。",
+        "前夜の米国市場でADR（SONY）は+0.14%と底堅いものの小幅な上昇にとどまっており、当日の寄り付き段階で材料が出尽くし、上値が重くなる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 3319.16,
+        "resistance": 3555.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "通期営業利益の増益や継続的な自社株買いが下支えとなる一方、直近通期で最終赤字に転落している点や、7月末の第1四半期決算発表と日銀金融政策決定会合という二大イベントを直前に控え、投資家の様子見姿勢が強まりやすい局面です。",
+      "points": [
+        {
+          "point": "2026年3月期の通期営業利益は1兆5,537億円と前年比で成長したものの、純損益は3,269億円の赤字に転落しており、直近の収益性の悪化に対する警戒感が残ります。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "会社側は定期的に自己株式の取得状況を開示しており、継続的な自社株買いを通じた株主還元および株価下支えへの姿勢が示されています。",
+          "evidence": "disclosures（2026-07-03 11:30:00）"
+        },
+        {
+          "point": "日本の製造業PMIが54.8と拡大基調を維持するなか、TSMCとの次世代イメージセンサーに関する戦略的提携など、デバイス分野における中長期的な提携・成長戦略は進捗しています。",
+          "evidence": "macro.japan_pmi.manufacturing, disclosures（2026-05-08 16:15:00）"
+        }
+      ],
+      "cautions": [
+        "2026年7月31日に予定されている第1四半期決算発表において、半導体不足の影響や業績改善の進捗が注視されます（fundamentals.next_earnings_date=2026-07-31）。",
+        "決算発表日と重なる2026年7月30日〜31日の日銀金融政策決定会合の結果次第では、為替レート（直近ドル円162.5円）の急変動を通じて業績に大きな影響を及ぼす可能性があります（macro.boj.monetary_policy_meeting.next_meeting）。",
+        "TOPIX連動ETFが25日線を下回り、市場全体がdowntrend（下落トレンド）に判定されているため、地合い悪化による連れ安リスクが警戒されます（macro.market_regime）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソニーグループ、スコープ3の削減率を目標に掲げる - 日経BP",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1PUTRqaHc0X3N1MlVLQk1uUHV2ZmsxbXdnY1lONm1zeURZa3dKejNtTi15dDJCTzJkRnl2UXU0T3BDZ19IeHRaN2NrOVEtTWZHX1oxZXU4Tm9DdENoMU1seVQ0UmpfNVd2OWVCWVNzaEI?oc=5",
+        "published": "Mon, 20 Jul 2026 15:03:02 GMT",
+        "publisher": "日経BP"
+      },
+      {
+        "title": "ソニーグループ、低迷株価の復活困難？ 31日決算 半導体不足重荷 - ig.com",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOWEhuVHk1RmtyQlIxUExDMTlXcUd0cWk3cUpWXzM0SG5FQWtBMGhzN3hiSnZkcDhuVWpqS3pncmVvQkVQZWxLcVdpbkhGU0U5Rl9Ma3RrX1F2d3Q2eGlTVE5IbkFDbGZzZEJQYS0tWGpwWWNyVUFsUzVsdURjdXJpeDQ4YnlXT29Dcm5TMXdsb0RJSWs3RktqdQ?oc=5",
+        "published": "Mon, 20 Jul 2026 00:12:21 GMT",
+        "publisher": "ig.com"
+      },
+      {
+        "title": "【カメラ】2024年にはスマホが一眼カメラ超え？ソニーグループの見通し！ Sofia Goggia (zgjbHI0rhk) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5UNzROQUpSUjhjb0k5NFh3UElrYm5CUG0yaF9laW9EbzNXTW9saTItVjY2SUZETVR6eUFCTlY1cnJKTHZRYmY1WFh5VVFvaUhod3I5RVRSaW8ycUU?oc=5",
+        "published": "Mon, 20 Jul 2026 19:33:13 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "ソニーグループ（6758）【最速】決算短信をAIが解説 Idrissa Gueye (rZ5S5vZUPS) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9RUHJCbk1JdGd1M28zQ2JDaURraGl5WGNoZVhFSzFHUUlqTnVhOUZXOFBmaWlRbVRnOWxwV1JRTVFpVDRFTjZsSE9pZUFMazFJb3hPTm13c1QxbUE?oc=5",
+        "published": "Mon, 20 Jul 2026 17:43:21 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "【ソニーグループ】十時氏が新社長、2トップで再成長へ Aaron Judge (2soEQ3Mj06) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9pb3Ntalo5Q1FDXzBEN2VBMWZwS3h6V3dlUFBNTDdlVFUxQ3JtQk9vQVF3M3JBRDFUZUo0NzAtNEcyb3NBZVAxeDNvMFNuTmFGMlBkZFRkYXRLb2s?oc=5",
+        "published": "Mon, 20 Jul 2026 19:10:00 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "ソニー 経理部長が明かす、継続的に価値を生み出せる経理組織の条件──「集約型」組織で進める人材育成術 - EnterpriseZine",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1KMG5pLVduLUhQRDcydjBuYS1xQmhBNk1rT0ZNYWx6NlVOSDItMlVBM2xmcnkyOTNnWHpIMHRkQ01iV2JmRWhGaHZhZGxheER0WXZRVVpQV1FQUQ?oc=5",
+        "published": "Sun, 19 Jul 2026 23:18:45 GMT",
+        "publisher": "EnterpriseZine"
+      },
+      {
+        "title": "【株式投資銘柄分析】ソニーG(6758)メモリ市況に立ち向かう血の滲むような超高収益体質への転換劇 Monaco Vs Losc (WfHMhbGhqu) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9Bc1hjTlRuZkV4eU5hYWNRR25WT1JXN0EyVktwTmZlM05KUkp1VWg0QUZxczY5MFpTcVdydnJ4NnllaUdabjZ4T1ZLaWtkWHd6MFZSaWlfLXM5azg?oc=5",
+        "published": "Mon, 20 Jul 2026 18:35:58 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "障害者の雇用義務化５０年、雇用率達成に加え働きがい向上へ「適正や個性に合わせれば成長につながる」 - ライブドアニュース",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5oR0MwYUdWeWtyZkYyUXhhNVRVZjZ4VThjYWpFUmk3LWpmLTM4dXBiaFJWQTdXSlNhZFRqOXJyd1JLckRFV2JWVUtUUEVrN2l3ZjZWUWpPSTN5VGI2MktB?oc=5",
+        "published": "Mon, 20 Jul 2026 02:49:00 GMT",
+        "publisher": "ライブドアニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の権利確定に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595854.pdf",
+        "date": "2026-07-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587315.pdf",
+        "date": "2026-07-03 11:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584099.pdf",
+        "date": "2026-06-30 15:30:00"
+      },
+      {
+        "title": "米ドル建て無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577032.pdf",
+        "date": "2026-06-24 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260603560934.pdf",
+        "date": "2026-06-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの次世代イメージセンサーに関する戦略的提携に向けた基本合意のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518510.pdf",
+        "date": "2026-05-08 16:15:00"
+      },
+      {
+        "title": "2026年３月期 決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518952.pdf",
+        "date": "2026-05-08 12:00:00"
+      },
+      {
+        "title": "2025年度 連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518955.pdf",
+        "date": "2026-05-08 12:00:00"
+      },
+      {
+        "title": "自己株式の取得枠設定及び自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518814.pdf",
+        "date": "2026-05-08 12:00:00"
+      },
+      {
+        "title": "2025年度個別決算における関係会社株式評価損及び関係会社事業損失引当金繰入額計上のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518857.pdf",
+        "date": "2026-05-08 12:00:00"
+      }
+    ]
+  }
+}

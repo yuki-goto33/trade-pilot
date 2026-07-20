@@ -1,0 +1,217 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-07-21T08:10:56+09:00",
+  "price_as_of": "2026-07-17",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の strength が 58 に留まり、buy 判定の必須条件である 70 を満たしていないため、様子見が妥当と判断。",
+        "evidence": "fundamental_view.strength=58"
+      },
+      {
+        "reason": "テクニカル面では強気（strength 75）で逆行高を見せているが、専門家双方が強気でない局面は『織り込み済み』による失速リスクがある。",
+        "evidence": "technical_view.stance=bullish (strength=75) / 統合判断ルール1（テクニカルもbullishならhold）"
+      },
+      {
+        "reason": "大規模な不正アクセスによる情報漏洩や内部統制の不備が報告されており、ガバナンスリスクが短期的には株価の重石となる懸念がある。",
+        "evidence": "fundamental_view.points[1,2]: news.headlines[6].title および disclosures.items[1,4]"
+      },
+      {
+        "reason": "市場レジームが downtrend であり、個別株の底堅さがあっても地合い悪化に引きずられるリスクが排除できない。",
+        "evidence": "reference.market_regime='downtrend'"
+      }
+    ],
+    "risks": [
+      "2026年8月7日の次回決算発表におけるサイバー攻撃対策費用の計上や通期見通しへの影響（fundamentals.next_earnings_date）",
+      "2026年7月30-31日の日銀会合に伴う金利・為替変動リスク（reference.next_boj_meeting）",
+      "RSI 66.2 と買われすぎ水準に接近しており、利益確定売りが出やすい（technical_view.cautions）",
+      "市場全体の下降トレンド継続によるディフェンシブ銘柄からの資金流出リスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 21,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の strength が 58 に留まり、buy 判定の必須条件である 70 を満たしていないため、様子見が妥当と判断。\",\n   \"evidence\": \"fundamental_view.strength=58\"\n  },\n  {\n   \"reason\": \"テクニカル面では強気（strength 75）で逆行高を見せているが、専門家双方が強気でない局面は『織り込み済み』による失速リスクがある。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=75) / 統合判断ルール1（テクニカルもbullishならhold）\"\n  },\n  {\n   \"reason\": \"大規模な不正アクセスによる情報漏洩や内部統制の不備が報告されており、ガバナンスリスクが短期的には株価の重石となる懸念がある。\",\n   \"evidence\": \"fundamental_view.points[1,2]: news.headlines[6].title および disclosures.items[1,4]\"\n  },\n  {\n   \"reason\": \"市場レジームが downtrend であり、個別株の底堅さがあっても地合い悪化に引きずられるリスクが排除できない。\",\n   \"evidence\": \"reference.market_regime='downtrend'\"\n  }\n ],\n \"risks\": [\n  \"2026年8月7日の次回決算発表におけるサイバー攻撃対策費用の計上や通期見通しへの影響（fundamentals.next_earnings_date）\",\n  \"2026年7月30-31日の日銀会合に伴う金利・為替変動リスク（reference.next_boj_meeting）\",\n  \"RSI 66.2 と買われすぎ水準に接近しており、利益確定売りが出やすい（technical_view.cautions）\",\n  \"市場全体の下降トレンド継続によるディフェンシブ銘柄からの資金流出リスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "個別テクニカル指標はゴールデンクロスを形成し中期トレンドも上向きで、全体市場が急落する中で逆行高となるなど強い底堅さを示していますが、市場レジーム悪化に伴うツレ安リスクには警戒が必要です。",
+      "points": [
+        {
+          "point": "短期・中期テクニカル指標が強気。5日移動平均線が25日線を上回るゴールデンクロスを形成しており、MACDもプラス圏でシグナルを上回って推移しています。",
+          "evidence": "price_technical.sma5_vs_sma25=golden(5日線が25日線の上), price_technical.macd=36.16, price_technical.macd_signal=22.1"
+        },
+        {
+          "point": "中期トレンドが非常に良好。60営業日騰落率および対TOPIX相対騰落率がともにプラスを維持しており、中期下落トレンドとは対極の上昇トレンドにあります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=9.19, price_technical.trend_60d.relative_to_topix_60d_pct=7.37"
+        },
+        {
+          "point": "全体市場が大幅下落する中でディフェンシブな逆行高を達成。日経平均が-4.03%と急落した基準日（7月17日）に、本銘柄は+0.84%の上昇を記録し底堅さを見せています。",
+          "evidence": "price_technical.recent_5_days[4].change_pct=0.84, macro.indices[0].change_1d_pct=-4.03"
+        }
+      ],
+      "cautions": [
+        "TOPIXが25日線を下回り5日騰落率もマイナスとなる「downtrend（下降レジーム）」に市場全体が入っており、個別株が強くとも地合いの悪化に引きずられるリスクがあります。",
+        "前夜のNY市場でADRが小幅に反落しており、寄り付き時にやや売りが先行する可能性があります。",
+        "RSI14が66.2と買われすぎの警戒ラインである70に接近しており、目先の上値追いには利益確定売りが出やすくなる局面です。"
+      ],
+      "key_levels": {
+        "support": 2743.92,
+        "resistance": 2901.5
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 58,
+      "summary": "堅調な増益トレンドと高ROEを維持しているものの、大規模な不正アクセスによる情報漏洩ニュースや内部統制の不備といったガバナンスリスクが株価の重石となる懸念があります。",
+      "points": [
+        {
+          "point": "売上高および当期利益は3期連続で増加傾向にあり、2026年3月期も増収・純利益成長を達成するなど、通信事業を核とした収益基盤は極めて堅固です。",
+          "evidence": "fundamentals.earnings_trend.annual[0-2]"
+        },
+        {
+          "point": "2026年7月20日に報じられた762万人のパスワード漏洩を伴う不正アクセス問題は、ブランド毀損および対応コスト増大の懸念があり、短期的には強いネガティブ材料です。",
+          "evidence": "news.headlines[6].title"
+        },
+        {
+          "point": "財務報告に係る内部統制の「開示すべき重要な不備」の公表や改善報告書の提出など、ガバナンス体制に対する市場の信頼低下が懸念されます。",
+          "evidence": "disclosures.items[1,4]"
+        },
+        {
+          "point": "総額3,000億円の自己株式取得枠を設定しているものの、2026年6月の取得実績が0円となっており、需給下支え効果の発現が遅れています。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        }
+      ],
+      "cautions": [
+        "2026年7月30-31日の日銀金融政策決定会合による金利変動および為替影響（macro.boj.monetary_policy_meeting）",
+        "2026年8月7日の次回決算発表におけるサイバー攻撃の費用計上や通期見通しへの影響（fundamentals.next_earnings_date）",
+        "入力データ上の予想PERが1230.9倍と極端に高く、市場の利益予想が急減している可能性、または計算上の異常値であるリスク（fundamentals.valuation.forward_pe）",
+        "市場全体が下降トレンド（downtrend）にあり、ディフェンシブ株といえど外部環境に引きずられる可能性（macro.market_regime）"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ＫＤＤＩ(株)【KDDIY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5UeXNVcVVoNnBzaHVrVDJRR3VqcmJrUDk1T0h1dDRJT0ttelAwWVk0UWZWT0JaQTIxMkRtQUxzLW1FdnNRVXpvUWZRb0p4cVlJ?oc=5",
+        "published": "Mon, 20 Jul 2026 10:49:36 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ＫＤＤＩ、地方拠点強化 事業拡大へ中堅社員派遣 - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSkpyLXpKb0hjMDlmeGZaNmMtU0RSM1ozaG1meWVNZ0FyeEpjVVdkdEJJZmQ2NEFuZU81UXZYV1Q2NGRTM1BkVlJ3cWFGdUZiQ0ZDNmU0TFp5M2Jpd2FRMUNTVXhLamRaX180WnE3SEVjNklqY1F1UWlaMEtybUJaY2c3YWpDdC10?oc=5",
+        "published": "Mon, 20 Jul 2026 08:31:07 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "沖縄県在住者合計2,000名に総額100万Pontaポイントを進呈（沖縄セルラー電話等） - ペイメントナビ",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9IU2xTLWpsQ3lLWXltUTE1OG5iNDVyWnVzc2cwY3g3RWdxQ0tKSk5DRkJtTDFGTnUwWFpMM20yMTNPdHpycG1Sa1U5ZXY3ZWtyQkFXdGZtUmJDM1U?oc=5",
+        "published": "Mon, 20 Jul 2026 22:40:00 GMT",
+        "publisher": "ペイメントナビ"
+      },
+      {
+        "title": "画像 | 【KDDIへのサイバー攻撃】狙われたのはKDDIでもISP事業者でもない…｢メールアドレスとパスワード漏洩｣の本当の怖さ - 東洋経済オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE96VXJPYjMwU3FlcFpFY1dVYVd1X3d2UkRPQmx2cVJZM1FtUGU0dW1qODFhbUJJb0paZE9HbFlWalJyai1DcWpDNnJrNEwzOFM4V3hLUXdZNA?oc=5",
+        "published": "Mon, 20 Jul 2026 04:30:00 GMT",
+        "publisher": "東洋経済オンライン"
+      },
+      {
+        "title": "KDDIら、NFTで石垣島の絶滅危惧種を保全──支援履歴をブロックチェーンに記録（NADA NEWS） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9kRU1qeTdUOXJUanZyRkNGOWhsMXFDaWV3MlFiTFJvdTZNNlhxX2FoUGFVUG9PMzBGa3kzd1E0OVczeWxhb1BJUFhxOVIweFd6Q2lraFVxMTJxSnJmaEZPdkx1eDRWT3RtRzFlbWJoQVNwSGJLRkMxdnF3a0VEaUk?oc=5",
+        "published": "Mon, 20 Jul 2026 12:15:44 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "＜画像5 / 10＞卒業生たちが歓喜！au三太郎・高杉くんが“お祝いムービー”でサプライズ - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5uZnUwS2hnMlFDUmJrd2xtSzZ1cmxvTGhJWjF2YkhJR1I5Yk5NbU9zVjYzUmI3NE4yVHhIS092RmFlaUtlM21RWURTVzRaSmVFbFdzaWdjcDNtTW5mMUI0TGFZa0Z2VHRxU1ktZ3pn?oc=5",
+        "published": "Mon, 20 Jul 2026 19:27:46 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "パスワード漏れ７６２万人 ＫＤＤＩ、不正アクセス問題で - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPejdxQzhnenFxNkMzZ3ZwallKX0kwUEZvS0dlNGFjdGpSR0hNb0dzR1RtQy1XYXZfWXF2T3VJN09qS2dvUU9jc1pJUmhjOUEyMTZnSXRSdnY5ZXU5UUFMSXU0djZPMmZqWDI1TXhmZ2V6S1A4TXVOSjJBdFFoaklVSDk1amQyYlBzc2tyemM5Q1Y1N3picTFseU1jamtONks2?oc=5",
+        "published": "Mon, 20 Jul 2026 06:51:51 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "会計不正 ５年ぶりに減少 - zeiken.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9rdFpmWDVCOGJDT0U5MTlwZ01TdWF5eS03OTlXem9rdUhkbnVmRUtvbGNqWllZcTlWcmRMdnF3SC1PLWo4SXU1MENlWTBucU5sX24yMFBFSzg0VVBuRFRYOThOUnRLbzl2VDdiR19OUk1LSHBZZzhn?oc=5",
+        "published": "Mon, 20 Jul 2026 07:04:51 GMT",
+        "publisher": "zeiken.co.jp"
+      },
+      {
+        "title": "Android/iOS「クロスプラットフォームeSIM転送」クラウド対応へ【アプリ解析】 - jetstream.blog",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQclg1MjRRVkZ3ZzhVdHJMdGgybXZkRFZyenZObThmMDhGMGx4d2xhek1CUzdOUnJVT0hPSGI0WnROa3VJMGRRb0N2cHZBREpxNk9LRmRoUlZLSVJ4ZUZxRWxINTEwSndhdHFUMWg3dlJxWVp0OFNkdFcxV2U5MTdQX0FZaE14SGNXLWc?oc=5",
+        "published": "Mon, 20 Jul 2026 07:58:45 GMT",
+        "publisher": "jetstream.blog"
+      },
+      {
+        "title": "「1円玉」11年ぶり量産 需要高まるワケ セルフレジ増や「クレジット障害」で“現金の重要さ痛感”する人も - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBpOWUxQkZxaTBDUk5zLXZXakdZSkFzdkhMVHB5TGg4eGlFeW5ybEE3cHZuYjV3ZWN5ckQ1amFLcEN0eG90Rl9vc2xPWUNxdE80RnB1QjhmUDk2aFFCME9JMVptcnJXZlFrM2xCQlZRSVBCdmNxeWREODBxaw?oc=5",
+        "published": "Mon, 20 Jul 2026 12:02:00 GMT",
+        "publisher": "au Webポータル"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      },
+      {
+        "title": "東京証券取引所への「改善報告書」の提出に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559424.pdf",
+        "date": "2026-06-02 16:00:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（中期経営戦略）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524146.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "auフィナンシャルホールディングス株式会社の東京証券取引所への株式上場準備の開始について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524156.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "2026年３月期　決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511523545.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524005.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524010.pdf",
+        "date": "2026-05-12 15:45:00"
+      }
+    ]
+  }
+}

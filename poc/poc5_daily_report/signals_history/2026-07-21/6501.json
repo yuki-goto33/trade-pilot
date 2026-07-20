@@ -1,0 +1,183 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-07-21T08:12:26+09:00",
+  "price_as_of": "2026-07-17",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近14日以内（7月8日）に buy シグナルが出されており、再エントリー抑制ルールに基づき継続監視とする。",
+        "evidence": "reference.recent_buy.date=2026-07-08 (13 days ago)"
+      },
+      {
+        "reason": "ファンダメンタルズは NVIDIA 協業や増益トレンドなど極めて強力だが、テクニカル面で中期下落トレンドが継続しており「落ちるナイフ」を掴むリスクがある。",
+        "evidence": "fundamental_view.strength=75, technical_view.stance=bearish (strength=75)"
+      },
+      {
+        "reason": "市場全体が downtrend レジームにあり、個別銘柄の好材料が相場の地合いに相殺されやすい環境である。",
+        "evidence": "reference.market_regime=downtrend, technical_view.points[1]"
+      },
+      {
+        "reason": "5日移動平均線を割り込み、SMA25付近まで押し戻されるなど、短期的なリバウンドが否定されている。",
+        "evidence": "technical_view.points[2]: price_technical.sma5=4771.8, last_close=4717.0"
+      }
+    ],
+    "risks": [
+      "2026年7月29日の第1四半期決算発表に伴う業績進捗への警戒感とボラティリティ上昇。",
+      "2026年7月30日からの日銀金融政策決定会合による為替・金利の急変動リスク。",
+      "SMA25（4706.6円）を終値で維持できず、中期的な下落が加速する可能性。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"直近14日以内（7月8日）に buy シグナルが出されており、再エントリー抑制ルールに基づき継続監視とする。\",\n      \"evidence\": \"reference.recent_buy.date=2026-07-08 (13 days ago)\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズは NVIDIA 協業や増益トレンドなど極めて強力だが、テクニカル面で中期下落トレンドが継続しており「落ちるナイフ」を掴むリスクがある。\",\n      \"evidence\": \"fundamental_view.strength=75, technical_view.stance=bearish (strength=75)\"\n    },\n    {\n      \"reason\": \"市場全体が downtrend レジームにあり、個別銘柄の好材料が相場の地合いに相殺されやすい環境である。\",\n      \"evidence\": \"reference.market_regime=downtrend, technical_view.points[1]\"\n    },\n    {\n      \"reason\": \"5日移動平均線を割り込み、SMA25付近まで押し戻されるなど、短期的なリバウンドが否定されている。\",\n      \"evidence\": \"technical_view.points[2]: price_technical.sma5=4771.8, last_close=4717.0\"\n    }\n  ],\n  \"risks\": [\n    \"2026年7月29日の第1四半期決算発表に伴う業績進捗への警戒感とボラティリティ上昇。\",\n    \"2026年7月30日からの日銀金融政策決定会合による為替・金利の急変動リスク。\",\n    \"SMA25（4706.6円）を終値で維持できず、中期的な下落が加速する可能性。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "中期的な下落トレンドが継続する中で市場全体もdowntrendレジーム入りしており、直近の大幅反落によって短期的なリバウンド期待が削がれた状態です。",
+      "points": [
+        {
+          "point": "中期下落トレンドが明確。60営業日の絶対騰落率および対TOPIX相対騰落率がともに大幅なマイナス圏にあります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-8.46, relative_to_topix_60d_pct=-10.28"
+        },
+        {
+          "point": "市場全体がdowntrendレジームにあり、リスク回避的な動きが強まっています。TOPIXおよび日経平均が25日線を大きく下回る強い下落圧力下にあります。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.indices[0].change_1d_pct=-4.03"
+        },
+        {
+          "point": "短期的な反発局面が直近の急落で否定されました。5日移動平均線を割り込み、SMA25付近まで押し戻される弱い足取りです。",
+          "evidence": "price_technical.recent_5_days[4].change_pct=-2.3, price_technical.last_close=4717.0, price_technical.sma5=4771.8"
+        },
+        {
+          "point": "MACDヒストグラムは改善傾向にあるものの、RSIは40を下回る水準で推移しており、買いの勢いが極めて限定的です。",
+          "evidence": "price_technical.macd_histogram=21.11, price_technical.rsi14=37.5"
+        }
+      ],
+      "cautions": [
+        "MACDはシグナルを上回って推移しており、底打ちの兆候は一部見られる。4422円の直近安値付近で下げ渋るか注視が必要。",
+        "前夜のADR（-0.03%）は横ばいだが、国内市場全体の地合いの悪化が寄り付きから継続するリスクがある。",
+        "SMA25（4706.6円）を終値で維持できるかが焦点。ここを割り込むと中期的な下落が加速する恐れがある。"
+      ],
+      "key_levels": {
+        "support": 4422.0,
+        "resistance": 4771.8
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "NVIDIAとのAI協業という強力な新規材料に加え、強固な増益トレンドと継続的な自己株買いが投資魅力を高めている。市場全体は調整局面にあるが、製造業PMIの改善や事業戦略の具体化が支えとなる。",
+      "points": [
+        {
+          "point": "NVIDIAとの「フィジカルAI」統合制御に向けた協業開始が発表され、ITとOTの融合という同社の強みを活かした成長カタリストとなっている。",
+          "evidence": "news.headlines[0].title=\"日立製作所、NVIDIAとフィジカルAIの統合制御に向け協業開始\" (2026-07-20)"
+        },
+        {
+          "point": "2024年3月期から2026年3月期にかけて売上高・営業利益・EPSが右肩上がりで推移しており、営業利益率は11%を超える高収益体制への転換が進んでいる。",
+          "evidence": "fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=11993, annual[2].operating_income_oku_jpy=7558"
+        },
+        {
+          "point": "機動的な自己株式取得を継続しており、資本効率の向上と株主還元に対する強い姿勢が示されている。",
+          "evidence": "disclosures.items[0].title=\"自己株式の取得状況に関するお知らせ\" (2026-07-02)"
+        },
+        {
+          "point": "製造業PMIが54.8と拡大圏にあり、日銀短観の大企業製造業DIも前回比+5ポイント改善するなど、主力事業の外部環境が良好である。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.8, macro.boj.tankan.di.large_manufacturing.change_from_prev=5.0"
+        }
+      ],
+      "cautions": [
+        "2026年7月29日に第1四半期決算発表を控えており、目先の利益確定売りや保守的な進捗に対する警戒感がある。",
+        "決算翌日の7月30日から日銀金融政策決定会合が予定されており、為替（円安）や金利の急変動が業績予想に与える不確実性がある。",
+        "市場全体が短期的な下落トレンド（downtrend）にあり、個別銘柄の好材料が相場の地合いに相殺されるリスクがある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-08",
+    "days_ago": 13,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "日立製作所、NVIDIAとフィジカルAIの統合制御に向け協業開始 - オートメーション新聞",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBzZnp1ZWhqV2EtaDM5MVBvdkxaVjlKTGJROEpsU1NRbkRGSkVFNkJ6SkdQbkhQVGdNYnNKOFNrZDB5SUx3V2dDZzlNS09ZcjBBcEJXbnVBejdLZw?oc=5",
+        "published": "Mon, 20 Jul 2026 11:47:27 GMT",
+        "publisher": "オートメーション新聞"
+      },
+      {
+        "title": "画像 | 池袋駅で始まった顔パス改札､東武と日立が崩しにかかる｢普及の壁｣と全国展開への秘策 - 東洋経済オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1JZlRGTUV6cDRMUTBJV3NQWjhzRzBmQTR4R1J4bjl6M1NLY3RBZXJiUmtEc3R2UmZUd1FWVF9JaFVnVDBTVEE1NDIxbVQwSDJYSy1CV1d0OA?oc=5",
+        "published": "Mon, 20 Jul 2026 04:30:00 GMT",
+        "publisher": "東洋経済オンライン"
+      },
+      {
+        "title": "【NTT(9432)】今買うべき？数年後に後悔しないための投資戦略を徹底解説 Daniel Rochefort (Ve30tRdlGb) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1NTWJJRFBUVnBadnp3T1hEd2VybXhvX3IzYnRVOElqQnZEWVNGeHExYV9uaGRjTjNYYVUzWEhPRThxN0pHdXpzMF9zMl9ZaUZDV2FjcWZmMjIzOEU?oc=5",
+        "published": "Mon, 20 Jul 2026 04:49:35 GMT",
+        "publisher": "Mshale"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(モビリティ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566288.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(コネクティブインダストリーズ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566292.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(デジタルシステム＆サービス事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566294.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CFO Session)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566296.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559702.pdf",
+        "date": "2026-06-02 15:30:00"
+      },
+      {
+        "title": "剰余金の配当(期末配当)に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533826.pdf",
+        "date": "2026-05-14 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況及び取得終了に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260427511652.pdf",
+        "date": "2026-04-27 15:30:00"
+      }
+    ]
+  }
+}

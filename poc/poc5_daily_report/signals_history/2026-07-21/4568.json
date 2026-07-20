@@ -1,0 +1,163 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-07-21T08:13:07+09:00",
+  "price_as_of": "2026-07-17",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の strength が 55 に留まり、今期の減益計画やバリュエーションの妥当性から、株価を力強く押し上げるカタリストが不足している。",
+        "evidence": "fundamental_view.strength=55 / fundamental_view.points[0]: 営業利益31.0%減の減益計画"
+      },
+      {
+        "reason": "テクニカル面では25日線を回復しているものの、RSI14が70を超えており、短期的な反発に対する利益確定売りが出やすい過熱圏にある。",
+        "evidence": "technical_view.cautions: RSI14=70.4 / price_technical.last_close=2791.0"
+      },
+      {
+        "reason": "市場全体が downtrend レジームにあり、日経平均の急落などマクロ環境の悪化が個別株の戻りを抑えるリスクが高い。",
+        "evidence": "reference.market_regime=\"downtrend\" / technical_view.cautions: macro.indices[0].change_1d_pct=-4.03"
+      },
+      {
+        "reason": "直近の高値節目である 2802円に接近しており、ここを明確にブレイクする材料がない限り、上値が重い展開が予想される。",
+        "evidence": "technical_view.key_levels.resistance=2802.0 / reference.period_high=2802.0"
+      }
+    ],
+    "risks": [
+      "2026年7月31日に予定されている第1四半期決算発表における進捗確認と市場反応",
+      "7月30〜31日の日銀金融政策決定会合に伴う為替変動および国内市場全体のボラティリティ上昇",
+      "米国ADRやセクターETF（XLV）の軟調推移に象徴される、ディフェンシブセクターへの資金流入停滞"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 55,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ専門家の strength が 55 に留まり、今期の減益計画やバリュエーションの妥当性から、株価を力強く押し上げるカタリストが不足している。\",\n      \"evidence\": \"fundamental_view.strength=55 / fundamental_view.points[0]: 営業利益31.0%減の減益計画\"\n    },\n    {\n      \"reason\": \"テクニカル面では25日線を回復しているものの、RSI14が70を超えており、短期的な反発に対する利益確定売りが出やすい過熱圏にある。\",\n      \"evidence\": \"technical_view.cautions: RSI14=70.4 / price_technical.last_close=2791.0\"\n    },\n    {\n      \"reason\": \"市場全体が downtrend レジームにあり、日経平均の急落などマクロ環境の悪化が個別株の戻りを抑えるリスクが高い。\",\n      \"evidence\": \"reference.market_regime=\\\"downtrend\\\" / technical_view.cautions: macro.indices[0].change_1d_pct=-4.03\"\n    },\n    {\n      \"reason\": \"直近の高値節目である 2802円に接近しており、ここを明確にブレイクする材料がない限り、上値が重い展開が予想される。\",\n      \"evidence\": \"technical_view.key_levels.resistance=2802.0 / reference.period_high=2802.0\"\n    }\n  ],\n  \"risks\": [\n    \"2026年7月31日に予定されている第1四半期決算発表における進捗確認と市場反応\",\n    \"7月30〜31日の日銀金融政策決定会合に伴う為替変動および国内市場全体のボラティリティ上昇\",\n    \"米国ADRやセクターETF（XLV）の軟調推移に象徴される、ディフェンシブセクターへの資金流入停滞\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "短期的に25日線を回復しMACDも好転するなど底打ちの兆しは見られるが、中期的な下落トレンドと市場全体の急落が重石となり、自律反発の持続性に懸念が残る。",
+      "points": [
+        {
+          "point": "株価が25日移動平均線を上抜けし、5日線とのゴールデンクロスを形成するなど短期的なテクニカル形状が改善している。",
+          "evidence": "price_technical.last_close=2791.0, price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\", price_technical.sma25=2637.04"
+        },
+        {
+          "point": "MACDがシグナルを上回り、ヒストグラムも拡大傾向にあることから、短期的には上昇の勢いが強まっている。",
+          "evidence": "price_technical.macd=49.98, price_technical.macd_signal=42.61, price_technical.macd_histogram=7.37"
+        },
+        {
+          "point": "中期的なトレンドを示す60日騰落率および対TOPIX相対騰落率は依然としてマイナス圏にあり、本格的なトレンド転換には至っていない。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-6.97, price_technical.trend_60d.relative_to_topix_60d_pct=-8.79"
+        }
+      ],
+      "cautions": [
+        "日経平均が前日比-4%超と急落しており、市場全体の地合い悪化によるパニック売りの波及リスクがある (macro.indices[0].change_1d_pct=-4.03)",
+        "前夜の米国市場でADRおよび同業種セクターETF（XLV）が軟調であり、寄り付きから売りが先行する可能性がある (us_overnight.adr.change_1d_pct=-0.35, us_overnight.sector_proxy.change_1d_pct=-1.14)",
+        "RSI14が70を超えており、直近2日間の急ピッチな反発に対する短期的な過熱感から利益確定売りが出やすい (price_technical.rsi14=70.4)"
+      ],
+      "key_levels": {
+        "support": 2637.04,
+        "resistance": 2802.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "2026年3月期の減益計画に加え、次回決算発表と日銀金融政策決定会合が重なることから、短期的には不透明感の強い局面である。",
+      "points": [
+        {
+          "point": "2026年3月期の連結業績予想は、売上高が前期比12.5%増と伸長する一方で、営業利益は31.0%減、純利益は12.1%減の減益計画となっており、利益成長の一時的な鈍化が示されている。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "バリュエーション面では、ROEが15.8%と高く資本効率は良好だが、予想PER 19.44倍およびPBR 3.05倍には特段の割安感はなく、現在の利益成長見通しに対しては妥当な水準に留まる。",
+          "evidence": "fundamentals.valuation"
+        },
+        {
+          "point": "配当利回りが3.58%と、国内大型株の中では比較的高水準にあり、利益還元姿勢が下値を支える要因となり得るものの、株価を大きく押し上げる新規の好材料が直近2週間以内に確認されていない。",
+          "evidence": "fundamentals.valuation.dividend_yield_percent, disclosures"
+        }
+      ],
+      "cautions": [
+        "2026年7月31日に第1四半期決算発表を控えており、通期減益計画に対する進捗率が焦点となる（fundamentals.next_earnings_date）。",
+        "日銀金融政策決定会合（7月30〜31日）が決済発表と重なり、為替相場の変動が輸出比率の高い製薬セクターに与える影響に注意が必要（macro.boj.monetary_policy_meeting）。",
+        "市場全体が調整局面（downtrend）にあり、マクロ的な地合い悪化による連れ安のリスクがある（macro.market_regime）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "国内製薬パイプライン分析、武田薬品が乾癬治療薬候補を申請へ - 日経バイオテクONLINE",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9HVlZ5ZC1neEloakJNbkxHb2ZrcF9KTW5wb2ZPTExtSUdfZTVEa1JuekFOMkNyWjlpUXA5cjBiSVJvRERPcEJHZU54LWp4N3lZUENvc1h2ck1DeG1XUWtRX1llZ0JlSUVMd25INVZkdw?oc=5",
+        "published": "Mon, 20 Jul 2026 22:02:35 GMT",
+        "publisher": "日経バイオテクONLINE"
+      },
+      {
+        "title": "＜画像3 / 4＞市販化で話題をさらった解熱鎮痛薬「ロキソニン」の現状は？ - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9ZLU5CUzRjcXhOM3ZjeGZlN3EyU0d2Z3RTcW5kaGJtWU52X1l1dHZqd2ZMOFA5M1F2eWJicE4xQzVCa2pEN2YtU1NmMzFzaE1sejFsWE1UZVZmQk1MazhDVW9DWWp6TjQ?oc=5",
+        "published": "Mon, 20 Jul 2026 05:59:07 GMT",
+        "publisher": "ウォーカープラス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587542.pdf",
+        "date": "2026-07-16 15:30:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584479.pdf",
+        "date": "2026-06-30 16:30:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260620575199.pdf",
+        "date": "2026-06-22 15:30:00"
+      },
+      {
+        "title": "財務上の特約が付された金銭消費貸借契約の締結に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617573095.pdf",
+        "date": "2026-06-17 19:00:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬等の内容の一部改定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515539092.pdf",
+        "date": "2026-05-18 13:00:00"
+      },
+      {
+        "title": "（訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260513530596.pdf",
+        "date": "2026-05-13 17:30:00"
+      },
+      {
+        "title": "自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511521821.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522113.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "決算補足資料（2025年度決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522160.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "2025年度決算および第6期（2026-2030年度）中期経営計画　説明会",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522186.pdf",
+        "date": "2026-05-11 15:30:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-07-21T08:09:22+09:00",
+  "price_as_of": "2026-07-17",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ面で直近に強力な新規材料（カタリスト）を欠いており、かつ2026年7月28日の決算発表や7月30〜31日の日銀金融政策決定会合という二大イベントを間近に控えているため、様子見が妥当です。",
+        "evidence": "fundamental_view.points[2]: 直近2週間において新たなカタリストは提示されていない、fundamental_view.cautions[0], [1]"
+      },
+      {
+        "reason": "テクニカル面では5日線が25日線を下回るデッドクロスが完成し、明確な下落トレンドが継続しているため、安易な押し目買いは避けるべき局面（落ちるナイフを掴まない）と判断します。",
+        "evidence": "technical_view.points[0]: price_technical.sma5_vs_sma25='dead(5日線が25日線の下)'"
+      },
+      {
+        "reason": "市場レジームが下落トレンドであり地合いが悪い中、前夜の米国市場でADRがさらに続落しており、全体的な下押し圧力が強い状態が続いています。",
+        "evidence": "technical_view.points[2]: macro.market_regime.market_regime='downtrend', us_overnight.adr.change_1d_pct=-2.22"
+      }
+    ],
+    "risks": [
+      "2026年7月28日の決算発表において、高バリュエーション（PER 38.61倍）を正当化する進捗やガイダンスが示されない場合、株価がさらに下落するリスクがあります。",
+      "2026年7月30〜31日の日銀金融政策決定会合を受けた、ドル円為替や長期金利の急変動による市場全体の動揺リスクがあります。",
+      "全体地合い（downtrend判定）のさらなる悪化に伴い、同社のような大型高額株に対する換金売り圧力が継続するリスクがあります。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 55,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ面で直近に強力な新規材料（カタリスト）を欠いており、かつ2026年7月28日の決算発表や7月30〜31日の日銀金融政策決定会合という二大イベントを間近に控えているため、様子見が妥当です。\",\n      \"evidence\": \"fundamental_view.points[2]: 直近2週間において新たなカタリストは提示されていない、fundamental_view.cautions[0], [1]\"\n    },\n    {\n      \"reason\": \"テクニカル面では5日線が25日線を下回るデッドクロスが完成し、明確な下落トレンドが継続しているため、安易な押し目買いは避けるべき局面（落ちるナイフを掴まない）と判断します。\",\n      \"evidence\": \"technical_view.points[0]: price_technical.sma5_vs_sma25='dead(5日線が25日線の下)'\"\n    },\n    {\n      \"reason\": \"市場レジームが下落トレンドであり地合いが悪い中、前夜の米国市場でADRがさらに続落しており、全体的な下押し圧力が強い状態が続いています。\",\n      \"evidence\": \"technical_view.points[2]: macro.market_regime.market_regime='downtrend', us_overnight.adr.change_1d_pct=-2.22\"\n    }\n  ],\n  \"risks\": [\n    \"2026年7月28日の決算発表において、高バリュエーション（PER 38.61倍）を正当化する進捗やガイダンスが示されない場合、株価がさらに下落するリスクがあります。\",\n    \"2026年7月30〜31日の日銀金融政策決定会合を受けた、ドル円為替や長期金利の急変動による市場全体の動揺リスクがあります。\",\n    \"全体地合い（downtrend判定）のさらなる悪化に伴い、同社のような大型高額株に対する換金売り圧力が継続するリスクがあります。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 85,
+      "summary": "直近の急激な下落によりデッドクロスが確定し、MACDのマイナス幅拡大と出来高急増を伴う強い売り圧力が観測されています。全体地合いの悪化や前夜ADRの続落も加わり、短期的な下値模索の動きが続く可能性が高いと分析します。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日移動平均線を下回るデッドクロスが完成し、株価も両ラインを大きく下回る明確な下落トレンドに転換しています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\", price_technical.last_close=70880.0, price_technical.sma5=74728.0, price_technical.sma25=77138.0"
+        },
+        {
+          "point": "直近2営業日で下落率が拡大しており、特に直近営業日（7月17日）には出来高が90万株超へ急増して大幅下落しているほか、MACDヒストグラムのマイナス幅も急拡大しており、強い売りモメンタムを示しています。",
+          "evidence": "price_technical.recent_5_days[4].change_pct=-4.28, price_technical.recent_5_days[4].volume=905400, price_technical.macd_histogram=-802.02"
+        },
+        {
+          "point": "国内の市場レジームが下落トレンド判定となっていることに加え、前夜の米国市場においてADRが-2.22%と続落しており、外部環境からの下押し圧力も継続しています。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\", us_overnight.adr.change_1d_pct=-2.22"
+        }
+      ],
+      "cautions": [
+        "RSI14が33.6と売られすぎ目安の30付近まで急低下しているため、突発的な自律反発が発生するリスクがあります（price_technical.rsi14=33.6）。",
+        "過去30営業日の期間安値である68,930円が目前に迫っており、この節目付近では押し目買いや買い戻しによる下げ止まりが意識されやすいです（price_technical.period_low=68930.0）。",
+        "前夜ADRの下落（-2.22%）は翌日の寄り付き価格に織り込まれる可能性が高く、寄り付き後の売り一巡からの買い戻しに警戒が必要です（us_overnight.adr.change_1d_pct=-2.22）。"
+      ],
+      "key_levels": {
+        "support": 68930.0,
+        "resistance": 74728.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "通期業績は一貫して増収増益を維持し、製造業PMIなどのマクロ環境も好調ですが、市場全体の下降レジームや直近での新規材料の不足、さらには決算発表と日銀会合という二大イベントを目前に控えていることから、短期的には様子見が妥当と判断します。",
+      "points": [
+        {
+          "point": "2026年3月期通期決算において売上高1兆1,693億円、営業利益5,958億円と、着実な増収増益トレンドを継続しており、ROE 13.5%と高い資本効率を誇ります。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "2026年6月の日銀短観大企業製造業DIが22.0（前回比+5.0）、および同月の製造業PMIが54.8と拡大基調を示しており、同社の主力事業であるFAセンサー等の需要環境は良好です。",
+          "evidence": "macro.boj.tankan.di.large_manufacturing, macro.japan_pmi.manufacturing"
+        },
+        {
+          "point": "「投資単位の引下げに関する考え方及び方針等について」の開示はあるものの、直近2週間以内において業績予想の修正や株主還元強化などの新たなカタリストは提示されていません。",
+          "evidence": "disclosures"
+        }
+      ],
+      "cautions": [
+        "2026年7月28日に控える次回決算発表において、今期の進捗や新たなガイダンスが市場予想に届かない場合、PER 38.61倍の高バリュエーションが修正されるリスクがあります。 (fundamentals.next_earnings_date)",
+        "2026年7月30〜31日に予定される日銀金融政策決定会合の結果による、為替（ドル円162.5円）や長期金利の急変動リスクがあります。 (macro.boj.monetary_policy_meeting, macro.indices)",
+        "市場全体のレジームが「downtrend」と判定されており、日経平均も急落している局面であるため、地合い悪化による押し下げ圧力を受けやすい状態です。 (macro.market_regime, macro.indices)"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "社外取より社員の方がリッチ!?「従業員vs社外取締役」報酬逆転ランキング【大企業41社202人】キーエンス、光通信、フジ・メディアHD… - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE0zUGRLVTVXbEVvUkRKaGRlM2ZSSDdvTVJOTV9nX2dFODZwM00xRUNqUy15RzRBQjJzQW1uZmhxWWxRdGNzRE0xek9kVDfSAU9BVV95cUxOWXVBdm0wc1FkZmw5bExXZEluN1hPdFU0NWdINGVaMi1EbDA1R3k4UjRXYmpZcS0yd0FfSUx2clA3di1wWlJjazBoTnpRczBR?oc=5",
+        "published": "Mon, 20 Jul 2026 19:35:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "インラインカメラ検査市場の規模と成長予測（2035年まで） - Global Market Insights Inc.",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPcE9BeEVGQUFHNTc3VTUtcjFHR0hOdnJKYXhMamR4V1BqQ3BRNVdVN1FhT1dVdno5bHhpMURnNDdhbTBDVldzbnhGSDg1bm04OTNXQ0ZiQ1BCbVBxMzl1MkU1N0RINGhtWkZER3Vvdzl0MTlzUG9nVkgya3NYNEJ5ZWpSeWlBZw?oc=5",
+        "published": "Mon, 20 Jul 2026 09:57:52 GMT",
+        "publisher": "Global Market Insights Inc."
+      },
+      {
+        "title": "若者の｢韓国離れ｣が始まった…韓国ファッションに熱中した20代女性が\"次の手本\"にしているアジアの国 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE11RkpOZmE5VUFOdldNV0tMYnVZelJMbEVTWWdzekZBSEh0RWNFTUFaV3MzaFlyel9GQnM3OWR6Vy15T3U0ckF5aVJvNGtvZVU?oc=5",
+        "published": "Sun, 19 Jul 2026 23:03:02 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "もっこり膨らまないファン付ウェア。冷やすも温めるも自在 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5URm5sVXI0RVVOeDFERjBSY0NuRlh5azhLNjlmQ2hIRUpsNU5xRVJIYW1XbU56UVJrLUF0ZGREb19KWjNjMWdGaFFfTG5TSkZaVkxFeV9ULXhLWm95U2Y1NnFQaXV5UzN3Mm56V2NzWHI1ZTZUamdudmVR?oc=5",
+        "published": "Mon, 20 Jul 2026 04:00:00 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "本能寺後の光秀に加勢せず､城兵500で三成軍1万5000に囲まれるも天皇の勅命で\"命拾い\"した武将 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1hUFd0TVAzS0pSdDBsOWhvcHZlUllQWTlneklNemRTdDlTcVJtVVc5VEwxdWJwdzdGcm5LemxVN2o0VndLZlZfUklTZEhVUXc?oc=5",
+        "published": "Sun, 19 Jul 2026 23:03:01 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120250724520054.pdf",
+        "date": "2025-07-29 16:00:00"
+      }
+    ]
+  }
+}

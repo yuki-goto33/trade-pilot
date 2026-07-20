@@ -1,0 +1,202 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-07-21T08:02:19+09:00",
+  "price_as_of": "2026-07-17",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ面では営業利益の減益傾向や中国での生産減など事業環境に逆風があり、新社長の方針発表もあるが具体業績への寄与は確認待ち段階であるため。",
+        "evidence": "fundamental_view.points[0]: 通期営業利益は2期連続減益、fundamental_view.points[1]: 2026年5月の中国における生産実績が2桁減"
+      },
+      {
+        "reason": "テクニカル面では25日移動平均線の回復など短期的な底堅さはあるものの、市場レジームがdowntrendであり、中期的な調整トレンドから完全には脱却できていないため。",
+        "evidence": "technical_view.stance=neutral (strength=50), technical_view.points[1]: trend_60d.change_60d_pct=-14.47"
+      }
+    ],
+    "risks": [
+      "2026年7月30〜31日の日銀金融政策決定会合の開催に伴い、為替レートが急激に円高方向へ反転し輸出採算が悪化するリスク。",
+      "2026年8月4日の次回決算発表を前に、不透明感から上値が抑えられやすく、決算内容次第で下落トレンドが再開するリスク。",
+      "市場全体のレジームがdowntrend（下降トレンド）にあり、相場急落に巻き込まれて短期的な反発シグナルが否定されるリスク。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 50,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ面では営業利益の減益傾向や中国での生産減など事業環境に逆風があり、新社長の方針発表もあるが具体業績への寄与は確認待ち段階であるため。\",\n      \"evidence\": \"fundamental_view.points[0]: 通期営業利益は2期連続減益、fundamental_view.points[1]: 2026年5月の中国における生産実績が2桁減\"\n    },\n    {\n      \"reason\": \"テクニカル面では25日移動平均線の回復など短期的な底堅さはあるものの、市場レジームがdowntrendであり、中期的な調整トレンドから完全には脱却できていないため。\",\n      \"evidence\": \"technical_view.stance=neutral (strength=50), technical_view.points[1]: trend_60d.change_60d_pct=-14.47\"\n    }\n  ],\n  \"risks\": [\n    \"2026年7月30〜31日の日銀金融政策決定会合の開催に伴い、為替レートが急激に円高方向へ反転し輸出採算が悪化するリスク。\",\n    \"2026年8月4日の次回決算発表を前に、不透明感から上値が抑えられやすく、決算内容次第で下落トレンドが再開するリスク。\",\n    \"市場全体のレジームがdowntrend（下降トレンド）にあり、相場急落に巻き込まれて短期的な反発シグナルが否定されるリスク。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "短期的なテクニカル指標は25日線の回復やMACDの好転など反転の兆候を示しているものの、中期的な下落トレンドから完全に脱却したとは言えず、市場全体の地合い悪化も重なるため、見通しは中立とします。",
+      "points": [
+        {
+          "point": "短期的な上昇モメンタムの発生：5日線が25日線を上回るゴールデンクロスが発生し、終値が25日線を上回って推移しています。また、MACDもシグナルを上回って推移しており、底堅さを示しています。",
+          "evidence": "price_technical.last_close=2899.5, price_technical.sma25=2812.34, price_technical.sma5_vs_sma25=golden(5日線が25日線の上), price_technical.macd=23.24, price_technical.macd_signal=13.29"
+        },
+        {
+          "point": "中期的な下落トレンドの残存：直近60営業日の騰落率および対TOPIX相対騰落率がともに大幅なマイナスを記録しており、中期的には未だ調整局面の中に位置しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-14.47, price_technical.trend_60d.relative_to_topix_60d_pct=-16.29"
+        },
+        {
+          "point": "全体相場の地合い悪化による重し：国内市場のレジームはdowntrendと機械判定されており、日経平均の大幅な下落など相場全体のセンチメント悪化が個別の上値を抑える要因になります。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.indices[0].change_1d_pct=-4.03"
+        }
+      ],
+      "cautions": [
+        "市場レジームがdowntrend（下降トレンド）にあり、相場全体の売り圧力に引きずられて短期的な反発が騙しとなるリスクがあります。",
+        "前夜のADR（TM）は+0.52%と逆行高を見せているものの、セクターETF（XLY）が-0.72%と下落しており、朝方の寄り付き後に織り込まれて値を消す可能性があります。",
+        "直近終値が25日移動平均線（2812.34円）を再び下回った場合、短期の反発シグナルが否定され、中期下落トレンドに回帰する警戒が必要です。"
+      ],
+      "key_levels": {
+        "support": 2812.34,
+        "resistance": 2980.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "業績が減益トレンドにある中、中国市場での生産減少など逆風が報じられており、さらに間近に迫る日銀金融政策決定会合や次回決算発表を前に様子見姿勢が強まりやすい局面です。",
+      "points": [
+        {
+          "point": "売上高は増加しているものの、通期営業利益は2024年3月期の53,529億円をピークに2期連続で減益となっており、直近の2026年3月期第4四半期（単四半期営業利益5,695億円）も利益率の低下が見られます。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "直近のニュース報道では、2026年5月の中国における生産実績が2桁減とされており、海外の主要市場における販売・生産苦戦の懸念が顕在化しています。",
+          "evidence": "news.headlines[6].title"
+        },
+        {
+          "point": "2026年7月20日付のインタビューにおいて、近健太新社長による「部品絞り込み推進」「逆風下で稼ぐ力強化」などの構造改革方針が示されているものの、具体的な業績寄与は今後の確認材料となります。",
+          "evidence": "news.headlines[4].title"
+        }
+      ],
+      "cautions": [
+        "2026年8月4日に次回決算発表、さらに2026年7月30〜31日には日銀金融政策決定会合が予定されており、短期的なイベントリスクが極めて高い状態です。",
+        "ドル円は162.5円の円安水準にありますが、日銀の政策決定や長期金利の上昇（10年債利回り2.719%）に伴う為替レートの急激な反転は、輸出採算を悪化させるリスクがあります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "インタビュー／トヨタ自動車社長・近健太氏 “強いトヨタ”に磨き - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9qVmF4MVh4ZENrZ2d3WWtrdWQtTk53a2ptZnk1T2hEdEFUY1M0VW54WERkV3d5cE1TdDMxeERubXFHNGktYm85SmVULXMyM1FsVksxeXRzS0pnYlk?oc=5",
+        "published": "Mon, 20 Jul 2026 20:04:23 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "トヨタ自動車新社長・近健太氏が目指す「モビリティカンパニー」とは 国内生産、供給網は〈一問一答〉 - 東京新聞デジタル",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5ueUtENks3QjFWUnBQM2VKWUJpTzdnN05aLURpazZXRkc1YlppWXltQy10SjAtMGt0bE1ydUhhS3lQbmlRX0pTWGRaTVhDWk1QNzJV?oc=5",
+        "published": "Mon, 20 Jul 2026 17:00:00 GMT",
+        "publisher": "東京新聞デジタル"
+      },
+      {
+        "title": "近トヨタ自動車社長との一問一答(時事通信) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQaktyZzVtaV9nZFZDQ2lUcDFyUkVCeVRmR2hib2NTX1pDX3ViX3RBd1hPUC1ESW4wOHdSWXBFcUZlNnI0WW10NVpNN1ZkNUdvejVPTmotS294UWFXdkVfNjAyeHZaR04tZmh5amRpU0FrM2R1bGt6Rmp2Q3ZLQzEtbFRYUXdfVGs?oc=5",
+        "published": "Mon, 20 Jul 2026 19:05:21 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "トヨタ社長「日本の生産・供給網は非常に重要」 「年３００万台」今後も維持へ - 朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5nOG5BTHlFN0Vtb243TGRNSndpZUduR0ZzS3hPSmFxUGo5akEtZzVxN1ZpODQ4dmJXWEhGQlV1REVDdVhZMnNlUXVTR2xSSWJpakUwUFV3dW4waTJI?oc=5",
+        "published": "Mon, 20 Jul 2026 20:00:00 GMT",
+        "publisher": "朝日新聞"
+      },
+      {
+        "title": "インタビュー　トヨタ自動車・近社長　部品絞り込み推進へ　逆風下で稼ぐ力強化｜四国新聞WEB朝刊 - 四国新聞",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE42R3hHcF9lMEpGQ1NFRzBlLWJ2OFFvQ3ZOYmtkUkhvMzNXcFdUUHJ3d2JEZzlobUl0bzd4NG9JdUE5TzN0OFFWZXdhb25xdm5WOEN3MXdvOWZLZTVwNlhCaGJVUUFtaG0xVjkyNExLMnhZTkpYTDlR0gF8QVVfeXFMTXVvblBWekU0dUpwdzZlUDRFd0xhQ2JMck5WUWdraWRDT0R2amlpaU1Tc2E1bWJDMU9SZFpoQ3o2c0Z0TjdVSkJ1MGRxVTFLajYtQVdkSlM0aHNCc3BNQmhEX0k1dnI4NlJ5NkVPODNfbVVDZVRzdGZIWU56NA?oc=5",
+        "published": "Mon, 20 Jul 2026 21:23:11 GMT",
+        "publisher": "四国新聞"
+      },
+      {
+        "title": "インタビューに応じるトヨタ自動車の近健太社長 - トヨタ近社長、部品絞り込み推進 インタビューに「改善余地多い」 - 写真・画像(1/1) - 西日本新聞me",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBJeTVSZ3V3S0FXdUx4MUQ3cHg1ZWMtLTl2X0VEUFVpSmdXdjhkdG1QUHN0Tkt2VjFoVkVOQkhRblViQkdhdjJvTXAxZXBFZU5LTkpITjkyOA?oc=5",
+        "published": "Mon, 20 Jul 2026 20:06:47 GMT",
+        "publisher": "西日本新聞me"
+      },
+      {
+        "title": "トヨタホンダ日産が中国で2桁％減、2026年5月の日系自動車生産はスズキの1人勝ち：自動車メーカー生産動向（1/3 ページ） - MONOist",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE83d1RWRDctUk9rWVd6YVY2WnJiTkNlNjRNcnVqdFNwMUk4aTVORXotenRqMkowRW5UMDlwUWlHSm5xSWoxOVZXNVZNZmp0X0JfNnhLZ1NVNjRaaG1RbUJ2Vm1OVUxhdGczNDZFdE92WQ?oc=5",
+        "published": "Mon, 20 Jul 2026 22:00:00 GMT",
+        "publisher": "MONOist"
+      },
+      {
+        "title": "新型レクサスESに環境配慮の内外装部品 トヨタ紡織が6分割ウレタン減シート：ニュース - 中日BIZナビ",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBzNi1UckMzVlVPNlNoNDI3SE04RzBnTERfX0tuUmlZOC1OenJzWHZHUG55S0dtMDgtYlNhZEk1dFhicUJtS0h2MUFJUGI1UmpGRVMzeWJGdC04RGZtanpVY2RR?oc=5",
+        "published": "Mon, 20 Jul 2026 20:24:59 GMT",
+        "publisher": "中日BIZナビ"
+      },
+      {
+        "title": "関連ニュース - 時事通信ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBWdkdfWFZXZXA0X1luaWZ5MFh6T09xX3NfZS1RVWRyTEl0WHFuWXlyMlFGczliYjFJVUZ2NHdQMFlIT1V0QWdFelJla3JlN2RJX0ZwMHVWZGw5dw?oc=5",
+        "published": "Mon, 20 Jul 2026 17:06:00 GMT",
+        "publisher": "時事通信ニュース"
+      },
+      {
+        "title": "トップの在り方は「会長が軸」 インタビュー一問一答 - 岐阜新聞デジタル",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5IQkNCcEtMRVQxQ1FnZFA3WVBvd0hLTUFKdTF6SDhkc2Z5bW9VS2FlNE5SQ3E0MGF4QzFqRjh0VFdRSWtUYml0QWZiNzY3SUt4c2NYZGN3?oc=5",
+        "published": "Mon, 20 Jul 2026 20:00:00 GMT",
+        "publisher": "岐阜新聞デジタル"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "役員人事に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572690.pdf",
+        "date": "2026-06-17 16:00:00"
+      },
+      {
+        "title": "関係会社株式売却益の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260615570435.pdf",
+        "date": "2026-06-15 15:30:00"
+      },
+      {
+        "title": "（開示事項の変更・訂正）「会社分割（簡易吸収分割）に関するお知らせ」の一部変更・訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552805.pdf",
+        "date": "2026-05-28 18:45:00"
+      },
+      {
+        "title": "会社分割（簡易吸収分割）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520542612.pdf",
+        "date": "2026-05-20 19:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260506517369.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "2026年3月期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260508519105.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260508519366.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果ならびに自己株式の取得終了および消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260428513263.pdf",
+        "date": "2026-04-28 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付け及び自己株式の取得に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260330592169.pdf",
+        "date": "2026-03-30 15:30:00"
+      }
+    ]
+  }
+}
