@@ -1,0 +1,209 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-07-22T07:58:30+09:00",
+  "price_as_of": "2026-07-21",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ（strength=70）およびテクニカル（strength=75）の双方が強気見解で一致しているため、材料が既に株価に織り込まれており追随買いのリスクが高くルールに基づき様子見（hold）とします。",
+        "evidence": "fundamental_view.stance=bullish (strength=70), technical_view.stance=bullish (strength=75)"
+      },
+      {
+        "reason": "直近の米国基準決算での大幅増益や国内10年金利（2.715%）の高水準推移など中長期の収益基盤は極めて堅調です。",
+        "evidence": "fundamental_view.points[0].evidence: fundamentals.recent_important_disclosures[0].date=2026-07-07, fundamental_view.points[2].evidence: macro.rates.jgb_10y_percent.value=2.715"
+      },
+      {
+        "reason": "テクニカル面でも急反発やMACDの強気形状が確認されますが、期間高値（3,733円）の手前では利益確定売りに押される警戒感があります。",
+        "evidence": "technical_view.points[1].evidence: price_technical.macd=95.18, technical_view.cautions[1]: 期間高値である3733円付近での戻り売り"
+      }
+    ],
+    "risks": [
+      "2026年7月30日〜31日の日銀金融政策決定会合における政策金利の発表内容次第で株価ボラティリティが急増するリスクがあります。",
+      "2026年8月3日の次回決算発表において株主還元や業績予想の内容次第で株価が大きく変動するリスクがあります。",
+      "前夜NY市場のADR大幅高による寄り付き後の織り込み完了（寄り天）リスクがあります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ（strength=70）およびテクニカル（strength=75）の双方が強気見解で一致しているため、材料が既に株価に織り込まれており追随買いのリスクが高くルールに基づき様子見（hold）とします。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=70), technical_view.stance=bullish (strength=75)\"\n  },\n  {\n   \"reason\": \"直近の米国基準決算での大幅増益や国内10年金利（2.715%）の高水準推移など中長期の収益基盤は極めて堅調です。\",\n   \"evidence\": \"fundamental_view.points[0].evidence: fundamentals.recent_important_disclosures[0].date=2026-07-07, fundamental_view.points[2].evidence: macro.rates.jgb_10y_percent.value=2.715\"\n  },\n  {\n   \"reason\": \"テクニカル面でも急反発やMACDの強気形状が確認されますが、期間高値（3,733円）の手前では利益確定売りに押される警戒感があります。\",\n   \"evidence\": \"technical_view.points[1].evidence: price_technical.macd=95.18, technical_view.cautions[1]: 期間高値である3733円付近での戻り売り\"\n  }\n ],\n \"risks\": [\n  \"2026年7月30日〜31日の日銀金融政策決定会合における政策金利の発表内容次第で株価ボラティリティが急増するリスクがあります。\",\n  \"2026年8月3日の次回決算発表において株主還元や業績予想の内容次第で株価が大きく変動するリスクがあります。\",\n  \"前夜NY市場のADR大幅高による寄り付き後の織り込み完了（寄り天）リスクがあります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "中期的な強い上昇トレンドの中で一時的な押し目から急反発を見せており、移動平均線やMACDなどの指標も強気形状を維持しています。",
+      "points": [
+        {
+          "point": "中期的な株価トレンドおよび対TOPIXでのアウトフォームが顕著であり、移動平均線もゴールデンクロスを維持しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=26.48, price_technical.sma5_vs_sma25=golden(5日線が25日線の上)"
+        },
+        {
+          "point": "MACDがシグナルを上回って推移しており、テクニカル的な買戻し・上昇シグナルが継続しています。",
+          "evidence": "price_technical.macd=95.18, price_technical.macd_signal=78.53, price_technical.macd_histogram=16.65"
+        },
+        {
+          "point": "7/17の急落後に直近7/21には+3.08%の力強い反発を見せており、RSIも過熱感のない強気圏に位置しています。",
+          "evidence": "price_technical.recent_5_days[4].change_pct=3.08, price_technical.rsi14=62.6"
+        },
+        {
+          "point": "前夜の米国市場でADRが大きく買われており、寄り付きでの上昇要因として期待されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=3.32"
+        }
+      ],
+      "cautions": [
+        "前夜NY市場でのADR大幅高は東京市場の寄り付き価格に織り込まれるため、寄り付き後の伸び悩みや寄り天のリスクがあります。",
+        "期間高値である3733円付近では戻り売りや利益確定売りが強まる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 3375.04,
+        "resistance": 3733.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "2026年3月期の通期増収増益に加え、7月7日発表の米国基準決算でも大幅増益が確認されており業績トレンドは堅調です。国内10年金利の高水準推移も収益環境にプラスですが、直近の日銀決定会合や次回決算発表を控えたイベントリスクには注意を要します。",
+      "points": [
+        {
+          "point": "直近2週間以内に開示された米国会計基準の決算短信（2026年7月7日）にて、当社株主に帰属する当期純利益が1兆7,293億円（前年同期1兆2,669億円）と大幅な増収増益を達成しており、高い収益力が確認できます。",
+          "evidence": "fundamentals.recent_important_disclosures[0].date=2026-07-07"
+        },
+        {
+          "point": "2026年3月期の通期純利益は2兆4,272億円（前期1兆8,629億円）に達しており、年次・四半期ともに拡大傾向が続いています。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=24272"
+        },
+        {
+          "point": "日本10年国債金利が2.715%と高水準で推移しており、銀行業の利ざや改善および中長期的な収益拡大に寄与するマクロ環境が整っています。",
+          "evidence": "macro.rates.jgb_10y_percent.value=2.715"
+        }
+      ],
+      "cautions": [
+        "2026年7月30日〜31日に日銀金融政策決定会合が控え、金融政策の動向次第で金利および株価の短期的なボラティリティが高まるリスクがあります。",
+        "2026年8月3日に次回決算発表を控えており、会社予想や株主還元方針の公表内容によって株価が大きく反応する可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "三菱UFJフィナンシャル・グループ、ラグビー決勝戦に5000人を招待 ラグビーの楽しさを知ってもらう「MUFG ONE PARK」で - OVO [オーヴォ]",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBSZy1sODFNaVRhN1RJY0Rxa3huakd4MkFveWpEYlU3SXlMemF2MzhsMEU2MmVoZ294WU9QNmVxOHRPQVM3NmNSb0NrdEwzbG9kenJEMQ?oc=5",
+        "published": "Tue, 21 Jul 2026 02:26:38 GMT",
+        "publisher": "OVO [オーヴォ]"
+      },
+      {
+        "title": "三菱UFJフィナンシャル・グループ、ラグビー決勝戦に5000人を招待 ラグビーの楽しさを知ってもらう「MUFG ONE PARK」で - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQaDVaOGF5MkhCSGNKaDBsZG83bGNlOXhYdTd1Tk5EdnZWTnV4bG9nWFZYNDE2czZ6U3hiUEoxTGtQbHM2dHBHQVZpT3c4cWExWWQ4VlhONm8tSGhCQU1ybmFHMm1DSmI2TDdrNlh3Q1ZmcXFLemoxNG9Ya2hPWUJURVV4YlpLVXRnOTBJeXJR?oc=5",
+        "published": "Tue, 21 Jul 2026 02:26:38 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "7月21日のMitsubishi UFJ Financial Group Inc (MUFG) 値動きは3.43%上昇：どのようなシグナルを示しているのか？ - TradingKey",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOS1NvaGVvR2lsTHlHOGpwOEtZUjFTd0FIUnFhSTkwV2YyNllKdkhyaGF5OFRzQ09VbUlCSlRBZGF6YWxPR3JqTXVqbFhFb1A3SXAzMmUzZFRBbUo2VHBzNlRsVVpNMmd5Mmptc0VSYXZpMjQzMHIzU3VOT3kwV0g5RmIyOGRGWEN2N3pqUUotWQ?oc=5",
+        "published": "Tue, 21 Jul 2026 16:18:26 GMT",
+        "publisher": "TradingKey"
+      },
+      {
+        "title": "阪急阪神Ｒについて、三菱ＵＦＪは保有割合が5％未満に減少したと報告 [変更報告書No.1] - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1QR294Vi1ELU00eS10SEtzdDdBeURVekhkaDN4U2Nib09FTGdldXctVllpNzRQZVBCY3pRQTIzVGhhd3g1RjFZTHpzWGZJQjFsV1E?oc=5",
+        "published": "Tue, 21 Jul 2026 01:27:02 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "ホンダ、中国に「延命措置」、広州汽車との合弁10年延長へ［新聞ウォッチ］ 1枚目の写真・画像 - レスポンス（Response.jp）",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE51aFI4OXhqaDM0d3lKTjJMSVFkb1RjYjZyMXoyOWp4SDFBUTJDZDZWSGhSNWdNd2V2XzNrMjZVNG45a0RQZkxfamlmWGNNS082NjRMR1dPX0MxMlFmWkl4ZHFKLWVUUGtRdmZwMg?oc=5",
+        "published": "Tue, 21 Jul 2026 03:12:12 GMT",
+        "publisher": "レスポンス（Response.jp）"
+      },
+      {
+        "title": "皇室典範改正案など成立 副首都構想関連法案は成立めどたたず【週間ニュースまとめ7月13日～20日】 - 就活ニュースペーパーｂｙ朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE82T0Y0NVpYT0p6NEQwRlYyYzF1UEl4S1A5UTNLaXMyMTNaNk1ObGpmOExrTmk5dWZfRnpJNW5DaVVEZy1wV2JOeERMYlVXNEFPbGFNUnB5ZUdfSFhQVlp0emlwRXZTT1BPa1dsQjJIcHFwdXVkQWN3?oc=5",
+        "published": "Tue, 21 Jul 2026 04:22:11 GMT",
+        "publisher": "就活ニュースペーパーｂｙ朝日新聞"
+      },
+      {
+        "title": "旭ダイヤについて、三菱ＵＦＪは保有割合が5％未満に減少したと報告 [変更報告書No.1] - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5yMVRtdGxWNU1tanh6WlpmU1dIOFFBLVI5S1lrbERKQkpzNXpNVl9NRDcyVkNBR3JMajRMdzNxaWUzZ0ZLRTB1MkI3OGRFQklRTU5BdFhCX0hoX1hLWnJPWg?oc=5",
+        "published": "Tue, 21 Jul 2026 01:16:01 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "親子で楽しむ夏休みの体験型イベント「あそび まなび かがくラボ」開催報告 - オリコンニュース",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1TLU1RZGlPNm9PTm9MY2pOM3BFVGQ1VHUzSUJPbGh6Z3JtSkluVXNfaHRqLWprWGU5d2xid0l3Y1FpNE5reklHcGdjOE0zSTRVZUhiby1EMmU?oc=5",
+        "published": "Tue, 21 Jul 2026 08:46:00 GMT",
+        "publisher": "オリコンニュース"
+      },
+      {
+        "title": "東洋炭素について、三菱ＵＦＪは保有割合が5％未満に減少したと報告 [変更報告書No.1] - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE40eHNKQlNfWTlsekg0Y0N5QTNSYW4xV2RqZzJxYW5Lb3JqeVIwc25PTjRvRHFRZkxZZkNxbzJjZHI5anVKX1p0cFd0dmtoRy10WVIzR1IzdVpCdzR6cFVmQg?oc=5",
+        "published": "Tue, 21 Jul 2026 01:05:02 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "トレンドについて、三菱ＵＦＪは保有割合が5％を超えたと報告 [大量保有報告書] - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9lSXpkb3RzLWhjRV9SVmRQa3lfS2tSdHVISWZ4eWx3V3BtNkIzNE5ySW9lOHdBSWZQdEhGR3VYSHgyX08xd3QwMDVGanlHVm4ySWo5SFhBYVdoUEJsQTJaYg?oc=5",
+        "published": "Tue, 21 Jul 2026 01:01:02 GMT",
+        "publisher": "株探"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "中期経営計画における財務目標の修正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538305.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "代表執行役の異動について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260305576744.pdf",
+        "date": "2026-03-05 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260302573608.pdf",
+        "date": "2026-03-02 16:00:00"
+      }
+    ]
+  }
+}

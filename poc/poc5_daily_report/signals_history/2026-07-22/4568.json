@@ -1,0 +1,181 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-07-22T08:04:19+09:00",
+  "price_as_of": "2026-07-21",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 14,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の強気度が55とエントリー基準（70）を下回っており、今期大幅減益計画による材料不足から様子見が妥当と判断。",
+        "evidence": "fundamental_view.strength=55 / fundamentals.earnings_trend.annual"
+      },
+      {
+        "reason": "テクニカル面では25日線の回復など底打ちの兆候があるものの、中期的な下落トレンドを完全に脱却しておらず、スタンスもneutralに留まる。",
+        "evidence": "technical_view.stance=neutral (strength=60) / price_technical.trend_60d.change_60d_pct=-3.43"
+      },
+      {
+        "reason": "現在の株価（2815円）が期間高値（2874円）に接近しており、戻り売り圧力が強まりやすい局面にある。",
+        "evidence": "reference.period_high=2874.0 / technical_view.cautions[0]"
+      }
+    ],
+    "risks": [
+      "2026年7月31日の第1四半期決算発表に伴う業績進捗の不透明感",
+      "7月30日〜31日の日銀金融政策決定会合と決算発表が重なることによるボラティリティ上昇リスク",
+      "中期騰落率がマイナス圏にあり、今回の反発が一時的な自律反発に終わる可能性"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 14,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の強気度が55とエントリー基準（70）を下回っており、今期大幅減益計画による材料不足から様子見が妥当と判断。\",\n   \"evidence\": \"fundamental_view.strength=55 / fundamentals.earnings_trend.annual\"\n  },\n  {\n   \"reason\": \"テクニカル面では25日線の回復など底打ちの兆候があるものの、中期的な下落トレンドを完全に脱却しておらず、スタンスもneutralに留まる。\",\n   \"evidence\": \"technical_view.stance=neutral (strength=60) / price_technical.trend_60d.change_60d_pct=-3.43\"\n  },\n  {\n   \"reason\": \"現在の株価（2815円）が期間高値（2874円）に接近しており、戻り売り圧力が強まりやすい局面にある。\",\n   \"evidence\": \"reference.period_high=2874.0 / technical_view.cautions[0]\"\n  }\n ],\n \"risks\": [\n  \"2026年7月31日の第1四半期決算発表に伴う業績進捗の不透明感\",\n  \"7月30日〜31日の日銀金融政策決定会合と決算発表が重なることによるボラティリティ上昇リスク\",\n  \"中期騰落率がマイナス圏にあり、今回の反発が一時的な自律反発に終わる可能性\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "中期トレンドは依然として下落基調にあるものの、足元では25日移動平均線の回復やMACDの好転など、明確な底打ちと反転の兆候が確認されます。",
+      "points": [
+        {
+          "point": "短期的な反転シグナルの出現。5日線が25日線を上抜けるゴールデンクロスが発生し、株価も25日線を明確に上回っています。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.last_close=2815.0, price_technical.sma25=2647.8"
+        },
+        {
+          "point": "MACDがシグナルを上回り、ヒストグラムもプラス圏で拡大しており、上昇モメンタムが強まっています。",
+          "evidence": "price_technical.macd=52.5, price_technical.macd_signal=41.36, price_technical.macd_histogram=11.14"
+        },
+        {
+          "point": "中期（60日）騰落率および対TOPIX相対騰落率は依然としてマイナスであり、構造的な下落トレンドからの完全な脱却には至っていません。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-3.43, price_technical.trend_60d.relative_to_topix_60d_pct=-8.14"
+        },
+        {
+          "point": "前夜の米国市場でADRおよびセクターETFが上昇しており、本日の寄り付きに対してポジティブな影響が期待されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=1.1, us_overnight.sector_proxy.change_1d_pct=0.63"
+        }
+      ],
+      "cautions": [
+        "直近3営業日で急速に値を戻しており、期間高値（2874円）付近での戻り売り圧力に注意が必要です。",
+        "米国市場でのADR上昇分は寄り付き価格に織り込まれる可能性が高く、買い一巡後の持続性が焦点となります。",
+        "市場全体のレジームが中立であり、マクロ環境の悪化による連れ安リスクを排除できません。"
+      ],
+      "key_levels": {
+        "support": 2647.8,
+        "resistance": 2874.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "増収ながらも大幅な営業減益を見込む今期計画を背景に、直近の材料は株式報酬関連に留まり、株価を動かす新たなカタリストが不足しています。次回決算と日銀会合が同日に重なるイベントリスクを控え、様子見姿勢が強まる局面と判断します。",
+      "points": [
+        {
+          "point": "2026年3月期は増収を維持するものの、営業利益は前期比約31%減の2,291億円を見込む減益計画となっています。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "配当利回りは3.58%と比較的高い水準にあり、ROE 15.8%と資本効率も良好ですが、これらは既知の情報であり新規の上昇要因としては弱いです。",
+          "evidence": "fundamentals.valuation"
+        },
+        {
+          "point": "1ドル163円台の円安水準は、グローバルに展開する同社にとって外貨建て収益の押し上げ要因として機能する可能性があります。",
+          "evidence": "macro.indices.JPY=X"
+        }
+      ],
+      "cautions": [
+        "2026年7月31日に第1四半期決算発表を控えており、今期減益計画に対する進捗状況が焦点となります。",
+        "次回決算発表と日銀金融政策決定会合（7月30日〜31日）の日程が重なっており、急激な為替変動や市場のボラティリティ上昇リスクがあります。",
+        "米国の対イラン対立激化など地政学リスクに伴う外部環境の悪化が、輸出セクターへのセンチメントを冷え込ませる懸念があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "第一三共(株)【DSNKY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1LdkZxbEN5Vm9Scm5nSFgzTDZJZlNtcVFXR0dkU1J3c2RfRFBuNmNiOGFibVNVTE1zT2lad2dyNnA0TFRoT3RVZktKcGRiMVVV?oc=5",
+        "published": "Tue, 21 Jul 2026 12:42:23 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "興和の50代前半・課長級の年収は？【5000件の口コミ情報データ】 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5TdUgzLVVlT3hFQnktS1FUS3R5TTFUUkZ6MnM5RlUxNXRWZ0ZXSktQRVlfekJiV2hrQXVUVHprMFZIcU1aTng1b29VRWnSAU9BVV95cUxQS0U2bzlWanB4QXh5NDRYN3lSZjBnRHZXdkhDV0ZvUjNHR3ZDNjB1UWlwdnpGTnNySWw5VTc0blZ1YVFJaFByWmVaUDNiQm5j?oc=5",
+        "published": "Tue, 21 Jul 2026 20:35:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "第一三共(株)【4568】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4zMzNDWEEzWm50cW9oakRraFFqYmxRVmdWZlZna0hFRkRzalg2bW1FSzdmS1dRSVZiYmRndVlrYVFCWGQ4TlFObFllS19DSEswSE5yTzhWSVVLbDkyaks0?oc=5",
+        "published": "Tue, 21 Jul 2026 02:54:18 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "米国株式市場は続落、対イラン対立激化で原油高を警戒 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPNnp6ckstX0xndDNjQldhNkhFNXBCQVNvMjhxV2hnS0pGTDhKNGxzTGF5eWp3MGZ2WTFBN2FqT2JaNUowNmNuc2c4Vl8wSVR2RGhZeURRVk0xLVZJVXo4dGZiWDdnMHNKbG1VRXJQaExLcGI4UUZwZVQ4SUhGanpWUUk3aUNRNjA0X0QxN9IBjAFBVV95cUxPNnp6ckstX0xndDNjQldhNkhFNXBCQVNvMjhxV2hnS0pGTDhKNGxzTGF5eWp3MGZ2WTFBN2FqT2JaNUowNmNuc2c4Vl8wSVR2RGhZeURRVk0xLVZJVXo4dGZiWDdnMHNKbG1VRXJQaExLcGI4UUZwZVQ4SUhGanpWUUk3aUNRNjA0X0QxNw?oc=5",
+        "published": "Mon, 20 Jul 2026 22:55:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "国産AIの「勝ち組」に共通するNVIDIA依存──SB、NTT、Sakana AIが選んだ現実路線 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBnU1VqUmxDeGVpTkotQi1RQlVNZDliTzFCRmhSRFc4WEVKM0pkN28xU3JIYzE3ZGlmd3FVaG9UOVlBWUdTbTJ1aFF5cUptNUpLeTFXc0pBM2JKZjRIellxNW1mYThya3Bmb2RJb3V5cjljQVYz?oc=5",
+        "published": "Mon, 20 Jul 2026 23:06:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587542.pdf",
+        "date": "2026-07-16 15:30:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584479.pdf",
+        "date": "2026-06-30 16:30:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260620575199.pdf",
+        "date": "2026-06-22 15:30:00"
+      },
+      {
+        "title": "財務上の特約が付された金銭消費貸借契約の締結に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617573095.pdf",
+        "date": "2026-06-17 19:00:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬等の内容の一部改定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515539092.pdf",
+        "date": "2026-05-18 13:00:00"
+      },
+      {
+        "title": "（訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260513530596.pdf",
+        "date": "2026-05-13 17:30:00"
+      },
+      {
+        "title": "自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511521821.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522113.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "決算補足資料（2025年度決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522160.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "2025年度決算および第6期（2026-2030年度）中期経営計画　説明会",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522186.pdf",
+        "date": "2026-05-11 15:30:00"
+      }
+    ]
+  }
+}

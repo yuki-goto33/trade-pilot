@@ -1,0 +1,206 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-07-22T08:01:22+09:00",
+  "price_as_of": "2026-07-21",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の見解がneutralであり、かつstrengthが60に留まるため、buyの必須条件（strength 70以上かつbullish）を満たさない。",
+        "evidence": "fundamental_view.strength=60, fundamental_view.stance=neutral"
+      },
+      {
+        "reason": "761万人分のパスワード漏洩という重大なセキュリティ事案が発生しており、信用リスクや対応コストによる下押し圧力が懸念される。",
+        "evidence": "news.headlines[0].title: KDDI提供のISP向けメール基盤が不正アクセス被害、761万人分パスワード漏洩を確認"
+      },
+      {
+        "reason": "テクニカル指標は強気だが、RSIが73.2と買われすぎ水準に達しており、織り込み済みによる反落の懸念があるため、追随買いは避けるべき局面である。",
+        "evidence": "technical_view.cautions[0]: RSI14が73.2, reference.last_close=2881.5"
+      }
+    ],
+    "risks": [
+      "不正アクセス被害に伴う損害賠償や対策費用の拡大、およびブランドイメージの低下",
+      "2026年8月7日の次回決算発表における業績進捗や不祥事の影響に関する不透明感",
+      "2026年7月30日〜31日の日銀金融政策決定会合に伴う金利変動・地合い悪化リスク",
+      "財務報告に係る内部統制の不備（2026年6月公表）によるガバナンスへの不信感"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 60,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ専門家の見解がneutralであり、かつstrengthが60に留まるため、buyの必須条件（strength 70以上かつbullish）を満たさない。\",\n      \"evidence\": \"fundamental_view.strength=60, fundamental_view.stance=neutral\"\n    },\n    {\n      \"reason\": \"761万人分のパスワード漏洩という重大なセキュリティ事案が発生しており、信用リスクや対応コストによる下押し圧力が懸念される。\",\n      \"evidence\": \"news.headlines[0].title: KDDI提供のISP向けメール基盤が不正アクセス被害、761万人分パスワード漏洩を確認\"\n    },\n    {\n      \"reason\": \"テクニカル指標は強気だが、RSIが73.2と買われすぎ水準に達しており、織り込み済みによる反落の懸念があるため、追随買いは避けるべき局面である。\",\n      \"evidence\": \"technical_view.cautions[0]: RSI14が73.2, reference.last_close=2881.5\"\n    }\n  ],\n  \"risks\": [\n    \"不正アクセス被害に伴う損害賠償や対策費用の拡大、およびブランドイメージの低下\",\n    \"2026年8月7日の次回決算発表における業績進捗や不祥事の影響に関する不透明感\",\n    \"2026年7月30日〜31日の日銀金融政策決定会合に伴う金利変動・地合い悪化リスク\",\n    \"財務報告に係る内部統制の不備（2026年6月公表）によるガバナンスへの不信感\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "移動平均線のゴールデンクロスやMACDの好転により上昇トレンドが継続しており強気の見通しです。ただし、RSIが過熱感を示しており短期的な利食い売りには注意が必要です。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日移動平均線を上回るゴールデンクロスを形成しており、60日騰落率も+9.42%と中期・短期ともに明確な上昇傾向を示しています。",
+          "evidence": "price_technical.sma5_vs_sma25='golden(5日線が25日線の上)', price_technical.trend_60d.change_60d_pct=9.42"
+        },
+        {
+          "point": "MACD（39.9）がシグナル（25.98）を大きく上回って推移しており、上昇モメンタムの強さが確認できます。",
+          "evidence": "price_technical.macd=39.9, price_technical.macd_signal=25.98, price_technical.macd_histogram=13.92"
+        },
+        {
+          "point": "直近5営業日中4営業日で前日比プラスとなり、終値ベースで高値圏での堅調な推移が続いています。",
+          "evidence": "price_technical.recent_5_days, price_technical.last_close=2881.5"
+        }
+      ],
+      "cautions": [
+        "RSI14が73.2と買われすぎとされる70を超えており、一時的な過熱感によるスピード調整や利食い売りに注意が必要です。",
+        "前夜のNY市場にてADRが前日比-0.11%、通信サービスセクターETF(XLC)が-0.69%下落しており、寄り付き時の下押し圧力となる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 2750.46,
+        "resistance": 2923.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "2026年3月期の純利益・EPS増加など底堅い業績を維持している一方、直近で大規模な不正アクセスによる情報漏洩被害が報じられたほか、次回決算や日銀会合前のイベントリスクもあり中立の判断とします。",
+      "points": [
+        {
+          "point": "2026年3月期の連結純利益は7,071億円、EPSは183.55円へと拡大しており、業績面では堅調な収益基盤を示しています。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=7071, fundamentals.earnings_trend.annual[0].diluted_eps=183.55"
+        },
+        {
+          "point": "2026年7月21日にISP向けメール基盤への不正アクセスにより760万人超のパスワード漏洩が確認されたと報じられており、短期的・中長期的な信用リスクや対応コストへの懸念が存在します。",
+          "evidence": "news.headlines[0].title=\"KDDI提供のISP向けメール基盤が不正アクセス被害、761万人分パスワード漏洩を確認 - 株式会社VLCセキュリティ\", news.headlines[0].published=\"Tue, 21 Jul 2026 11:48:32 GMT\""
+        },
+        {
+          "point": "過去の開示において「財務報告に係る内部統制の開示すべき重要な不備」が公表されており、管理体制やガバナンスに対する警戒感が残存しています。",
+          "evidence": "disclosures.items[1].title=\"財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ\", disclosures.items[1].date=\"2026-06-25 15:30:00\""
+        }
+      ],
+      "cautions": [
+        "2026年8月7日に次回決算発表が予定されており、業績進捗や不正アクセス問題の業績影響を確認するまでのイベントリスクがあります。",
+        "2026年7月30日〜31日に日銀金融政策決定会合が控えており、国内金利動向による市場全般の変動リスクに注意が必要です。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "KDDI提供のISP向けメール基盤が不正アクセス被害、761万人分パスワード漏洩を確認 - 株式会社VLCセキュリティ",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5XclhXNE1ObF9uX2huajUtZHFqMW8wdjAxbDVfRm5Db3dQcHFEeERmNUdTX0ZMcHplLW93N2dzbm9kY0NJS0xLWTQxX2FKVHFhSGhz?oc=5",
+        "published": "Tue, 21 Jul 2026 11:48:32 GMT",
+        "publisher": "株式会社VLCセキュリティ"
+      },
+      {
+        "title": "KDDIは上値追い､カラ売りの買い戻しも - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5uTmpKYVZYY3dadEwwcjVlUWpvSEpkSXJtSG9HdUdKTTcwaVM4UXJDd2hmcjJqdGh4aVJ3NWs5elYwdW5ZbjJjOGVLRXhaZ2dJd3RqWjZHTQ?oc=5",
+        "published": "Tue, 21 Jul 2026 04:41:51 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "「学びの森 LINK FOREST 夏まつり」を8月22日に開催 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE01NlAtbVNGam9NbkJGc3JUV0JJVmFCY3hqcVdPb1JwRllpRS0wM3RFT3RCendzY0JXZlBkemVkMnJtb0lVR19DV2llVXFOajFMZkZGRE9Za3ZRZVdtMGI3Y3pMQUp6c0lneXc?oc=5",
+        "published": "Tue, 21 Jul 2026 10:45:12 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "パスワード漏れ７６２万人 ＫＤＤＩ、不正アクセス問題で - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE8zQ0dpTTA2Z0gxTTJyeU5BRXYzVmoySmVhTzRUZWREYjZqcEpHQXdQUHpScm50bzFOc1NsSlQ5bjc5TGNOV3g5cTFLNEJEeWFFanZqcGlJUTJ2VVZvYU9Qbi03S1I3TUZfamRZeTRscjBsbkpD?oc=5",
+        "published": "Tue, 21 Jul 2026 01:42:39 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "暗号資産に力を入れる企業が急増 関心低下でも参入が進む2つの理由 - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5aR3V3ZmF2ai10QXF0eVA2WFdRZGVUN0M2RkZZZUQtdWQzTFg5VjZldFFrQnB4UXQ1MHRyZklHVGhlVkM1WVV2VHh3bmh2SjJJbnczUGNiRUU3S2NsbjhnX184OHpXaFU?oc=5",
+        "published": "Tue, 21 Jul 2026 08:00:00 GMT",
+        "publisher": "日経ビジネス電子版"
+      },
+      {
+        "title": "＜画像6 / 12＞KDDIの寄付金贈呈式で仲間由紀恵がサンゴ礁の保全をアピール - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9iUTdLemg0VFlTUEhERHBkYTJpRDdpYmEwd2RnMlZBVmZURDhBYnk2V21VWGFtSGN1NGU2TUR4djZGdDdpQlFRcEhwNnNRaEo2VlBIR1QwSFdaZ3FQQ3VqTHpBZHNLbHM?oc=5",
+        "published": "Tue, 21 Jul 2026 09:47:35 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "au、「OPPO Reno13 A」をMNPなら2年47円で販売中【スマホお得情報】 - ITmedia Mobile - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBhdzJuWEI4S3BiSWc1bWEzYXQ5dlBHV1l6TGV2cHZnY1MwbWZxcW14NFVYNGduT0R4bjBzNnVTb2R5SzU4UHM2VnpTaUdkclNDR2s1ZnRqZm1DUERXeXZXd0ZxTlNvaW830gFoQVVfeXFMUG8xRUV0c0xxLWZfd0U0WER4cnRjdmYtSUZsUHJobmlJWmZUNlBLVk5hQl80cEpOUy1yRUhsNFZLT2E4cnhGVkppc0I2WWxIaXZuMkdQb0NXRUtlYXRTRXRXVE1yUnREODE?oc=5",
+        "published": "Tue, 21 Jul 2026 09:05:00 GMT",
+        "publisher": "ITmedia"
+      },
+      {
+        "title": "画像 | 【KDDIへのサイバー攻撃】狙われたのはKDDIでもISP事業者でもない…｢メールアドレスとパスワード漏洩｣の本当の怖さ - 東洋経済オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE96VXJPYjMwU3FlcFpFY1dVYVd1X3d2UkRPQmx2cVJZM1FtUGU0dW1qODFhbUJJb0paZE9HbFlWalJyai1DcWpDNnJrNEwzOFM4V3hLUXdZNA?oc=5",
+        "published": "Tue, 21 Jul 2026 03:30:00 GMT",
+        "publisher": "東洋経済オンライン"
+      },
+      {
+        "title": "日本版の新型フォルダブルGalaxyの対応バンドが判明 - blog of mobile",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9KX284dU5FZjVBUFhLTXVNS1dreUZ6QUU0MlFfbDJEckVFWW5FYkR1UzFFZU1wbUZnYzUwSzNkcEJNemk0NTNQRkF0NXk4LTQ?oc=5",
+        "published": "Tue, 21 Jul 2026 19:30:27 GMT",
+        "publisher": "blog of mobile"
+      },
+      {
+        "title": "「鼻息荒くして」「何がおきたのかわからない」「誰もが経験できることではない」若手ドライバー富士3連戦3者3様の収穫と課題 - autosport web",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA1OVBSM08tUk40RFlMZDd5THF6VVNHVHJuWktMTExPWE9qaENjUmNkQ2JyUlV4MnBWMDJVclNXXzJaMFc2YXIyR2ZwQ1VjMm81NXRUVW5B?oc=5",
+        "published": "Tue, 21 Jul 2026 03:03:00 GMT",
+        "publisher": "autosport web"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      },
+      {
+        "title": "東京証券取引所への「改善報告書」の提出に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559424.pdf",
+        "date": "2026-06-02 16:00:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（中期経営戦略）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524146.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "auフィナンシャルホールディングス株式会社の東京証券取引所への株式上場準備の開始について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524156.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "2026年３月期　決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511523545.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524005.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524010.pdf",
+        "date": "2026-05-12 15:45:00"
+      }
+    ]
+  }
+}

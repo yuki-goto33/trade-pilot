@@ -1,0 +1,205 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-07-22T08:02:26+09:00",
+  "price_as_of": "2026-07-21",
+  "signal": {
+    "signal": "buy",
+    "confidence": 70,
+    "target_price": 4900.0,
+    "stop_loss": 4480.0,
+    "holding_period_days": 14,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズにおいて食関連への1000億円投資報道や日系大手証券による目標株価引き上げなど強力な買材料が確認できます（strength=70）。",
+        "evidence": "fundamental_view.points[0], fundamental_view.points[1]"
+      },
+      {
+        "reason": "テクニカル面は25日移動平均線を上抜けた直後で中立（stance=neutral, strength=60）にとどまっており、本格的なモメンタム追随前の織り込み前エントリー条件を満たしています。",
+        "evidence": "technical_view.stance=neutral (strength=60)"
+      },
+      {
+        "reason": "円安水準や原油高などのマクロ環境が商社の収益構造にとって良好な追い風となっています。",
+        "evidence": "fundamental_view.points[2]"
+      }
+    ],
+    "risks": [
+      "想定保有期間内に次回日銀金融政策決定会合（2026-07-30〜07-31）および次回決算発表（2026-08-03）が含まれており、為替の円高シフトや決算跨ぎによるボラティリティ急増リスクがあります。",
+      "前夜ADR急騰に伴う寄り付きでの窓開け上昇後、買い一巡による「寄り天」や利益確定売りに押される可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"buy\",\n \"confidence\": 70,\n \"target_price\": 4900.0,\n \"stop_loss\": 4480.0,\n \"holding_period_days\": 14,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズにおいて食関連への1000億円投資報道や日系大手証券による目標株価引き上げなど強力な買材料が確認できます（strength=70）。\",\n   \"evidence\": \"fundamental_view.points[0], fundamental_view.points[1]\"\n  },\n  {\n   \"reason\": \"テクニカル面は25日移動平均線を上抜けた直後で中立（stance=neutral, strength=60）にとどまっており、本格的なモメンタム追随前の織り込み前エントリー条件を満たしています。\",\n   \"evidence\": \"technical_view.stance=neutral (strength=60)\"\n  },\n  {\n   \"reason\": \"円安水準や原油高などのマクロ環境が商社の収益構造にとって良好な追い風となっています。\",\n   \"evidence\": \"fundamental_view.points[2]\"\n  }\n ],\n \"risks\": [\n  \"想定保有期間内に次回日銀金融政策決定会合（2026-07-30〜07-31）および次回決算発表（2026-08-03）が含まれており、為替の円高シフトや決算跨ぎによるボラティリティ急増リスクがあります。\",\n  \"前夜ADR急騰に伴う寄り付きでの窓開け上昇後、買い一巡による「寄り天」や利益確定売りに押される可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "中期的な下落トレンド（60日相対騰落率マイナス）の中にありますが、直近で25日移動平均線を回復し、出来高を伴う反発とMACDの好転が見られることから、短期的な底打ち・反転の局面にあります。",
+      "points": [
+        {
+          "point": "60営業日騰落率が-3.72%かつ対TOPIX比で-8.42%と、依然として中期的な下落トレンドの中にあり、指数のパフォーマンスを大きく下回っています。",
+          "evidence": "price_technical.trend_60d"
+        },
+        {
+          "point": "直近の営業日で4.88%の大幅反発を見せ、25日移動平均線（4489.92円）を明確に上放れており、反転への複数の証拠（出来高増、MACD好転）が揃いつつあります。",
+          "evidence": "price_technical.last_close, price_technical.sma25, price_technical.recent_5_days"
+        },
+        {
+          "point": "前夜のNY市場でADRが+7.25%と急騰しており、本日寄り付きの強い買い気配を強く示唆しています。",
+          "evidence": "us_overnight.adr"
+        }
+      ],
+      "cautions": [
+        "ADRの大幅高により寄り付きで窓を開ける可能性が高く、買い一巡後の「寄り天」や利益確定売りに注意が必要です。",
+        "中期的な弱気トレンドを完全に脱したとは言えず、期間高値（4905円）に向けた戻り局面では依然として売り圧力が予想されます。"
+      ],
+      "key_levels": {
+        "support": 4489.92,
+        "resistance": 4905.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "食関連への1000億円投資報道やアナリストによる目標株価引き上げなど、直近で複数のポジティブなカタリストが出現している。マクロ環境も円安・原油高が追い風となるが、目前に控える決算発表と日銀会合には注意が必要である。",
+      "points": [
+        {
+          "point": "2026年7月21日の報道により、食関連分野への1000億円規模の積極的な投資姿勢が示され、将来の収益基盤拡大への期待感が高まっている。",
+          "evidence": "news.headlines[2].title"
+        },
+        {
+          "point": "日系大手証券によるレーティングの強気引き上げおよび目標株価の6,190円への上方修正が確認され、市場の評価改善が期待される。",
+          "evidence": "news.headlines[4].title"
+        },
+        {
+          "point": "1ドル163.2円の円安水準や中東情勢を受けた原油高は、資源セクターおよびグローバルな事業展開において収益の押し上げ要因となる。",
+          "evidence": "macro.indices[2].close, news.headlines[7].title"
+        }
+      ],
+      "cautions": [
+        "2026年8月3日に次回決算発表を控えており、2026年3月期に向けた純利益の減少トレンド（8,005億円計画）が嫌気されるリスクがある。",
+        "2026年7月30日から始まる日銀金融政策決定会合において、政策変更に伴う為替の円高シフトや国内金利の上昇が株価の重石となる可能性がある。",
+        "実績PER 22.22倍は歴史的な水準から見て割安感は乏しく、期待先行で買われた後の修正売りが懸念される。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": 6190.0
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "三菱商事(株)【MTSUY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1mS2dERDhJUEpRcDJORFk4NEpnS01xNlVJZ0hkMnlWMDQzLWt0cXlDV3dZSUs2NFRkTlFFRUR2SnRNRkRBeVBFT1Z6elA4UURB?oc=5",
+        "published": "Tue, 21 Jul 2026 05:35:21 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "上越市に山小屋のコーヒーショップ「i.coffee.net 8058」オープン 自然を眺めながらこだわりの一杯を - Komachi Web",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1GLVFoYWdMRjNHbVljOFVxZHB4VUhhZGJsMkl2S08yVm1ScVJFM3gzUGpoZUxoSEU3cVFrcXVqZ1dnYXFvUkhSZF85a09jT2FF?oc=5",
+        "published": "Tue, 21 Jul 2026 10:21:38 GMT",
+        "publisher": "Komachi Web"
+      },
+      {
+        "title": "三菱商事の株価が反発 「食関連で1000億円投資」報道 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE54TzVUMnZLTGxRZ2kxS2pnSjduejYwWEVtOElSQ01nWDcteDA2NmswODNWYU56aE9PVkhRTnkzSjFKTmdHRXVySU9mdzZhUjJfNFJNYmhFdG42N1JsNUUtZVp1cEQ1VUxhVEhOQg?oc=5",
+        "published": "Tue, 21 Jul 2026 02:40:19 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "ライフスタイルにもバイオ素材を。ソニーと三菱商事が構築する、次世代に繋ぐサプライチェーン - IDEAS FOR GOOD",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE8yRGFHRGM5Vl80bVhfTVhZeVgxOHFvczI3YzVFWDRSMm5vdUM0Y3RBNTJYRDl0Nmp0WVJybUh6MTNIbFVjbVRoUENfdnpRdWI3bF90OE9Kd211ZWJHTmx2M2M5ZHhibTNjbDdkdTRBWWpQQmlyTEE?oc=5",
+        "published": "Tue, 21 Jul 2026 00:04:19 GMT",
+        "publisher": "IDEAS FOR GOOD"
+      },
+      {
+        "title": "【アナリスト評価】三菱商事、レーティング強気に引上げ、目標株価6,190円に引上げ（日系大手証券）(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQUG5YaWtEMDh4WGhyd2JkUTl5elFpRVFnWmI5cktwS2JsNE9Gd3V0SmxvbkdWZWtsMHRWNWxfWDBKWEpNejFXOEpNcHNpY0RGRDRfOU5oQlpqSFJNNVVrQnRFSWdvTk5DeDVRd2lWWG11Q0QtakdYOWxBM1FMLVllS085c0RuYms?oc=5",
+        "published": "Tue, 21 Jul 2026 09:00:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "着床式洋上風力の案件形成、30円/kWh程度までの海域を優先的に開発 - ウインドジャーナル",
+        "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBhUG54UllDODVZWWgtV2labWJka1dldExGT0hrWkdTR1g3SmFDWFpaVFN5Z3c0dExJVWY5LWtkZ0xOalNi?oc=5",
+        "published": "Tue, 21 Jul 2026 03:01:31 GMT",
+        "publisher": "ウインドジャーナル"
+      },
+      {
+        "title": "DigitalBlastが宇宙ステーション「Starlab」利用枠を確保 その狙いとは - space-connect.jp",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9fZEFOcVFEeURZVi1ad0Ytaml3aXNpRER1ZUFzWllxeEg1bW9iTFI5azRrcThHTGstQ3NIaWplOHJ5MVNFWFlNRDJpMV9SNDk1VzZPNjlleV9UZw?oc=5",
+        "published": "Tue, 21 Jul 2026 11:00:00 GMT",
+        "publisher": "space-connect.jp"
+      },
+      {
+        "title": "INPEXなど石油関連株が高い､中東懸念した原油高が追い風に - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFByTjNqQ2cwYUpHNzRkaXdjWkExY0V2Z0NmUnh2SXh1bEtWUG0zTFFXUC0wdXRwaV9KSjVGckxweUhJSU5nS25TSzhSWV9ORkVqeXlJckRhUQ?oc=5",
+        "published": "Tue, 21 Jul 2026 01:14:22 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "DigitalBlast、米国Starlabと商業宇宙ステーションの利用予約契約を締結 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB3Y2tmTzlQWjItYk9KOUowcE9WV2d0WHFBNTZILTJkOWV0YVlWTmVMTk9tMm0tUUpNZ0VjWHphTXE2R0RSdVlOMm9idXZhaW1nbjZLVGN2aHJkc2J4NjVBV2JVamIwTElhMUE?oc=5",
+        "published": "Tue, 21 Jul 2026 01:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "読売３３３は３指数で下落幅最小、ハイテク株急落の影響小さく…７月１３日週の読売３３３分析 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOVkljUi1DdjMwUXp5aHRGOTN6cDRWcXU2ZmhCaEFHczFmb1daV1FMNWJTaWFvcGJNaXAyLUpQbjhVcEVGX0RwajU4R2NHekdlemx6RVVfMXpyOFJsSm4yckszN2tiUzd1VkJxV3ZqOVk1OGVCXzFWUktPdm96UUxSS1FtSFNZYUdMQW1OX1p5Y3HSAYwBQVVfeXFMTlE5TVpZejhsMXg1T1NNRGVmSGFvWXpleVhjNjVGOC1hYmN2UkxjWUdIYUJWeDRfTC10bXhhd1dIUFl0bmw4UkdpOGo0NFBvYjhjN0h5WnNsZ2Y0allJUEdUMVJTVWY4YWF0LWFscmhaY256aFhQQzJTYjlNSm9lMTB5WTg5YkFkQlhSVkc?oc=5",
+        "published": "Tue, 21 Jul 2026 02:00:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "特定子会社の異動（子会社の特定子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260714593288.pdf",
+        "date": "2026-07-15 10:00:00"
+      },
+      {
+        "title": "子会社間の合併及び特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552595.pdf",
+        "date": "2026-05-29 09:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C2プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539898.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C3プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539905.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C4プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539910.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C5プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539918.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C6プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539939.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515679.pdf",
+        "date": "2026-05-01 14:00:00"
+      },
+      {
+        "title": "通期個別業績と前期実績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515675.pdf",
+        "date": "2026-05-01 14:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260416505643.pdf",
+        "date": "2026-04-17 14:00:00"
+      }
+    ]
+  }
+}

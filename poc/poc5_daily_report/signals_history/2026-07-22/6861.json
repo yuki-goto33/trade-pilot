@@ -1,0 +1,196 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-07-22T07:59:57+09:00",
+  "price_as_of": "2026-07-21",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 14,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズでは業績拡大トレンドが続いていますが、高いバリュエーション水準（PER 38.5倍）に加えて直近の新規材料が不足しており、中立的な見解（strength=50）にとどまっています。",
+        "evidence": "fundamental_view.stance=neutral (strength=50)"
+      },
+      {
+        "reason": "テクニカル面では5日・25日移動平均線のデッドクロスやMACD低下など下落モメンタムが優勢（strength=70）であり、下げ止まりを確認するまでは静観が妥当です。",
+        "evidence": "technical_view.stance=bearish (strength=70)"
+      }
+    ],
+    "risks": [
+      "2026年7月28日に予定されている次回決算発表に伴う短期的な業績イベントリスク。",
+      "2026年7月30日〜31日の日銀金融政策決定会合による金利・為替市場および株式市場全般のボラティリティ上昇リスク。",
+      "RSI14が32.7まで低下しており、自律反発による短期的な売り方の踏み上げリスク。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 50,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 14,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズでは業績拡大トレンドが続いていますが、高いバリュエーション水準（PER 38.5倍）に加えて直近の新規材料が不足しており、中立的な見解（strength=50）にとどまっています。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=50)\"\n  },\n  {\n   \"reason\": \"テクニカル面では5日・25日移動平均線のデッドクロスやMACD低下など下落モメンタムが優勢（strength=70）であり、下げ止まりを確認するまでは静観が妥当です。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=70)\"\n  }\n ],\n \"risks\": [\n  \"2026年7月28日に予定されている次回決算発表に伴う短期的な業績イベントリスク。\",\n  \"2026年7月30日〜31日の日銀金融政策決定会合による金利・為替市場および株式市場全般のボラティリティ上昇リスク。\",\n  \"RSI14が32.7まで低下しており、自律反発による短期的な売り方の踏み上げリスク。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "5日移動平均線と25日移動平均線のデッドクロスやMACDの拡大など、短期テクニカル指標の悪化により下落モメンタムが優勢な展開が予想されます。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日移動平均線を下回るデッドクロスが発生しており、終値も両移動平均線を大幅に下回る位置にあります。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.last_close=71960.0, price_technical.sma5=73780.0, price_technical.sma25=76990.4"
+        },
+        {
+          "point": "MACDおよびMACDヒストグラムが深いマイナス圏に沈んでおり、下落のモメンタムが強い状態を示しています。",
+          "evidence": "price_technical.macd=-802.62, price_technical.macd_histogram=-857.34"
+        },
+        {
+          "point": "直近5営業日では7月17日に出来高を伴って-4.28%と大幅下落し、翌営業日の反発も小幅にとどまっています。",
+          "evidence": "price_technical.recent_5_days[3].change_pct=-4.28, price_technical.recent_5_days[3].volume=905400, price_technical.recent_5_days[4].change_pct=1.52"
+        }
+      ],
+      "cautions": [
+        "RSI14が32.7まで低下しており、売られすぎ水準からの自律反発が入る可能性があります。",
+        "前夜の米国市場でテクノロジーセクターETF（XLK）が+2.89%と上昇しており、寄り付きの買い戻し要因となる可能性があります。",
+        "60日騰落率は+13.91%とプラスを維持しており、中期的サポートライン付近での買い支えに注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 68930.0,
+        "resistance": 76990.4
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "年次業績は増収増益基調であり製造業PMIなど需要環境も堅調ですが、高バリュエーション水準に加えて直近2週間の新規カタリストが不在であり、決算発表を直前に控えるため中立と判断します。",
+      "points": [
+        {
+          "point": "業績トレンドは順調で、2024年3月期から2026年3月期にかけて売上高（9,673億円から11,693億円）および純利益（3,696億円から4,452億円）ともに拡大が続いています。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "2026年6月の日本製造業PMIが54.8と拡大局面を維持し、日銀短観の大企業製造業DIも22.0（前回比+5.0）へ改善しており、FA・工場自動化関連の需要環境は好調です。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.8, macro.boj.tankan.di.large_manufacturing.current_di=22.0"
+        },
+        {
+          "point": "予想PERが38.54倍、PBRが5.03倍と高いバリュエーション水準にある一方、直近2週間以内に株価の上昇を促す新規材料が開示されていません。",
+          "evidence": "fundamentals.valuation.forward_pe=38.535, fundamentals.valuation.price_to_book=5.027"
+        }
+      ],
+      "cautions": [
+        "2026年7月28日に次回決算発表が予定されており、発表直前における業績イベントリスクが存在します。",
+        "2026年7月30日〜31日に日銀金融政策決定会合が控えており、金利動向や為替市場の急変動による市場全体のボラティリティ上昇に注意が必要です。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "高収益組織キーエンスの実践例 海外現地拠点における採用・育成・定着の型ー海外現地の“人”の課題に終止符を｜7/28(火)10時30分開催 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0ydlNvN1U0d0UwN0N3eGtrd1Mza2lXbS16aFRzYzY0dVc2MHRvcDBsVHA4QlpoRXdoQWxoX0NkenJYVkxsNlY3aWgwbUtnUWdYSDBpVWhoc3E3NUpQcUtXc0RCM1UwaHppMGc?oc=5",
+        "published": "Tue, 21 Jul 2026 01:10:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "膨らまないファン付きウェア ペルチェで首や脇ひんやり - 家電 Watch",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBFNkpzd3VBcHVXejVRMnJKNUtfNTVtZDVzdVBWNE9wN1JLT3VDcXRyM1pFQ3dTYlRyUElTRldvNjQtaDRFY3V1aDk1TktzSEkzMTk0VmRaWGlhSG9nZjZyd28yTS10anc?oc=5",
+        "published": "Tue, 21 Jul 2026 02:04:00 GMT",
+        "publisher": "家電 Watch"
+      },
+      {
+        "title": "スーパーの揚げものがサックリお店級に！？ ボタンを押すだけ「ノンフライヤー」で油もカット - BCN Retail",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBSRkxpcDNLNzI2WnZjM01wVTl4UGozSUs4OTBnMGdQWWUyRVJGTGI3S3d0LVRXZFRIUng4aHFDeGptTzJIRmVxYm9MNFFwZ0ZRY3dsQ3FrUjQ5TTBQeUlZdkR1dzRBQQ?oc=5",
+        "published": "Tue, 21 Jul 2026 08:00:00 GMT",
+        "publisher": "BCN Retail"
+      },
+      {
+        "title": "｢何かアイデアは?｣と聞くのは三流､では一流は…お通夜のような会議が生き返る\"最初のひと言\" - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5oaTVEOUo1WUNwWVNUbkdTQ3NsZlRBaVhlcFNOajVzQkhidXBLWGIwdG04b1dnUFNiSTZlT3lGUU9qWTNFMS1rLXhiZlk4cmc?oc=5",
+        "published": "Tue, 21 Jul 2026 01:05:01 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "膨らまないファン付きウェア　ペルチェで首や脇ひんやり - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNSDREcU9EU2J2aHNsaktnd0RRTFN5bWFvMHFoX0M0UER0UWtSaXNRb056Q1Y5YktUc2lUb253LXh0cURJVG0xN29rQU1FMnF5UWlEZXhZNUNHMF9TX0RCeml3MERDNUcyT0Z1NWlZVEt1SkppQ3FHV1k4OG45S2VwX3lBSWd2dFhC0gGIAUFVX3lxTE1INERxT0RTYnZoc2xqS2d3RFFMU3ltYW8wcWhfQzRQRHRRa1Jpc1FvTnpDVjliS1RzaVRvbncteHRxRElUbTE3b2tBTUUycXlRaURleFk1Q0cwX1NfREJ6aXcwREM1RzJPRnU1aVlUS3VKSmlDcUdXWTg4bjlLZXBfeUFJZ3Z0WEI?oc=5",
+        "published": "Tue, 21 Jul 2026 02:04:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "エレコムが上位3位まで独占 半固体モバイルバッテリー人気ランキングTOP10 2026/7/21 - BCN Retail",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1PU2Rpb0k4U1ZWMFNzLUdDOF85dzNaeXhibnJyYk5TeHRYZGN5SlhwQlVuTmlfVGI2T20xQnIzQnI2UE1kR2NFRTYzd3E2SEpyQnRRcTF1V1lYRk5mbWFOSi1kQXFBRjFBN29CWTVBdXJ5aWlHYTBNU0xn?oc=5",
+        "published": "Tue, 21 Jul 2026 03:00:00 GMT",
+        "publisher": "BCN Retail"
+      },
+      {
+        "title": "いま韓国が崩れれば日本も崩れる…借金でサムスン株を買う韓国人が招く｢株安ドミノ｣という危機的シナリオ - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1Ya3ViVDdfa1gzNFRKakZyLXNDUnJqQ0NwN3ljeEI3a0ZhbVFUZ3dkeHJpT2ZWcE1TNTd6QXUzTGxHSEZPblA3WWRaRlRRNXM?oc=5",
+        "published": "Tue, 21 Jul 2026 00:00:22 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "エレコムが上位3位まで独占 半固体モバイルバッテリー人気ランキングTOP10 2026/7/21 - BCN Retail",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOSGx3X0hMRVBrWExNdVgxaDFXeVVkTFRzV0pXMVI5QjM1RmN0ZGhPcWFFbzF6aENGWmFoTWZ5LWNsSGFMQzRmYV8xVmlqU1BPdHYySTdrcml3RExGYlV6Q1JpMkU3ZjY5TmRFY3ZOZFFoMmRZdnNtV0lwbFN0dERWR0J5R28?oc=5",
+        "published": "Tue, 21 Jul 2026 03:00:00 GMT",
+        "publisher": "BCN Retail"
+      },
+      {
+        "title": "膨らまないファン付きウェア ペルチェで首や脇ひんやり - Excite エキサイト",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1mRkN2bXdlSUNKWlk5OHZrc1NZMU11X2NBdGZSaXpXU3o0OWFzVTdhOTNzM25FN2o2czcyeGdld21FbGpBVVlWWkN1emhLTkllNmtSajZiazRxYjNiN1ZHR3dyVmdYYVFObDRCMzJJbEJDRmZJOFQ5ZA?oc=5",
+        "published": "Tue, 21 Jul 2026 02:16:00 GMT",
+        "publisher": "Excite エキサイト"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120250724520054.pdf",
+        "date": "2025-07-29 16:00:00"
+      }
+    ]
+  }
+}
