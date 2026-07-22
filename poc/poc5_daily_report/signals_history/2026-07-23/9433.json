@@ -1,0 +1,212 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-07-23T08:07:12+09:00",
+  "price_as_of": "2026-07-22",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の強気度が60に留まり、中立スタンスが維持されているため。増益基調や新技術への期待はあるものの、内部統制の不備や異常な予想PER数値による不確実性が払拭されていません。",
+        "evidence": "fundamental_view.strength=60, fundamental_view.cautions[1]: 内部統制の不備, fundamental_view.cautions[2]: 予想PER 1234.12倍"
+      },
+      {
+        "reason": "テクニカル指標は強気を示していますが、統合判断ルールにより、テクニカルまで強気に揃った局面は「織り込み済み」と判断し、新規エントリーは推奨されません。",
+        "evidence": "technical_view.stance=bullish (strength=75), technical_view.points[0]: ゴールデンクロス"
+      },
+      {
+        "reason": "市場全体が下降トレンド（downtrend）にあり、マクロ環境のリスクオフ姿勢が株価の重石となる可能性が高い状況です。",
+        "evidence": "reference.market_regime=\"downtrend\", fundamental_view.points[3]"
+      }
+    ],
+    "risks": [
+      "2026年7月30日からの日銀金融政策決定会合に伴う、金利上昇によるバリュエーション調整リスク。",
+      "2026年8月7日に控える決算発表。内容次第で株価のボラティリティが急増する懸念があります。",
+      "TOPIXが25日線を下回る軟調な地合いにおいて、ADRや通信セクターへの連れ安リスク。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の強気度が60に留まり、中立スタンスが維持されているため。増益基調や新技術への期待はあるものの、内部統制の不備や異常な予想PER数値による不確実性が払拭されていません。\",\n   \"evidence\": \"fundamental_view.strength=60, fundamental_view.cautions[1]: 内部統制の不備, fundamental_view.cautions[2]: 予想PER 1234.12倍\"\n  },\n  {\n   \"reason\": \"テクニカル指標は強気を示していますが、統合判断ルールにより、テクニカルまで強気に揃った局面は「織り込み済み」と判断し、新規エントリーは推奨されません。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=75), technical_view.points[0]: ゴールデンクロス\"\n  },\n  {\n   \"reason\": \"市場全体が下降トレンド（downtrend）にあり、マクロ環境のリスクオフ姿勢が株価の重石となる可能性が高い状況です。\",\n   \"evidence\": \"reference.market_regime=\\\"downtrend\\\", fundamental_view.points[3]\"\n  }\n ],\n \"risks\": [\n  \"2026年7月30日からの日銀金融政策決定会合に伴う、金利上昇によるバリュエーション調整リスク。\",\n  \"2026年8月7日に控える決算発表。内容次第で株価のボラティリティが急増する懸念があります。\",\n  \"TOPIXが25日線を下回る軟調な地合いにおいて、ADRや通信セクターへの連れ安リスク。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "5日線が25日線を上回るゴールデンクロス状態が続き、MACDやRSIなどのモメンタム指標も上向きを示しています。中期でもTOPIXをアウトパフォームしており強気な形状ですが、全体相場の軟調さや前夜ADRの安値が短期的には重しとなる可能性があります。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日移動平均線の上位置をキープしており、MACDヒストグラムもプラス圏で好転を維持しています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\", price_technical.macd=38.79, price_technical.macd_signal=25.26, price_technical.macd_histogram=13.53"
+        },
+        {
+          "point": "60日騰落率が+10.05%、対TOPIX相対騰落率が+4.15%となっており、中期的な上昇トレンドとともに市場対比での優位性が示されています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=10.05, price_technical.trend_60d.relative_to_topix_60d_pct=4.15"
+        },
+        {
+          "point": "RSI14が67.9と強気圏に位置しており、直近5営業日の株価も2,800円台後半で堅調に推移しています。",
+          "evidence": "price_technical.rsi14=67.9, price_technical.last_close=2875.5"
+        }
+      ],
+      "cautions": [
+        "TOPIXのレジームがdowntrendに位置しており、全体相場の地合い悪化に伴う連安リスクがあります。",
+        "前夜NY市場でのADR（-0.45%）および通信セクターETF（-0.75%）の下落が、寄り付き時の下押し圧力として織り込まれる可能性があります。",
+        "RSIが70に接近しており、期間高値（2,923.0円）手前での戻り売りや利益確定売りに押される可能性があります。"
+      ],
+      "key_levels": {
+        "support": 2756.9,
+        "resistance": 2923.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "増益基調の業績と衛星通信を活用したドローン技術の成功といった好材料はあるものの、内部統制の不備や極端な予想PERの数値、さらに日銀会合を控えたマクロ環境の不透明感から、現在は様子見が妥当と判断します。",
+      "points": [
+        {
+          "point": "一株当たり利益（EPS）は過去3期で150.59円から183.55円へと着実に成長しており、収益基調は堅調に推移しています。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "直近（2026年7月22日）に発表されたスターリンクを活用したドローン飛行制御の成功は、次世代インフラとしての技術的優位性を示す新規カタリストとなり得ます。",
+          "evidence": "news.headlines[5]"
+        },
+        {
+          "point": "3,000億円規模の自社株買い枠を設定しているものの、直近6月の取得実績が0株であり、当面の下値支えとしての実効性には不透明さが残ります。",
+          "evidence": "fundamentals.recent_important_disclosures[0]"
+        },
+        {
+          "point": "PMIは拡大圏にあるものの、TOPIXが25日線を下回る下降トレンド（downtrend）にあり、市場全体のリスクオフ姿勢が重石となっています。",
+          "evidence": "macro.market_regime, macro.japan_pmi.composite"
+        }
+      ],
+      "cautions": [
+        "2026年7月30日からの日銀金融政策決定会合を控え、金利上昇に伴うバリュエーション調整リスクがあります（macro.boj）",
+        "財務報告に係る内部統制の「開示すべき重要な不備」が公表されており、ガバナンス面での懸念が存在します（disclosures.items[1]）",
+        "データ上の予想PERが1234.12倍と極端な異常値を示しており、将来の利益予測に何らかの急激な下方修正または算出上の特異事象が含まれている可能性があります（fundamentals.valuation.forward_pe）",
+        "次回決算発表（2026年8月7日）が2週間以内に控えており、短期的なボラティリティの上昇が予想されます（fundamentals.next_earnings_date）"
+      ],
+      "key_levels": {
+        "support": 2700.0,
+        "resistance": 3000.0
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ＫＤＤＩ(株)【KDDIY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5UeXNVcVVoNnBzaHVrVDJRR3VqcmJrUDk1T0h1dDRJT0ttelAwWVk0UWZWT0JaQTIxMkRtQUxzLW1FdnNRVXpvUWZRb0p4cVlJ?oc=5",
+        "published": "Wed, 22 Jul 2026 18:37:37 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "KDDI Open Innovation Fund 3号、音声解析AIで会話データ活用を支援するRevCommに追加出資 - KDDI",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE0zSzFVNXN0dlVXQW5Bakh0ak1PQXdMQTdUUXZUaDhFQ1ZVWHR4SWZDb0F4eE9nTEhlVFE5MEdfbWlGTzJYWTBUbUlkM0puaUNqWG9MSEJMSERlc1NScWN0VTA2alBhNTZmYjgwWQ?oc=5",
+        "published": "Wed, 22 Jul 2026 04:02:10 GMT",
+        "publisher": "KDDI"
+      },
+      {
+        "title": "KDDI、電波圏外でドローン飛行 制御にスターリンク - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFA1el83MkpCdWwwXzdHajBHU2k5UU1reHNwTVg4NGVUSXE1ZldmVHg1ZHpKTlcwcG14bVdjZkNrWGU1aHRXYm1sWXhfTFlGZVJIVS16Vy03R1hudWVqLVJ6c00wRnlpa29LVTlqV2lMTnBybEVs?oc=5",
+        "published": "Wed, 22 Jul 2026 20:50:20 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "KDDI、衛星通信で圏外ドローンの飛行制御 - LOGISTICS TODAY",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1YM3NuMHpFTGZRaFR5Z1lza0ZHRDZMVnpzODhNZ0RDNC1HUThWSTdhMUZqOU1rVE1vMHRxUnpBZ3NUSDJ3TE5JZg?oc=5",
+        "published": "Wed, 22 Jul 2026 11:05:51 GMT",
+        "publisher": "LOGISTICS TODAY"
+      },
+      {
+        "title": "放送番組をクラウドに録画する「クラウド録画機能」をKDDI、デジオンと共同開発、ケーブル技術ショー2026で初披露 - Sumitomo Electric",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE84VThVQ3RnMkNXcXVxYk5HVGZaZDJSUjV3Qk9SZGt2aVpKZGJqTjZRTm90RC13MVZlYzJJdkJTZGMwTWlkUE41eUZOWHBIb3NYbmVzVzZfY0VycXFsZy13UFlR?oc=5",
+        "published": "Wed, 22 Jul 2026 04:30:58 GMT",
+        "publisher": "Sumitomo Electric"
+      },
+      {
+        "title": "圏外でもドローンが飛べる、KDDIが「au Starlink Direct」で国内初成功 - ケータイ Watch",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE91SmI4MDRrUWxOTlFmVXZHd2UwM3hSYzBKU3NvWnVHMmNWanFZNWdtT1hUaDB6TUNTZENuWTVYWXA5U1pnRFFza2pqY0oxLUhrdEFVQmxhMzcydktjS0N3SGtrR2l1QjA?oc=5",
+        "published": "Wed, 22 Jul 2026 07:40:08 GMT",
+        "publisher": "ケータイ Watch"
+      },
+      {
+        "title": "【PIVOT出演】KDDIグループ新本社における多様な働き方を支える「SmartOfficeNavigator」を紹介 ～KDDI巨大オフィスの裏側 1万3000人を繋ぐデータ×オフィスの最適解～ - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9Cd2JYTG1pb2V5RF9EX0Z4UG5HcThuYklyaWpLWnNTMEpncFF6UlB4OUQ4YmROeXpac0V5elA2OWp6UnNGYmJPSi1EenZOQmN0bnFTd1VRS2I2a1JkVk9IeExLM05qaDhCUnc?oc=5",
+        "published": "Wed, 22 Jul 2026 02:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "KDDI、au Starlink Directを活用した圏外エリアにおけるドローンの飛行制御に成功 - ビジネスネットワーク",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9NS2NQZm00VFVzUzJFNTE5ZXBsZ3FabTh3UU5sQU5aVzNrbGJsSGsyU0l1MTJRb1M5bUNqbFRndkZGalM0MjdpY28wQzlwSG1EQzN3?oc=5",
+        "published": "Wed, 22 Jul 2026 01:32:48 GMT",
+        "publisher": "ビジネスネットワーク"
+      },
+      {
+        "title": "KDDI、衛星の直接通信でドローン飛行成功 圏外エリアで活用可能に - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9Hb2R1eUt2M1ZZbVZzcnlCS21Nek1OYkYzemI1ZFZpNGt5bFdXNU9GUFFBMGpxR1kxdkZKNWFRWW5TU1lqalFyMHdwOHhGSjNPNmgtT3lVOVNwb3diUXhaUzVvYUhDLS0zLURSeQ?oc=5",
+        "published": "Wed, 22 Jul 2026 03:34:52 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "4キャリアのiPhoneも値上げされる？ ドコモ、KDDI、ソフトバンク、楽天モバイルに確認した【7月22日時点】（要約） - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBjMUg3UXptZ04wOWVZYTk4T2laX0hvMm91OVM0bEVaQnVhWUlzN3BwdzlyS3FtR19UbTJoaTRFNF9taFg0ODE0M3paRHYyRkZsa290NWVBdVg0UTIyRFRuNWpDZU9nZ0c0TFd3Tlp5WQ?oc=5",
+        "published": "Wed, 22 Jul 2026 13:57:00 GMT",
+        "publisher": "ITmedia"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      },
+      {
+        "title": "東京証券取引所への「改善報告書」の提出に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559424.pdf",
+        "date": "2026-06-02 16:00:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（中期経営戦略）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524146.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "auフィナンシャルホールディングス株式会社の東京証券取引所への株式上場準備の開始について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524156.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "2026年３月期　決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511523545.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524005.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524010.pdf",
+        "date": "2026-05-12 15:45:00"
+      }
+    ]
+  }
+}

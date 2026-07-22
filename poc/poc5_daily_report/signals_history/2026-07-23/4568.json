@@ -1,0 +1,207 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-07-23T08:11:09+09:00",
+  "price_as_of": "2026-07-22",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 14,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家が指摘するように、約1週間後に第1四半期決算と日銀金融政策決定会合という重大イベントを控えており、現在は内容を見極めるべき待機局面である。",
+        "evidence": "fundamental_view.summary / reference.next_earnings_date=2026-07-31"
+      },
+      {
+        "reason": "テクニカル面では中期下落トレンドが継続しており、ADRの大幅安も重なっているため、短期的には調整圧力が強いが、25日移動平均線が下値支持として機能する可能性もあり、安易な追随を避けるべきである。",
+        "evidence": "technical_view.points[0], [2] / technical_view.cautions[0]"
+      },
+      {
+        "reason": "2026年3月期の実績が減益であり、収益性の低下という懸念材料が払拭されない限り、積極的な買いのカタリストが不足している。",
+        "evidence": "fundamental_view.points[0]: operating_income_oku_jpy=2291 (前年同期比約31%減)"
+      }
+    ],
+    "risks": [
+      "2026年07月31日の第1四半期決算において、新薬の販売進捗が想定を上回り株価が急反発するリスク",
+      "2026年07月30日〜31日の日銀金融政策決定会合を受けた為替の急変動が、海外売上比率の高い業績に与える影響",
+      "市場レジームがdowntrendであるため、寄り付き後の売り一巡後にSMA25（2657.48円）を明確に割り込み下落が加速するリスク"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 55,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 14,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ専門家が指摘するように、約1週間後に第1四半期決算と日銀金融政策決定会合という重大イベントを控えており、現在は内容を見極めるべき待機局面である。\",\n      \"evidence\": \"fundamental_view.summary / reference.next_earnings_date=2026-07-31\"\n    },\n    {\n      \"reason\": \"テクニカル面では中期下落トレンドが継続しており、ADRの大幅安も重なっているため、短期的には調整圧力が強いが、25日移動平均線が下値支持として機能する可能性もあり、安易な追随を避けるべきである。\",\n      \"evidence\": \"technical_view.points[0], [2] / technical_view.cautions[0]\"\n    },\n    {\n      \"reason\": \"2026年3月期の実績が減益であり、収益性の低下という懸念材料が払拭されない限り、積極的な買いのカタリストが不足している。\",\n      \"evidence\": \"fundamental_view.points[0]: operating_income_oku_jpy=2291 (前年同期比約31%減)\"\n    }\n  ],\n  \"risks\": [\n    \"2026年07月31日の第1四半期決算において、新薬の販売進捗が想定を上回り株価が急反発するリスク\",\n    \"2026年07月30日〜31日の日銀金融政策決定会合を受けた為替の急変動が、海外売上比率の高い業績に与える影響\",\n    \"市場レジームがdowntrendであるため、寄り付き後の売り一巡後にSMA25（2657.48円）を明確に割り込み下落が加速するリスク\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "中期的な下落トレンドが継続する中で、市場全体の地合い悪化や前夜ADRの大幅安が重なり、直近の反発局面が終了し調整が再開する可能性が高いと判断します。",
+      "points": [
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともにマイナスであり、中期的な下落トレンドから脱却できていない。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-2.88, price_technical.trend_60d.relative_to_topix_60d_pct=-8.78"
+        },
+        {
+          "point": "市場全体のレジームがdowntrendと判定されており、個別銘柄に対して売り圧力がかかりやすいマクロ環境にある。",
+          "evidence": "macro.market_regime.market_regime=downtrend"
+        },
+        {
+          "point": "前夜のADRが大幅に下落しており、寄り付きから25日移動平均線方向への調整が想定される。",
+          "evidence": "us_overnight.adr.change_1d_pct=-2.85"
+        }
+      ],
+      "cautions": [
+        "短期移動平均線が25日線を上回るゴールデンクロス状態にあり、SMA25（2657.48円）が下値支持線として機能する可能性がある。",
+        "MACDのヒストグラムは依然としてプラス圏にあり、短期的モメンタムが完全に死んでいない点には注意が必要。",
+        "ADRの大幅安は寄り付き価格に織り込まれるため、寄り付き直後の売り一巡後の動きに注視が必要。"
+      ],
+      "key_levels": {
+        "support": 2657.5,
+        "resistance": 2815.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "直近の通期決算が減益であることに加え、約1週間後に第1四半期決算と日銀金融政策決定会合という二大イベントを控えており、現在は内容を見極めるべき待機局面と判断します。",
+      "points": [
+        {
+          "point": "2026年3月期の実績は増収となったものの、営業利益が前年同期比で約31%減少、純利益も約12%減少しており、収益性の低下が懸念材料となっています。",
+          "evidence": "fundamentals.earnings_trend.annual[0] (revenue_oku_jpy: 21230, operating_income_oku_jpy: 2291)"
+        },
+        {
+          "point": "配当利回りは3.55%と一定の水準にあり、PBRも3倍を超えていることから一定の資産評価はなされているものの、上昇を牽引する新規の材料が乏しい状態です。",
+          "evidence": "fundamentals.valuation (dividend_yield_percent: 3.55, price_to_book: 3.019)"
+        },
+        {
+          "point": "ドル円が163円台と円安水準で推移しており、海外売上比率の高い製薬業にとって為替環境は追い風ですが、次週の日銀会合による変動リスクが強く意識されます。",
+          "evidence": "macro.indices[2] (JPY=X: 163.09), macro.boj.monetary_policy_meeting.next_meeting"
+        }
+      ],
+      "cautions": [
+        "2026年07月31日に予定されている第1四半期決算発表における、新薬の販売進捗や研究開発費の動向",
+        "2026年07月30日〜31日の日銀金融政策決定会合に伴う為替および市場金利の急変動",
+        "2026年3月期の減益トレンドが第1四半期も継続し、中期経営計画の達成に疑義が生じるリスク"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "第一三共ヘルスケアが出張授業 高校生アンバサダーが成果発表 - 47NEWS",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9OYmRQNGp6dndKbkpGdkJ4UEdKdEE1Zlk0SnRzV1huSGs5OEZ4dGVqUEZnTXRfTjcxX1JodzdZZHFyVFBqck9ZOG1aWQ?oc=5",
+        "published": "Wed, 22 Jul 2026 09:24:27 GMT",
+        "publisher": "47NEWS"
+      },
+      {
+        "title": "第一三共ヘルスケアが出張授業 高校生アンバサダーが成果発表 - 週刊大阪日日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9TQjZUSzlrdUU3a2ZJNUhOUHpEMlNwTWVNN0tMbXp1UmFYRXNQUko0OEp1cHNnSDNOMnVwMFo5UUM4WkJHeDlDdmRXRGVIZE5YeG4zdWZuaEs?oc=5",
+        "published": "Wed, 22 Jul 2026 09:24:27 GMT",
+        "publisher": "週刊大阪日日新聞"
+      },
+      {
+        "title": "「ルル」や「マキロン」の“ウラ話”が満載 発足20周年記念サイト公開 4社ルーツの第一三共ヘルスケア - 株式会社共同通信社",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5XZzlvcmx4SFppdFl5aXVJazgtVVN5c1JPRE9vMmp5YUcwb3ZWMV9aRzJTS3ViTFdCMFJwbVMtOU5WQVNpTVdhY3Nud1EwVTBrb3lPdVpLYnJzb0RO?oc=5",
+        "published": "Wed, 22 Jul 2026 03:00:00 GMT",
+        "publisher": "株式会社共同通信社"
+      },
+      {
+        "title": "「ホギの二の舞はごめんだ」ダルトンの株主提案が可決寸前で「首の皮一枚」なヘルスケア企業の実名 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9OWWt3TjZ3TjJ0Y2FydGd1N2VQVjRXRU1sMGZRM2lDa1lzVHZoam5QT1V3QlgwSEI3YXlsWHBoZURvRXBBUW5weGxzYXhFSmvSAU9BVV95cUxPTllrd042d04ydGNhcnRndTdlUFY0V0VNbDBmUTNpQ2tZc1R2aGpuUE9Vd0JYMEhCN2F5bFhwaGVEb0VwQVFucHhsc2F4RUpr?oc=5",
+        "published": "Wed, 22 Jul 2026 20:20:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "日経平均は大幅続伸、AI関連の回復好感し値がさ株に買い集中 提供 Fisco - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQWUIyeVozdU5FUUwtUlg2MklMbi1yX2ZxQ25VWGR6alpFNHlRWC03d3dRU0FYTlBfYUdGelNHT0JjcDMwQUZtRGFlRVdNQjlVS2FFZUdGcGtjT1dnQ1J5MXI4di05NFVWQ1h2bEtnaGk5YjJ2dlRLaGFVSFQ0SnRVbA?oc=5",
+        "published": "Wed, 22 Jul 2026 03:15:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      },
+      {
+        "title": "「ルル」や「マキロン」の“ウラ話”が満載 発足20周年記念サイト公開 4社ルーツの第一三共ヘルスケア - 47NEWS",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9Ub0NQcF9yUTNlUGlBWEJtUTRqOHNWSlVCMFFudDVGZkl3OW5ObkhNbXotalNJY21LcW55REhnMENGQzJ2b1lBd2pXcw?oc=5",
+        "published": "Wed, 22 Jul 2026 03:00:13 GMT",
+        "publisher": "47NEWS"
+      },
+      {
+        "title": "日経平均は大幅続伸、アドバンテストが1銘柄で約468円分押し上げ - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNbGllcGdkTmQyTkJHaGl1blY0bnJUcXBKaXBqcWVEQXQ4TXpRMzJqMWctVmN3Umk3b3F1ODhCaDl6X1Fyb3N1N0FLY2NaUnkwNEFOQUxpQzkxS2FETVh4eUhuUGdUcnNNUTFXTDFEN2VLcndOMldveWR0U3BIVVBXZktydUo1M0VWODE5a9IBjAFBVV95cUxNbGllcGdkTmQyTkJHaGl1blY0bnJUcXBKaXBqcWVEQXQ4TXpRMzJqMWctVmN3Umk3b3F1ODhCaDl6X1Fyb3N1N0FLY2NaUnkwNEFOQUxpQzkxS2FETVh4eUhuUGdUcnNNUTFXTDFEN2VLcndOMldveWR0U3BIVVBXZktydUo1M0VWODE5aw?oc=5",
+        "published": "Wed, 22 Jul 2026 03:34:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "【チャンスは今だけ!!】9割が知らない 株価＆将来性 激変イベントを控える注目製薬3選 Ufo Files (YMTcVgRK8V) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9JeUtkc0VtMmM2S21udm8ycTVQeHluNmg4MjMybW9STTNILVZ6TE1xQzNFdkhzNTJvbWt6WU90THY4b054RlZ2N2FqRFAyUExDazBkLUdLaHdtZUU?oc=5",
+        "published": "Wed, 22 Jul 2026 09:56:14 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "米国株式市場は反発、AI関連の回復が支援 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPcEZOTmF2Nk1CcUVRalFOZG5kcnBQZGlYV3NmQzYzT1JST2VpLTVVQ3ZfR242aE95cy1waGY2LVBsczcwSE5wQmJWbWpUYkpLVzJ1WVBuc0h5TGttZFRLMlFqYWZrU25ZU1hoUGN5Um5md0NBa0h5a0UwUW95bFhuOWZmZEZDMERmUVNjY9IBjAFBVV95cUxPcEZOTmF2Nk1CcUVRalFOZG5kcnBQZGlYV3NmQzYzT1JST2VpLTVVQ3ZfR242aE95cy1waGY2LVBsczcwSE5wQmJWbWpUYkpLVzJ1WVBuc0h5TGttZFRLMlFqYWZrU25ZU1hoUGN5Um5md0NBa0h5a0UwUW95bFhuOWZmZEZDMERmUVNjYw?oc=5",
+        "published": "Tue, 21 Jul 2026 23:18:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "日経平均は小反落、買い先行も戻り待ちの売りでマイナス圏に転落 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQekxaX1UxZVNVMDRYdEN1WjN6S05aV0lYdGFoRkJpak5DTmpBN0dOS1VKdWZCOEl4SzluY2UxdmR3VktsZTlRYWtNeXVyNnZEZXAxNTlFUmlhS1JVeGQ2dG5JaS1vX0FUTzcwcks3S201OXBaMENDcWVYcGhhdnlXMU1DZkFwbTV6RG9uQ9IBjAFBVV95cUxQekxaX1UxZVNVMDRYdEN1WjN6S05aV0lYdGFoRkJpak5DTmpBN0dOS1VKdWZCOEl4SzluY2UxdmR3VktsZTlRYWtNeXVyNnZEZXAxNTlFUmlhS1JVeGQ2dG5JaS1vX0FUTzcwcks3S201OXBaMENDcWVYcGhhdnlXMU1DZkFwbTV6RG9uQw?oc=5",
+        "published": "Wed, 22 Jul 2026 07:00:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587542.pdf",
+        "date": "2026-07-16 15:30:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584479.pdf",
+        "date": "2026-06-30 16:30:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260620575199.pdf",
+        "date": "2026-06-22 15:30:00"
+      },
+      {
+        "title": "財務上の特約が付された金銭消費貸借契約の締結に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617573095.pdf",
+        "date": "2026-06-17 19:00:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬等の内容の一部改定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515539092.pdf",
+        "date": "2026-05-18 13:00:00"
+      },
+      {
+        "title": "（訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260513530596.pdf",
+        "date": "2026-05-13 17:30:00"
+      },
+      {
+        "title": "自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511521821.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522113.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "決算補足資料（2025年度決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522160.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "2025年度決算および第6期（2026-2030年度）中期経営計画　説明会",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522186.pdf",
+        "date": "2026-05-11 15:30:00"
+      }
+    ]
+  }
+}

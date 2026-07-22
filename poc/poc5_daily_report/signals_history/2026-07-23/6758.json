@@ -1,0 +1,200 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-07-23T08:03:34+09:00",
+  "price_as_of": "2026-07-22",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ評価がニュートラル（strength=55）であり、通期での最終赤字計上や次回決算・日銀会合前の様子見姿勢が妥当とされるため、buyエントリーの基準（ファンダ強気かつstrength≥70）を満たしていません。",
+        "evidence": "fundamental_view.stance=neutral (strength=55)"
+      },
+      {
+        "reason": "テクニカル指標は移動平均線のゴールデンクロスなど強気（strength=70）を示していますが、テクニカルも強気に揃っている局面はすでに材料織り込み済みと判断され、押し目買いの要件を満たしません。",
+        "evidence": "technical_view.stance=bullish (strength=70)"
+      },
+      {
+        "reason": "市場全体の地合いがdowntrendレジームにあり、個別のテクニカル好調さにもかかわらず全体相場の連安に巻き込まれるリスクが高いため静観が適切です。",
+        "evidence": "reference.market_regime=downtrend"
+      }
+    ],
+    "risks": [
+      "2026年7月31日に次回決算発表と日銀金融政策決定会合が重複しており、通過後の株価ボラティリティ急増リスクがあります。",
+      "TOPIXが25日線を下回るdowntrend環境が継続した場合、個別の好材料を打ち消して連安する可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ評価がニュートラル（strength=55）であり、通期での最終赤字計上や次回決算・日銀会合前の様子見姿勢が妥当とされるため、buyエントリーの基準（ファンダ強気かつstrength≥70）を満たしていません。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=55)\"\n  },\n  {\n   \"reason\": \"テクニカル指標は移動平均線のゴールデンクロスなど強気（strength=70）を示していますが、テクニカルも強気に揃っている局面はすでに材料織り込み済みと判断され、押し目買いの要件を満たしません。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=70)\"\n  },\n  {\n   \"reason\": \"市場全体の地合いがdowntrendレジームにあり、個別のテクニカル好調さにもかかわらず全体相場の連安に巻き込まれるリスクが高いため静観が適切です。\",\n   \"evidence\": \"reference.market_regime=downtrend\"\n  }\n ],\n \"risks\": [\n  \"2026年7月31日に次回決算発表と日銀金融政策決定会合が重複しており、通過後の株価ボラティリティ急増リスクがあります。\",\n  \"TOPIXが25日線を下回るdowntrend環境が継続した場合、個別の好材料を打ち消して連安する可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "5日移動平均線が25日線を上回るゴールデンクロス状態にあり、MACDもプラス圏で買いシグナルを維持するなど個別のテクニカル指標は強気を示しています。市場全体の地合いは冴えないものの、25日線をサポートとした底堅い推移が期待されます。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日移動平均線を上回るゴールデンクロスを形成しており、直近終値も25日移動平均線の上で推移しています。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.last_close=3444.0, price_technical.sma25=3331.44"
+        },
+        {
+          "point": "MACDがシグナルを上回ってプラス圏で推移しており、ヒストグラムもプラスを維持して買方の優勢を示しています。",
+          "evidence": "price_technical.macd=34.19, price_technical.macd_signal=23.18, price_technical.macd_histogram=11.01"
+        },
+        {
+          "point": "RSI(14)は55.0と買われすぎ感のない過熱感の乏しい水準にあり、上値への余地を残しています。",
+          "evidence": "price_technical.rsi14=55.0"
+        }
+      ],
+      "cautions": [
+        "TOPIXが25日線を下回るdowntrendレジームに位置しており、全体相場の軟調さに引っ張られるリスクがあります。",
+        "直近2営業日は連続で小幅下落しており、前夜の米国ADRも-0.48%と冴えないため、短期的には売り先行で始まる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 3331.44,
+        "resistance": 3549.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "営業利益の拡大基調や円安水準、マクロ環境の追い風はあるものの、通期での最終赤字計上や7月31日に控える決算発表・日銀会合などの重要イベントを前に慎重な見極めが妥当と判断します。",
+      "points": [
+        {
+          "point": "本業の収益力を示す営業利益は2024年3月期の10,128億円から2026年3月期には15,537億円へと拡大基調にあり、直近四半期（2026-03）も黒字を維持しています。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "直近（2026-07-22）に三菱電機との製造業向けAI新会社設立が報道されたほか、1ドル163円台の円安推移や日本の製造業PMI（54.8）の拡大など事業環境は良好です。",
+          "evidence": "news.headlines, macro.indices (ドル円=163.09), macro.japan_pmi.manufacturing (latest_value=54.8)"
+        }
+      ],
+      "cautions": [
+        "2026年7月31日に次回決算発表と日銀金融政策決定会合（2026-07-30〜31）が重複しており、短期的なイベントリスクが高まっています。",
+        "2026年3月期通期で3,269億円の純損失（最終赤字）を計上しており、最終損益のボラティリティに注意が必要です。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソニーグループ(株)【SONY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBaWnphQUR5QkRjZVlTVmx6UFR5V014TllydmRXWkxLMjQyQlpTTTV0ZXN6b1lsNVZBTGlQMXJGcGFTbHdkcFJuYURxeFRfLTg?oc=5",
+        "published": "Wed, 22 Jul 2026 17:10:34 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "名駅西口に17階建てホテル計画 ソニーグループ【名古屋市中村区椿町910など】：ニュース - 中日BIZナビ",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5KaTh1N284WDdOSUVDQlI0czNTTktzM1ZOU3UtLVVSbHZvbU0xdFU5a1hDcy1jV21QZWJBZ1BlZ1F2Z2xuMHBla3plcGlzTDV2enZ0RGpwMVpPaDY5bkVN?oc=5",
+        "published": "Wed, 22 Jul 2026 08:05:16 GMT",
+        "publisher": "中日BIZナビ"
+      },
+      {
+        "title": "ソニー(株)【6758】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9BQlVRa0U3WXp0ZG1yTzhsVk1OWkItckZaUV8wRkcxNkV4eVdoNWVlT2xWS25IbXR5em1xcThhQXhFWWJxWk1VbmMtZEpPUV9hMHBreXNYNVV2bkFiT1pB?oc=5",
+        "published": "Wed, 22 Jul 2026 02:57:23 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "【カメラ】2024年にはスマホが一眼カメラ超え？ソニーグループの見通し！ Sofia Goggia (zgjbHI0rhk) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5UNzROQUpSUjhjb0k5NFh3UElrYm5CUG0yaF9laW9EbzNXTW9saTItVjY2SUZETVR6eUFCTlY1cnJKTHZRYmY1WFh5VVFvaUhod3I5RVRSaW8ycUU?oc=5",
+        "published": "Wed, 22 Jul 2026 07:50:13 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "株価下落のソニーグループ（ソニーG）の今後の株価を考えてみた！ Julie Snyder (zRJFLqmdjx) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA3SnRVWmdWZkZJR3NSSXhGNlFZWDVEQ0xJOTJ3LTBjdXpLbVVPaDFYQzd6RGJSRTJTSlJGYW93b09IVkNWdVN0NVZBak0tRGYwSFprQVBWRERycjA?oc=5",
+        "published": "Wed, 22 Jul 2026 09:00:51 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "ソニーグループ（6758）大幅増益決算。株式テクニカルチャート分析 Doku (DnVTSiuX4m) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE10c09MelVsOEpyNHZsNUV4X09FZ2NYRWxhRjlubFR0UUloRDRlZk1ydmctS0kzS09vcVEzTnU0Y2xNSGJvNGdDVXpQYkFENzZCWjRDYWZMYlNqOEE?oc=5",
+        "published": "Wed, 22 Jul 2026 08:32:28 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "【ソニー株 6758】なぜ今「買い」なのか？株価上昇の鍵を握る「8 4%の秘密」を徹底解説！ Toronto Tempo (zXQGfmEInH) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE43ZWNFQ3ZCeGFoVzZsVmQ1elhhRnlGNUxJemh6eTV1Y3VsYzgybkJ0cDM5azVMOU9xZTBHR2JsVi0xQnVsMl9XRmhlWUpmd05UbU85MUtUMllqUHM?oc=5",
+        "published": "Wed, 22 Jul 2026 07:58:19 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "三菱電機とソニー、製造業向けＡＩで新会社 工場の自動化支援 - 時事ドットコム",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE54XzZFMUpPUWRsMEgyeWxwdkd6RzN2Nm1sUTFIZ2VKN3RTZFAzMnFGblNxR08ycUhCbXduS2ZoX2VuWmxmQ0x4cDVRSzR3azk3WkowNk92YzBFWVlYSHdGc096NA?oc=5",
+        "published": "Wed, 22 Jul 2026 06:06:00 GMT",
+        "publisher": "時事ドットコム"
+      },
+      {
+        "title": "【ソニーグループ】今が買い時？リスクをきちんと理解して、正しい投資行動をしよう Nick Pasqual (ZKoGyOwmZf) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBpbU9hZjlSTHQ0YldrNkZnVXZRQmo1NTIzZWVyOWVYTmptaktzS0ozbWdsOTV3aWVhVkJpOW8zOXltV0ZuRHBUUzNad1lEVlQ3LVEwRUZwMFdPamc?oc=5",
+        "published": "Wed, 22 Jul 2026 08:07:32 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "三菱電機とソニー、製造業向けＡＩで新会社 工場の自動化支援 - 時事ドットコム",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQUE9JUkM5dF9pUlZ6MFU3bkZrZVcwS3RYYk9VVEVISGFBazZsc1E1Y3ZQendZc180RkpVelBIZnA3bVF0c3VodXZNWjFLZWhYdE9XMWQySldrVEVHWXozWm5JQ2ZLamFnVFlYa1RfY2FMVFB4SzRiU0tZTnlpRnNIVg?oc=5",
+        "published": "Wed, 22 Jul 2026 06:06:00 GMT",
+        "publisher": "時事ドットコム"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の権利確定に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595854.pdf",
+        "date": "2026-07-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587315.pdf",
+        "date": "2026-07-03 11:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584099.pdf",
+        "date": "2026-06-30 15:30:00"
+      },
+      {
+        "title": "米ドル建て無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577032.pdf",
+        "date": "2026-06-24 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260603560934.pdf",
+        "date": "2026-06-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの次世代イメージセンサーに関する戦略的提携に向けた基本合意のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518510.pdf",
+        "date": "2026-05-08 16:15:00"
+      },
+      {
+        "title": "2026年３月期 決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518952.pdf",
+        "date": "2026-05-08 12:00:00"
+      },
+      {
+        "title": "2025年度 連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518955.pdf",
+        "date": "2026-05-08 12:00:00"
+      },
+      {
+        "title": "自己株式の取得枠設定及び自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518814.pdf",
+        "date": "2026-05-08 12:00:00"
+      },
+      {
+        "title": "2025年度個別決算における関係会社株式評価損及び関係会社事業損失引当金繰入額計上のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518857.pdf",
+        "date": "2026-05-08 12:00:00"
+      }
+    ]
+  }
+}
