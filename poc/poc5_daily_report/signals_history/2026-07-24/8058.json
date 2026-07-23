@@ -1,0 +1,200 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-07-24T08:03:38+09:00",
+  "price_as_of": "2026-07-23",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "直近（2026-07-22）に buy シグナルが発出されており、再エントリー抑制ルールに基づき継続監視の hold と判定する。",
+        "evidence": "reference.recent_buy.date=2026-07-22"
+      },
+      {
+        "reason": "テクニカル面ではゴールデンクロス成立やMACD拡大など強い騰勢を示すが、RSIが74.7と過熱圏にあり、期間高値（4947円）付近での達成感から利益確定売りが出やすい水準である。",
+        "evidence": "technical_view.cautions[0]: RSI14=74.7, technical_view.points[0], reference.period_high=4947.0"
+      },
+      {
+        "reason": "ファンダメンタルズ専門家は通期減益計画やバリュエーションの割安感の乏しさから neutral (strength=50) としており、統合判断における buy の必須条件を満たさない。",
+        "evidence": "fundamental_view.stance=neutral (strength=50), fundamental_view.points[0], fundamental_view.points[1]"
+      }
+    ],
+    "risks": [
+      "2026年7月30日〜31日の日銀金融政策決定会合による為替・金利の大幅な変動リスク。",
+      "2026年8月3日に予定されている決算発表に伴う業績変動およびイベントリスク。",
+      "市場レジームが downtrend であり、外部環境の悪化（VIX上昇等）に伴う相場全体の連れ安リスク。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"直近（2026-07-22）に buy シグナルが発出されており、再エントリー抑制ルールに基づき継続監視の hold と判定する。\",\n   \"evidence\": \"reference.recent_buy.date=2026-07-22\"\n  },\n  {\n   \"reason\": \"テクニカル面ではゴールデンクロス成立やMACD拡大など強い騰勢を示すが、RSIが74.7と過熱圏にあり、期間高値（4947円）付近での達成感から利益確定売りが出やすい水準である。\",\n   \"evidence\": \"technical_view.cautions[0]: RSI14=74.7, technical_view.points[0], reference.period_high=4947.0\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ専門家は通期減益計画やバリュエーションの割安感の乏しさから neutral (strength=50) としており、統合判断における buy の必須条件を満たさない。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=50), fundamental_view.points[0], fundamental_view.points[1]\"\n  }\n ],\n \"risks\": [\n  \"2026年7月30日〜31日の日銀金融政策決定会合による為替・金利の大幅な変動リスク。\",\n  \"2026年8月3日に予定されている決算発表に伴う業績変動およびイベントリスク。\",\n  \"市場レジームが downtrend であり、外部環境の悪化（VIX上昇等）に伴う相場全体の連れ安リスク。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "主要な移動平均線のゴールデンクロス成立に加え、MACDの急拡大を伴う強い騰勢が確認できる。RSIの過熱感はあるものの、前夜ADRの続伸もあり、短期的な上昇トレンドの継続が期待される。",
+      "points": [
+        {
+          "point": "5日線が25日線を上抜けるゴールデンクロスが成立し、短期的なトレンドが好転している。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\""
+        },
+        {
+          "point": "MACDヒストグラムが大幅に拡大しており、上昇の勢い（モメンタム）が極めて強いことを示している。",
+          "evidence": "price_technical.macd_histogram=54.51"
+        },
+        {
+          "point": "前夜のNY市場でADRが2.5%超の上昇を見せており、国内市場での寄り付きも堅調な推移が予想される。",
+          "evidence": "us_overnight.adr.change_1d_pct=2.59"
+        }
+      ],
+      "cautions": [
+        "RSI14が74.7と買われすぎ圏に到達しており、期間高値（4947円）付近での達成感から利益確定売りが出やすい水準である。",
+        "TOPIXの市場レジームがdowntrend（25日線の下）と判定されており、相場全体が崩れた際の連れ安リスクに留意が必要。",
+        "S&P500の下落やVIX指数の急上昇（+12.38%）など、外部環境の不透明感が高まっている。"
+      ],
+      "key_levels": {
+        "support": 4513.88,
+        "resistance": 4947.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "通期純利益の減益計画や高めのバリュエーション指標に加え、決算発表および日銀金融政策決定会合を直近に控え、様子見姿勢が妥当と判断されます。",
+      "points": [
+        {
+          "point": "2026年3月期の通期連結純利益は8,005億円と、前期（2025年3月期 9,507億円）から減益を見込んでおり、業績面での積極的な拡大勢いは見られません。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "PERは23.44倍、PBRは1.91倍、配当利回りは2.56%となっており、割安感が乏しいバリュエーション水準です。",
+          "evidence": "fundamentals.valuation.trailing_pe=23.443, price_to_book=1.907, dividend_yield_percent=2.56"
+        },
+        {
+          "point": "ドル円が163.84円と円安水準にあるものの、TOPIX連動ETFが25日移動平均線を下回り市場全体は downtrend（下降トレンド）の判定となっています。",
+          "evidence": "macro.indices (ドル円 JPY=X close=163.84), macro.market_regime"
+        }
+      ],
+      "cautions": [
+        "2026年8月3日に次回決算発表が予定されており、短期的・イベント通過前の業績変動リスクが存在します。",
+        "2026年7月30日〜31日に日銀金融政策決定会合が控えており、金利および為替の変動が株価に影響を与える可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-22",
+    "days_ago": 2,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "画像 | 安さだけでは｢地域一番店｣にはなれない…ライフが日本一の食品スーパーになれたワケ - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE8tdUVKbVBTWDhjMWRPNFNMeVVlMFNib2lTV2QwN2Z3eDYzNFJkeTh1WWllME1idy1YN0pqNEFlZy1iZmhRRTZiSXJ5bnVKQTJCek53eA?oc=5",
+        "published": "Thu, 23 Jul 2026 19:24:48 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "三菱商事の「Mill-Box」、大成建設の東京都内大型現場で活用進む - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5DZmY3RWQwbUVDMVotYlBkLVhSUi1DTHBhVDUxbUdnVERGdEdKLURldjB0NnpSTmFJVldvdzlheFl5eDZJOHBxcTFucUpKdW1aUnlqZ1RtWUpKd1h3T2J2S1lTc2dxeWVzaVZBWVA1UDZxQTNNRF9ycE1wbw?oc=5",
+        "published": "Thu, 23 Jul 2026 06:45:49 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "DigitalBlast、米国Starlabと商業宇宙ステーションの利用予約契約を締結 - Excite エキサイト",
+        "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFB0bml3ZVpCX0Jqcm9LVmRCQ2V3NWZSOXFWUHlLUDc0UzExbGg3dndUOHRQN3FkcXc2OWdjM1BNc1d6Zm5oNzlYRGl6bWNmbW95SzNRZER3d05JYzZ1SFUtc095ZlByU1MtR0QyVk1IS0kxOWM?oc=5",
+        "published": "Thu, 23 Jul 2026 15:40:00 GMT",
+        "publisher": "Excite エキサイト"
+      },
+      {
+        "title": "月曜日のねらい｜暴落の始まりか？ JX金属・住友金属鉱山・キオクシア・ソフトバンク・東洋エンジニアリング・三菱重工・任天堂・東京電力・トヨタ自動車・三菱商事・サンリオ・丸紅 Connections Hints Today (8TB7QbkVYl) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE80ZndCOXNpdExSa0t2eElpVDJvUHFJTUJZRjVIMU5ZUmdtbG1GYXBWaTVtN2tVS2xxdTc3MGlZcHBYeDFHOWZkT1llODRDUklOM05IUGZsR2xrMms?oc=5",
+        "published": "Thu, 23 Jul 2026 03:03:07 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "安さだけでは｢地域一番店｣にはなれない…ライフが日本一の食品スーパーになれたワケ - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE4yaTBSRkdCRkFIU2NxaXlLcjR6LWNNU2V2RHBNakxBM1ZkS3JRaC1YUmVKV2NVcGlPTm53YnMxdjJNMWRQZVQ0Y1ZwVWpYZDA?oc=5",
+        "published": "Wed, 22 Jul 2026 23:25:44 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "三井物産、米自動車販売大手に追加出資 取得額6000億円 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBzbDZSNVZDalBfbGk2ZVVycE13Vm1tZHNpcG50cjd4VV9BOGlMcHZWWFN5SURZZjFsV1h0c1VBVWZjaTZZWm5zOF9ZdW1kTGU4a1I4S1p3OWRLeVVtWnB5U3hfMnFEOVVVOF95N0lLaDZtZXZWWlhja0FjUGhHc1E?oc=5",
+        "published": "Thu, 23 Jul 2026 20:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "グーグル親会社アルファベット決算、純利益18.3兆円に - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBBdnVNTHY1ZXJ1aVJZUkVyRnpkdk1Hb1hwaEh6SVhSRS1MVWxseXFDcF9XQm5MYU5qVUFoYVI0X09YX3ZwcWEtd3k3YnVyOVNraDFQbnRCZHdQZzBQeUFBS3VTSWVfdEo1UGcxSDNyMUhoam5jcVlONdIBeEFVX3lxTFBBdnVNTHY1ZXJ1aVJZUkVyRnpkdk1Hb1hwaEh6SVhSRS1MVWxseXFDcF9XQm5MYU5qVUFoYVI0X09YX3ZwcWEtd3k3YnVyOVNraDFQbnRCZHdQZzBQeUFBS3VTSWVfdEo1UGcxSDNyMUhoam5jcVlONQ?oc=5",
+        "published": "Thu, 23 Jul 2026 11:13:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "意外と知らない5大商社のビジネス「稼いでいる事業の中身が違うから」三菱・三井・伊藤忠・住友・丸紅を決算で比較 - ライブドアニュース",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9KdEdvSnlCY1F5aHh2MkpJRlZ6N2xVU3F3RmV1WW15TmF5ai1MTGV1aGN6YUJoM3lVMURjRVY4a2FNRnR1bXZMTjhfeFROTUVvUDhJeGgzbzlhYnBLaVBrd2NxVTF6QndXLXNHSUY5R0NCTzJyMDJ6QVJB?oc=5",
+        "published": "Thu, 23 Jul 2026 04:00:00 GMT",
+        "publisher": "ライブドアニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "特定子会社の異動（子会社の特定子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260714593288.pdf",
+        "date": "2026-07-15 10:00:00"
+      },
+      {
+        "title": "子会社間の合併及び特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552595.pdf",
+        "date": "2026-05-29 09:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C2プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539898.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C3プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539905.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C4プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539910.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C5プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539918.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C6プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539939.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515679.pdf",
+        "date": "2026-05-01 14:00:00"
+      },
+      {
+        "title": "通期個別業績と前期実績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515675.pdf",
+        "date": "2026-05-01 14:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260416505643.pdf",
+        "date": "2026-04-17 14:00:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-07-24T08:06:29+09:00",
+  "price_as_of": "2026-07-23",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 14,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ面で2026年3月期が大幅な営業減益計画となっており、高ROEや配当利回りによる下支えはあるものの、積極的な買い材料に欠ける状況であるため。",
+        "evidence": "fundamental_view.points[0]: 営業利益 2,291億円（前期比-31.0%）の減益計画"
+      },
+      {
+        "reason": "7月31日の第1四半期決算および日銀金融政策決定会合という二大イベントを目前に控え、不透明感が強く手控えムードが想定されるため。",
+        "evidence": "fundamental_view.summary / reference.next_earnings_date=2026-07-31"
+      },
+      {
+        "reason": "テクニカル面では25日線を回復し底打ちの兆しはあるが、市場全体が下落トレンド（downtrend）にあり、個別銘柄の上値も重くなりやすい環境であるため。",
+        "evidence": "technical_view.points[2]: macro.market_regime.market_regime=downtrend"
+      }
+    ],
+    "risks": [
+      "2026年07月31日の第1四半期決算発表における進捗遅れやガイダンス修正",
+      "2026年07月30日〜31日の日銀会合に伴う為替相場の急激な変動（円高進行による業績への影響）",
+      "テクニカル上の節目である25日線（2663.86円）を再び割り込むことによる中期下落トレンドへの回帰",
+      "市場全体の地合い悪化（downtrend）に伴う、流動性の高い大型株への売り圧力"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 50,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 14,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ面で2026年3月期が大幅な営業減益計画となっており、高ROEや配当利回りによる下支えはあるものの、積極的な買い材料に欠ける状況であるため。\",\n      \"evidence\": \"fundamental_view.points[0]: 営業利益 2,291億円（前期比-31.0%）の減益計画\"\n    },\n    {\n      \"reason\": \"7月31日の第1四半期決算および日銀金融政策決定会合という二大イベントを目前に控え、不透明感が強く手控えムードが想定されるため。\",\n      \"evidence\": \"fundamental_view.summary / reference.next_earnings_date=2026-07-31\"\n    },\n    {\n      \"reason\": \"テクニカル面では25日線を回復し底打ちの兆しはあるが、市場全体が下落トレンド（downtrend）にあり、個別銘柄の上値も重くなりやすい環境であるため。\",\n      \"evidence\": \"technical_view.points[2]: macro.market_regime.market_regime=downtrend\"\n    }\n  ],\n  \"risks\": [\n    \"2026年07月31日の第1四半期決算発表における進捗遅れやガイダンス修正\",\n    \"2026年07月30日〜31日の日銀会合に伴う為替相場の急激な変動（円高進行による業績への影響）\",\n    \"テクニカル上の節目である25日線（2663.86円）を再び割り込むことによる中期下落トレンドへの回帰\",\n    \"市場全体の地合い悪化（downtrend）に伴う、流動性の高い大型株への売り圧力\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "短期的なテクニカル指標の好転（25日線回復・MACDゴールデンクロス）が見られる一方、中期トレンドの弱さと市場全体の地合い悪化が重石となっています。",
+      "points": [
+        {
+          "point": "短期的な底打ちとトレンド転換の兆しとして、株価が25日線を上回り、MACDがシグナルを上抜けて推移しています。",
+          "evidence": "price_technical.last_close=2755.0 > sma25=2663.86, price_technical.macd=55.95 > macd_signal=52.3"
+        },
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともにマイナスであり、依然として中期的な下落トレンドの範疇にあります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-1.25, price_technical.trend_60d.relative_to_topix_60d_pct=-8.5"
+        },
+        {
+          "point": "市場全体が下落トレンド判定となっており、前夜の米国ADRも軟調であることから、上値追いの勢いが削がれる懸念があります。",
+          "evidence": "macro.market_regime.market_regime=downtrend, us_overnight.adr.change_1d_pct=-0.82"
+        }
+      ],
+      "cautions": [
+        "市場レジームがdowntrendであるため、個別株の反発も市場全体の売りに押されるリスクが高い",
+        "直近2営業日でSMA5を割り込んでおり（close=2755.0 < sma5=2773.8）、短期的な調整局面が続く可能性がある",
+        "再び25日線（2663.86）を下回る動きとなった場合、中期下落トレンドへの回帰とみなされ売りが加速する恐れがある"
+      ],
+      "key_levels": {
+        "support": 2663.86,
+        "resistance": 2874.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "増収維持の一方で2026年3月期は営業減益を見込んでおり、高ROEや3.62%の配当利回りが下値を支えるものの、7月31日の第1四半期決算発表および日銀会合という二大イベントを目前に控え、方向感を見極める局面です。",
+      "points": [
+        {
+          "point": "2026年3月期の通期業績計画は売上高2兆1,230億円（前期比+12.5%）と増収を見込む一方、営業利益は2,291億円（同-31.0%）、純利益は2,599億円（同-12.1%）と減益計画になっています。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "ROEは15.8%と資本効率が高く、予想配当利回りも3.62%と一定のバリュエーション上の下支え要因となっています。",
+          "evidence": "fundamentals.valuation.return_on_equity=0.158, fundamentals.valuation.dividend_yield_percent=3.62"
+        },
+        {
+          "point": "直近で株価を強力に牽引する新規の材料が開示やニュース等で確認できず、決算発表前の手控えムードが想定されます。",
+          "evidence": "disclosures.items, news.headlines"
+        }
+      ],
+      "cautions": [
+        "2026年07月31日に次回決算発表が予定されており、第1四半期業績の進捗次第で株価が大きく変動するリスクがあります。",
+        "2026年07月30日〜31日に日銀金融政策決定会合が開催予定であり、為替（ドル円=163.84円）の急変による業績への影響に注意が必要です。",
+        "通期計画で営業利益が大幅減益見通しとなっているため、進捗遅れなどが生じた場合の下振れ懸念があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ADR主要銘柄（日本）－第一三共が上昇、ソフトバンクＧ、マツダ、住友鉱山が下落(トレーダーズ・ウェブ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOUlZWRXU0SldTNWJkekQ2Y2lSb1VmN25ESkN1RDEwdUdXbVdiOWkwZFEwaUtoSjNwbm1ybXg4R0NNbE1YMlF4a1JSM1BqWC1RQWpidnotT1JkTFB1VnVYOWY2QkE4RmVrV2hULTRLZERrVHV1bWtyUnRhcVkwZWhvQTdua2VuWlU?oc=5",
+        "published": "Thu, 23 Jul 2026 22:21:25 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "製薬会社の給料ランキング【大手11社】平均年収1000万円超が大半の企業で常態化、昨年比で192万円増えた社も！ - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBadmd4N3BlaWlFQ0hyRHpYNFVPVkFGV0ZRRjIzMFhHeXFQUGNleVg0TWRGVmVnNFp0M2V2b1Y5Z3RRcDJpb3lUZ3JUX0plTTjSAU9BVV95cUxQWnZneDdwZWlpRUNIckR6WDRVT1ZBRldGUUYyMzBYR3lxUFBjZXlYNE1kRlZlZzRadDNldm9WOWd0UXAyaW95VGdyVF9KZU04?oc=5",
+        "published": "Thu, 23 Jul 2026 19:40:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "第一三共ベトナムは、「2026年ベトナム有名ブランドトップ10」に選出されました。 - Vietnam.vn",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQcWVwSGtFY2taWmVJY2xzc0g2UFoyZXZDR3ZyZkh1Vnl1Y0ZROThLQlRSNVMwOTVpUERKbmtjUUIwN3ZpejhpSzNKM1pNNGhZOGMyZS1iRzhCUWxVR3o4bm5aRl9KcV96Z0s2YkxHZUxmVzhMbEl4VzN3cWVsSWtYTXpsTmpyU0Y1OGt2eGF2dExydGMxVmRUVGRn?oc=5",
+        "published": "Wed, 22 Jul 2026 23:59:28 GMT",
+        "publisher": "Vietnam.vn"
+      },
+      {
+        "title": "ジクトルテープの限定出荷がさらに延長 - 日経メディカル",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPal9Wal9sd1cyS2xuNXRQYll3RmpaYXNzYjQ2MTYwdmJqYXV1YW9wQktKUk5JTzdYMDlDSzg4bFBQSzl4eFhkSVpkMkZFUUZ4cUJmVHI3UDE5UnNUdkl4eEZibGFaZ2NWUEJSVEktZk1MMFRreDRONlpSVTRwX1NTVkNVNWpyRmJ2SFViaQ?oc=5",
+        "published": "Thu, 23 Jul 2026 14:45:03 GMT",
+        "publisher": "日経メディカル"
+      },
+      {
+        "title": "クオールHD Research Memo（1）：大型投資で薬局事業のシェア拡大と製薬事業のさらなる成長を目指す - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPTmtoZUJVdmhXR0QtdVNhelhEMTVyRTIxYlhEaWp3X0Q4RmxYYjdoaElxWHBtV3JINzc2cG5Db0tFUkN4VlZFdmtLWXdzaUVoMERmZk9tdlA1X0huZHBPWGxfend1ZnlOLTVUaDNuUlhtb0VZZ0xraDd4TVhvVEVQU2FRdDJuMUVTNVJHRtIBjAFBVV95cUxPTmtoZUJVdmhXR0QtdVNhelhEMTVyRTIxYlhEaWp3X0Q4RmxYYjdoaElxWHBtV3JINzc2cG5Db0tFUkN4VlZFdmtLWXdzaUVoMERmZk9tdlA1X0huZHBPWGxfend1ZnlOLTVUaDNuUlhtb0VZZ0xraDd4TVhvVEVQU2FRdDJuMUVTNVJHRg?oc=5",
+        "published": "Thu, 23 Jul 2026 03:01:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "クオールHD Research Memo（5）：2026年3月期は製薬事業がけん引し、過去最高業績を更新 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNdVNBeXVkZGg3Y2IwX3EwNUQtMHVvWFVqTWh2cEstOFpNc3VQUEZjQkJqbVZvMnc4bUhabkJaTGd1S0Y4UWFwUmg4VVBqRzFmeVB5NnEzWGR4aExWNVlDM1hTZFJ5cGI5VnpsRWV4bmFKMFJnU05pZ0ZjSGpUa0dYRW13TzMyTElSV3lGOdIBjAFBVV95cUxNdVNBeXVkZGg3Y2IwX3EwNUQtMHVvWFVqTWh2cEstOFpNc3VQUEZjQkJqbVZvMnc4bUhabkJaTGd1S0Y4UWFwUmg4VVBqRzFmeVB5NnEzWGR4aExWNVlDM1hTZFJ5cGI5VnpsRWV4bmFKMFJnU05pZ0ZjSGpUa0dYRW13TzMyTElSV3lGOQ?oc=5",
+        "published": "Thu, 23 Jul 2026 03:05:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "クオールHD Research Memo（2）：薬局事業から医療関連のBPO事業、製薬事業へと展開 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOWjRYN0c2d3hpUEtqeG9nRnRqV1VKUzdwSlNZVzFUZ3hqWWpES3pHRXNpdWdEeVNBbW9JTHNSUTlOT3pCLUdad2M2QS13N1pSbHdDQUU0ckxQX3hFQ25QM0hFc2xjX3NKTy1fRHNPYnVLUnY4Skk1aXRqMHNpNU1McmdjWW1nNGPSAYwBQVVfeXFMTjN1cmt1bm1zRE1kWl82YkFZNkRvd3BwM3BXZ2FIRVpScDFLdHdBd0s2VGQxOFREVkhRS3VFYWhoNlgtemtvaFdtRGE0eDBobHdfNC0tY3BiYnhkSDZheGM3M0Qyd3BXZURIWWI5bm5kYThOTDdMdjg2eUlHQk90aEoxRlVYc3NoZDJHNm8?oc=5",
+        "published": "Thu, 23 Jul 2026 03:02:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587542.pdf",
+        "date": "2026-07-16 15:30:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584479.pdf",
+        "date": "2026-06-30 16:30:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260620575199.pdf",
+        "date": "2026-06-22 15:30:00"
+      },
+      {
+        "title": "財務上の特約が付された金銭消費貸借契約の締結に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617573095.pdf",
+        "date": "2026-06-17 19:00:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬等の内容の一部改定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515539092.pdf",
+        "date": "2026-05-18 13:00:00"
+      },
+      {
+        "title": "（訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260513530596.pdf",
+        "date": "2026-05-13 17:30:00"
+      },
+      {
+        "title": "自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511521821.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522113.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "決算補足資料（2025年度決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522160.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "2025年度決算および第6期（2026-2030年度）中期経営計画　説明会",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522186.pdf",
+        "date": "2026-05-11 15:30:00"
+      }
+    ]
+  }
+}

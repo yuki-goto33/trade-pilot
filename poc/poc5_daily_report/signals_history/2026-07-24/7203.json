@@ -1,0 +1,208 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-07-24T07:56:40+09:00",
+  "price_as_of": "2026-07-23",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 14,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ面で減益傾向や新規カタリスト不在が重しとなる一方、1ドル163円台の円安やPBR0.96倍等の低バリュエーションが下値を支えており、方向感に欠ける中立（strength=50）の状態です。",
+        "evidence": "fundamental_view.stance=neutral (strength=50)"
+      },
+      {
+        "reason": "テクニカル面では25日移動平均線の回復やMACD好転など短期的な底打ちの兆候が見られるものの、全体相場がdowntrendにあることや米国同セクター安が上値を抑え、中立判断となっています。",
+        "evidence": "technical_view.stance=neutral (strength=50)"
+      },
+      {
+        "reason": "統合判断ルールに従い、ファンダメンタルズ専門家がneutralかつ買付基準（strength≥70）を満たさないため、現在は様子見（hold）が妥当と判断しました。",
+        "evidence": "fundamental_view.strength=50 < 70"
+      }
+    ],
+    "risks": [
+      "2026年7月30日〜31日に予定されている日銀金融政策決定会合に伴う為替相場の急変リスク",
+      "2026年8月4日の決算発表前後における株価ボラティリティの高まり",
+      "TOPIXが25日線を下回る市場全体の下降レジーム（downtrend）継続による上値圧迫",
+      "米国一般消費財セクター安（XLY: -4.61%）に伴う短期的売り圧力"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 50,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 14,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ面で減益傾向や新規カタリスト不在が重しとなる一方、1ドル163円台の円安やPBR0.96倍等の低バリュエーションが下値を支えており、方向感に欠ける中立（strength=50）の状態です。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=50)\"\n  },\n  {\n   \"reason\": \"テクニカル面では25日移動平均線の回復やMACD好転など短期的な底打ちの兆候が見られるものの、全体相場がdowntrendにあることや米国同セクター安が上値を抑え、中立判断となっています。\",\n   \"evidence\": \"technical_view.stance=neutral (strength=50)\"\n  },\n  {\n   \"reason\": \"統合判断ルールに従い、ファンダメンタルズ専門家がneutralかつ買付基準（strength≥70）を満たさないため、現在は様子見（hold）が妥当と判断しました。\",\n   \"evidence\": \"fundamental_view.strength=50 < 70\"\n  }\n ],\n \"risks\": [\n  \"2026年7月30日〜31日に予定されている日銀金融政策決定会合に伴う為替相場の急変リスク\",\n  \"2026年8月4日の決算発表前後における株価ボラティリティの高まり\",\n  \"TOPIXが25日線を下回る市場全体の下降レジーム（downtrend）継続による上値圧迫\",\n  \"米国一般消費財セクター安（XLY: -4.61%）に伴う短期的売り圧力\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "25日線の回復やMACD好転といった短期的な底打ち反転の兆候は見られるものの、中期60日騰落率の不振や前夜米国セクター安、市場全体の降下レジームが上値を抑え、拮抗した展開が予想されます。",
+      "points": [
+        {
+          "point": "株価は25日移動平均線を大きく上回って推移しており、5日線とのゴールデンクロスやMACDのプラス圏でのシグナル上抜けなど、短期テクニカルは好転しています。",
+          "evidence": "price_technical.last_close=2950.0 > sma25=2823.28, price_technical.sma5_vs_sma25=golden, price_technical.macd=42.63 > macd_signal=32.13"
+        },
+        {
+          "point": "直近60営業日の騰落率および対TOPIX相対騰落率はいずれもマイナスであり、中期的なトレンドは依然として戻り売り圧力が意識されやすい環境にあります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-5.54, price_technical.trend_60d.relative_to_topix_60d_pct=-12.78"
+        },
+        {
+          "point": "前夜の米国市場でADRおよび同セクターETFが下落しており、短期的には寄り付きの売り圧力となる可能性があります。",
+          "evidence": "us_overnight.adr.change_1d_pct=-1.75, us_overnight.sector_proxy.change_1d_pct=-4.61"
+        }
+      ],
+      "cautions": [
+        "前夜NYでの一般消費財セクター大幅安（XLY: -4.61%）に伴い、寄り付き後の売り圧力が強まるリスクがあります。",
+        "RSI14が68.4と過熱感を示す水準（70）に近く、買戻し一巡後に利益確定売りが先行する可能性があります。",
+        "TOPIXが25日線を下回る市場レジーム（downtrend）にあるため、全体相場の冷え込みに押される懸念があります。"
+      ],
+      "key_levels": {
+        "support": 2823.28,
+        "resistance": 2980.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "通期予想における減益基調や直近の新規株価カタリスト不在が重しとなる一方、1ドル163円台の円安推移や高水準な製造業PMI、低バリュエーションが下値を支えており、方向感に欠ける展開です。日銀会合や決算発表を直前に控え中立と判断します。",
+      "points": [
+        {
+          "point": "2025年3月期から2026年3月期にかけて営業利益・純利益ともに減益傾向が続いており、業績モメンタムの鈍化が意識されます。",
+          "evidence": "fundamentals.earnings_trend.annual (2025-03期 営業利益47956億円 → 2026-03期 営業利益37662億円予想)"
+        },
+        {
+          "point": "ドル円が163.84円と円安水準にあり、6月製造業PMIが54.8、日銀短観の大企業製造業DIが22.0に改善するなど、輸出・製造業におけるマクロ環境は追い風です。",
+          "evidence": "macro.indices (ドル円 close=163.84), macro.japan_pmi.manufacturing (latest_value=54.8), macro.boj.tankan (large_manufacturing.current_di=22.0)"
+        },
+        {
+          "point": "PBR 0.963倍、予想PER 9.1倍、配当利回り 3.39% とバリュエーション面での下値支持効果が期待できるものの、直近2週間以内に株価を押し上げる明確な新規材料はありません。",
+          "evidence": "fundamentals.valuation (price_to_book=0.963, forward_pe=9.099, dividend_yield_percent=3.39), news.headlines"
+        }
+      ],
+      "cautions": [
+        "2026年7月30〜31日の日銀金融政策決定会合および2026年8月4日の決算発表を目前に控えており、イベント前後のボラティリティ高まりに留意が必要",
+        "為替市場において急激な円高修正が起こった場合の業績・株価への悪影響",
+        "中小企業の価格転嫁難（仕入価格DI 59.7 vs 販売価格DI 21.3）に見られるコスト高圧迫がサプライチェーンを通じて利益率を圧迫するリスク"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "【都市対抗】トヨタ自動車 初戦相手はJFE西日本！藤原航平監督が闘志「全力でぶつかります」（スポニチアネックス） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1LeW1fb1lvZ2paR2xJSk1BM3VLUDdHMGlJUDZKZWlBa0xkdzB6a1lHV0pDbW1kZmMzbHJHb2Yzc3Y1eHpoRXpSWUhsV2I1Uy0yZ1pEZG9Tdkp4NDJqUXBUVjNFUTlUX3B4WklpVnVIMms3blZpeUNIbDRVTmF5Q2M?oc=5",
+        "published": "Thu, 23 Jul 2026 06:35:00 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "「とんでもない親父いて草」トヨタ自動車の豊田会長が“息子”のお笑いライブ観覧 - レスポンス（Response.jp）",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5uanNZRmZYekNGSnFId2hkZlFvblVwME1za2VOV0sxZ1F3QUdwdktfaUt5MTU0Vzdyd090LVBMcFR1RkRMeXMxcUxRblVXMURja0lyb1BGOHRYSHpZMTlr?oc=5",
+        "published": "Thu, 23 Jul 2026 07:45:03 GMT",
+        "publisher": "レスポンス（Response.jp）"
+      },
+      {
+        "title": "12年連続の都市対抗出場を決めたトヨタ自動車ナイン（提供写真） - スポニチ Sponichi Annex",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNSXdGY1FwQl95NGVrQ0J2cDhqdFk1MzRnaEZvOXZXUEMtc191MXlWVUIyZU9JR21udVYySnFEektKS0dCOW1LdW5KbVdHZGtTUTAwMGptWWFOWmxReWVyVFpXMmNTLUh3MDE2NUtSY2I2MTdGdGRsRnFwM2pQLW9LZEF6U3MtX3diSW1EeldERQ?oc=5",
+        "published": "Thu, 23 Jul 2026 10:37:57 GMT",
+        "publisher": "スポニチ Sponichi Annex"
+      },
+      {
+        "title": "トヨタ自動車の豊田章男会長「“息子”の漫才を見てきました」にネット大興奮「すげー！！」「まさか…！」「かなり溺愛」「粋なオヤジ」 - 読売新聞",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5keU5oc1pLTWl5S1hJZG0yXzkwVWVFbzNxYU85b3JaSE9uRFJVYUtBN1g0WE1jNmJSR1VHTmxLNG8xS0NlWnNleGgxVHZ3ZF9jdmNseXhTLTFXaU1ZSDRWS1p5ZHhuZHlkOWl4Q0xjdWo?oc=5",
+        "published": "Thu, 23 Jul 2026 09:38:00 GMT",
+        "publisher": "読売新聞"
+      },
+      {
+        "title": "トヨタ自動車の豊田章男会長「“息子”の漫才を見てきました」にネット大興奮「すげー！！」「まさか…！」「かなり溺愛」「粋なオヤジ」 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE92b3pLeHZqcS15Vnpfd3dfZG4zcG5yVXVZdFk1VzRZaEtoRUxHZl9uTFc0MWVsb2VOT3BmR2ZjY0M3WnBYc2FJNDZaT0JCQUljSHNBeU0wUGMwamE5MmZOdGlVTW1tRVZnMjY3ekpLMHVCeW9IdTRhb212RQ?oc=5",
+        "published": "Thu, 23 Jul 2026 08:19:00 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "「とんでもない親父いて草」トヨタ自動車の豊田会長が“息子”のお笑いライブ観覧 (レスポンス) - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQRFUxcjBESGRlOVU0SGFXQTR4eE1FOXZxQVNKRGxCZDlxdVd3TkxqTDFqU25PV2JHUGtDMldVSU0yTTJnUFRvRXNiTERjUmE0aDVBUFdoS2lFTVNqV0JqbE5UNDJZYlNpRHFwS0tXaUdxMFZ5SFp6VGZIU3FJN0kzZmlDMDhieTJpVDdKT293?oc=5",
+        "published": "Thu, 23 Jul 2026 07:45:03 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "「とんでもない親父いて草」トヨタ自動車の豊田会長が“息子”のお笑いライブ観覧 1枚目の写真・画像 - レスポンス（Response.jp）",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1fYkVXWHF5bUtSMHlaNDV5eVJEb19kTlo4ekZnd1N1YzBRVGxXT2FlODJyX1Nadlg0UHJ3aGVJMWR0YnU1UzFvLWk4WFpwN1pPNnpBWXYyS3U2aFdHWG90NEFBYWFpS2ZNclZRS3l3OTBDdw?oc=5",
+        "published": "Thu, 23 Jul 2026 07:45:03 GMT",
+        "publisher": "レスポンス（Response.jp）"
+      },
+      {
+        "title": "プロアマ交流戦【薩摩おいどんリーグ2026】『トヨタ自動車 × JR九州』アーカイブ配信 Mark Webster Illness (GcI2hvRnvZ) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBydlRhV3BLX1Nsb0ZXZm1Pd3Fkbm0xMWZCUUxQQzNsQnpNU212cWx5dG43MlhiXzc5ZGpiZEZuMWpoUGs3UlJMcG5rRzZ4Q0xiYTVVY1NJb3Vpa1E?oc=5",
+        "published": "Thu, 23 Jul 2026 08:46:15 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "トヨタ自動車の豊田章男会長「“息子”の漫才を見てきました」にネット大興奮「すげー！！」「まさか…！」「かなり溺愛」「粋なオヤジ」 - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQcW9mZzA5QWZ6VGw3UTgybGVaU2xaLTdFMjlOeW81Mng5VWYxTmh6ZWprcmg4V2JtN3VLNHlHblM3WXRLNnZMeXZ1UmotRzNldnFrc2txYU5oR1NrRXJSZU9maVVXS1AyRTdyeU1mVnJaQ0E5dWtFVldkMjVISUhoenc2WGE3VXRhbFpFanJB?oc=5",
+        "published": "Thu, 23 Jul 2026 08:19:12 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "【トヨタ自動車株主総会】中東情勢の影響に懸念の声 愛知・豊田市 Magistrate (ZjIzoD0Jdi) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE16QjcwbHFfdW9lTXRnRXRDdHc0TXFDeDlPYWZoTG1WcWk0dzc1Ynk3bzVRbUw3cXVXdmZRcGVoaENDVDhCeG4zWFNiSzVpR2hWUTBiT2pmeTZKdXM?oc=5",
+        "published": "Thu, 23 Jul 2026 00:18:03 GMT",
+        "publisher": "Mshale"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "役員人事に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572690.pdf",
+        "date": "2026-06-17 16:00:00"
+      },
+      {
+        "title": "関係会社株式売却益の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260615570435.pdf",
+        "date": "2026-06-15 15:30:00"
+      },
+      {
+        "title": "（開示事項の変更・訂正）「会社分割（簡易吸収分割）に関するお知らせ」の一部変更・訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552805.pdf",
+        "date": "2026-05-28 18:45:00"
+      },
+      {
+        "title": "会社分割（簡易吸収分割）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520542612.pdf",
+        "date": "2026-05-20 19:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260506517369.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "2026年3月期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260508519105.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260508519366.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果ならびに自己株式の取得終了および消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260428513263.pdf",
+        "date": "2026-04-28 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付け及び自己株式の取得に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260330592169.pdf",
+        "date": "2026-03-30 15:30:00"
+      }
+    ]
+  }
+}

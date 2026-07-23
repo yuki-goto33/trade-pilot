@@ -1,0 +1,201 @@
+{
+  "code": "4063",
+  "name": "信越化学工業",
+  "generated_at": "2026-07-24T08:00:43+09:00",
+  "price_as_of": "2026-07-23",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "翌日（2026-07-24）に本決算発表を控えた重要局面であり、通期計画の修正有無や市場反応を確認する必要があるため。",
+        "evidence": "fundamental_view.summary / reference.next_earnings_date"
+      },
+      {
+        "reason": "テクニカル面で5日移動平均線が25日線を下回るデッドクロスが成立しており、短期的には下落モメンタムが優勢であるため。",
+        "evidence": "technical_view.points[0]: price_technical.sma5_vs_sma25=dead"
+      },
+      {
+        "reason": "市場全体の地合いがダウントレンド（downtrend）にあり、ADRの下落も加わって寄り付きからの売り圧力が想定されるため。",
+        "evidence": "technical_view.points[2] / reference.market_regime"
+      }
+    ],
+    "risks": [
+      "2026年7月24日の決算発表内容（特に通期減益計画の修正有無）による株価のボラティリティ急増リスク。",
+      "2026年7月30日からの日銀金融政策決定会合に伴う為替および金利変動が、バリュエーションや輸出採算に与える影響。",
+      "子会社の好調を織り込みきれなかった場合の上方へのサプライズ反応。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 50,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"翌日（2026-07-24）に本決算発表を控えた重要局面であり、通期計画の修正有無や市場反応を確認する必要があるため。\",\n      \"evidence\": \"fundamental_view.summary / reference.next_earnings_date\"\n    },\n    {\n      \"reason\": \"テクニカル面で5日移動平均線が25日線を下回るデッドクロスが成立しており、短期的には下落モメンタムが優勢であるため。\",\n      \"evidence\": \"technical_view.points[0]: price_technical.sma5_vs_sma25=dead\"\n    },\n    {\n      \"reason\": \"市場全体の地合いがダウントレンド（downtrend）にあり、ADRの下落も加わって寄り付きからの売り圧力が想定されるため。\",\n      \"evidence\": \"technical_view.points[2] / reference.market_regime\"\n    }\n  ],\n  \"risks\": [\n    \"2026年7月24日の決算発表内容（特に通期減益計画の修正有無）による株価のボラティリティ急増リスク。\",\n    \"2026年7月30日からの日銀金融政策決定会合に伴う為替および金利変動が、バリュエーションや輸出採算に与える影響。\",\n    \"子会社の好調を織り込みきれなかった場合の上方へのサプライズ反応。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 80,
+      "summary": "移動平均線のデッドクロスやMACDの弱気シグナルに加え、直近5営業日中4営業日で下落しており、短期的な下落モメンタムが優勢です。市場全体の地合い悪化や前夜NY市場のADR下落も押し下げ要因となっています。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日移動平均線を下回るデッドクロスが成立しており、株価も直近終値で7,000円を割り込み両移動平均線の下で推移しています。",
+          "evidence": "price_technical.sma5_vs_sma25=dead(5日線が25日線の下), price_technical.last_close=6970.0, price_technical.sma5=7153.6, price_technical.sma25=7189.8"
+        },
+        {
+          "point": "MACDがシグナルを下回って推移しており、MACDヒストグラムもマイナス（-31.3）で下落傾向を示しています。",
+          "evidence": "price_technical.macd=23.48, price_technical.macd_signal=54.79, price_technical.macd_histogram=-31.3"
+        },
+        {
+          "point": "TOPIXのレジーム判定がdowntrendとなっている市場地合いの悪化に加え、前夜のNY市場におけるADRおよびSOX指数の下落が重石となっています。",
+          "evidence": "macro.market_regime.market_regime=downtrend, us_overnight.adr.change_1d_pct=-1.85, us_overnight.sox_index.change_1d_pct=-0.54"
+        }
+      ],
+      "cautions": [
+        "前夜NY市場やADRの下落は寄り付き時点で大幅に織り込まれる可能性があり、寄り付き後のアク抜けによる買い戻しに注意が必要です。",
+        "RSI14は56.2と中立圏にあり、下落トレンドの中での一時的な押し目買いやリバウンドが入る可能性があります。"
+      ],
+      "key_levels": {
+        "support": 6473.0,
+        "resistance": 7189.8
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "翌日（7月24日）に決算発表を控えた重要局面であり、子会社の業績上方修正という好材料と通期減益計画への警戒感が拮抗しています。",
+      "points": [
+        {
+          "point": "主要子会社の信越ポリマーが半導体関連需要（KOAAI）を背景に3期連続最高益・増益修正を発表しており、グループ全体の業績期待を高める要因となっています。",
+          "evidence": "news: 「信越ポリマーが3期連続最高益予想、KOAAI需要で一転増益修正」（2026-07-23）"
+        },
+        {
+          "point": "日本の製造業PMIが54.8と拡大圏にあり、日銀短観の大企業製造業DIも前回比で改善するなど、同社の主力事業を取り巻くマクロ環境は堅調です。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.8, macro.boj.tankan.di.large_manufacturing.current_di=22.0"
+        },
+        {
+          "point": "5月から6月にかけて自己株式の公開買付け（TOB）を実施するなど、積極的な株主還元姿勢が継続しており、資本効率への意識の高さが示されています。",
+          "evidence": "disclosures: 「自己株式の公開買付けの結果に関するお知らせ」（2026-06-18）"
+        }
+      ],
+      "cautions": [
+        "2026年7月24日の決算発表直前であり、発表後の株価変動リスクが極めて高い状態です。",
+        "2026年3月期の通期計画が売上・利益ともに前期比でマイナス成長となる減益予想となっており、修正の有無が焦点となります（fundamentals.earnings_trend.annual[0]）。",
+        "6日後に日銀金融政策決定会合を控えており、為替（ドル円163.84円）や長期金利（2.745%）の変動が輸出採算やバリュエーションに影響するリスクがあります。",
+        "市場全体がダウントレンド（market_regime=downtrend）にあり、個別材料が良くとも地合いに押される可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "宮島正紀・信越化学工業顧問（超短波） - 化学工業日報 電子版",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9ISDdqNi1RVVZHRVdwcFZWRG5EeFpBcjJPcVF2OUt1NnE0NFBJeDV2Um5SaUw4UUNUbHRDNDUxaDA2N0tmcmgzS0l0d3Fla2Q2VTBV?oc=5",
+        "published": "Thu, 23 Jul 2026 20:01:33 GMT",
+        "publisher": "化学工業日報 電子版"
+      },
+      {
+        "title": "【FISCO銘柄コメント】信越化学工業---時価総額世界上位の化学メーカー(フィスコ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNTktiZzZIYktnNnQ0b3VacDhsYkJQZTdVakV4NHJVVzh4OWxhUjYzRVRPU3VJN19MT3RTSm9tRlVwQXN4YXhXeVU2SWg3SUw5akliclRNZjVQRG9BUnVBSmlLaGVZTmstVWcwSzVPbk9ER2V3YWdiZGVrTFZPNnhxVnk5MEkycWM?oc=5",
+        "published": "Thu, 23 Jul 2026 08:05:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "信越ポリマーが3期連続最高益予想、KOAAI需要で一転増益修正 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9aMDJLcXFPQ01TbW1TV09La3hFNG52YzZLNWoxbFdLalZkbW1MeWc4LUltejBzbVRyVU1aY3h3Q3pLUmRiSmdyel9ReGZkUTFxeWplR1loMHNmNk9YdVRoVldtTUlnR1UybEJSNUM1WDd3VEds?oc=5",
+        "published": "Thu, 23 Jul 2026 11:05:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "日経平均は反発、アドバンテストが1銘柄で約307円分押し上げ 提供 Fisco - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPcjNrZnIzSVFDYTVMNVdpWFJXLXZqMTE4RElQZ3lVTll5Q0NfdktNQ2xZOGFwa3otNUljY2szcUZBeEZsU1JXaGhJZUxVRDNtc1NUSjdTOF96Q3pBdUZwVC1vdFB5RkZyTXd2QXFTVWh3ZXBoaG5HR2JIQ0tHYmczNQ?oc=5",
+        "published": "Thu, 23 Jul 2026 03:45:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      },
+      {
+        "title": "米ハイテク決算前で日経平均は「66,115.60円」と小幅反落…英ファンド大量保有で思惑買いを集めた〈東証プライム・上 - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE00VTFNUmtvQ0tfNWp3Nnp1ZU4zU1R0OVB0RVQ5RExFVGQtVHhFa0R3UjMxaFo4cWFWUnF2OVJmY2tIS1hHbFoweUNwb0lnSWxKYjAzOTJ0eGZjMWF4b0RYTEEyenQtR1RJ?oc=5",
+        "published": "Thu, 23 Jul 2026 01:45:41 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "【日本株】技術革新の波に乗って、業績と株価が大きく上昇！「第2のキオクシア」を探せ - マネクリ",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBQaG9yenR0RkRjZnNhZS1jdXNOemtrWk1adzJCeThldVE0UTJGeEs5LVh1MzM2a04zc2NudWJVUC04UElGbWFRYU9URGM0b1hMemp6N3lhWdIBV0FVX3lxTFBQaG9yenR0RkRjZnNhZS1jdXNOemtrWk1adzJCeThldVE0UTJGeEs5LVh1MzM2a04zc2NudWJVUC04UElGbWFRYU9URGM0b1hMemp6N3lhWQ?oc=5",
+        "published": "Thu, 23 Jul 2026 03:30:00 GMT",
+        "publisher": "マネクリ"
+      },
+      {
+        "title": "小売業銘柄が軟調のなか「大幅増配」でストップ高を記録した〈注目株〉…日経平均は307.00円高の「66,422.60円」と反発【7月23日の国内株式市場概況】 - ゴールドオンライン",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1VVkRpRkxHU1hBMFBLNVlUYnFYRUlhb1BibWFNMkJCWWhmTmVTYkxZcHN6Y0tHTnRYWXdqMnh2WlBGb2tzVVJncm9hQzZoaXFOUEE?oc=5",
+        "published": "Thu, 23 Jul 2026 08:00:00 GMT",
+        "publisher": "ゴールドオンライン"
+      },
+      {
+        "title": "日経平均は反発も上値重く、半導体買いと中東リスクが交錯 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBNOEN6MWtCTnp6TFhBQTE4SzFubEk5aW1PNF8xMXVhX3p0dEFvaWpHXzBJUXZRY3JfYVdPamxSN29MbGF4ZFowSTFxS29GZ1dCeW0zZXRKdGVhMV80LTFXT21uM2JQaFpRQ2NpdWktRHFnNElM?oc=5",
+        "published": "Thu, 23 Jul 2026 05:36:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "【7月24日】今日の決算発表 信越化学、中外製薬など16社 - ライブドアニュース",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5JcUVodXREa0pMNFJCUzBWZkVjNXJuMEZEdGZoUlBEekJtZWI1N3AxQ0dpS1djeXM3Yzh1anE3Z2RMZFN5aGh0YXdOQng5c3IwZG9zdjdxNEdNN3k2SHJv?oc=5",
+        "published": "Thu, 23 Jul 2026 10:41:47 GMT",
+        "publisher": "ライブドアニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573248.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260605563833.pdf",
+        "date": "2026-06-05 15:30:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541941.pdf",
+        "date": "2026-05-20 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541943.pdf",
+        "date": "2026-05-20 15:30:00"
+      },
+      {
+        "title": "一括取得型自己株式取得（Accelerated Share Repurchase）における事後調整完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541656.pdf",
+        "date": "2026-05-20 11:30:00"
+      },
+      {
+        "title": "2026年３月期決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260428512667.pdf",
+        "date": "2026-04-28 15:30:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260428512714.pdf",
+        "date": "2026-04-28 15:30:00"
+      },
+      {
+        "title": "役員の異動（社外取締役、社外監査役）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260428512723.pdf",
+        "date": "2026-04-28 15:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による取得結果および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260217563592.pdf",
+        "date": "2026-02-17 11:00:00"
+      },
+      {
+        "title": "一括取得型自己株式取得（ASR）による自己株式取得のための第三者割当による第26回新株予約権の発行条件の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260217563596.pdf",
+        "date": "2026-02-17 11:00:00"
+      }
+    ]
+  }
+}

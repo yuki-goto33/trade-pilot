@@ -1,0 +1,218 @@
+{
+  "code": "285A",
+  "name": "キオクシアホールディングス",
+  "generated_at": "2026-07-24T08:07:43+09:00",
+  "price_as_of": "2026-07-23",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-07-16）に buy シグナルを出しており、再エントリー抑制ルールに従い継続監視とするため様子見とします。",
+        "evidence": "reference.recent_buy.date='2026-07-16'"
+      },
+      {
+        "reason": "ファンダメンタルズ面で大幅増益のV字回復を見せるものの、特許訴訟や株売却報道、高バリュエーションが重石となり中立の評価にとどまります。",
+        "evidence": "fundamental_view.stance=neutral (strength=60)"
+      },
+      {
+        "reason": "テクニカル面では25日線を大幅に下回る強い下落トレンドにあり、落ちるナイフを掴まない原則に基づき買いは見送ります。",
+        "evidence": "technical_view.stance=bearish (strength=75)"
+      }
+    ],
+    "risks": [
+      "2026年7月31日に予定されている次回決算発表および7月30日〜31日の日銀金融政策決定会合に伴う極めて高いイベントリスク",
+      "子会社の特許訴訟に伴う賠償負担や東芝による保有株売却の継続による需給バランス悪化",
+      "PER61.3倍・PBR24.2倍と高いバリュエーション水準に伴う株価下落余地"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内（2026-07-16）に buy シグナルを出しており、再エントリー抑制ルールに従い継続監視とするため様子見とします。\",\n   \"evidence\": \"reference.recent_buy.date='2026-07-16'\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ面で大幅増益のV字回復を見せるものの、特許訴訟や株売却報道、高バリュエーションが重石となり中立の評価にとどまります。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=60)\"\n  },\n  {\n   \"reason\": \"テクニカル面では25日線を大幅に下回る強い下落トレンドにあり、落ちるナイフを掴まない原則に基づき買いは見送ります。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=75)\"\n  }\n ],\n \"risks\": [\n  \"2026年7月31日に予定されている次回決算発表および7月30日〜31日の日銀金融政策決定会合に伴う極めて高いイベントリスク\",\n  \"子会社の特許訴訟に伴う賠償負担や東芝による保有株売却の継続による需給バランス悪化\",\n  \"PER61.3倍・PBR24.2倍と高いバリュエーション水準に伴う株価下落余地\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "25日移動平均線を大幅に下回る強い下落トレンドにあり、MACDもシグナルの下でマイナス圏を拡大しており底打ちの兆しが見えません。市場全体のレジーム悪化に加え、前夜の米国半導体セクターの軟調さも重なり、下押し圧力が継続する蓋然性が高いと判断します。",
+      "points": [
+        {
+          "point": "短期・中期の移動平均線がデッドクロスしており、現在の株価は25日線から大きく下方乖離した弱気形状にあります。",
+          "evidence": "price_technical.sma5_vs_sma25='dead', price_technical.last_close=61880.0, price_technical.sma25=80491.6"
+        },
+        {
+          "point": "MACDがシグナルを大きく下回り、ヒストグラムのマイナス幅も継続しており、下落のモメンタムが依然として強いことを示唆しています。",
+          "evidence": "price_technical.macd=-6393.39, price_technical.macd_histogram=-1856.82"
+        },
+        {
+          "point": "市場全体の地合いがダウントレンドにあることに加え、前夜の米国市場で半導体株指数（SOX）やセクターETFが下落しており、外部環境が逆風となっています。",
+          "evidence": "macro.market_regime.market_regime='downtrend', us_overnight.sox_index.change_1d_pct=-0.54, us_overnight.sector_proxy.change_1d_pct=-1.15"
+        }
+      ],
+      "cautions": [
+        "直近5営業日で17%超の大幅な反発を見せる局面もあり、非常にボラティリティが高く、急激なリバウンドが発生するリスクがあります。",
+        "RSIが47.5と売られすぎ水準（30以下）ではないため、値幅調整がさらに進む余地が残されています。",
+        "VIX指数が急上昇（+12.38%）しており、市場全体のリスクオフ心理が波及し、テクニカル的な節目を無視して売られる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 51370.0,
+        "resistance": 80491.6
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "業績は2026年3月期にかけて大幅な増益を達成し回復傾向にあるが、直近の特許訴訟に関する陪審評決や東芝による保有株売却のニュースが需給・心理面での重石となっている。7月31日に決算発表と日銀会合という二大イベントを控えており、不透明感が強い。",
+      "points": [
+        {
+          "point": "2026年3月期の業績は売上高が前年同期比約37%増、営業利益が約92%増と急拡大しており、2024年3月期の赤字からV字回復を遂げている。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "2026年7月17日に公表された子会社に対する訴訟の陪審評決、および7月23日の東芝による株売却の報道が、直近のネガティブなカタリストとして機能している。",
+          "evidence": "disclosures.items[0], news.headlines[0]"
+        },
+        {
+          "point": "日本の製造業PMIが54.8と拡大圏にあり、ニュースでもAI需要への期待が報じられている点は、半導体メーカーである同社にとって事業環境の追い風である。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.8, news.headlines[8]"
+        },
+        {
+          "point": "PBRが24.15倍、PERが61.3倍とバリュエーションは非常に高く、高成長の継続が前提の価格水準となっている。",
+          "evidence": "fundamentals.valuation.price_to_book=24.155, fundamentals.valuation.trailing_pe=61.326"
+        }
+      ],
+      "cautions": [
+        "2026年7月31日の決算発表に伴う業績評価の変動リスク。",
+        "次回決算と同日に予定されている日銀金融政策決定会合の結果による、為替（円高進行）および金利上昇のリスク。",
+        "特許訴訟の結果が確定した場合の賠償金負担や、今後の法的リスクの継続。",
+        "東芝による株式売却の継続に伴う、需給バランスの悪化。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-16",
+    "days_ago": 8,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "東芝、キオクシアＨＤ株を一部売却 保有比率15.10％に低下 - ロイター",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPbUNqbVk2TUJISndEc3VYY1Z2MUh3X2pRb1hhYWlPWjNfQklSaHNOcUdyOFBaWVlTQm02YzFuZ0Z6ODl2Z2JtSjF4S20wWlJJbGtGeTFfVDVEY1V6REkzSnJUUVhENEdjZnh5cjg1ZV80dGl5bHVXbjE1bzBGTkZVbw?oc=5",
+        "published": "Thu, 23 Jul 2026 09:23:43 GMT",
+        "publisher": "ロイター"
+      },
+      {
+        "title": "東芝、キオクシア株の保有比率が低下 15%に - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9jN3kwQ1dadHV1MUtZQUY4Z2Qza3VGcXRZLUxqSURLcUJQMW1sWkNHYW0wX3JLUG5MMklBNDdBd3RqNGhscnlYR2tVZFdxZnZleElmTkNrRWRvX1FSdlRTS3pnWUNhUTV6YWI4OQ?oc=5",
+        "published": "Thu, 23 Jul 2026 09:10:29 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "キオクシアについて、東芝は保有割合が減少したと報告 [変更報告書No.18] - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE04eUd0VUlac0gzZzVLSjFVZjduTzJPeXZiYmJvZDJwMVJsaG9qeFRaLXhsNDZ5RW5MQ3dmalFaTU1UOHpONVRPX3lQUmlDS0ZZWGc?oc=5",
+        "published": "Thu, 23 Jul 2026 07:03:02 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "キオクシアホールディングス(株)【KXIAY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9pbVFlSFVNYzQ3S19xRzJBS2ppUEJDaUZXNlgxTjl0Zmx1Z2xNR0ZZVE9qMXVFdlkyUEFjdnV5d29vX2NQRWNCaHhOaGZXbjBG?oc=5",
+        "published": "Thu, 23 Jul 2026 18:58:33 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "$キオクシアホールディングス (285A.JP)$ - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcVNkY1MzM1RGbmFTOUFWaEd5Y2U2MkhQSDN6cVp3MkprdUptOGRIZFZzeVlEMjJWN2hub19pZ0dhNXZ3X0d2OWJQdVZwS1hocXJEN0U5bkVfRWVJWjZwQldjanNYZVF5QWhPR1FoTnlxdGFROXRsTHJLMDZDUU9zMmVOckw0eDkwUFpnQkJlRkhvd2tTWGx3YlpBTU10OFppZllXbHR3TExtcDQ?oc=5",
+        "published": "Thu, 23 Jul 2026 03:42:08 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "【日本株】技術革新の波に乗って、業績と株価が大きく上昇！「第2のキオクシア」を探せ - マネクリ",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBQaG9yenR0RkRjZnNhZS1jdXNOemtrWk1adzJCeThldVE0UTJGeEs5LVh1MzM2a04zc2NudWJVUC04UElGbWFRYU9URGM0b1hMemp6N3lhWdIBV0FVX3lxTFBQaG9yenR0RkRjZnNhZS1jdXNOemtrWk1adzJCeThldVE0UTJGeEs5LVh1MzM2a04zc2NudWJVUC04UElGbWFRYU9URGM0b1hMemp6N3lhWQ?oc=5",
+        "published": "Thu, 23 Jul 2026 03:30:00 GMT",
+        "publisher": "マネクリ"
+      },
+      {
+        "title": "東芝がキオクシア株を一部売却、保有比率15.10％に低下 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5LVnRWM1N3MG9YMjZ4eUlIa0VZWXo3YVdKZlVrNE9FSFQ3aFlZakRJU09MbzktMi1FYkNSZ0V6cUIxTldQMk9VSC0tUXVUT3U4RDVhRl9WSWdRbnp6b1loTkxobzhUbFpJWXRJYWVoMkxySDdD?oc=5",
+        "published": "Thu, 23 Jul 2026 10:07:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "キオクシア・ショックで「次にマネーが流れる」16銘柄 AI相場の裏で割安に放置された新たな狙い目株が続々！ 株億太郎氏、DAIBOUCHOU氏、戸松信博氏が厳選 - マネーポストWEB",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE4yRk9zdGFCTUxnQWZyVzZyYlpNS0tLRnNvMXpIX0ZMRVAtVGltU2FiaDVGdklwYVhycHNGSTR1QnVndmFUYTNn?oc=5",
+        "published": "Thu, 23 Jul 2026 21:00:00 GMT",
+        "publisher": "マネーポストWEB"
+      },
+      {
+        "title": "キオクシアＨＤ株は再び上昇相場へ向かうか、ＡＩ需要と７月３１日決算が試金石 - kabu-ir.com",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBlVWhrUkVIb19VUzZKMVNkdjZxSF8tVWlqYUUyRXlROWlPdzVhVDBiOUJTS1d2dW5ZWTdRQU12WW5DQVFTUGdFaWFHN1JMVnhQMGhtNw?oc=5",
+        "published": "Thu, 23 Jul 2026 04:04:31 GMT",
+        "publisher": "kabu-ir.com"
+      },
+      {
+        "title": "需給逆転の震源地は韓国》キオクシア・ショックの舞台裏 悪材料となった特許訴訟は「キオクシアが控訴で覆せば業界全体がリスクから解放される」の見方も（マネーポストWEB - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1HbU4zOTRiSG1EX3BMZTdUQlpRamotdkl4czdMejRqSkxXVVcwM0VtMWM1cjh4RnBTNS1IaGEyUXk1TDJJeVpjQ24xazhOYnN1QnU0R19fZ0d5emlqbzZfaFBJV2Jpc3dQMS00NFNLcTU1eGF3aDVjaENBY3l5LUk?oc=5",
+        "published": "Thu, 23 Jul 2026 22:17:37 GMT",
+        "publisher": "Yahoo!ニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "当社子会社に対する訴訟の陪審評決に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595788.pdf",
+        "date": "2026-07-17 13:00:00"
+      },
+      {
+        "title": "（訂正）「勤務継続型株式報酬制度及び業績連動型株式報酬制度のユニット付与に関するお知らせ」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586951.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "（訂正）「当社及び当社子会社の役員に対する株式報酬制度の改定に関するお知らせ」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260612569674.pdf",
+        "date": "2026-06-12 15:30:00"
+      },
+      {
+        "title": "2026年３月期 決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537803.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "当社普通株式を対象とした米国預託株式の米国の証券取引所への上場準備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537804.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "連結子会社からの配当金及び資本の払戻しに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537809.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537830.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "当社及び当社子会社の役員に対する株式報酬制度の改定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537827.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537849.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "その他の関係会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260326589887.pdf",
+        "date": "2026-03-26 15:30:00"
+      }
+    ]
+  }
+}

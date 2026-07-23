@@ -1,0 +1,212 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-07-24T08:04:37+09:00",
+  "price_as_of": "2026-07-23",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズはNVIDIAとの提携や大幅増益予想で極めて強気（strength 75）だが、テクニカルが中期下落トレンド（bearish）であり、統合ルールに基づき買いシグナルは留保される。",
+        "evidence": "fundamental_view.strength=75, technical_view.stance=bearish"
+      },
+      {
+        "reason": "市場全体がdowntrend（下降トレンド）にあり、好材料が確認されても指数に引きずられやすく、自律反発の域を超えないリスクがある。",
+        "evidence": "reference.market_regime=downtrend, technical_view.points[1]"
+      },
+      {
+        "reason": "数日後に次回決算発表（7/29）と日銀金融政策決定会合（7/30-31）という重大イベントを控えており、ボラティリティが急増するリスクが高い。",
+        "evidence": "reference.next_earnings_date=2026-07-29, reference.next_boj_meeting=2026-07-30〜2026-07-31"
+      }
+    ],
+    "risks": [
+      "2026年7月29日の決算発表における通期見通しや進捗へのネガティブサプライズ",
+      "日銀会合後の金利・為替変動に伴う輸出関連株としての株価下押し圧力",
+      "前夜ADRの軟調（-1.39%）に象徴される、米国市場の下落に対する高い連動性",
+      "VIX指数の急上昇に伴う、テクニカル的な節目（SMA25等）を無視した急落"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズはNVIDIAとの提携や大幅増益予想で極めて強気（strength 75）だが、テクニカルが中期下落トレンド（bearish）であり、統合ルールに基づき買いシグナルは留保される。\",\n      \"evidence\": \"fundamental_view.strength=75, technical_view.stance=bearish\"\n    },\n    {\n      \"reason\": \"市場全体がdowntrend（下降トレンド）にあり、好材料が確認されても指数に引きずられやすく、自律反発の域を超えないリスクがある。\",\n      \"evidence\": \"reference.market_regime=downtrend, technical_view.points[1]\"\n    },\n    {\n      \"reason\": \"数日後に次回決算発表（7/29）と日銀金融政策決定会合（7/30-31）という重大イベントを控えており、ボラティリティが急増するリスクが高い。\",\n      \"evidence\": \"reference.next_earnings_date=2026-07-29, reference.next_boj_meeting=2026-07-30〜2026-07-31\"\n    }\n  ],\n  \"risks\": [\n    \"2026年7月29日の決算発表における通期見通しや進捗へのネガティブサプライズ\",\n    \"日銀会合後の金利・為替変動に伴う輸出関連株としての株価下押し圧力\",\n    \"前夜ADRの軟調（-1.39%）に象徴される、米国市場の下落に対する高い連動性\",\n    \"VIX指数の急上昇に伴う、テクニカル的な節目（SMA25等）を無視した急落\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "中期的にTOPIXを大幅に下回る下落トレンドが継続しており、直近の短期的な反発は自律反発の域を出ていない。市場全体の地合い悪化と前夜ADRの軟調を考慮すると、戻り売りに警戒すべき局面である。",
+      "points": [
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともにマイナスであり、明確な中期下落トレンドの範疇にある。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-6.71, price_technical.trend_60d.relative_to_topix_60d_pct=-13.95"
+        },
+        {
+          "point": "TOPIXが25日線を下回り、市場レジームが下降トレンドと判定されているため、個別銘柄への下押し圧力が強い。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.market_regime.topix_close_vs_sma25=below"
+        },
+        {
+          "point": "前夜の米国市場でADRが下落しており、寄り付きから売りが先行しやすい地合いである。",
+          "evidence": "us_overnight.adr.change_1d_pct=-1.39"
+        }
+      ],
+      "cautions": [
+        "MACDがゴールデンクロスし、ヒストグラムも拡大傾向にあるため、短期的には下げ止まりの兆しがある(price_technical.macd_histogram=10.42)。",
+        "5日線が25日線を上回るゴールデンクロスが発生しており、これらが下値支持線として機能する可能性がある(price_technical.sma5_vs_sma25=golden)。",
+        "VIX指数の急上昇による市場全体のボラティリティ拡大が、テクニカル的な節目を無視した急変動を招くリスクがある(macro.indices.VIX.change_1d_pct=12.38)。"
+      ],
+      "key_levels": {
+        "support": 4717.32,
+        "resistance": 5004.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "堅調な業績拡大トレンドに加え、NVIDIAとの提携といったAI関連の強力な新規カタリストが確認される。直近の製造業PMIの拡大も事業環境に追い風だが、数日後に決算発表と日銀会合を控えており、短期的にはイベントリスクへの警戒が必要である。",
+      "points": [
+        {
+          "point": "2026年3月期の業績予想は売上高・利益ともに過去2年を大きく上回る大幅増益を見込んでおり、EPSも176.63円と成長が加速する見通しである。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "NVIDIAとのフィジカルAIに関する協業開始や、国産AI企業への出資など、AI分野での具体的な成長戦略が2026年7月23日に相次いで報じられており、中期的な期待感が高い。",
+          "evidence": "news.headlines"
+        },
+        {
+          "point": "日本の製造業PMIが54.8（2026年6月）と拡大圏を維持し、生産および新規受注の伸びが加速している点は、インフラ・製造を主力とする同社にとって良好な外部環境である。",
+          "evidence": "macro.japan_pmi.manufacturing"
+        },
+        {
+          "point": "ROE 13.3%という高い資本効率を維持しつつ、自己株式の取得を定例的に実施しており、株主還元姿勢が明確である。",
+          "evidence": "fundamentals.valuation.return_on_equity, disclosures.items[0]"
+        }
+      ],
+      "cautions": [
+        "2026年7月29日に次回決算発表を控えており、発表内容や通期見通しの修正によるボラティリティの拡大に注意が必要（fundamentals.next_earnings_date）。",
+        "決算発表直後の7月30-31日に日銀金融政策決定会合が予定されており、為替や金利の急変動が株価を圧迫するリスクがある（macro.boj.monetary_policy_meeting.next_meeting）。",
+        "市場全体がダウントレンド（downtrend）に判定されており、好材料があっても指数に引きずられる可能性がある（macro.market_regime.market_regime）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "「定年まで勤めると思っていた」52歳で転職決意 5年目で日立製作所役員に - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQUlh6UXVva0FqbGFfWGw3RUFscFREMUJKWVBoRkZ3SHRCT1hpQ1RsY2gyRDNaR3FlMlg0OEhVcU1ONVM1d0twZzZsSE5BUG5XdkxGVXE3MFprZHFZazhUeWQwRDNXaEJxS0ExYlhFTUlUSWVDNVFwR2YzMVJEaGNfMVc0MDJ2SXVCeDJsZV9B?oc=5",
+        "published": "Thu, 23 Jul 2026 15:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "日立製作所、NVIDIAとフィジカルAIの統合制御に向け協業開始 - オートメーション新聞",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBzZnp1ZWhqV2EtaDM5MVBvdkxaVjlKTGJROEpsU1NRbkRGSkVFNkJ6SkdQbkhQVGdNYnNKOFNrZDB5SUx3V2dDZzlNS09ZcjBBcEJXbnVBejdLZw?oc=5",
+        "published": "Thu, 23 Jul 2026 04:46:57 GMT",
+        "publisher": "オートメーション新聞"
+      },
+      {
+        "title": "AIエージェント時代に直面する「新たなセキュリティと内部統制」 日立ら大手はどう考えるのか - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE51MHZ0Z1FUbFpPQVJFeXhLRVVPMXZ4N212YkZhanpkN29vTVNiMzdnRFU4MUpCczFsRElDc29DRmRDRlRtd2szR2lhajM5ZXdEd3A5X05nNXltczVseVhGRHgzRGdKLXZCNFVsTE90MGYxNDZz?oc=5",
+        "published": "Thu, 23 Jul 2026 22:00:00 GMT",
+        "publisher": "ITmedia"
+      },
+      {
+        "title": "SmartDB、日立製作所の輸出管理（安全保障貿易管理）業務に採用 投稿日時： 2026/07/23 08:30[適時開示] - みんかぶ",
+        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1hTnFFMDUzV0htVi0wX2NNeGRiREVEbjI2czJ5bkRqTmRuUHpIQW1GY2FOdWJnRTNSRjBLb3lfZ1RrVTJvc1E?oc=5",
+        "published": "Wed, 22 Jul 2026 23:30:00 GMT",
+        "publisher": "みんかぶ"
+      },
+      {
+        "title": "日立製作所、国産AIのノエトラに出資…フィジカルAI社会実装を加速 - レスポンス（Response.jp）",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5jOHVhOEFUdnRRMl9OcndmMFM1aHJyV19ucGZfMG9FUGRiNnJUQ193a1VYbXlYRzV4NmVUSmVNaDRrTjhGSTY2UkJ0b2JUbzc1blY0c1dSVmJRZnM3UzUw?oc=5",
+        "published": "Thu, 23 Jul 2026 01:15:03 GMT",
+        "publisher": "レスポンス（Response.jp）"
+      },
+      {
+        "title": "写真：SmartDB、日立製作所の輸出管理（安全保障貿易管理）業務に採用-旧システムをノーコードで刷新、約5,000人が利用する基盤に- - 沖縄タイムス社",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBIQzJ3dDlwN29xckVsVWhLS0NhcEx0cXhHcFBwdmxmX1BWbHhMNUUxY0djVzFxNDhHZlVmQkE3VTVqQUMxWHVfLXZMR0pfMnROTUt0NmJvZlV6dDV1Z25NaGpZdHlxQQ?oc=5",
+        "published": "Wed, 22 Jul 2026 23:40:00 GMT",
+        "publisher": "沖縄タイムス社"
+      },
+      {
+        "title": "プレスリリース：SmartDB、日立製作所の輸出管理（安全保障貿易管理）業務に採用 -旧システムをノーコードで刷新、約5,000人が利用する基盤に-（Digital PR Platform） - 毎日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE40Q1A5Y3pHQ2ZyMUJtUVFQS2lqRVVyY0pDOEhhZ3dndS1wY243S3kwR19yd3Y0T3E2WUwwaEdtR05GeWF5QjhqWXI5aEY0clVkSWlOZnMzSTMzMkVNXzd6UG9vR0ZiV3lt?oc=5",
+        "published": "Wed, 22 Jul 2026 23:40:00 GMT",
+        "publisher": "毎日新聞"
+      },
+      {
+        "title": "SmartDB、日立製作所の輸出管理（安全保障貿易管理）業務に採用 -旧システムをノーコードで刷新、約5,000人が利用する基盤に - Excite エキサイト",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOOVd2Z05CdFZ4cDhhM2VYNDR2REtqTDZHNXplQWdHTEYxNGx2TDYxa0Q3T3RhYXQ2TTJwaGRWU282NVFUUlpnVmlxMnV6dXBtUFVJeUtkN2lCNW94VzViTUlZU2M0b3UtcVZnX1hXa01JTklKTDE1WlZaOXdfZ0c2OQ?oc=5",
+        "published": "Thu, 23 Jul 2026 01:15:00 GMT",
+        "publisher": "Excite エキサイト"
+      },
+      {
+        "title": "日立製作所、国産AIのノエトラに出資…フィジカルAI社会実装を加速 1枚目の写真・画像 - レスポンス（Response.jp）",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1uVHZoblBhbVF2QlBxbndUaFo3dTNOSGtqTXFlV2lHOUFWeEhrUE1VQ2p0dzhHQjdRZzFrRVhURjRNUjhZSGhEMnVheGNHa0d2Rk9PWVJ3QzNxTi1Ga2ZVRHM2MnZYNDNPTzNiRDRHcVMyQQ?oc=5",
+        "published": "Thu, 23 Jul 2026 01:15:03 GMT",
+        "publisher": "レスポンス（Response.jp）"
+      },
+      {
+        "title": "日立、5000人利用の輸出管理基盤を刷新 - LOGISTICS TODAY",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9zZTRZY2JjYVdCQmw5WWtVUUJvTDNIa3YtcWFwWjhmNWlfRlZJRjd2VGZoTUFGd0FHMEpuN3BRaS1UZ0hYMjBsXw?oc=5",
+        "published": "Thu, 23 Jul 2026 10:28:20 GMT",
+        "publisher": "LOGISTICS TODAY"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(モビリティ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566288.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(コネクティブインダストリーズ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566292.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(デジタルシステム＆サービス事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566294.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CFO Session)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566296.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559702.pdf",
+        "date": "2026-06-02 15:30:00"
+      },
+      {
+        "title": "剰余金の配当(期末配当)に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533826.pdf",
+        "date": "2026-05-14 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況及び取得終了に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260427511652.pdf",
+        "date": "2026-04-27 15:30:00"
+      }
+    ]
+  }
+}

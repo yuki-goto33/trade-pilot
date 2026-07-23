@@ -1,0 +1,189 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-07-24T07:58:06+09:00",
+  "price_as_of": "2026-07-23",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ評価の強度が60にとどまり、買い判断の必須条件である強度70以上に達していないため静観とします。",
+        "evidence": "fundamental_view.stance=bullish (strength=60)"
+      },
+      {
+        "reason": "テクニカル視点でも強気（strength=75）となっており、両専門家が強気で揃う局面は好材料が株価に織り込み済みで高値掴みのリスクが高まるため見送ります。",
+        "evidence": "technical_view.stance=bullish (strength=75)"
+      },
+      {
+        "reason": "RSI14が71.3と買われ過ぎの水準に達しており、直近の期間高値3778.0円付近での戻り売り・利益確定売りの警戒が必要です。",
+        "evidence": "technical_view.cautions[0]: RSI14=71.3, reference.period_high=3778.0"
+      }
+    ],
+    "risks": [
+      "2026年7月30日〜31日に予定されている日銀金融政策決定会合での政策思惑によるボラティリティの上昇",
+      "2026年8月3日の次回第1四半期決算発表に向けた見極め売りや発表後の株価急変動リスク",
+      "市場全体のレジームがdowntrend（TOPIXが25日線を下回る状態）であることによる地合い悪化の波及"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ評価の強度が60にとどまり、買い判断の必須条件である強度70以上に達していないため静観とします。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=60)\"\n  },\n  {\n   \"reason\": \"テクニカル視点でも強気（strength=75）となっており、両専門家が強気で揃う局面は好材料が株価に織り込み済みで高値掴みのリスクが高まるため見送ります。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=75)\"\n  },\n  {\n   \"reason\": \"RSI14が71.3と買われ過ぎの水準に達しており、直近の期間高値3778.0円付近での戻り売り・利益確定売りの警戒が必要です。\",\n   \"evidence\": \"technical_view.cautions[0]: RSI14=71.3, reference.period_high=3778.0\"\n  }\n ],\n \"risks\": [\n  \"2026年7月30日〜31日に予定されている日銀金融政策決定会合での政策思惑によるボラティリティの上昇\",\n  \"2026年8月3日の次回第1四半期決算発表に向けた見極め売りや発表後の株価急変動リスク\",\n  \"市場全体のレジームがdowntrend（TOPIXが25日線を下回る状態）であることによる地合い悪化の波及\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "5日線が25日線の上で推移する中で直近3連騰を記録し、MACDの拡大とともに強い上昇勢いを示しています。全体相場の地合いは低調ですが、中期的な対TOPIXでの大幅な勝ち越しと前夜ADRの上昇が強気姿勢を補強しています。",
+      "points": [
+        {
+          "point": "5日移動平均線（3620.0円）が25日移動平均線（3411.76円）の上位に位置するゴールデンクロス状態で、直近3営業日連続で大幅上昇し終値3750.0円まで伸ばしています。MACDヒストグラムも21.87と拡大傾向にあります。",
+          "evidence": "price_technical.sma5_vs_sma25=golden(5日線が25日線の上), price_technical.recent_5_days, price_technical.macd_histogram=21.87"
+        },
+        {
+          "point": "直近60営業日の騰落率が+36.26%、対TOPIX相対騰落率が+29.02%と、中期的な上昇トレンドが非常に強力に維持されています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=36.26, price_technical.trend_60d.relative_to_topix_60d_pct=29.02"
+        },
+        {
+          "point": "前夜の米国市場でADR（MUFG）が+0.94%上昇しており、短期的な買戻しや買い先行を後押しする材料となります。",
+          "evidence": "us_overnight.adr.change_1d_pct=0.94"
+        }
+      ],
+      "cautions": [
+        "RSI14が71.3まで上昇して過熱感が出ており、期間高値（3778.0円）付近での利益確定売りに警戒が必要です。",
+        "TOPIXのレジームがdowntrend（25日線割れ）であり、S&P500の下落やVIXの上昇（18.7）など全体相場からの逆風を受けるリスクがあります。",
+        "前夜ADRの上昇分は寄り付き段階で価格に即座に織り込まれる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 3620.0,
+        "resistance": 3778.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 60,
+      "summary": "通期業績の大幅な拡大トレンドに加え、国内10年金利が2.745%と高水準で推移する環境が追い風です。ただし直近2週間以内の新規材料が乏しく、日銀会合や次回決算発表を直前に控えるため、強さの評価は限定的となります。",
+      "points": [
+        {
+          "point": "2026年3月期の通期連結純利益が2兆4,272億円に達し、前年同期の1兆8,629億円から大きく拡大するなど、本業の収益力向上が確認できます。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=24272, fundamentals.earnings_trend.annual[1].net_income_oku_jpy=18629"
+        },
+        {
+          "point": "日本の10年国債利回りが2.745%で推移しており、メガバンクにとって利ざや改善につながる好適な金利環境が形成されています。",
+          "evidence": "macro.rates.jgb_10y_percent.value=2.745"
+        },
+        {
+          "point": "2026年7月7日開示の米国会計基準による通期決算短信においても、総収益および純利益が前年同期比で増加して着地しており、堅調な業績推移を裏付けています。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        }
+      ],
+      "cautions": [
+        "2026年7月30日〜31日に日銀金融政策決定会合（6日後）が控えており、政策修正や金利変動に関する期待・思惑で株価が急変動するイベントリスクが存在します。",
+        "2026年8月3日に次回決算発表（11日後）を控えており、直前でのポジション調整売りや発表後の乱高下に注意が必要です。",
+        "市場全体のレジームがdowntrend（TOPIXが25日線を下回る状態）に機械判定されており、全体相場の軟調さに引っ張られるリスクがあります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "【本日の買い売り優勢状況】07/23三菱UFJフィナンシャル・グループの買い優勢金額は297.93億円 - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYjJmazZBSGpVbDd2S3l5ZXN2dGlKZ2kxTmd3TWNGdEl2OF96czY3Uy0tOTBPeE05UjJXeVRSUFhadFZtUEh2YkdOc29KYWs4TWlZeDlUWHhtU1ROZ0V0UUdDdG9scGQtZEIxdWo1VFlQM1dORVBQRGQ4TjVMRVRIN19uSkxjOWtEYVFDRkNKTGZTQmUycEl2ZnlnREdGT3lq?oc=5",
+        "published": "Thu, 23 Jul 2026 06:45:00 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "銀行の給料ランキング【主要10社】3位三菱UFJ銀行、2位三井住友銀行、1位は？「3％以上のベア」を公表した主要18社も公開 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9oV0Z0Sm91WFRBY0pKMzczdm83YVgxTXQ3SHhGUjFaaEVFQWYtUmdEQXdUeVpSeDNKMDlBeTBGWFFXZ2EycUtoelY1X1_SAU9BVV95cUxPZVFnWHNheENjSEJhZVZKckJDdE9KNW9YZ3pZZVQxbUowMTRKbzRaRHVjZV93T21VXzlXSGVLa050U2dOQUlVX204dHRQVU44?oc=5",
+        "published": "Thu, 23 Jul 2026 19:35:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "日経平均が小幅反発、アルファベット決算で「ツルハシ銘柄」に恩恵 中東リスクが重荷 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9Vb1ktOW16TkFoZHRQdHEzR0piWGRPZXRSWWE2OGczRmVPMk83YlJHN2tjU0RjYXBnT2xnR0o5Q3BXNGdzb05hTnUzTU54WmNpcUZiaEQ2cFVKdGNlb1lIa0cxdUt2YXBrOFdvUVVHb1NMV1B3?oc=5",
+        "published": "Thu, 23 Jul 2026 08:45:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "日経平均390円高も後場伸び悩み、キオクシアや村田製が売買代金上位に - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFAxM2huYlNnMWFRSXA1VzltcEpqXzI3dnZhQ0dvUWpCbjhDdzhmRWhmUEM1M3BmU2hDU2RzWHFMTTRoVmwyZmpoWDk3Um45bmV4QUZ6cHVQNF9HWHBoZlVRV1JSWXZkZ2h4NDVVWUdHanhlTkhq?oc=5",
+        "published": "Thu, 23 Jul 2026 06:05:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "ＡＲＣＨＩＯＮ(株)【543A】：株つぶやき - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5XT1JmS1BEYTRxRHNwN3R1eU1IOC1ySExNd25QRVJ5RnR1YUFseXFHYjV0TS1KanRjMmJuMDVBWjRnQlQwdUNKcEllMXFwd0lxa2lBWmpIeG0?oc=5",
+        "published": "Thu, 23 Jul 2026 14:29:03 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "日経平均、半導体主導で高値圏もみ合い KOSPI高が支え、上値では利益確定売り - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5vVDY1OEhBYjdxZjdGWGpWY3dnaVljdkZKTTExVExCRkV0ZDRoQ09MNU45eE5wa2I0NFlCV1VOX2VIRUU1cWdyV0VIaml0YlZNQm9lVTN2Q3lQRWxtUVA1NS11ejhaa0toUGlBLWM3ZklWOVRa?oc=5",
+        "published": "Thu, 23 Jul 2026 05:36:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "マネックスグループ | 8698.T 株価動向とリアルタイム相場 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1XYUNrS2NxZGtjaC15enBkTUNXa2kzS3dIQ1ktR0M2QnJWMVFxUWR3UUJzVGRSQXROajBydU9JWHJoM3Y2UlhIa3dTOENTdw?oc=5",
+        "published": "Thu, 23 Jul 2026 01:50:58 GMT",
+        "publisher": "BigGo ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "中期経営計画における財務目標の修正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538305.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "代表執行役の異動について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260305576744.pdf",
+        "date": "2026-03-05 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260302573608.pdf",
+        "date": "2026-03-02 16:00:00"
+      }
+    ]
+  }
+}

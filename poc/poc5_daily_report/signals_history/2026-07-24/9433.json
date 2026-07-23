@@ -1,0 +1,207 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-07-24T08:02:53+09:00",
+  "price_as_of": "2026-07-23",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家が中立姿勢（strength=50）であり、着実な業績拡大というプラス材料と内部統制不備や市場環境悪化というマイナス材料が拮抗している。",
+        "evidence": "fundamental_view.stance=neutral (strength=50)"
+      },
+      {
+        "reason": "テクニカル面でも中立判断。国内株価のモメンタムは維持されているが、米国市場でのセクター安波及や市場全体の下降トレンドが強い重石となっている。",
+        "evidence": "technical_view.stance=neutral, technical_view.points[2]: us_overnight.sector_proxy.change_1d_pct=-3.5"
+      },
+      {
+        "reason": "日銀金融政策決定会合（7/30-31）および次回決算発表（8/7）が直近に迫っており、不透明感が強いためエントリーを控えるべき局面である。",
+        "evidence": "reference.next_boj_meeting, reference.next_earnings_date"
+      }
+    ],
+    "risks": [
+      "日銀金融政策決定会合に伴う金利・為替市場の急変動と市場レジームのさらなる悪化",
+      "2026年8月7日の決算発表におけるガイダンスの下振れリスク",
+      "内部統制の不備（6/25開示）に関連する追加のネガティブニュースやガバナンスへの不信感",
+      "米国通信セクターの大幅安継続に伴う、相対的なセクターローテーションによる売り圧力"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 50,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ専門家が中立姿勢（strength=50）であり、着実な業績拡大というプラス材料と内部統制不備や市場環境悪化というマイナス材料が拮抗している。\",\n      \"evidence\": \"fundamental_view.stance=neutral (strength=50)\"\n    },\n    {\n      \"reason\": \"テクニカル面でも中立判断。国内株価のモメンタムは維持されているが、米国市場でのセクター安波及や市場全体の下降トレンドが強い重石となっている。\",\n      \"evidence\": \"technical_view.stance=neutral, technical_view.points[2]: us_overnight.sector_proxy.change_1d_pct=-3.5\"\n    },\n    {\n      \"reason\": \"日銀金融政策決定会合（7/30-31）および次回決算発表（8/7）が直近に迫っており、不透明感が強いためエントリーを控えるべき局面である。\",\n      \"evidence\": \"reference.next_boj_meeting, reference.next_earnings_date\"\n    }\n  ],\n  \"risks\": [\n    \"日銀金融政策決定会合に伴う金利・為替市場の急変動と市場レジームのさらなる悪化\",\n    \"2026年8月7日の決算発表におけるガイダンスの下振れリスク\",\n    \"内部統制の不備（6/25開示）に関連する追加のネガティブニュースやガバナンスへの不信感\",\n    \"米国通信セクターの大幅安継続に伴う、相対的なセクターローテーションによる売り圧力\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "個別銘柄のテクニカル指標は上昇トレンドを示唆しているが、市場全体のレジーム悪化と米国市場での通信セクター安が重石となり、短期的には上値が重い展開が予想される。",
+      "points": [
+        {
+          "point": "5日線が25日線を上回るゴールデンクロスを維持しており、中期的な騰落率もTOPIXをアウトパフォームしている。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\", price_technical.trend_60d.relative_to_topix_60d_pct=3.14"
+        },
+        {
+          "point": "MACDヒストグラムがプラス圏で拡大を続けており、RSIも67.8と強い上昇モメンタムを示している。",
+          "evidence": "price_technical.macd_histogram=11.57, price_technical.rsi14=67.8"
+        },
+        {
+          "point": "一方で、市場全体のレジームは下降トレンドにあり、前夜の米国市場で当該セクターETFが大幅に下落したことは強い逆風となる。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\", us_overnight.sector_proxy.change_1d_pct=-3.5"
+        }
+      ],
+      "cautions": [
+        "TOPIXが25日線を下回るdowntrendレジームにあり、地合いの悪化による連れ安のリスクがある。",
+        "前夜のADRが-0.91%の下落、米国セクターETFが-3.5%と大幅安となっており、寄り付きでのギャップダウンに注意が必要。",
+        "RSIが70に接近しており、テクニカル的な過熱感から利益確定売りが出やすい水準にある。"
+      ],
+      "key_levels": {
+        "support": 2762.6,
+        "resistance": 2923.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "通期業績の拡大傾向や海外提携などの新規材料が見られるものの、日銀金融政策決定会合や次回決算発表を直前に控えるほか、市場全体の下降トレンドや過小評価できない内部統制上の懸念が拮抗しており、中立の見解とします。",
+      "points": [
+        {
+          "point": "2026年3月期の純利益が7,071億円（前期6,554億円）、EPSが183.55円（前期169.28円）と通期業績は着実な拡大傾向を示しており、ROEも14.0%と良好な水準を維持しています。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.valuation.return_on_equity=0.14"
+        },
+        {
+          "point": "2026年7月23日にフィリピン通信大手Globe Telecomとの戦略的パートナーシップ締結が発表されるなど、事業領域拡大に向けた新規材料が確認できます。",
+          "evidence": "news.headlines[1].title"
+        },
+        {
+          "point": "TOPIX連動ETFが25日移動平均線を下回り市場レジームがdowntrendとなっているため、個別銘柄の上値を抑えるマクロ環境となっています。",
+          "evidence": "macro.market_regime.market_regime=downtrend"
+        }
+      ],
+      "cautions": [
+        "2026年7月30日〜31日に日銀金融政策決定会合、2026年8月7日に次回決算発表が控えており、短期的イベントリスクが高い状態です。",
+        "2026年6月25日に「財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ」が開示されており、ガバナンス面でのリスク要因が残ります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ＫＤＤＩ(株)【KDDIY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5UeXNVcVVoNnBzaHVrVDJRR3VqcmJrUDk1T0h1dDRJT0ttelAwWVk0UWZWT0JaQTIxMkRtQUxzLW1FdnNRVXpvUWZRb0p4cVlJ?oc=5",
+        "published": "Thu, 23 Jul 2026 13:00:05 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "KDDIとGlobe Telecom、フィリピンでモバイル経済圏の共創に向けた戦略的パートナーシップを締結 - KDDI ニュースルーム",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE0xX0RhbExnb2Yxc0lDMnQwakMtdjFDTWVneFNQYjJYWFBzRFR0UUtRa3FabldOU1R6MV9tZXhVbklYaWhNNWNZZDdjaFB1cmhRR21vVWJiNG9Ec1hKZEZ4MWwweXdjVG15ZmZGTA?oc=5",
+        "published": "Thu, 23 Jul 2026 02:00:00 GMT",
+        "publisher": "KDDI ニュースルーム"
+      },
+      {
+        "title": "KDDI、フィリピン通信大手と提携 「経済圏」を現地で共同構築へ - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFA5bGFMbllrMTRkOVl6ZnpEcHZtTThNZ29pTnQtSFVHTzM0ZXJvalNWYWdjVEoyTXotZGpUQkNsQ2U5NlVKRW03T0pGeHdRSkhmeDhRTl9RajZQaEdhVGFhOG1xMzJnRGFxMENRNQ?oc=5",
+        "published": "Thu, 23 Jul 2026 07:27:08 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "「会社の人」ではなく、プロになる ──KDDIからみずほへ。中馬和彦氏が選んだキャリアの本音 - TECHBLITZ",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA1MFlxRzNGdHBUNjZUM2JhSm5aVWg0cGJESHBSc0lzU2tvbHFoazIxVEtNc084WEtVcjNITkx4bkMtTElvbXh3Zk9TTThNUEZzZmR4aVVNYVFXUHBpa0luQ3FpYWM2bDNK?oc=5",
+        "published": "Thu, 23 Jul 2026 00:55:01 GMT",
+        "publisher": "TECHBLITZ"
+      },
+      {
+        "title": "KDDIら、圏外での衛星直接通信によるドローン飛行実証に成功 国内初 - spacemedia.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE1uSHN5b2FnS3JrUjFJbEJQS28zNHFJWEpkTlNzYTY3STZqZVJKOGVOX2lfaG8zSWJ2NU1zMTBkdWUwZ09Bbllv?oc=5",
+        "published": "Thu, 23 Jul 2026 04:42:28 GMT",
+        "publisher": "spacemedia.jp"
+      },
+      {
+        "title": "ＫＤＤＩとグローブ、モバイル経済圏で提携 - nna.jp",
+        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5rY0xfLWVEcjJDcEUySnd6VVZHdjNuQVV6X0tFTGE1N1kzbjh4dkV0TDU2VVVYcTJVOUxYR3ZFa1I5aHRyRXc?oc=5",
+        "published": "Thu, 23 Jul 2026 15:00:00 GMT",
+        "publisher": "nna.jp"
+      },
+      {
+        "title": "「KDDIのモビリティコントロールセンター構想」と題して、KDDI株式会社 IoT企画部 部長 石橋 秀一氏によるセミナーを2026年9月2日(水)に開催!! - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBmaDZkMnFkSXBuMXpIWEthdm93YzVlNF8yZTRrUDJpRC1CYmJwamtGNGRzaXNDVFNKaFB3RXRSOUJLdWxvQkRqSTR0UFd5dlEzdVVxRUs5STkwR3dGMzMwMjlPSzBKTHFkNHc?oc=5",
+        "published": "Thu, 23 Jul 2026 04:00:01 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "通信会社が挑むフィジカルAI――人とAIが協働する社会を共創で実現する／KDDI総合研究所のフィジカルAI（後編） - WirelessWire",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9XOW1ubzFfOXZZMHlyak1qMFk3MlZFajhkejdnZkZQeG1HOEUzWUt4V1VrMHJ0OFdvSUR3aXhFVk1qWDZQaWtqdEhkRmM4M0E?oc=5",
+        "published": "Thu, 23 Jul 2026 09:31:43 GMT",
+        "publisher": "WirelessWire"
+      },
+      {
+        "title": "「Samsung Galaxy Z Fold8 Ultra」「Samsung Galaxy Z Fold8」「Samsung Galaxy Z Flip8」をauから8月7日に発売 - KDDI ニュースルーム",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1LaC12Z3dkd1o4RUZxc2tLbXQ0czVfbDRlQzk5YURWOXRJcjBJczY0elE2TG1SYTNFUFY0R2J6aUdxVnlPU21SYUl4ekptMllEbEZrXzZXQUZTRUtvWGFVMEd0T0NCMm1oWjljMQ?oc=5",
+        "published": "Thu, 23 Jul 2026 00:00:00 GMT",
+        "publisher": "KDDI ニュースルーム"
+      },
+      {
+        "title": "KDDI、SF新チーム『KDDI TGMGP TGR-DC』のメインスポンサーに就任。人財育成を支える - autosport web",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5SbVBDSEpSb0pfRjQ2bHZOeldtZGM1MWlJT2FoeVQ2emNxemMySU1uejlFeG11RDRXX2paMHVWcUlNaTJiVk9vT3ozWXdBV0hQSzIzWVdB?oc=5",
+        "published": "Thu, 23 Jul 2026 03:32:14 GMT",
+        "publisher": "autosport web"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      },
+      {
+        "title": "東京証券取引所への「改善報告書」の提出に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559424.pdf",
+        "date": "2026-06-02 16:00:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（中期経営戦略）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524146.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "auフィナンシャルホールディングス株式会社の東京証券取引所への株式上場準備の開始について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524156.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "2026年３月期　決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511523545.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524005.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524010.pdf",
+        "date": "2026-05-12 15:45:00"
+      }
+    ]
+  }
+}
