@@ -1,0 +1,161 @@
+{
+  "code": "4063",
+  "name": "信越化学工業",
+  "generated_at": "2026-07-27T08:04:16+09:00",
+  "price_as_of": "2026-07-24",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家は自社株買いや業績回復を背景に強気（strength 75）だが、テクニカル専門家がADR暴落等を受け極めて弱気（strength 95）であるため、統合ルールに基づき押し目確認待ちのホールドとする。",
+        "evidence": "fundamental_view.strength=75, technical_view.stance=bearish (strength 95)"
+      },
+      {
+        "reason": "前夜の米国市場でADRが12.82%暴落しており、週明けの国内市場で窓を開けた大幅な下落が予想されるため、現時点でのエントリーは『落ちるナイフを掴む』リスクが高い。",
+        "evidence": "technical_view.points[2]: us_overnight.adr.change_1d_pct=-12.82"
+      },
+      {
+        "reason": "市場全体がdowntrendレジームにあり、地合いの悪化が個別銘柄の好材料（自社株買い等）の効果を打ち消す懸念がある。",
+        "evidence": "reference.market_regime=downtrend"
+      }
+    ],
+    "risks": [
+      "3日後に控える日銀金融政策決定会合に伴う為替および金利の急変動リスク (reference.next_boj_meeting)",
+      "SOX指数の大幅下落に連動した半導体セクター全体の資金流出継続 (technical_view.points[2])",
+      "ADRの暴落を受けて寄り付き後に直近安値のサポートライン（6603円）を明確に割り込むリスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家は自社株買いや業績回復を背景に強気（strength 75）だが、テクニカル専門家がADR暴落等を受け極めて弱気（strength 95）であるため、統合ルールに基づき押し目確認待ちのホールドとする。\",\n   \"evidence\": \"fundamental_view.strength=75, technical_view.stance=bearish (strength 95)\"\n  },\n  {\n   \"reason\": \"前夜の米国市場でADRが12.82%暴落しており、週明けの国内市場で窓を開けた大幅な下落が予想されるため、現時点でのエントリーは『落ちるナイフを掴む』リスクが高い。\",\n   \"evidence\": \"technical_view.points[2]: us_overnight.adr.change_1d_pct=-12.82\"\n  },\n  {\n   \"reason\": \"市場全体がdowntrendレジームにあり、地合いの悪化が個別銘柄の好材料（自社株買い等）の効果を打ち消す懸念がある。\",\n   \"evidence\": \"reference.market_regime=downtrend\"\n  }\n ],\n \"risks\": [\n  \"3日後に控える日銀金融政策決定会合に伴う為替および金利の急変動リスク (reference.next_boj_meeting)\",\n  \"SOX指数の大幅下落に連動した半導体セクター全体の資金流出継続 (technical_view.points[2])\",\n  \"ADRの暴落を受けて寄り付き後に直近安値のサポートライン（6603円）を明確に割り込むリスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 95,
+      "summary": "中期下落トレンドが継続する中、短期的なテクニカル指標の急速な悪化と前夜米国市場でのADR暴落が重なり、非常に強い下押し圧力が予想される局面です。",
+      "points": [
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともにマイナスであり、明確な中期下落トレンドの中にある。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-0.98, price_technical.trend_60d.relative_to_topix_60d_pct=-7.02"
+        },
+        {
+          "point": "SMA5がSMA25を下回るデッドクロス状態にあり、MACDもシグナルを大きく下放れてヒストグラムが拡大しており、下落の勢いが強い。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.macd_histogram=-47.3"
+        },
+        {
+          "point": "前夜のNY市場で当該銘柄のADRが12.82%と暴落しており、SOX指数の急落と相まって週明けの寄り付きから大幅な窓開け下落の可能性が高い。",
+          "evidence": "us_overnight.adr.change_1d_pct=-12.82, us_overnight.sox_index.change_1d_pct=-4.25"
+        },
+        {
+          "point": "国内市場レジームがdowntrend判定となっており、個別銘柄の弱気に加えて市場全体の地合いも悪化している。",
+          "evidence": "macro.market_regime.market_regime=downtrend"
+        }
+      ],
+      "cautions": [
+        "ADRの暴落が寄り付き価格に完全に織り込まれた場合、目先の材料出尽くし感による一時的な自律反発が発生するリスクがある。",
+        "RSI14が52.0と中立圏にあるが、急落直後のため指標の改善には時間を要する可能性がある。"
+      ],
+      "key_levels": {
+        "support": 6603.0,
+        "resistance": 7159.52
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "本日発表された第1四半期決算とともに、機動的な自己株式取得（ToSTNeT-3）の実施や今期の業績・配当予想が開示され、株主還元への積極姿勢と業績回復への期待が確認された。製造業PMIが拡大圏を維持するなどマクロ環境も良好である。",
+      "points": [
+        {
+          "point": "2026年7月24日に、コミットメント型自己株式取得（FCSR）による自己株式の買付け（ToSTNeT-3）を公表。継続的な株主還元策が強く示されている。",
+          "evidence": "disclosures.items[2].title (2026-07-24 15:30:00)"
+        },
+        {
+          "point": "日本の製造業PMIが54.7と6ヶ月連続で拡大圏にあり、日銀短観の大企業製造業DIも22.0（前回比+5.0）と改善傾向にある。同社の事業環境はマクロ面で追い風が吹いている。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.7, macro.boj.tankan.di.large_manufacturing.current_di=22.0"
+        },
+        {
+          "point": "予想PERが20.3倍と実績PERの26.5倍から低下しており、同日に発表された業績予想において収益の回復が見込まれている。",
+          "evidence": "fundamentals.valuation.forward_pe=20.326, fundamentals.valuation.trailing_pe=26.525"
+        }
+      ],
+      "cautions": [
+        "3日後の2026年7月30日から日銀金融政策決定会合が控えており、政策金利や為替動向への不透明感がある（macro.boj.monetary_policy_meeting.days_until_next=3）。",
+        "TOPIX連動ETFが25日移動平均線を下回り、市場全体がdowntrendと判定されている中での逆行高を狙う形となる（macro.market_regime.market_regime=downtrend）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "マーケット速報 - 神戸新聞",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNQmhUX2Nuck1pXzFRMEhKSWFfZTlJdDg3ZktrMkZpV1l6Rk5mY0xiU1gtVmtaWS0xcGJFRzA2S3RFbWliRUN5c0k5MjNtMFgyNDJBdmlxSlFBdnJhMy1GaFVFTkpvdi1ydk5sS2h5Q2JkVHhnekR4M0hITmlBTDJnQnhnN0E5THoxSmUwUUZTUEd4RWJQdVVfSVU0SmIwZkpJSmtfMk5iYTRHLURudjc3c0cxWHFqdw?oc=5",
+        "published": "Sun, 26 Jul 2026 04:16:14 GMT",
+        "publisher": "神戸新聞"
+      },
+      {
+        "title": "データ：SUI、EIGEN、FFなどのトークンが来週に大口ロック解除を迎え、うちSUIの解除額は約1000万ドルに迫る - PANews",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1JRUdPSDg2NjhpbGVESDljNjB1NkplaTA2ajhKQ08zSTJScWJkVGtMNllxYlRQcG1aM2xKQmZjckFKMmVEVnAzZnhldUVLdXRPRGJkX0dNWTZxak81MDJ6NFM2c3MwZzNBY2t3cV82TGVEWTJqbVZrblc5QmJTcDQ?oc=5",
+        "published": "Sun, 26 Jul 2026 12:09:00 GMT",
+        "publisher": "PANews"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年３月期 第１四半期決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598954.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "業績予想および配当予想に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598982.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による自己株式の買付けに関するお知らせ（コミットメント型自己株式取得（FCSR）による自己株式取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598998.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573248.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260605563833.pdf",
+        "date": "2026-06-05 15:30:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541941.pdf",
+        "date": "2026-05-20 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541943.pdf",
+        "date": "2026-05-20 15:30:00"
+      },
+      {
+        "title": "一括取得型自己株式取得（Accelerated Share Repurchase）における事後調整完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541656.pdf",
+        "date": "2026-05-20 11:30:00"
+      },
+      {
+        "title": "2026年３月期決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260428512667.pdf",
+        "date": "2026-04-28 15:30:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260428512714.pdf",
+        "date": "2026-04-28 15:30:00"
+      }
+    ]
+  }
+}

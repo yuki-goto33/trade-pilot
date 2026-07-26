@@ -1,0 +1,161 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-07-27T08:05:52+09:00",
+  "price_as_of": "2026-07-24",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 14,
+    "reasons": [
+      {
+        "reason": "直近（2026年7月22日）にbuyシグナルが出力されており、再エントリー抑制ルールに基づき継続監視ポジションを維持するため。",
+        "evidence": "reference.recent_buy.date=2026-07-22"
+      },
+      {
+        "reason": "ファンダメンタルズの見解がneutral（strength=50）にとどまり、当期利益の減益予想やPER23.4倍という水準から上値を積極的に追うカタリストに欠けるため。",
+        "evidence": "fundamental_view.stance=neutral (strength=50)"
+      },
+      {
+        "reason": "テクニカル面では25日線上抜け等の好転が見られるものの、RSI14が73.3と買われすぎ水準にあり短期的な高値警戒感が強いこと、および市場全体がdowntrendにあるため。",
+        "evidence": "technical_view.cautions[0]: RSI14=73.3, macro.market_regime.market_regime=downtrend"
+      }
+    ],
+    "risks": [
+      "2026年7月30日〜31日に控える日銀金融政策決定会合に伴う為替および市場全体のボラティリティ拡大リスク。",
+      "2026年8月3日に予定されている決算発表（第1四半期決算）における業績変動リスク。",
+      "TOPIXが25日線を下回る市場レジーム（downtrend）による全体的な戻り売り圧力。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 14,\n \"reasons\": [\n  {\n   \"reason\": \"直近（2026年7月22日）にbuyシグナルが出力されており、再エントリー抑制ルールに基づき継続監視ポジションを維持するため。\",\n   \"evidence\": \"reference.recent_buy.date=2026-07-22\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズの見解がneutral（strength=50）にとどまり、当期利益の減益予想やPER23.4倍という水準から上値を積極的に追うカタリストに欠けるため。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=50)\"\n  },\n  {\n   \"reason\": \"テクニカル面では25日線上抜け等の好転が見られるものの、RSI14が73.3と買われすぎ水準にあり短期的な高値警戒感が強いこと、および市場全体がdowntrendにあるため。\",\n   \"evidence\": \"technical_view.cautions[0]: RSI14=73.3, macro.market_regime.market_regime=downtrend\"\n  }\n ],\n \"risks\": [\n  \"2026年7月30日〜31日に控える日銀金融政策決定会合に伴う為替および市場全体のボラティリティ拡大リスク。\",\n  \"2026年8月3日に予定されている決算発表（第1四半期決算）における業績変動リスク。\",\n  \"TOPIXが25日線を下回る市場レジーム（downtrend）による全体的な戻り売り圧力。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 65,
+      "summary": "出来高を伴う急反発により25日移動平均線を上抜け、MACDの大幅好転や5日線とのゴールデンクロスが確認され短期反転基調にあるものの、RSIの買われすぎ感や全体市場の地合いの弱さから上値追いは慎重さが求められます。",
+      "points": [
+        {
+          "point": "株価は25日移動平均線を大きく上回り、5日線と25日線のゴールデンクロスを形成するとともに、出来高を伴った強力な反発を見せています。",
+          "evidence": "price_technical.last_close=4918.0, price_technical.sma25=4527.8, price_technical.sma5_vs_sma25=golden(5日線が25日線の上), price_technical.recent_5_days[1].change_pct=4.88, price_technical.recent_5_days[2].change_pct=4.8"
+        },
+        {
+          "point": "MACDがシグナルを大きく上回り、ヒストグラムも拡大傾向にあることから、強力な上昇モメンタムが続いています。",
+          "evidence": "price_technical.macd=67.15, price_technical.macd_signal=5.29, price_technical.macd_histogram=61.86"
+        },
+        {
+          "point": "前夜の米国市場において、ADRおよびエネルギーセクターETFがともにプラスで推移しており、寄り付き時の追い風となり得ます。",
+          "evidence": "us_overnight.adr.change_1d_pct=0.33, us_overnight.sector_proxy.change_1d_pct=0.4"
+        }
+      ],
+      "cautions": [
+        "RSI14が73.3と買われすぎ水準にあり、直近2営業日（7/23: +0.57%, 7/24: +0.04%）の上昇勢いが鈍化しているため、短期的調整のリスクがあります。",
+        "TOPIXが25日線を下回り市場レジームがdowntrendにあるため、市場全体の下落圧力に引っ張られる可能性があります。",
+        "60営業日の騰落率（-0.65%）および対TOPIX相対騰落率（-6.69%）はマイナスであり、過去の戻り売り圧力が意識される場面があります。",
+        "前夜NY市場でのADR上昇は朝方の寄り付き価格にすでに織り込まれている可能性があります。"
+      ],
+      "key_levels": {
+        "support": 4766.6,
+        "resistance": 4972.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "2026年3月期の当期利益減益など業績に特段の力強さがなく、PER23.4倍と割安感も乏しい中、日銀会合や次回決算のイベントを直前に控え中立姿勢が妥当。",
+      "points": [
+        {
+          "point": "2026年3月期の当期利益が8,005億円と前期（9,507億円）比で減益となっており、実績PERも23.419倍と総合商社セクター内で特別割安な水準とはいえない。",
+          "evidence": "fundamentals.earnings_trend.annualおよびfundamentals.valuation.trailing_pe=23.419"
+        },
+        {
+          "point": "市場全体がTOPIX 25日線を下回るdowntrend状態にあり、直近2週間で強力な上値触媒となる新規材料の開示やニュースが確認できない。",
+          "evidence": "macro.market_regime.market_regime=downtrendおよびdisclosures.items"
+        }
+      ],
+      "cautions": [
+        "2026年7月30日〜31日に日銀金融政策決定会合が控えており、金利・為替市場のボラティリティ拡大リスクがある。",
+        "2026年8月3日に次回決算発表（2027年3月期第1四半期等）が予定されており、短期的なイベントリスクが存在する。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-22",
+    "days_ago": 5,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "三菱商事、AIで磨く「攻めの法務」 契約・投資の盲点を洗い出す - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1UNGdnQVhQVXFIUHJjTEcyeXYwZWZrUnlGS3piMi1pdTFnRVM3S3ZYM2pfQnZjZWpycElmcUEtN1A1a2VGd0xVNEpob05zZWtOajdSZ0E0WFRoR0dDSHVVckVxYVV4ZWc?oc=5",
+        "published": "Sun, 26 Jul 2026 20:00:00 GMT",
+        "publisher": "日経ビジネス電子版"
+      },
+      {
+        "title": "伊藤忠商事、株価は高値圏で時価総額15兆円。PER14倍・PBR2倍、総合商社で最も評価される理由 - Excite エキサイト",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE0yTU9rLTh0eG1aMXp3SWVpaFpnSW1VbUFndlJWZDFoQlg2YWxWS0l6UnV5VldacGJNNzY0N3ZXbHZ3VmlhY0lwNTRNQ05BWEQwUTdwb2NJZXpSMGNTMS1PMERB?oc=5",
+        "published": "Sun, 26 Jul 2026 22:00:00 GMT",
+        "publisher": "Excite エキサイト"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "特定子会社の異動（子会社の特定子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260714593288.pdf",
+        "date": "2026-07-15 10:00:00"
+      },
+      {
+        "title": "子会社間の合併及び特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552595.pdf",
+        "date": "2026-05-29 09:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C2プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539898.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C3プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539905.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C4プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539910.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C5プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539918.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C6プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539939.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515679.pdf",
+        "date": "2026-05-01 14:00:00"
+      },
+      {
+        "title": "通期個別業績と前期実績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515675.pdf",
+        "date": "2026-05-01 14:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260416505643.pdf",
+        "date": "2026-04-17 14:00:00"
+      }
+    ]
+  }
+}

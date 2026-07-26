@@ -1,0 +1,223 @@
+{
+  "code": "285A",
+  "name": "キオクシアホールディングス",
+  "generated_at": "2026-07-27T08:08:40+09:00",
+  "price_as_of": "2026-07-24",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "直近 2026-07-16 に buy 判断を出しており、現在はその継続監視期間中であるため、ルールに基づき新規エントリーを抑制し維持とする。",
+        "evidence": "reference.recent_buy.date=2026-07-16"
+      },
+      {
+        "reason": "テクニカル面で強烈な売りサインが出ており、安易な押し目買いは「落ちるナイフを掴む」リスクがあるため、テクニカルが中立以上に改善するのを待つ局面である。",
+        "evidence": "technical_view.stance=bearish (strength=90), technical_view.points[0]: sma5_vs_sma25=dead"
+      },
+      {
+        "reason": "決算発表と日銀会合という二大イベントを数日後に控えており、不確実性が極めて高く、ファンダメンタルズの確信度も基準（70以上）に達していない。",
+        "evidence": "fundamental_view.strength=60, fundamental_view.cautions[0,1]"
+      },
+      {
+        "reason": "株価は25日移動平均線から約29%も乖離しており、すでに大幅に下落しているため、ここからの追随売り（sell）もリスクリワードの観点から適当ではない。",
+        "evidence": "reference.last_close=56010.0, reference.sma25=78856.0"
+      }
+    ],
+    "risks": [
+      "2026年7月31日の決算発表におけるガイダンスの下振れリスク",
+      "7月30-31日の日銀金融政策決定会合に伴う為替変動およびグロース株への売り圧力",
+      "SOX指数の継続的な下落による半導体セクター全体の地合い悪化",
+      "子会社に対する訴訟問題の進展に伴う偶発損失の発生リスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"直近 2026-07-16 に buy 判断を出しており、現在はその継続監視期間中であるため、ルールに基づき新規エントリーを抑制し維持とする。\",\n   \"evidence\": \"reference.recent_buy.date=2026-07-16\"\n  },\n  {\n   \"reason\": \"テクニカル面で強烈な売りサインが出ており、安易な押し目買いは「落ちるナイフを掴む」リスクがあるため、テクニカルが中立以上に改善するのを待つ局面である。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=90), technical_view.points[0]: sma5_vs_sma25=dead\"\n  },\n  {\n   \"reason\": \"決算発表と日銀会合という二大イベントを数日後に控えており、不確実性が極めて高く、ファンダメンタルズの確信度も基準（70以上）に達していない。\",\n   \"evidence\": \"fundamental_view.strength=60, fundamental_view.cautions[0,1]\"\n  },\n  {\n   \"reason\": \"株価は25日移動平均線から約29%も乖離しており、すでに大幅に下落しているため、ここからの追随売り（sell）もリスクリワードの観点から適当ではない。\",\n   \"evidence\": \"reference.last_close=56010.0, reference.sma25=78856.0\"\n  }\n ],\n \"risks\": [\n  \"2026年7月31日の決算発表におけるガイダンスの下振れリスク\",\n  \"7月30-31日の日銀金融政策決定会合に伴う為替変動およびグロース株への売り圧力\",\n  \"SOX指数の継続的な下落による半導体セクター全体の地合い悪化\",\n  \"子会社に対する訴訟問題の進展に伴う偶発損失の発生リスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 90,
+      "summary": "短期・中期の移動平均線がデッドクロスしており、MACDも弱気シグナルを継続しています。加えて、前夜のSOX指数急落という強い外部下押し圧力を考慮すると、直近安値に向けた下値模索の展開が濃厚です。",
+      "points": [
+        {
+          "point": "短期トレンドおよびモメンタムの急速な悪化。SMA5がSMA25を大きく下回るデッドクロス状態にあり、直近5営業日中2日間で大幅な下落を記録しています。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.recent_5_days[4].change_pct=-9.49"
+        },
+        {
+          "point": "MACDがシグナル線を下回り、ヒストグラムのマイナス幅も拡大傾向にあります。これは下落の勢いが依然として強いことを示唆しています。",
+          "evidence": "price_technical.macd=-7390.52, price_technical.macd_signal=-5717.33, price_technical.macd_histogram=-1673.19"
+        },
+        {
+          "point": "外部環境が極めて劣悪です。前夜のNY市場でSOX指数が4%超、半導体セクターETFも3%超の下落となっており、寄り付きからの強い売り圧力が予想されます。",
+          "evidence": "us_overnight.sox_index.change_1d_pct=-4.25, us_overnight.sector_proxy.change_1d_pct=-3.27"
+        },
+        {
+          "point": "国内市場全体の地合いも弱気レジーム入りしており、個別銘柄への資金流入が期待しにくい状況です。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.indices[0].change_1d_pct=-2.73"
+        }
+      ],
+      "cautions": [
+        "RSIが48.2と中立圏にあるものの、短期間での急落により売られすぎ水準に接近した場合の自律反発には注意が必要です",
+        "前夜のSOX指数の下落は既に寄り付き価格に大きく織り込まれる可能性があり、寄り付き後の材料出尽くし感による買い戻しリスクがあります",
+        "期間安値である51,370円付近では心理的なサポートが意識される可能性があります"
+      ],
+      "key_levels": {
+        "support": 51370.0,
+        "resistance": 59066.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "生成AI需要を背景とした業績のV字回復は顕著だが、PBR20倍超と極めて高いバリュエーションに加え、数日後に決算発表と日銀会合の重複を控えており、イベントリスクへの警戒が優先される局面である。",
+      "points": [
+        {
+          "point": "業績は2024年3月期の赤字からV字回復を遂げ、2026年3月期は売上・利益ともに過去最高水準へ急拡大している。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "生成AIの普及に伴うデータセンター向けメモリ需要の拡大が、株価急騰の強力なファンダメンタルズ上の裏付けとなっている。",
+          "evidence": "news.headlines[7]"
+        },
+        {
+          "point": "米国市場へのADR上場準備や主要株主の構成変化など、将来的な流動性向上やガバナンス変革への期待感が存在する。",
+          "evidence": "disclosures.items[4], news.headlines[2]"
+        }
+      ],
+      "cautions": [
+        "2026年7月31日に次回決算発表を控えており、高い期待値に対する進捗確認が必須である（fundamentals.next_earnings_date）。",
+        "日銀金融政策決定会合（7/30-31）が近く、為替の乱高下や国内金利上昇によるグロース株への売り圧力が懸念される（macro.boj.monetary_policy_meeting）。",
+        "米国でのレバレッジETF設定に伴う、実需に基づかないボラティリティの増幅リスクがある（news.headlines[0]）。",
+        "子会社に対する訴訟の陪審評決が出ており、法的リスクによる偶発損失の可能性が否定できない（disclosures.items[0]）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-16",
+    "days_ago": 11,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "キオクシアHD株に値動き増幅のリスク、米国から「レバETF」の波迫る（Bloomberg） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5HQS0tYTJ2Tl9WWXhGeHMxYkRZdWpjRnRfdHowYzBJUWlsdm45Y0MtYTdZalN1Ym1NcVpUekZMWnhjRTdsTjZKLWk5cG5xV2JxbXJscG5PRm1UR1ZoRnlTTFpycGpPQ0MxMWNNQUU5OWpYeS1oWURJb1hDeDZab0k?oc=5",
+        "published": "Sun, 26 Jul 2026 21:27:06 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "キオクシアHD株に値動き増幅のリスク、米国から「レバETF」の波迫る - Bloomberg.com",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPRy14ZG9jM0Myc0VTR2ROQUUxTjBHeUR3VS1uZ3dPRjNuS1FZZE5EV0pCdHNwdDhOMDdFQ3JuLUI5VDJkVGJVQU0wWDhjM2ZBR0xNZ3N4OW1DRkx3TDNPc0lJOGFiTzdreUJLcFhEUFdjaVN1RkJJVkRPb2plNjFGTWdvQjhIOHlRbjAzZw?oc=5",
+        "published": "Sun, 26 Jul 2026 21:10:23 GMT",
+        "publisher": "Bloomberg.com"
+      },
+      {
+        "title": "SKハイニックス、キオクシアの2位株主に浮上…ベインキャピタルが大規模エグジット - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBRTDJoN1YzbzBIeTR2QmVzV3hFM0hfaGFHdnZzLUNnMXB0Y1I4ZXdyTlBLWEoydUJxRkM2NHNFTWs3MmtCdEZxVTRteG9UUzdLQmNKbHJZMGpxTFFmMmotQ2ZnbVZUdXlVTW1tWjFJZ2trUTVD?oc=5",
+        "published": "Sun, 26 Jul 2026 09:25:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "今週の決算発表予定 キオクシア、アドテスト、東エレクなど (7月27日～31日) - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5oX1R5N1hDSkMtNHM3aWZOb3puVjdabVRVNTVSdTFwS0JEaExNQ0pVMXNoVGZEYTBWSWhaUXExeHltMFVTbjVMMGJrNzBDaExkUkxldlRteVpMSnRpR042Sg?oc=5",
+        "published": "Sun, 26 Jul 2026 10:00:00 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "【コラム】キオクシアHD、TICK1回という引き潮で見える海底 異種格闘技の安全弁と犠牲 - QUICK Money World",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1Ecl80Sk9oU194LXBMeVlmNkNIQVRlYlpMRVZZeXU0Z2pvSUdrUU42TUFXRDNYdnBadVBlWndsNGJYeDlzakFLTTZvSDU3NHEwNjhSV0pB?oc=5",
+        "published": "Sun, 26 Jul 2026 04:33:00 GMT",
+        "publisher": "QUICK Money World"
+      },
+      {
+        "title": "２４日のＡＤＲ動向＝円換算値で高安まちまち、ＯＬＣ、日本製鉄、日産自など高い 速報 - kabushiki.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFBEWXNncXNaRzJOaUs2T0FONnp6UEtGYzdJNXZFUDZhX3pSbGhKVjFpU3c3M1p4TkdKdEU2akE1cHg2MmNXY1Fv?oc=5",
+        "published": "Sun, 26 Jul 2026 22:39:00 GMT",
+        "publisher": "kabushiki.jp"
+      },
+      {
+        "title": "7月27～31日に決算発表を予定している企業リスト - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1xV1FaeXJqbVVVeE4wVE9OdFZRRloxWXBiX3plQjhSWDVjcnZZOUFmbVJwdDF1enlBZF9wYWRseHI1MmFrTWZyeVBBT3A4THNUY3ByN2tKbw?oc=5",
+        "published": "Sun, 26 Jul 2026 09:00:00 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "キオクシア データ記憶に必要な半導体 生成ＡＩ普及 株価急騰【やわらかゼミ】 - 静岡新聞DIGITAL",
+        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5tdVgtWVdtZG9ZUS03Nko0eXVvTnI5clZXZ3JjZEVpWlNQdUxCN0t3TV9Ydzc4RTVadUhNNW1tZmlQRzcyWEVzWkpyeDk3dw?oc=5",
+        "published": "Sun, 26 Jul 2026 03:49:00 GMT",
+        "publisher": "静岡新聞DIGITAL"
+      },
+      {
+        "title": "SKハイニックス、「競合相手」のキオクシアの実質2位株主に...日本政府は「警戒」 - 매일경제",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE0yajIxdWxyVFhFWTkydEYzRDFsTGo1MzNFWkxTeklWbUs1cDJEU2h5VlFha3Y4TlcxVXgtQ3VqUHNjNXVaejJYbUh2WGl0NktBbXBn?oc=5",
+        "published": "Sun, 26 Jul 2026 07:24:56 GMT",
+        "publisher": "매일경제"
+      },
+      {
+        "title": "ベイン、キオクシア株で2.5兆円リターンの意味を考えてみ｜BRIDGE VIEW ロケットスター荻原猛 - note",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBtSVZqUjR0VGsxRWlBTnhkQVk4cnBnOFFhZGlrRTF1R253RFgwTEZPSXktVUdIcjZIR045UjRreFdKRGJIQ3FfOUstcFhGQlQ2MkJoRXl0WUVxMVU?oc=5",
+        "published": "Sat, 25 Jul 2026 23:27:03 GMT",
+        "publisher": "note"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "当社子会社に対する訴訟の陪審評決に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595788.pdf",
+        "date": "2026-07-17 13:00:00"
+      },
+      {
+        "title": "（訂正）「勤務継続型株式報酬制度及び業績連動型株式報酬制度のユニット付与に関するお知らせ」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586951.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "（訂正）「当社及び当社子会社の役員に対する株式報酬制度の改定に関するお知らせ」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260612569674.pdf",
+        "date": "2026-06-12 15:30:00"
+      },
+      {
+        "title": "2026年３月期 決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537803.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "当社普通株式を対象とした米国預託株式の米国の証券取引所への上場準備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537804.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "連結子会社からの配当金及び資本の払戻しに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537809.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537830.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "当社及び当社子会社の役員に対する株式報酬制度の改定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537827.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515537849.pdf",
+        "date": "2026-05-15 15:30:00"
+      },
+      {
+        "title": "その他の関係会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260326589887.pdf",
+        "date": "2026-03-26 15:30:00"
+      }
+    ]
+  }
+}
