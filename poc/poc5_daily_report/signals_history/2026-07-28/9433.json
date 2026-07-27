@@ -1,0 +1,211 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-07-28T08:08:17+09:00",
+  "price_as_of": "2026-07-27",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 14,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ評価が neutral（strength=55）にとどまり、内部統制の不備懸念や自社株買いの進捗遅延が重石となっておりエントリー基準（strength≥70かつbullish）を満たしていません。",
+        "evidence": "fundamental_view.stance=neutral (strength=55)"
+      },
+      {
+        "reason": "テクニカル面では強気（strength=85）を示すものの、買われすぎ指標（RSI14が74.2）や直近高値2969.0円への近接による短期的な調整リスクが存在します。",
+        "evidence": "technical_view.cautions[0]: RSI14が74.2, reference.period_high=2969.0"
+      },
+      {
+        "reason": "テクニカル主導の上昇は材料が株価に織り込み済みである可能性が高く、ルール上「hold」として押し目や材料の明確化を待つのが妥当です。",
+        "evidence": "technical_view.stance=bullish (strength=85)"
+      }
+    ],
+    "risks": [
+      "2026年7月30日〜31日に予定されている日銀金融政策決定会合に伴う金利動向および市場全体のリスクオフ懸念。",
+      "2026年8月7日の次回決算発表における業績進捗やガイダンス修正、自社株買いの進捗状況による乱高下リスク。",
+      "RSI高水準（74.2）や直近高値（2969.0円）付近での達成感による短期的な達成感売り・利食い売りリスク。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 14,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ評価が neutral（strength=55）にとどまり、内部統制の不備懸念や自社株買いの進捗遅延が重石となっておりエントリー基準（strength≥70かつbullish）を満たしていません。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=55)\"\n  },\n  {\n   \"reason\": \"テクニカル面では強気（strength=85）を示すものの、買われすぎ指標（RSI14が74.2）や直近高値2969.0円への近接による短期的な調整リスクが存在します。\",\n   \"evidence\": \"technical_view.cautions[0]: RSI14が74.2, reference.period_high=2969.0\"\n  },\n  {\n   \"reason\": \"テクニカル主導の上昇は材料が株価に織り込み済みである可能性が高く、ルール上「hold」として押し目や材料の明確化を待つのが妥当です。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=85)\"\n  }\n ],\n \"risks\": [\n  \"2026年7月30日〜31日に予定されている日銀金融政策決定会合に伴う金利動向および市場全体のリスクオフ懸念。\",\n  \"2026年8月7日の次回決算発表における業績進捗やガイダンス修正、自社株買いの進捗状況による乱高下リスク。\",\n  \"RSI高水準（74.2）や直近高値（2969.0円）付近での達成感による短期的な達成感売り・利食い売りリスク。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 85,
+      "summary": "中期トレンドが市場を大幅にアウトパフォームする中、短期でもゴールデンクロスやMACDの好転が重なり、強い上昇モメンタムを維持しています。",
+      "points": [
+        {
+          "point": "5日線が25日線を上回るゴールデンクロス状態にあり、価格も両移動平均線の上方で推移しているため、短期・中期ともに上昇トレンドが明確です。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\", last_close=2953.0"
+        },
+        {
+          "point": "MACDがシグナルを上回り、ヒストグラムもプラス圏で拡大を続けていることから、上昇の勢いが強まっています。",
+          "evidence": "price_technical.macd=52.3, macd_signal=39.19, macd_histogram=13.11"
+        },
+        {
+          "point": "60営業日の騰落率がTOPIXを10%以上上回っており、中長期的な買い意欲の強さが示されています。",
+          "evidence": "price_technical.trend_60d.relative_to_topix_60d_pct=10.1"
+        },
+        {
+          "point": "前夜の米国ADRおよびセクターETFがともに1%超の上昇となっており、本日の寄り付きから強含みの展開が期待されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=1.24, us_overnight.sector_proxy.change_1d_pct=1.28"
+        }
+      ],
+      "cautions": [
+        "RSI14が74.2と買われすぎ水準（70以上）に達しており、短期的な利食い売りに押されるリスクがあります。",
+        "直近の期間高値（2969.0円）付近では、戻り売りや達成感による停滞が発生する可能性があります。",
+        "前夜のADR上昇分が寄り付きで織り込まれた後、材料出尽くしによる陰線を形成する可能性に注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 2900.6,
+        "resistance": 2969.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "業績は増収・最終増益トレンドを維持しているが、内部統制の不備に関する開示や大規模な自社株買いの進捗遅延が重石となっており、日銀会合や決算発表を前に様子見が妥当な局面。",
+      "points": [
+        {
+          "point": "業績は緩やかな拡大傾向にあり、2026年3月期も増収および最終増益を計画。ROEも14%と高い水準を維持している。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.valuation.return_on_equity=0.14"
+        },
+        {
+          "point": "ガバナンス面での不透明感。2026年6月に内部統制の重要な不備の開示や、東証への改善報告書の提出を行っており、信頼回復が課題。",
+          "evidence": "disclosures.items[1, 4]"
+        },
+        {
+          "point": "株主還元への期待と実態の乖離。3,000億円（1億4,600万株）の自社株買い枠を設定しているが、6月の取得実績は0株にとどまる。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        }
+      ],
+      "cautions": [
+        "2026年7月30日から31日にかけて日銀金融政策決定会合を控えており、金利上昇によるバリュエーションへの影響が懸念される。",
+        "2026年8月7日に次回決算発表が予定されており、短期的な業績修正やガイダンスの更新がリスク要因となる。",
+        "データ上の予想PER（forward_pe）が1267.382と極めて高く、市場の利益成長期待とのミスマッチや一時的な要因による利益圧縮の懸念がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "都内4店舗のKDDI直営店でモバイルバッテリー回収を実施 - KDDI ニュースルーム",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE05d01LY2ZweDA3U0lpN21lbVJsZm9PV09LRGpzanotRWtBeVRIYlA2cm5aYVUyOE9KYjB6T0VIRHdUS0Z4TDEtU0I5LUUyYXRidHBUQnBSWnl5eFlXVC10MG1nQllKWWpjcEdsbQ?oc=5",
+        "published": "Mon, 27 Jul 2026 05:00:00 GMT",
+        "publisher": "KDDI ニュースルーム"
+      },
+      {
+        "title": "KDDIがモバイルバッテリーを東京都内の直営4店舗で無料回収、8月1日から10月31日まで限定実施（Web担当者Forum） - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOTDlHUmF5c0hzNnp4ZFZja29RQlBsOEtfQV9ic0pLYnZIRVdOanBQdGgtN0pQVzhpX3FnZGJxeEluTk9uMDFOd0RKa0o4UmR6X1FQYzFKMVVRbnVqanhCN0YxQ0tnNnhOZUxFb1YtdkdsaEo1emVnOXgtVjVRbjVfdVctekNJVU5PU3FfTEVxQWJjMjRSY0RSMVBEV2Fyd3QxSTRKaWZBNlF3czQ?oc=5",
+        "published": "Mon, 27 Jul 2026 22:12:52 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "KDDIが都内4店舗でモバイルバッテリーを無料回収、新宿・池袋・上野・銀座で - ケータイ Watch",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1fQ0RsLWlvYV9oYkVUbW9GWW5OZE9mZWkxbzk2Yms1eElrd1lKTURhZ2dHRjhxQ1dDZldtVm9CUkpGQkNMSUlvZE4wMFZWR2ZORzZLVWFZUkEwOGxpX1RLNkZFNE5qLTA?oc=5",
+        "published": "Mon, 27 Jul 2026 06:51:40 GMT",
+        "publisher": "ケータイ Watch"
+      },
+      {
+        "title": "KDDI、モバイルバッテリーを都内4直営店で無料回収 予約不要、メーカー問わず - CNET Japan",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE93SHYtYy1Tb0w1LU54NGstMU92S0d3Y0c5anRraXk5a0dpbWdSa1RRTXdjWnIzZmVieFBMbW5YdGpISVBGSFVRcHdCYTBJWnNtY1E?oc=5",
+        "published": "Mon, 27 Jul 2026 07:20:00 GMT",
+        "publisher": "CNET Japan"
+      },
+      {
+        "title": "携帯圏外エリアでも衛星直接通信でドローンを飛ばす。KDDIとKDDIスマートドローンが「au Starlink Direct」活用の国内初実証に成功 - digital-construction.jp",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFB1ZlJEM2ljbmU0bm1USDNMa2xyc3I4TlNieTltLUIxQmNDUk1WNkpQRUhZRmF0QXd1aXdhRTRRQU5fS1FvTDlrbWwzVDYzSU5rdFFV?oc=5",
+        "published": "Mon, 27 Jul 2026 05:59:43 GMT",
+        "publisher": "digital-construction.jp"
+      },
+      {
+        "title": "AI時代に「人の心を動かす」ブランドをどう設計するか KDDI・ファンベースカンパニー・GOが語った実践論 - media-innovation.jp",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1TZmZnUjBPejY1V2lWQlc1QkZMQlRwVlBUd09TaGtQanVYV01PbjZBY2ZlZElFMHliR0J0ZVVQY01iajA1akZHN1BvVWFOeG92MkR3WklxVFdvcm1TUGxNN3B3TXBiSDVWbFE?oc=5",
+        "published": "Mon, 27 Jul 2026 08:00:03 GMT",
+        "publisher": "media-innovation.jp"
+      },
+      {
+        "title": "KDDI、au Style SHINJUKUなど都内4店舗でモバイルバッテリーを無料回収 - 10月31日まで - マイナビニュース",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFByUnhMYk1XTjZvR1MzM0FOVU1mb3dxcjNXN05ZZ19aaE5JNnRhX0dxSEpsazVhU2dGcEtfZDNDeXFiTExOZ2xZdjgzSEEwVjUtN1hoN05kOVVJdFZf?oc=5",
+        "published": "Mon, 27 Jul 2026 06:24:14 GMT",
+        "publisher": "マイナビニュース"
+      },
+      {
+        "title": "KDDI、モバイルバッテリーを都内4直営店で無料回収 予約不要、メーカー問わず - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA5dGhsbkZDa3R0aDM1LUpmbnkybEVCZndSQ2J6djdDZWFBRG1ZUGZDUUdXQnlsNVB0RVV0d1lrY2lUaWFxZWRjQWVyWUhfNndhbnpESjJRZnNEX3JGWTdpejZSdUQxdzZ4UFZEemtfYmJYVmVWWlJtU1NIOA?oc=5",
+        "published": "Mon, 27 Jul 2026 16:17:50 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "KDDIスマートドローン、圏外上空でStarlink直接通信による飛行制御に成功 - DRONE.jp",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBNQkE1Wkx0QVhqc3pzaWlMWkhFV2xpOUVKRTJpNzJETFBpTnQxZ1hGY1g0U25jOHpFRk16LXZvOXNaZ3FGTzBRYk5qMjNiWjdrZ0dJQ1BpR2xXalE?oc=5",
+        "published": "Mon, 27 Jul 2026 02:16:25 GMT",
+        "publisher": "DRONE.jp"
+      },
+      {
+        "title": "ＫＤＤＩ、都内４直営店でモバイルバッテリー無料回収 - kabu-ir.com",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBwLUdhLXBNRVZUZnNraVhaV1VPamkyeTVZOVZ6RFpBQ3hDeGZQb1VPMlpKejhPdE8yS0t0THdVai12Y090alIzQnpFZWJtRUY0RW1GQg?oc=5",
+        "published": "Mon, 27 Jul 2026 06:04:23 GMT",
+        "publisher": "kabu-ir.com"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      },
+      {
+        "title": "東京証券取引所への「改善報告書」の提出に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559424.pdf",
+        "date": "2026-06-02 16:00:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（中期経営戦略）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524146.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "auフィナンシャルホールディングス株式会社の東京証券取引所への株式上場準備の開始について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524156.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "2026年３月期　決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511523545.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524005.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524010.pdf",
+        "date": "2026-05-12 15:45:00"
+      }
+    ]
+  }
+}

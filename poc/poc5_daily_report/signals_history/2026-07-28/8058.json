@@ -1,0 +1,218 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-07-28T08:10:23+09:00",
+  "price_as_of": "2026-07-27",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-07-22）に buy シグナルが発出されており、現在はその後の進捗を継続監視するフェーズであるため、ルールに基づき新規エントリーを抑制する。",
+        "evidence": "reference.recent_buy (date: 2026-07-22, 6 days ago)"
+      },
+      {
+        "reason": "ファンダメンタルズ評価が中立（Strength 55）かつ、テクニカル評価が強気（Strength 70）の組み合わせは、好材料が既に価格に織り込まれている可能性が高く、ルール上 buy は見送る局面である。",
+        "evidence": "fundamental_view.strength=55, technical_view.stance=bullish"
+      },
+      {
+        "reason": "数日以内に日銀金融政策決定会合と第1四半期決算発表という、株価の方向性を決定づける重大イベントを控えており、待機姿勢を維持するのが妥当である。",
+        "evidence": "reference.next_boj_meeting: 2026-07-30〜31, reference.next_earnings_date: 2026-08-03"
+      },
+      {
+        "reason": "業績が減益トレンドにある中で PER 22.8倍、PBR 1.88倍と商社株としては割安感が乏しく、下値支持力に欠ける。",
+        "evidence": "fundamental_view.points[0], fundamental_view.points[1]: PER 22.8倍 / PBR 1.88倍"
+      }
+    ],
+    "risks": [
+      "2026年7月30〜31日の日銀金融政策決定会合による円高・金利上昇に伴う商社株への利益確定売り",
+      "2026年8月3日の決算発表における業績進捗の遅れや追加の株主還元策の不在",
+      "前夜の米ADRおよびエネルギーセクターETF(XLE)の下落を受けた寄り付きの売り圧力",
+      "期間高値 4972.0円付近の上値抵抗線における戻り売り"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 55,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 21,\n  \"reasons\": [\n    {\n      \"reason\": \"直近14日以内（2026-07-22）に buy シグナルが発出されており、現在はその後の進捗を継続監視するフェーズであるため、ルールに基づき新規エントリーを抑制する。\",\n      \"evidence\": \"reference.recent_buy (date: 2026-07-22, 6 days ago)\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズ評価が中立（Strength 55）かつ、テクニカル評価が強気（Strength 70）の組み合わせは、好材料が既に価格に織り込まれている可能性が高く、ルール上 buy は見送る局面である。\",\n      \"evidence\": \"fundamental_view.strength=55, technical_view.stance=bullish\"\n    },\n    {\n      \"reason\": \"数日以内に日銀金融政策決定会合と第1四半期決算発表という、株価の方向性を決定づける重大イベントを控えており、待機姿勢を維持するのが妥当である。\",\n      \"evidence\": \"reference.next_boj_meeting: 2026-07-30〜31, reference.next_earnings_date: 2026-08-03\"\n    },\n    {\n      \"reason\": \"業績が減益トレンドにある中で PER 22.8倍、PBR 1.88倍と商社株としては割安感が乏しく、下値支持力に欠ける。\",\n      \"evidence\": \"fundamental_view.points[0], fundamental_view.points[1]: PER 22.8倍 / PBR 1.88倍\"\n    }\n  ],\n  \"risks\": [\n    \"2026年7月30〜31日の日銀金融政策決定会合による円高・金利上昇に伴う商社株への利益確定売り\",\n    \"2026年8月3日の決算発表における業績進捗の遅れや追加の株主還元策の不在\",\n    \"前夜の米ADRおよびエネルギーセクターETF(XLE)の下落を受けた寄り付きの売り圧力\",\n    \"期間高値 4972.0円付近の上値抵抗線における戻り売り\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "移動平均線のゴールデンクロスやMACDの好転などテクニカル指標が強気を示しており、市場全体の上昇レジームも追い風です。直近の急伸後の小幅調整を経て、期間高値更新を試す展開が期待されます。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日移動平均線の上位置を保持しゴールデンクロスを形成しているほか、MACDもシグナルを大きく上回り強い上昇トレンドを示しています。",
+          "evidence": "price_technical.sma5_vs_sma25=golden(5日線:4846.6, 25日線:4540.08), price_technical.macd=72.41, price_technical.macd_signal=13.95"
+        },
+        {
+          "point": "7月21日から22日にかけた大幅上昇の後も高値圏を維持しており、RSI14は51.3と過熱感のない適度な水準に留まっています。",
+          "evidence": "price_technical.recent_5_days[0].change_pct=4.88, price_technical.recent_5_days[1].change_pct=4.8, price_technical.rsi14=51.3"
+        },
+        {
+          "point": "TOPIX連動ETFが25日移動平均線を上回っており、市場レジームが上昇トレンド（uptrend）にあることも追い風となっています。",
+          "evidence": "macro.market_regime.market_regime=uptrend, macro.market_regime.topix_close_vs_sma25=above"
+        }
+      ],
+      "cautions": [
+        "前夜の米ADRが-2.67%、エネルギーセクターETF(XLE)が-2.11%下落しており、当日の寄り付き段階で売り先行となる可能性があります。",
+        "過去60営業日の対TOPIX相対騰落率が-6.4%と全体相場に対して出遅れており、上値追いの勢いが続かないリスクがあります。",
+        "期間高値である4972.0円付近の上値抵抗線を突破できない場合、25日移動平均線（4540.08円）付近までの押し目形成に向かう可能性があります。"
+      ],
+      "key_levels": {
+        "support": 4540.08,
+        "resistance": 4972.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "業績が緩やかな減益トレンドにある一方でバリュエーションに割安感が乏しく、数日以内に日銀金融政策決定会合と第1四半期決算発表という2大イベントを控えているため、現在は極めて強い待機姿勢が求められる局面である。",
+      "points": [
+        {
+          "point": "純利益およびEPSが2期連続の減益計画となっており、利益成長の停滞が懸念される。2024年3月期の純利益9,640億円から2026年3月期予想の8,005億円まで段階的に縮小している。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "バリュエーション面で、予想PERが22.8倍、PBRが1.88倍に達しており、商社セクターとしては歴史的に割安とは言えない水準にある。配当利回り2.58%も下値を支えるにはやや力不足な水準である。",
+          "evidence": "fundamentals.valuation"
+        },
+        {
+          "point": "為替相場は163円台の歴史的な円安水準にあり、海外利益の換算上は追い風だが、中小企業景況調査での仕入価格DI（59.7）の高止まりは、国内事業や物流コストの圧迫要因として意識される。",
+          "evidence": "macro.indices[2], macro.jfc_sme_survey.monthly[2]"
+        }
+      ],
+      "cautions": [
+        "2026年8月3日に決算発表を控えており、直近の業績進捗や株主還元策の有無によるボラティリティリスクがある（fundamentals.next_earnings_date）",
+        "2026年7月30〜31日に日銀金融政策決定会合が開催され、円高進行や金利上昇に伴う商社株への利益確定売りリスクがある（macro.boj.monetary_policy_meeting）",
+        "ニュース等で報じられている「リニューアブルプラスチック」等の新素材開発は、現時点では中長期のテーマであり、短期的な収益寄与は不明である（news.headlines）"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-22",
+    "days_ago": 6,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "平均年収は2000万円超で5大商社トップ 三菱商事はなぜ「ホルムズ海峡封鎖」に動じることがなかったのか（デイリー新潮） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBrd1labHY1WDg2YTdtUUZuM0tpenVqZlB4WXhTa3FLekpTd0p1WldGT0sxdkQxYjBSR0lMNGgzb2haZFhyWnpweHVnaDZhNGY1dVNYMGU1dlVaM3k3SEx5WklLemNscmNpUFdUSnRhUXpPanlqN3NZNXRjY0RuY1k?oc=5",
+        "published": "Mon, 27 Jul 2026 21:09:08 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "ソニーと三菱商事ら14社が開発した新素材 食用油から作る新「リニューアブルプラスチック」 - Forbes JAPAN",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9PRkF4VGFJN3JYaklVVmRidUtxb29EZlFmN0loWXpZbVJNM3pJU2FsOGhhcmNvMlVWZXJRRVZ2RlhTMnZPS3VKMkJ3cmNyMGdjNDRWcnhpNU9HZlFEQlE?oc=5",
+        "published": "Mon, 27 Jul 2026 10:34:41 GMT",
+        "publisher": "Forbes JAPAN"
+      },
+      {
+        "title": "平均年収は2000万円超で5大商社トップ 三菱商事はなぜ「ホルムズ海峡封鎖」に動じることがなかったのか - デイリー新潮",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1hMjNFd1U5UXEyeXNiTVVyTWJnNzBteUE5Z0h5UVBmOXlHR2ZIZGNzczhqNkRqWkZIQTkzakhDV0l2dVd6aHZXS2tUbWlqSVJ6Wk1BRUtRei1JZmVIRlVF?oc=5",
+        "published": "Mon, 27 Jul 2026 19:59:42 GMT",
+        "publisher": "デイリー新潮"
+      },
+      {
+        "title": "決算ウイークは「AI株急落」に警戒？…いまの株式市場では「好材料」が「下落要因」となるかもしれない（2ページ目） - トウシル",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9CSEh2bVpoRDlPUHNZczd2YTBSQWJTUlpka1h1R2lRb0dWQkxjS1RuZHN4WUtGb1d1QkhwcXhBX0NxeGhqSjlBd2NJaUs1d3pXMVUzMHlzRmtNVmFLMW1rNnJiNA?oc=5",
+        "published": "Mon, 27 Jul 2026 07:16:00 GMT",
+        "publisher": "トウシル"
+      },
+      {
+        "title": "ソニーと三菱商事ら14社が開発した新素材 食用油から作る新「リニューアブルプラスチック」 - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1yUTJSZGl6Mm9CWC1nc0xMa0JsLVJBdDVEYTJWQmZKMi11MU5KVzJEbmpRVF9lYkRGR2xZZnI0SU04alU2OHItdVlkMFVQRGJ4RkdHNlpfWGhJSUVrSUd3NEJnbUhwUkIxV1pLT1l4WWZIZ01SQThQeGdwelV1eGM?oc=5",
+        "published": "Mon, 27 Jul 2026 01:30:00 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "横浜赤レンガ、新社長に菅野誠氏 ５４歳、９月８日付で就任へ - カナロコ",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9qNVhhM0d1NVhoaTA3MGdnLVozNTZLNWwwMGRkbTlyVnRMSzBJcURQTjRrd3hobGdZbHBtQjAyUHF3bDdTWWNxUmdjQW9YNl9xazNqaFBrdnpRUC1pbWRqNXFnYk10Q2U5?oc=5",
+        "published": "Mon, 27 Jul 2026 08:20:00 GMT",
+        "publisher": "カナロコ"
+      },
+      {
+        "title": "読売３３３は１・２％高、３指数そろって上昇…７月２１日週の読売３３３分析 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQSkxGVEJwaE0xbXdRcWt4Vm83S0JNZEstbVpzMk8wTHRkVlBHUXE1N2thRGVnMVNQWlNReVR2VDdHdzBGT0dzUEY5RWxhdlRoRXRGSXRXSDl4c19qN0s0aFV1YlQxV29nUTdIYV9ndllYV3drRFlzX01SYXZVZzNtVG9nVHlPUW11UG5XU0VOQXbSAYwBQVVfeXFMTXIzZi1zQlRRSktyakptT1liVHNnVUgxUERFbXljNU1TakMzWUZIUk1MS2ZtNkxVRjl4VzRJeHFjUUFHTGRRN1V5OWk4aWhVZWNqNGJEMTJraC00U3VZR1lxeEszQTRnSzNSOUJDWXlJd3hPWEs1SVlKaWFyek9KUHpYMURjbHo4aGNYMVY?oc=5",
+        "published": "Mon, 27 Jul 2026 02:00:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "ソニーと三菱商事ら14社が開発した新素材 食用油から作る新「リニューアブルプラスチック」 - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOSHQ3WUFGV1dwZXhXT2Y3T292X2xJSmYxWkl5VjVHckhiYUpzVnVBNzVkZnN6UUhubVRwZ0x0dTVwSDZNSjJ1UXVkdUR5ekc5NDU2NDlPLUIxV04tMDhkNFo5cHdkNE04TkdoUmlhR3BEcnlIbFNHZ1FHZ2lSdUFmajloUlZqR1dSRUdBaWZB?oc=5",
+        "published": "Mon, 27 Jul 2026 01:30:00 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "北海道上士幌、庁舎を脱炭素改修 マイクログリッド構築 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQV1FoOUw4OFRnUVBrUGtPN3JrNW1yV3k0SHZNY2tMYm1QYkE1c2RZTkFjUHp1LWxSNHZaM1Mwd1cyaXpEZ282QkNlVXhFOFVoam1TMDhhemh5U29RX0drcXFPR1EzQ2hyb2dwRjQ1dTNwQ3VGdGpiVDRoOXozd1czMmdHRTlIak94ZEZQQVA5Nld6eFIwWGZJeldQcG0?oc=5",
+        "published": "Mon, 27 Jul 2026 20:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "読売３３３は１・２％高、３指数そろって上昇…７月２１日週の読売３３３分析 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9NSHgyX1FxLTNCMXYyV2p3SXd1M3dhTjl2Wlp6dGZzSmlZbDdXWnJ3ZWFlZkZOalZlVVJIZlBOUGxuME5JcjBhZ1l4eFBCdk5hMUV3TVNiRlhVZ3c4YllkRFlSSjZVdTd2TmxKSzhpVU9qeWpIX2l2Mm5uSQ?oc=5",
+        "published": "Mon, 27 Jul 2026 02:00:00 GMT",
+        "publisher": "au Webポータル"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "特定子会社の異動（子会社の特定子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260714593288.pdf",
+        "date": "2026-07-15 10:00:00"
+      },
+      {
+        "title": "子会社間の合併及び特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552595.pdf",
+        "date": "2026-05-29 09:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C2プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539898.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C3プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539905.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C4プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539910.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C5プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539918.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C6プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539939.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515679.pdf",
+        "date": "2026-05-01 14:00:00"
+      },
+      {
+        "title": "通期個別業績と前期実績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515675.pdf",
+        "date": "2026-05-01 14:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260416505643.pdf",
+        "date": "2026-04-17 14:00:00"
+      }
+    ]
+  }
+}
