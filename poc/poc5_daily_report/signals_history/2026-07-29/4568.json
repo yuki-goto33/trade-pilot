@@ -1,0 +1,211 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-07-29T08:05:31+09:00",
+  "price_as_of": "2026-07-28",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の見解がneutral（strength=55）であり、2026年3月期の減益計画や直近のアナリスト予想下方修正を踏まえると買いを正当化する材料が不足しているため。",
+        "evidence": "fundamental_view.stance=neutral (strength=55), fundamental_view.points[0], fundamental_view.points[1]"
+      },
+      {
+        "reason": "テクニカル専門家はbullish（strength=85）を示しているが、統合ルールに基づきテクニカル強気局面でのエントリーは材料織り込み済みのモメンタム追随となるリスクが高いためholdと判定する。",
+        "evidence": "technical_view.stance=bullish (strength=85)"
+      },
+      {
+        "reason": "直前に決算発表と日銀金融政策決定会合という二大重大イベントを控えており、結果を確認する前のポジション構築は不確実性が高いため。",
+        "evidence": "reference.next_earnings_date='2026-07-31', reference.next_boj_meeting='2026-07-30〜2026-07-31'"
+      }
+    ],
+    "risks": [
+      "2026年7月31日の決算発表において、好決算やポジティブな進捗が示された場合の株価上振れ（機会損失）リスク。",
+      "2026年7月30日〜31日の日銀金融政策決定会合に伴う為替および市場全体の急変動リスク。",
+      "RSI（14）が77.6と買われすぎ水準にあることや市場全体のdowntrendレジームによる、利益確定売りの加速リスク。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 50,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の見解がneutral（strength=55）であり、2026年3月期の減益計画や直近のアナリスト予想下方修正を踏まえると買いを正当化する材料が不足しているため。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=55), fundamental_view.points[0], fundamental_view.points[1]\"\n  },\n  {\n   \"reason\": \"テクニカル専門家はbullish（strength=85）を示しているが、統合ルールに基づきテクニカル強気局面でのエントリーは材料織り込み済みのモメンタム追随となるリスクが高いためholdと判定する。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=85)\"\n  },\n  {\n   \"reason\": \"直前に決算発表と日銀金融政策決定会合という二大重大イベントを控えており、結果を確認する前のポジション構築は不確実性が高いため。\",\n   \"evidence\": \"reference.next_earnings_date='2026-07-31', reference.next_boj_meeting='2026-07-30〜2026-07-31'\"\n  }\n ],\n \"risks\": [\n  \"2026年7月31日の決算発表において、好決算やポジティブな進捗が示された場合の株価上振れ（機会損失）リスク。\",\n  \"2026年7月30日〜31日の日銀金融政策決定会合に伴う為替および市場全体の急変動リスク。\",\n  \"RSI（14）が77.6と買われすぎ水準にあることや市場全体のdowntrendレジームによる、利益確定売りの加速リスク。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 85,
+      "summary": "短期・中期ともに強い上昇トレンドを維持しており、前夜のADR高も追い風。RSIの過熱感はあるものの、MACDの好転と高い相対強度が買い優勢を示唆している。",
+      "points": [
+        {
+          "point": "短期トレンドはSMA5がSMA25を上回るゴールデンクロスを維持し、直近3営業日連続で上昇している。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.recent_5_days"
+        },
+        {
+          "point": "中期トレンド（60日騰落率）がプラスであり、対TOPIXでも大幅にアウトパフォームしていることから、市場全体が弱含み（downtrend）の中でも強い逆行高の性質を持っている。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=9.02, price_technical.trend_60d.relative_to_topix_60d_pct=5.79, macro.market_regime.market_regime=downtrend"
+        },
+        {
+          "point": "MACDがシグナルを上回って推移しており、ヒストグラムも9.92と拡大傾向にあるため、上昇モメンタムが加速している。",
+          "evidence": "price_technical.macd=64.19, price_technical.macd_histogram=9.92"
+        },
+        {
+          "point": "前夜の米国市場でADRおよび同セクターETFが2.3%を超える大幅高となっており、本日の寄り付きの好材料となる。",
+          "evidence": "us_overnight.adr.change_1d_pct=2.58, us_overnight.sector_proxy.change_1d_pct=2.36"
+        }
+      ],
+      "cautions": [
+        "RSI14が77.6と買われすぎ水準に達しており、直近高値（2912.5）付近での利益確定売りに注意が必要。",
+        "ADR高を受けた窓開けスタート後の「寄り天」リスクがあり、寄り付き後の出来高を伴う維持力が焦点となる。",
+        "TOPIXが25日線を下回る市場レジーム（downtrend）のため、全体相場が急落した際の影響は避けられない。"
+      ],
+      "key_levels": {
+        "support": 2693.04,
+        "resistance": 2912.5
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "2026年3月期の減益計画に伴う業績モメンタムの鈍化に加え、直近でアナリスト予想の下方修正が報じられており、短期的には下押し圧力が懸念される。次回決算発表と日銀会合という二大イベントを目前に控え、不確実性が極めて高い局面である。",
+      "points": [
+        {
+          "point": "2026年3月期の連結業績予想は、売上高は増加するものの、営業利益・純利益ともに前期比で20%前後の減益計画となっており、利益成長の踊り場にある。",
+          "evidence": "fundamentals.earnings_trend.annual (2025-03 vs 2026-03)"
+        },
+        {
+          "point": "直近（7/28）のニュースにて、2027年3月期の経常利益予想が前週比で1.4%下降したと報じられており、市場の期待値が慎重化している可能性がある。",
+          "evidence": "news.headlines[0] (2026-07-28 published)"
+        },
+        {
+          "point": "ROE 15.8%という高い資本効率と配当利回り3.54%は下値のサポート要因となり得るが、PER 20倍超のバリュエーションを正当化する新規の成長材料が直近データでは不足している。",
+          "evidence": "fundamentals.valuation (return_on_equity=0.158, dividend_yield_percent=3.54, trailing_pe=20.598)"
+        }
+      ],
+      "cautions": [
+        "2026年7月31日に次回決算発表を控えており、今期の進捗率や中計の進捗に関するリスクがある。",
+        "2026年7月30日〜31日の日銀金融政策決定会合による金利・為替の変動リスクが非常に高い。",
+        "市場全体が下降トレンド（downtrend）にあり、指数寄与度の高い大型株として売りに押されやすい環境にある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "【アナリスト予想】第一三共、27年3月期経常予想。対前週1.4%下降。(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOdnhNTDlCazZuTVMzZ0tUMjNNMXJlbFB6TWJxald4YTVubUNxMlVzUFNrMG1MTUNSNlJSZlpJUmRaN3poeTFGeklubXlrTXZ3QjRrSDd4VFA1TlYwMmNzQ3d6cFBObWhhOUd0dmh1OWhVa2FMNi1na2czMFotanRkUU8zRUw4Y1k?oc=5",
+        "published": "Tue, 28 Jul 2026 13:46:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "話題株ピックアップ【夕刊】（2）：ＳＢＩＧＡＭ、ユアテック、第一三共 - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1pVV9ZZmJpQkRoZTRnYXVobDJ5MUMteWdKZUt2VGZ4b09XOGk5OVphQTRscnRIQ2FkY0J0TU5tdTRaTFM3R1BGNE11NW9sVzRfUkM0OWpUaXVpTVhKdzBZQQ?oc=5",
+        "published": "Tue, 28 Jul 2026 06:47:07 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "ビール会社はなぜヘルスケアに向かうのか。サントリー2465億円買収の裏側 - Business Insider Japan",
+        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQWHhuMUR0Ym1raXRSRVpWblhRVFdsYVhlckE5UTJjdF9HZEl1TnpVUjJBLTlWX2RvSGtiMFJvbFJXUGNsREMxcm9fWXhBVy1KczNRQ3pBa0x5eG9PZmVnWW9BaWc3UHFiMWtueEREUVp3NFE0bVlZN0YtbWt0dFpGbEtuNA?oc=5",
+        "published": "Mon, 27 Jul 2026 23:00:00 GMT",
+        "publisher": "Business Insider Japan"
+      },
+      {
+        "title": "総合かぜ薬ブランド「ルル」75周年『かぜには愛を。』ブランドコミュニケーション開始 - 時事ドットコム",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9RTlFfYXR0MnY3b0pMQ2xxY2x4NTVNZnBXUHU1WUxXNnM5WWVjWXZaaHZ1STgtejltRk9YNlI1YkVreEJtTjJWQ19MNmkzRjJvRTY4V1doLWI4TktwTmZRVFhnS2l6V1VtUS1Z?oc=5",
+        "published": "Tue, 28 Jul 2026 16:10:00 GMT",
+        "publisher": "時事ドットコム"
+      },
+      {
+        "title": "話題株ピックアップ【夕刊】（2）：ＳＢＩＧＡＭ、ユアテック、第一三共(株探ニュース) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNYmtEQVhmeDVnUlc5TUpub1psX21RMDFubmlOQ19LVkhQQ1dVdkRUaDZtTGp1a2hiV0RtMzJWRzlEWDJ4dE15YlJmVkgyMkkzMnZQN1pIbnRIZ2thNDVWQnZ5ZHg2cWVqcmwxWkM3VXI1X1pFUS01Wlh5STlsNUtMNF8xMDlYZnNTdnc2WDA5Ql9CQ2RuN3A2NHlMNA?oc=5",
+        "published": "Tue, 28 Jul 2026 06:47:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "三菱ＵＦＪ「日経平均高配当利回り株ファンド」、初の残高3000億円突破 - QUICK Money World",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE43NlFxVjl3dzQtT2lXZEEzTUlUdENFS29oTzRLQjZPX1E5Zm9xdUF4eFlLWTBtdk1Nb2txR01rOWx1MW5FQ3MzeWJlcUNYN3VqWFl2TEVR?oc=5",
+        "published": "Tue, 28 Jul 2026 00:01:27 GMT",
+        "publisher": "QUICK Money World"
+      },
+      {
+        "title": "日経平均寄与度ランキング（大引け）〜日経平均は大幅続落、東エレクやアドバンテストが2銘柄で約762円分押し下げ - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNUE42OEFtTWJOdEg5NE1zdzBMTzJiajZWRF9XX183QjdEamtSTmJpMVFVSzktNm5fV0duQXhIR2NrclFtQXVhY0xTZ2ZBM2tGQy1waUVvSEN0YjJXNTNkOVlBVFJvTDI0RlBSWEt4NFItajJvSEVCRnJ6d3ZocE16a1ppRDZhZWdJUm4zYW02NTXSAYwBQVVfeXFMTUFROVZLVU9EU1YtRno4X0ZaNWJ0YlZ0T0t6cWxQWXpla29IZjF0YVNFc2JXejR1MTZoN3JuRGlnUFhfeGUyd1ZCbk5MZTNTcXV0dHhSOF95azNma1NreklSMnd0Ql9UOTI3akxWZzBWOUE5MDN4d3lqa2pOWFB2ZmYwRFljMW1ZbnBBVjM?oc=5",
+        "published": "Tue, 28 Jul 2026 17:27:18 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "米国株式市場はまちまち、対イラン和平交渉や原油安を好感も半導体が重し 提供 Fisco - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOX1gyaUR6Mklqbk82RG1CMDZNTlM2R0VVVkN5T3BlbnI2Yk5YZ2tGRVQ4TWhEc1MxWlhBdVRZRkZCbjFxYkFhaXVJS3ZRNkFKazJXTHFwVjdabDFmMzNoZi1yMFJhT1dPOUtZY183VWRKUnpsWjFVSHdBVUUxSWd6Nw?oc=5",
+        "published": "Mon, 27 Jul 2026 23:15:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      },
+      {
+        "title": "画像1 / 20＞石原さとみが「みんなの生理痛プロジェクト」説明会に登壇！「自身の身体や生理痛の原因を知ることが大切」 - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBZVmFEVnkxeVJ2Rzc4UURvTllteTM0aFYwQlZvZ0MyMkJablBNN25PMXRubFRrN2xOYWxta2NWUHJBSFE2ZTFWdGVxY3NDbmNZRkJHbTVIRkZlT2dvWFlPMDZmV3RvRnR3R3RnVXlR?oc=5",
+        "published": "Tue, 28 Jul 2026 13:58:34 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "日経平均は大幅反落、アドバンテストが1銘柄で約705円分押し下げ - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQeS1QYk94UDg3N1RBVTNtRDdHTzd2QmZiT2JYRVQxU25lSnlMWlVKbU5pbFliZWdoR1BEVENpMk9JcWZJQkJSZHFkT2E3WFhwQW5QTFNjVFdsYVJHRVRwaFo4ZEdvRTJhUERTYTNNSmdTYVVaU3NsQUM3OHZQQW8wMFd6Tnh3YU1jcXR1StIBjAFBVV95cUxQeS1QYk94UDg3N1RBVTNtRDdHTzd2QmZiT2JYRVQxU25lSnlMWlVKbU5pbFliZWdoR1BEVENpMk9JcWZJQkJSZHFkT2E3WFhwQW5QTFNjVFdsYVJHRVRwaFo4ZEdvRTJhUERTYTNNSmdTYVVaU3NsQUM3OHZQQW8wMFd6Tnh3YU1jcXR1Sg?oc=5",
+        "published": "Tue, 28 Jul 2026 03:36:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587542.pdf",
+        "date": "2026-07-16 15:30:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584479.pdf",
+        "date": "2026-06-30 16:30:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260620575199.pdf",
+        "date": "2026-06-22 15:30:00"
+      },
+      {
+        "title": "財務上の特約が付された金銭消費貸借契約の締結に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617573095.pdf",
+        "date": "2026-06-17 19:00:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬等の内容の一部改定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515539092.pdf",
+        "date": "2026-05-18 13:00:00"
+      },
+      {
+        "title": "（訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260513530596.pdf",
+        "date": "2026-05-13 17:30:00"
+      },
+      {
+        "title": "自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511521821.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522113.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "決算補足資料（2025年度決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522160.pdf",
+        "date": "2026-05-11 15:30:00"
+      },
+      {
+        "title": "2025年度決算および第6期（2026-2030年度）中期経営計画　説明会",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511522186.pdf",
+        "date": "2026-05-11 15:30:00"
+      }
+    ]
+  }
+}

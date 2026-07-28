@@ -1,0 +1,206 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-07-29T08:00:15+09:00",
+  "price_as_of": "2026-07-28",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 14,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家は中立（strength=50）であり、直前に控える日銀金融政策決定会合（7/30-31）および次回決算発表（8/3）を前に静観姿勢が妥当と判断されるため。",
+        "evidence": "fundamental_view.points[1]: 日銀金融政策決定会合（7月30〜31日）まで残り1日となり、次回決算発表（8月3日）も間近に迫っているため、主要イベントの通過を待つ必要があります。"
+      },
+      {
+        "reason": "テクニカル面では中期トレンドの強さは維持されているものの、直近営業日に出来高を伴う急落（-3.63%）が発生し、短期的な調整局面に入っているため。",
+        "evidence": "technical_view.points[1]: 直近営業日（7/28）に出来高を伴って-3.63%急落し、株価（3661.0円）は5日移動平均線（3726.4円）を下回りました。"
+      },
+      {
+        "reason": "市場レジームがdowntrendにあり、全体相場の地合い悪化に伴う上値の重さが懸念されるため。",
+        "evidence": "reference.market_regime=downtrend"
+      }
+    ],
+    "risks": [
+      "2026年7月30日〜31日に開催される日銀金融政策決定会合の結果およびステートメントに伴う株価・金利のボラティリティ急増リスク",
+      "2026年8月3日に予定されている次回決算発表に伴う業績跨ぎリスク",
+      "TOPIX市場レジームがdowntrendを継続することによる全体相場への連れ安リスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 50,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 14,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家は中立（strength=50）であり、直前に控える日銀金融政策決定会合（7/30-31）および次回決算発表（8/3）を前に静観姿勢が妥当と判断されるため。\",\n   \"evidence\": \"fundamental_view.points[1]: 日銀金融政策決定会合（7月30〜31日）まで残り1日となり、次回決算発表（8月3日）も間近に迫っているため、主要イベントの通過を待つ必要があります。\"\n  },\n  {\n   \"reason\": \"テクニカル面では中期トレンドの強さは維持されているものの、直近営業日に出来高を伴う急落（-3.63%）が発生し、短期的な調整局面に入っているため。\",\n   \"evidence\": \"technical_view.points[1]: 直近営業日（7/28）に出来高を伴って-3.63%急落し、株価（3661.0円）は5日移動平均線（3726.4円）を下回りました。\"\n  },\n  {\n   \"reason\": \"市場レジームがdowntrendにあり、全体相場の地合い悪化に伴う上値の重さが懸念されるため。\",\n   \"evidence\": \"reference.market_regime=downtrend\"\n  }\n ],\n \"risks\": [\n  \"2026年7月30日〜31日に開催される日銀金融政策決定会合の結果およびステートメントに伴う株価・金利のボラティリティ急増リスク\",\n  \"2026年8月3日に予定されている次回決算発表に伴う業績跨ぎリスク\",\n  \"TOPIX市場レジームがdowntrendを継続することによる全体相場への連れ安リスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "60日騰落率やMACD、ゴールデンクロスなど中期トレンドは強気を維持しているものの、直近営業日の急落や前夜ADR安、市場レジームの悪化を受け短期的には調整局面に入っています。",
+      "points": [
+        {
+          "point": "中期的な上昇トレンドと好調な指標関係は維持されています。60日騰落率は+27.34%と堅調で、SMA5がSMA25を上回るゴールデンクロス状態であり、MACDヒストグラムも陽転しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=27.34, price_technical.sma5_vs_sma25=golden, price_technical.macd_histogram=17.05"
+        },
+        {
+          "point": "直近営業日（7/28）に出来高を伴って-3.63%急落し、株価（3661.0円）は5日移動平均線（3726.4円）を下回りました。",
+          "evidence": "price_technical.recent_5_days[4].change_pct=-3.63, price_technical.recent_5_days[4].volume=58207600, price_technical.sma5=3726.4"
+        },
+        {
+          "point": "外部環境および地合いの重さが懸念されます。前夜NYのADRが-2.90%下落したほか、TOPIXの市場レジームもdowntrendと判定されています。",
+          "evidence": "us_overnight.adr.change_1d_pct=-2.9, macro.market_regime.market_regime=downtrend"
+        }
+      ],
+      "cautions": [
+        "前夜ADRのマイナスとTOPIX市場レジームのdowntrendにより、短期的な売り圧力が継続する可能性があります。",
+        "直近高値（3813.0円）からの調整が長引き、25日移動平均線（3460.92円）付近まで下値を模索するリスクがあります。"
+      ],
+      "key_levels": {
+        "support": 3460.92,
+        "resistance": 3813.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "業績の拡大傾向や日本10年金利の高水準推移は利ざや改善の追い風ですが、直前に控える日銀金融政策決定会合および次回決算発表を前に見極め感が強まる局面です。",
+      "points": [
+        {
+          "point": "2026年3月期の純利益が順調に拡大しており、日本10年債利回りが2.778%と高水準で推移している点は銀行業のファンダメンタルズにとって良好な環境です。",
+          "evidence": "fundamentals.earnings_trend.annual, macro.rates.jgb_10y_percent.value=2.778"
+        },
+        {
+          "point": "日銀金融政策決定会合（7月30〜31日）まで残り1日となり、次回決算発表（8月3日）も間近に迫っているため、主要イベントの通過を待つ必要があります。",
+          "evidence": "macro.boj.monetary_policy_meeting.days_until_next=1, fundamentals.next_earnings_date=2026-08-03"
+        },
+        {
+          "point": "TOPIX連動ETFが25日移動平均線を下回り市場レジームがdowntrendとなっているため、株式市場全体の地合いの重さが短期的リスク要因となっています。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.market_regime.topix_close_vs_sma25=below"
+        }
+      ],
+      "cautions": [
+        "2026年7月30日〜31日に開催される日銀金融政策決定会合の結果およびステートメントに伴うボラティリティ急増リスク",
+        "2026年8月3日に予定されている次回決算発表での業績進捗確認リスク",
+        "全体相場のdowntrend継続に伴う連れ安リスク"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "三菱UFJフィナンシャル・グループ社長・半沢淳一が語る「AI時代の銀行グループの役割」とは？(財界オンライン) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQNDh0UVJhRGhTSVZiandvX095TTYzQzFKMVI3ODQwVkZOZFFtcC1RLWdtX1F5MzNMRUlieU5zR3BYMjdoOWEtRU9oNjAtRjlXbzFJSFBLWXd3d3pTVmE4TVFZMFM3bmRmR2UtUzJPaExWZFl5OHdGdFFHTExKbWstZ2pqYk5RbEU?oc=5",
+        "published": "Tue, 28 Jul 2026 09:30:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "(株)三菱ＵＦＪフィナンシャル・グループ【MUFG】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1fb09UZ016WWhiUVBjc0RvWFltWjhxVkhJbkpyOEhKLXMzR2JuMk0wY1MybnpuUWNldldDSTJMak1rZV83N2JYNGFMWktSU3M?oc=5",
+        "published": "Tue, 28 Jul 2026 17:52:06 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "マーケット速報 - 神戸新聞",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNUng0UW5IcFRnbmU2RzZVRDk5VWVucnJFVHlzMmUxajh0Zk13UjFXSHlSTW9FVmlpaVFXYTh3TmNMaGdoa0J1blRFak5iRXppZVJzTEFWRDZXUGlEbFpON0ZLOGxqdi1ySUI4ZWhvWG43YXpwd1YtX2FYWUpHS0RrdmQ5Y3Z2MHI2NXhFWEFCTG5YbFQ1TEdVU1BWSi1wWjBVWUVLNW5WYmo2M2xOTDRiN2VnMDVLQQ?oc=5",
+        "published": "Tue, 28 Jul 2026 10:14:10 GMT",
+        "publisher": "神戸新聞"
+      },
+      {
+        "title": "日経平均が2566円の急反落、終値6万2364円 半導体売りで2カ月ぶり安値 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9MV2VkTVpRODJidWhROGtXUVhaSEgyYzlaNklZaC1EeGo0Z3Y1QVhNZGMyUlcyTDNxems0Wk9RdzVFZEJlZ1NCRHVRZE1mdlNYUV9sZW5Ec3UwUEhXTmRWa0kwWDJnaVY2SU0wMzNhVzBhVWNI?oc=5",
+        "published": "Tue, 28 Jul 2026 05:25:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "「株式」ADR日本株ランキング〜全般売り優勢、シカゴは大阪日中比340円安の64055円 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPQThaMG9Yal9Ia04zS3RZYzFpaVNVOGloZ19iS2ZaWTM5a2NVcjNGZWpoalVrR0VuUldxYTc2V1JuU2lfdjNxandHY0NreTRrWFNvWGwwUFFTeVNvcXFrQjhUd0NWSGVIb1lRWGczN3o4dFFQTUhtbTlrb0JrNVh5cWtwV3lScVV3V2t5c9IBjAFBVV95cUxPQThaMG9Yal9Ia04zS3RZYzFpaVNVOGloZ19iS2ZaWTM5a2NVcjNGZWpoalVrR0VuUldxYTc2V1JuU2lfdjNxandHY0NreTRrWFNvWGwwUFFTeVNvcXFrQjhUd0NWSGVIb1lRWGczN3o4dFFQTUhtbTlrb0JrNVh5cWtwV3lScVV3V2t5cw?oc=5",
+        "published": "Tue, 28 Jul 2026 00:43:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "＜画像1 / 19＞“ミッキー×トランスフォーマー”驚異のコラボおもちゃって？ - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFB2RklRYmR5cmtCRnVZWDY0TDUzb1A3aXdpOVZpYkx5U182Zk43dG5IQ3QyYzF1TTRPRkEtWi1fZ0ZZb0JBcmh1dVcxUUppMmNxcnRsZ2JsYnMxSEFEQTlaVkhEaW4zdw?oc=5",
+        "published": "Tue, 28 Jul 2026 05:26:46 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "27日のNY市場はまちまち - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNY21EdzMyaTdZQzRmRUQ0QTdSeTVrQzJBQTA4eVgxQnlxNnhNNWVnS0VNWnJDR21GakRwT1RtQWNBcnJIUDFrOHREa1c0NWxFQzVWTF9WbmZWUTJoS0MyNnVxUmk2SzF4OW5YRWNiZUpKaGpxOVp4M2t2SGVmM1VHNjhmNVNsYmZjdVU0YdIBjAFBVV95cUxNY21EdzMyaTdZQzRmRUQ0QTdSeTVrQzJBQTA4eVgxQnlxNnhNNWVnS0VNWnJDR21GakRwT1RtQWNBcnJIUDFrOHREa1c0NWxFQzVWTF9WbmZWUTJoS0MyNnVxUmk2SzF4OW5YRWNiZUpKaGpxOVp4M2t2SGVmM1VHNjhmNVNsYmZjdVU0YQ?oc=5",
+        "published": "Mon, 27 Jul 2026 23:10:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "米国株式市場はまちまち、対イラン和平交渉や原油安を好感も半導体が重し - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNRlN5WmZLM0t2WnBYdjVPRjNDdlRhVnZ5WVhYRDZIMy1aZWRTZFBhQXlOT0hkNjI3UWpqY210bGpQUEpibnZkR2F0WWx0ZXdvZFRwbUpiUkJRd3BtVXc1MjFFYThDM25oZUVnMGdKVThRSjhzaTFSWkE4ZWJmZC1Xc0VqSGFPWXfSAYwBQVVfeXFMT2I3NEtrVDdVSV84ZlFPWUo0dkowU3BFOXNSQmNMUUNZbG9Za2ZTU3ZzRnZLeXdpVjA5M1BGaV9LYWlNSG54d3lJNkM5Y2VRMzMxaVUtMXB2aWxiUEdCUkFqRzZ5YzZ3NzNmZ0pKemtYcHFRUnNmaFBFRmJsbEs3OFFlejI4MnZKeVF5SU8?oc=5",
+        "published": "Mon, 27 Jul 2026 23:06:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "米国株式市場はまちまち、対イラン和平交渉や原油安を好感も半導体が重し - まぐまぐ",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1oYUxsdkhiN3lfT1hHaXo1UnE2U2JVNVJWUG94WDRESV9aYXVxY3E5eld5bzhyVlpXQTN2UUVlM3F1MnZ1OWVwNkg3ZUpTVmhhN1HSAVJBVV95cUxNaGFMbHZIYjd5X09YR2l6NVJxNlNiVTVSVlBveFg0RElfWmF1cWNxOXpXeW84clZaV0EzdlFFZTNxdTJ2dTllcDZIN2VKU1ZoYTdR?oc=5",
+        "published": "Tue, 28 Jul 2026 08:06:03 GMT",
+        "publisher": "まぐまぐ"
+      },
+      {
+        "title": "27日のNY市場はまちまち - まぐまぐ",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5KVVVNVWRQMWVzWmdVdUdKSlJRWWJiVXpRODBrM29fRXZRVFZlR0tZZHNsSmhLRmJJR1JLZEIwdzdIcHR1blVGbnJHd2RYdWxFMFHSAVJBVV95cUxOSlVVTVVkUDFlc1pnVXVHSkpSUVliYlV6UTgwazNvX0V2UVRWZUdLWWRzbEpoS0ZiSUdSS2RCMHc3SHB0dW5VRm5yR3dkWHVsRTBR?oc=5",
+        "published": "Tue, 28 Jul 2026 08:10:47 GMT",
+        "publisher": "まぐまぐ"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "中期経営計画における財務目標の修正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538305.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "代表執行役の異動について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260305576744.pdf",
+        "date": "2026-03-05 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260302573608.pdf",
+        "date": "2026-03-02 16:00:00"
+      }
+    ]
+  }
+}

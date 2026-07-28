@@ -1,0 +1,217 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-07-29T08:03:49+09:00",
+  "price_as_of": "2026-07-28",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 14,
+    "reasons": [
+      {
+        "reason": "直近（2026年7月22日）にbuyシグナルが出されているため、ルールに基づき新規エントリーは見送り継続監視とする。",
+        "evidence": "reference.recent_buy.date=2026-07-22"
+      },
+      {
+        "reason": "ファンダメンタルズ評価がneutral（strength=60）であり、買発火条件であるbullishかつstrength≥70を満たしていない。",
+        "evidence": "fundamental_view.stance=neutral (strength=60)"
+      },
+      {
+        "reason": "テクニカル面でも短期の25日線回復が見られるものの、中期トレンドの弱さや市場の地合い悪化によりneutral（strength=50）にとどまっている。",
+        "evidence": "technical_view.stance=neutral (strength=50)"
+      }
+    ],
+    "risks": [
+      "2026年7月30日〜31日に開催される日銀金融政策決定会合に伴う為替・金利変動リスク",
+      "2026年8月3日に予定されている第1四半期決算発表での業績進捗リスク",
+      "市場全体がdowntrend（下落相場）に位置することによる連れ安リスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 14,\n \"reasons\": [\n  {\n   \"reason\": \"直近（2026年7月22日）にbuyシグナルが出されているため、ルールに基づき新規エントリーは見送り継続監視とする。\",\n   \"evidence\": \"reference.recent_buy.date=2026-07-22\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ評価がneutral（strength=60）であり、買発火条件であるbullishかつstrength≥70を満たしていない。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=60)\"\n  },\n  {\n   \"reason\": \"テクニカル面でも短期の25日線回復が見られるものの、中期トレンドの弱さや市場の地合い悪化によりneutral（strength=50）にとどまっている。\",\n   \"evidence\": \"technical_view.stance=neutral (strength=50)\"\n  }\n ],\n \"risks\": [\n  \"2026年7月30日〜31日に開催される日銀金融政策決定会合に伴う為替・金利変動リスク\",\n  \"2026年8月3日に予定されている第1四半期決算発表での業績進捗リスク\",\n  \"市場全体がdowntrend（下落相場）に位置することによる連れ安リスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "短期的なテクニカル指標の改善により25日移動平均線を回復しているものの、中期的な下落トレンドと市場全体の地合い悪化が重石となり、見通しは拮抗している。",
+      "points": [
+        {
+          "point": "MACDがシグナルを上回りゴールデンクロスを維持。ヒストグラムもプラス圏で拡大しており、短期的な反転の勢いを示唆している。",
+          "evidence": "price_technical.macd=85.89, price_technical.macd_signal=42.42, price_technical.macd_histogram=43.46"
+        },
+        {
+          "point": "株価が25日移動平均線を明確に上抜けて推移しており、テクニカル的な下値の切り上がりが確認できる。",
+          "evidence": "price_technical.last_close=4776.0, price_technical.sma25=4546.76"
+        },
+        {
+          "point": "中期トレンドを示す60日騰落率および対TOPIX相対騰落率がともにマイナスであり、依然として中期的な弱気局面の中に位置している。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-2.79, price_technical.trend_60d.relative_to_topix_60d_pct=-6.01"
+        },
+        {
+          "point": "直近2営業日は連続で下落しており、市場全体の地合い（downtrend判定）に押される形で短期的な調整局面に入っている。",
+          "evidence": "price_technical.recent_5_days[4].change_pct=-1.46, macro.market_regime.market_regime=\"downtrend\""
+        }
+      ],
+      "cautions": [
+        "TOPIXが25日線を下回るdowntrendレジームにあり、市場全体の売り圧力に連れ安するリスクが高い。",
+        "前夜のNY市場でADRは上昇しているものの、エネルギーセクターETF(XLE)が下落しており、寄り付き後の方向感に注意が必要。",
+        "直近の高値（4972.0円）付近には戻り売り圧力が存在し、上値を抑えられる可能性がある。"
+      ],
+      "key_levels": {
+        "support": 4546.76,
+        "resistance": 4972.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "直近の通期決算で純利益が15%を超える減益となっており、収益性の鈍化が懸念される。PER22倍台という水準には成長期待が織り込まれており、数日後の決算発表と日銀会合を控えてリスク回避姿勢を優先すべき局面である。",
+      "points": [
+        {
+          "point": "2026年3月期の連結純利益が8,005億円と、前期（9,507億円）から15.8%の減益となっており、業績のピークアウトが鮮明になっている。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "市場環境がdowntrendに判定されており、TOPIX連動ETFが25日移動平均線を下回るなど、マクロ的なセンチメントが悪化している。",
+          "evidence": "macro.market_regime"
+        },
+        {
+          "point": "直近2週間以内に特定子会社の異動（7/15）やAI活用のニュース（7/28）があるが、いずれも短中期の業績を劇的に押し上げる材料としては不十分である。",
+          "evidence": "disclosures, news"
+        }
+      ],
+      "cautions": [
+        "2026年8月3日に控える第1四半期決算発表。通期予想に対する進捗率次第で株価が大きく変動するリスクがある。",
+        "2026年7月30日〜31日の日銀金融政策決定会合。金利上昇に伴う為替の円高振れは、商社の海外利益を円建てで目減りさせる要因となる。",
+        "中小企業景況調査（公庫DI）において仕入価格DIと販売価格DIの差が大きく、国内コストの価格転嫁が依然として厳しい環境にあること。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-22",
+    "days_ago": 7,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "三菱商事、AIで磨く「攻めの法務」 契約・投資の盲点を洗い出す - 日経クロステック",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE53OVp3dVI2WC1wTEtWMllJdm9Md1k3NElhclNCaFZ1aU9md1NSNnlpWU1jRjFjWnBmOVYxVFVZenRWbGtJVFA0ZkoxOFEtempLMkxScHQ4Ulp0R1dRZDY1eVRXRjdsRGNBZlBIRQ?oc=5",
+        "published": "Tue, 28 Jul 2026 20:00:00 GMT",
+        "publisher": "日経クロステック"
+      },
+      {
+        "title": "韓国株急落、10％超安 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNc1VGejdsUjg2M0stV3VlSW1EQXJZdS1nNExoU255UklIVUFRM0lKVlBTZUhHUXFmM1ZoanBFTHRCeTdnMnRvQXdCSmNzekpoaTVtR1l2ZzlzTFphRUk3NHJwZVkwVGJQQmF6eXdGdlFBUTZBR2IxRk5Sa3U4enJlYmpCNXY2UUxiZlZEZlV4OXhoeDDSAZMBQVVfeXFMTXNVRno3bFI4NjNLLVd1ZUltREFyWXUtZzRMaFNueVJJSFVBUTNJSlZQU2VIR1FxZjNWaGpwRUx0Qnk3ZzJ0b0F3Qkpjc3pKaGk1bUdZdmc5c0xaYUVJNzRycGVZMFRiUEJhenl3RnZRQVE2QUdiMUZOUmt1OHpyZWJqQjV2NlFMYmZWRGZVeDl4aHgw?oc=5",
+        "published": "Tue, 28 Jul 2026 07:51:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "東証反落、終値は6万2364円　AI関連株など売られる - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOVUJZSU5ONlRaX0pXZmlWRFU0UmtOQ1FGa1pRbHlqWjhXX3E4bWY3a25takIxdTRoRmlmRWpIVUtzekl1b25GV0pGNWxQdUUxTHFuUVcxSC1aNFpHdHhlMlFPVjhEWFB5VEV3bGZ4d1Z6R2dvMG1iYWl3RjZFOGFLTVNiYnVpWE05azVDSHJDT0I4ajjSAZMBQVVfeXFMTlVCWUlOTjZUWl9KV2ZpVkRVNFJrTkNRRmtaUWx5alo4V19xOG1mN2tubWpCMXU0aEZpZkVqSFVLc3pJdW9uRldKRjVsUHVFMUxxblFXMUgtWjRaR3R4ZTJRT1Y4RFhQeVRFd2xmeHdWekdnbzBtYmFpd0Y2RThhS01TYmJ1aVhNOWs1Q0hyQ09COGo4?oc=5",
+        "published": "Tue, 28 Jul 2026 06:44:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "信金中金、稚内信金に200億円の支援検討 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQSXhaQUktTzlaT285R002U1Q1Ql80WmdIZ3ZJZVJjT05fYlRqck5CNGtfODhpTlZEeHNCMmZjZzNWd2ZBbVVuU0tLM3VKd0pwb2FjLW5MQ29peFkta1VKWW9iRHFBZHJoVllSY2lCRXU2ZVhvckRmYldNbkEwY2t2MWVGMGtTcUlpQXZXRnVMTXNMUknSAZMBQVVfeXFMUEl4WkFJLU85Wk9vOUdNNlNUNUJfNFpnSGd2SWVSY09OX2JUanJOQjRrXzg4aU5WRHhzQjJmY2czVndmQW1VblNLSzN1SndKcG9hYy1uTENvaXhZLWtVSllvYkRxQWRyaFZZUmNpQkV1NmVYb3JEZmJXTW5BMGNrdjFlRjBrU3FJaUF2V0Z1TE1zTFJJ?oc=5",
+        "published": "Tue, 28 Jul 2026 08:11:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "【新幹線情報】熊本で発生した地震の影響　東海道・山陽新幹線で一部遅れが発生 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZzFBNjVVQ3RNazJqRW1ZWWpYUi01dXVXeW0xWVhrN1lyOG9aeExQMmxRUjd4blpuaGRkTWw5SzZEb0pBbFZCSVdzVktjaVh1UGJQVWJHOUdjT3BTTHRmUWNYT2xTWS1OeTd4SzBBSHl1QkJMamxzVTRfUmdTc0xNM09hQU3SAYQBQVVfeXFMTmcxQTY1VUN0TWsyakVtWVlqWFItNXV1V3ltMVlYazdZcjhvWnhMUDJsUVI3eG5abmhkZE1sOUs2RG9KQWxWQklXc1ZLY2lYdVBiUFViRzlHY09wU0x0ZlFjWE9sU1ktTnk3eEswQUh5dUJCTGpsc1U0X1JnU3NMTTNPYUFN?oc=5",
+        "published": "Tue, 28 Jul 2026 07:51:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "シンプレクス・アセット・マネジメント株式会社が株式会社TMH＜280A＞株式の変更報告書を提出 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOS2VjanpudWdjenJ1TGk2RGQ5S3BUX2o0TXNLWlhjYnQtaE01WjV5dlI2cTE4eHFHUDRESGYwcC1QcmF1T1BPU05nV18wXzFoUUhqeVp0RDRNbnlBUEhuSWJtYWMzY1VUQTA5d1U5NHpQVzFoSjkxd25KRDJXQUFlNjJuOFdtTTlCNlHSAYoBQVVfeXFMTktlY2p6bnVnY3pydUxpNkRkOUtwVF9qNE1zS1pYY2J0LWhNNVo1eXZSNnExOHhxR1A0REhmMHAtUHJhdU9QT1NOZ1dfMF8xaFFIanladEQ0TW55QVBIbklibWFjM2NVVEEwOXdVOTR6UFcxaEo5MXduSkQyV0FBZTYybjhXbU05QjZR?oc=5",
+        "published": "Tue, 28 Jul 2026 08:01:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "TSMC「熊本工場の状況確認中」 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNbTBmNzB1aHdmZnhQUHltSnRMZS1OZGc2Sm1PdUUtT2xMVHpvSHl5TTBHNE9aWEJvNWw5SDlOWUh6blRXVGxjekFrR3J2ZFZXLWMzdVNUaVFzWnNsend3alo5QlZycVI3eVpiY3pkWmxhVGpDS1BFQmpqLURFRmlBM0d1QWdxREFLWmJKRXdxUFVyeEXSAZMBQVVfeXFMTW0wZjcwdWh3ZmZ4UFB5bUp0TGUtTmRnNkptT3VFLU9sTFR6b0h5eU0wRzRPWlhCbzVsOUg5TllIem5UV1RsY3pBa0dydmRWVy1jM3VTVGlRc1pzbHp3d2paOUJWcnFSN3laYmN6ZFpsYVRqQ0tQRUJqai1ERUZpQTNHdUFncURBS1piSkV3cVBVcnhF?oc=5",
+        "published": "Tue, 28 Jul 2026 07:51:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "香港ファンドのオアシス、アインＨＤ株を買い増し　18.75％に - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNSmt0d2NfeDFoa05jR3dqVHdWQmtuVm9oeDg0ckFYekxjTTByYjRmajQ3TlJndlgxal9nLTRJWUNzdHdMZ05iUVJaWHpGVUhhT3plZWRMWG5EZmozeXlvUzNlNE1lOElnMTNzTjQxMDh5VGR2Q2ZiekVqVmNSSTNtTFl2WTZRYkHSAYcBQVVfeXFMTUprdHdjX3gxaGtOY0d3alR3VkJrblZvaHg4NHJBWHpMY00wcmI0Zmo0N05SZ3ZYMWpfZy00SVlDc3R3TGdOYlFSWlh6RlVIYU96ZWVkTFhuRGZqM3l5b1MzZTRNZThJZzEzc040MTA4eVRkdkNmYnpFalZjUkkzbUxZdlk2UWJB?oc=5",
+        "published": "Tue, 28 Jul 2026 07:25:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "スクリン、今期純利益予想を50億円上方修正　市場予想とほぼ同水準 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQYm41YnZzNHlWNHZMTVVzbkFFT21EUkdrdkNnWjYyYjNMcGJZMDlDSXRGNjhaTE1tcExxcEoyc0VXbmlDU1B6SVNDNUgzQlNKZ2RZUmJtc01JOVEwSUhzZWVscnYyaEhvT3VsaTVQOF9yY1VuOFNJYlRFTkh6ZlVCaW5tbFVMcUHSAYcBQVVfeXFMUGJuNWJ2czR5VjR2TE1Vc25BRU9tRFJHa3ZDZ1o2MmIzTHBiWTA5Q0l0RjY4WkxNbXBMcXBKMnNFV25pQ1NQeklTQzVIM0JTSmdkWVJibXNNSTlRMElIc2VlbHJ2MmhIb091bGk1UDhfcmNVbjhTSWJURU5IemZVQmlubWxVTHFB?oc=5",
+        "published": "Tue, 28 Jul 2026 06:50:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "株式会社JCCが株式会社FUNDINNO＜462A＞株式の変更報告書を提出 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNUVlOREdVX3RCXy1DQ05odkFwOU52bkVRaW9wblN1Rm9XbndNMjFpaDRzZVc4SWJIa1NxTFZ2clVvZVp1MmdTRkpMb2hiZGVtd1FXMGNGT0EzVktqMmh4OGJtWXVvVzZTSV8za2F6dGFYOEY3emJBb2xZRWNuanA3UnB4VkNKczMtaVHSAYoBQVVfeXFMTVFZTkRHVV90Ql8tQ0NOaHZBcDlOdm5FUWlvcG5TdUZvV253TTIxaWg0c2VXOEliSGtTcUxWdnJVb2VadTJnU0ZKTG9oYmRlbXdRVzBjRk9BM1ZLajJoeDhibVl1b1c2U0lfM2thenRhWDhGN3piQW9sWUVjbmpwN1JweFZDSnMzLWlR?oc=5",
+        "published": "Tue, 28 Jul 2026 05:59:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "特定子会社の異動（子会社の特定子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260714593288.pdf",
+        "date": "2026-07-15 10:00:00"
+      },
+      {
+        "title": "子会社間の合併及び特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552595.pdf",
+        "date": "2026-05-29 09:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C2プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539898.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C3プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539905.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C4プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539910.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C5プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539918.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C6プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539939.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515679.pdf",
+        "date": "2026-05-01 14:00:00"
+      },
+      {
+        "title": "通期個別業績と前期実績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515675.pdf",
+        "date": "2026-05-01 14:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260416505643.pdf",
+        "date": "2026-04-17 14:00:00"
+      }
+    ]
+  }
+}

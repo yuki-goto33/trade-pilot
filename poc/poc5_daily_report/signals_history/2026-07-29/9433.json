@@ -1,0 +1,208 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-07-29T08:02:54+09:00",
+  "price_as_of": "2026-07-28",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家がneutral（strength=55）であり、日銀会合や決算発表などの大型イベントを前に慎重姿勢を維持しているため、buyの必須条件を満たしません。",
+        "evidence": "fundamental_view.stance=neutral, fundamental_view.strength=55, reference.next_boj_meeting=2026-07-30〜2026-07-31"
+      },
+      {
+        "reason": "テクニカル面では強気（strength=75）ですが、RSIが80を超える過熱圏にあり、市場レジームもdowntrendであることから、現状での追随買いはリスクが高いと判断されます。",
+        "evidence": "technical_view.cautions[0]: RSI14=80.1, reference.market_regime=\"downtrend\""
+      },
+      {
+        "reason": "ルールに基づき、テクニカルが既にbullishとなっている局面は材料が織り込み済みである可能性が高く、最適なエントリータイミングではないと判断します。",
+        "evidence": "統合判断のルール1（テクニカルもbullishの場合はhold）"
+      }
+    ],
+    "risks": [
+      "2026年7月30日から始まる日銀金融政策決定会合による為替・金利変動および市場全体のボラティリティ上昇",
+      "2026年8月7日に予定されている第1四半期決算発表に伴う業績評価の不透明感",
+      "RSIが80を超えていることによる短期的な利益確定売りの発生",
+      "TOPIXが25日線を下回る下落レジームに伴う、銘柄固有の好材料を打ち消す地合い悪化リスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家がneutral（strength=55）であり、日銀会合や決算発表などの大型イベントを前に慎重姿勢を維持しているため、buyの必須条件を満たしません。\",\n   \"evidence\": \"fundamental_view.stance=neutral, fundamental_view.strength=55, reference.next_boj_meeting=2026-07-30〜2026-07-31\"\n  },\n  {\n   \"reason\": \"テクニカル面では強気（strength=75）ですが、RSIが80を超える過熱圏にあり、市場レジームもdowntrendであることから、現状での追随買いはリスクが高いと判断されます。\",\n   \"evidence\": \"technical_view.cautions[0]: RSI14=80.1, reference.market_regime=\\\"downtrend\\\"\"\n  },\n  {\n   \"reason\": \"ルールに基づき、テクニカルが既にbullishとなっている局面は材料が織り込み済みである可能性が高く、最適なエントリータイミングではないと判断します。\",\n   \"evidence\": \"統合判断のルール1（テクニカルもbullishの場合はhold）\"\n  }\n ],\n \"risks\": [\n  \"2026年7月30日から始まる日銀金融政策決定会合による為替・金利変動および市場全体のボラティリティ上昇\",\n  \"2026年8月7日に予定されている第1四半期決算発表に伴う業績評価の不透明感\",\n  \"RSIが80を超えていることによる短期的な利益確定売りの発生\",\n  \"TOPIXが25日線を下回る下落レジームに伴う、銘柄固有の好材料を打ち消す地合い悪化リスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "移動平均線のゴールデンクロスやMACDの陽転に加え、60日騰落率も良好で強力な上昇トレンドが続いています。全体相場の調整を跳ね返す強さが見られますが、RSIが80を超えており短期的な過熱感からの押し目形成には注意が必要です。",
+      "points": [
+        {
+          "point": "移動平均線がゴールデンクロスを維持し、MACDヒストグラムも拡大傾向で短期・中期のテクニカル指標が強い上昇トレンドを示しています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\", price_technical.macd_histogram=15.61, price_technical.trend_60d.change_60d_pct=16.03"
+        },
+        {
+          "point": "直近3営業日連続で伸長し、TOPIXが下落レジームにある中で逆行高となる強いモメンタムを維持しています。",
+          "evidence": "price_technical.recent_5_days (2026-07-28 close=2993.0, change_pct=1.35), macro.market_regime.market_regime=\"downtrend\""
+        },
+        {
+          "point": "前夜の米国市場においてADRおよび通信サービスセクターETFがともに上昇しており、短期的な買い圧力が支援材料となります。",
+          "evidence": "us_overnight.adr.change_1d_pct=1.45, us_overnight.sector_proxy.change_1d_pct=1.87"
+        }
+      ],
+      "cautions": [
+        "RSI14が80.1と一般的な過熱水準（80以上）に達しており、短期的な利益確定売りに押されるリスクがあります。",
+        "TOPIXなど全体の市場レジームが下落トレンド（downtrend）にあるため、相場全体の売り圧力に連れ安する可能性があります。",
+        "前夜NYでのADR上昇効果は寄り付き価格に織り込まれ、寄り付き後に材料出尽くしとなる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 2922.9,
+        "resistance": 3023.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "通期業績の着実な成長や新規AIサービスの展開など好材料は見られるものの、日銀金融政策決定会合や第1四半期決算発表などの大型イベントを直前に控え、方向感が出にくい状況です。",
+      "points": [
+        {
+          "point": "2026年3月期通期決算で売上高60,719億円、純利益7,071億円（EPS 183.55円）と、前期比で増収および純利益の拡大を達成しており、業績基盤は底堅く推移しています。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "2026年7月28日に専門メディアと連携した対話型AIサービス「Buffmee」の提供開始を発表するなど、新規サービスや技術開発に向けた前向きな取り組みが確認できます。",
+          "evidence": "news.headlines[0].published=Tue, 28 Jul 2026 01:00:01 GMT"
+        },
+        {
+          "point": "サービス業PMI（51.9）や日銀短観の大企業非製造業DI（37.0）が示す通り、主力の通信・サービス関連事業を取り巻く国内のマクロ事業環境は拡大圏を維持しています。",
+          "evidence": "macro.japan_pmi.services.latest_value=51.9, macro.boj.tankan.di.large_nonmanufacturing.current_di=37.0"
+        }
+      ],
+      "cautions": [
+        "2026年7月30日〜31日に日銀金融政策決定会合（残り1日）、2026年8月7日に次回決算発表を控えており、通過までのイベントリスクやボラティリティの上昇に注意が必要です。",
+        "2026年6月25日に「財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ」が提出されており、ガバナンス面での注意が必要です。",
+        "TOPIX連動ETFが25日線を下回り市場レジームがdowntrendとなっているため、株式市場全体の地合い悪化による連安リスクがあります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "出版・専門メディアと連携し、信頼性の高い情報と対話できるAIサービス「Buffmee（バフミー）」提供開始 - KDDI ニュースルーム",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1CaUtNS2VmZWYwaV9WQmRuZk5ZenJIWlphcmFuMUIxa1Bta3FzZEVnVFRUblJuaTlOLUJZSG1VaS03d0tJekJhdEJpUjRCWFpGbkFic2hMNWlOa3lCVk9qU050aHFBbGZ0STJBTw?oc=5",
+        "published": "Tue, 28 Jul 2026 01:00:01 GMT",
+        "publisher": "KDDI ニュースルーム"
+      },
+      {
+        "title": "熊本県の地震を受け「JAPANローミング」開始、ドコモ・KDDIユーザー向け - ケータイ Watch",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9aRFotMkNYNThBVHdTb01tQzhGcklJdEx4WFVfb2FGRmVTLWZjVGhNbjg5cFBpTFl3LWlqSEkxRktmVmxGdWlKV3hOU18yZFV2TzJwZl9FcjNUYlhQT2dhX01iSFpWa1k?oc=5",
+        "published": "Tue, 28 Jul 2026 11:21:40 GMT",
+        "publisher": "ケータイ Watch"
+      },
+      {
+        "title": "KDDI 熊本地震でJAPANローミングを開始 他社回線で通信を可能に（テレビ朝日系（ANN）） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBiZ2t1TElnRU9XQ2VyNFAxVmZqdTZvYmxzVEQtb2x4QUFUZV8yNG8wLVg5Z3RjbFJKNGowOGRQS1ZHYzBhaGJNZEdZRHZ6ZS0xTWlhaUNPQ19POXdGOHlJUnZ0U0FtX3JCaEw3dDFNSC1ma3lIT1dIV1VTd2RUUjQ?oc=5",
+        "published": "Tue, 28 Jul 2026 11:51:57 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "KDDIの対話型AIサービス「Buffmee」へ、「NewsPicks Select」の作品を提供開始。 AI技術と信頼性の高い経済コンテンツが融合し、学びの体験を共創 - NewsPicks | 株式会社ユーザベース | Uzabase,Inc. - NewsPicks",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFAySXpQZG1DSlBFMWc1eUJXT0ZUQTRNYWsxWGZ1ODRiczJuWWdmNTFVTndmVGNIZjNBWVd2bGliWlAwUVdnZVJTcVN6RnBjakhRWGc?oc=5",
+        "published": "Tue, 28 Jul 2026 04:03:27 GMT",
+        "publisher": "NewsPicks"
+      },
+      {
+        "title": "KDDI、コンテンツのAI検索アプリ提供 報道機関や出版社30社提携 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1pQkY0REQ3cEpUM3JkRFhrWVNoMEJnYzdLUUxYZm56TmNoY3RIVlRsLU9sQzNjdURIREJJSzZXaEFoYmtDNEVHblA4c1FXOXUyS0ZQMlN0eGFhSGREc1Q0b0lPNU1INEJuVVFKXw?oc=5",
+        "published": "Tue, 28 Jul 2026 06:27:38 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "KDDIら、XRを用いたLBEコンテンツの流通促進を目指すコンソーシアム「LBEC」を発足 - ビジネスネットワーク",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE0tajRLLUY1emp6Vm5EdENXR2Y3bzl3Mk93TkJ0T0NVOHIteFdwZHpZV25MaEJJZ1pzZXNqd0tjLS1VbEZ6Mm8tUm1qN0U0ZjRJZGhR?oc=5",
+        "published": "Tue, 28 Jul 2026 06:04:00 GMT",
+        "publisher": "ビジネスネットワーク"
+      },
+      {
+        "title": "KDDI、信頼性高い情報と対話できるAIサービス 出版・メディア連携 - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE50d0UxZHVrWTFMMTNWMENGTENmSXBQYVd0aXh4RGVGVkx3cWx0WDFhVW1GQTZkWnFyUG5BX096MkF2S21Bcmh5dXdQblY1TUpoZUZWN3Rqd2c4R2M?oc=5",
+        "published": "Tue, 28 Jul 2026 08:00:00 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "KDDI提携。「Google AI Futures Fund」日本のスタートアップ支援拡大 - jetstream.blog",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1MUUNfeXhiMm9wNTR0R3RxZ2FTT2lkOGRrenZIVUVGLXNOT1g1c2VaMUJ3Yk9MWkNpUG1iUF9oMVRadVE0eHVFV3hnMy1uUk5rS0t2VC1YeTNiNHdlYndFbUlUVmtkdlFtdGc5Q0k2VXdBdm5kRlVaQjl2dGpZVEE?oc=5",
+        "published": "Tue, 28 Jul 2026 22:15:40 GMT",
+        "publisher": "jetstream.blog"
+      },
+      {
+        "title": "熊本で非常時Wi-Fi「00000JAPAN」発動中 KDDIが無料開放、他社ユーザーも利用可 - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB3S0Z3aFAtc2VpZHM5WXNQYUFsamRJR2UxMktQdjRrOU1PS0hsRzJCdXVxSGZlRlQ2b3MtRThid0ZLR1BIRk82SFJGUGV5ckZ1dmpHTDU3VW9CSWt2OWwzZHZKZlJJbEktaWc?oc=5",
+        "published": "Tue, 28 Jul 2026 13:03:11 GMT",
+        "publisher": "ITmedia"
+      },
+      {
+        "title": "XRを用いたLBEコンテンツ市場の形成と流通促進を目指すコンソーシアム「LBEC」を発足 - KDDI ニュースルーム",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBOWUlvcTdpaTRxZExrYTlTS2VjVVFzUzN5STFpcll4Q3JzaWlwU1k5Zkw1TGx2aHV0X3M2T2N1YnltYnZTWVBYdENyeHZhXzRKSHk4bTNzdmlmYnVyNEswT2dRRGRRSTV3WFdxbg?oc=5",
+        "published": "Tue, 28 Jul 2026 05:30:00 GMT",
+        "publisher": "KDDI ニュースルーム"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      },
+      {
+        "title": "東京証券取引所への「改善報告書」の提出に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559424.pdf",
+        "date": "2026-06-02 16:00:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（中期経営戦略）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524146.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "auフィナンシャルホールディングス株式会社の東京証券取引所への株式上場準備の開始について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524156.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "2026年３月期　決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511523545.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524005.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524010.pdf",
+        "date": "2026-05-12 15:45:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "code": "4063",
+  "name": "信越化学工業",
+  "generated_at": "2026-07-29T08:02:15+09:00",
+  "price_as_of": "2026-07-28",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ・テクニカルともに強固な弱気見解ですが、株価は既に25日移動平均線から16.8%乖離して大幅下落しており、遅れでの追撃売りを避けるため様子見（hold）とします。",
+        "evidence": "technical_view.stance=bearish (strength=95), fundamental_view.stance=bearish (strength=75), reference.last_close=5872.0, reference.sma25=7055.56"
+      },
+      {
+        "reason": "通期業績予想がコンセンサスを下回るネガティブサプライズとなり、塩化ビニル樹脂市況の悪化や目標株価引き下げが上値を重くしています。",
+        "evidence": "fundamental_view.points[0]: 2027年3月期通期の業績予想が市場予想を下回り、ネガティブ・サプライズとして売り材料視された"
+      },
+      {
+        "reason": "短期・中期ともに強い下落トレンドにあり、5日線・25日線を大幅に下回る崩落局面で下落モメンタムが加速しています。",
+        "evidence": "technical_view.points[1]: 5日線および25日線を大幅に下回る乖離の激しい推移, technical_view.points[2]: macd=-222.95"
+      }
+    ],
+    "risks": [
+      "2026年7月30〜31日に日銀金融政策決定会合を控えており、政策変更や為替変動により相場全体が急変するリスクがあります。",
+      "RSIが30.2まで低下しており、売られすぎによる短期的な自律反発（寄り底等）が発生する可能性があります。",
+      "SOX指数の大幅安など米半導体・関連セクターの弱気地合いが長引き、さらなる下値模索が続くリスクがあります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ・テクニカルともに強固な弱気見解ですが、株価は既に25日移動平均線から16.8%乖離して大幅下落しており、遅れでの追撃売りを避けるため様子見（hold）とします。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=95), fundamental_view.stance=bearish (strength=75), reference.last_close=5872.0, reference.sma25=7055.56\"\n  },\n  {\n   \"reason\": \"通期業績予想がコンセンサスを下回るネガティブサプライズとなり、塩化ビニル樹脂市況の悪化や目標株価引き下げが上値を重くしています。\",\n   \"evidence\": \"fundamental_view.points[0]: 2027年3月期通期の業績予想が市場予想を下回り、ネガティブ・サプライズとして売り材料視された\"\n  },\n  {\n   \"reason\": \"短期・中期ともに強い下落トレンドにあり、5日線・25日線を大幅に下回る崩落局面で下落モメンタムが加速しています。\",\n   \"evidence\": \"technical_view.points[1]: 5日線および25日線を大幅に下回る乖離の激しい推移, technical_view.points[2]: macd=-222.95\"\n  }\n ],\n \"risks\": [\n  \"2026年7月30〜31日に日銀金融政策決定会合を控えており、政策変更や為替変動により相場全体が急変するリスクがあります。\",\n  \"RSIが30.2まで低下しており、売られすぎによる短期的な自律反発（寄り底等）が発生する可能性があります。\",\n  \"SOX指数の大幅安など米半導体・関連セクターの弱気地合いが長引き、さらなる下値模索が続くリスクがあります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 95,
+      "summary": "中期・短期ともに強い下落トレンドが継続しており、主要なテクニカル指標のすべてが深刻な弱気シグナルを発しています。前夜の米国市場での関連セクターの大幅安も重なり、底打ちの兆候は現時点で見られません。",
+      "points": [
+        {
+          "point": "中期下落トレンドが明確に継続しており、市場全体に対しても大幅な劣後が続いています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-17.07, relative_to_topix_60d_pct=-20.3"
+        },
+        {
+          "point": "短期的な価格の崩落が顕著であり、5日線および25日線を大幅に下回る乖離の激しい推移となっています。",
+          "evidence": "price_technical.last_close=5872.0, sma5=6553.0, sma25=7055.56, price_technical.recent_5_days[3].change_pct=-8.3"
+        },
+        {
+          "point": "MACDが強い拡散（デッドクロス拡大）を示しており、下落のモメンタムが加速しています。",
+          "evidence": "price_technical.macd=-222.95, price_technical.macd_histogram=-132.58"
+        },
+        {
+          "point": "前夜の米国市場で関連セクターETFおよびSOX指数が大幅に下落しており、寄り付きからさらなる売り圧力が想定されます。",
+          "evidence": "us_overnight.sox_index.change_1d_pct=-4.49, us_overnight.adr.change_1d_pct=-3.53"
+        },
+        {
+          "point": "市場レジーム自体が下落トレンドと判定されており、個別銘柄を買い支える地合いではありません。",
+          "evidence": "macro.market_regime.market_regime=downtrend"
+        }
+      ],
+      "cautions": [
+        "RSIが30.2まで低下しており「売られすぎ」による自律反発がいつ起きてもおかしくない水準ですが、MACDに反転の兆しがないため、安易な押し目買いはリスクが高いです。",
+        "前夜のADRとSOX指数の大幅安が当日の寄り付き価格に既に織り込まれた場合、寄り底となる可能性は否定できません。"
+      ],
+      "key_levels": {
+        "support": 5846.0,
+        "resistance": 6553.0
+      }
+    },
+    "fundamental": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "第1四半期決算での営業増益にもかかわらず、通期業績予想が市場コンセンサスを下回ったことが嫌気され、株価が急落。主力事業の塩化ビニル樹脂における海外市況の悪化と、相次ぐアナリストの目標株価引き下げにより、短期的には売り優勢の展開が予想されます。",
+      "points": [
+        {
+          "point": "2027年3月期通期の業績予想が市場予想を下回り、ネガティブ・サプライズとして売り材料視された。",
+          "evidence": "news.headlines[2], news.headlines[8]"
+        },
+        {
+          "point": "主力製品の一つである塩化ビニル樹脂（塩ビ）の海外市況が逆風となっており、通期見通しにおいて慎重姿勢が示されている。",
+          "evidence": "news.headlines[2], news.headlines[6]"
+        },
+        {
+          "point": "決算発表を受けて米系大手証券や国内証券が目標株価を引き下げており、投資判断の重石となっている。",
+          "evidence": "news.headlines[3], news.headlines[4]"
+        },
+        {
+          "point": "市場全体が25日移動平均線を下回るダウントレンドにあり、さらに日銀金融政策決定会合を直前に控えた不透明感が強い。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\", macro.boj.monetary_policy_meeting.days_until_next=1"
+        }
+      ],
+      "cautions": [
+        "AI半導体需要に伴う電子材料部門の牽引は継続しており、Q1営業益自体は4.2%増と底堅い（news.headlines[2]）",
+        "2026年7月24日に発表された自己株式取得（ToSTNeT-3）による需給の下支え（disclosures[2]）",
+        "ドル円163.85円水準の円安継続による輸出採算へのプラス寄与（macro.indices[2]）",
+        "次回の日銀会合の結果次第で、為替および株式市場全体が急変するリスク（macro.boj）"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": 9510.0
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "信越化学工業(株)【4063】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBCMUVleHI4RU5mbEV3UFVYeldVeTRiZXhXb2JrQUJfVk1EazRzMnpDZGo4LWdiUmxyUG5maGtaNlVHQThJVnVldl9ybjRSLW9FTHk2aGNYLWhQZE5sOEJZ?oc=5",
+        "published": "Tue, 28 Jul 2026 06:53:41 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "信越化学工業株式会社（東証：4063）の第1四半期決算が発表されたばかり：アナリストが今年についてどのような見通しを示しているか - simplywall.st",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQbnFOUHg2elY2TEJDMmJvX1h5dDd4NUp2aDItcW83b2o0RFp3cDQ5RmRwakkyM1BrRG9hWkpqeV9zQU9EZ1ZWRFR4WnhySlhNb1Uyd2RzSXNBNzVPblNVRTl0NFEzSlFNc1R1RkRtaF9FTGc0QVB0MFRRVHJlb1JodTcybVNnQ0JXU0U0bkF3VG1va2FUcVRYT1YzaHIwNUpyTXNN0gGoAUFVX3lxTE94c1QtalZlR2hPdDEzMFR6el9xdHBqQ1oyZGNWOFdseUpsV3JaR3hFaEg5c25aNEMwRTNmdEM0S3N2YXNDaTNwd2g2YnE5X25BczBiMEpnSGxjTzdwcEw4QmJVS3ROM01TRUdFM25mX1pQWEJQSm56cEVBOVVNbVdybUJFZnRVRDAyRHJhQ3ZNaFNEUEdBODZBUHhOc2JHUjJWQ3M3VUpfUQ?oc=5",
+        "published": "Tue, 28 Jul 2026 21:02:42 GMT",
+        "publisher": "simplywall.st"
+      },
+      {
+        "title": "【4063.T FY2026 Q1 決算説明会】AI半導体需要が電子材料牽引、1Q営業益4.2％増も通期予想は市場下回る―塩ビ海外市況の逆風響く - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE83aXdseFJ4N1AyWmxxQUNSWXRpQ2puQV9xN21PLU9mSUhLRjRVTmpUQXA1dTdKUzh3S3RMWkxiQk12ejVJQm1GRTU1T0dWSXlJdFBQckZwczZnazFxLVVR?oc=5",
+        "published": "Tue, 28 Jul 2026 07:55:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "【アナリスト評価】信越化学工業、レーティング強気を継続、目標株価9,510円に引下げ（米系大手証券）(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNQ3Z1VjMzX0hNYWpRMHBHdm5rZ0VnYUgzMmJSUWVfRlFiNE1tMWZMUHdkZDg4WHM5YkVwTFVkLVlJSk8wQklSTHFSSFc1cUdTbXc4Q202Ry1CV0RJaTdhVDloWE9BVmFsWUpraHJDc1BTaEp2cUFER3dSc05Zd1Q0VEtQX2l5Szg?oc=5",
+        "published": "Tue, 28 Jul 2026 02:07:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "信越化学工業－岩井コスモが目標株価引き下げ 力強さを取り戻す時期が読みづらい〔DZH 個別株情報〕(時事通信) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQQzlQbXliMU5lSV9MdzNBcWZQdElTQXdvT1ZMUFUyblZ1X2duTldmLTg1QXA3WHZlWUJfYngtZnktQ3lkbHJXTjlrYldRQUtKWXUzTmFJazRkemF0bHlWckVlT04yUm9KREsxTm1XXzhGcFoxYVo2TGxtM0hURDl4VDRKZ1B4WWs?oc=5",
+        "published": "Tue, 28 Jul 2026 00:57:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "マーケット速報 - 神戸新聞",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOeG1nM3ZrX3I4VWduYXZiRDA1c3FtY0ZDSGpka1UzR2twaVRISDFmNGRlRHk0Tkt2cGxPNW5YY29EaGZRWnlBblc1eVpHY0ZUamNHeTQtUmRYeEplcFJjckpQZGMyNXhjTjBaM3hGU0hmWko2UzNLeFBQOVExTjlsTzRwcmctc2pBdVd1ZnZaVGo2TlhQU2ZBZkxER1dNMXhHTTUyQnY1US0xeXFmOHRWeFkxcGdBcUlL?oc=5",
+        "published": "Tue, 28 Jul 2026 01:17:54 GMT",
+        "publisher": "神戸新聞"
+      },
+      {
+        "title": "塩ビ樹脂の市況慎重視…信越化学、通期見通しの中身 - ニュースイッチ by 日刊工業新聞社",
+        "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE1kb29WVFFvQzZ0RmZlZEVCb0dUdUsyY1RzYzRtR3dHUDdXUXdyblBLRENOOWp3dG0zRU1hREdkTTFOUQ?oc=5",
+        "published": "Tue, 28 Jul 2026 03:08:02 GMT",
+        "publisher": "ニュースイッチ by 日刊工業新聞社"
+      },
+      {
+        "title": "米国株式市場はまちまち、対イラン和平交渉や原油安を好感も半導体が重し - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPYjc0S2tUN1VJXzhmUU9ZSjR2SjBTcEU5c1JCY0xRQ1lsb1lrZlNTdnNGdkt5d2lWMDkzUEZpX0thaU1Ibnh3eUk2QzljZVEzMzFpVS0xcHZpbGJQR0JSQWpHNnljNnc3M2ZnSkp6a1hwcVFSc2ZoUEVGYmxsSzc4UWV6Mjgydkp5UXlJT9IBjAFBVV95cUxPYjc0S2tUN1VJXzhmUU9ZSjR2SjBTcEU5c1JCY0xRQ1lsb1lrZlNTdnNGdkt5d2lWMDkzUEZpX0thaU1Ibnh3eUk2QzljZVEzMzFpVS0xcHZpbGJQR0JSQWpHNnljNnc3M2ZnSkp6a1hwcVFSc2ZoUEVGYmxsSzc4UWV6Mjgydkp5UXlJTw?oc=5",
+        "published": "Mon, 27 Jul 2026 23:06:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "信越化が急落、通期業績予想を売り材料視(ウエルスアドバイザー) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNSGM5ZmxSQ0JFc3FKR2lRdVF2bWhvWGpFSlBCUHM3Qzc5VXZFMXZuNkoteDhaZGl1T0h1eERsUkx1Y2ZybzBBNDYwR2pObFZEbnBmS3lXMVZ6ZUFNTGVfWjZVYkZOM0IxeHpmWlVETk5FeGdMSkFpWkJlanpUQzIzelJ5MjJyb3c?oc=5",
+        "published": "Tue, 28 Jul 2026 19:54:14 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "前場コメント No.6 信越化、美樹工業、マクニカＨＤ、ファンペップ、ソフトウェアサー、テックファーム(トレーダーズ・ウェブ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNb3V3R3NHYmtPN3U5U3k2bE4tTkZzb3c2WV9QTTVhWXF4NEZfcWxvazg4X2xpYWEzM3c1ckhweDdQcEJxazA3VExLRU0tTU9DOXUwcHdFTHhXLXM2WGNjNXJ0aEUzMTQ2dm8ycVBNdUhIdUtHZ0xsWHA5bENGd1NYVnFwTVNzNTA?oc=5",
+        "published": "Tue, 28 Jul 2026 02:30:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年３月期 第１四半期決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598954.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "業績予想および配当予想に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598982.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による自己株式の買付けに関するお知らせ（コミットメント型自己株式取得（FCSR）による自己株式取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598998.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573248.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260605563833.pdf",
+        "date": "2026-06-05 15:30:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541941.pdf",
+        "date": "2026-05-20 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541943.pdf",
+        "date": "2026-05-20 15:30:00"
+      },
+      {
+        "title": "一括取得型自己株式取得（Accelerated Share Repurchase）における事後調整完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541656.pdf",
+        "date": "2026-05-20 11:30:00"
+      },
+      {
+        "title": "2026年３月期決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260428512667.pdf",
+        "date": "2026-04-28 15:30:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260428512714.pdf",
+        "date": "2026-04-28 15:30:00"
+      }
+    ]
+  }
+}
