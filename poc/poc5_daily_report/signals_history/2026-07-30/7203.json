@@ -1,0 +1,208 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-07-30T08:03:00+09:00",
+  "price_as_of": "2026-07-29",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の見解がneutral（強さ50）であり、業績減益傾向や九州工場の稼働停止、決算・日銀会合前の警戒感から買い条件（bullishかつ強さ70以上）を満たしていません。",
+        "evidence": "fundamental_view.stance=neutral (strength=50), fundamental_view.points[0], fundamental_view.points[1]"
+      },
+      {
+        "reason": "テクニカル面では急騰を受けbullish（強さ80）ですが、モメンタum追随による織り込み済み高値掴みを防ぐ統合判定ルールに基づき、テクニカル強気・ファンダ中立の局面では様子見とします。",
+        "evidence": "technical_view.stance=bullish (strength=80), price_technical.last_close=3224.0"
+      },
+      {
+        "reason": "RSI14が75.1と短期的な過熱感を示しているほか、全体市場のレジームがdowntrendであるため、地合い悪化に伴う押し目形成リスクがあります。",
+        "evidence": "technical_view.cautions[0]: RSI14=75.1, reference.market_regime=downtrend"
+      }
+    ],
+    "risks": [
+      "2026年7月30日〜31日の日銀金融政策決定会合に伴う為替（ドル円）急変動やボラティリティ上昇リスク（reference.next_boj_meeting）",
+      "2026年8月4日の次回決算発表における業績下振れや通期見通し修正リスク（reference.next_earnings_date）",
+      "トヨタ自動車九州の3工場稼働停止が長期化した場合の生産・供給網への悪影響（fundamental_view.points[1]）",
+      "RSI14が75.1と高水準であることによる短期的利益確定売りの発生リスク（technical_view.cautions[0]）"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 50,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の見解がneutral（強さ50）であり、業績減益傾向や九州工場の稼働停止、決算・日銀会合前の警戒感から買い条件（bullishかつ強さ70以上）を満たしていません。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=50), fundamental_view.points[0], fundamental_view.points[1]\"\n  },\n  {\n   \"reason\": \"テクニカル面では急騰を受けbullish（強さ80）ですが、モメンタum追随による織り込み済み高値掴みを防ぐ統合判定ルールに基づき、テクニカル強気・ファンダ中立の局面では様子見とします。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=80), price_technical.last_close=3224.0\"\n  },\n  {\n   \"reason\": \"RSI14が75.1と短期的な過熱感を示しているほか、全体市場のレジームがdowntrendであるため、地合い悪化に伴う押し目形成リスクがあります。\",\n   \"evidence\": \"technical_view.cautions[0]: RSI14=75.1, reference.market_regime=downtrend\"\n  }\n ],\n \"risks\": [\n  \"2026年7月30日〜31日の日銀金融政策決定会合に伴う為替（ドル円）急変動やボラティリティ上昇リスク（reference.next_boj_meeting）\",\n  \"2026年8月4日の次回決算発表における業績下振れや通期見通し修正リスク（reference.next_earnings_date）\",\n  \"トヨタ自動車九州の3工場稼働停止が長期化した場合の生産・供給網への悪影響（fundamental_view.points[1]）\",\n  \"RSI14が75.1と高水準であることによる短期的利益確定売りの発生リスク（technical_view.cautions[0]）\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 80,
+      "summary": "大商いを伴う急騰によって移動平均線の上方を維持しており、MACDや中期トレンド指標も強い買いシグナルを示しています。",
+      "points": [
+        {
+          "point": "直近営業日に出来高6,000万株超の大商いを伴って+7.18%急騰し、5日線（3008.9円）および25日線（2866.36円）の上方に位置する強い形状です。",
+          "evidence": "price_technical.last_close=3224.0, price_technical.recent_5_days[4].change_pct=7.18, price_technical.recent_5_days[4].volume=61406300, price_technical.sma5=3008.9, price_technical.sma25=2866.36"
+        },
+        {
+          "point": "MACDが65.17、シグナルが38.7でゴールデンクロスを維持し、ヒストグラムが26.47へと拡大しており上値追いのモメンタムが強まっています。",
+          "evidence": "price_technical.macd=65.17, price_technical.macd_signal=38.7, price_technical.macd_histogram=26.47"
+        },
+        {
+          "point": "60営業日騰落率が+6.65%、対TOPIX相対騰落率が+1.37%と中期トレンドも良好で、前夜の米国ADRも+3.51%と上昇しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=6.65, price_technical.trend_60d.relative_to_topix_60d_pct=1.37, us_overnight.adr.change_1d_pct=3.51"
+        }
+      ],
+      "cautions": [
+        "RSI14が75.1と70を超える過熱感を示しており、短期的には利益確定売りによる押し目形成のリスクがあります。",
+        "全体市場のレジームがdowntrend判定（TOPIXが25日線を下回る状態）となっているため、市場全体の地合い悪化による下押し圧力に注意が必要です。",
+        "前夜ADRの上昇分は織り込み済みの可能性があり、寄り付き後の材料出尽くし感による伸び悩みに注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 2866.36,
+        "resistance": 3233.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "通期および直近四半期で減益傾向が続くなか、直近の九州工場稼働停止報道や直前に迫る日銀決定会合・決算発表などのイベントリスクが重なっており、見極めが必要な状況です。",
+      "points": [
+        {
+          "point": "2026年3月期の通期営業利益は37,662億円と前期比で減益となり、直近四半期（2026-03期）の営業利益も5,695億円へ減速するなど、業績トレンドは減益傾向にあります。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "直近ニュースにて地震等の影響からトヨタ自動車九州の3工場が稼働停止すると報じられており、短期的生産や供給網への懸念材料となっています。",
+          "evidence": "news.headlines[2].title, news.headlines[6].title"
+        },
+        {
+          "point": "7月の日本製造業PMIは54.7と景気拡大圏を維持しており、大企業製造業の業況判断DIも22.0と改善している点はマクロ的な下支え要因です。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.7, macro.boj.tankan.di.large_manufacturing.current_di=22.0"
+        }
+      ],
+      "cautions": [
+        "2026年7月30日〜31日に日銀金融政策決定会合が開催予定であり、政策金利や為替（ドル円）動向による短期的ボラティリティが高まるリスクがあります。",
+        "2026年8月4日に次回決算発表を控えており、通期進捗や業績見通しの変化による価格変動リスクが存在します。",
+        "九州工場の再停止期間が長期化した場合、生産計画の未達やコスト増につながる可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "【動画】トヨタ自動車の近健太社長「トヨタ東日本は第3の生産拠点以上の思い」＜インタビュー全文掲載 - 河北新報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE02WjNObU1NNVh6Q2hrWFR4UHJiS1VUc0ROdXFBeVVGZVdvbXhMT2JRRk9VRnhyTGlVX2Z3VklmelFiU0NXd05PVDFFXzJRdTk4dXZvZmlUbFRGVFJwbUdWYw?oc=5",
+        "published": "Wed, 29 Jul 2026 21:00:00 GMT",
+        "publisher": "河北新報オンライン"
+      },
+      {
+        "title": "静岡トヨタ自動車、福利厚生に「SOKUYAKUベネフィット」を導入。多様な業界で働き方に関係なく、医療アクセスの利便性を提供 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9OWkdlSExCbkdDMmd0TU1lOU5VMFBhVm45aFJWV3FrXzVCaDlIUGduNTR6MUtPbWV3c2REc0t3LUpJM21BLWFxUjNpdGYxWThUbDNpVF9pVlpiYXFjdk1SVTRRcmdRTG1wUHc?oc=5",
+        "published": "Wed, 29 Jul 2026 22:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "けさ再開のトヨタ自動車九州 宮田･苅田･小倉の3工場 きょう夕方～あさってまで再び稼働停止 物流や仕入れ先の状況などを考慮 - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBUWXFUdUZXZzBGaUczSktXQ0RTd09RNnNybXRtRV9BOWR5TURZRTBfRXJCZXVNVEFFUWI5U1pwSmtUajZSc0QwbHRTMmVURFhCcDRWNVEwY1pidw?oc=5",
+        "published": "Wed, 29 Jul 2026 07:03:00 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "トヨタ自動車は3カ月ぶり高値､GMやフォード高で連想買い流入 - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1JbE1VSXF6cDFwX1Y5Z0o5M09IWEs2MThiYlJGdmdFWUhjNzRpNmxEdm9uOUdxeTVtcW9mRk15dWZoRDd0djZCRHNqVFFMc2RKY2I4S3JaZw?oc=5",
+        "published": "Wed, 29 Jul 2026 05:19:21 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "コースターを一部改良 | トヨタ | グローバルニュースルーム - global.toyota",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFAzMVhuY1Vac2gxSGc3Ym1xT0F5RTVueXN3by1Ea2VnZjVpbzl6cFFVcVNPU3FkNHR6cEhzTzFReFY3Z0tQWUxYblFHWTlJWURKU2tXWW1ldVM3M0NQekx2Vi1XWmE?oc=5",
+        "published": "Wed, 29 Jul 2026 04:31:17 GMT",
+        "publisher": "global.toyota"
+      },
+      {
+        "title": "けさ再開のトヨタ自動車九州 宮田･苅田･小倉の3工場 きょう夕方〜あさってまで再び稼働停止 物流や仕入れ先の状況などを考慮 - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE16MUFMX1NFM09fZzJveUxpWk81VFRxTGVWNDZfSEZuaHoyOEl3Q0NsRU5RLURhU2NNbUlCSjdNcFVSeFRzS2Z4czhVb1NzZzhxOGVvWHBRaWg4cUx0Wnh6cU0yUHdFeVZoMF9zdElLcHFPUkhLaVZSdnFseVhYejg?oc=5",
+        "published": "Wed, 29 Jul 2026 07:04:14 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "トヨタ九州、工場再停止 半導体関連各社、被害確認急ぐ―熊本震度７ - 時事ドットコム",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPbnRxcW8zOXR1MEJJU2Y2dEpWdTllSTZhRFZMSjRfU3JLUXl5YW1GMXhSQWRCSUc4MlE3YUV5eTlIZS11bUpyNzZEbWlTa2JKQ2ZIRFEyXzBZS1E2N0tVT1I4NDc2STVxWDNUa3VwNGFaV25kOXZTelVLdVducE0tXw?oc=5",
+        "published": "Wed, 29 Jul 2026 13:34:00 GMT",
+        "publisher": "時事ドットコム"
+      },
+      {
+        "title": "トヨタ自動車 福岡県の３工場 ２９日夕方から稼働を停止 - NHKニュース",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1FX1ZfTVdGbUQxZnlzeTBmRnNxdVRUWlVfMTQ3ODVkLW1FSnpCV3F2aUhIUFdyd3lQTm0yeW9CblBoOGVXTm9ZNHlQQmZBbVRidFduVURRSXU?oc=5",
+        "published": "Wed, 29 Jul 2026 06:11:00 GMT",
+        "publisher": "NHKニュース"
+      },
+      {
+        "title": "けさ再開のトヨタ自動車九州 宮田･苅田･小倉の3工場 きょう夕方〜あさってまで再び稼働停止 物流や仕入れ先の状況などを考慮 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFAxUkVkRFhBREEyT0V6VFJEY3FIZDVMRDlOWmtEMU1FYmpocmRra0JQWnNyOUdzWmdpdTFYbEtFQjFneVRjNWFXaEZQSmFZb2FOT3JkNTBEZGJaNVRRb2d6V3VnOVBMOFd6aFVSMmFneUxyNXRVMHhpcTN30gF6QVVfeXFMUDFSRWREWEFEQTJPRXpUUkRjcUhkNUxEOU5aa0QxTUViamhyZGtrQlBac3I5R3NaZ2l1MVhsS0VCMWd5VGM1YVdoRlBKYVlvYU5PcmQ1MERkYlo1VFFvZ3pXdWc5UEw4V3poVVIyYWd5THI1dFUweGlxM3c?oc=5",
+        "published": "Wed, 29 Jul 2026 07:03:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "けさ再開のトヨタ自動車九州 宮田･苅田･小倉の3工場 きょう夕方～あさってまで再び稼働停止 物流や仕入れ先の状況などを考慮 - locipo.jp",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9XZk1IRW1jZWd5REZ3RE9QTmFkRjNHTWliT0JacFJnRHVOcnpTeHcwRjBxcUttSlNCUTBGYmY4V3g1Qm5OOGxKdHd3TTF5dlBUU1NodHdXSDBrUWhiTVhmZVBHeklYWEotakRBaTVmTQ?oc=5",
+        "published": "Wed, 29 Jul 2026 07:18:34 GMT",
+        "publisher": "locipo.jp"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "役員人事に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572690.pdf",
+        "date": "2026-06-17 16:00:00"
+      },
+      {
+        "title": "関係会社株式売却益の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260615570435.pdf",
+        "date": "2026-06-15 15:30:00"
+      },
+      {
+        "title": "（開示事項の変更・訂正）「会社分割（簡易吸収分割）に関するお知らせ」の一部変更・訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552805.pdf",
+        "date": "2026-05-28 18:45:00"
+      },
+      {
+        "title": "会社分割（簡易吸収分割）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520542612.pdf",
+        "date": "2026-05-20 19:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260506517369.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "2026年3月期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260508519105.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260508519366.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果ならびに自己株式の取得終了および消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260428513263.pdf",
+        "date": "2026-04-28 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付け及び自己株式の取得に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260330592169.pdf",
+        "date": "2026-03-30 15:30:00"
+      }
+    ]
+  }
+}
