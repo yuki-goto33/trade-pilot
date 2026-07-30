@@ -1,0 +1,204 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-07-31T08:08:48+09:00",
+  "price_as_of": "2026-07-30",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズの評価は高水準な金利環境や拡大傾向にある業績を評価しつつも強気基準（strength≥70）に届かず、中立スタンスにとどまっています。",
+        "evidence": "fundamental_view.stance=neutral (strength=55)"
+      },
+      {
+        "reason": "テクニカル面でも直近3営業日の急落やMACDデッドクロスにより短期的な下落圧力が生じており、買いのエントリー条件を満たしていません。",
+        "evidence": "technical_view.stance=neutral (strength=50), price_technical.macd_histogram=-2.31"
+      },
+      {
+        "reason": "全体相場がdowntrendにあり、かつ数日後（2026年8月3日）に決算発表を控えているため、結果を見極めるのが安全と判断しました。",
+        "evidence": "reference.market_regime='downtrend', reference.next_earnings_date='2026-08-03'"
+      }
+    ],
+    "risks": [
+      "2026年8月3日に予定されている決算発表後の短期的なボラティリティ上昇リスク",
+      "市場全体の調整（downtrend）継続に伴う25日移動平均線（3488.92円）割り込みリスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズの評価は高水準な金利環境や拡大傾向にある業績を評価しつつも強気基準（strength≥70）に届かず、中立スタンスにとどまっています。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=55)\"\n  },\n  {\n   \"reason\": \"テクニカル面でも直近3営業日の急落やMACDデッドクロスにより短期的な下落圧力が生じており、買いのエントリー条件を満たしていません。\",\n   \"evidence\": \"technical_view.stance=neutral (strength=50), price_technical.macd_histogram=-2.31\"\n  },\n  {\n   \"reason\": \"全体相場がdowntrendにあり、かつ数日後（2026年8月3日）に決算発表を控えているため、結果を見極めるのが安全と判断しました。\",\n   \"evidence\": \"reference.market_regime='downtrend', reference.next_earnings_date='2026-08-03'\"\n  }\n ],\n \"risks\": [\n  \"2026年8月3日に予定されている決算発表後の短期的なボラティリティ上昇リスク\",\n  \"市場全体の調整（downtrend）継続に伴う25日移動平均線（3488.92円）割り込みリスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "60日騰落率が示す中期トレンドは強力な上昇傾向にありますが、直近での急落やMACDのデッドクロスなど短期的な調整圧力が強まっており、足元は拮抗した状況です。",
+      "points": [
+        {
+          "point": "直近3営業日で急落し、5日移動平均線を大きく下回るとともにMACDヒストグラムがマイナスへ転じ、短期モメンタムは悪化しています。",
+          "evidence": "price_technical.recent_5_days, price_technical.sma5=3677.2, price_technical.macd_histogram=-2.31"
+        },
+        {
+          "point": "一方で中期トレンドは強固であり、60日騰落率は+25.98%と高く、株価は25日移動平均線の上方を維持しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=25.98, price_technical.sma25=3488.92, price_technical.last_close=3525.0"
+        },
+        {
+          "point": "前夜の米国市場ではADRや金融セクターETFが上昇しており、寄り付きでの反発サポート要因となります。",
+          "evidence": "us_overnight.adr.change_1d_pct=2.55, us_overnight.sector_proxy.change_1d_pct=0.56"
+        }
+      ],
+      "cautions": [
+        "TOPIX市場レジームがdowntrendにあり、地合い全体の冷え込みから25日移動平均線（3488.92円）を下抜けるリスクがあります。",
+        "ADRの上昇による自律反発期待は寄り付き段階で織り込まれ、買い一巡後に戻り売りに押される可能性があります。"
+      ],
+      "key_levels": {
+        "support": 3488.92,
+        "resistance": 3813.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "年次業績の拡大傾向や高水準な国内長期金利環境は強力な支えですが、2026年8月3日に次回決算発表を目前に控えるイベントリスクや全般相場の軟調さを踏まえ、短期的には中立のスタンスとします。",
+      "points": [
+        {
+          "point": "年次業績は連続増益と拡大傾向にあり、2026年3月期の当期純利益は2兆4,272億円に達しています。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=24272"
+        },
+        {
+          "point": "日本の10年国債利回りが2.757%と高い水準で推移しており、利ざや改善等を通じて銀行業の収益性にプラスの環境が続いています。",
+          "evidence": "macro.rates.jgb_10y_percent.value=2.757"
+        },
+        {
+          "point": "直近では時価総額国内首位到達などの報道が相次ぎ注目を集めている一方、TOPIX連動ETFが25日線を下回るなど市場全体は調整局面（downtrend）にあります。",
+          "evidence": "news.headlines[1].title, macro.market_regime.market_regime='downtrend'"
+        }
+      ],
+      "cautions": [
+        "2026年8月3日に次回決算発表が迫っており、発表内容や今後の見通し発表による短期的なボラティリティ上昇のリスクがあります。",
+        "TOPIXが25日移動平均線を下回る地合いの悪化や、ドル円相場の急変動などの外部要因が上値を抑える可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "三菱UFJフィナンシャル・グループ6社、令和8年熊本地震の被害に対し総額5,000万円を寄付 - ペイメントナビ",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA4UkVuUjl4dS1mdVR0dlVfVXFndWRhUTB5OW5idVNqMFYxUC1PQndueXM4QzQyRkl3SkNHRF9pMnpaVWQ5eVJTLXY3N2MzU1AzUUJZYmVKUENBLTQ?oc=5",
+        "published": "Thu, 30 Jul 2026 09:57:00 GMT",
+        "publisher": "ペイメントナビ"
+      },
+      {
+        "title": "［新連載］MUFG、時価総額トヨタ超え国内首位 海外M＆A花開き純利益2兆円 - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9ERU44Z0RqVnVtd0E3NkNNTTVPeUVXSFNlcEhNbG43ekw3WjBUdDVtNGNWNEoxeFVjVm81OVFvYWpYX1dQRTRhLXBVYTZsUGVYdFpJU0JHeWRNSWJGTTFPaEE2Nk1xdW8?oc=5",
+        "published": "Thu, 30 Jul 2026 20:00:00 GMT",
+        "publisher": "日経ビジネス電子版"
+      },
+      {
+        "title": "寄稿：三菱UFJフィナンシャル・グループの DX を牽引する Japan Digital Design、Aurora DSQL の採用で DB コストを約 87% 削減し、運用負荷ほぼゼロを実現 - Amazon Web Services (AWS)",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPMWlINWZfUU10SXZKMHJ2NXRSNXlYa1JNTFZzOWlXbk9NX1ZfZFZvNDc3ZzJINXN4b0hEOGh5ekM2cVkxMk1WS01ZWl9fS2hxc1NDeXliWXpoQlg5dzFYT0dzaGQyWkZPbU5tRENpUHE3Qkt3Rjcyd3ZtWDJrcDJXeWMwQWQ2Zw?oc=5",
+        "published": "Thu, 30 Jul 2026 00:30:20 GMT",
+        "publisher": "Amazon Web Services (AWS)"
+      },
+      {
+        "title": "「共創」で顧客の事業戦略を実現 半沢淳一 三菱UFJフィナンシャル・グループ（MUFG）社長 - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5sWThfNHFzSEctdkNBUjN3WThsSjNMQlVSeFY4cTJwa0tRRnZYTVU1dVp2dzFKN1F6WjZCQ3h3QVhQdTVqYkplT2FWajJTQy1rWnpPUVFxN3hDQUJ4aHZNQXFDZlRJRk9ZNDlVVWRLQmhSVzJhd09ZU2pTS1c1QUE?oc=5",
+        "published": "Thu, 30 Jul 2026 01:06:43 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "時価総額トップ！MUFGの半沢社長が語った\"次なる野望\" - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE10YmtER3pKUXhEV280V3N5Z3N3RTdodWhlOGlqV0R4S1E2bWdwTldueWpFbXJXaWJrbjBGWVZyUGN4bGtNRHJLOUdZd3NrY1hPd2dtZkphQQ?oc=5",
+        "published": "Thu, 30 Jul 2026 04:00:00 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "三菱UFJ、非AI・安定性・成長性で上値追い 時価総額はウェルズ・ファーゴ超え達成、世界トップ行が射程に【決算プレビュー】 - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQYTRFMHJEYjUtend1cVhKVmNXX2hIaF9udTViOGdWQlZwTE8teUpmckpIbmNDdDE2OHowc1NDU1NYUnZjQlpsVG5GQlE3NGl5MGg1NHM2Z2FfZEdaOVlueUZRVmdTSFhmSFkzU21iVFFuUXNNTXBxMDlSZWZhMTBVaHI5Vmh3Um9ZMmNpUE9pWlNic004LXdia2xCOU1keWd5QXh6REhLZ1hJNzF3M2lpOGVpcw?oc=5",
+        "published": "Thu, 30 Jul 2026 08:38:17 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "時価総額1位のMUFG半沢淳一社長「日本に新たな資金循環生み出す」 - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9UUll4aXFER1pEbnBRN1FjMTdJY2Vad0pLZVNOSm1NRWY1S1JMRm1ieHN0eEhMT2d3dmYwRjljMWNtZ2dEREZSakRWYm9JSHctR1phWDNJN0dxb3QtRnA3elp2eWI?oc=5",
+        "published": "Thu, 30 Jul 2026 15:00:00 GMT",
+        "publisher": "日経ビジネス電子版"
+      },
+      {
+        "title": "「将軍に平身低頭の大名」脱却へ 2500人超のプロ起点に人的資本改革 - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9PbE5BNHJWSkhPSXFCeTQyajFLV190TkNsdVk5MDRTZkxxQ2dzRjhNenRIam1SYWk0REFlZ2hDdkQ5Z0lBOUR3N1RZNVV1VXRpUkt2SDFQTllLZEU0bnJETWdsOEU?oc=5",
+        "published": "Thu, 30 Jul 2026 15:00:00 GMT",
+        "publisher": "日経ビジネス電子版"
+      },
+      {
+        "title": "三菱UFJフィナンシャル・グループの売り優勢金額は177.23億円 - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOTUpyN2dLSkd1U3h1Mkw3UmZlbHdVNDNMUDJWb0VhVkx6Z0ZFX3lJQ0w4blVpRnJDWFNzaTFabWFfNXAxbWd2MmNhS2NmNXdpb2N4azJ1U3p1ZUhoOUY4OWFGdVZvNE5WeHdfT3ZLTGFMZWRRbmNZWk4yVTNQd05VRjRQMXVJVHNRQVBsSXBhYW1ob05uQkhHeUVn?oc=5",
+        "published": "Thu, 30 Jul 2026 06:56:44 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "躍り出たMUFG、トヨタ・キオクシアも超えた 時価総額「国内トップ」の衝撃 - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE81amYtTUpGQ2hMWDJscWdvbzNXVWozcmotMElPY3FsazE2eE9QZFhPNTlCVEJQSnlDZlV3bWY4VDRNOWJuNEI5ajNnc1h5bjRxOTh6MkJFVUFyeHQzb3V3MnhaWTg?oc=5",
+        "published": "Thu, 30 Jul 2026 15:00:00 GMT",
+        "publisher": "日経ビジネス電子版"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "中期経営計画における財務目標の修正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538305.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "代表執行役の異動について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260305576744.pdf",
+        "date": "2026-03-05 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260302573608.pdf",
+        "date": "2026-03-02 16:00:00"
+      }
+    ]
+  }
+}

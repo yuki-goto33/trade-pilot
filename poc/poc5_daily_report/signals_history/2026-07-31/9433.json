@@ -1,0 +1,207 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-07-31T08:12:02+09:00",
+  "price_as_of": "2026-07-30",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の strength が 55（neutral）にとどまり、buy 発火条件の 70 に満たない。自社株買いの停滞やガバナンス懸念が重石となっている。",
+        "evidence": "fundamental_view.strength=55, fundamental_view.points[1, 2]"
+      },
+      {
+        "reason": "テクニカル面では強気だが、株価はすでに上昇しており、材料が織り込まれている可能性が高い（統合ルール：両者強気またはテクニカル先行局面での buy は見送る）。",
+        "evidence": "technical_view.stance=bullish (strength=75), technical_view.points[1]: SMA5/25ゴールデンクロス"
+      },
+      {
+        "reason": "市場レジームが downtrend であり、マクロ環境の悪化による連れ安リスクを警戒すべき局面である。",
+        "evidence": "reference.market_regime=\"downtrend\", technical_view.cautions[0]"
+      }
+    ],
+    "risks": [
+      "2026年8月7日の決算発表による短期的なボラティリティの上昇",
+      "RSIが74.5と過熱圏にあり、期間高値 3121円付近での利益確定売りの発生",
+      "日本10年債利回りの上昇に伴う、高配当・大型株へのバリュエーション調整圧力"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の strength が 55（neutral）にとどまり、buy 発火条件の 70 に満たない。自社株買いの停滞やガバナンス懸念が重石となっている。\",\n   \"evidence\": \"fundamental_view.strength=55, fundamental_view.points[1, 2]\"\n  },\n  {\n   \"reason\": \"テクニカル面では強気だが、株価はすでに上昇しており、材料が織り込まれている可能性が高い（統合ルール：両者強気またはテクニカル先行局面での buy は見送る）。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=75), technical_view.points[1]: SMA5/25ゴールデンクロス\"\n  },\n  {\n   \"reason\": \"市場レジームが downtrend であり、マクロ環境の悪化による連れ安リスクを警戒すべき局面である。\",\n   \"evidence\": \"reference.market_regime=\\\"downtrend\\\", technical_view.cautions[0]\"\n  }\n ],\n \"risks\": [\n  \"2026年8月7日の決算発表による短期的なボラティリティの上昇\",\n  \"RSIが74.5と過熱圏にあり、期間高値 3121円付近での利益確定売りの発生\",\n  \"日本10年債利回りの上昇に伴う、高配当・大型株へのバリュエーション調整圧力\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "中期トレンドが非常に強く、TOPIXを大幅にアウトパフォームしている。直近で短期的な過熱感による押し目形成の動きが見られるが、MACDや移動平均線の形状は依然として強い上昇余力を示唆している。",
+      "points": [
+        {
+          "point": "60日騰落率が+19.74%と高く、対TOPIX相対騰落率でも+15.15%と市場全体に対して顕著な強さ（ディフェンシブ性）を示している。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=19.74, price_technical.trend_60d.relative_to_topix_60d_pct=15.15"
+        },
+        {
+          "point": "SMA5がSMA25を上回るゴールデンクロス状態を維持しており、MACDもシグナルを上回ってヒストグラムが拡大傾向にある。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.macd=78.03, price_technical.macd_histogram=22.93"
+        },
+        {
+          "point": "RSIが74.5と過熱圏にあり、直近営業日で-1.83%の調整を見せているが、SMA5（3005.5）の上位で推移しており、トレンド崩壊の兆しはない。",
+          "evidence": "price_technical.rsi14=74.5, price_technical.recent_5_days[4].change_pct=-1.83, price_technical.sma5=3005.5"
+        }
+      ],
+      "cautions": [
+        "市場レジームがdowntrend判定であり、日経平均の急落（5日間で-7.51%）など全体相場の悪化による連れ安リスクがある (macro.market_regime, macro.indices[0].change_5d_pct)",
+        "RSIが70を超えており、短期的には3121円の期間高値付近での利益確定売りが出やすい水準にある (price_technical.rsi14, price_technical.period_high)",
+        "前夜の米国市場で対応セクターETF(XLC)が-2.68%と下落しており、寄り付き後の重石となる可能性がある (us_overnight.sector_proxy.change_1d_pct)"
+      ],
+      "key_levels": {
+        "support": 3005.5,
+        "resistance": 3121.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "業績は長期的に拡大傾向にあり大規模な自社株買い枠も保持しているが、直近の自社株買い執行の停滞やガバナンス面の不備、さらに直近に控えた決算発表を前に積極的な買い材料に欠ける状況である。",
+      "points": [
+        {
+          "point": "売上高および最終利益は2024年3月期から2026年3月期にかけて増加傾向にあり、14%の高いROEを維持している。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.valuation.return_on_equity=0.14"
+        },
+        {
+          "point": "最大3,000億円の自己株式取得枠を設定しているものの、2026年6月中の取得実績は0株であり、当面の需給下支え効果が限定的となっている。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "財務報告に係る内部統制の不備や東証への改善報告書の提出など、ガバナンス体制に対する懸念材料が適時開示に含まれている。",
+          "evidence": "disclosures.items[1, 4]"
+        }
+      ],
+      "cautions": [
+        "2026年8月7日に次回決算発表を控えており、短期的な株価変動リスクがある。",
+        "日本10年債利回りが2.757%と高い水準にあり、高配当・大型株としてのバリュエーション調整圧力に注意が必要。",
+        "Forward PERが1309.442と極めて高い数値を示しており、市場の利益予想に対する不確実性が非常に高い。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "TISIとKDDIが残業時間大幅減、NTTは男性育児休業取得率を大幅アップ - 日経クロステック",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5rRVVaN2twOXVvT1ZCNFIySHJOdzdMVUNneDZGLVBvZHlPWV9RVEpDYTliX2JCUVFUcWZOS2xCd0stazl3Tm5RVjdVVnpFUjFBaDU5OE1vMXI4azdibFVxc3ZiTjJRSjU1XzFiUg?oc=5",
+        "published": "Thu, 30 Jul 2026 20:00:00 GMT",
+        "publisher": "日経クロステック"
+      },
+      {
+        "title": "リサイクルできる部品は… ＫＤＤＩスマホ分解教室 - 47NEWS",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBTUmFIdGR0bXo2UEtPNWZfWmM3VWdDdldnbUxVdzBfWGhjOFVfUlRkUUtOY2s4clJnaXlKbTBkMVBmZWFXelRja1h1QQ?oc=5",
+        "published": "Thu, 30 Jul 2026 21:00:00 GMT",
+        "publisher": "47NEWS"
+      },
+      {
+        "title": "ドコモとKDDI、熊本地震影響の障害から復旧（ケータイ Watch） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1xWFlYWlN4QU1oTDZDODdKRlA3UjcxdmxVWEF0YWVaYWtiOFlVR1JhWWEzcEpBRXdZV0FRTjZuMEQzR29iNU1feGdQSjhFTm90azJTbHRFN1FTSWVaTGk2cWdHVl94UGVmUjlWeXRIUE1QNHpsakcyNjRib3hsdk0?oc=5",
+        "published": "Thu, 30 Jul 2026 12:23:00 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "メール漏えいで ＫＤＤＩを注意 総務省 - 琉球新報デジタル",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE00RjVCRl93UzA0SXdMRk5kdUhyNEZMck1QMVViR2l1b1RLZHE3NnJoTzhHLUFDa0NLa1piaWVnQldRTnR3OTNpT0N0endGUVpvYkp0cFBFYmJwazAyZGVuWXFR?oc=5",
+        "published": "Thu, 30 Jul 2026 20:00:00 GMT",
+        "publisher": "琉球新報デジタル"
+      },
+      {
+        "title": "Gemini搭載ヒューマノイドをKDDIとAVITAが共同開発 「Google Cloud Next Tokyo」で接客実演 - robotstart.info",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE4weFRYbEhic2JOdm9EN3p0WUZ2eUNlRXNDdlJJNjRlVU5ramU3QUY4UWRDcTFVU181alF1MHRYcmRveXVjQkY4dXI3ekhQbWRRajgwSmx5ZTNQZDNQSnRlTDVGREc?oc=5",
+        "published": "Thu, 30 Jul 2026 06:30:03 GMT",
+        "publisher": "robotstart.info"
+      },
+      {
+        "title": "熊本県の通信障害、ドコモとKDDIが復旧 - ITmedia Mobile - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBaNEJfLVFqV3R1SWtXQzdVWWVxMUhwVUIwSUZsMDlHWEhHVVg4MlRTOTZwcnE3NmtPNEZOSnNIdzY3UWJFVzVKeUFTa3M0Z1V3T3FDQ1hDdzJmR2Z5Q2c5S0pLTE9RNnBN0gFoQVVfeXFMUFo0Ql8tUWpXdHVJa1dDN1VZZXExSHBVQjBJRmwwOUdYSEdVWDgyVFM5NnBycTc2a080Rk5Kc0h3NjdRYkVXNUp5QVNrczRnVXdPcUNDWEN3MmZHZnlDZzlLSktMT1E2cE0?oc=5",
+        "published": "Thu, 30 Jul 2026 11:36:00 GMT",
+        "publisher": "ITmedia"
+      },
+      {
+        "title": "KDDIアイレット、サイバー攻撃とセキュリティ人材不足を AI で解決する「Google AI Threat Defense 導入支援サービス」を提供開始 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB3VUUzcXoyRHRQTkd0a2VVSWdvYVhHTmlVMUxwNnZlaHc0Z3BveU5PM3l6eHdSUWF2bHhob2I2S2NxR2pNRHlZbktaRW1OOEYtYi1MRkh6WnVGTVlWTG5CQ1I2WU9iQTFNUXc?oc=5",
+        "published": "Thu, 30 Jul 2026 05:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "KDDIが新AIサービス 情報源を新聞などに限定 正確な情報とコンテンツ保護が狙い - ABEMA",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9yNGlSelc2RzdmUm10VnF0ZFNva3YzMklaZnhCcXhrd3Z6ZjZfZjVhTG9pbVhSSDJiZFZDcUgtRWktNnd2ZnBHZXVZT3F1V0Nuc2lROUlQVm9JZWs?oc=5",
+        "published": "Thu, 30 Jul 2026 13:59:13 GMT",
+        "publisher": "ABEMA"
+      },
+      {
+        "title": "ドコモ・ＫＤＤＩ・ソフトバンク・楽天モバイル、熊本県内の一部地域で通信障害 - 読売新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE45eUhvYWRycFQ1ZGxkMjV3T21ZUG9Pc1FTcm1tU09xWWxvd2lta0VQX18xSVBGWWhGQ0ppX2hONzVyaWhfX2ZwTWtFYTNHdHJ1Tk5kUHA1RERFdU5qb19rSk1CMUc?oc=5",
+        "published": "Thu, 30 Jul 2026 00:44:00 GMT",
+        "publisher": "読売新聞"
+      },
+      {
+        "title": "KDDIが新AIサービス 情報源を新聞などに限定 正確な情報とコンテンツ保護が狙い（ANNニュース） - nagoyatv.com",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9oVVVhZlVuNXBOd3NLOE9jSVpXcEV4VzlWby1nbV9EWUtTMjh4UXU2YjNlQ1hzOGF5a3Zlbi16dlRZRUZzaXNMd1BCa3hUekdZVzVlYTdmdmlxQ2doT1E2YzNveUo?oc=5",
+        "published": "Thu, 30 Jul 2026 06:27:11 GMT",
+        "publisher": "nagoyatv.com"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      },
+      {
+        "title": "東京証券取引所への「改善報告書」の提出に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559424.pdf",
+        "date": "2026-06-02 16:00:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（中期経営戦略）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524146.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "auフィナンシャルホールディングス株式会社の東京証券取引所への株式上場準備の開始について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524156.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "2026年３月期　決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511523545.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524005.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524010.pdf",
+        "date": "2026-05-12 15:45:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-07-31T08:07:14+09:00",
+  "price_as_of": "2026-07-30",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家が neutral（strength=55）であり、buy発火条件である『ファンダメンタルズが bullish かつ strength 70以上』を満たさないため hold と判断します。",
+        "evidence": "fundamental_view.stance=neutral, fundamental_view.strength=55"
+      },
+      {
+        "reason": "通期営業減益見通しや上半期世界販売台数の前年割れなど業績面の減速懸念が意識されており、ファンダメンタルズ主導の買い材料に乏しい状況です。",
+        "evidence": "fundamental_view.points[0]: 通期営業利益約21.5%減益, fundamental_view.points[1]: 上半期世界販売台数が2年ぶり前年割れ"
+      },
+      {
+        "reason": "テクニカル面では移動平均線のゴールデンクロスやMACD拡大など強気シグナルが出ているものの、ファンダメンタルズの裏付けがないテクニカル先行の上昇は織り込み済みのリスクがあるため静観が妥当です。",
+        "evidence": "technical_view.stance=bullish (strength=70), technical_view.points[0]: sma5がsma25の上位置でゴールデンクロス形成"
+      }
+    ],
+    "risks": [
+      "2026年8月4日に第1四半期決算発表を控えており、業績内容や通期見通しの修正によるボラティリティ上昇のリスクがあります。",
+      "ドル円相場が急激に円高方向へ振れた場合、輸出主導の業績圧迫懸念から株価の上値が重くなるリスクがあります。",
+      "市場全体が downtrend レジームにあるため、地合い悪化に伴う連れ安リスクが存在します。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家が neutral（strength=55）であり、buy発火条件である『ファンダメンタルズが bullish かつ strength 70以上』を満たさないため hold と判断します。\",\n   \"evidence\": \"fundamental_view.stance=neutral, fundamental_view.strength=55\"\n  },\n  {\n   \"reason\": \"通期営業減益見通しや上半期世界販売台数の前年割れなど業績面の減速懸念が意識されており、ファンダメンタルズ主導の買い材料に乏しい状況です。\",\n   \"evidence\": \"fundamental_view.points[0]: 通期営業利益約21.5%減益, fundamental_view.points[1]: 上半期世界販売台数が2年ぶり前年割れ\"\n  },\n  {\n   \"reason\": \"テクニカル面では移動平均線のゴールデンクロスやMACD拡大など強気シグナルが出ているものの、ファンダメンタルズの裏付けがないテクニカル先行の上昇は織り込み済みのリスクがあるため静観が妥当です。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=70), technical_view.points[0]: sma5がsma25の上位置でゴールデンクロス形成\"\n  }\n ],\n \"risks\": [\n  \"2026年8月4日に第1四半期決算発表を控えており、業績内容や通期見通しの修正によるボラティリティ上昇のリスクがあります。\",\n  \"ドル円相場が急激に円高方向へ振れた場合、輸出主導の業績圧迫懸念から株価の上値が重くなるリスクがあります。\",\n  \"市場全体が downtrend レジームにあるため、地合い悪化に伴う連れ安リスクが存在します。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "移動平均線のゴールデンクロスやMACDの拡大などテクニカル指標は強気を示しています。市場全体が下落レジームにあるものの、個別銘柄としては上昇トレンドが継続しています。",
+      "points": [
+        {
+          "point": "5日移動平均線（3044.1円）が25日移動平均線（2883.96円）の上位置を維持しゴールデンクロスを形成しており、株価も移動平均線の上で推移しています。",
+          "evidence": "price_technical.sma5=3044.1, price_technical.sma25=2883.96, price_technical.sma5_vs_sma25=golden"
+        },
+        {
+          "point": "MACD（74.69）がシグナル（47.65）を上回りヒストグラムもプラス圏で拡大しているほか、RSI14が64.5と買われすぎに至らず健全な強気モメンタムを示しています。",
+          "evidence": "price_technical.macd=74.69, price_technical.macd_signal=47.65, price_technical.rsi14=64.5"
+        },
+        {
+          "point": "7月29日に前日比+7.18%と急伸した後に30日は-3.04%の反落となりましたが、1億株を超える大商いの中で高値圏での売買が成立しています。",
+          "evidence": "price_technical.recent_5_days[3].change_pct=7.18, price_technical.recent_5_days[4].change_pct=-3.04, price_technical.recent_5_days[4].volume=102087800"
+        }
+      ],
+      "cautions": [
+        "TOPIX連動ETFが25日線を下回るdowntrendレジームにあり、地合い悪化による連れ安リスクが存在します。",
+        "前夜NY市場でトヨタADR（TM）が-0.72%と下落しており、寄り付き直後は売り優勢から始まる可能性があります。",
+        "直近で急伸した反動から短期的な利益確定売りに押され、5日移動平均線付近まで調整する可能性があります。"
+      ],
+      "key_levels": {
+        "support": 3044.1,
+        "resistance": 3233.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "通期営業減益や直近上半期の世界販売台数が前年割れとなるなど業績面の減速懸念がある一方、予想PER9.6倍・配当利回り3.2%とバリュエーション面での下値支持効果が期待されるため中立と判断します。2026年8月4日の決算発表を直前に控えている点も静観姿勢を強めます。",
+      "points": [
+        {
+          "point": "2026年3月期の通期営業利益が3兆7,662億円と前期比で約21.5%減益となったほか、直近四半期（2026-03期）の営業利益も5,695億円へ鈍化するなど業績トレンドは弱含んでいます。",
+          "evidence": "fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=37662, fundamentals.earnings_trend.annual[1].operating_income_oku_jpy=47956, fundamentals.earnings_trend.quarterly[0].operating_income_oku_jpy=5695"
+        },
+        {
+          "point": "2026年7月30日のニュース報道にて今年上半期の世界販売台数が2年ぶりの前年割れと伝えられており、販売面の減速感が懸念材料です。",
+          "evidence": "news.headlines[2].title=トヨタ自動車　今年上半期の世界販売台数2年ぶりの前年割れ"
+        },
+        {
+          "point": "一方で予想PER 9.64倍、PBR 1.02倍、配当利回り 3.2%とバリュエーション面には限定的な下値リスクを示す水準にあります。",
+          "evidence": "fundamentals.valuation.forward_pe=9.642, fundamentals.valuation.price_to_book=1.021, fundamentals.valuation.dividend_yield_percent=3.2"
+        }
+      ],
+      "cautions": [
+        "2026年8月4日に次回決算発表（第1四半期）を直前に控えており、発表内容に伴う決算イベントリスクが存在します。",
+        "ドル円（JPY=X）が159.61円と直近1日で-2.26%の円高方向に振れており、急激な円高進行による業績圧迫リスクに留意が必要です。",
+        "TOPIX連動ETFが25日移動平均線を下回り相場環境がdowntrendと判定されているため、市場全体の軟調さに連れ安するリスクがあります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "トヨタやホンダは自社工場で実証、実用化を見据え着々と進む開発（2ページ目） - 日経クロステック",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE13aWVaWkZ5VzZXNVhvNlR3VWloSGNkOXBjeG1XQWpndV91VmNkWE13ajNTQWlMUHlwM0xXNlBGM2hIZ3Vqa1NzQUlrVXFsTTQxeW9VWEo4MUh1WmNGekdNcDVPWkk5ZWwzaHg5bldn?oc=5",
+        "published": "Thu, 30 Jul 2026 20:02:00 GMT",
+        "publisher": "日経クロステック"
+      },
+      {
+        "title": "スズキの2026年上半期世界販売台数、トヨタ自動車に次ぐ国内メーカー2位に インド集中投資が奏功：ニュース - 中日BIZナビ",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBUMW1Va3Nkby1oMXhWaVF2dk1PV2xqOEFIaFdxVDNUUldnMmJKNk9rRzNtM1JJb1ltY3BXN2xLbGtFeDZCc0FJNlhFcHhud0FwcWpUdzJGaFJKZ0J2cTBB?oc=5",
+        "published": "Thu, 30 Jul 2026 14:22:33 GMT",
+        "publisher": "中日BIZナビ"
+      },
+      {
+        "title": "トヨタ自動車　今年上半期の世界販売台数　2年ぶりの前年割れ - nagoyatv.com",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBOUE56aGJpbDZIdXJCb0Y4ekhZTFl4ZExYNHdsMTd3dHRKelhGWExsdGliNG9yRjZQMkZNWF9qNExaT0o4N01YOFlTYk9nY20wUUHSAWRBVV95cUxOaThEUjNiQmc5S0l3UGpiM1pPMFVRWERVUExMODAyQVBXUE50RWVCNzNLTWVUcUhjMzRKYmMtX0FGa085UmtURVB3Z3dIdXFqWGVpRHg2cUY2blVqQzdKS1dBTVRI?oc=5",
+        "published": "Thu, 30 Jul 2026 10:31:56 GMT",
+        "publisher": "nagoyatv.com"
+      },
+      {
+        "title": "トヨタ自動車（7203）2026年上半期 販売･生産･輸出実績 - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE95R0JBeWdtYlZ5SWxaOVZBQ3RMYXYtempPNnVJRnducGJReWZtajd3S25tb1A5bW1uajBFYU5lQVNFempzSHRVM2s5SFM5WFU1QmFabVo4Zw?oc=5",
+        "published": "Thu, 30 Jul 2026 05:40:00 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "ＪＲ東日本東北の道産子主砲・久保田廉太朗が先制２点二塁打 強豪・トヨタ自動車をコールド撃破で快勝発進【ＪＡＢＡ北海道大会】 - 道新スポーツ",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1nWU5sVU1XS0lCYlBlQlotMERPV2FKZVl2bnVQenVzX1cwV3Zmd0dpM3V0UzZpZFRSY0FkaW1qdkRYVVphbmhEeUlYaGs5Qkc2TUFYNWUzR2htY2s3ODdyOV9n?oc=5",
+        "published": "Thu, 30 Jul 2026 05:51:34 GMT",
+        "publisher": "道新スポーツ"
+      },
+      {
+        "title": "トヨタ自動車、6月販売はわずかに増加も上半期は2年ぶりの減少 執筆 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9MRnR0VlNsWHB3V2JMd0hyd19GTC05VFR0OTdPRWowVjVjZU00YlZTSWhVVHhfM1hhN3pqRjY2SXEwdkRmYmdwdE8zR21mRkQyYmlDYW9kU2YzMXM1TEJaU3hTeGdMeWFZckwzVWh4WWs?oc=5",
+        "published": "Thu, 30 Jul 2026 05:33:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      },
+      {
+        "title": "トヨタ自動車　今年上半期の世界販売台数　2年ぶりの前年割れ - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFB1WlZMd0lld0gtb1M5S25fN3FMOW5VamFCLTNaS2J4SWo4azRBb2RLeXlKUlpYQm5Nd2x3RElFbDVqbTNQSE8xdFZlT0NPU3BhSzNBVmNYSDhTZ3kwSWlFbE9qeVhMaTdHUXlMYVlvN2lMYW5xUGRjVjlhb9IBgAFBVV95cUxNVkM5MERIMHMxRk5MaHo3WWw2dTZSN1hXM0h6dEVQX0d1Q3NCZjNhb3d1OHl4RThZS0xWOFRkS3FsdW5SU09ZRHJvUXUzTW5NNnFoNlZtcWptZUdvcmNJX2JFS3l0M1IyWkdQZm02ajhfSzdULW4wLWdCdDJRUmJkUA?oc=5",
+        "published": "Thu, 30 Jul 2026 05:30:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "プレスリリース：静岡トヨタ自動車、福利厚生に「SOKUYAKUベネフィット」を導入。多様な業界で働き方に関係なく、医療アクセスの利便性を提供（PR TIMES） - 毎日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1zMl9GZWQ0V2xfdV9LOEJUUXNOZmxadVJNMjZFQTNDZWxhUklGYWdkQ204QVJRM1c5dm8tS0dES0NQbWEzLWw5RUFaUFZPd2owaFFCTzR0ZGlnMnh6bXl1eUFxWUtmb3c5?oc=5",
+        "published": "Thu, 30 Jul 2026 00:51:26 GMT",
+        "publisher": "毎日新聞"
+      },
+      {
+        "title": "2025年度「役員報酬1億円以上」 過去最多の1,345人 役員報酬と従業員給与の最大差はトヨタ自動車の100.9倍 - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE13ZGdibXl3b0pHa2w1LVBSSW5NM0VOYXAwT2d1YkJDd3NfdGZGQnYxdDhqWndOcTZpc191Yl9YXzI0Q0N5TUhHbWhHcEY5YmUtbUo2TDVEemVjUzRzTkpJblVaeTcwSThVSjVGMGZuZWZxa2RnLWpoakxJY2REZE0?oc=5",
+        "published": "Thu, 30 Jul 2026 02:02:00 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "静岡トヨタ自動車、福利厚生に「SOKUYAKUベネフィット」を導入。多様な業界で働き方に関係なく、医療アクセスの利便性を提供 (画像No. 7 - MOTA",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5mYVBrdEhoT3prcFJLVnE4cWVod1l3Tmw2TmwxNHRzOGd2dEUxbER1N1hybEJweTZrZl96SzZVTmMwWXhfYUVlak5wQ1kta25qb0QxQXo1LVBjT3VGWlE?oc=5",
+        "published": "Thu, 30 Jul 2026 02:09:07 GMT",
+        "publisher": "MOTA"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "役員人事に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572690.pdf",
+        "date": "2026-06-17 16:00:00"
+      },
+      {
+        "title": "関係会社株式売却益の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260615570435.pdf",
+        "date": "2026-06-15 15:30:00"
+      },
+      {
+        "title": "（開示事項の変更・訂正）「会社分割（簡易吸収分割）に関するお知らせ」の一部変更・訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552805.pdf",
+        "date": "2026-05-28 18:45:00"
+      },
+      {
+        "title": "会社分割（簡易吸収分割）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520542612.pdf",
+        "date": "2026-05-20 19:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260506517369.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "2026年3月期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260508519105.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260508519366.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果ならびに自己株式の取得終了および消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260428513263.pdf",
+        "date": "2026-04-28 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付け及び自己株式の取得に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260330592169.pdf",
+        "date": "2026-03-30 15:30:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "code": "4063",
+  "name": "信越化学工業",
+  "generated_at": "2026-07-31T08:11:15+09:00",
+  "price_as_of": "2026-07-30",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 60,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ面では、自己株式取得の完了や新株主還元スキーム（FCSR）の導入など株主還元姿勢が極めて強力であり、中長期的な割安感（予想PER 17.4倍）が示唆されている。",
+        "evidence": "fundamental_view.points[0]: 立会外買付による取得終了およびFCSR発行条件決定, fundamental_view.points[1]: 予想PER 17.457"
+      },
+      {
+        "reason": "テクニカル面では中期下落トレンドが鮮明であり、25日移動平均線から-17%という大幅な下方乖離が発生している。「落ちるナイフ」の状態であり、底打ちのサインが確認できていない。",
+        "evidence": "technical_view.points[0]: change_60d_pct=-18.98, technical_view.points[1]: last_close=5756.0, sma25=6937.36"
+      },
+      {
+        "reason": "統合判断ルールに基づき、ファンダメンタルズが強気（strength 70）であっても、テクニカルが弱気（bearish）かつ市場全体が下落トレンドにある場合は、押し目確認までエントリーを待機する。",
+        "evidence": "technical_view.stance=bearish, reference.market_regime=downtrend"
+      }
+    ],
+    "risks": [
+      "市場レジームがdowntrend判定であり、個別材料に関わらず全体相場の下落に巻き込まれるリスク（reference.market_regime）。",
+      "直近5日間で2.45%進行した急激な円高による収益圧迫懸念（fundamental_view.cautions）。",
+      "MACDヒストグラムが-169.4とマイナス圏で拡大しており、短期的にはオーバーシュート気味に下落が加速する可能性（technical_view.points[2]）。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 60,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ面では、自己株式取得の完了や新株主還元スキーム（FCSR）の導入など株主還元姿勢が極めて強力であり、中長期的な割安感（予想PER 17.4倍）が示唆されている。\",\n      \"evidence\": \"fundamental_view.points[0]: 立会外買付による取得終了およびFCSR発行条件決定, fundamental_view.points[1]: 予想PER 17.457\"\n    },\n    {\n      \"reason\": \"テクニカル面では中期下落トレンドが鮮明であり、25日移動平均線から-17%という大幅な下方乖離が発生している。「落ちるナイフ」の状態であり、底打ちのサインが確認できていない。\",\n      \"evidence\": \"technical_view.points[0]: change_60d_pct=-18.98, technical_view.points[1]: last_close=5756.0, sma25=6937.36\"\n    },\n    {\n      \"reason\": \"統合判断ルールに基づき、ファンダメンタルズが強気（strength 70）であっても、テクニカルが弱気（bearish）かつ市場全体が下落トレンドにある場合は、押し目確認までエントリーを待機する。\",\n      \"evidence\": \"technical_view.stance=bearish, reference.market_regime=downtrend\"\n    }\n  ],\n  \"risks\": [\n    \"市場レジームがdowntrend判定であり、個別材料に関わらず全体相場の下落に巻き込まれるリスク（reference.market_regime）。\",\n    \"直近5日間で2.45%進行した急激な円高による収益圧迫懸念（fundamental_view.cautions）。\",\n    \"MACDヒストグラムが-169.4とマイナス圏で拡大しており、短期的にはオーバーシュート気味に下落が加速する可能性（technical_view.points[2]）。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "中期的な下落トレンドが継続しており、主要な移動平均線の下方で推移する極めて弱い形状です。前夜の米国市場高を受けた自律反発が期待されるものの、トレンド転換を示す証拠は不足しています。",
+      "points": [
+        {
+          "point": "中期下落トレンドの確定。60営業日騰落率がマイナス18.98%かつ対TOPIXでも大幅に劣後しており、明確な弱気相場にある。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-18.98, relative_to_topix_60d_pct=-23.56"
+        },
+        {
+          "point": "移動平均線のデッドクロスおよび下方乖離。5日線が25日線を大きく下回り、終値は25日線から1000円以上下方へ乖離している。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, last_close=5756.0, sma25=6937.36"
+        },
+        {
+          "point": "MACDの悪化傾向。MACDとシグナルのマイナス圏での乖離が大きく、ヒストグラムもマイナス169.4と、下落の勢いが収束していない。",
+          "evidence": "price_technical.macd=-342.99, macd_histogram=-169.4"
+        }
+      ],
+      "cautions": [
+        "RSI14が23.8と売られすぎの水準に達しており、値幅を伴う自律反発が起きやすい局面であること。",
+        "前夜のADRが+6.54%、SOX指数が+8.19%と急反発しており、寄り付きでの大幅なギャップアップが想定されること。",
+        "市場レジームがdowntrend判定であり、全体地合いによる押し下げ圧力が依然として強いこと。"
+      ],
+      "key_levels": {
+        "support": 5636.0,
+        "resistance": 6033.2
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "積極的な自己株式取得の完了および新スキーム（FCSR）の進展による株主還元姿勢の強化が確認された。製造業PMIが拡大圏で推移する良好なマクロ環境も、2026年3月期の減益計画に対する懸念を和らげている。",
+      "points": [
+        {
+          "point": "自己株式取得の完了および継続的な株主還元策の実行。2026年7月30日に立会外買付による取得終了と同時に、新スキーム（FCSR）の発行条件決定を開示しており、資本効率向上への強いコミットメントが評価される。",
+          "evidence": "disclosures[2026-07-30 11:30:00].title"
+        },
+        {
+          "point": "外部評価における強気の維持。米系大手証券によるレーティング「強気」継続と、目標株価7,900円の設定が報じられており、現在のバリュエーション（予想PER 17.4倍）からの上値余地が示唆されている。",
+          "evidence": "news.headlines[2026-07-30 09:04:00].title, fundamentals.valuation.forward_pe=17.457"
+        },
+        {
+          "point": "国内製造業PMIが54.7と6ヶ月連続で拡大圏を維持しており、主力事業である半導体材料や塩ビ等の需要環境に対するマクロ的な追い風が継続している。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.7"
+        }
+      ],
+      "cautions": [
+        "2026年3月期の通期計画において、営業利益が前期比14.4%減の減益予想となっている点（fundamentals.earnings_trend.annual）。",
+        "直近5日間で2.45%進行した急激な円高傾向。輸出比率の高い同社にとって収益圧迫要因となる可能性がある（macro.indices.JPY=X）。",
+        "市場全体がdowntrend（TOPIX 25日線以下かつ5日騰落率マイナス）にあり、個別材料にかかわらず外部環境に引きずられるリスク（macro.market_regime）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": 7900
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "信越化学工業(株)【4063】：今の株価の理由は？値動きの背景をAIが解説 - finance.yahoo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBCMUVleHI4RU5mbEV3UFVYeldVeTRiZXhXb2JrQUJfVk1EazRzMnpDZGo4LWdiUmxyUG5maGtaNlVHQThJVnVldl9ybjRSLW9FTHk2aGNYLWhQZE5sOEJZ?oc=5",
+        "published": "Thu, 30 Jul 2026 06:53:53 GMT",
+        "publisher": "finance.yahoo.co.jp"
+      },
+      {
+        "title": "信越化学工業[4063]：自己株式立会外買付取引（ToSTNeT-3）による取得結果および自己株式の取得終了に関するお知らせ 2026年7月30日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBueXF0cXhZdTN1WTV6ZEJrR2RfQlQ1aVgyYzFWUDhLeWtmUkNfQUNNR2w1N29KMWc3NWR2SkZfc3FpOVhhYm95Y01RcnJLalloakZZVWVYZFQ5T3Y3ZXRlYXQ3ODRpZVc4VVE?oc=5",
+        "published": "Thu, 30 Jul 2026 02:30:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "｢7月23～29日に業績予想を更新した銘柄｣リスト - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE02Y3lPOXgyVjVlQ0pkYXpqaEppN2RDdzA0UHNlWVNKUHd5TWxBd3RneExiNmY5YXZFTTdvTmZCY3dDUWwzRzFQLW1nbm5hVk1ZaHkxX1B0WQ?oc=5",
+        "published": "Thu, 30 Jul 2026 03:06:19 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "信越化学工業[4063]：コミットメント型自己株式取得（FCSR）による自己株式取得のための第三者割当による第27回および第28回新株予約権の発行条件の決定に関するお知らせ 2026年7月30日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5MSTRSYThVN09YdE00YWZOUXVESERTN182M2VCZ0M2RHA2MWh5R0VTMzFLT2dZTlRjVVZEYlN4d0dEMTNGUWx6ekt6R2xGUEFSN194bVJDbWpUemYwNnRpVXk1bmFxa2RHQXc?oc=5",
+        "published": "Thu, 30 Jul 2026 02:30:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "信越化、自社株買いの実施を発表 - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE4zUGNLcmN0bVpObnV1Rk83VGl1QnQ2cEMzVnVmRWphNEF3OVdpVnV5Q21JQnA3QXVIREhkdFVxSXo1Zno1RWQyWTA1NDVvNG9xa1VuZXo4OEJuajdnVGhHNA?oc=5",
+        "published": "Thu, 30 Jul 2026 02:30:00 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "【アナリスト評価】信越化学工業、レーティング強気を継続、目標株価7,900円に引下げ（米系大手証券）(アイフィス株予報) - finance.yahoo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNODd1RVdTdjdkUnpuTmhzMjZKa1Vla3RXNncyQWVUQ3FzV3hSa1g5SWZqNi1qTzNqWFdwcERkUVU5bmFLVEJhWTNlRFphV3dsM3BmX2JzN2k0RTBXNnRnTGVoTXlqbkRpRGlqQUVOa25OUjJCWENwSEI2SHM4eXFDVWl3R3hLbkU?oc=5",
+        "published": "Thu, 30 Jul 2026 09:04:00 GMT",
+        "publisher": "finance.yahoo.co.jp"
+      },
+      {
+        "title": "「株式」ADR日本株ランキング〜全般売り優勢、シカゴは大阪日中比1225円安の61320円 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNc3NWTVR4UzdsajNRNExIelczQTdIVlJXVl9IVDNwQ3VfLWU1dmVkY1dIdENqdTY2Zng2Q0ZXMFNQSERoSzdua1VsakVkeHc4NVRmODNjS20tbVpWd2tuSXpBSVRtbDhONFRMRTdoMnJDelNxQ3ZjUUU4R2NqVTc2bXZWUzZLVDJDbmotaFpBYlXSAYwBQVVfeXFMUEdMd3BHUnpSeE5ianl6S2pRSDZVLTNYYjVxMDh1b2dMLTNqNFk3MGxFTVVWbVpTQnl5Ykh3ZmJHTjRveWhqM1hJeG9Bb1VHQ0lrUlI2QW0tRmhNMC1Gd1k2SzNMQXRaVEZiTWUyc3ZtQmF2UmtKZ2QxRkRLWGdyRXlBbUtfMm5LM3RsS2I?oc=5",
+        "published": "Wed, 29 Jul 2026 23:53:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "信越化、自社株買いの実施を発表(株探ニュース) - finance.yahoo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQOVg3aU9pbXZWWHBmS09vcHhiQVhlWW1fdlZlRmdfemV0Y2ZKc001VWZuUkx0MnJER1BCX1BsNm9RQXlqUnRfem55MHN4WG9SeGhidFBuTC1xdExlUzZjelFmRl9ybThITUc1MnF6SUZBWFg4Q2t2NF9FNldtR2ktZ1haTURqNkE?oc=5",
+        "published": "Thu, 30 Jul 2026 02:31:00 GMT",
+        "publisher": "finance.yahoo.co.jp"
+      },
+      {
+        "title": "9月28日(月) AndTech「高放熱材料の基盤技術と最新開発動向 ～TIM設計・ギャップフィラー・グリース・クレイ状材料・高熱伝導シートの実践技術～」WEBオンラインZoomセミナーを開催予定 - 時事ドットコム",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5RblZSeFVRQVpqX0hROXRRN3ZlWlF5QmpLcXdqS08xWS1tLXRfMEZ4SDNwS1YtTFd5WW15SXRIOHYwOHFQbmZzNi1LZXM3TzZjQnMyeF84b1Ruelg4QVVZUFJUck92d2ZQS2dB?oc=5",
+        "published": "Thu, 30 Jul 2026 14:40:00 GMT",
+        "publisher": "時事ドットコム"
+      },
+      {
+        "title": "山口勝平の株ノート (@ku_ku_ku_ku_ku_) on X - t.co",
+        "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE9vdjdCRUZqYkNvVHJYcXZ2NlYtSVM1N1hTaFItZGc1YjRDUC05VUVDVDZmTkM2Z2pvZFJB?oc=5",
+        "published": "Thu, 30 Jul 2026 09:03:42 GMT",
+        "publisher": "t.co"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による取得結果および自己株式の取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730502910.pdf",
+        "date": "2026-07-30 11:30:00"
+      },
+      {
+        "title": "コミットメント型自己株式取得（FCSR）による自己株式取得のための第三者割当による第27回および第28回新株予約権の発行条件の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503103.pdf",
+        "date": "2026-07-30 11:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による自己株式の買付けに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729502228.pdf",
+        "date": "2026-07-29 16:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598954.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "業績予想および配当予想に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598982.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による自己株式の買付けに関するお知らせ（コミットメント型自己株式取得（FCSR）による自己株式取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598998.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573248.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260605563833.pdf",
+        "date": "2026-06-05 15:30:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541941.pdf",
+        "date": "2026-05-20 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541943.pdf",
+        "date": "2026-05-20 15:30:00"
+      }
+    ]
+  }
+}

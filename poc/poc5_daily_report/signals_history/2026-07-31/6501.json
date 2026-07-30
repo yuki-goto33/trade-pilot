@@ -1,0 +1,213 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-07-31T08:14:05+09:00",
+  "price_as_of": "2026-07-30",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家は strength=80 と非常に強気だが、テクニカル専門家も既に強気（strength=85）に転じており、好材料が株価に織り込まれモメンタム追随の遅いエントリーとなるリスクがあるため、統合判断ルール（v5）に基づき hold とする。",
+        "evidence": "fundamental_view.strength=80 / technical_view.stance=bullish (strength=85)"
+      },
+      {
+        "reason": "第1四半期の好決算と通期予想の上方修正、および大規模な自己株式取得は強力な下支え要因だが、テクニカル面で直近5日間の急騰による過熱感が意識される局面にある。",
+        "evidence": "fundamentals.recent_important_disclosures[0] / price_technical.recent_5_days[4].change_pct=6.01"
+      },
+      {
+        "reason": "RSIが66.3と過熱圏の70に接近しており、ADRの大幅高を受けた翌営業日の寄り付きが「寄り天」となる短期的な反落リスクに注意が必要である。",
+        "evidence": "price_technical.rsi14=66.3 / us_overnight.adr.change_1d_pct=3.38"
+      }
+    ],
+    "risks": [
+      "市場全体のレジームがdowntrend判定（macro.market_regime）であり、地合い悪化に伴う連れ安のリスク",
+      "直近1日で2.26％進行した急激な円高（159.61円）による、海外収益の目減りおよびセンチメント悪化",
+      "予想PERが29.5倍とバリュエーションに割安感が乏しく、利益確定売りが出やすい水準であること",
+      "48日後に控える日銀金融政策決定会合（2026-09-17〜）に向けた国内金利上昇による影響"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家は strength=80 と非常に強気だが、テクニカル専門家も既に強気（strength=85）に転じており、好材料が株価に織り込まれモメンタム追随の遅いエントリーとなるリスクがあるため、統合判断ルール（v5）に基づき hold とする。\",\n   \"evidence\": \"fundamental_view.strength=80 / technical_view.stance=bullish (strength=85)\"\n  },\n  {\n   \"reason\": \"第1四半期の好決算と通期予想の上方修正、および大規模な自己株式取得は強力な下支え要因だが、テクニカル面で直近5日間の急騰による過熱感が意識される局面にある。\",\n   \"evidence\": \"fundamentals.recent_important_disclosures[0] / price_technical.recent_5_days[4].change_pct=6.01\"\n  },\n  {\n   \"reason\": \"RSIが66.3と過熱圏の70に接近しており、ADRの大幅高を受けた翌営業日の寄り付きが「寄り天」となる短期的な反落リスクに注意が必要である。\",\n   \"evidence\": \"price_technical.rsi14=66.3 / us_overnight.adr.change_1d_pct=3.38\"\n  }\n ],\n \"risks\": [\n  \"市場全体のレジームがdowntrend判定（macro.market_regime）であり、地合い悪化に伴う連れ安のリスク\",\n  \"直近1日で2.26％進行した急激な円高（159.61円）による、海外収益の目減りおよびセンチメント悪化\",\n  \"予想PERが29.5倍とバリュエーションに割安感が乏しく、利益確定売りが出やすい水準であること\",\n  \"48日後に控える日銀金融政策決定会合（2026-09-17〜）に向けた国内金利上昇による影響\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 85,
+      "summary": "主要なテクニカル指標がすべて上向きを示しており、中期的なアウトパフォームに加え、直近の出来高を伴う急騰が強い上昇トレンドを裏付けています。",
+      "points": [
+        {
+          "point": "直近営業日の出来高を伴う大幅上昇により、期間高値付近まで値を戻す極めて強いモメンタムを確認しました。",
+          "evidence": "price_technical.recent_5_days[4].change_pct=6.01, volume=24607900"
+        },
+        {
+          "point": "SMA5がSMA25を上回るゴールデンクロス状態にあり、MACDもシグナルを大きく上抜けヒストグラムが拡大しています。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, macd=79.88, macd_histogram=41.21"
+        },
+        {
+          "point": "中期的なトレンドも極めて堅調で、市場全体（TOPIX）を大きく上回るパフォーマンスを維持しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=9.59, relative_to_topix_60d_pct=5.01"
+        }
+      ],
+      "cautions": [
+        "市場全体のレジームがdowntrend判定であり、地合いの悪化に連れ安するリスクがあります (macro.market_regime=downtrend)",
+        "RSIが66.3と過熱圏の70に接近しており、短期的な利確売りに押される可能性があります (price_technical.rsi14=66.3)",
+        "前夜のADRが大幅高となっており、翌朝の寄り付きが窓を開けて上昇した場合、寄り天（寄り付きが天井）となるリスクに注意が必要です (us_overnight.adr.change_1d_pct=3.38)"
+      ],
+      "key_levels": {
+        "support": 4761.56,
+        "resistance": 5267.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 80,
+      "summary": "2027年3月期第1四半期の売上20%増・営業利益約40%増という極めて強い決算と、通期予想の上方修正が強力な買い材料です。1,479億円の自己株式取得という積極的な還元姿勢も評価できますが、急激な円高進行と市場全体の地合い悪化が上値を抑える要因となります。",
+      "points": [
+        {
+          "point": "第1四半期（2026年4-6月）の連結業績が非常に好調で、調整後営業利益が前年同期比39.5％増と大幅な伸びを記録したこと。",
+          "evidence": "fundamentals.recent_important_disclosures[0]"
+        },
+        {
+          "point": "2026年7月30日に2027年3月期の通期業績予想を上方修正した旨のニュースがあり、成長の持続性が期待されること。",
+          "evidence": "news.headlines[7]"
+        },
+        {
+          "point": "第1四半期だけで1,479億円もの大規模な自己株式取得を実施しており、資本効率の向上と株主還元への強い意欲が確認できること。",
+          "evidence": "fundamentals.recent_important_disclosures[0]"
+        },
+        {
+          "point": "日本の製造業PMIが54.7と拡大圏にあり、日銀短観の大企業製造業DIも前回比5ポイント改善の22となるなど、事業環境が良好であること。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value, macro.boj.tankan.di.large_manufacturing.current_di"
+        }
+      ],
+      "cautions": [
+        "市場全体が下降トレンド（downtrend）にあり、TOPIX連動ETFが25日線を下回っていること。 (macro.market_regime)",
+        "直近1日で2.26％の急激な円高（159.61円）が進行しており、グローバル展開する同社の収益を圧迫するリスク。 (macro.indices[2])",
+        "予想PERが29.5倍、PBRが3.6倍となっており、過去の傾向に照らしバリュエーションに割安感は乏しいこと。 (fundamentals.valuation.forward_pe)",
+        "次回決算発表（2026-10-29）まで期間があるが、金融政策決定会合が48日後に控えており、国内金利上昇による影響。 (macro.boj.monetary_policy_meeting)"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "エグゼクティブの生成AIの使い方 【第3回】日立製作所 執行役専務 長谷川雅彦の活用術（前編） - Hitachi Global",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPamlsVHV4NzF6UHNZZ1U0SU9ZaWdSZnN1SEwwM19CZkxhTERDSWJKT1NYWFBZUVdOSWljQ0Y2ZzFNUWIySFdnLVExT2Zzc012M2hGLTRIMFNUWEFHS3lNRjNLRkwwZVo3UWtBajhvVWdhNDdtVEVEVmpkWFh4UXJSbEVNUm9aTFFTVW9VQ3pRcERQSklubVRJ?oc=5",
+        "published": "Thu, 30 Jul 2026 15:23:34 GMT",
+        "publisher": "Hitachi Global"
+      },
+      {
+        "title": "(株)日立製作所【6501】：今の株価の理由は？値動きの背景をAIが解説 - finance.yahoo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4yQ3lneGRPOVV1N3BFRXRGcHFZa3dpWWttOTd2ZWw4dm9FSVU2NXItOUpGOWJyeFpSYm1DWWYtaEpIMDJZZElwbmJwX0FTTDRMZmd2MzZSWDlLMnhnbDRF?oc=5",
+        "published": "Thu, 30 Jul 2026 06:53:55 GMT",
+        "publisher": "finance.yahoo.co.jp"
+      },
+      {
+        "title": "日立製作所が量子、インテルの半導体技術18Aで 計画は2段階 - 日経テックフォーサイト - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQSDJMTWQtTjdXbkZuZ2RQVVhBeFNjbW1jS0Z2QTIwWGhOaFpIYUEwWW5vV2xVdHctdWpOR1RIOG1JaXJ5OFdaRzJxOGZaR1g3TllrblJuQVpwelVuQ3pIZWNSNnlTYkVvME5xUzMzamhFRHM5ZEdpMk9aa29uMUxQdFRsaU9GbFE?oc=5",
+        "published": "Thu, 30 Jul 2026 20:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "finoject、日立製作所と暗号資産等のAML共同センター構想の具体化に向けた検討を開始 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9mUVNmSzhUZmZRUG1Ldi1LWDNBWHNzRXZXQks0WXY3UGhMNjNPYjdQb2tLc3dpVEpya1d0aUQ2U0pYZy04bC1GOGVCZVJ3ZHRkaFhneWxfRWRPQ2NJT05QQkVFd3o0eWtVOWc?oc=5",
+        "published": "Thu, 30 Jul 2026 08:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "台湾新幹線の新型車両、下松の日立製作所笠戸事業所で公開 - 中国新聞デジタル",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE10T1pfeDVZWmpkT2NOc3RpaTRtMFEteVRlRk1qeDhpU2FOUUZRSzFtYXVHdDBEV0dpOFBsSlFteFplY1JZZlJwMVNqNXpFeHBWdG42Mmh6elVrQQ?oc=5",
+        "published": "Thu, 30 Jul 2026 09:18:00 GMT",
+        "publisher": "中国新聞デジタル"
+      },
+      {
+        "title": "台湾新幹線の新型車両、下松の日立製作所笠戸事業所で公開 - 47NEWS",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5sU3VBanQ1VkFPb3FiTWRVeHloWEtCbDBQRzJvUHFxVTVmdVdYZFBhem5WQTZKZjI3WTZ3QTVoeVpXTHdmd2wyS0lxOA?oc=5",
+        "published": "Thu, 30 Jul 2026 09:18:00 GMT",
+        "publisher": "47NEWS"
+      },
+      {
+        "title": "日立製作所笠戸事業所で台湾新幹線「N700ST」お披露目！第一陣が出荷へ - TVer",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE16T1pSV0dPZ3E0RTJaU05EUkhCSHJtdmpBWVdUekFPSFNnUTllclhRWndyQ0lhX3ZuUDhMa2MxUjZxdkJxOWltNmdJcw?oc=5",
+        "published": "Thu, 30 Jul 2026 11:08:14 GMT",
+        "publisher": "TVer"
+      },
+      {
+        "title": "日立製作所が続伸､27年3月期業績予想を上方修正 - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1SZUMzOWlnRHlPT1psVDU5MjdONUZEaFFPNG83OVNyclJBSERGYjJwYl9SQ2JvT0JtaHZGM3ZFaWN3TXNFMTBmeGh1NVoyc2RZOG0yeU1oZw?oc=5",
+        "published": "Thu, 30 Jul 2026 01:18:34 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "日立製作所笠戸事業所で台湾新幹線「N700ST」お披露目！第一陣が出荷へ（2026年7月30日掲載）｜KRY NEWS NNN - 日テレNEWS NNN",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNMFdMMTFDb3NCd2daV3JCeXVjUVB2dWRpMzR4ejBuQ1RTS2xwS3FCS0RXX2hUb0FSNjJwekZ3VXh2LTZUYmNUQlM2bXFpWUd0VUQyRlRQZ2d2bldGRUgyYTFNNlp0Mk1LRkhORFRxcFdGMWxLQ2FQX2R3UUFUNEYyQmhBRzJDQmM?oc=5",
+        "published": "Thu, 30 Jul 2026 10:52:01 GMT",
+        "publisher": "日テレNEWS NNN"
+      },
+      {
+        "title": "Technology Innovation Story Technologies for the Electricity Era：日立 - Hitachi Global",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5tWHc0T3k1X3V3TXh4YVZhU0J6OXo5YU1WX1V0MnhGV2p1c2dpb0NoSEh6N01lTVA3aGV5cGF4VVFVYlNoLUE3WGt4ZlFnRVdBLTVUelZETnRUa29rY284Z1A0X1dFbTJ0bTI2VHFvTldBZjdwRGdUcg?oc=5",
+        "published": "Thu, 30 Jul 2026 12:02:31 GMT",
+        "publisher": "Hitachi Global"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "（訂正）2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503298.pdf",
+        "date": "2026-07-30 13:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501771.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501801.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(モビリティ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566288.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(コネクティブインダストリーズ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566292.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(デジタルシステム＆サービス事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566294.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CFO Session)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566296.pdf",
+        "date": "2026-06-09 15:30:00"
+      }
+    ]
+  }
+}
