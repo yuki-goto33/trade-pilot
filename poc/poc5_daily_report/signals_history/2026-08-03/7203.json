@@ -1,0 +1,202 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-08-03T07:58:50+09:00",
+  "price_as_of": "2026-07-31",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ評価が中立（strength=50）にとどまり、減益傾向や直近での円高進行（5日で-4.0%）、8月4日の決算発表を直前に控えた見極め姿勢から新規買いの条件を満たしていません。",
+        "evidence": "fundamental_view.stance=neutral (strength=50), fundamental_view.points[1]: ドル円-4.0%"
+      },
+      {
+        "reason": "テクニカル評価も中立（strength=60）であり、25日線上の位置やMACD買いシグナルなど下値の固さは示されているものの、直近2営業日の連続下落とTOPIXのdowntrend地合いが上値を重くしています。",
+        "evidence": "technical_view.stance=neutral (strength=60), reference.market_regime=downtrend"
+      }
+    ],
+    "risks": [
+      "2026年8月4日に次回決算発表が控えており、業績内容や通期見通しによる短期的な株価急変動リスクがあります。",
+      "直近5日間で157.23円へ円高（-4.0%）が進んでおり、為替の急激な変動が業績下押し要因となるリスクがあります。",
+      "TOPIXがdowntrend（下落相場レジーム）にあるため、全体相場の軟調に伴い連れ安する可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 50,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ評価が中立（strength=50）にとどまり、減益傾向や直近での円高進行（5日で-4.0%）、8月4日の決算発表を直前に控えた見極め姿勢から新規買いの条件を満たしていません。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=50), fundamental_view.points[1]: ドル円-4.0%\"\n  },\n  {\n   \"reason\": \"テクニカル評価も中立（strength=60）であり、25日線上の位置やMACD買いシグナルなど下値の固さは示されているものの、直近2営業日の連続下落とTOPIXのdowntrend地合いが上値を重くしています。\",\n   \"evidence\": \"technical_view.stance=neutral (strength=60), reference.market_regime=downtrend\"\n  }\n ],\n \"risks\": [\n  \"2026年8月4日に次回決算発表が控えており、業績内容や通期見通しによる短期的な株価急変動リスクがあります。\",\n  \"直近5日間で157.23円へ円高（-4.0%）が進んでおり、為替の急激な変動が業績下押し要因となるリスクがあります。\",\n  \"TOPIXがdowntrend（下落相場レジーム）にあるため、全体相場の軟調に伴い連れ安する可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "25日移動平均線のサポートやMACDの買いシグナルなど中期トレンドは底堅さを示す一方、直近2営業日の連続下落により短期モメンタムは失速しています。全体市場の弱気地合いも重なり、当面は押し目形成と調整が交錯する中立的な展開が見込まれます。",
+      "points": [
+        {
+          "point": "移動平均線とMACDにおける強気シグナルの維持。5日線が25日線を上回るゴールデンクロス状態にあり、株価も25日線の上に位置するほか、MACDもシグナルを上回ってプラス圏で推移しています。",
+          "evidence": "price_technical.sma5_vs_sma25=golden(5日線が25日線の上), price_technical.last_close=3067.0, price_technical.sma25=2898.62, price_technical.macd=76.88, price_technical.macd_signal=55.29"
+        },
+        {
+          "point": "中期トレンドのプラス維持。60日騰落率が+2.99%、対TOPIX相対騰落率が+0.53%とともにプラスを維持しており、中期的な下落トレンドには該当しません。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=2.99, price_technical.trend_60d.relative_to_topix_60d_pct=0.53"
+        },
+        {
+          "point": "直近の過熱感による短期的反落と市場地合いの悪化。7/29の急伸（+7.18%）後に2日連続で陰線となり5日線を下回ったほか、TOPIXの市場レジームがdowntrendであることが上値を重くしています。",
+          "evidence": "price_technical.recent_5_days[3].change_pct=-3.04, price_technical.recent_5_days[4].change_pct=-1.89, price_technical.sma5=3078.1, macro.market_regime.market_regime=downtrend"
+        }
+      ],
+      "cautions": [
+        "前夜NY市場のADR（TM）が-1.28%と下落しており、当日の寄り付きで売りが先行するリスクがあります。",
+        "TOPIXが25日線を下回る全体相場の弱気地合い（downtrend）により、連れ安する可能性があります。",
+        "5日線を割り込んだことで調整が長引き、25日移動平均線（2898.62円）付近までの押し目を試す展開に注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 2898.62,
+        "resistance": 3233.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "通期の営業利益・純利益が減益傾向にあり、直近5日間でドル円が円高方向に振れていることに加え、8月4日の決算発表を直前に控えており見極め姿勢が妥当と判断します。",
+      "points": [
+        {
+          "point": "2024年3月期から2026年3月期にかけて営業利益・純利益が減益傾向にあり、業績のモメンタムは慎重な見方が求められます。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "直近5日間でドル円が-4.0%下落し157.23円となるなど円高方向に推移しており、輸出採算面での下押し圧力が懸念されます。",
+          "evidence": "macro.indices[ドル円].change_5d_pct=-4.0, close=157.23"
+        },
+        {
+          "point": "予想PER 9.46倍、PBR 1.001倍とバリュエーション面での割安感はあるものの、直近2週間以内に株価を牽引する新規の好材料開示が見当たりません。",
+          "evidence": "fundamentals.valuation.forward_pe=9.46, price_to_book=1.001, disclosures.items"
+        }
+      ],
+      "cautions": [
+        "2026年8月4日に次回決算発表が控えており、四半期業績や通期見通しの発表に伴う短期的な株価変動リスクが存在します。",
+        "日銀の金融政策変更観測や為替相場の急激な変動が業績予想に影響を与える可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "共生社会実現へ トヨタ自動車スケート部とスペシャルオリンピックス日本のアスリートがコラボ（スポニチアネックス） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9WYzQ0dUNLNkl6ODZtSHJ0R0gydC05OWkxRjJMMkFsdmd4bWo3LWVLV1NSaG0yQVNVMjEzWEdTal8yWXk2cXJidnZqckQyUGVaVjZGSG1LaGo0QkMydFJvLWxPTmxqTTNnQjhpb0dhZk80RU1FSXhmVExCdmYwLWs?oc=5",
+        "published": "Sun, 02 Aug 2026 14:47:35 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "[トヨタ自動車 アンテロープス] 田中 平和(ダイ) | Wリーグ選手紹介 - wjbl.org",
+        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE85by1USjZZUDVveE9YUGFnakdSd1pmNktFOXpFQnYwTF8tcFY0NmxiSTVOV2RydkwyYWhBd0FONHh5ZDU5dkwzUnF2c3kxQQ?oc=5",
+        "published": "Sun, 02 Aug 2026 04:09:32 GMT",
+        "publisher": "wjbl.org"
+      },
+      {
+        "title": "トヨタ自動車スケート部とスペシャルオリンピックス日本のアスリートが合同練習（提供写真） - スポニチ Sponichi Annex",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPdjZwX0YtWHNzMnR5UXNsZU9YRjBleTgxdDVIYkJqMS0yWmJHZFBYc09mNE9PSDNkUUZnRkZYbEQydDJFM1FoNlp6dWc5WEN4dzdfYXJKeHU2QjY1RUU5WnRod2hFTzlRZmhNbGxtU0ViSmhrZDctbEdkZGYyV2Y0Rkl4VG1EVnUxamR5Mg?oc=5",
+        "published": "Sun, 02 Aug 2026 15:56:15 GMT",
+        "publisher": "スポニチ Sponichi Annex"
+      },
+      {
+        "title": "トヨタ自動車、『NHKスペシャル』“長期取材”で見えた実像 『カローラ』の次世代モデル開発の様子も - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOeURlYlBSU3BLTXRDTTRFSTZGQzN3NmdRNnc1dGZ2dWxLMEVJTjlXMy15YmhVaS1jeGRQS2JsbWhVME93UzlZblBGZ3VjRjZpX1I2aThaV1puUlFTeVVwRmtaMGNTOXAyMDB0WElCYVRGYy14RmxndGkyWEdnZ3c0N1JmT0JBcmhJTXc?oc=5",
+        "published": "Sun, 02 Aug 2026 15:01:47 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "トヨタ、BR組織を2つ新設…全社直轄へ - レスポンス（Response.jp）",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE43bk9lMXhtX1l2eTVva2d3WV9zZDlidVB1VnNhcHJnSDlLbTE1ZmZENlFiM1JjWlZBRzlSUm5JZ1hZanphallLUzViaTRDZlVxd0xCZERCMkdaM2V6b1JJ?oc=5",
+        "published": "Sun, 02 Aug 2026 21:30:03 GMT",
+        "publisher": "レスポンス（Response.jp）"
+      },
+      {
+        "title": "マーケット速報 - 中日BIZナビ",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOVVluQTNVX2RWVi1aSW9kMlJxV21veTJKLUdjeEJTSXoxOHd3UnhTSTFaSkV3MncwbkJ3bDM1ODQwSDU0ODUzaVBfZWhSZE1wMUtGQkNCSmVGMUNOc3dfWmt4b1RYNHVyRWpCZFpiOXlVamtOSDV2SUFXZTRDM2lndFVFcDhYeldQa05PR1p0b1F4dVdiXzZOUzRQRGlSZXhmUlFEN3loMTY4MGRCQzl3bnprdl81ZHM0MUxz?oc=5",
+        "published": "Sun, 02 Aug 2026 20:19:32 GMT",
+        "publisher": "中日BIZナビ"
+      },
+      {
+        "title": "STI（スバル）、NISMO（日産）、GR（トヨタ）、HRC（ホンダ）って一体何？自動車メーカーの4大ワークスブランドを探る - GoodsPress Web",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5UM2U0ckRjVlJrRjFmVmxYTlpLRmtORjdPYjZHZzE2UUc4Y0FRVVc1ZXFBaHZNRlhKaVBWWWhRREMtb2Y5QUlGd2ExSHlnZWVzenRxYjZn?oc=5",
+        "published": "Sun, 02 Aug 2026 12:00:00 GMT",
+        "publisher": "GoodsPress Web"
+      },
+      {
+        "title": "共生社会実現へ トヨタ自動車スケート部とスペシャルオリンピックス日本のアスリートがコラボ (スポニチアネックス) - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOelpUVkloVzhLdUg2NlM4R0tqU0otNkJfNnNocE5UbU1jQXBlQkc1TVdybGdsb2hBOWRhdU1PS0E5UDJydHFPdVhNeUtBTnNhRXZJdVRQLTFVbnVSMTdsd08wclZHLTdEbGVIU3VOd3MtTkFldUE0Mjl2VDVJc0l3R0lJSElFQmVlZllPdTNR?oc=5",
+        "published": "Sun, 02 Aug 2026 14:47:35 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "トヨタ系中堅部品6社 全社増収、最高更新も 26年4～6月期決算：ニュース - 中日BIZナビ",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5TT0pwaWVMRXJub0pPR2ZwVlZFNVNfTUMyZ0NUaUxfUW1zejFxaTBKUkZUbWxtSVBTV09SZDI1Mld2OXB5d3o4aXhpUGZFSWJadDZQYnVoQV93SnBFcWx3?oc=5",
+        "published": "Sun, 02 Aug 2026 14:32:49 GMT",
+        "publisher": "中日BIZナビ"
+      },
+      {
+        "title": "スズキの26年上半期世界販売台数、トヨタに次ぎ国内2位に：ニュース - 中日BIZナビ",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBUMW1Va3Nkby1oMXhWaVF2dk1PV2xqOEFIaFdxVDNUUldnMmJKNk9rRzNtM1JJb1ltY3BXN2xLbGtFeDZCc0FJNlhFcHhud0FwcWpUdzJGaFJKZ0J2cTBB?oc=5",
+        "published": "Sun, 02 Aug 2026 07:33:02 GMT",
+        "publisher": "中日BIZナビ"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "役員人事に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572690.pdf",
+        "date": "2026-06-17 16:00:00"
+      },
+      {
+        "title": "関係会社株式売却益の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260615570435.pdf",
+        "date": "2026-06-15 15:30:00"
+      },
+      {
+        "title": "（開示事項の変更・訂正）「会社分割（簡易吸収分割）に関するお知らせ」の一部変更・訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552805.pdf",
+        "date": "2026-05-28 18:45:00"
+      },
+      {
+        "title": "会社分割（簡易吸収分割）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520542612.pdf",
+        "date": "2026-05-20 19:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260506517369.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "2026年3月期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260508519105.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260508519366.pdf",
+        "date": "2026-05-08 13:55:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果ならびに自己株式の取得終了および消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260428513263.pdf",
+        "date": "2026-04-28 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付け及び自己株式の取得に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260330592169.pdf",
+        "date": "2026-03-30 15:30:00"
+      }
+    ]
+  }
+}

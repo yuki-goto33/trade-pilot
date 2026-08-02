@@ -1,0 +1,168 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-08-03T07:59:43+09:00",
+  "price_as_of": "2026-07-31",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズはQ1決算での業績回復や通期上方修正報道を受けて強気（strength=70）ですが、テクニカル専門家も強気（bullish, strength=70）に揃っており、材料が株価に織り込み済みで高値掴み（遅いエントリー）となるリスクを避けるため統合ルールに従い hold と判断しました。",
+        "evidence": "fundamental_view.stance=bullish (strength=70), technical_view.stance=bullish (strength=70)"
+      },
+      {
+        "reason": "2027年3月期第1四半期の営業利益が4,745億円と大幅に回復している一方、株価は直近60営業日で+20.99%上昇しており、RSI14が80.0と過熱圏にあるため短期的な利確売りに警戒が必要です。",
+        "evidence": "fundamental_view.points[0], technical_view.points[1], technical_view.cautions[0]"
+      }
+    ],
+    "risks": [
+      "RSI14が80.0と高値警戒感を示しており、短期的なスピード調整による利確売りに押される可能性があります。",
+      "直近5日間でドル円が-4.0%円高方向に進行しており、海外比率が高い同社の業績下振れ要因となるリスクがあります。",
+      "TOPIXが25日線を下回る downtrend 地合いであるため、全体相場の軟調さに巻き込まれるリスクがあります。",
+      "想定保有期間内に次回日銀金融政策決定会合（2026-09-17〜2026-09-18）が控えており、為替ボラティリティの上昇リスクがあります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズはQ1決算での業績回復や通期上方修正報道を受けて強気（strength=70）ですが、テクニカル専門家も強気（bullish, strength=70）に揃っており、材料が株価に織り込み済みで高値掴み（遅いエントリー）となるリスクを避けるため統合ルールに従い hold と判断しました。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=70), technical_view.stance=bullish (strength=70)\"\n  },\n  {\n   \"reason\": \"2027年3月期第1四半期の営業利益が4,745億円と大幅に回復している一方、株価は直近60営業日で+20.99%上昇しており、RSI14が80.0と過熱圏にあるため短期的な利確売りに警戒が必要です。\",\n   \"evidence\": \"fundamental_view.points[0], technical_view.points[1], technical_view.cautions[0]\"\n  }\n ],\n \"risks\": [\n  \"RSI14が80.0と高値警戒感を示しており、短期的なスピード調整による利確売りに押される可能性があります。\",\n  \"直近5日間でドル円が-4.0%円高方向に進行しており、海外比率が高い同社の業績下振れ要因となるリスクがあります。\",\n  \"TOPIXが25日線を下回る downtrend 地合いであるため、全体相場の軟調さに巻き込まれるリスクがあります。\",\n  \"想定保有期間内に次回日銀金融政策決定会合（2026-09-17〜2026-09-18）が控えており、為替ボラティリティの上昇リスクがあります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "中期・短期ともに強い上昇トレンドを維持していますが、RSIが80と高値警戒感を示しており、短期的な利確売りに注意が必要です。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日線を上回るゴールデンクロス状態であり、MACDもシグナルを上回って拡大傾向にあります。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.macd=126.34, price_technical.macd_signal=91.74"
+        },
+        {
+          "point": "直近60営業日の騰落率が+20.99%、対TOPIX相対騰落率が+18.53%と中期的な上昇トレンドが明確です。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=20.99, price_technical.trend_60d.relative_to_topix_60d_pct=18.53"
+        },
+        {
+          "point": "前夜のNY市場でADRが+2.15%上昇しており、当日の買い先行が期待されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=2.15"
+        }
+      ],
+      "cautions": [
+        "RSI14が80.0と過熱圏（買われすぎ）に達しており、短期的にはスピード調整による利確売りに注意が必要です。",
+        "TOPIXが25日線を下回るdowntrend判定となっており、全体相場の軟調さに引っ張られるリスクがあります。",
+        "前夜NYのADR上昇分は寄り付き段階で織り込まれ、寄り底や寄り天の展開となる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 3728.2,
+        "resistance": 3964.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "2027年3月期第1四半期での業績回復および通期業績上方修正のニュース報道が明確な買材料です。製造業のマクロ環境も良好ですが、足元の急速な円高進行や全体相場の軟調さには留意が必要です。",
+      "points": [
+        {
+          "point": "2026年7月31日に開示された2027年3月期第1四半期決算において、営業利益4,745億円・純利益3,422億円を計上し、前四半期までの業績低迷から大きく回復しています。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].operating_income_oku_jpy=4745, disclosures.items[0].date=2026-07-31"
+        },
+        {
+          "point": "直近ニュースで通期営業利益18%増の上方修正が報じられており、株価の上昇カタリストとして機能することが期待されます。",
+          "evidence": "news.headlines[2].title"
+        },
+        {
+          "point": "日本の製造業PMIが54.7と6ヶ月連続の拡大圏を維持し、日銀短観の大企業製造業DIも22.0と高水準にあり、事業環境のマクロ面が下支えとなっています。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.7, macro.boj.tankan.di.large_manufacturing.current_di=22.0"
+        }
+      ],
+      "cautions": [
+        "ドル円が直近5日間で-4.0%と円高方向に振れており、海外売上比率の高い同社の業績下振れ要因となるリスクがあります。",
+        "TOPIXが25日移動平均線を下回りマーケットレジームがdowntrendとなっているため、株式市場全体の地合い悪化に巻き込まれる可能性があります。",
+        "2026年3月期通期（純損失3,269億円）に見られたような最終利益の急激な下振れリスクに引き続き留意が必要です。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソニーグループ傘下のSoVeCによる「音のXR体験」を採用。睡眠ウェルネスブランド『nemcaro』の体験型サロン『nemcaro LAB』が恵比寿に誕生 - 朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE84WU9ILUFldkZkMEp0aGZfNDJTeXNmck90NmdwdDRURmdoWjVHN3NpZGhFa1dLbnp2WnJnTjFIbl9nV1FMejlzN0FnTXJmd0xTdC1qWWRVZ1pqWFE?oc=5",
+        "published": "Sun, 02 Aug 2026 17:05:45 GMT",
+        "publisher": "朝日新聞"
+      },
+      {
+        "title": "マーケット速報 - sannichi.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQUEdIZFo1b2dtU3VVLVFULWlsdFVXVmoxQkduRENWMWU3YmZaTF9fdEtCLUxaMW96a1FYdnMyMUxMZHUtRi1tUWhjWHNVS2V3TEtqbERSWHZtenYydkdLTnNJeXNYTUNyMDVqZTRTUzJaWS1rSzBMeVFCanJvZUJOcXRfLTBaYzdfOGh2b3YtMHA3LW1QQk1ndld5VjgtQm8yaGl6TU1sZE1WMVFkVVAtMjZESVZqM0wyQzEtS0J3?oc=5",
+        "published": "Sun, 02 Aug 2026 18:56:25 GMT",
+        "publisher": "sannichi.co.jp"
+      },
+      {
+        "title": "ソニーG、通期上方修正 営業益18％増 米関税還付800億円 - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5iWDgwaU9BaWE4bjBtTFNJd2xWN1pYX0tXRFd4UFNQTXBPVTlSUm40X0lHRXpObUhJdVVtZ1B4aVpoZjVwdnlPbWs2TjhCRWVJSkQ2VE1UUFAtMVE?oc=5",
+        "published": "Sun, 02 Aug 2026 19:52:30 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "熊本地震で広がる企業支援――寄付額だけでは測れない「社会インフラ」の実力 - kabu-ir.com",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9yeXJOWDBNMlVNNklDMDR1OFBodEQ5QUx3MHJHWVhDbDFLTDVHTmhrWGlOLVItdW1SUWt6Ri01LWZtOHE4QzZGOW8xQWZYcWU1OXlSTw?oc=5",
+        "published": "Sun, 02 Aug 2026 07:00:00 GMT",
+        "publisher": "kabu-ir.com"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年３月期 第１四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504252.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期 連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504254.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の権利確定に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595854.pdf",
+        "date": "2026-07-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587315.pdf",
+        "date": "2026-07-03 11:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584099.pdf",
+        "date": "2026-06-30 15:30:00"
+      },
+      {
+        "title": "米ドル建て無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577032.pdf",
+        "date": "2026-06-24 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260603560934.pdf",
+        "date": "2026-06-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの次世代イメージセンサーに関する戦略的提携に向けた基本合意のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518510.pdf",
+        "date": "2026-05-08 16:15:00"
+      },
+      {
+        "title": "2026年３月期 決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518952.pdf",
+        "date": "2026-05-08 12:00:00"
+      },
+      {
+        "title": "2025年度 連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518955.pdf",
+        "date": "2026-05-08 12:00:00"
+      }
+    ]
+  }
+}

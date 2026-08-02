@@ -1,0 +1,205 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-08-03T08:08:07+09:00",
+  "price_as_of": "2026-07-31",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "2026-07-22にbuyシグナルを出しており、現在はその継続監視期間中（14日以内）であるため、ルールに基づき新規エントリーを抑制しholdとする。",
+        "evidence": "reference.recent_buy.date=2026-07-22"
+      },
+      {
+        "reason": "3日後の2026年8月3日に決算発表を控えたイベントリスクが極めて高く、内容を確認するまで静観が妥当である。",
+        "evidence": "fundamental_view.points[0]: fundamentals.next_earnings_date=2026-08-03"
+      },
+      {
+        "reason": "市場全体がdowntrendレジームにあり、テクニカル的な反転の兆しはあるものの地合いの悪化による上値の重さが懸念される。",
+        "evidence": "technical_view.cautions[0]: TOPIXが25日線を下回るdowntrendレジーム"
+      },
+      {
+        "reason": "バリュエーション面でPER22.5倍と割安感に乏しく、マクロ環境（円高）の不透明感を払拭するほどの買い材料に欠ける。",
+        "evidence": "fundamental_view.points[3]: fundamentals.valuation.forward_pe=22.524"
+      }
+    ],
+    "risks": [
+      "2026年8月3日の決算発表における業績進捗および株主還元策が市場期待を下回るリスク",
+      "急速な円高進行（5日間で4%）による海外事業利益の目減り",
+      "市場全体（TOPIX）の下落基調に伴う連れ安",
+      "ADRの上昇分が寄り付きで織り込まれ、寄り天となる需給リスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 50,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"2026-07-22にbuyシグナルを出しており、現在はその継続監視期間中（14日以内）であるため、ルールに基づき新規エントリーを抑制しholdとする。\",\n   \"evidence\": \"reference.recent_buy.date=2026-07-22\"\n  },\n  {\n   \"reason\": \"3日後の2026年8月3日に決算発表を控えたイベントリスクが極めて高く、内容を確認するまで静観が妥当である。\",\n   \"evidence\": \"fundamental_view.points[0]: fundamentals.next_earnings_date=2026-08-03\"\n  },\n  {\n   \"reason\": \"市場全体がdowntrendレジームにあり、テクニカル的な反転の兆しはあるものの地合いの悪化による上値の重さが懸念される。\",\n   \"evidence\": \"technical_view.cautions[0]: TOPIXが25日線を下回るdowntrendレジーム\"\n  },\n  {\n   \"reason\": \"バリュエーション面でPER22.5倍と割安感に乏しく、マクロ環境（円高）の不透明感を払拭するほどの買い材料に欠ける。\",\n   \"evidence\": \"fundamental_view.points[3]: fundamentals.valuation.forward_pe=22.524\"\n  }\n ],\n \"risks\": [\n  \"2026年8月3日の決算発表における業績進捗および株主還元策が市場期待を下回るリスク\",\n  \"急速な円高進行（5日間で4%）による海外事業利益の目減り\",\n  \"市場全体（TOPIX）の下落基調に伴う連れ安\",\n  \"ADRの上昇分が寄り付きで織り込まれ、寄り天となる需給リスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "中期トレンドが大幅な劣後状態にある中、足元でSMA25の回復やMACDの好転といった反転の兆しが見られますが、市場全体の地合いが弱く慎重な判断が必要です。",
+      "points": [
+        {
+          "point": "60営業日騰落率が-11.52%かつ対TOPIX相対騰落率も-13.98%と、中期的な下落トレンドから完全には脱却できていません。",
+          "evidence": "price_technical.trend_60d"
+        },
+        {
+          "point": "テクニカル指標では、終値がSMA25（4580.8）を上回り、MACD（88.41）がシグナルを上回って推移するなど、反転の証拠が確認されます。",
+          "evidence": "price_technical.sma25, price_technical.macd"
+        },
+        {
+          "point": "前夜のADRが4.75%と大幅に上昇しており、エネルギーセクターETFも堅調なことから、寄り付きの買い戻し圧力が期待されます。",
+          "evidence": "us_overnight.adr, us_overnight.sector_proxy"
+        }
+      ],
+      "cautions": [
+        "TOPIXが25日線を下回るdowntrendレジームにあり、市場全体の売り圧力に押されるリスクがあります。",
+        "ADRの大幅高は寄り付き価格に織り込まれやすく、寄り天（寄り付きが天井）となる懸念があります。",
+        "直近5営業日はSMA5（4799.0）を下回って推移しており、短期的には上値の重さが意識されます。"
+      ],
+      "key_levels": {
+        "support": 4580.8,
+        "resistance": 4972.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "直近の社長インタビューによる業績への強気姿勢や銅事業の拡大期待という好材料はあるものの、3日後に第1四半期決算発表を控えたイベントリスクが極めて高く、為替の円高進行や国内市場の下落トレンドといったマクロ環境の悪化が重しとなるため、現時点では静観が妥当と判断します。",
+      "points": [
+        {
+          "point": "2026年8月3日に決算発表を控えており、直近の業績トレンドを確認する前のポジション構築はリスクが高い状態にあります。",
+          "evidence": "fundamentals.next_earnings_date=2026-08-03"
+        },
+        {
+          "point": "経営トップが純利益1兆円超への手応えや、戦略的な銅事業の拡張に言及しており、中長期的な成長期待というポジティブな材料が直近で提示されています。",
+          "evidence": "news.headlines[0], news.headlines[2]"
+        },
+        {
+          "point": "市場全体が下落トレンド（downtrend）にあり、対ドルでの急激な円高進行（5日間で4%の円高）は、海外利益比率の高い総合商社にとって収益の下押し要因となります。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.indices[2].change_5d_pct=-4.0"
+        },
+        {
+          "point": "予想PER 22.5倍、PBR 1.85倍という水準は、過去の総合商社セクターのバリュエーションと比較して割安感に乏しく、マクロ環境の不透明感を跳ね返すほどの価格的優位性は見られません。",
+          "evidence": "fundamentals.valuation.forward_pe=22.524, fundamentals.valuation.price_to_book=1.852"
+        }
+      ],
+      "cautions": [
+        "2026年8月3日の決算発表における業績進捗および株主還元策の有無",
+        "急速な円高・ドル安進行による為替差損および海外事業利益の目減り",
+        "TOPIXが25日線を下回るなど、日本市場全体の下落基調に伴う連れ安",
+        "日銀の追加利上げ観測やJGB 10年金利の上昇に伴う、有利子負債コスト増への懸念"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-07-22",
+    "days_ago": 12,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "最強の商社：三菱商事の注目事業《銅》年産40万トンは「通過点」 既存鉱山を地道に拡張 安藤大介・編集部 - weekly-economist.mainichi.jp",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5sRGYxSzN0cDlrQ3RtWkp5R05mWWVGVFpxRDFrSllrMDI1RTJBSkJkTTlOSjUtV3N4NmVyMWJ4Uzl1Y3lYWDJWMFVBMTRuMm9ZYl9LMHJXOW91WFh2dl8yclJ3LTh5bEcyLV80WDNsRHNWVkRLaDZnaVZRc1hVYXM?oc=5",
+        "published": "Sun, 02 Aug 2026 20:06:00 GMT",
+        "publisher": "weekly-economist.mainichi.jp"
+      },
+      {
+        "title": "三井物産が2030年度「純利益1.4兆円」の野心的目標も、市場からは「分かりにくい」と厳しい声…レバレッジや資金配分を曖昧にした経営陣の“深謀遠慮” - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBfZ0oxVVZVdkRmeGtTaFFvd0xfcUtrX20wTERZS2gtWHJWMXJhaGx3T09wYzlqbFNSenVBZXBGLXdYWWpwaWxQb2dlMFl0QzDSAU9BVV95cUxQX2dKMVVWVXZEZnhrU2hRb3dMX3FLa19tMExEWUtoLVhyVjFyYWhsd09PcGM5amxTUnp1QWVwRi13WFlqcGlsUG9nZTBZdEMw?oc=5",
+        "published": "Sun, 02 Aug 2026 19:45:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "最強の商社：トップインタビュー「純利益1兆円超へ手応え 磨く・変革する・創る、を徹底」中西勝也・三菱商事社長 - weekly-economist.mainichi.jp",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAyTloxdkFDdVV0S2ptaGxNU1lWMzNjMFlucjQ3OW11SVh3M1pudHpreHZNWF9VWVp5QTFpVjRxUVZMSjBqZVV0ZmFDRVR4N0Ntdm1ZY2xURUJnZUZuY3phSTBSQXM2TmRlZUFqVW9lUFF6VW93QXJudjN3LVRJczQ?oc=5",
+        "published": "Sun, 02 Aug 2026 20:00:15 GMT",
+        "publisher": "weekly-economist.mainichi.jp"
+      },
+      {
+        "title": "【ARM決算とソフトバンクグループ日本株明暗!!日経平均EPS…/三菱商事/アルプスアルパイン/川崎汽船/任天堂/三菱重工/米国株/花王/JFEホールディングス/トヨタ/オリエンタルランド/京セラ】 Andrew Mountbatten-windsor (fbJ4VpBRgk) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBhVXBMM3drcmVIWmNrUFVfZ1gtbFFYc1Z6bDlJV0VWUF84NXJKdWRLb0drb0hPN21ab2F0LUhOeWFVV2VybllrZFNTaUswcVE1TWZyelhSRmJKMHUyY3VBcg?oc=5",
+        "published": "Sun, 02 Aug 2026 07:41:02 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "自動運転のロボトラック､52億円調達 28年にも無人走行 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1EZi0tcUVMXy1sYWs0QjJOVWM4cmg3UVR4czBFMUFOZFpQSGJWZHBJbGMwOFNIaVZiWEtqSVgwVkxNQXFtazI3UmhBd0RQdGhJMWdVYTlkUUxWWUxHbUlqTndMaVBTX0dEcGpOdmVVQlBEbVRJc3hBZXRQX3FqaDQ?oc=5",
+        "published": "Sun, 02 Aug 2026 20:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "地元野菜×ハード系パンが魅力のベーカリー「ノイエス」上越市にオープン！の写真2 - Komachi Web",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9VLVRvOUtBelZ6dkVqZWlBRmlzMnJnOFRLbnlkdVhCaGhxOHhQaGxWczE2VGpYR3QxTjZsbUVwSVdVMzdLTFhTTHhXUjRlS1VRSmVRTDRwbHBWOFk?oc=5",
+        "published": "Sun, 02 Aug 2026 08:12:21 GMT",
+        "publisher": "Komachi Web"
+      },
+      {
+        "title": "【ARM・AI半導体爆上げ止まらん⚡任天堂は地獄の展開…】ARM/SHIFT/三菱商事/日本電気/インテル/SCREEN/ディスコ/東京エレクトロン/村田製作所/レーザーテック Kyle Lowry (UcxHcnaQjI) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1LQ3g5VzJjLTBreXdqdk85Z0Jha3M1ZjNPTjFudFZKLVRuSm1hZFVaY1h2SERHRlc0Z3RVUFZ5YXk3YnpVYm1ST19aN2tCRXpCazd2WDVGSDAyS0U?oc=5",
+        "published": "Sun, 02 Aug 2026 09:20:32 GMT",
+        "publisher": "Mshale"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "特定子会社の異動（子会社の特定子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260714593288.pdf",
+        "date": "2026-07-15 10:00:00"
+      },
+      {
+        "title": "子会社間の合併及び特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552595.pdf",
+        "date": "2026-05-29 09:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C2プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539898.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C3プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539905.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C4プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539910.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C5プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539918.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C6プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539939.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515679.pdf",
+        "date": "2026-05-01 14:00:00"
+      },
+      {
+        "title": "通期個別業績と前期実績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515675.pdf",
+        "date": "2026-05-01 14:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260416505643.pdf",
+        "date": "2026-04-17 14:00:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-08-03T08:03:45+09:00",
+  "price_as_of": "2026-07-31",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズの strength が 75 と非常に強力だが、テクニカルも既に bullish に揃っており、好決算の内容が株価に相当程度織り込まれた「遅いエントリー」になるリスクが高い。",
+        "evidence": "fundamental_view.strength=75 / technical_view.stance=bullish"
+      },
+      {
+        "reason": "市場全体が downtrend レジームにある中、直近3営業日で約14%という急激な反発を見せており、目先の利益確定売りに押される可能性が高い。",
+        "evidence": "reference.market_regime=downtrend / technical_view.summary"
+      },
+      {
+        "reason": "第1四半期の業績は極めて強いが、通期ガイダンスが未公表であり、マクロ環境の変化（円高・金利上昇）に対する耐性が不透明である。",
+        "evidence": "fundamental_view.cautions[0]: ガイダンス未開示 / fundamental_view.cautions[1]: 円高・金利上昇"
+      }
+    ],
+    "risks": [
+      "急速な円高進行（157円台）に伴う海外利益の目減りおよびバリュエーション調整",
+      "国内長期金利の上昇による高PERグロース銘柄への売り圧力",
+      "TOPIXが25日線を下回る市場全体の地合い悪化（レジーム・ダウン）による連れ安",
+      "前夜ADRの軟調（-0.82%）を受けた寄り付きでの利益確定売りの加速"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズの strength が 75 と非常に強力だが、テクニカルも既に bullish に揃っており、好決算の内容が株価に相当程度織り込まれた「遅いエントリー」になるリスクが高い。\",\n      \"evidence\": \"fundamental_view.strength=75 / technical_view.stance=bullish\"\n    },\n    {\n      \"reason\": \"市場全体が downtrend レジームにある中、直近3営業日で約14%という急激な反発を見せており、目先の利益確定売りに押される可能性が高い。\",\n      \"evidence\": \"reference.market_regime=downtrend / technical_view.summary\"\n    },\n    {\n      \"reason\": \"第1四半期の業績は極めて強いが、通期ガイダンスが未公表であり、マクロ環境の変化（円高・金利上昇）に対する耐性が不透明である。\",\n      \"evidence\": \"fundamental_view.cautions[0]: ガイダンス未開示 / fundamental_view.cautions[1]: 円高・金利上昇\"\n    }\n  ],\n  \"risks\": [\n    \"急速な円高進行（157円台）に伴う海外利益の目減りおよびバリュエーション調整\",\n    \"国内長期金利の上昇による高PERグロース銘柄への売り圧力\",\n    \"TOPIXが25日線を下回る市場全体の地合い悪化（レジーム・ダウン）による連れ安\",\n    \"前夜ADRの軟調（-0.82%）を受けた寄り付きでの利益確定売りの加速\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "直近3営業日で約14%の急反発を見せ、25日移動平均線を明確に上抜けた。短期的なトレンド転換と強い買いモメンタムが確認される。",
+      "points": [
+        {
+          "point": "SMA5がSMA25を上抜けるゴールデンクロスが発生し、短期的な上昇トレンドへの転換を示唆している。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\", sma5=76566.0, sma25=76386.8"
+        },
+        {
+          "point": "MACDヒストグラムが大幅なプラス（762.54）を記録し、MACD本体もシグナルを急角度で上抜ける改善傾向にある。",
+          "evidence": "price_technical.macd_histogram=762.54, macd=-151.79, macd_signal=-914.33"
+        },
+        {
+          "point": "直近3営業日で出来高を伴いながら連騰しており、RSIも60超まで急上昇するなど、強い買い意欲が確認される。",
+          "evidence": "price_technical.recent_5_days (7/29-7/31の推移), price_technical.rsi14=62.6"
+        }
+      ],
+      "cautions": [
+        "TOPIXが25日線を下回るdowntrendレジーム内にあり、市場全体の地合い悪化が重石となる可能性がある (macro.market_regime)",
+        "前夜のADRが-0.82%と軟調であったため、当日の寄り付きで短期的な利益確定売りが先行するリスクがある (us_overnight.adr)"
+      ],
+      "key_levels": {
+        "support": 76386.8,
+        "resistance": 83520.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "2027年3月期第1四半期において営業利益44.7%増という極めて強い成長を確認。製造業PMIの拡大継続や日銀短観の改善が示す顧客の投資意欲もポジティブだが、円高や金利上昇に伴うグロース株へのバリュエーション調整圧力には警戒を要する。",
+      "points": [
+        {
+          "point": "直近の第1四半期決算が大幅な増収増益（売上高32.8%増、営業利益44.7%増）を達成しており、業績のモメンタムが非常に強い。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "主要顧客層である国内製造業の景況感が改善しており、PMIも54.7と6ヶ月連続の拡大を示していることから、FA（工場自動化）需要の底堅さが期待できる。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.7, macro.boj.tankan.di.large_manufacturing.change_from_prev=5.0"
+        },
+        {
+          "point": "過去3期にわたり一貫して増収増益を継続しており、高い収益性を維持しながら成長を続けている長期的な実績がある。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        }
+      ],
+      "cautions": [
+        "2027年3月期の通期業績予想（ガイダンス）が開示されておらず、先行きの不透明感が残る（fundamentals.recent_important_disclosures[0]）。",
+        "円高の急速な進行（157円台への下落）および国内10年金利の上昇（2.8%台）は、海外売上比率の高い同社の換算利益減少や、高PER株のバリュエーション低下を招くリスクがある（macro.indices[2], macro.rates.jgb_10y_percent）。",
+        "TOPIXが25日線を下回り、市場全体がダウンレジームにあるため、好決算銘柄であってもマクロ要因に引きずられる可能性がある（macro.market_regime）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "｢ネットもテレビと同じ｣という慢心が命取りに…\"ガリバー\"電通を時代遅れ集団に変えた､たった1つの誤算 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9ZNUlIazBhXy1rd0h3dzVEQTA5OGVzMEFjZDkxZjdieVdCUm9OMzVqNGtRSTJ3dzBYQ0dtQ1JHU2JJWTFFQk1IREVBY19BN2s?oc=5",
+        "published": "Sun, 02 Aug 2026 02:02:57 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      }
+    ]
+  }
+}

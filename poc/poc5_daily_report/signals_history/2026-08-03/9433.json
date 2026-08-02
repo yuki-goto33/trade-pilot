@@ -1,0 +1,215 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-08-03T08:06:56+09:00",
+  "price_as_of": "2026-07-31",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の確信度が55にとどまり、buyの必須条件（strength 70以上）を満たさないため様子見とする。",
+        "evidence": "fundamental_view.strength=55"
+      },
+      {
+        "reason": "大規模な情報漏えい事案と総務省からの厳重注意により、ブランド毀損およびガバナンスリスクが顕在化している。",
+        "evidence": "fundamental_view.points[1]: 最大1,422万件のメールアドレス等漏えいの可能性"
+      },
+      {
+        "reason": "前夜ADRが-4.19%と急落しており、寄り付きで25日移動平均線を割り込み、短期的な調整が加速する懸念が強い。",
+        "evidence": "technical_view.points[2]: ADRが-4.19%と大きく下落"
+      },
+      {
+        "reason": "市場全体がdowntrendレジームにあり、個別銘柄の悪材料に対して通常以上に売りが強まりやすい環境である。",
+        "evidence": "reference.market_regime=downtrend"
+      }
+    ],
+    "risks": [
+      "2026年8月7日の次回決算発表における、情報漏えい対策費用計上や業績見通しの下方修正リスク",
+      "25日移動平均線（2837円）を明確に下抜けた場合の中期的なトレンド崩壊",
+      "情報漏えい発覚後のユーザー解約率上昇によるARPU（1ユーザーあたり平均収入）の悪化"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 50,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ専門家の確信度が55にとどまり、buyの必須条件（strength 70以上）を満たさないため様子見とする。\",\n      \"evidence\": \"fundamental_view.strength=55\"\n    },\n    {\n      \"reason\": \"大規模な情報漏えい事案と総務省からの厳重注意により、ブランド毀損およびガバナンスリスクが顕在化している。\",\n      \"evidence\": \"fundamental_view.points[1]: 最大1,422万件のメールアドレス等漏えいの可能性\"\n    },\n    {\n      \"reason\": \"前夜ADRが-4.19%と急落しており、寄り付きで25日移動平均線を割り込み、短期的な調整が加速する懸念が強い。\",\n      \"evidence\": \"technical_view.points[2]: ADRが-4.19%と大きく下落\"\n    },\n    {\n      \"reason\": \"市場全体がdowntrendレジームにあり、個別銘柄の悪材料に対して通常以上に売りが強まりやすい環境である。\",\n      \"evidence\": \"reference.market_regime=downtrend\"\n    }\n  ],\n  \"risks\": [\n    \"2026年8月7日の次回決算発表における、情報漏えい対策費用計上や業績見通しの下方修正リスク\",\n    \"25日移動平均線（2837円）を明確に下抜けた場合の中期的なトレンド崩壊\",\n    \"情報漏えい発覚後のユーザー解約率上昇によるARPU（1ユーザーあたり平均収入）の悪化\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "中期的な上昇トレンドは維持されているものの、直近2営業日の大幅な反落と前夜ADRの急落により、短期的には調整圧力が極めて強い状態にあります。",
+      "points": [
+        {
+          "point": "60日騰落率が+15.68%、対TOPIX相対騰落率が+13.23%と、中期的なトレンドは依然として市場平均を凌駕する強さを維持している。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=15.68, price_technical.trend_60d.relative_to_topix_60d_pct=13.23"
+        },
+        {
+          "point": "短期的には、直近2営業日で急激に値を消しており、特に7/31は出来高を伴う-4.26%の大幅落となっている。",
+          "evidence": "price_technical.recent_5_days[4].change_pct=-4.26, price_technical.recent_5_days[4].volume=13640200"
+        },
+        {
+          "point": "前夜のADRが-4.19%と大きく下落しており、寄り付きから25日移動平均線（2837円）近辺まで窓を開けて下落する可能性が高い。",
+          "evidence": "us_overnight.adr.change_1d_pct=-4.19, price_technical.sma25=2837.16"
+        }
+      ],
+      "cautions": [
+        "ADRの下落分を織り込んだ場合、25日移動平均線を割り込むリスクがあり、その場合は中期トレンドの崩壊を警戒する必要がある",
+        "市場全体の地合い（TOPIX）がdowntrendレジームにあり、個別銘柄への売り圧力が強まりやすい",
+        "MACDは依然としてプラス圏で推移しているが、価格急落によりデッドクロスに向かう懸念がある"
+      ],
+      "key_levels": {
+        "support": 2837.16,
+        "resistance": 3005.2
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "過去の業績は増収・増益基調で推移しているものの、直近で大規模な情報漏えい事案と総務省による厳重注意が報じられており、ガバナンスリスクが顕在化しています。次回決算発表を1週間後に控え、ネガティブ材料の業績への影響を見極める局面です。",
+      "points": [
+        {
+          "point": "業績は過去3期連続で増収・最終増益を達成しており、ROEも14%と高水準を維持している。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=7071, fundamentals.valuation.return_on_equity=0.14"
+        },
+        {
+          "point": "2026年8月2日に最大1,422万件のメールアドレス等漏えいの可能性と、総務省からの厳重注意が報じられ、ブランド毀損と社会的信用低下の懸念が生じている。",
+          "evidence": "news.headlines[1].title, news.headlines[9].title"
+        },
+        {
+          "point": "2026年6月25日に財務報告に係る内部統制の「開示すべき重要な不備」を公表しており、管理体制への不安要素が残る。",
+          "evidence": "disclosures.items[1].title"
+        },
+        {
+          "point": "3,000億円を上限とする大規模な自社株買い枠を設定しているが、直近（6月中）の取得実績は0円にとどまり、需給の下支え効果は限定的となっている。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        }
+      ],
+      "cautions": [
+        "2026年8月7日に次回決算発表を控えており、情報漏えい対策費用や業績見通しへの影響が焦点となる",
+        "情報漏えいを受けたユーザー離れ（解約率上昇）による通信ARPUへの悪影響",
+        "市場環境がdowntrend（下降局面）にあり、金利上昇局面における配当利回り銘柄の相対的な魅力低下リスク"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ＫＤＤＩ(株)【KDDIY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5UeXNVcVVoNnBzaHVrVDJRR3VqcmJrUDk1T0h1dDRJT0ttelAwWVk0UWZWT0JaQTIxMkRtQUxzLW1FdnNRVXpvUWZRb0p4cVlJ?oc=5",
+        "published": "Sun, 02 Aug 2026 09:41:39 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "【写真・画像】総務省、ＫＤＤＩ厳重注意 メール、パスワード漏えいで | | 全国のニュース - 佐賀新聞",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE8wTHlxQkozQ2tlOEZKQUE2bHZzRHlrdm9IdDlsdm1BekM4Wi1FWWhwSmpKSlZvYVZoTEF1RmlleGtxdTNtcUlLNW1PNmdRVjAyS2FUeUc3UFlyR1NPR3c?oc=5",
+        "published": "Sun, 02 Aug 2026 14:37:30 GMT",
+        "publisher": "佐賀新聞"
+      },
+      {
+        "title": "HENNGE One、ID統合管理サービス「KDDI Business ID」とのシングルサインオン連携開始 - 朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBzTW5ZX0s1TzNPcUlHVkFjUkdjTDVoOU9fMGdHWmVEcUwzaVZZQVAyMURmWXpHVGdPb0NhekRBRW5kaTBpWlFIMTVCdXlMU0ZhTW1GTWhWRndGWGM?oc=5",
+        "published": "Sun, 02 Aug 2026 12:16:25 GMT",
+        "publisher": "朝日新聞"
+      },
+      {
+        "title": "画像17 / 19＞夏休みの自由研究にも！銀座でカーボンニュートラルについて楽しく無料で学べる「GINZA 456 Created by KDDI」をナビゲート - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBvNzlPQnhmc3NJUHJNZFN2WnRzcm9yMW53TkQxYXh0MzJBVzVrVkRMMjlEakxkYVgtWlJvTDl5aGNzNnVzMThFTFN0bWw5T1hvb05RdGlJeUpnQWpRNGJiTGVSRExSa3F4UFVJb3FB?oc=5",
+        "published": "Sun, 02 Aug 2026 16:52:33 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "KDDIが熊本地震被災地に無償提供したStarlinkとはいったい何なのか - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5oV19XU3JwOEtLVm52NmpOMEJzTFhrZnpXNGtkSi1URFNMU3FvdTB6c3g0bzEzdmZaRlVGRHl5dlBmbTZhY0x1RDVqV3MxLTItNklnNzNXN3ZBZDhxekNxUXEtVHFPbDZ0djBfNnFIanJuT3hsYzJv0gF3QVVfeXFMTmhXX1dTcnA4S0tWbnY2ak4wQnNMWGtmelc0a2RKLVREU0xTcW91MHpzeDRvMTN2ZlpGVUZEeXl2UGZtNmFjTHVENWpXczEtMi02SWc3M1c3dkFkOHF6Q3FRcS1UcU9sNnR2MF82cUhqcm5PeGxjMm8?oc=5",
+        "published": "Sun, 02 Aug 2026 02:03:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "【KDDI(9433)】増配余地あり！回線数✕ARPUの上昇で業績好調！NTTドコモ、ソフトバンクと比較！ 2021年12月22日 Ed Miliband (Fnm354wPWW) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFAzZE4xUGhXSlhmNVl0cXRMajZ5bGpzNzdxVUdzN01GUUlneHh1YU5GZS1fTlVPbWVOTTFJUnljeEgyWWFzUTljQXZJSFU5aXl0cXFXcWdLbGdyUWx5NklnXw?oc=5",
+        "published": "Sun, 02 Aug 2026 15:43:59 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "断水続く氷川町 川の水をろ過した飲料水の提供始まる プールの水で入浴支援も【令和８年熊本地震】 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFB0OUIzdWFXX25iVjJISlFGUTdTX2piX0NjWHpfWnFYVmNQSG9mU1VoalFBZG9YbEJnUDlhb25GZG9SR3ZBeEg2c0tRVEpXYW5meDNQN1dSbVdYaG1TNDBvdC1BZnFNdnk3bWlGNkxkX1RmTVpCUnZEQzVLWQ?oc=5",
+        "published": "Sun, 02 Aug 2026 03:23:00 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "KDDIで一時通信障害 全国で影響 午前7時過ぎに発生 午前10時過ぎに復旧｜TBS NEWS DIG Pk Subban (fnIDWFaE0N) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE02MUVzN050aVZvXzJjbGxlMXlySEF1OHdSeThvbVF6N05xbXFDaG5fd1oydkRmY1I3Z2MtaFZnX3pfUjk5dE9WNmt2dHJqOC1MRUNTUDZjUUtWblE?oc=5",
+        "published": "Sun, 02 Aug 2026 12:31:43 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "KDDIスマホ・ケータイ安全教室（炎上） こんなはずじゃ Shaq (WbbADKrzlV) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1VaENZaEplOWI2Z0hwdFVEOEZGR0NmLVpMbDRWQzZWV2tZN2FfWDF3My1NUXdCOUxOb190bGhpZ2k5YXR2d2pnYTNJYUt1U1RXSVpKdFM2X1F0Vmpod2docg?oc=5",
+        "published": "Sun, 02 Aug 2026 14:04:10 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "【KDDI発表】最大1,422万件のメールアドレス・パスワード漏えいの可能性｜対象サービスと今やるべきこと Zheng Qinwen (cD3xUeZsKo) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBzTHJTYjh2V1M3SjUtUWFCZTI5VGNIU014bHVhRzNIWTZmdk1lWEVGRWRPanItekpQa2ZKbWRTLWluS2hYSTFtS2REaHlwMEplWDBhLUphU1VGY09lMnNSSA?oc=5",
+        "published": "Sun, 02 Aug 2026 06:16:30 GMT",
+        "publisher": "Mshale"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      },
+      {
+        "title": "東京証券取引所への「改善報告書」の提出に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559424.pdf",
+        "date": "2026-06-02 16:00:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（中期経営戦略）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524146.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "auフィナンシャルホールディングス株式会社の東京証券取引所への株式上場準備の開始について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524156.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "2026年３月期　決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511523545.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524005.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524010.pdf",
+        "date": "2026-05-12 15:45:00"
+      }
+    ]
+  }
+}
