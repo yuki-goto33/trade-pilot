@@ -1,0 +1,220 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-08-04T08:08:12+09:00",
+  "price_as_of": "2026-07-31",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "業績は増収増益基調で堅調だが、個人情報漏洩に伴う行政指導や内部統制の不備がガバナンス上の重大な懸念材料となっている。",
+        "evidence": "fundamental_view.points[0] および fundamental_view.points[1], [2]"
+      },
+      {
+        "reason": "ファンダメンタルズの確信度（strength=60）がbuy基準（70以上）に達しておらず、材料不足かつリスク要因が目立つ。",
+        "evidence": "fundamental_view.strength=60"
+      },
+      {
+        "reason": "テクニカル面では中期的な上昇トレンドを維持しているものの、市場全体の地合いがdowntrendであり、直近の急落を受けた押し目確認が必要な局面である。",
+        "evidence": "technical_view.summary および reference.market_regime='downtrend'"
+      },
+      {
+        "reason": "8月7日の決算発表が目前に迫っており、業績修正や市場の反応を確認するまでエントリーを控えるべきイベントリスクが存在する。",
+        "evidence": "reference.next_earnings_date='2026-08-07'"
+      }
+    ],
+    "risks": [
+      "2026年8月7日の決算発表による株価の急変動（ネガティブサプライズ）",
+      "市場全体の下降トレンド継続によるさらなる連れ安",
+      "行政指導に伴う対策費用の増大やブランド価値の毀損による顧客流出",
+      "長期金利の上昇に伴う配当利回りの相対的な魅力低下（バリュエーション調整）"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"業績は増収増益基調で堅調だが、個人情報漏洩に伴う行政指導や内部統制の不備がガバナンス上の重大な懸念材料となっている。\",\n   \"evidence\": \"fundamental_view.points[0] および fundamental_view.points[1], [2]\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズの確信度（strength=60）がbuy基準（70以上）に達しておらず、材料不足かつリスク要因が目立つ。\",\n   \"evidence\": \"fundamental_view.strength=60\"\n  },\n  {\n   \"reason\": \"テクニカル面では中期的な上昇トレンドを維持しているものの、市場全体の地合いがdowntrendであり、直近の急落を受けた押し目確認が必要な局面である。\",\n   \"evidence\": \"technical_view.summary および reference.market_regime='downtrend'\"\n  },\n  {\n   \"reason\": \"8月7日の決算発表が目前に迫っており、業績修正や市場の反応を確認するまでエントリーを控えるべきイベントリスクが存在する。\",\n   \"evidence\": \"reference.next_earnings_date='2026-08-07'\"\n  }\n ],\n \"risks\": [\n  \"2026年8月7日の決算発表による株価の急変動（ネガティブサプライズ）\",\n  \"市場全体の下降トレンド継続によるさらなる連れ安\",\n  \"行政指導に伴う対策費用の増大やブランド価値の毀損による顧客流出\",\n  \"長期金利の上昇に伴う配当利回りの相対的な魅力低下（バリュエーション調整）\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "中期トレンドは強気（ゴールデンクロス・対TOPIXアウトパフォーム）を維持しているが、直近2営業日の大幅下落と市場全体の地合い悪化により、短期的には調整局面にある。",
+      "points": [
+        {
+          "point": "5日線が25日線を上回るゴールデンクロスを維持しており、60日騰落率も+15.68%と中期的なトレンドは依然として上向きである。",
+          "evidence": "price_technical.sma5_vs_sma25, price_technical.trend_60d.change_60d_pct=15.68"
+        },
+        {
+          "point": "MACDがシグナルを上回るプラス圏で推移しており、トレンドの勢いは完全には崩れていない。",
+          "evidence": "price_technical.macd=70.35, price_technical.macd_signal=57.52"
+        },
+        {
+          "point": "直近5営業日のうち後半2日間で株価が急落（-1.83%および-4.26%）し、終値が5日線を大きく下回るなど、短期的な売り圧力が強まっている。",
+          "evidence": "price_technical.recent_5_days, price_technical.sma5=3005.2"
+        },
+        {
+          "point": "前夜のADR（+0.82%）および米国通信セクターETF（+2.86%）が上昇しており、寄り付きの買い戻しが期待される。",
+          "evidence": "us_overnight.adr.change_1d_pct=0.82, us_overnight.sector_proxy.change_1d_pct=2.86"
+        }
+      ],
+      "cautions": [
+        "市場レジームがdowntrendと判定されており、個別銘柄のテクニカルが良好でも相場全体の連れ安に巻き込まれるリスクが高い（macro.market_regime=downtrend）。",
+        "直近の急落によりRSIが44.4まで急低下しており、下値支持線として機能しうる25日移動平均線（2837.16）を維持できるかが焦点となる。"
+      ],
+      "key_levels": {
+        "support": 2837.16,
+        "resistance": 3005.2
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "業績は緩やかな拡大傾向にあるものの、直近で発生した大規模な個人情報漏洩に伴う総務省の行政指導や内部統制の不備が懸念材料です。また、数日後に決算発表を控えており、内容を確認するまで慎重な姿勢が妥当と判断します。",
+      "points": [
+        {
+          "point": "年次業績は増収増益基調を維持しており、1株当たり利益（EPS）も着実に成長しています。",
+          "evidence": "fundamentals.earnings_trend.annual (2024-03: 150.59, 2025-03: 169.28, 2026-03: 183.55)"
+        },
+        {
+          "point": "大規模な不正アクセスによるパスワード漏洩を受け、総務省から行政指導を受けており、社会的信用の低下や対策コストの発生が懸念されます。",
+          "evidence": "news.headlines (2026-08-03: KDDIに総務省が行政指導、ISP向けメールシステムへの不正アクセス)"
+        },
+        {
+          "point": "財務報告に係る内部統制の「開示すべき重要な不備」を公表し、東証へ改善報告書を提出するなど、ガバナンス面でのリスクが顕在化しています。",
+          "evidence": "disclosures.items (2026-06-25, 2026-06-02)"
+        },
+        {
+          "point": "最大3,000億円の自己株式取得枠を設定しているものの、直近1ヶ月の取得実績がゼロであり、現時点では需給の下支えとして機能していません。",
+          "evidence": "fundamentals.recent_important_disclosures (2026-07-06: 2026年6月の取得株式総数は0株)"
+        }
+      ],
+      "cautions": [
+        "2026年8月7日の決算発表による業績修正や市場反応（イベントリスク）",
+        "行政指導を受けたことによる今後の規制強化や顧客流出のリスク",
+        "日本の10年債利回りが2.8%台と高水準にあり、配当利回り（2.88%）の相対的な魅力低下とバリュエーションへの下方圧力（macro.rates.jgb_10y_percent=2.801）",
+        "市場全体が下降トレンドにある中でのセンチメント悪化（macro.market_regime.market_regime=downtrend）"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "KDDIに総務省が行政指導、ISP向けメールシステムへの不正アクセスで約762万件のパスワード漏えい（INTERNET Watch） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE93Q0Zhc2ZpMmQ0enNfSEVEV213YzFfaHM2X3puOUtDMDV1NzdqVUtRWEl4R1VHUmp6UmlPdGUzcHFHRFRPOEdsbFQ4cmFxMzMySFhKTlJnM0VPT19keDhvT09uM1FKbkZ2Rl9SRUtGT1JwX3hBUU9WNUppV1ZXYjA?oc=5",
+        "published": "Mon, 03 Aug 2026 08:40:00 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "KDDIなどが国産ヒューマノイドにGemini搭載、自然な会話で人間味ある接客 - 日経クロステック",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5fczZ3NGlPRVdSRGY0LUF6SUxhX0JUY2UwamFMaXFsLUEwMEV3a0NBZUpWZXVQenFjTlJqOXFhVjlDR190Z21fU3prQzJGU1A2SkdvZGxRZ3d4VThQR0JzY3VObVAzUWM?oc=5",
+        "published": "Mon, 03 Aug 2026 07:00:00 GMT",
+        "publisher": "日経クロステック"
+      },
+      {
+        "title": "ライブに行くならPontaパス Mr.Children Tour 2026“Saturday in the park”追加公演Pontaパス先行受付開始！ - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1lZlg3UG9zaTN2M3BZOUNVZ3ZVZVVEODNoUkpvcTUwVnBPbVI3Y2JqLXYyQTEwVDJ6WUs3WS1Kb0lxY0Q1dWh0RE1mSVliaFlaUDBmTXVsUGVBQk9ub1BnSFpLUW56ak5qc1E?oc=5",
+        "published": "Mon, 03 Aug 2026 10:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "KDDIミリ波×発売前「Galaxy Z Fold8」の体験イベント開催　VTuber動画を大画面で - ITmedia Mobile - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1Zc2lXRG01UVZ4Sk1FTURiS2hqQ010VmUyMGpWVEx4bVo4ejZ1Z3M4TjV4Y0NwRzFTaWZXelFGNzcwb3FrNHlXZHA2dmxKLTVTcFpWbzhKeEFTWU1COXBndDdYcEZTRUNCTkVlU18wd9IBaEFVX3lxTFBPaENuT3hqeWRVQmFmNWpZRXlNUV9lc0dKbTBwT2FXQnRSdGZiblN1ald3OXZpMG9XTDRVM29UQzZxQWI2dEVEbTZOT1FKMlczQUdEdDgxc3Jxd3FIN245djFvSjVoTjU4?oc=5",
+        "published": "Mon, 03 Aug 2026 08:58:00 GMT",
+        "publisher": "ITmedia"
+      },
+      {
+        "title": "ニュース KDDIとエリクソン、生成AIを活用した小学生向け「遠隔AIクリエイター教室」を開催 - 株式会社インプレス",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBEQWxud2paVGVPMjlXeGppQnJ4VjJRMGRLV0tuQzR5dXNqZEdnZWJjaTVXYXBzRUY0UGNJR3ZzUzcxMjA3ZWhmSFIzeDRyYUpzcGpzSjZjWmlQNVFtZExHZ3FPWQ?oc=5",
+        "published": "Mon, 03 Aug 2026 09:18:25 GMT",
+        "publisher": "株式会社インプレス"
+      },
+      {
+        "title": "会計知識録 第45回 内部統制に重大な欠陥。それでも「適正意見」なのはなぜ？―KDDI事例から考えるJ-SOXの本当の役割― - zeiken.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9WYWQ0Q2VMaTFDODhtVVMyelVDdm9HeGFLbjVlejZ4ajVnTFRkSkZpeVNOV3F1bFZ6Q2YwOEJCUE1DbjdNS0JkdjJXMVItTjBweWJPZVU1eXpFakUwWHZjZHVwa2cwQ3V6SkRBS3dfRUF1ZjJha1Iw?oc=5",
+        "published": "Mon, 03 Aug 2026 08:00:00 GMT",
+        "publisher": "zeiken.co.jp"
+      },
+      {
+        "title": "韓国でau PAY利用でPontaポイント最大20％還元キャンペーン（KDDI/auフィナンシャルサービス） - ペイメントナビ",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5YMC1rV1BIVUFiVnFKUno4S0tjQV9GRmh0d0I0TlBfWW16VFNXYWxKZFRBLTU2VnU3ODFOVnNoNDN6bVE1bFNhbXZtc0xRcWJLSHR1MWY0VlhkTGs?oc=5",
+        "published": "Mon, 03 Aug 2026 04:08:00 GMT",
+        "publisher": "ペイメントナビ"
+      },
+      {
+        "title": "KDDIミリ波×発売前「Galaxy Z Fold8」の体験イベント開催　VTuber動画を大画面で - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPaklEY3lLWFJ0VWl3OWY3R3hya0p4bG5nWUFlZDBCSTNsWk14SnFidF95WFlnMThtYXBYY2t5LVNyZEl5dXJSLWRSZlNNRm8yOWFtdHRLX2FRVDFFbTF5NXJwNVRJWWw5ZF9LcDczakVMOUlUWUxaWWk5eF9vcDhoZmY1Y0ktR2JOc0VFSUI3UVRzaThMR0FRTC1LSdIBlwFBVV95cUxNU0FCMk9Wb2FuM1k2dGxKd0t2UGphbndyV1RISUNOX2RfS0ZkMnNKd0dyc2J3T1I2cWlWeVBHd3pSd29jdzZ6bWprS29EMXNyaWE5YVJWMGlSZzRtcEN3YmhpZndJRDJVRGMyc2RWWUV1Tnp0M1pGZ25yWlNuT1loR25peFQ5U3RGSndwSkJZZExqc19mMjFr?oc=5",
+        "published": "Mon, 03 Aug 2026 09:05:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "【週間振り返り】KDDIやMUFGら25社が参画、LBE XRを促進する組織が発足 - Mogura VR",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE55UGdETm1iNjZZNWpWOFlsVWhsNzFjaTV4N0FNSnpNQ0VIZ2xGTDh6cXBMbkVIMUhyamZJcmtyWXpwVzZoVVR4aG5Mb2w4akxPUHQ5MkNLcTY3enBrTU00?oc=5",
+        "published": "Mon, 03 Aug 2026 00:19:50 GMT",
+        "publisher": "Mogura VR"
+      },
+      {
+        "title": "KDDIとエリクソン、生成AIを活用した小学生向け「遠隔AIクリエイター教室」 9月開催 - ICT教育ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFA4QlBYd3Jtbml1VjV3dzlYTU1YcnlGeU5mS2twRHdrallBRXBVTHJlYlVBd3JNMWNReE5xLW5iLWUxbWc4TDJJRDc5QlV2N2xB?oc=5",
+        "published": "Sun, 02 Aug 2026 23:49:41 GMT",
+        "publisher": "ICT教育ニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      },
+      {
+        "title": "東京証券取引所への「改善報告書」の提出に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559424.pdf",
+        "date": "2026-06-02 16:00:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（中期経営戦略）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524146.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "auフィナンシャルホールディングス株式会社の東京証券取引所への株式上場準備の開始について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524156.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "2026年３月期　決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511523545.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524005.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524010.pdf",
+        "date": "2026-05-12 15:45:00"
+      }
+    ]
+  }
+}

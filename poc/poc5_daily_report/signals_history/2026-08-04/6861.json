@@ -1,0 +1,211 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-08-04T08:06:21+09:00",
+  "price_as_of": "2026-07-31",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家は好決算を受けて強気（strength=80）ですが、テクニカル専門家も強気（stance=bullish, strength=80）となっており、直近3営業日で約14%急反発したことで材料が既に株価へ織り込まれている可能性が高いため、モメンタム追随による遅いエントリーを避けて hold と判断します。",
+        "evidence": "fundamental_view.stance=bullish (strength=80) / technical_view.stance=bullish (strength=80)"
+      },
+      {
+        "reason": "ファンダ面では2027年3月期第1四半期の営業利益が44.7%増と成長が急加速しており、製造業PMIの改善やアナリストの目標株価引き上げなど強力な背景が存在します。",
+        "evidence": "fundamental_view.points[0]: 売上高32.8%増、営業利益44.7%増"
+      },
+      {
+        "reason": "市場全体のレジームがdowntrend判定となっており、短期的過熱感（RSI14が62.6まで急上昇）や前夜ADR高を受けた寄り付き後の達成感による利食い売りに押されるリスクがあります。",
+        "evidence": "reference.market_regime=downtrend / technical_view.cautions[2]: RSI14が62.6まで急上昇"
+      }
+    ],
+    "risks": [
+      "市場全体の地合い悪化（downtrend）に伴う、高PERなハイテク・成長株への連れ安売り圧力。",
+      "直近5日間で-3.99%と急速に進む円高による海外収益の目減り懸念。",
+      "直近3営業日で約14%急反発した反動による短期的な戻り売り・利食い売り。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家は好決算を受けて強気（strength=80）ですが、テクニカル専門家も強気（stance=bullish, strength=80）となっており、直近3営業日で約14%急反発したことで材料が既に株価へ織り込まれている可能性が高いため、モメンタム追随による遅いエントリーを避けて hold と判断します。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=80) / technical_view.stance=bullish (strength=80)\"\n  },\n  {\n   \"reason\": \"ファンダ面では2027年3月期第1四半期の営業利益が44.7%増と成長が急加速しており、製造業PMIの改善やアナリストの目標株価引き上げなど強力な背景が存在します。\",\n   \"evidence\": \"fundamental_view.points[0]: 売上高32.8%増、営業利益44.7%増\"\n  },\n  {\n   \"reason\": \"市場全体のレジームがdowntrend判定となっており、短期的過熱感（RSI14が62.6まで急上昇）や前夜ADR高を受けた寄り付き後の達成感による利食い売りに押されるリスクがあります。\",\n   \"evidence\": \"reference.market_regime=downtrend / technical_view.cautions[2]: RSI14が62.6まで急上昇\"\n  }\n ],\n \"risks\": [\n  \"市場全体の地合い悪化（downtrend）に伴う、高PERなハイテク・成長株への連れ安売り圧力。\",\n  \"直近5日間で-3.99%と急速に進む円高による海外収益の目減り懸念。\",\n  \"直近3営業日で約14%急反発した反動による短期的な戻り売り・利食い売り。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 80,
+      "summary": "直近3営業日の大幅な反発により5日線が25日線を上抜けるゴールデンクロスが発生し、短期的モメンタムが急速に強まっています。前夜ADRも大幅高となっており、一段の上値試しの公算が高い状況です。",
+      "points": [
+        {
+          "point": "5日線が25日線を上抜けるゴールデンクロスが達成され、短期的なトレンド転換の兆しが鮮明になっています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\", price_technical.sma5=76566.0, price_technical.sma25=76386.8"
+        },
+        {
+          "point": "MACDヒストグラムが大幅なプラスに転じ、MACD線がシグナル線を力強く上抜けており、買いの勢いが加速しています。",
+          "evidence": "price_technical.macd_histogram=762.54, price_technical.macd=-151.79, price_technical.macd_signal=-914.33"
+        },
+        {
+          "point": "直近5営業日のうち後半3日間で約14%の急反発を見せており、60日間の騰落率および対TOPIX相対騰落率もプラスを維持しています。",
+          "evidence": "price_technical.recent_5_days (7/29:+9.36%, 7/30:+1.78%, 7/31:+2.76%), price_technical.trend_60d.change_60d_pct=2.27, price_technical.trend_60d.relative_to_topix_60d_pct=0.81"
+        },
+        {
+          "point": "前夜の米国市場でADRが4.0%上昇、セクターETFも上昇しており、寄り付きから強い買い戻しが期待されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=4.0, us_overnight.sector_proxy.change_1d_pct=1.53"
+        }
+      ],
+      "cautions": [
+        "国内市場全体のレジームがdowntrend判定（TOPIX終値が25日線下、5日騰落マイナス）となっており、地合いの悪化による連れ安リスクには警戒が必要です。",
+        "ADRの大幅上昇を受けて寄り付きから窓を開けて上昇した場合、短期的達成感から利食い売りに押される可能性があります。",
+        "RSI14が62.6まで急上昇しており、短期間での急ピッチな戻りに対する過熱感が意識される水準に近づいています。"
+      ],
+      "key_levels": {
+        "support": 76386.8,
+        "resistance": 83520.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 80,
+      "summary": "2027年3月期第1四半期の決算が営業利益44.7%増と極めて好調であり、AI関連需要を背景とした製造業PMIの拡大も追い風。為替の円高進行や市場全体のダウントレンドといったマクロ懸念はあるものの、個別業績の急加速とアナリストの目標株価引き上げが強力なカタリストとなっている。",
+      "points": [
+        {
+          "point": "直近決算（7/28発表）での大幅な増収増益。売上高32.8%増、営業利益44.7%増と、前年度の成長率（営業利益8.3%増）から大きく加速している。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "外部環境における製造業の回復。製造業PMIが54.5と7ヶ月連続の拡大を示しており、特にAI関連需要に伴う新規受注が好調である。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.5"
+        },
+        {
+          "point": "市場コンセンサスの切り上がり。決算を受け、アナリストによる27年3月期の経常利益予想が前週比で7.6%上昇しており、SBI証券による目標株価引き上げも報じられている。",
+          "evidence": "news.headlines[3], news.headlines[4]"
+        }
+      ],
+      "cautions": [
+        "市場全体の地合い悪化（TOPIXが25日線を下回るdowntrend）に伴う、高PER銘柄への売り圧力。",
+        "急速な円高進行（ドル円5日間で-3.99%）による、海外売上比率が高い同社の利益目減りリスク。",
+        "通期の業績予想が非開示であることによる、先行きの不透明感。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)キーエンス【6861】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFAxcU9waXFEc3Q2aFY1YzRVa1Atd0pCMHhuam9mZmgwaUljMkZFNzcxNXRrNzFrM3NtUzFrelFnTVZTUmxLUEJxZHQxOFJSOUhXb3VOcXhRLTZlcG1LNWpJ?oc=5",
+        "published": "Mon, 03 Aug 2026 06:59:22 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "３日のＡＤＲ動向＝円換算値で高安まちまち、三井金属、キーエンス、レーザーテクなど高い 速報 - kabushiki.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFBOdTBEM0xmc1NSeHpCY3UwT052NVNROVNLdFZHSmE5Qm0wLW1GQ0NZZGhBakZsRGJPeVpQSG9VcnNNb0lYOU5B?oc=5",
+        "published": "Mon, 03 Aug 2026 22:39:00 GMT",
+        "publisher": "kabushiki.jp"
+      },
+      {
+        "title": "キーエンス30年/元マネージャーの実践知×Claudeによるモダン化された営業プロセスを公開。シンカワークス、「営業組織を仕組みで変える」営業DXソリューションをDXPO東京'26【夏】へ出展 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE4zbTM4TmphUU9STG5WUHNBZjVJNlRzOHJXY0djekt4b094SzlCV01neHVhanRUM0M4NVgzSXY4UzhyZVRqT0dZUDhQc1VhQ0FnUmFhdFJuanc0YjZpNXpueVRvUGh4V3E4S3c?oc=5",
+        "published": "Mon, 03 Aug 2026 12:46:04 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "【アナリスト予想】キーエンス、27年3月期経常予想。対前週7.6%上昇。(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQU09xa1YxaDhxb2xoTnhSb3gxbTBSVjFldXlBbFV2VzVHYm4yOG5XenEwLXRnTFltNDBLcURMdWFnS2Z6VGdMTUNaU3NJUWJieVBkVEY3eVA0YzhsUmFCUThhWks5NjZ5VmtEaHpMUXR6N0paTlJwaHNtNFBWYTREY0d1UjBNTnM?oc=5",
+        "published": "Mon, 03 Aug 2026 13:46:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "キーエンス－ＳＢＩが目標株価引き上げ オートメーション業界のコア銘柄として注目 - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBHam9xT0Fscm9heVF0eWtNTFh0aDFLQ19OaHhuSGhJbFZSUUlscVQxTmZzcGd3TmpKczlPbmdrNkNpYkJNSVZhR1o0SUpwSlBMc1VwWklmTQ?oc=5",
+        "published": "Mon, 03 Aug 2026 05:55:00 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "後場コメント No.6 北里、信越化、キーエンス、伊藤忠、セーレン、東亜道 | 個別記事 | ニュース - トレーダーズ・ウェブ",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE55dk5mdGhyS00xNkVrT3pfdlNKVmliOFVMSGhiajhBWmRzSjJOODRiNUQxNTZhWGh4YllJSjk1cDVqTjdMN2R5cjVXekllclpLa0RNWkZhUQ?oc=5",
+        "published": "Mon, 03 Aug 2026 06:32:00 GMT",
+        "publisher": "トレーダーズ・ウェブ"
+      },
+      {
+        "title": "360°全方向移動プラットフォームの「TriOrb」、キーエンス社製PLC(KV-X500シリーズ)に標準対応 - 南日本新聞",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQcU1Deno4YmJkb0t1UzNpVEZMRU16NzlRNmlsbGdRczM0YTE3enVJWGhocGNQUkU3V29BM1lGN2I0ZlA4T3pBb0pPR3Z0OU1XVVFiYU91Vno4a0hZTkJnUl9NOTZNR29ITXA1TmQ1TUpQNUxlMGdNTHV1SGJ6VnN6Vw?oc=5",
+        "published": "Mon, 03 Aug 2026 02:25:37 GMT",
+        "publisher": "南日本新聞"
+      },
+      {
+        "title": "プレスリリース PRTIMES記事詳細 | さんにちEye 山梨日日新聞デジタル - sannichi.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9CT2FUejRjYVQ1VUh5TkVWWGE5ekx4Mlc5eGlPb3NWWlJQaXNGQ2RyY0RaT2NFakFlNnNHMzFFaUJzSnNBOGl2SktIR0RUdl9KajZnaUgzOVB0di1SVHo0YjZn?oc=5",
+        "published": "Mon, 03 Aug 2026 05:35:53 GMT",
+        "publisher": "sannichi.co.jp"
+      },
+      {
+        "title": "ADR主要銘柄（日本）－キーエンス、日産自が上昇、ソフトバンクＧ、伊藤忠が下落(トレーダーズ・ウェブ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQSWdFdUpCMHp3djZFV3BncnMwNGFJckd6UW9Pa25iM0VhV0xIcFVHTm9KbFR4elEyZ1B3ZjBUVlRFZllpRFZOSzdveU1uUFhKcGk5R3dnM3Z6TzFGUDZOUk9SdFgyUlZrZlhnZkY3Z0Y5ZDhFZjc2VC0xQV84U25Ua2tESWNFbUE?oc=5",
+        "published": "Mon, 03 Aug 2026 22:26:31 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "【触れたくなる、そのケーブル】しなやかなシリコン素材。断線に強い高耐久ケーブル「SOLIDZ Power Cable SZ-SUシリーズ」をAmazonで販売開始｜株式会社メイカーズ（MAKERZ） - 朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5xQUtKMVAxVlh1U3NKSTNlRjZubWJ3MjBRVmVtREt1d3VCWVVpbnA3X1MxdXNKX2RXeVpDb1FUSm4xV3dvYnRJcWE2R3VVbHhDb0x0YXlNOERTSTQ?oc=5",
+        "published": "Mon, 03 Aug 2026 06:05:35 GMT",
+        "publisher": "朝日新聞"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      }
+    ]
+  }
+}

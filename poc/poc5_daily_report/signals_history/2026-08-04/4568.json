@@ -1,0 +1,206 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-08-04T08:10:28+09:00",
+  "price_as_of": "2026-07-31",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ見解は通期営業増益予想や高配当利回りを評価しつつも第1四半期減益着地により強弱感が拮抗（stance=neutral, strength=55）しており、買い基準（bullishかつstrength≥70）を満たしていません。",
+        "evidence": "fundamental_view.stance=neutral (strength=55)"
+      },
+      {
+        "reason": "テクニカル面では直近営業日に出来高を伴う11.13%の大幅下落を記録しMACDもデッドクロスするなど強い下落モメンタム（stance=bearish, strength=75）が確認されるため、下げ止まりを確認するまで様子見が妥当です。",
+        "evidence": "technical_view.stance=bearish (strength=75)"
+      }
+    ],
+    "risks": [
+      "RSI(14)が36.8まで低下しており、売られすぎからの短期自律反発による上振れリスク",
+      "急激な円高進行に伴う海外業績・配当・株価への下押しリスク",
+      "市場全体がdowntrend（下落レジーム）にある中での個別株下落圧力の強まり"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 50,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ見解は通期営業増益予想や高配当利回りを評価しつつも第1四半期減益着地により強弱感が拮抗（stance=neutral, strength=55）しており、買い基準（bullishかつstrength≥70）を満たしていません。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=55)\"\n  },\n  {\n   \"reason\": \"テクニカル面では直近営業日に出来高を伴う11.13%の大幅下落を記録しMACDもデッドクロスするなど強い下落モメンタム（stance=bearish, strength=75）が確認されるため、下げ止まりを確認するまで様子見が妥当です。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=75)\"\n  }\n ],\n \"risks\": [\n  \"RSI(14)が36.8まで低下しており、売られすぎからの短期自律反発による上振れリスク\",\n  \"急激な円高進行に伴う海外業績・配当・株価への下押しリスク\",\n  \"市場全体がdowntrend（下落レジーム）にある中での個別株下落圧力の強まり\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "2026年7月31日の大幅な窓開け下落により短期テクニカルが悪化しており、中期騰落率も対TOPIXでマイナスであることから、下落トレンドの継続を想定します。",
+      "points": [
+        {
+          "point": "直近営業日において、出来高の急増を伴う11.13%の大幅下落を記録しており、強い売り圧力が確認される。",
+          "evidence": "price_technical.recent_5_days[4].change_pct=-11.13, price_technical.recent_5_days[4].volume=18478700"
+        },
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がいずれもマイナスであり、中期的なトレンドが劣勢にある。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-1.25, price_technical.trend_60d.relative_to_topix_60d_pct=-2.7"
+        },
+        {
+          "point": "MACDがシグナルをデッドクロスしており、ヒストグラムのマイナス乖離が拡大し、下落のモメンタムが強まっている。",
+          "evidence": "price_technical.macd=46.36, price_technical.macd_signal=56.5, price_technical.macd_histogram=-10.14"
+        },
+        {
+          "point": "市場レジームがdowntrendと判定されており、地合いの悪化が個別銘柄の下押し圧力となっている。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\""
+        }
+      ],
+      "cautions": [
+        "RSI14が36.8まで低下しており、売られすぎ水準からの自律反発が意識されやすい水準にある。",
+        "前夜のADRが2.23%上昇しているため、寄り付きは上振れる可能性があるが、これが一時的な戻りに留まるリスクがある。"
+      ],
+      "key_levels": {
+        "support": 2490.5,
+        "resistance": 2722.24
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "第1四半期決算において売上やコア営業利益が伸長したものの、営業利益・純利益が減益着地となったことが短期的な上値を抑えています。一方、年間100円への増配予定や配当利回り3.89%という株主還元、通期営業増益計画が下値を支える材料となり、強弱感が拮抗しています。",
+      "points": [
+        {
+          "point": "2027年3月期第1四半期決算は売上収益が前年同期比21.1%増、コア営業利益が6.2%増となったものの、営業利益は12.0%減、四半期利益は19.7%減と減益着地となりました。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "通期業績予想では売上収益10.2%増、営業利益24.0%増と二桁営業増益を見込んでおり、中長期的な本業の成長計画は維持されています。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "1株当たり年間配当予想を前期実績78円から100円へと増配する計画で、配当利回り3.89%およびROE14.8%とバリュエーション面での下値支持力があります。",
+          "evidence": "fundamentals.valuation.dividend_yield_percent=3.89, fundamentals.valuation.return_on_equity=0.148, fundamentals.recent_important_disclosures[0].summary"
+        }
+      ],
+      "cautions": [
+        "第1四半期の減益着地およびアナリストによる目標株価引き下げ等の報道による短期的な売り圧力の継続",
+        "ドル円為替の急激な円高進行（5日間で3.99%円高）による海外業績への目減りリスク",
+        "次回決算発表日（2026-10-30）および次回日銀金融政策決定会合（2026-09-17〜18）に向けたイベントリスク"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "第一三共(株)【4568】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBIS2NSZTVoVDllRlVKSHozNnpLbWdVNkIwNl9GXzEtSkFNbzVSVFFvYTlBWnFsNlA4SFY2N29xNnhwcWhieWJGdlVNZGdCbFp3ZmE1R0pYRXVOOExmcFdr?oc=5",
+        "published": "Mon, 03 Aug 2026 06:54:11 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "第一三共、（訂正・数値データ訂正）「2026年3月期 決算短信〔IFRS基準〕（連結）」の一部訂正について - 日経バイオテクONLINE",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE92M3llV0otMFRlQ0lfSjBuTHBYdTRrZEN4UU9KSXI1M0cxQ1U1eFRjZnJ0WmFpZ0UyMlI2WDFTVFNvNzM2V0dBSklHVjc3c1lCUzQzYV9qWjJqdFpZU1pCZmFySi1HUQ?oc=5",
+        "published": "Mon, 03 Aug 2026 12:52:57 GMT",
+        "publisher": "日経バイオテクONLINE"
+      },
+      {
+        "title": "決算マイナス・インパクト銘柄 【東証プライム】寄付 … ファナック、第一三共、デンソー (7月31日発表分) - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBuaDE5ODdLWmJsZ2xzUGdKREhTSF94Qld5UWhFaHFVdmxNUzFWNjVQMDgxakdpTnlrR1BKWkNreUJ2cDlSTUN0SHA0aTgzdTl4TTd0VjcwbC14SnkyWDM0Tg?oc=5",
+        "published": "Mon, 03 Aug 2026 00:28:40 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "高配当株を探すなら注目したい日本株3選 - simplywall.st",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNdjFvbGtwNUJueUlpS0NQYl9EbmtZSEtTT3I2X2U5Zml3UDFVa3ozQklCblYwcWRMWkM4M0xLbGhPdVJvakE4MGlrUGRPbUFmaGdrSU5CSXJiREpJcjUyQkx0VFN3NlpKLXNyS1JtSk16TlllUzNVMUVwYm56aTU4SjF6VmU1T1Vvd21qd2lwNDJSRFhfNXlIOEtYRUhwN1hNZWpmdEJBLTJja25xNkgtQ3ctRXRfQdIBtgFBVV95cUxNdjFvbGtwNUJueUlpS0NQYl9EbmtZSEtTT3I2X2U5Zml3UDFVa3ozQklCblYwcWRMWkM4M0xLbGhPdVJvakE4MGlrUGRPbUFmaGdrSU5CSXJiREpJcjUyQkx0VFN3NlpKLXNyS1JtSk16TlllUzNVMUVwYm56aTU4SjF6VmU1T1Vvd21qd2lwNDJSRFhfNXlIOEtYRUhwN1hNZWpmdEJBLTJja25xNkgtQ3ctRXRfQQ?oc=5",
+        "published": "Mon, 03 Aug 2026 03:49:32 GMT",
+        "publisher": "simplywall.st"
+      },
+      {
+        "title": "【アナリスト評価】第一三共、レーティング強気を継続、目標株価4,250円に引下げ（米系大手証券）(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNYnNRbVp2WTFKZEV1VjFxbXptTXZMdDl4YXktbGFOakh1WWFBNnNrd1NQU2pWRFR5TlBqMmI3WGhMOGNQdGVoYTJTRWNyZ3dQV2NrNkY1cnI5bWR2QTIyaXhZZkFpSmZjbjl6LTMtdnVaa3dJVEJ3Y2xyUjlrVjhoU1FiWTMzX0k?oc=5",
+        "published": "Mon, 03 Aug 2026 07:08:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "第一三共社長、中国企業と将来の協業の可能性について議論したい(Bloomberg) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQR2UwRkFfczVKZVJSX0dhclBBU19Ecld4NXM4MUhXUmNjNzdjWTlQV1BTdkJsSjNadkdfVmliRmFrM1NDTjBZcWpiRTBTTU8tdFEwOVdXTjBLZU05cWtubU43UlZZLWprUU41Z3RYZXIzV0FVQTZNdVIzZG8zOWdYazA3MVZYWHc?oc=5",
+        "published": "Mon, 03 Aug 2026 04:35:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "決算マイナス・インパクト銘柄 【東証プライム】引け後 … ソニーＧ、ファナック、第一三共 (7月31日発表分)(株探ニュース) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOLVpVRzEtNlVHdmJQSlRFbWduR3hLQUkzWkdKM1FLTWRFbUhTQzh4U1NPV1g2Mk1JUkFpT25SYWZVUjBuOEQwaTh0VDNNcVVEMEM1TGEzZ19QeG9RYV9nYTVVbEZmOGVKMkRHeXpTTkQzZTRNdVA5QmQ3QVJITXNkVUhKQWhNVG8?oc=5",
+        "published": "Mon, 03 Aug 2026 06:56:21 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "政策科学部・豊田祐輔教授ゼミが「自由研究ストリート」で防災啓発活動を実施 - ritsumei.ac.jp",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB3bVdpSTY4aGF1eldxckhOd1NVRlBVblFfZ3lXV1JUU3lnMmktdGNBclNxWVJHemI1eV80eHltQ2pYNVpGMGIxOVQ1Q3V3UHBVR2dxZWxxZ3ZMdw?oc=5",
+        "published": "Mon, 03 Aug 2026 10:52:30 GMT",
+        "publisher": "ritsumei.ac.jp"
+      },
+      {
+        "title": "第一三共社長、中国企業と将来の協業の可能性について議論したい（Bloomberg） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9LWXBNdUtoYnJlRTExRHd1Z01fQmlQM014OEhQTU1iSEZ1WHhMeVFDaDk0V1g1dExaem11QWlqb1lOTzJPUzdHSkRKQm5BSXBMTEk0MXI3bW9ONDRZblp0dlZ0YkdtbW5WN2FvQUg5Y0tiUng1aTAwQ1EyaEJlOUE?oc=5",
+        "published": "Mon, 03 Aug 2026 04:35:30 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "【夏休み企画】累計約2000組のご家族に体験いただいた無料イベント ルル「家族でつくる くすり箱ワークショップ」を埼玉県・福岡県にて開催！ - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9FWWdoa1JmVWRGZlVMQS04d285eGZOMDJheUVQcFRqWi1KXzJrX3B2UFBWX09jeHdwbDlpZjFvMk5JbDhFSFR0TjhseFRLZWN3YUV1SUx2dktwSDJSUlpJQVp2RkJOX1FrZVE?oc=5",
+        "published": "Mon, 03 Aug 2026 06:00:02 GMT",
+        "publisher": "PR TIMES"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "（訂正・数値データ訂正）「2026年３月期 決算短信〔IFRS基準〕(連結)」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504176.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504099.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算補足資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504168.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504173.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "当社米国子会社役職員に対する信託型株式付与制度の継続のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504240.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587542.pdf",
+        "date": "2026-07-16 15:30:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584479.pdf",
+        "date": "2026-06-30 16:30:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260620575199.pdf",
+        "date": "2026-06-22 15:30:00"
+      },
+      {
+        "title": "財務上の特約が付された金銭消費貸借契約の締結に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617573095.pdf",
+        "date": "2026-06-17 19:00:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬等の内容の一部改定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515539092.pdf",
+        "date": "2026-05-18 13:00:00"
+      }
+    ]
+  }
+}
