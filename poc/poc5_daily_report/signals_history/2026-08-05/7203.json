@@ -1,0 +1,210 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-08-05T08:04:17+09:00",
+  "price_as_of": "2026-08-04",
+  "signal": {
+    "signal": "buy",
+    "confidence": 70,
+    "target_price": 3060.0,
+    "stop_loss": 2840.0,
+    "holding_period_days": 25,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家が強気（strength=75）であり、1Q最終利益75.6%増や自社株買い決定、PER9.0倍という強いカタリストと割安感が確認できるため。",
+        "evidence": "fundamental_view.stance=bullish (strength=75), fundamental_view.points[0], fundamental_view.points[2]"
+      },
+      {
+        "reason": "テクニカル専門家が中立（stance=neutral）にとどまっており、好決算材料がまだチャートへ完全に織り込まれる前の『織り込み前』エントリー条件を満たすため。",
+        "evidence": "technical_view.stance=neutral (strength=55)"
+      },
+      {
+        "reason": "市場レジームがdowntrendですが、ファンダメンタルズの確信度（strength=75）が地合いフィルタの買い判定基準（75以上）を満たしているため。",
+        "evidence": "reference.market_regime=downtrend, fundamental_view.strength=75"
+      }
+    ],
+    "risks": [
+      "全体相場のdowntrendレジーム継続に伴い、地合い悪化に連動して株価が抑えられるリスク。",
+      "25日移動平均線（2912.3円）を明確に下抜けた場合の短期的な下値模索リスク。",
+      "営業利益ベースでの減益計画や工場稼働停止による業績下振れリスク。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"buy\",\n \"confidence\": 70,\n \"target_price\": 3060.0,\n \"stop_loss\": 2840.0,\n \"holding_period_days\": 25,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家が強気（strength=75）であり、1Q最終利益75.6%増や自社株買い決定、PER9.0倍という強いカタリストと割安感が確認できるため。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=75), fundamental_view.points[0], fundamental_view.points[2]\"\n  },\n  {\n   \"reason\": \"テクニカル専門家が中立（stance=neutral）にとどまっており、好決算材料がまだチャートへ完全に織り込まれる前の『織り込み前』エントリー条件を満たすため。\",\n   \"evidence\": \"technical_view.stance=neutral (strength=55)\"\n  },\n  {\n   \"reason\": \"市場レジームがdowntrendですが、ファンダメンタルズの確信度（strength=75）が地合いフィルタの買い判定基準（75以上）を満たしているため。\",\n   \"evidence\": \"reference.market_regime=downtrend, fundamental_view.strength=75\"\n  }\n ],\n \"risks\": [\n  \"全体相場のdowntrendレジーム継続に伴い、地合い悪化に連動して株価が抑えられるリスク。\",\n  \"25日移動平均線（2912.3円）を明確に下抜けた場合の短期的な下値模索リスク。\",\n  \"営業利益ベースでの減益計画や工場稼働停止による業績下振れリスク。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "直近4営業日連続の下落により短期的モメンタムは低下しMACDもデッドクロスしていますが、25日移動平均線付近での下げ止まりや前夜ADRのプラスが意識される拮抗した状態です。",
+      "points": [
+        {
+          "point": "7月29日の急騰後に4営業日連続で下落し、MACDヒストグラムがマイナス（-2.94）に転じるなど短期的なモメンタムは弱気化しています。",
+          "evidence": "price_technical.recent_5_days, price_technical.macd_histogram=-2.94"
+        },
+        {
+          "point": "終値（2918.5円）は5日移動平均線（3059.8円）を下回っているものの、25日移動平均線（2912.3円）の上位を維持しており、移動平均線の位置関係はゴールデンクロスを保っています。",
+          "evidence": "price_technical.last_close=2918.5, price_technical.sma25=2912.3, price_technical.sma5_vs_sma25=golden"
+        },
+        {
+          "point": "国内市場レジームはdowntrendを示す一方で、前夜のNY市場でADRが+1.61%上昇しており、寄り付きにおける買い戻し圧力が期待されます。",
+          "evidence": "macro.market_regime.market_regime=downtrend, us_overnight.adr.change_1d_pct=1.61"
+        }
+      ],
+      "cautions": [
+        "25日移動平均線（2912.3円）を終値で明確に下抜けた場合、調整が長引き期間安値（2686.0円）方向への下値模索リスクが高まります。",
+        "前夜ADRの上昇は寄り付き価格に先行して織り込まれる可能性があり、寄り後の戻り売りに押される展開に注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 2912.3,
+        "resistance": 3059.8
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "2027年3月期1Qにおける最終利益の75.6%増益および自己株式取得の決定に加え、堅調なHEV需要と円安背景の通期予想上方修正が強いカタリスト。割安なバリュエーションと好調な製造業マクロ環境も好材料。",
+      "points": [
+        {
+          "point": "2026年8月4日開示の2027年3月期第1四半期決算にて、四半期最終利益が1兆4,770億円（前年同期比75.6%増）と大きく拡大。併せて自己株式の取得および消却を決定した。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary, disclosures.items[5].title"
+        },
+        {
+          "point": "直近ニュースにて、好調なHEV（ハイブリッド車）需要や円安推移を要因とした通期業績予想の上方修正が報じられており、今後の業績上振れが期待される。",
+          "evidence": "news.headlines[1].title, news.headlines[5].title"
+        },
+        {
+          "point": "予想PER 9.00倍、PBR 0.95倍と1倍を下回る水準にあり、配当利回り3.37%と株主還元面・バリュエーション面の足固めがなされている。",
+          "evidence": "fundamentals.valuation.forward_pe=9.002, fundamentals.valuation.price_to_book=0.953, fundamentals.valuation.dividend_yield_percent=3.37"
+        },
+        {
+          "point": "ドル円が157.75円と円安水準で推移する中、製造業PMIは54.5と拡大基調が続き、日銀短観の大企業製造業DIも22.0へ上昇するなど、自動車製造業を取り巻くマクロ環境が追い風。",
+          "evidence": "macro.indices[2].close=157.75, macro.japan_pmi.manufacturing.latest_value=54.5, macro.boj.tankan.di.large_manufacturing.current_di=22.0"
+        }
+      ],
+      "cautions": [
+        "1Qの営業利益は前年同期比8.8%減の1兆634億円にとどまり、通期連結営業利益予想も前期比9.7%減計画と本業利益ベースでの伸び悩みが懸念材料。",
+        "熊本地震の影響に伴う工場稼働停止の精査状況や再開時期の判断によっては、短期的な生産計画へ影響が及ぶリスクがある。",
+        "市場全体（TOPIX）のレジームがdowntrend判定となっており、全体相場の軟調さに連動して株価が抑えられるリスク。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "トヨタ自動車(株)【TM】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBBVUdJM0U0aFlkR0FQN05mMW1YR2VRTlVLdEE1d19aRE9MWndrR1NnWTJZb1VtZmtjSGxRTzZseVZQaVhNU1NNUUJFSU8?oc=5",
+        "published": "Tue, 04 Aug 2026 17:24:27 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "円安や中東ルート新構築が貢献 トヨタ自動車が27年3月期業績予想を上方修正 熊本地震の影響は「精査中」として内容に反映せず | 名古屋・愛知・岐阜・三重のニュース【CBC news】 | CBC web - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9MNlR5NmQ2ZnNQVHBmZDY3NElJMzdfalFORHNEbkJZc1BoZHNXOE1TUHBTUW5CZEJRSTZlYnFLSUJRaFA5Z19aYUhsTEZJSVRGdFN3cnF0LUVCQQ?oc=5",
+        "published": "Tue, 04 Aug 2026 14:52:00 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "トヨタ自動車、2027年3月期第1四半期最終利益、前期比75.6％増の1兆4770億円に拡大 - ビジネス+IT",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFAtQmdRWDN6cVlQRjhIUGc2WHNqMzhSSlFyX3RDSDF5b0FzUGZENHVpemdrN2VVZWY0Y0FjVlJRSDBHdzd3OWxYQ2JxMEx0aDVseGtJ?oc=5",
+        "published": "Tue, 04 Aug 2026 22:00:00 GMT",
+        "publisher": "ビジネス+IT"
+      },
+      {
+        "title": "トヨタ自動車[7203]：2027年３月期 第１四半期決算 投資家向け決算説明会 質疑応答（要旨） 2026年8月4日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBZYzFqTHhydEVxSkhiR3ptMUhNVDN3dzNnZjN3Yjgyb2xjVE4tSlp2VVhNbXowTVQ5aTVNS2NXT3VETG9jbWNIdERrc3c0WlA2OWVuTl9HNG5GZFUzZ01ZcEpRbWtBYW5mUWc?oc=5",
+        "published": "Tue, 04 Aug 2026 10:30:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "トヨタが2026年度通期業績を上方修正、好調なHEVは次世代電池で競争力を強化へ：製造マネジメントニュース（1/2 ページ） - MONOist",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1xekxaU2xJRDVadW56TkZSak9vdUtUb3NoWXFaRF9rZjBsV1RMWXJRZjF2OWxDRW5vZmNoMk1JYnZlSE1fRGxVajdGVlRBQW1uWVB0T0Z6d19hZzc3VWR1N2hLRWY5WlNRZmZiVjM3bw?oc=5",
+        "published": "Tue, 04 Aug 2026 21:15:00 GMT",
+        "publisher": "MONOist"
+      },
+      {
+        "title": "トヨタ、２７年３月期の最終利益予想を３兆２５００億円に上方修正…堅調なＨＶ需要と円安で押し上げ - 読売新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1ueElyOUNLWkFiajJMWHQ2QU9NZnJkY2hTNHZkUVk3NXNmZ1VQMU9xRG1wbVR0TWUtMjhMRnloWTYxM0F4b2hvaTJiT0dqZ0ZENkdhQ29zT3RMUHFCUXZVcFppVHo?oc=5",
+        "published": "Tue, 04 Aug 2026 15:50:00 GMT",
+        "publisher": "読売新聞"
+      },
+      {
+        "title": "トヨタ自動車　熊本地震で稼働停止した工場の再開について「慎重に判断」　円安効果で業績見通しは上方修正 - nagoyatv.com",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1vOVVUVjZyNU5FM0FGZzRnbkNGQk42Skk5aHZGa0FlV1M1aFJ6VTdXU0JYQnBsek1LZmhFZ3pveHpNdk9sQnBsSl9LYlduN2N0MnJCb1JUSFZkQXVId0x4c2hGRlPSAWRBVV95cUxNbzlVVFY2cjVORTNBRmc0Z25DRkJONkpJOWh2RmtBZVdTNWhSelU3V1NCWEJwbHpNS2ZoRWd6b3h6TXZPbEJwbEpfS2JXbjdjdDJyQm9SVEhWZEF1SHdMeHNoRkZT?oc=5",
+        "published": "Tue, 04 Aug 2026 08:19:00 GMT",
+        "publisher": "nagoyatv.com"
+      },
+      {
+        "title": "スズキの26年上半期世界販売台数、トヨタに次ぎ国内2位に：ニュース - 中日BIZナビ",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBUMW1Va3Nkby1oMXhWaVF2dk1PV2xqOEFIaFdxVDNUUldnMmJKNk9rRzNtM1JJb1ltY3BXN2xLbGtFeDZCc0FJNlhFcHhud0FwcWpUdzJGaFJKZ0J2cTBB?oc=5",
+        "published": "Tue, 04 Aug 2026 17:28:23 GMT",
+        "publisher": "中日BIZナビ"
+      },
+      {
+        "title": "トヨタ自動車(株)【7203】：現物信用売買内訳時系列 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE8xUEtJaTh2blRFdG9lUDlZMWpiNnhzek9qXzZfVHlGWUl0N0hNVVVPYmFpN3RmVDA4akV2Rkp6ZDNYRW52d1VicTY2c1d6RGQ2UHUyVmJVUnd0OWR3RnNn?oc=5",
+        "published": "Tue, 04 Aug 2026 12:58:30 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "トヨタ自動車[7203]：2027年3月期 第1四半期決算短信〔IFRS〕（連結) 2026年8月4日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQalI1XzdjbWZlbnZYcnhuMUVFMmU3dWktYmFFLXZ1WjlGU0cyU2V0c1hERFowLURjZU1xOGd2UHBDYTlBZVhuOEVqMmtfd3JydW1mbENKV0o2U3RMZHZNVThpQmhoNlYzZmpTZzVLS1JiaGowaVN4MnBFYzNPYXoxamJQU1h0THR0T3M3dWh1SGJDLXE5VHZweklab2FPVVkzYW5wbW93WU9sNlB2eGNOUUFsVDBXUnFqR1Nfcl9MT1pLTkJkNlhiSXVSUWY?oc=5",
+        "published": "Tue, 04 Aug 2026 05:00:00 GMT",
+        "publisher": "日本経済新聞"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度の継続及び従業員に対する新たな株式交付制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507853.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507884.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503849.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "2027年3月期第１四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507860.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507846.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "役員人事に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572690.pdf",
+        "date": "2026-06-17 16:00:00"
+      },
+      {
+        "title": "関係会社株式売却益の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260615570435.pdf",
+        "date": "2026-06-15 15:30:00"
+      },
+      {
+        "title": "（開示事項の変更・訂正）「会社分割（簡易吸収分割）に関するお知らせ」の一部変更・訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552805.pdf",
+        "date": "2026-05-28 18:45:00"
+      }
+    ]
+  }
+}

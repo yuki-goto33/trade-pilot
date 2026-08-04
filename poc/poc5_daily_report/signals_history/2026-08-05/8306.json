@@ -1,0 +1,216 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-08-05T08:05:53+09:00",
+  "price_as_of": "2026-08-04",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近（2026年8月4日）に buy シグナルを発行済みであり、再エントリー抑制ルールに基づき継続監視中のため新規買付は見送ります。",
+        "evidence": "reference.recent_buy.date=2026-08-04"
+      },
+      {
+        "reason": "ファンダメンタルズは1Q純利益48.2%増と極めて強気ですが、テクニカル面では25日移動平均線の割り込みやMACDデッドクロスにより下落圧力が強く、落ちるナイフを掴まないため押し目確認待ちとします。",
+        "evidence": "fundamental_view.stance=bullish (strength=75), technical_view.stance=bearish (strength=70)"
+      },
+      {
+        "reason": "市場レジームがdowntrendにあり全体相場の軟調さが上値を抑える環境であることも様子見判断を補強しています。",
+        "evidence": "reference.market_regime=downtrend"
+      }
+    ],
+    "risks": [
+      "次回日銀金融政策決定会合（2026年9月17日〜18日）に向けた観測報道によるボラティリティの高まり",
+      "前夜NY市場のADR下落（-2.93%）やMACDデッドクロス進行に伴う短期的な連安リスク",
+      "決算発表後の「材料出尽くし感」による戻り売り圧力の強まり"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近（2026年8月4日）に buy シグナルを発行済みであり、再エントリー抑制ルールに基づき継続監視中のため新規買付は見送ります。\",\n   \"evidence\": \"reference.recent_buy.date=2026-08-04\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは1Q純利益48.2%増と極めて強気ですが、テクニカル面では25日移動平均線の割り込みやMACDデッドクロスにより下落圧力が強く、落ちるナイフを掴まないため押し目確認待ちとします。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=75), technical_view.stance=bearish (strength=70)\"\n  },\n  {\n   \"reason\": \"市場レジームがdowntrendにあり全体相場の軟調さが上値を抑える環境であることも様子見判断を補強しています。\",\n   \"evidence\": \"reference.market_regime=downtrend\"\n  }\n ],\n \"risks\": [\n  \"次回日銀金融政策決定会合（2026年9月17日〜18日）に向けた観測報道によるボラティリティの高まり\",\n  \"前夜NY市場のADR下落（-2.93%）やMACDデッドクロス進行に伴う短期的な連安リスク\",\n  \"決算発表後の「材料出尽くし感」による戻り売り圧力の強まり\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "株価が25日移動平均線を割り込み、MACDのデッドクロス拡大や前夜ADRの下落が重なることから、短期的な調整圧力が強い状況です。",
+      "points": [
+        {
+          "point": "株価（3,470円）が5日移動平均線（3,556円）および25日移動平均線（3,525.68円）を下回り、MACDヒストグラムも-26.78とデッドクロスが進行しています。",
+          "evidence": "price_technical.last_close=3470.0, price_technical.sma5=3556.0, price_technical.sma25=3525.68, price_technical.macd_histogram=-26.78"
+        },
+        {
+          "point": "直近5営業日中4営業日で下落しており、8月4日には前日比-2.72%の下落となってRSI14も41.2まで低下するなど下落モメンタムが強まっています。",
+          "evidence": "price_technical.recent_5_days[4].change_pct=-2.72, price_technical.rsi14=41.2"
+        },
+        {
+          "point": "前夜のNY市場にてADR（MUFG）が-2.93%下落しており、寄り付き時の下落圧力となる可能性があります。",
+          "evidence": "us_overnight.adr.change_1d_pct=-2.93"
+        },
+        {
+          "point": "TOPIXの市場レジーム判定がdowntrendとなっており、全体相場の環境も上値を重くする要因です。",
+          "evidence": "macro.market_regime.market_regime=downtrend"
+        }
+      ],
+      "cautions": [
+        "60営業日騰落率は+21.48%と中期トレンドは良好なため、押し目買いが入る可能性があります。",
+        "前夜の米金融セクターETF（XLF）は+0.87%上昇しており、ADR下落の影響が寄り付きで織り込まれた後に反発するリスクがあります。"
+      ],
+      "key_levels": {
+        "support": 3180.0,
+        "resistance": 3525.68
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "2027年3月期1Qの純利益が前年同期比48.2%増と極めて順調なスタートを切ったほか、10年国債利回り2.82%台の高金利環境も利ざや改善を後押ししています。",
+      "points": [
+        {
+          "point": "2026年8月3日に発表された2027年3月期第1四半期決算において、連結純利益が前年同期比48.2%増の8,094億円と大幅増益を達成し、通期目標2兆7,000億円に対して好調な進捗を示しました。",
+          "evidence": "fundamentals.recent_important_disclosures[0].date=2026-08-03"
+        },
+        {
+          "point": "国内の10年国債利回りが2.824%と高水準で推移しており、メガバンクの貸出金利ざや改善や運用利回りの向上に寄与する好適なマクロ環境が続いています。",
+          "evidence": "macro.rates.jgb_10y_percent.value=2.824"
+        },
+        {
+          "point": "前期（2026年3月期）の年次実績においても純利益2兆4,272億円（前年1兆8,629億円）と拡大傾向が続いており、高い収益創出能力が実証されています。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=24272"
+        }
+      ],
+      "cautions": [
+        "株式市場全体がTOPIX25日線を下回るダウントレンド（downtrend）にあり、相場全般の軟調さに連れ安するリスクがあります。",
+        "1Qの大幅増益決算発表後も「買い向かう姿勢は限定的」との報道が示唆するように、短期的な材料出尽くし感による売りに注意が必要です。",
+        "次回の日銀金融政策決定会合（2026年9月17日〜18日）に向けて、金利見通しや国債買い入れ減額方針等の観測報道でボラティリティが高まる可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-04",
+    "days_ago": 1,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "【決算速報】三菱ＵＦＪ、4-6月期(1Q)経常は58％増益で着地(株探ニュース) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQRG5xbkMxSkstc1VTNU12eEdTYXQxRDhpcnl1Yzhua1dnQjdFRmZ4NWVYc3ZKRmlXTGRacGM4ay1tTFpRbFQxZWl5U1ZoZ3UxTXBSN2pQUUhPbFNMZWJuQm43ZG5rcE84NTMyODdTQTV4MU5SWGM0RjZhODZwU0JVejFyS3haaVE?oc=5",
+        "published": "Tue, 04 Aug 2026 19:47:30 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "「キングダム」からロケットまで MUFG、新産業創出で勝者総取り - business.nikkei.com",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB5dFkyZ0ZZWHhIWkszVklvUjZ5TDNiLWN0NUMtdld2SFlVUk9ldEswQUlwb2dSLVNkT3JGT0NMSmtabkVBT1RFZHZrMWtxUS1YUnRPdGpTTkNDa2x3VFp1TVE3UTFXcHc?oc=5",
+        "published": "Tue, 04 Aug 2026 20:00:00 GMT",
+        "publisher": "business.nikkei.com"
+      },
+      {
+        "title": "(株)三菱ＵＦＪフィナンシャル・グループ【8306】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1UNHFKRmdJbVM3Z3JOeW9GQTRTNlJiNURfTlVNTUNLSklHb1FJc1JseWp6TzQ3YlYtRjB4T3RBSmpheTBBWGtpVGVYUlNESW5WZnppRXp1SzYwbmM0ZG9R?oc=5",
+        "published": "Tue, 04 Aug 2026 06:52:43 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "【決算速報】三菱UFJフィナンシャル・グループ、売上高は予想を上回り、利益は予想を上回る結果に 執筆 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBoNGNEV0phOUs0RklZRV9iQ1R0OE1jZDRucDcydHJEeUg0VDljeUk3S09pUndneDNpay1nRHh6MC1rMFFpMmZBbTRibW01YW1EQXpPMzlsNm5YNWxvTUtRTUZHcHc?oc=5",
+        "published": "Tue, 04 Aug 2026 00:20:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      },
+      {
+        "title": "三菱ＵＦＪは軟調、４～６月最終益は４８％増も買い向かう姿勢限定的 - みんかぶ",
+        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE12a2dYNEJQMFEzRHlLY3JUenpKYWR6MmlTekRjUDV4cWJqcVRZRGtPSTlfZmJJSE9aUm42cU9OeldEQ2sxYmc?oc=5",
+        "published": "Tue, 04 Aug 2026 01:07:28 GMT",
+        "publisher": "みんかぶ"
+      },
+      {
+        "title": "迫る「AIがAIからモノを買う」時代 MUFGやLINEヤフー、博報堂が布石 - xtech.nikkei.com",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9mcVlSd214WDB3OF9XTm9IMldfeDVxNEc2TTMxakxKclZmeklfTl83U0NMQ0ZIcjNXQnlueEI4bFJYbm9BTEdPQVNkZU5kMzZHdjZiUHlyY0dsblQ5TE5pc0hydnRtX3lXRU9wbw?oc=5",
+        "published": "Tue, 04 Aug 2026 20:00:00 GMT",
+        "publisher": "xtech.nikkei.com"
+      },
+      {
+        "title": "【本日の買い売り優勢状況】08/04キオクシアホールディングスの買い優勢金額は114.05億円 - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNZUc3U29Wdzg0Zlp4N01YaFVONWlnQjVsbTJVSDJacHhHZ2N4WXZRTFpOdV9DeC1kTlQtTE9XSWx5SGxXZnhOR1JsTlktLWF3UWZnNEhoUndIM3EtWU5BZGtJemJ6YjMwUExCYi1LVDBDXzd1VUJyQkI2b05uQy1RRlJsQUw4TkFnbHZYUnlKSmFrR1VMSGpLek5R?oc=5",
+        "published": "Tue, 04 Aug 2026 07:18:18 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "(株)三菱ＵＦＪフィナンシャル・グループ【MUFG】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1fb09UZ016WWhiUVBjc0RvWFltWjhxVkhJbkpyOEhKLXMzR2JuMk0wY1MybnpuUWNldldDSTJMak1rZV83N2JYNGFMWktSU3M?oc=5",
+        "published": "Tue, 04 Aug 2026 19:52:04 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "日経平均は反発で寄り付く、半導体株に買い直し 円高警戒は続く - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFAzZkVLNjV3dXFSWG9lUDdGTkhfNmZJbEFyWFo3MTVIZlFPOC1rOVgwcWh5RTY1bnh1TGUyaUtIZ3BGNHdHaWNMRjNMQVdEalRXcWpWd2R1LXZzVU5tNUNxLUNldzcxUUpEaXdlQzhnSmg4b2xl?oc=5",
+        "published": "Tue, 04 Aug 2026 01:35:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "「株式」ADR日本株ランキング〜全般売り優勢、シカゴは大阪日中比120円高の63390円 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNdUFwMy1oMWxwRjF3a3pGT3l3cUliV250RTBJRzZYUVlpWXdtU1YxY1FIRjhzcGpSMDRYeE1iNkRXTmJPT1RpSlE3VlpxNXJhekpQOE1BdTBncThvdE9uTkFablFNc3ZBYXc3bTV1TDRDM2pFUk04aU5fTEQ5UVhSclUyNXpwdUR3dy1JY9IBjAFBVV95cUxNdUFwMy1oMWxwRjF3a3pGT3l3cUliV250RTBJRzZYUVlpWXdtU1YxY1FIRjhzcGpSMDRYeE1iNkRXTmJPT1RpSlE3VlpxNXJhekpQOE1BdTBncThvdE9uTkFablFNc3ZBYXc3bTV1TDRDM2pFUk04aU5fTEQ5UVhSclUyNXpwdUR3dy1JYw?oc=5",
+        "published": "Tue, 04 Aug 2026 01:17:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505851.pdf",
+        "date": "2026-08-03 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "中期経営計画における財務目標の修正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538305.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "代表執行役の異動について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260305576744.pdf",
+        "date": "2026-03-05 16:00:00"
+      }
+    ]
+  }
+}

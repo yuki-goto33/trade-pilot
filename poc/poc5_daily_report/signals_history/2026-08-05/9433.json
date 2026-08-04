@@ -1,0 +1,217 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-08-05T08:15:08+09:00",
+  "price_as_of": "2026-08-04",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ面で強固な業績と大規模な自社株買い枠が評価されるものの、専門家の強気確信度が60に留まり、バイシグナルの基準（70以上）を満たさないため様子見とします。",
+        "evidence": "fundamental_view.strength=60, fundamental_view.points[0], fundamental_view.points[2]"
+      },
+      {
+        "reason": "3日後の2026年8月7日に第1四半期決算発表を控えており、イベント通過後の反応を確認する必要があります。",
+        "evidence": "fundamental_view.summary, reference.next_earnings_date=2026-08-07"
+      },
+      {
+        "reason": "テクニカル面では4日連続の下落とMACDのデッドクロスが発生しており、25日移動平均線付近での底固めを確認する段階にあります。",
+        "evidence": "technical_view.summary, technical_view.points[1]: macd_histogram=-5.82"
+      },
+      {
+        "reason": "市場全体が下落トレンド（downtrend）にあり、ADRも軟調なことから、地合いの悪化による個別銘柄への波及リスクを考慮しました。",
+        "evidence": "reference.market_regime=downtrend, technical_view.cautions[1]: us_overnight.adr=-1.25%"
+      }
+    ],
+    "risks": [
+      "2026年8月7日の決算発表によるボラティリティ急増と期待外れの場合の急落",
+      "25日移動平均線（2852.3円）を明確に割り込んだ場合の下落トレンド加速",
+      "日本10年債利回りの上昇に伴う高配当・ディフェンシブ銘柄からの資金流出",
+      "財務報告に係る内部統制の不備によるガバナンス懸念の再燃"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 60,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ面で強固な業績と大規模な自社株買い枠が評価されるものの、専門家の強気確信度が60に留まり、バイシグナルの基準（70以上）を満たさないため様子見とします。\",\n      \"evidence\": \"fundamental_view.strength=60, fundamental_view.points[0], fundamental_view.points[2]\"\n    },\n    {\n      \"reason\": \"3日後の2026年8月7日に第1四半期決算発表を控えており、イベント通過後の反応を確認する必要があります。\",\n      \"evidence\": \"fundamental_view.summary, reference.next_earnings_date=2026-08-07\"\n    },\n    {\n      \"reason\": \"テクニカル面では4日連続の下落とMACDのデッドクロスが発生しており、25日移動平均線付近での底固めを確認する段階にあります。\",\n      \"evidence\": \"technical_view.summary, technical_view.points[1]: macd_histogram=-5.82\"\n    },\n    {\n      \"reason\": \"市場全体が下落トレンド（downtrend）にあり、ADRも軟調なことから、地合いの悪化による個別銘柄への波及リスクを考慮しました。\",\n      \"evidence\": \"reference.market_regime=downtrend, technical_view.cautions[1]: us_overnight.adr=-1.25%\"\n    }\n  ],\n  \"risks\": [\n    \"2026年8月7日の決算発表によるボラティリティ急増と期待外れの場合の急落\",\n    \"25日移動平均線（2852.3円）を明確に割り込んだ場合の下落トレンド加速\",\n    \"日本10年債利回りの上昇に伴う高配当・ディフェンシブ銘柄からの資金流出\",\n    \"財務報告に係る内部統制の不備によるガバナンス懸念の再燃\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "中期トレンドは依然として上昇基調を維持しているものの、足元では4営業日連続の下落とMACDのデッドクロスにより短期的な調整局面入りが鮮明となっています。現在は25日移動平均線付近での下げ止まりを確認する局面です。",
+      "points": [
+        {
+          "point": "短期的な売り圧力の継続。直近4営業日連続で株価が下落しており、短期的なモメンタムが著しく低下しています。",
+          "evidence": "price_technical.recent_5_days"
+        },
+        {
+          "point": "MACDのデッドクロス。MACD値がシグナルを下回り、ヒストグラムもマイナス転換しており、上昇勢いの減衰を示唆しています。",
+          "evidence": "price_technical.macd=58.19, price_technical.macd_signal=64.0, price_technical.macd_histogram=-5.82"
+        },
+        {
+          "point": "中期トレンドの底堅さ。60営業日騰落率は対TOPIXでも大幅プラスを維持しており、現時点では25日移動平均線の上方に位置しています。",
+          "evidence": "price_technical.trend_60d.relative_to_topix_60d_pct=12.75, price_technical.last_close=2873.5, price_technical.sma25=2852.3"
+        }
+      ],
+      "cautions": [
+        "市場全体のレジームがdowntrend（TOPIXが25日線の下）にあり、個別銘柄への波及リスクが高い (macro.market_regime)",
+        "前夜のADRが-1.25%と下落しており、本日の寄り付きが25日移動平均線を割り込んで始まる可能性があります (us_overnight.adr)",
+        "5日移動平均線（2971.3）を速やかに回復できない場合、調整が長引く懸念があります"
+      ],
+      "key_levels": {
+        "support": 2852.3,
+        "resistance": 2971.3
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "堅調な業績トレンドを維持しているものの、3日後に第1四半期決算発表を控えたイベントリスクが極めて高い状況にあります。新サービス開始などの材料はありますが、決算内容を確認するまで様子見が妥当と判断します。",
+      "points": [
+        {
+          "point": "売上高および当期純利益は過去3期にわたり増加傾向にあり、ファンダメンタルズの基礎体力は強固です。",
+          "evidence": "fundamentals.earnings_trend.annual (2024-03 to 2026-03)"
+        },
+        {
+          "point": "2026年8月4日に1台のスマホで2番号を利用できる「セカンドナンバー」サービスを開始。副業需要等を狙った新たな収益源（ARPU向上）への寄与が期待されます。",
+          "evidence": "news.headlines[0].title (2026-08-04)"
+        },
+        {
+          "point": "上限3,000億円（発行済株式の3.83%）の大規模な自己株式取得枠を設定しており、需給面での潜在的な下支え要因となっています。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "非製造業景況感やサービス業PMIが50超の拡大圏を維持しており、国内通信・サービス事業にとってマクロ環境は安定しています。",
+          "evidence": "macro.boj.tankan.di.large_nonmanufacturing.current_di=37.0, macro.japan_pmi.services.latest_value=51.9"
+        }
+      ],
+      "cautions": [
+        "2026年8月7日に次回決算発表を控えており、短期的な株価ボラティリティが非常に高まるリスクがあります。",
+        "2026年6月の自己株式取得実績が0株となっており、株主還元策の執行ペースが想定より遅い可能性があります。",
+        "2026年6月25日に「財務報告に係る内部統制の開示すべき重要な不備」を開示しており、ガバナンス面での懸念が残ります。",
+        "日本10年債利回りが2.8%超と高水準にあり、高配当・ディフェンシブ銘柄としての相対的な魅力が低下する可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "1台のスマホで用途別に電話番号を使い分けられるサービス「セカンドナンバー」提供開始 | KDDI News Room - KDDI ニュースルーム",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE12S0ZxalZ5TkJpbmtGaDNMbFZoYzdpWDM4QnVPS2xZU2Z1STE1d3g4eXVfLWRFV19XSHNTZTFmTDVkeThJSzN3a2tQaDExM3p3QWVPdE5HeUJKQ2hSVTFBNUdUWTVZbW9Xb05MSA?oc=5",
+        "published": "Tue, 04 Aug 2026 02:00:00 GMT",
+        "publisher": "KDDI ニュースルーム"
+      },
+      {
+        "title": "もう一つの電話番号、副業や推し活需要高まる KDDIが新サービス - 朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1UMFRQSElnSVJFWVlrS3pCOThrQWh2dXZaX2ptSHNncEluUEppZjFFOGd3WTlvc2YwbjZFTVBaWUY0R1ktd2Q1TkdKZFNIR1VrTzdjbmlMcGJZZkJYRlJ3bUVJeFFtYTA?oc=5",
+        "published": "Tue, 04 Aug 2026 09:10:35 GMT",
+        "publisher": "朝日新聞"
+      },
+      {
+        "title": "KDDI au 「有村架純のつながる放送局」篇 - aoi-pro.com",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5ndy04TWZ1X2FJejFZR2xRRG55SXh4cHNnb1VKMXJ3dk5QMmFOU1lKamNNb0RRZFRwNnFiX3UxZkdKZm9YcFNzT3lFVDJaSkE4Y08wbTRwLVpYTTQ?oc=5",
+        "published": "Tue, 04 Aug 2026 09:16:03 GMT",
+        "publisher": "aoi-pro.com"
+      },
+      {
+        "title": "KDDIがauで「セカンドナンバー」を開始 月額550円で「もう1つの携帯番号を」（ITmedia Mobile） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE4tY0EzNlFfQ1JSQzdySUFXckpoZUlXb3RqOG1hV2tJdmsyU0lQeG9TcEphc0M0eFhhQUx6b3ZqUzF1cHFnM0ZtRkR0SldabkVNTnZqcl9UMDBXUmZHS3V5ZTd6RlJUVTEzOE1hZ1RCRHJLVTdRR3Z6ZTl5VnF0c0E?oc=5",
+        "published": "Tue, 04 Aug 2026 02:05:08 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "KDDI、1台のスマホで電話番号を使い分け可能な「セカンドナンバー」を提供開始 - businessnetwork.jp",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9teElrd0ZUbTlVeDE1UFlaY0hjX1NfWldlSWJxYjlsY1NDVTkwdV9JY200elYxSE5aUWFaZ3ZXaGVoX095RUFUdERLSVFZcXhCMTdN?oc=5",
+        "published": "Tue, 04 Aug 2026 02:28:13 GMT",
+        "publisher": "businessnetwork.jp"
+      },
+      {
+        "title": "KDDI Open Innovation Fund 3号、量子技術の社会実装を実現するJIJに追加出資 - kddi.com",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB6aDZ4MDlRZDE5RW5DU1FEbFJYYUo1M3cwZWZMZGJHUENJejdDZ3hIcGM5T29BN1Z2TG5pcUdNOE1ybTA3OUt6OFBIdHNRd2ZNZlNpQ2x5VmxGNDhVVUdVM1pmczA2T2lvQ3Z5Mg?oc=5",
+        "published": "Tue, 04 Aug 2026 04:04:25 GMT",
+        "publisher": "kddi.com"
+      },
+      {
+        "title": "KDDIなど、au利用客向けに電話/SMSに特化した電話番号サービス「セカンドナンバー」を提供開始 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1fR1lScnM4YURjaWdfX2kyUXlfejVfa0V2NFJJQU92cGM3VlpRYzFtcEJwNWxsekNnQVU1LUprbGFnTFVUZUk5MnNGcy01dGRBYjVIUjRQRS15Mi1nQmNfcklmMXVBQ2ZVRU0wbQ?oc=5",
+        "published": "Tue, 04 Aug 2026 05:41:38 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "ローソンとKDDI、「ハッピーローソンタウン日野高幡台店」オープン 集合住宅型1号店 - k-tai.watch.impress.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9YMFlYNTJwZ1lSakQ0UURRc1MyQ3d2alB1X3hJYWl2cE9iNmx3N1MxNU11VU84S2FVQUZmZ01wVVpQeF9pMWNVVzlUSS1yQmNBbFVrV3p5YjhDeUY2eWFxTXgxcnJjZ2c?oc=5",
+        "published": "Tue, 04 Aug 2026 04:16:46 GMT",
+        "publisher": "k-tai.watch.impress.co.jp"
+      },
+      {
+        "title": "KDDI、1台のスマホで2つの番号を使い分けられる「セカンドナンバー」 月額550円 - マイナビニュース",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5BZ200NGNFbGhSanhSRjJ0RzdCVE5pVTRoMmt0WWhvRVp4VDlwNENTeUFwZ2paTmRxcmNEX0NFeHFKRHE5Wk0yR3VDRzNDbGItM2k5TzlVTHAxenlU?oc=5",
+        "published": "Tue, 04 Aug 2026 06:00:21 GMT",
+        "publisher": "マイナビニュース"
+      },
+      {
+        "title": "KDDIがauで「セカンドナンバー」を開始 月額550円で「もう1つの携帯番号を」（写真・画像 1/4） - 産経ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNZE5TaXMwRmcxSXdxSEtZRGU4OFVaamw5NXM1Wk9BQWtsc1hacF9Ib0w4V2Zfd2ZaWVdZQWFPNkhSMjN4XzBFTUhOSF9xRlNKbXJJemtNV256bzN1YmJHRUozeGhldVE3bnhZT0ZaS3NaaVhLVFE0NmozRnlBUFFteXgyRG16Z21Lc3pGeEF2V0hfeE4tc2JmMWxNNFdOd2xWbUE?oc=5",
+        "published": "Tue, 04 Aug 2026 05:30:00 GMT",
+        "publisher": "産経ニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      },
+      {
+        "title": "東京証券取引所への「改善報告書」の提出に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559424.pdf",
+        "date": "2026-06-02 16:00:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（中期経営戦略）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524146.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "auフィナンシャルホールディングス株式会社の東京証券取引所への株式上場準備の開始について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524156.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "2026年３月期　決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511523545.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524005.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524010.pdf",
+        "date": "2026-05-12 15:45:00"
+      }
+    ]
+  }
+}
