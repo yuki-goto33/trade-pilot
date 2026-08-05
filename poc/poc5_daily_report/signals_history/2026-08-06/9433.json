@@ -1,0 +1,210 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-08-06T08:07:06+09:00",
+  "price_as_of": "2026-08-05",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の strength が 60 であり、buy エントリーの必須条件である 70 に達していない。また、2日後に決算発表という重要イベントを控えている。",
+        "evidence": "fundamental_view.strength=60, reference.next_earnings_date=2026-08-07"
+      },
+      {
+        "reason": "テクニカル面では5営業日連続の下落で25日移動平均線まで押し戻されており、反転の兆候が確認できるまで静観が必要な局面である。",
+        "evidence": "technical_view.points[2]: last_close=2856.5, sma25=2856.76"
+      },
+      {
+        "reason": "3,000億円の自己株式取得枠は設定されているものの、直近の実績が0円であり、需給面での即時的な下支えは期待しにくい。",
+        "evidence": "fundamental_view.points[2]: recent_important_disclosures[0].summary"
+      }
+    ],
+    "risks": [
+      "2026年8月7日に予定されている決算発表によるボラティリティの急拡大。",
+      "25日移動平均線を明確に割り込んだ場合、MACDの悪化と相まって短期的な下落トレンドが加速するリスク。",
+      "内部統制の不備（2026-06-25開示）によるガバナンス懸念の再燃。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の strength が 60 であり、buy エントリーの必須条件である 70 に達していない。また、2日後に決算発表という重要イベントを控えている。\",\n   \"evidence\": \"fundamental_view.strength=60, reference.next_earnings_date=2026-08-07\"\n  },\n  {\n   \"reason\": \"テクニカル面では5営業日連続の下落で25日移動平均線まで押し戻されており、反転の兆候が確認できるまで静観が必要な局面である。\",\n   \"evidence\": \"technical_view.points[2]: last_close=2856.5, sma25=2856.76\"\n  },\n  {\n   \"reason\": \"3,000億円の自己株式取得枠は設定されているものの、直近の実績が0円であり、需給面での即時的な下支えは期待しにくい。\",\n   \"evidence\": \"fundamental_view.points[2]: recent_important_disclosures[0].summary\"\n  }\n ],\n \"risks\": [\n  \"2026年8月7日に予定されている決算発表によるボラティリティの急拡大。\",\n  \"25日移動平均線を明確に割り込んだ場合、MACDの悪化と相まって短期的な下落トレンドが加速するリスク。\",\n  \"内部統制の不備（2026-06-25開示）によるガバナンス懸念の再燃。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "中期的な上昇トレンドの中、直近5営業日連続の下落で25日移動平均線まで押し戻されており、MACDの悪化を考慮すると反転の兆候が確認できるまで静観が妥当な局面である。",
+      "points": [
+        {
+          "point": "直近5営業日連続で株価が下落しており、短期的には強い売り圧力がかかっている。",
+          "evidence": "price_technical.recent_5_days"
+        },
+        {
+          "point": "MACDがシグナルを大きく下回り、ヒストグラムもマイナス圏で拡大しており、下落の勢いが継続していることを示唆している。",
+          "evidence": "price_technical.macd_histogram=-11.74"
+        },
+        {
+          "point": "株価は25日移動平均線の水準まで調整しており、このラインで下げ止まれるかが目先の焦点となる。",
+          "evidence": "price_technical.last_close=2856.5, price_technical.sma25=2856.76"
+        },
+        {
+          "point": "60営業日騰落率がプラス12.93%とTOPIXを上回っており、中期的には依然として強い上昇トレンドが維持されている。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=12.93"
+        }
+      ],
+      "cautions": [
+        "前夜のADR（-0.77%）および米国の通信セクターETF（-1.04%）が下落しており、本日の寄り付きから25日線を明確に割り込むリスクがある。",
+        "5日移動平均線（2921.0円）が急角度で低下しており、反発局面では戻り売りの抵抗帯として意識されやすい。"
+      ],
+      "key_levels": {
+        "support": 2856.76,
+        "resistance": 2921.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "直近でGoogleとのAI連携やローソンとの提携関連ニュースなどポジティブな材料は散見されるものの、2日後に控えた決算発表および内部統制の不備に関する開示を考慮し、現在は静観すべき局面と判断します。",
+      "points": [
+        {
+          "point": "業績は緩やかな拡大傾向にあり、2026年3月期のEPSは前期比で伸長する計画となっている。",
+          "evidence": "fundamentals.earnings_trend.annual[0].diluted_eps=183.55"
+        },
+        {
+          "point": "GoogleとのAI企業創出に向けた投資や、ローソンとの「ハッピーローソンタウン」開業など、非通信分野での成長戦略が具体化している。",
+          "evidence": "news.headlines[4].title, news.headlines[6].title"
+        },
+        {
+          "point": "3,000億円規模の自己株式取得枠を設定しているが、直近1ヶ月の取得実績は0円であり、現時点での需給の下支え効果は限定的である。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        }
+      ],
+      "cautions": [
+        "2026年8月7日に次回決算発表を控えており、短期的なボラティリティが高まるイベントリスクがある。",
+        "2026年6月25日に「財務報告に係る内部統制の開示すべき重要な不備」を開示しており、ガバナンス面での懸念が残る。",
+        "日本の10年債利回りが2.8%台と高い水準にあり、高配当・ディフェンシブ株とされる通信セクターにとってバリュエーション面での重石となる可能性がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "KDDIも40年前はスタートアップだった 高橋会長の“昔話”から考える、日本企業の成長戦略（1/2 ページ） - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE91SFV0c2twaWpIbXBRX2o3eUVQVEc1Wl9QWVlLNzd1Qkg3NlM1U2FLaHVmYjJlNU1BM0JnamhqWDI3UnJLNThUUFlPcjA4S0M4ZzlOSVdtNkhEU2RMVXNYNHlaR0E2U3B2UGVXWEtKMERQdw?oc=5",
+        "published": "Wed, 05 Aug 2026 22:00:00 GMT",
+        "publisher": "ITmedia"
+      },
+      {
+        "title": "「堺市自動運転タクシー実装コンソーシアム」に参画 - newsroom.kddi.com",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE45UkNJZmpNY3psbDliRTRPNWVwdk9FM3VUVXZ1VjhFdkZISWExYVVZMTNMWjVOOEFJXzI3LW5WMEpkVDhjZ21TSjhtd3Fzb01YUGVJMnh5UzByUksyYkZwR1pjUEZDRlV6eVRwNg?oc=5",
+        "published": "Wed, 05 Aug 2026 01:00:00 GMT",
+        "publisher": "newsroom.kddi.com"
+      },
+      {
+        "title": "KDDI、スマホ1台で2つの電話番号 月額550円で利用可能に - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFA1NHFtRXRUcG9QS0hfMDJpenpub0RMWFhELU1RMExjN0JBVmxCRWtKbVFpMHA3OWtPaGxRY0JaRXZNeTR5eVdZSjl2bmZFUWxPWE9lazdKWnRyLWtKUnF0Vm1UNjRJTVdlUHJ2bA?oc=5",
+        "published": "Wed, 05 Aug 2026 07:36:56 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "KDDI、出版・専門メディアと連携した対話型AIサービス「Buffmee」提供開始 - AIsmiley",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9WdXJxV3ZUZ21kNWtMQmtYRWk5QW9rb1RSVkxJWm1ka0RSM2R3TkUxdUQ1WHliZWIwXzVzSmpDd0hLUDI2R0RnaGYyZjd2LUhKUEZHejJLa2hiV3FidFY0V3pvM0IyZw?oc=5",
+        "published": "Wed, 05 Aug 2026 10:27:30 GMT",
+        "publisher": "AIsmiley"
+      },
+      {
+        "title": "ローソンとKDDI、団地再生に挑む「ハッピーローソンタウン」を開業 通信・AIで地域の暮らしを支援 - ビジネスネットワーク",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9ZdFhXSG1iRFZiMG9ZVGg4eEM2Z09SYy1MZlBZNThadVV2bm9Pbi1xSlVyR2Nnc0VyUDNuSEpQTkZSZmc4WE9yVXNvWDVOWmtDY1VZ?oc=5",
+        "published": "Wed, 05 Aug 2026 02:49:04 GMT",
+        "publisher": "ビジネスネットワーク"
+      },
+      {
+        "title": "KDDI Digital Life、povo2.0のカスタマーサポートに「Dify」を活用 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBmTzk4cWFyU2FZdFBUWGtoTmFuNHk2d3o0LWIxUkxILWl1bWRYNnBwLTF3VUxzNjFRZGtTampBN3AtR3VEX3Y3RlNPdnlQZVpYY1ZsRGFBcXpJS3d3WGJrNmNtQXhxSk1UUkE?oc=5",
+        "published": "Wed, 05 Aug 2026 06:30:01 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "KDDIとGoogleが協調。最大3億円投資とインフラ提供で「世界で戦えるAI企業」を創出へ - Biz/Zine",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5hRlJxbDFwT00tZnd4QWRvdnIyMXA5VUx2WUY2NjBBeHR5aWlPNUQ0dUVJX2ZQNzF4TlFvUVhOellodzBCUVdkR0VzalJCckxa?oc=5",
+        "published": "Tue, 04 Aug 2026 23:55:47 GMT",
+        "publisher": "Biz/Zine"
+      },
+      {
+        "title": "ＴＤＳＥ(7046) TDSE、KDDI Digital Life社の「povo2.0」に AIエージェントプラットフォーム「Dify」を導入 - みんかぶ",
+        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9YTzFYSlhjaU9CakE5N1NneVNNaU9QYktEVVdlWUN0YUlvSDBXeUF2QlVpTmt3RFRtUFppWU5OY3hJbDdBaUE?oc=5",
+        "published": "Wed, 05 Aug 2026 06:30:00 GMT",
+        "publisher": "みんかぶ"
+      },
+      {
+        "title": "KDDI Digital Life社、AIエージェント「Dify」をTDSEより導入 - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE12Xy1tNXpPNUlqT0J0NV95aDc2V1pCU1Rva1BWaHYxbGxPUWVkcmRLU3EweTY5QUZmRWtvdWV0b1A3SEhuaVpCQTRKbzFVckVmdHRPYktwckItQ2h6VFM0S2ZXSmUxZzFtbHVuNFBQYVF1bHA4bFJBRHBXZw?oc=5",
+        "published": "Wed, 05 Aug 2026 19:18:13 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "KDDIと沖縄セルラー電話、Samsung Galaxy Z Flip8 SCG40を発表 - blog of mobile",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE93ejVnYmI4angwVFg2QUlzYUpxWmU0YmdNcWFoUEpGM1A3b09OQVZMZ3NmMTVnUFJDTjQtdlRxbkRwTVd2UlA1Yk9talNqb0k?oc=5",
+        "published": "Wed, 05 Aug 2026 20:18:18 GMT",
+        "publisher": "blog of mobile"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      },
+      {
+        "title": "東京証券取引所への「改善報告書」の提出に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260602559424.pdf",
+        "date": "2026-06-02 16:00:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（中期経営戦略）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524146.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "auフィナンシャルホールディングス株式会社の東京証券取引所への株式上場準備の開始について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524156.pdf",
+        "date": "2026-05-12 17:00:00"
+      },
+      {
+        "title": "2026年３月期　決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260511523545.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算説明会資料（決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524005.pdf",
+        "date": "2026-05-12 15:45:00"
+      },
+      {
+        "title": "2026年３月期　決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260512524010.pdf",
+        "date": "2026-05-12 15:45:00"
+      }
+    ]
+  }
+}
