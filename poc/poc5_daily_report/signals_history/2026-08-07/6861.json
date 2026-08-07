@@ -1,0 +1,200 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-08-07T10:38:41+09:00",
+  "price_as_of": "2026-08-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 45,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家は強気（strength=75）であるものの、テクニカル専門家も強気（strength=70）に揃っており、業績好調などの好材料がすでに株価に織り込まれている可能性が高い（織り込み済み）ため、統合ルールに基づきholdと判断します。",
+        "evidence": "fundamental_view.stance=bullish (strength=75) / technical_view.stance=bullish (strength=70)"
+      },
+      {
+        "reason": "第1四半期決算で営業利益前年同期比44.7%増を達成し、製造業PMI拡大や日銀短観DI改善など主要顧客の投資環境も良好で、中期的な成長基盤は極めて強固です。",
+        "evidence": "fundamental_view.points[0]: Q1営業利益+44.7%増 / macro.japan_pmi.manufacturing.latest_value=54.5"
+      },
+      {
+        "reason": "中期トレンドやMACDは強い上昇を示していますが、直近2営業日での急騰後の自律調整や市場全体の急落に伴い5日線を下回っており、短期的には押し目形成の調整が長引くリスクがあります。",
+        "evidence": "technical_view.points[1]: MACD好転 / technical_view.cautions[0]: 直近5日線割れおよび調整リスク"
+      }
+    ],
+    "risks": [
+      "実績PERが45.57倍と高バリュエーション水準にあるため、市場全体の急落・調整局面において下落インパクトが大きくなるリスク",
+      "想定保有期間内に含まれる次回日銀金融政策決定会合（2026-09-17〜2026-09-18）による金利・為替市場の変動リスク",
+      "ADRの下落や全体相場の軟調さに伴い、短期的な自律調整が想定より長引くリスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 45,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家は強気（strength=75）であるものの、テクニカル専門家も強気（strength=70）に揃っており、業績好調などの好材料がすでに株価に織り込まれている可能性が高い（織り込み済み）ため、統合ルールに基づきholdと判断します。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=75) / technical_view.stance=bullish (strength=70)\"\n  },\n  {\n   \"reason\": \"第1四半期決算で営業利益前年同期比44.7%増を達成し、製造業PMI拡大や日銀短観DI改善など主要顧客の投資環境も良好で、中期的な成長基盤は極めて強固です。\",\n   \"evidence\": \"fundamental_view.points[0]: Q1営業利益+44.7%増 / macro.japan_pmi.manufacturing.latest_value=54.5\"\n  },\n  {\n   \"reason\": \"中期トレンドやMACDは強い上昇を示していますが、直近2営業日での急騰後の自律調整や市場全体の急落に伴い5日線を下回っており、短期的には押し目形成の調整が長引くリスクがあります。\",\n   \"evidence\": \"technical_view.points[1]: MACD好転 / technical_view.cautions[0]: 直近5日線割れおよび調整リスク\"\n  }\n ],\n \"risks\": [\n  \"実績PERが45.57倍と高バリュエーション水準にあるため、市場全体の急落・調整局面において下落インパクトが大きくなるリスク\",\n  \"想定保有期間内に含まれる次回日銀金融政策決定会合（2026-09-17〜2026-09-18）による金利・為替市場の変動リスク\",\n  \"ADRの下落や全体相場の軟調さに伴い、短期的な自律調整が想定より長引くリスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "中期トレンドは市場平均を上回る上昇基調にあり、MACDも強い好転を示しているが、直近は急騰後の自律調整と全体相場の軟調さが重なり、押し目形成の局面にある。",
+      "points": [
+        {
+          "point": "中期トレンドが非常に堅調であり、対TOPIXでも優位性を保っている。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=8.38, relative_to_topix_60d_pct=5.34"
+        },
+        {
+          "point": "MACDがシグナルを大きく上回り、ヒストグラムも拡大傾向にあるため、上昇の勢いが維持されている。",
+          "evidence": "price_technical.macd=2057.64, macd_signal=734.65, macd_histogram=1322.98"
+        },
+        {
+          "point": "5日線が25日線を上回るゴールデンクロス状態にあり、価格も25日線を大きく上回って推移している。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, last_close=83790.0, sma25=77259.6"
+        }
+      ],
+      "cautions": [
+        "直近2営業日で約4%の下落となっており、5日線を下回ったことで短期的には調整が長引く可能性がある（price_technical.recent_5_days）",
+        "前夜のADRが下落しており、当日の寄り付きから軟調に始まるリスクがある（us_overnight.adr.change_1d_pct=-1.61）",
+        "市場全体（日経平均）の急落に伴い、個別銘柄のテクニカルに関わらず連れ安するリスクに注意が必要（macro.indices[0].change_1d_pct=-1.98）"
+      ],
+      "key_levels": {
+        "support": 77259.6,
+        "resistance": 87920.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "直近の第1四半期決算で営業利益前年同期比44.7%増と極めて高い成長を示したほか、製造業PMIの拡大や日銀短観の業況改善など顧客層の環境も良好です。高バリュエーションではあるものの、強力な業績カタリストにより中期的な買戻しと成長が期待されます。",
+      "points": [
+        {
+          "point": "2026年7月28日開示の2027年3月期第1四半期決算において、売上高が前年同期比32.8%増、営業利益が同44.7%増と大幅な増収増益を達成しており、直近で強い成長動力を示しています。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "2026年7月の製造業PMIが54.5と拡大圏を維持し、日銀短観の大企業製造業DIも22.0（前回比+5.0）へ上昇するなど、同社製品の主要顧客である製造業の設備投資環境が追い風となっています。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.5, macro.boj.tankan.di.large_manufacturing.current_di=22.0"
+        },
+        {
+          "point": "年次業績トレンドにおいても増収・営業増益が継続しており、高い事業収益性と成長基盤が実証されています。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        }
+      ],
+      "cautions": [
+        "実績PERが45.57倍、PBRが5.73倍と高バリュエーションに位置するため、市場全体の調整局面では下落インパクトを受けやすい点に注意が必要です。",
+        "製造業の設備投資サイクルに業績が左右されるため、世界的な景気減速や投資意欲の冷え込みが顕在化した場合は下振れリスクとなります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "寄前【板状況】注文ランキング 【買いトップ】デジハＨＤ 【売りトップ】キーエンス [08:53](株探ニュース) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPSGQ3S3hyR3RGcW1xWktwNkpOV0hnV2w0dVNkR2p5Ml9DUk5VbG1pOEJVczhXU1NRUi1McHU1Y0VLVGxMTHhlZzVxUmpleUxJa2F2REl5UDFYbDB0WXhFaEZUT0NTeTZ2X2dLbEl4cmt4aHhIaGV5cnBpaUFUdW56Yi1QX1U4Sjg?oc=5",
+        "published": "Fri, 07 Aug 2026 00:08:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "寄前【板状況】注文ランキング 【買いトップ】デジハＨＤ 【売りトップ】キーエンス [08:53] - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE43dTROdHBHUENtWHZuWEZ5VmFKNjh1dU1lc2ptQlg5YVRDdFZaODZ3SVNPN1V2aVlXZHQ1S2QzTGRFTF84OWdPdmhVTEdrbE5RYnc?oc=5",
+        "published": "Thu, 06 Aug 2026 23:53:24 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "｢切り返しの一言｣も｢正しい説明｣もいらない…クレーマーを大人しくさせ\"話を聞くモード\"に変える神対応 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1saDVoczJRN1d6YmxCVzk1MzlITVA2aFdRU2ZXMWtLcGx3eFJRUEtrU2hMbnFIMEtBWk42MnB4c01uYkVDUmpoODduN0hzNFU?oc=5",
+        "published": "Thu, 06 Aug 2026 22:03:57 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "対中強硬派なのに習近平には弱腰…レアアースの中国依存を断てないトランプの｢バイデン回帰｣という皮肉 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9LR25pdHlxVGU1elo1S0Q1ckpOSENGMDdUQmtQbHB0MklYNVJHdFR0MUNEYVcyOU5CcGVLZ0JBS19EeXUyQlNNWjNldUd6aW8?oc=5",
+        "published": "Thu, 06 Aug 2026 21:02:47 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "国内屈指の花火大会に女子プロ4人衆が大集結！ 浴衣姿で並んだ“超豪華ショット”にファン騒然 「このメンバーがすごすぎ」 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBXMWVqdFhOYTRhUld6VHhrSEdhLUtZdWJaVUhkUHNsUW9XNkVuRWZUQXN3VDdNM0syaU5RZG4welQ3ZVhHZUhHa29iQnQxV0JYTzZlX3JuYlliN09pcDJRLWQ0cXExZGpGVlprSXlMTGR3bmJJRU0xTg?oc=5",
+        "published": "Thu, 06 Aug 2026 19:27:35 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "スマホ三昧=\"残念な子\"ではなかった…AIに聞けば一発でわかる｢子供の隠れた才能と\"向いている職業\"｣ - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBQemRBSl9iZ25fUmw0ZUxiSU10LW5hQ3NlTFl4dmlxWGYzZGFpd3dnaXJiM1JkYjN2QUF5ZHpVVWtyNGdjWHU5WTltRlVUZW8?oc=5",
+        "published": "Fri, 07 Aug 2026 01:04:32 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "【ファミマ】シルバニアファミリーのキラキラくじ「ほしぞらパジャマパーティ」発売! A賞からラストチャンス賞までを一覧で紹介 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5Hc3kxV2lqUnR0eTcyNnBsSG9WanB6WXVFRWVDajBodTNRTzlzaEc5ZWNaQWpHUlo0T1FhVUE4dlNOUlJCZ2tJOGpKRGFJcTYtYmJuZDNYb0s3dGZlT01HOHdaNEgxR0xJMzVManFn?oc=5",
+        "published": "Thu, 06 Aug 2026 04:48:01 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "NISA､iDeCoより効果的…経営コンサルが｢最大リターンを狙える｣という20代が月4万円を積みたい有望な投資先 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE4wRjRxbldMLXphYkE2ay0tQlJqLVZ2dkl5WkNHVlh5YUtId0JCZTNWYmpKdTFNRTQ0RzVnYkt2UDlGQ1YyamtUQ2xndlROTDA?oc=5",
+        "published": "Thu, 06 Aug 2026 02:04:57 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "【野口 悠紀雄】「トヨタの指定席」だった日本の時価総額トップ企業が今度は銀行に交代！いま市場で起こっている変化の正体 - news.livedoor.com",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1NQVh3NHFWNXk3ZHVnNVBiRzd2RWNGZlBZbDNTSENUdnJabkZYckJMRG14Ql9zNHlSOGhKT0V4emdJTl9QQndEQ2ZRZmx1S1lJb1NTeE4zNldKWE1ER19r?oc=5",
+        "published": "Thu, 06 Aug 2026 22:00:00 GMT",
+        "publisher": "news.livedoor.com"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      }
+    ]
+  }
+}

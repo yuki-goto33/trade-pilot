@@ -1,0 +1,205 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-08-07T10:35:05+09:00",
+  "price_as_of": "2026-08-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近（2026-08-04）に新規買いシグナルを発行済みのため、再エントリー抑制ルールに基づき継続監視のためのhold判断とします。",
+        "evidence": "reference.recent_buy.date=2026-08-04"
+      },
+      {
+        "reason": "第1四半期純利益が前年同期比48.2%増と大幅増益を達成しており、高水準な国内長期金利環境も手伝い強力なファンダメンタルズが確認できます。",
+        "evidence": "fundamental_view.stance=bullish (strength=75), fundamental_view.points[0]"
+      },
+      {
+        "reason": "25日移動平均線上で推移しているものの、短期移動平均線のデッドクロスやMACDの陰転によりテクニカル指標の方向感が交錯しているため中立（neutral）として評価します。",
+        "evidence": "technical_view.stance=neutral (strength=50), technical_view.points[1]"
+      }
+    ],
+    "risks": [
+      "2026年9月17日〜18日に控える日銀金融政策決定会合に向けて、政策変更に対する警戒感からボラティリティが高まるリスクがあります。",
+      "25日移動平均線（3563.28円）を再び下回った場合、デッドクロスに沿った短期的な調整局面へ移行するリスクがあります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近（2026-08-04）に新規買いシグナルを発行済みのため、再エントリー抑制ルールに基づき継続監視のためのhold判断とします。\",\n   \"evidence\": \"reference.recent_buy.date=2026-08-04\"\n  },\n  {\n   \"reason\": \"第1四半期純利益が前年同期比48.2%増と大幅増益を達成しており、高水準な国内長期金利環境も手伝い強力なファンダメンタルズが確認できます。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=75), fundamental_view.points[0]\"\n  },\n  {\n   \"reason\": \"25日移動平均線上で推移しているものの、短期移動平均線のデッドクロスやMACDの陰転によりテクニカル指標の方向感が交錯しているため中立（neutral）として評価します。\",\n   \"evidence\": \"technical_view.stance=neutral (strength=50), technical_view.points[1]\"\n  }\n ],\n \"risks\": [\n  \"2026年9月17日〜18日に控える日銀金融政策決定会合に向けて、政策変更に対する警戒感からボラティリティが高まるリスクがあります。\",\n  \"25日移動平均線（3563.28円）を再び下回った場合、デッドクロスに沿った短期的な調整局面へ移行するリスクがあります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "足元では3日続伸により25日移動平均線を上回る回復を見せていますが、5日線と25日線のデッドクロスやMACDの陰転などテクニカル指標の示唆が錯綜しており、方向感が定まりにくい局面です。",
+      "points": [
+        {
+          "point": "直近3営業日連続で上昇し、終値は25日移動平均線（3563.28円）を上回って引けています。",
+          "evidence": "price_technical.last_close=3585.0, price_technical.sma25=3563.28, price_technical.recent_5_days"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線を下回るデッドクロス状態にあり、MACDヒストグラムもマイナス圏で推移するなど短期的な上値の重さが残ります。",
+          "evidence": "price_technical.sma5_vs_sma25=dead(5日線が25日線の下), price_technical.macd_histogram=-22.39"
+        },
+        {
+          "point": "60営業日騰落率は+24.61%と中期では優位性を維持しているものの、RSI14は50.3と売買が拮抗する中立圏に位置しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=24.61, price_technical.rsi14=50.3"
+        }
+      ],
+      "cautions": [
+        "25日移動平均線水準を維持できずに下回った場合、デッドクロスに沿った調整が再開する可能性があります。",
+        "前夜の米国金融セクターETF（XLF）が-0.33%と軟調であったため、寄り付き後の伸び悩みには注意が必要です。",
+        "日経平均が1日で-1.98%下落するなど、全体相場のボラティリティ高揚による連れ安リスクが存在します。"
+      ],
+      "key_levels": {
+        "support": 3470.0,
+        "resistance": 3813.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "2027年3月期第1四半期の純利益が前年同期比48.2%増と大幅増益を達成し、好調なスタートを切っています。高水準な長期金利環境も手伝い、増配予想とともに強固なファンダメンタルズが確認できます。",
+      "points": [
+        {
+          "point": "2026年8月3日および6日開示の第1四半期決算において、親会社株主に帰属する四半期純利益が前年同期比48.2%増の8,094億円となり、大幅な増益を達成しています。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "通期純利益目標2.7兆円に対して順調な進捗を示しており、年間配当予想も前期から増配となる1株あたり96.00円を見込むなど株主還元姿勢が明確です。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "日本の10年国債金利が2.773%で推移しており、国内金利環境の上昇・高止まりは銀行事業の利ざや改善を通じて中期的な収益拡大に寄与します。",
+          "evidence": "macro.rates.jgb_10y_percent.value=2.773"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日〜18日に次回の日銀金融政策決定会合が控えており、政策金利や金融政策の見通し変更によるボラティリティの高まりに注意が必要です。",
+        "直近の第1四半期業績は非常に良好ですが、グローバル経済の減速や為替・市況変動による市場部門への影響に留意する必要があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-04",
+    "days_ago": 3,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)三菱ＵＦＪフィナンシャル・グループ【MUFG】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1fb09UZ016WWhiUVBjc0RvWFltWjhxVkhJbkpyOEhKLXMzR2JuMk0wY1MybnpuUWNldldDSTJMak1rZV83N2JYNGFMWktSU3M?oc=5",
+        "published": "Thu, 06 Aug 2026 21:07:37 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "三菱ＵＦＪフィナンシャル・グループ[8306]：2027年3月期 第1四半期決算短信〔日本基準〕（連結）（公認会計士又は監査法人による期中レビューの完了） 2026年8月6日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9CSmNpMF9EZThsTVJlSUE5LWdGY3BDbTRka1JhdHBjMHd3TGRFZHQ0ZlJDYTNlWUxYU0NBX1N1X3NqekRMbkJzMkZHTGlMWk5sNE5SVExOQ18zMzhLNlhrNnJMQnZ3MURMc3c?oc=5",
+        "published": "Thu, 06 Aug 2026 07:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "寺社の悩み「この5～10年で圧倒的に増えた」三菱UFJが改革支援 - 朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9zUTdkQ1dqMjFCdXVtWFRSa0htblZ2VXVQMHVFcWZHdlVEd3pTUUtSbGxVLXhaQTFGUDRUbzVXQXNONURNeExMTXNtQ01weVdnZHBjX0VFN1I0VC03UzFtUEFOZjZGUHc?oc=5",
+        "published": "Thu, 06 Aug 2026 21:30:00 GMT",
+        "publisher": "朝日新聞"
+      },
+      {
+        "title": "(株)三菱ＵＦＪフィナンシャル・グループ【8306】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1UNHFKRmdJbVM3Z3JOeW9GQTRTNlJiNURfTlVNTUNLSklHb1FJc1JseWp6TzQ3YlYtRjB4T3RBSmpheTBBWGtpVGVYUlNESW5WZnppRXp1SzYwbmM0ZG9R?oc=5",
+        "published": "Thu, 06 Aug 2026 06:52:49 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "プレスリリース記事詳細 | さんにちEye 山梨日日新聞デジタル - sannichi.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBFVkFIdDJPek9Sb2JDa1V3eHdwNDZIWnVCbHpZYWZvUjVaMWl0SmtlNjlUdkRraGlzWlF3R2d5QU81LTF1a01SNWtjcmZ2cDYyLWZyRzV1SVdBS1d6NlhySlQwXzc?oc=5",
+        "published": "Thu, 06 Aug 2026 10:27:42 GMT",
+        "publisher": "sannichi.co.jp"
+      },
+      {
+        "title": "まっぷたつに…日本レトロゲーム協会がゲームソフトCDの劣化について問題提起 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5ITk1KV0U3eUh4bzByVjA0bFVaQWkwM1ZWakFyUzlXWFg2S2M0QzAtSmVkeTJIU0ktazFNMnYtWXNGenFzbnJNV3JpU2Rhb2tLVUpqY2RyNEtDR2s4WVVuaGVjT0ZQNDNhYm1PakFR?oc=5",
+        "published": "Thu, 06 Aug 2026 14:14:40 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "【セパ公示】（６日）巨人が又木鉄平を登録、平内龍太を抹消 阪神は大竹耕太郎を登録 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFAzM2dGV3l2TnE4aFlqZnVHaHd5NHpQNHdBQW1ja3FqOGtPYVdCYjJLR1pCU0xaeU1iMTJ5dXZMTVY2Q0dZYnlFeF92VmlxUmhuYXNLTFQ0Q1dtWjJ1ZzJndUIza3NEdXloRDRQM2Jn?oc=5",
+        "published": "Thu, 06 Aug 2026 07:24:37 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "インタビュー／三菱UFJニコス社長・角田典彦氏 中小向けデジタル金融拡大 - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8zRlpuWEhhNkR6ZS1Zc21PTTlQczl3V3pSZXBLUzFsTVlHdjM3MDVELXIxemdfbXUwUDc5UEw4THlpeUl3R0JUSE1IanBFemtnay1ObTBYZ0UwWlk?oc=5",
+        "published": "Thu, 06 Aug 2026 20:02:58 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "決算速報＞三菱ＵＦＪ、２７年３月期第１四半期決算は純利益４８．２％増の大幅増益(ウエルスアドバイザー) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQeUZPSk8xRnEyUEg2SUlsT3cyZUJ6NGNERC02NndjdzRHa1lNbHU2QUI5SE5NYVlGOGNDc2otZUg3S2pYQmtpcFg2Y3ItaXpMY253MUVEeTJmRzE5VW1JbTRjVGlkSWh5V05OWTlJWkxIa2hxd3F1ZGNoMGYxdm5pcERzZGFZR0U?oc=5",
+        "published": "Thu, 06 Aug 2026 07:01:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕（連結）（公認会計士又は監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510381.pdf",
+        "date": "2026-08-06 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505851.pdf",
+        "date": "2026-08-03 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "中期経営計画における財務目標の修正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538305.pdf",
+        "date": "2026-05-15 16:15:00"
+      }
+    ]
+  }
+}

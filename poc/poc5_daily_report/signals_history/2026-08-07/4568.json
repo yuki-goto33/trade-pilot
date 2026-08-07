@@ -1,0 +1,226 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-08-07T10:53:52+09:00",
+  "price_as_of": "2026-08-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 58,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 60,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズは主力品の売上好調と円安はポジティブであるものの、事業再編費用による利益減少と通期減益予想が懸念材料であり、総合的な強気度（strength 60）が買いシグナル発出の基準（strength 70以上）に達しない。",
+        "evidence": "fundamental_view.stance=neutral (strength=60), fundamental_view.points[0], fundamental_view.points[1]"
+      },
+      {
+        "reason": "テクニカルは中期的な上昇トレンドを維持し直近は反発しているが、5日線と25日線のデッドクロス継続やMACDの弱気シグナルにより、明確な上昇トレンドへの転換には至っておらず、中立的な見解となっている。",
+        "evidence": "technical_view.stance=neutral (strength=70), technical_view.points[0], technical_view.points[4]"
+      },
+      {
+        "reason": "両専門家の見解が拮抗しており、現在の株価水準において積極的な売買を推奨する明確な材料が不足しているため、相場の方向性が定まるまで様子見とする。",
+        "evidence": "fundamental_view.stance=neutral, technical_view.stance=neutral"
+      }
+    ],
+    "risks": [
+      "次回決算発表（2026年10月30日）の内容が想定より悪化し、株価にネガティブな影響を与えるリスク。",
+      "日銀金融政策決定会合（2026年9月17日〜18日）の結果が、市場全体のセンチメントや為替動向に影響を与え、株価を下押しするリスク。",
+      "事業再編費用が今後も継続的に発生し、会社の収益を圧迫するリスク。",
+      "テクニカル指標のデッドクロスやMACDの弱気シグナルが継続し、株価が本格的な下落トレンドに転じる可能性。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 58,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 60,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズは主力品の売上好調と円安はポジティブであるものの、事業再編費用による利益減少と通期減益予想が懸念材料であり、総合的な強気度（strength 60）が買いシグナル発出の基準（strength 70以上）に達しない。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=60), fundamental_view.points[0], fundamental_view.points[1]\"\n  },\n  {\n   \"reason\": \"テクニカルは中期的な上昇トレンドを維持し直近は反発しているが、5日線と25日線のデッドクロス継続やMACDの弱気シグナルにより、明確な上昇トレンドへの転換には至っておらず、中立的な見解となっている。\",\n   \"evidence\": \"technical_view.stance=neutral (strength=70), technical_view.points[0], technical_view.points[4]\"\n  },\n  {\n   \"reason\": \"両専門家の見解が拮抗しており、現在の株価水準において積極的な売買を推奨する明確な材料が不足しているため、相場の方向性が定まるまで様子見とする。\",\n   \"evidence\": \"fundamental_view.stance=neutral, technical_view.stance=neutral\"\n  }\n ],\n \"risks\": [\n  \"次回決算発表（2026年10月30日）の内容が想定より悪化し、株価にネガティブな影響を与えるリスク。\",\n  \"日銀金融政策決定会合（2026年9月17日〜18日）の結果が、市場全体のセンチメントや為替動向に影響を与え、株価を下押しするリスク。\",\n  \"事業再編費用が今後も継続的に発生し、会社の収益を圧迫するリスク。\",\n  \"テクニカル指標のデッドクロスやMACDの弱気シグナルが継続し、株価が本格的な下落トレンドに転じる可能性。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 70,
+      "summary": "中期トレンドは上昇を維持し、直近は強い反発を見せていますが、短期的な移動平均線はデッドクロスを形成しており、MACDも弱気シグナルを継続しています。",
+      "points": [
+        {
+          "point": "直近60営業日の騰落率はプラスであり、TOPIXに対しても優位性を示しているため、中期的な上昇トレンドは継続しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=5.17, price_technical.trend_60d.relative_to_topix_60d_pct=2.13"
+        },
+        {
+          "point": "直近3営業日で株価は大きく反発しており、期間安値からの回復が顕著です。",
+          "evidence": "price_technical.recent_5_days.[2].change_pct=3.4, price_technical.recent_5_days.[3].change_pct=2.9, price_technical.recent_5_days.[4].change_pct=2.09"
+        },
+        {
+          "point": "市場全体の地合いはTOPIXが上昇トレンドにあり、株価にとって追い風となる環境です。",
+          "evidence": "macro.market_regime.market_regime='uptrend'"
+        },
+        {
+          "point": "前夜の米国ADRは大幅に上昇しており、本日の寄り付きは高くなる可能性が示唆されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=2.81"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線を下回るデッドクロスを形成しており、MACDもマイナス圏で弱気シグナルを継続しています。",
+          "evidence": "price_technical.sma5_vs_sma25='dead(5日線が25日線の下)', price_technical.macd_histogram=-21.95"
+        }
+      ],
+      "cautions": [
+        "5日移動平均線と25日移動平均線のデッドクロスが継続しているため、上値が重くなる可能性があります。",
+        "MACDが弱気シグナルを継続しており、本格的な上昇に転じるにはMACDの好転が必要です。",
+        "前夜のADR高は、既に本日の寄り付き価格に織り込まれる可能性があるため、過度な期待はできません。",
+        "日経平均が前日に下落しているため、市場全体のセンチメントの変化には注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 2500.0,
+        "resistance": 2724.36
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "第一三共は直近の四半期決算で主力品の売上好調と円安効果により増収を達成しましたが、事業再編費用により最終利益は減少しました。通期利益予想も減益見込みであり、好材料と懸念材料が混在する状況です。",
+      "points": [
+        {
+          "point": "2027年3月期第1四半期決算では、主力品の伸長と円安効果により売上収益が前年同期比21.1%増、コア営業利益も6.2%増と好調に推移しました。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "一方で、事業再編費用などのコア外費用の増加により、第1四半期の営業利益は12.0%減、親会社所有者に帰属する四半期利益は19.7%減となりました。通期予想でも親会社の所有者に帰属する当期利益は減益を見込んでいます。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "年間配当予想は前期から増配となる100.00円を予定しており、株主還元への意欲が見られます。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "ドル円が158.4と円安傾向にあり、グローバル展開する医薬品企業である第一三共にとっては、海外収益の円換算価値向上などポジティブな影響が期待されます。",
+          "evidence": "macro.indices[2].close=158.4"
+        },
+        {
+          "point": "製造業PMI、サービス業PMIともに50を超える水準で推移しており、日本経済全体の景気は拡大基調にあります。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.5, macro.japan_pmi.services.latest_value=51.2"
+        }
+      ],
+      "cautions": [
+        "次回決算発表日が2026年10月30日に予定されており、その内容が株価に影響を与える可能性があります。",
+        "日銀金融政策決定会合が2026年9月17日〜18日に予定されており、マクロ環境の変化には注意が必要です。",
+        "事業再編費用の継続的な発生が、今後も最終利益に与える影響を注視する必要があります。",
+        "直近のニュースには「決算延期の内幕と反省」といった見出しも含まれており、過去の事象ですが市場の評価に影響を与える可能性もあります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "第一三共(株)【4568】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBIS2NSZTVoVDllRlVKSHozNnpLbWdVNkIwNl9GXzEtSkFNbzVSVFFvYTlBWnFsNlA4SFY2N29xNnhwcWhieWJGdlVNZGdCbFp3ZmE1R0pYRXVOOExmcFdr?oc=5",
+        "published": "Thu, 06 Aug 2026 06:54:44 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "〈トップ直撃〉第一三共社長が語る\"決算延期\"の内幕と反省･･･取引先の損失補償は｢成功の代償｣､一段の成長へ壁よじ登る - 東洋経済オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5CS3pQTzlkRkhpNnJGX3RCRG40bklxMENvZ3hoVS1sU2ZDOWJyT1RMUVl5LTZTWFBfSy1OLTJ5eEpuYUNRRFFpVW9Lb3V1MzN4OVIxVE9KcEQxS1BqN2Rj?oc=5",
+        "published": "Thu, 06 Aug 2026 20:50:00 GMT",
+        "publisher": "東洋経済オンライン"
+      },
+      {
+        "title": "〈トップ直撃〉第一三共社長が語る\"決算延期\"の内幕と反省･･･取引先の損失補償は｢成功の代償｣､一段の成長へ壁よじ登る - 東洋経済オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5EQWJKbUJKSmRxdXJpQ19Kd0RqdmNFSmlyV0JQdEViUEtVbjVwR0QtaVZvMnY5UnVfVEFXLVFJaEFOWTA3NzFYOWRnTzlncGtwa3VFMmNlU2hhSGs?oc=5",
+        "published": "Thu, 06 Aug 2026 20:50:00 GMT",
+        "publisher": "東洋経済オンライン"
+      },
+      {
+        "title": "敏感肌用のメーク落とし 第一三共ヘルスケア｜全国のニュース｜Web東奥 - 東奥日報社",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE41YVpJUTNXRkhObGhIMFIxbGpDcFhmQ19lTnNmMHhMV3Y0RkhsSkhiOTN3eUNGSjlJVHY1TWtadnp6TFVKREFoTFpiS09ncVFKaG0tcUJJbFc?oc=5",
+        "published": "Thu, 06 Aug 2026 04:51:08 GMT",
+        "publisher": "東奥日報社"
+      },
+      {
+        "title": "敏感肌用のメーク落とし 第一三共ヘルスケア | | 全国のニュース - 佐賀新聞",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBJUGZsVXNjZHBUNWZ4cl9TQk80VWptRnRmSXBoSzE0V2drQmg4Q01UbnkwdmRWc1o4dmNwMG50aWtraklpY1lVNTFUYnNOVG1MNVRRN2hn?oc=5",
+        "published": "Thu, 06 Aug 2026 04:51:00 GMT",
+        "publisher": "佐賀新聞"
+      },
+      {
+        "title": "敏感肌用のメーク落とし - 下野新聞社",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5RdlRqa2plOTgyMG9LRTNPRDdqREJXQVZkVE0zQlJfTVdtMHZOTURIRFQ5cHFQNlBQRmI3QUZaUTUzckkxS19OdHBKTWktNWphNkhxZ09pY2VuSWFid0E?oc=5",
+        "published": "Thu, 06 Aug 2026 04:51:08 GMT",
+        "publisher": "下野新聞社"
+      },
+      {
+        "title": "プレスリリース記事詳細 | さんにちEye 山梨日日新聞デジタル - sannichi.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1hMW5SV09sT3cwbGZLb3dJOXhfQTdhRDRsU183dHJULUhQeHJQMlVJYmp6V2hKZzAtTWFDemxGYk9xYVhuaFZnTDV3dUFqNzY2NG11Rk1NRWhoNEhQd2xWcHB1cWQ?oc=5",
+        "published": "Thu, 06 Aug 2026 02:28:58 GMT",
+        "publisher": "sannichi.co.jp"
+      },
+      {
+        "title": "〈トップ直撃〉第一三共社長が語る\"決算延期\"の内幕と反省･･･取引先の損失補償は｢成功の代償｣､一段の成長へ壁よじ登る - 東洋経済オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE16NkhHMjc0cGFWLURGX2lfcDVVZW15dkRkWU9xTWNaZUpYcjctQm51OTQ2MDFaQzNGRVZPUDUzMW5tTEQ4bDBYeXY2M1Y3Q1FFZWx4Y0ozZlJkUXM?oc=5",
+        "published": "Thu, 06 Aug 2026 20:50:00 GMT",
+        "publisher": "東洋経済オンライン"
+      },
+      {
+        "title": "〈トップ直撃〉第一三共社長が語る\"決算延期\"の内幕と反省･･･取引先の損失補償は｢成功の代償｣､一段の成長へ壁よじ登る - 東洋経済オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAtbFFkVUptSlU1YnBhYmxwMnVaTW51OGthZzhQMHoyNjI4VnJCOG04SU1nQXNQQWFFYm5xV3ZZYk1jMlU0eTR5akpUcXpMWVdPM191TmlxTzhWRlk?oc=5",
+        "published": "Thu, 06 Aug 2026 20:50:00 GMT",
+        "publisher": "東洋経済オンライン"
+      },
+      {
+        "title": "エクラープラスターが限定出荷に - 日経メディカル",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOUnFCYUVMLW40YTgyX0ZHNUZFZk9vOGxsM2tpbm95RHlLOFVuZ0MyaDVnQVhaNFByTE9FRTF1c3pXRFF0SUtGdWRMRndoWGQ4ZTVVLWx3bjh0TXlKa05oNkxaVjJMcmJUNmVONjRwN2pjWFE2NWFLRzVLTWxfd3Q4aU51R2M3NjFCQlZ5OQ?oc=5",
+        "published": "Thu, 06 Aug 2026 15:15:02 GMT",
+        "publisher": "日経メディカル"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "（訂正・数値データ訂正）「2026年３月期 決算短信〔IFRS基準〕(連結)」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504176.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504099.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算補足資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504168.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504173.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "当社米国子会社役職員に対する信託型株式付与制度の継続のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504240.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587542.pdf",
+        "date": "2026-07-16 15:30:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584479.pdf",
+        "date": "2026-06-30 16:30:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260620575199.pdf",
+        "date": "2026-06-22 15:30:00"
+      },
+      {
+        "title": "財務上の特約が付された金銭消費貸借契約の締結に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617573095.pdf",
+        "date": "2026-06-17 19:00:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬等の内容の一部改定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515539092.pdf",
+        "date": "2026-05-18 13:00:00"
+      }
+    ]
+  }
+}
