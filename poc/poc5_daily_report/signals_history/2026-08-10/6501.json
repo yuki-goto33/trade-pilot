@@ -1,0 +1,203 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-08-10T07:37:48+09:00",
+  "price_as_of": "2026-08-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズはQ1営業利益39.5%増や大規模な自社株買いにより極めて強力だが、テクニカルも既に強気（strength 90）であり、好材料が既に株価に織り込まれている可能性が高い。",
+        "evidence": "fundamental_view.strength=80, technical_view.stance=bullish (strength=90)"
+      },
+      {
+        "reason": "RSIが82.3と極めて高い過熱圏にあり、短期的には利益確定売りや移動平均線への乖離修正（押し目）が発生しやすい局面である。",
+        "evidence": "technical_view.cautions[0]: RSI14が82.3"
+      },
+      {
+        "reason": "株価が期間高値の5620円に達しており、ADRの大幅上昇を背景とした寄り付き後の材料出尽くし（寄り天）リスクが懸念されるため、追随買いは避けるべきと判断。",
+        "evidence": "reference.last_close=5620.0, technical_view.cautions[1]"
+      }
+    ],
+    "risks": [
+      "RSI 80超えに伴うテクニカル的な過熱感からの短期的な急落リスク",
+      "次回日銀金融政策決定会合（2026-09-17〜18）に向けた円高進行による業績下押し懸念",
+      "予想PER 31倍超という過去比較でのバリュエーションの割高感"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズはQ1営業利益39.5%増や大規模な自社株買いにより極めて強力だが、テクニカルも既に強気（strength 90）であり、好材料が既に株価に織り込まれている可能性が高い。\",\n   \"evidence\": \"fundamental_view.strength=80, technical_view.stance=bullish (strength=90)\"\n  },\n  {\n   \"reason\": \"RSIが82.3と極めて高い過熱圏にあり、短期的には利益確定売りや移動平均線への乖離修正（押し目）が発生しやすい局面である。\",\n   \"evidence\": \"technical_view.cautions[0]: RSI14が82.3\"\n  },\n  {\n   \"reason\": \"株価が期間高値の5620円に達しており、ADRの大幅上昇を背景とした寄り付き後の材料出尽くし（寄り天）リスクが懸念されるため、追随買いは避けるべきと判断。\",\n   \"evidence\": \"reference.last_close=5620.0, technical_view.cautions[1]\"\n  }\n ],\n \"risks\": [\n  \"RSI 80超えに伴うテクニカル的な過熱感からの短期的な急落リスク\",\n  \"次回日銀金融政策決定会合（2026-09-17〜18）に向けた円高進行による業績下押し懸念\",\n  \"予想PER 31倍超という過去比較でのバリュエーションの割高感\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 90,
+      "summary": "中期・短期ともに強い上昇トレンドが継続しており、主要なテクニカル指標がすべて上向きを示唆しています。買われすぎの警戒感はあるものの、地合いと米国市場の好反応を背景に一段高を試す展開が予想されます。",
+      "points": [
+        {
+          "point": "中期トレンドが極めて強力で、市場全体に対しても大幅なプラス乖離を維持しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=20.32, relative_to_topix_60d_pct=16.94"
+        },
+        {
+          "point": "MACDがゴールデンクロス後にプラス圏でヒストグラムを拡大させており、上昇モメンタムの強まりを示しています。",
+          "evidence": "price_technical.macd=228.65, macd_signal=168.83, macd_histogram=59.82"
+        },
+        {
+          "point": "5日移動平均線が25日線を上回るゴールデンクロス状態にあり、直近5営業日で5620円の期間高値を更新しました。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.last_close=5620.0, price_technical.period_high=5620.0"
+        },
+        {
+          "point": "前夜のADRが3%を超える大幅上昇となっており、寄り付きからの強い買い需要が期待されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=3.12"
+        }
+      ],
+      "cautions": [
+        "RSI14が82.3と極めて高い水準にあり、短期的には利益確定売りが出やすい局面であること",
+        "ADRの上昇分が寄り付き価格に織り込まれた後、材料出尽くし感から「寄り天」となるリスク",
+        "直近5連騰による反動安や、移動平均線からの乖離修正による一時的な押し目形成"
+      ],
+      "key_levels": {
+        "support": 5461.8,
+        "resistance": 5620.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 80,
+      "summary": "2027年3月期第1四半期の連結営業利益が前年比39.5%増と極めて好調であり、AI需要や欧州での鉄道受注などグローバルな成長カタリストが継続的に確認されています。巨額の自社株買いによる株主還元姿勢も強く、マクロ環境における製造業PMIの拡大も追い風です。",
+      "points": [
+        {
+          "point": "第1四半期決算における劇的な利益成長。売上収益20.0%増に対し、調整後営業利益が39.5%増と利益率が大幅に向上しており、通期計画達成に向けた進捗が極めて順調です。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "欧州市場での大型受注の獲得。イタリア鉄道グループから新型高速列車19編成を受注するなど、モビリティ事業におけるグローバルなプレゼンス拡大が実数値として示されました。",
+          "evidence": "news.headlines[2].title (2026-08-09)"
+        },
+        {
+          "point": "強力な株主還元策の実行。Q1累計で約1,480億円の自己株式取得を実施し、その後も継続的な取得状況が開示されており、EPSの向上と需給面の下支えが期待されます。",
+          "evidence": "disclosures[0].title (2026-08-04) および fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "良好な製造業マクロ環境。日本の製造業PMIが54.5と拡大圏を維持し、特にAI関連需要が牽引している点は、デジタルシステムやエナジー事業を展開する同社にとって強い追い風です。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.5 および macro.japan_pmi.manufacturing.summary_en"
+        }
+      ],
+      "cautions": [
+        "予想PERが31倍を超えており、過去の推移と比較してバリュエーションに割安感はなく、成長期待の剥落時には調整リスクがある",
+        "為替が158円台の円安水準にあり、今後日銀の政策修正等に伴う急激な円高進行は、海外売上比率の高い同社の業績を下押しする要因となる",
+        "次回決算発表（2026-10-29）や日銀金融政策決定会合（2026-09-17〜18）がイベントリスクとして意識される"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "日立製作所、9/3-9/4に東京国際フォーラムで「Hitachi Social Innovation Forum 2026 JAPAN」開催 - オートメーション新聞WEB",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE0wdVMycElrMWd5YnRNazM4d25tNzBRTDZBdEQ1QWh4TlF4cnM2VXhkelpJWnRQbWVmNmVxZjlabkU0S1NxdU9ONDMwSG04MEdDYXBseVNFNjFyUQ?oc=5",
+        "published": "Sun, 09 Aug 2026 10:55:00 GMT",
+        "publisher": "オートメーション新聞WEB"
+      },
+      {
+        "title": "日立が「脱・PC購入」 17万台のグループ向けPCを“サブスク”で調達へ：夏休みに振り返る2026年上半期ニュース - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE0yWWhTX1NFM0hOd2pyLWpkM050VUpNX1JMVGZqRUlvVlVwMXBBNXVGOEtfNThqRWN1Q3hyVmYzbUlpZTlHQXRzekoyaVpTNGM3Z0ZZeXJPRktEUDlxMGxpT2VvWW8yM1pFSVM1aWlmQm96UQ?oc=5",
+        "published": "Sun, 09 Aug 2026 01:38:27 GMT",
+        "publisher": "ITmedia"
+      },
+      {
+        "title": "日立レール、新型高速列車１９編成をイタリア鉄道グループから受注…「欧州での地位を確固たるものに」 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1FUmZxVWZLQkdpM2luN2tQV1FYOWZieHZIN284bzBrUG93bzFoTlJDRUpmelFOejZ1djZVbk52VU9HRUxMcC16SzJLXzdhUi1uamFpeTFxY3liOWFQSjhpX0lrVGpZS0R0aVBHN2thNGVGNTFPeVEybw?oc=5",
+        "published": "Sun, 09 Aug 2026 06:38:13 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "【日立vs三菱電機】AI特需で最高益！今買うべき本命銘柄を徹底比較 Santos - Bragantino (UCUvHFqR4d) - mshale.com",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE03R2hNMEd6SEFvUllTY1VXNEhfTmFFODZEbXhkeXhZalEwTkRDT2RuaFZNRmZFem5mOGdQSTJNZVZYZEpSblhoZXBPc0cyTUdaMlRUUzBmY2pRbDg?oc=5",
+        "published": "Sun, 09 Aug 2026 13:38:40 GMT",
+        "publisher": "mshale.com"
+      },
+      {
+        "title": "#イギリス の国立鉄道博物館& #HST のその後…【#迷列車で行こう海外編 】現地突撃取材 Jerry Seinfeld (pq1Jgfw2Wj) - mshale.com",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5NV3hWMzd2alFDQ2JYbnZQNXlGSV9UOFFCTmNHV0xfSjR2RlVySWdReGd0LXFXNUN3THRIUTdOUU0teExYOUVkYzBobXMyT2hDa05uZjlUci00Zzg?oc=5",
+        "published": "Sun, 09 Aug 2026 03:53:10 GMT",
+        "publisher": "mshale.com"
+      },
+      {
+        "title": "盆踊りやぐらを望む飲食ブース「鯱食堂」を展開する西之丸 - 名駅経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE95UkNUVVl3amtzbkl4cFNJOWdiOVZ1bTRBS2lnRFExdWU3VWs0NWRoUHNlOHhWQTFFNllmdWtOYWRUemxsN0NBcWRPRjRxTVJMZkJXVg?oc=5",
+        "published": "Sun, 09 Aug 2026 11:06:51 GMT",
+        "publisher": "名駅経済新聞"
+      },
+      {
+        "title": "台湾｢新型新幹線｣で見えた日台ビジネスのリアル 製造費めぐり交渉難航｢破談の危機｣乗り越え完成｜Infoseekニュース - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1jVjB4WnZiXzNDOVFsT1Myd0szTzFBa2F0cE9wWVZrYnRoano1cmVtdF9McWxlUUVkdjBFNHdXbDJHMC1lekhoZmtKRk9ySXBOZzd6MnlKZ0tPZlJDaWxrLVdzVWtaZ1UxakhUSVdqaFE?oc=5",
+        "published": "Sun, 09 Aug 2026 21:30:00 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "英仏高速鉄道に日立車両を発注 イタリア大手、29年新規参入 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9WRHZOS0ZwS0FMcEFkd1JqOTZaWkcxZXRPUG1GT3hwczlUS3YxQWNCM21fR1MybWp6MDBoQXJuZVI1YlVQLU9vam9YOTJHRWVUV1ZkSk5IMm1zMlJHdl84V0xKMHVTbnhmY1IzQ1lGbUIydHRpcURzcA?oc=5",
+        "published": "Sun, 09 Aug 2026 05:42:09 GMT",
+        "publisher": "au Webポータル"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804508474.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "（訂正）2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503298.pdf",
+        "date": "2026-07-30 13:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501771.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501801.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(モビリティ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566288.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(コネクティブインダストリーズ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566292.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(デジタルシステム＆サービス事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566294.pdf",
+        "date": "2026-06-09 15:30:00"
+      }
+    ]
+  }
+}

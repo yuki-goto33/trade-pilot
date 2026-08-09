@@ -1,0 +1,195 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-08-10T07:32:32+09:00",
+  "price_as_of": "2026-08-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-08-06）にbuyシグナルが発火済みであり、再エントリー抑制ルールに従い継続監視のholdとします。",
+        "evidence": "reference.recent_buy.date=2026-08-06"
+      },
+      {
+        "reason": "ファンダメンタルズ見解は強気（strength=70）ですが、テクニカル見解も強気（strength=75）に揃っており、好材料が株価に織り込み済みであるため新規買いエントリーは見送ります。",
+        "evidence": "fundamental_view.stance=bullish (strength=70), technical_view.stance=bullish (strength=75)"
+      },
+      {
+        "reason": "テクニカル面でRSI14が70.5と買われすぎ水準に達しており、短期的な利益確定売りによる調整リスクが存在します。",
+        "evidence": "technical_view.cautions[0]: RSI14が70.5と買われすぎ水準"
+      }
+    ],
+    "risks": [
+      "RSI14が70を超えていることによる短期的な過熱感からの利益確定売り・押し目形成のリスク",
+      "次回日銀金融政策決定会合（2026-09-17〜18）に向けた急激な円高進行による業績下振れリスク",
+      "過去の四半期で見られたような業績の振れ幅や一時的損失が発生するリスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内（2026-08-06）にbuyシグナルが発火済みであり、再エントリー抑制ルールに従い継続監視のholdとします。\",\n   \"evidence\": \"reference.recent_buy.date=2026-08-06\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ見解は強気（strength=70）ですが、テクニカル見解も強気（strength=75）に揃っており、好材料が株価に織り込み済みであるため新規買いエントリーは見送ります。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=70), technical_view.stance=bullish (strength=75)\"\n  },\n  {\n   \"reason\": \"テクニカル面でRSI14が70.5と買われすぎ水準に達しており、短期的な利益確定売りによる調整リスクが存在します。\",\n   \"evidence\": \"technical_view.cautions[0]: RSI14が70.5と買われすぎ水準\"\n  }\n ],\n \"risks\": [\n  \"RSI14が70を超えていることによる短期的な過熱感からの利益確定売り・押し目形成のリスク\",\n  \"次回日銀金融政策決定会合（2026-09-17〜18）に向けた急激な円高進行による業績下振れリスク\",\n  \"過去の四半期で見られたような業績の振れ幅や一時的損失が発生するリスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "直近3営業日連続の上昇により5日移動平均線が25日線を上回る好形状を維持しており、市場地合いや前夜ADRの上昇も追い風です。ただしRSI14が70を超えているため、短期的には過熱感による押し目形成に留意が必要です。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日移動平均線を上回るゴールデンクロス状態にあり、直近3営業日連続で大幅に続伸するなど短期トレンドは強気を示しています。",
+          "evidence": "price_technical.sma5_vs_sma25=golden(5日線が25日線の上), price_technical.recent_5_days"
+        },
+        {
+          "point": "60営業日騰落率が+8.04%でTOPIX対比でも+4.66%とアウトパフォームしており、中期的な上昇トレンドが継続しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=8.04, price_technical.trend_60d.relative_to_topix_60d_pct=4.66"
+        },
+        {
+          "point": "市場環境が「uptrend」と良好であることに加え、前夜のNY市場でソニーADRが+1.56%、テクノロジーセクターETF(XLK)が+1.42%上昇したことが追い風となります。",
+          "evidence": "macro.market_regime.market_regime=uptrend, us_overnight.adr.change_1d_pct=1.56, us_overnight.sector_proxy.change_1d_pct=1.42"
+        }
+      ],
+      "cautions": [
+        "RSI14が70.5と買われすぎ水準に達しており、利益確定売りによる短期的な調整が入るリスクがあります。",
+        "MACDヒストグラムが-0.27とわずかにマイナス圏に位置しており、モメンタムの強まりにはシグナル線の明確な上抜けが必要です。",
+        "前夜NYでのADR上昇は寄り付き価格に織り込まれる可能性が高く、寄り付き直後の高値買いには注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 3519.92,
+        "resistance": 3964.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "2026年3月期の通期最終赤字から一転し、直近2026年6月期（2027年3月期第1四半期）は純利益3,422億円と順調な業績回復を示しています。自社株買いの継続や円安水準も追い風ですが、過去の四半期最終赤字など業績の振れ幅には注意が必要です。",
+      "points": [
+        {
+          "point": "2026年7月31日に開示された2027年3月期第1四半期（2026年6月期）決算では、営業利益4,745億円、純利益3,422億円を計上し、前通期の最終赤字から好調な業績回復を示しています。",
+          "evidence": "disclosures.items[1].title, fundamentals.earnings_trend.quarterly[0].operating_income_oku_jpy=4745, fundamentals.earnings_trend.quarterly[0].net_income_oku_jpy=3422"
+        },
+        {
+          "point": "会社側は継続して自己株式の取得を行っており、株主還元姿勢が明確です。",
+          "evidence": "disclosures.items[0].date=2026-08-05, disclosures.items[0].title"
+        },
+        {
+          "point": "為替がドル円158円台と円安水準で推移しており、海外売上比率の高い事業構造にとって良好な外部環境となっています。",
+          "evidence": "macro.indices[2].ticker=JPY=X, macro.indices[2].close=158.41"
+        }
+      ],
+      "cautions": [
+        "2026年3月期通期（純利益-3,269億円）や2025年12月四半期（純利益-10,086億円）に見られたような業績の振れ幅・一時的損失のリスク",
+        "次回決算発表日が入力データ上で不明であることによるイベント時期の非見通し性",
+        "日銀金融政策決定会合（2026年9月17日〜18日）などに向けた急激な円高進行による業績下振れリスク"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-06",
+    "days_ago": 4,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソニーグループのCEO、ロブ・ストリンガー氏が大量の株式を売却した - simplywall.st",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNeEM2TlVJUU1seXZnbmp4YTk2S0lrNWQ4RnlNaVJlTlROaFo0RFZaRXRKLW1pMkQ0Mm9wRlRTT01KcjZmSmhPc1puekRZZDNlRHFmT3RXWVpVRnJMNGpFUHN4S1NlVTBWT1k3a3p6VTZfdTA4LU4xbjZySkZRSWMwMWdtRFMzMGpLcWpObF9XNTR2Q0F1akFUUjUtZWtYTWI3b0lxZldqNnrSAagBQVVfeXFMTXhDNk5VSVFNbHl2Z25qeGE5NktJazVkOEZ5TWlSZU5UTmhaNERWWkV0Si1taTJENDJvcEZUU09NSnI2ZkpoT3NabnpEWWQzZURxZk90V1laVUZyTDRqRVBzeEtTZVUwVk9ZN2t6elU2X3UwOC1OMW42ckpGUUljMDFnbURTMzBqS3FqTmxfVzU0dkNBdWpBVFI1LWVrWE1iN29JcWZXajZ6?oc=5",
+        "published": "Sun, 09 Aug 2026 02:26:53 GMT",
+        "publisher": "simplywall.st"
+      },
+      {
+        "title": "ディフェンシブ株としてのエンタテインメント３銘柄：ソニーグループ、ネットフリックス、スポティファイ・テクノロジーの安定成長を評価したい（今中 能夫）【楽天証券 トウシル】 Philadelphia Airport Passenger Currency Confiscation (hqCEwcgutg) - mshale.com",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE92N05TOWtudXpCTzdGdXBQYWZLV3Nmd0hZcFRIdllhOWZpZFlybjlaeDg0UlJ0WXZKb2doUXBOdXpzVDgyVEU3SXF4cURhbk0xcGxSb3ZuMGNfOVU?oc=5",
+        "published": "Sun, 09 Aug 2026 12:07:01 GMT",
+        "publisher": "mshale.com"
+      },
+      {
+        "title": "ソニーグループ株式会社 個人投資家向け 会社説明会 ～10分で解説 ソニーグループ 株主還元編～【IR広告】 Samuel Montembeault (rl8IuFBJCA) - mshale.com",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBDZ0YzbWR0bFlXRDBVNThpMkVYcXBqTmpMNlFEWWowZ3VPYnBWTG15TE5oUmZBODlkNDdUR1M3WlRfcllKTVB0WTNDUkVMbTRnVG9lQ2FsbTZIZVE?oc=5",
+        "published": "Sun, 09 Aug 2026 11:45:57 GMT",
+        "publisher": "mshale.com"
+      },
+      {
+        "title": "積水化学やソニーG､優れたサステナ開示 連載まとめ読み - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9qakR3NkVYWWc4d3ZUbExENXFYRE91dFkyQm5XNlc4eGo4dE5mY2xXdElxam5nb0g2WU9WTjl1aHRUOWRRZ19QTnlpTEY3YjQ3V0RONlpYTmIyeGZsclRJOFBGcURVNXVYaWhWRE9lZ25iX0hVdko0?oc=5",
+        "published": "Sun, 09 Aug 2026 20:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "深層断面／熊本の地下水守る 企業活動と地域の生活共存 - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB3S1diMFkyYlpKeS1ZWGhjRHZic3lkbmNBanlLcnZjTFkxX28walJxcHY5UWx2OUxSVG9VOUctVVpFZGVmWWItWWRVdEtNek5KQzRocU1JYU8zOG8?oc=5",
+        "published": "Sun, 09 Aug 2026 20:01:40 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "ソニーがタムロン完全子会社化を提案 2000億円規模の話にカメラファンが揺れる理由 - shiritomo",
+        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5mbTFyclZvZ2ViR2xaUE5uWEwwVE9rWWJqTFBUUDc0VGY5TFFVc1FHdFhZcHlzYmhXSUxMT3JLcVBnZUZpUWc?oc=5",
+        "published": "Sun, 09 Aug 2026 04:00:32 GMT",
+        "publisher": "shiritomo"
+      },
+      {
+        "title": "ソニーもタムロン買収提案を正式に認める。焦点は買収成立に向けた次の段階へ - CAMEOTA.com",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE0yRUZsSHNyYUszRy1KajN2eTRzUUN1aTJJem5jZ3JMSlp5Y0JudzF5dG9qS0RhYzJ5RThBOFlZQ3BrUzRYeWNPeWpJOA?oc=5",
+        "published": "Sun, 09 Aug 2026 07:40:01 GMT",
+        "publisher": "CAMEOTA.com"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805509201.pdf",
+        "date": "2026-08-05 11:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504252.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期 連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504254.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の権利確定に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595854.pdf",
+        "date": "2026-07-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587315.pdf",
+        "date": "2026-07-03 11:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584099.pdf",
+        "date": "2026-06-30 15:30:00"
+      },
+      {
+        "title": "米ドル建て無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577032.pdf",
+        "date": "2026-06-24 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260603560934.pdf",
+        "date": "2026-06-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの次世代イメージセンサーに関する戦略的提携に向けた基本合意のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518510.pdf",
+        "date": "2026-05-08 16:15:00"
+      },
+      {
+        "title": "2026年３月期 決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518952.pdf",
+        "date": "2026-05-08 12:00:00"
+      }
+    ]
+  }
+}

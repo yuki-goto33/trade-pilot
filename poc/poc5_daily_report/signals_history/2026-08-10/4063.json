@@ -1,0 +1,165 @@
+{
+  "code": "4063",
+  "name": "信越化学工業",
+  "generated_at": "2026-08-10T07:35:21+09:00",
+  "price_as_of": "2026-08-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ分析では製造業PMIの改善や自社株買いの完了など好材料（strength=75）があるものの、テクニカル分析では中期下落トレンドの継続およびMACD等の弱気シグナル（strength=70）が続いており、統合ルールに従いテクニカルな底打ち確認待ちのholdと判断します。",
+        "evidence": "fundamental_view.stance=bullish (strength=75), technical_view.stance=bearish (strength=70)"
+      },
+      {
+        "reason": "株価は25日移動平均線（6,691.76円）から約8.6%下方乖離しており、5日線と25日線のデッドクロス状態が継続するなど構造的な弱気が解消されておらず、安易な買いエントリーは時期尚早です。",
+        "evidence": "technical_view.points[2]: 5日線が25日線を大きく下回るデッドクロス状態, reference.sma25=6691.76"
+      },
+      {
+        "reason": "AI関連需要に伴う高機能化学品の受注増加期待や自社株買いによる株主還元姿勢は下値を支える要因として評価できますが、通期営業利益が減益見通しであることから下値を固めるプロセスが必要です。",
+        "evidence": "fundamental_view.points[0,1], fundamental_view.cautions[0]: 通期営業利益予想6,352億円（前期比減益）"
+      }
+    ],
+    "risks": [
+      "中期下落トレンドが継続し、節目となる安値（5,636円）に向けた一段安となるリスク。",
+      "想定保有期間内に含まれる次回日銀金融政策決定会合（2026年9月17日〜18日）に向けた金利上昇・円高進行による業績悪化リスク。",
+      "通期減益見通し（前期比減益）による上値の重さと決算通過までの調整期間の長期化。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ分析では製造業PMIの改善や自社株買いの完了など好材料（strength=75）があるものの、テクニカル分析では中期下落トレンドの継続およびMACD等の弱気シグナル（strength=70）が続いており、統合ルールに従いテクニカルな底打ち確認待ちのholdと判断します。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=75), technical_view.stance=bearish (strength=70)\"\n  },\n  {\n   \"reason\": \"株価は25日移動平均線（6,691.76円）から約8.6%下方乖離しており、5日線と25日線のデッドクロス状態が継続するなど構造的な弱気が解消されておらず、安易な買いエントリーは時期尚早です。\",\n   \"evidence\": \"technical_view.points[2]: 5日線が25日線を大きく下回るデッドクロス状態, reference.sma25=6691.76\"\n  },\n  {\n   \"reason\": \"AI関連需要に伴う高機能化学品の受注増加期待や自社株買いによる株主還元姿勢は下値を支える要因として評価できますが、通期営業利益が減益見通しであることから下値を固めるプロセスが必要です。\",\n   \"evidence\": \"fundamental_view.points[0,1], fundamental_view.cautions[0]: 通期営業利益予想6,352億円（前期比減益）\"\n  }\n ],\n \"risks\": [\n  \"中期下落トレンドが継続し、節目となる安値（5,636円）に向けた一段安となるリスク。\",\n  \"想定保有期間内に含まれる次回日銀金融政策決定会合（2026年9月17日〜18日）に向けた金利上昇・円高進行による業績悪化リスク。\",\n  \"通期減益見通し（前期比減益）による上値の重さと決算通過までの調整期間の長期化。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "中期的な下落トレンドが継続しており、直近数日の下げ止まりは移動平均線乖離の修正局面の域を出ていません。テクニカル指標の多くが弱気シグナルを維持しており、本格的な反転を確認するには至りません。",
+      "points": [
+        {
+          "point": "中期下落トレンドの継続。60営業日騰落率が-18.19%かつ対TOPIX相対騰落率が-21.57%と、市場全体を大きく下回る劣後状態にある。",
+          "evidence": "price_technical.trend_60d"
+        },
+        {
+          "point": "短期的な反発力の欠如。直近3営業日は続伸していたが、8月7日に-0.83%と反落。MACDも-275.79、シグナルを下回る推移が続いており、反転のサイン（ゴールデンクロス）が出ていない。",
+          "evidence": "price_technical.macd, price_technical.recent_5_days"
+        },
+        {
+          "point": "移動平均線の構造的弱気。5日線が25日線を大きく下回るデッドクロス状態にあり、株価も25日線（6691.76）から約8.6%下方乖離している。",
+          "evidence": "price_technical.sma5_vs_sma25, price_technical.last_close"
+        }
+      ],
+      "cautions": [
+        "前夜のNY市場でSOX指数が+2.56%、SMHが+1.96%と大幅上昇しており、寄り付き時に窓を開けて上昇する可能性がある（us_overnight）。",
+        "市場レジームがuptrend判定となっており、市場全体の地合いの強さが個別株の弱さをカバーして底上げするリスクがある（macro.market_regime）。",
+        "RSI14が44.3であり、極端な売られすぎ水準は脱しているものの、上値の重さが意識されやすい水準にある（price_technical.rsi14）。"
+      ],
+      "key_levels": {
+        "support": 5636.0,
+        "resistance": 6691.76
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "積極的な自己株式取得による株主還元姿勢に加え、AI需要を背景とした製造業PMIの好調な推移が同社の主力事業に追い風となる。直近の自社株買い完了および新たな取得枠の設定という明確な資本効率向上策が下値を支えるカタリストとして機能している。",
+      "points": [
+        {
+          "point": "直近10日以内に自己株式の取得終了および立会外買付取引の結果が開示されており、企業による積極的な株主還元と需給下支えが確認できる。",
+          "evidence": "disclosures.items[0,1,2].date=2026-07-30"
+        },
+        {
+          "point": "マクロ環境において製造業PMIが54.5と7ヶ月連続で拡大しており、特に「AI関連需要の強さによる新規受注の急増」が言及されている点は、半導体材料等の高機能化学品に強みを持つ同社にとって極めてポジティブな外部環境である。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.5, macro.japan_pmi.manufacturing.summary_en"
+        },
+        {
+          "point": "実績PER24.2倍に対し、予想PERは18.5倍へと低下しており、市場が今後の収益回復および成長を一定程度織り込んでいることを示唆している。",
+          "evidence": "fundamentals.valuation.trailing_pe=24.213, fundamentals.valuation.forward_pe=18.549"
+        }
+      ],
+      "cautions": [
+        "2026年3月期の通期営業利益予想は6,352億円と、前期（7,421億円）比で減益の見通しとなっており、1Q以降の進捗率を注視する必要がある（fundamentals.earnings_trend.annual）。",
+        "次回の日銀金融政策決定会合が38日後に控えており、金利上昇や円安の修正が輸出企業である同社の業績に与える影響がリスク要因となる（macro.boj.monetary_policy_meeting）。",
+        "次回決算発表が10月23日と先であり、当面はマクロ指標やAI関連のニュースフローによるボラティリティにさらされやすい（fundamentals.next_earnings_date）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "信越化学工業(株)【SHECY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFAwQzY0SXQxN2pTTnB1djAxVGExeFpGb0stX0Zmc1ZQb1h6ZGR3Rm5xRVp2R3JLT1ROeVhjd21RSXBoOTFycjNfdzQ0NUZ6U3A5?oc=5",
+        "published": "Sun, 09 Aug 2026 05:25:06 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "阪神・藤川監督 11日からの同率首位巨人との3連戦へ「敵は内にあり。自分たちのチームをしっかりやっていく」 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE4yWXNxNHdYWUl4c3JYRXJKWmpDVjdLVTNDZGgzVGJSY1FpVWFGeHhMWGMwTmFpaGFIRVJ6V1hPQmJxcG0xczdaRU1NUHpybEU4Y2pobWhJRmgtRWxLVjM2X2lIbWZwZTVyT2lOVlR3?oc=5",
+        "published": "Sun, 09 Aug 2026 13:46:03 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "【ＶＩＶＡＮＴ】第１２話振り返り〈４〉第１２話、乃木（Ｆ）とアリが再び対峙――飯田Ｐが語る“最高の芝居” - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1uMk5GQkNNOUFuSXlaTHR3dnZZZW5zcGlFbmREZXFXaEVyY0VPek85REFEZ3MtbmpRb0piUnBzaEtDNmlEVVB0TGFRdm9qMkVNYkc5RlBzU2YzRU93Vk84d193TVMtWmNjQ2JVZ1NXZGVpNzYydnhrSQ?oc=5",
+        "published": "Sun, 09 Aug 2026 00:26:51 GMT",
+        "publisher": "au Webポータル"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による取得結果および自己株式の取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730502910.pdf",
+        "date": "2026-07-30 11:30:00"
+      },
+      {
+        "title": "コミットメント型自己株式取得（FCSR）による自己株式取得のための第三者割当による第27回および第28回新株予約権の発行条件の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503103.pdf",
+        "date": "2026-07-30 11:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による自己株式の買付けに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729502228.pdf",
+        "date": "2026-07-29 16:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598954.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "業績予想および配当予想に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598982.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による自己株式の買付けに関するお知らせ（コミットメント型自己株式取得（FCSR）による自己株式取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598998.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573248.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260605563833.pdf",
+        "date": "2026-06-05 15:30:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541941.pdf",
+        "date": "2026-05-20 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541943.pdf",
+        "date": "2026-05-20 15:30:00"
+      }
+    ]
+  }
+}

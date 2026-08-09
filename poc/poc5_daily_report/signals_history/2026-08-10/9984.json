@@ -1,0 +1,210 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-08-10T07:34:01+09:00",
+  "price_as_of": "2026-08-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "2026-08-06に出された直近の buy シグナルの継続監視期間中（14日以内）であり、同一銘柄への短期連続エントリーを避けるルールを適用する。",
+        "evidence": "reference.recent_buy: date=2026-08-06 (4 days ago)"
+      },
+      {
+        "reason": "テクニカル面で5日移動平均線が25日線を下回るデッドクロス状態にあり、中期下落トレンドからの明確な反転シグナルが確認できていない。",
+        "evidence": "technical_view.points[1]: price_technical.sma5_vs_sma25=dead, technical_view.stance=bearish"
+      },
+      {
+        "reason": "ファンダメンタルズの確信度は高い（strength=75）ものの、テクニカルが弱気（bearish）な局面での buy は「落ちるナイフ」を掴むリスクがあるため見送る。",
+        "evidence": "fundamental_view.strength=75, technical_view.stance=bearish (strength=70)"
+      }
+    ],
+    "risks": [
+      "38日後に日銀金融政策決定会合を控えており、国内金利上昇が有利子負債の多い同社の財務コストや株価に悪影響を与える可能性がある。",
+      "25日移動平均線（5689.56円）付近が強い抵抗帯となっており、これを上抜けられない場合、下落トレンドが長期化するリスクがある。",
+      "投資損益のボラティリティが極めて高く、市場環境の急変により純資産価値（NAV）が大きく毀損する可能性がある。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"2026-08-06に出された直近の buy シグナルの継続監視期間中（14日以内）であり、同一銘柄への短期連続エントリーを避けるルールを適用する。\",\n      \"evidence\": \"reference.recent_buy: date=2026-08-06 (4 days ago)\"\n    },\n    {\n      \"reason\": \"テクニカル面で5日移動平均線が25日線を下回るデッドクロス状態にあり、中期下落トレンドからの明確な反転シグナルが確認できていない。\",\n      \"evidence\": \"technical_view.points[1]: price_technical.sma5_vs_sma25=dead, technical_view.stance=bearish\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズの確信度は高い（strength=75）ものの、テクニカルが弱気（bearish）な局面での buy は「落ちるナイフ」を掴むリスクがあるため見送る。\",\n      \"evidence\": \"fundamental_view.strength=75, technical_view.stance=bearish (strength=70)\"\n    }\n  ],\n  \"risks\": [\n    \"38日後に日銀金融政策決定会合を控えており、国内金利上昇が有利子負債の多い同社の財務コストや株価に悪影響を与える可能性がある。\",\n    \"25日移動平均線（5689.56円）付近が強い抵抗帯となっており、これを上抜けられない場合、下落トレンドが長期化するリスクがある。\",\n    \"投資損益のボラティリティが極めて高く、市場環境の急変により純資産価値（NAV）が大きく毀損する可能性がある。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "60日騰落率や対TOPIX相対騰落率がマイナスの中期下落トレンド内にあり、5日線が25日線を下回る弱気な形状が続いています。",
+      "points": [
+        {
+          "point": "60日騰落率および対TOPIX相対騰落率がともにマイナス圏に位置しており、中期的な下落トレンドが継続しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-3.78, price_technical.trend_60d.relative_to_topix_60d_pct=-7.16"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線の下に位置するデッドクロス状態で、8月5日の大幅高の後は2営業日連続で反落しています。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.last_close=5552.0, price_technical.sma25=5689.56, price_technical.recent_5_days[3].change_pct=-4.41, price_technical.recent_5_days[4].change_pct=-2.51"
+        },
+        {
+          "point": "MACDヒストグラムはプラス圏に浮上しモメンタム改善の兆候は見られるものの、25日線を明確に上抜けるなどの明確な反転シグナルには至っていません。",
+          "evidence": "price_technical.macd_histogram=48.26, price_technical.rsi14=41.7"
+        }
+      ],
+      "cautions": [
+        "前夜の米国市場でテクノロジーセクターETF（XLK）が+1.42%と堅調であり、寄り付きで買い先行となる可能性があります。",
+        "25日移動平均線（5689.56円）を上抜けて定着した場合、短期的な反転上昇トレンドへ転換するリスクがあります。"
+      ],
+      "key_levels": {
+        "support": 5228.0,
+        "resistance": 5689.56
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "2027年3月期第1四半期決算は減益ながら市場予想を上回り、Intel株の売却益など巨額の投資利益を計上。AI関連需要の強さを背景とした投資ポートフォリオの拡大と、円安環境による海外資産評価の維持が強気材料です。",
+      "points": [
+        {
+          "point": "第1四半期決算にて、Intel株式等の売却による1兆8,594億円の巨額投資利益を計上し、市場予想を上回る進捗を見せた。",
+          "evidence": "fundamentals.recent_important_disclosures[0], news.headlines[0]"
+        },
+        {
+          "point": "OpenAIへの追加出資実行や米フォームラブズのIPO協議など、AI分野への積極的な再投資サイクルが継続している。",
+          "evidence": "disclosures.items[3], news.headlines[4]"
+        },
+        {
+          "point": "製造業PMIにおいて「強力なAI関連需要」が拡大を牽引していると言及されており、同社の投資戦略とマクロ環境が合致している。",
+          "evidence": "macro.japan_pmi.manufacturing.summary_en"
+        },
+        {
+          "point": "為替が1ドル158円台で推移しており、ドル建て資産の比率が高い同社にとって、円建ての純資産価値（NAV）を下支えする要因となる。",
+          "evidence": "macro.indices[2]"
+        }
+      ],
+      "cautions": [
+        "通期業績予想が未公表であり、投資利益の振れ幅による純利益のボラティリティが非常に高い。 (fundamentals.recent_important_disclosures[0])",
+        "相次ぐ社債発行（第68回・69回無担保普通社債、ハイブリッド社債）により、金利上昇局面における財務コスト増大のリスクがある。 (disclosures.items[2], disclosures.items[6])",
+        "38日後に日銀金融政策決定会合を控えており、国内金利の変動が株価および負債評価に影響を与える可能性がある。 (macro.boj.monetary_policy_meeting)"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-06",
+    "days_ago": 4,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソフトバンクグループ、アナリスト予想を上回る：今年のコンセンサス予想とは - simplywall.st",
+        "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNQjZQR2VmNmJMVDh4bU1uVVVaNzBRWjhBMDFvSm9QcDI1QXQ3OUtua2N2ckF2N3B2SHNtamFra3gzekd1Mk9YdXhoYXdhZzNyOWtwdVZnR2tCSVZwR1lkd2xEX0xZVl94QlRMNU1veHNqNVRncW5jT3lwZURGcE5KbUdNdDctUkFGYzNoZDlrLUhDTkhCcHF2bExLYjB5MVpUb3FndVBWQm5vYXcwM2FEbVdBOXFtRVdmTUJmOG0td2ZXVXBfb09qOWhjSUZXSC1rTjFyZVBB0gGgAUFVX3lxTFBIZWRIUHc3NFJ4c2tVTVlXakg4c2hjc3F6SGpuUUV6WTEzaE1sclJHZ1hJcUhzU2lDTlRIOWRwVUN6ektmOEI4Y2VoV1MzazFwT2JDb0NUdFZlSmhNcnJJSV83WEpodDdJbDR0NlJjY0hUWTN4c3BXbEJ2TUlfWlVlZkQ3Z2NjTUxhOEhYTXU4MmZkTi1sU0RnTWYzTlRUZmU?oc=5",
+        "published": "Sun, 09 Aug 2026 04:54:02 GMT",
+        "publisher": "simplywall.st"
+      },
+      {
+        "title": "ソフトバンクグループ(株)【SFTBY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9PS0JwdDRlRjRxb1VMWkhNNTEwcUtyQkN0SVdKbk1ZVEN2VkZYZFhkVktRdVlLNUhBdm45Q1ZxY0xZSUtsTDktcWhXNjFPSU5s?oc=5",
+        "published": "Sat, 08 Aug 2026 22:36:28 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ソフトバンクG（TYO: 9984）、純利益5兆円超え。国内企業で過去最高 Tartan Parade Edinburgh (nQHJs9Wnbq) - mshale.com",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1za0QwT2FYd2kwMGVzMElrUzBhcU5nYlJ6b1dqQXc2YlhtVGVDQlNUWGE3VGNDUFNYTmJJV3JOamNpa21Vd3JoaXB1a0pyX09PaHNKYVJSRmhIWDc0ZFBvcg?oc=5",
+        "published": "Sun, 09 Aug 2026 10:42:05 GMT",
+        "publisher": "mshale.com"
+      },
+      {
+        "title": "【異常事態】ソフトバンクグループが急騰した本当の理由と、明日以降のシナリオがやばい Daniil Medvedev (pj5CrAIdqG) - mshale.com",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1LRmFBWExrdlQ5a0hWYkZhMlpnRENBZzAxWkNoeVlmZVFwRmExbVJ6cTEwa2NfaEh6WXNMTlQyZ2ZXeDBMX3E2ZjFON243SjhWTjhucUtfdGYxU1k?oc=5",
+        "published": "Sun, 09 Aug 2026 13:14:28 GMT",
+        "publisher": "mshale.com"
+      },
+      {
+        "title": "ソフトバンクG出資の米フォームラブズ、IPOに向け初期協議－関係者 - newsdig.tbs.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9iRG1hWmliSG8waTJNdUxEOEtpd3plMDRRRjQwUk1rUkJUX1NUV3JYU1NpcjNUSndvRjRxNGJmZWNtcFRsMnRXeVFSS2hMZ1FiTGYyR0RVOVRFUFFCRjZ3aTJkM01qa3M?oc=5",
+        "published": "Sun, 09 Aug 2026 00:05:40 GMT",
+        "publisher": "newsdig.tbs.co.jp"
+      },
+      {
+        "title": "東証、午前終値は６万５０３９円 ＡＩや半導体に利益確定の売り - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0zcmVpTnRFYmZFVHpyUjlhcW5aYTdpOHhzazhjVUF1VkpwVlBVa1hma0d2X3ZsenBySURtblo0WWlmNE9fVlRnZzItbFpFYVZkOFE?oc=5",
+        "published": "Sun, 09 Aug 2026 03:43:05 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "ウォール街の風向き変化：中国関連株、「無力感」から「戦術的買い」へ、AI応用と競争緩和が双発エンジンに - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5CTUNHSlp3c3puR0F4dEFMS1dYbGZnOTl1bGNiR1UxVEZwYUZyZEZGR2ZhMXlpNlNmTi00NVh4SVhmc21yYmFaZmQzU1FKSTJwZ0J4NHktMFg5STJpWXVMZTJmVl9Cc0I0UG14NjJaVGk4WC05?oc=5",
+        "published": "Sun, 09 Aug 2026 12:05:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "【決算速報】ソフトバンクG純利益18％減！社債投資家はArmで一喜一憂？OpenAI投資の行方？決算説明会を簡単解説 Ufo Files (gdj9XqXg1L) - mshale.com",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5PbV9ueWJvMm5FMHBkdG9NYl9zdVNhbE1yMWEwVS1fa3FTY0pRVEM5VEk3cWtlS2VaUnNMa3JaQmN0SzN3V1h6NUdZVVhJVjZ2cDh3RzBVR09Hb00?oc=5",
+        "published": "Sun, 09 Aug 2026 08:57:37 GMT",
+        "publisher": "mshale.com"
+      },
+      {
+        "title": "【日本株速報】26/8/5 AI半導体株の復活で大幅続伸！史上最高値をつけた米指数 #半導体 #topix #fomc Liam Neeson (WNMx1Evgjx) - mshale.com",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8xdWxOS2pKcENjdUZXVWI4T1IycDRhYTZpNk9pZWR6VXZWYmtIZTNobnllWE9EVzZCUUh1dUkwYW9Dd1pTRktpdlpsQVlqczhyVFA1MkJOWWJqQlE?oc=5",
+        "published": "Sun, 09 Aug 2026 11:51:01 GMT",
+        "publisher": "mshale.com"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510515.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行内容確定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503871.pdf",
+        "date": "2026-07-30 17:00:00"
+      },
+      {
+        "title": "第68回及び第69回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501484.pdf",
+        "date": "2026-07-29 10:30:00"
+      },
+      {
+        "title": "OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260701586249.pdf",
+        "date": "2026-07-01 16:00:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577089.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "2021年発行米ドル建普通社債の期限前償還完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566742.pdf",
+        "date": "2026-06-10 11:30:00"
+      },
+      {
+        "title": "国内ハイブリッド社債（利払繰延条項付）の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260605563850.pdf",
+        "date": "2026-06-05 10:30:00"
+      },
+      {
+        "title": "当社の子会社によるT&amp;Dフィナンシャル生命保険株式会社の株式の取得（子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562772.pdf",
+        "date": "2026-06-04 16:00:00"
+      },
+      {
+        "title": "2021年発行米ドル建普通社債の期限前償還に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528551943.pdf",
+        "date": "2026-05-28 15:30:00"
+      },
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得に関するタイ関係当局の許認可等の取得状況および今後の見通しに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260527550260.pdf",
+        "date": "2026-05-27 15:30:00"
+      }
+    ]
+  }
+}
