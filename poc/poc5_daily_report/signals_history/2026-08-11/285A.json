@@ -1,0 +1,224 @@
+{
+  "code": "285A",
+  "name": "キオクシアホールディングス",
+  "generated_at": "2026-08-11T07:46:22+09:00",
+  "price_as_of": "2026-08-10",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 60,
+    "reasons": [
+      {
+        "reason": "直近14日以内に同一銘柄へ buy シグナルを発出済みであり、ルールの定めにより新規の buy は出さず、既存ポジションの継続監視として hold とします。",
+        "evidence": "reference.recent_buy"
+      },
+      {
+        "reason": "ファンダメンタルズ専門家は、記録的な業績回復、AI需要の追い風、資本構造の転換を根拠に強い bullish 見解（strength 72）を維持しており、注目に値します。",
+        "evidence": "fundamental_view.stance=bullish (strength=72), fundamental_view.points[0], fundamental_view.points[1], fundamental_view.points[2]"
+      },
+      {
+        "reason": "一方で、テクニカル専門家は主要移動平均線のデッドクロス継続、米国半導体株指数の大幅下落を背景に強い bearish 見解（strength 80）を示しており、新規の買いには慎重な局面です。",
+        "evidence": "technical_view.stance=bearish (strength=80), technical_view.points[0], technical_view.points[1]"
+      },
+      {
+        "reason": "両専門家の見解が乖離しており、ファンダメンタルズの好材料があるものの、テクニカル面では明確な下降トレンドを示しているため、新たな判断を下すよりも既存の注視を継続するべきと判断します。",
+        "evidence": "fundamental_view.stance, technical_view.stance"
+      }
+    ],
+    "risks": [
+      "テクニカルの強い下落トレンドが継続し、主要移動平均線が抵抗線として機能することで下値を探る展開が続く可能性。",
+      "前夜の米国半導体株指数の大幅下落が国内市場に波及し、同銘柄にさらなる売り圧力がかかるリスク。",
+      "PBR 10.9倍、PER 47.6倍という極めて高いバリュエーション水準であり、期待に反する材料が出た場合の調整幅が大きくなる可能性。",
+      "Appleが中国製メモリーを採用するとの報道が現実化した場合、主要顧客におけるシェア喪失や価格競争の激化が懸念されること。",
+      "次回決算発表（2026年10月30日）および次回日銀金融政策決定会合（2026年9月17日〜18日）を控えたイベントリスク。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 60,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内に同一銘柄へ buy シグナルを発出済みであり、ルールの定めにより新規の buy は出さず、既存ポジションの継続監視として hold とします。\",\n   \"evidence\": \"reference.recent_buy\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ専門家は、記録的な業績回復、AI需要の追い風、資本構造の転換を根拠に強い bullish 見解（strength 72）を維持しており、注目に値します。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=72), fundamental_view.points[0], fundamental_view.points[1], fundamental_view.points[2]\"\n  },\n  {\n   \"reason\": \"一方で、テクニカル専門家は主要移動平均線のデッドクロス継続、米国半導体株指数の大幅下落を背景に強い bearish 見解（strength 80）を示しており、新規の買いには慎重な局面です。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=80), technical_view.points[0], technical_view.points[1]\"\n  },\n  {\n   \"reason\": \"両専門家の見解が乖離しており、ファンダメンタルズの好材料があるものの、テクニカル面では明確な下降トレンドを示しているため、新たな判断を下すよりも既存の注視を継続するべきと判断します。\",\n   \"evidence\": \"fundamental_view.stance, technical_view.stance\"\n  }\n ],\n \"risks\": [\n  \"テクニカルの強い下落トレンドが継続し、主要移動平均線が抵抗線として機能することで下値を探る展開が続く可能性。\",\n  \"前夜の米国半導体株指数の大幅下落が国内市場に波及し、同銘柄にさらなる売り圧力がかかるリスク。\",\n  \"PBR 10.9倍、PER 47.6倍という極めて高いバリュエーション水準であり、期待に反する材料が出た場合の調整幅が大きくなる可能性。\",\n  \"Appleが中国製メモリーを採用するとの報道が現実化した場合、主要顧客におけるシェア喪失や価格競争の激化が懸念されること。\",\n  \"次回決算発表（2026年10月30日）および次回日銀金融政策決定会合（2026年9月17日〜18日）を控えたイベントリスク。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 80,
+      "summary": "主要移動平均線のデッドクロスに加え、前夜の米国半導体株指数の大幅下落が強い下押し圧力となる見通しです。直近で下げ止まりの兆しはあるものの、トレンド転換を確認できる材料に乏しい状況です。",
+      "points": [
+        {
+          "point": "5日線が25日線を下抜けるデッドクロスが継続しており、株価も両移動平均線の下方で推移する明確な下落トレンドにあります。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.last_close=48010.0, price_technical.sma5=50174.0, price_technical.sma25=58838.8"
+        },
+        {
+          "point": "前夜の米国市場でSOX指数および半導体セクターETFが大幅に下落しており、国内半導体関連銘柄である当該銘柄にはネガティブな波及が予想されます。",
+          "evidence": "us_overnight.sox_index.change_1d_pct=-2.94, us_overnight.sector_proxy.change_1d_pct=-2.28"
+        },
+        {
+          "point": "直近5営業日中、8/6に10%を超える大幅な下落を記録した後、戻りの勢いが弱く、MACDが大幅なマイナス圏で推移しています。",
+          "evidence": "price_technical.recent_5_days[2].change_pct=-10.24, price_technical.macd=-7626.04"
+        }
+      ],
+      "cautions": [
+        "MACDヒストグラムがプラス圏で拡大しており、短期的には売られすぎからの自律反発が発生する可能性があります",
+        "米国市場の下落が寄り付き価格に過度に織り込まれた場合、寄り底の形となるリスクがあります",
+        "市場全体のレジームがuptrend判定であるため、地合いに引きずられた一時的な浮上には注意が必要です"
+      ],
+      "key_levels": {
+        "support": 36020.0,
+        "resistance": 50174.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 72,
+      "summary": "AI需要を背景とした記録的な業績回復トレンドに加え、製造業PMIが示す外部環境の好転、さらに筆頭株主の異動という資本構造の大きな転換期にあり、成長期待が継続すると判断します。",
+      "points": [
+        {
+          "point": "赤字脱却から大幅増益への劇的な業績V字回復。2024年3月期の営業赤字2,527億円から、2026年3月期には営業利益8,704億円を見込むなど、収益性が極めて高い水準で回復している。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "マクロ環境におけるAI関連需要の強力な裏付け。日本の製造業PMIが7ヶ月連続で拡大しており、特に「AI関連需要に支えられた2014年以来の生産の伸び」と言及されている点は、同社の主力製品にとって強力な追い風である。",
+          "evidence": "macro.japan_pmi.manufacturing.summary_en"
+        },
+        {
+          "point": "資本構造の転換とガバナンスの変化。2026年8月10日に発表されたベインキャピタル連合による筆頭株主化と東芝の保有比率低下は、IPO後の資本政策の柔軟性向上や経営効率化への期待材料となる。",
+          "evidence": "disclosures.items[1].title, news.headlines[1].title"
+        },
+        {
+          "point": "円安環境による収益への寄与。ドル円が159円台と円安水準で推移しており、グローバル展開する同社にとって為替面でのプラス効果が継続している。",
+          "evidence": "macro.indices[2].close"
+        }
+      ],
+      "cautions": [
+        "PBR 10.9倍、PER 47.6倍という極めて高いバリュエーションは、期待先行の側面があり下落時の調整幅を大きくするリスクがある (fundamentals.valuation)",
+        "Appleが中国製メモリーを採用するとの報道があり、主要顧客におけるシェア喪失や価格競争の激化が懸念される (news.headlines[5].title)",
+        "自己株式の取得が終了したことで、需給面でのサポート要因が一つ消失している (disclosures.items[0].title)",
+        "次回決算（2026年10月30日）および日銀金融政策決定会合（2026年9月17日〜）を控えたイベントリスクへの留意が必要 (fundamentals.next_earnings_date, macro.boj.monetary_policy_meeting)"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-03",
+    "days_ago": 8,
+    "confidence": 75,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "キオクシアホールディングス[285A]：自己株式の取得状況及び取得終了に関するお知らせ 2026年8月10日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1FbEMyTGFzRU1Ga2JvQW0wQnZLakRicExORXRTZFkyNGpNRGoyREFNZ3BBT0ZBZkJPRmV3VGdDY1FCMUZkUWZ6Ri1Yb3VhNjdhQXc1XzRrNHBRQ05NbGVuU0t2bk1COWxNSlE?oc=5",
+        "published": "Mon, 10 Aug 2026 09:15:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "キオクシアＨＤ ベインが筆頭株主に 東芝の一部売却で - ロイター",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQU1M4Z2N2a1U4NkVwYmI4S3NTLVFHTUh2bkJBWktwVXVROTJoZXZwU0ZvQjdqUkY4bjJvNzZjSmRiMXpjTXRmbk4yelZEbE1mR2dSVEF2ZWZTeEpyYXV0X204Y0RCZG1SVTRSaXhkX0ZEVktsd28waEdSSk9FOFV1OQ?oc=5",
+        "published": "Mon, 10 Aug 2026 09:59:11 GMT",
+        "publisher": "ロイター"
+      },
+      {
+        "title": "キオクシアについて、東芝は保有割合が減少したと報告 [変更報告書No.19] - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5mRF9zRElfVmlzSTEyRkx0VmVRX1dIN0dOU3ZSbG5pLUtTT2RGdHFnS1B1bmJGVHhOVjlwWWxDQ0NZbmxTVUlvb1g0U2FxMVc1TWJienRJR0FvcHdrUXRESQ?oc=5",
+        "published": "Mon, 10 Aug 2026 07:03:02 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "キオクシアホールディングス(株)【285A】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE8ycENoQTVJSTA4clBFQ2l0U3phU2NYS0p1TUVaQk9qMktLR19hU1FXSDFOQmhndEdlY2FaTndFb05jZWI0bnhLeGtjU2VvaURiWE1TcjhYaXVhQW9UT21n?oc=5",
+        "published": "Mon, 10 Aug 2026 06:52:54 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "東芝がキオクシア株を売却、保有比率14.06%に低下 ベイン系と拮抗 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1GVlVqU3B6YTlpY2xLVDFOWC1lSVg2SkFDOTlFbWpDS05NMTRuRjVtT3M1YWxkOTBQN2l5R0puaHd5MnhyY1I4eDJEVlZVWUczMzNtTFlmMzZMRHNFWDJtd094LVpPcFVMUjV4TmlKOXpHWWhn?oc=5",
+        "published": "Mon, 10 Aug 2026 10:06:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "Appleが中国製メモリー採用ならキオクシアに逆風 - 日経CNBC online",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5rdXo5Y215MVRjTFZpY0tzQ1UwTzUyV05hM3B2YWhjb0RveVc1c21UdFRNdm44eWdRRzFVOTlud2M4TU02VmxmbW91STRjbDdMSjU3bQ?oc=5",
+        "published": "Sun, 09 Aug 2026 23:30:00 GMT",
+        "publisher": "日経CNBC online"
+      },
+      {
+        "title": "決算:キオクシアHD、ベイン運営のSPCが筆頭株主に 東芝の株式売却で - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5maEhJUkQyMmtjYjI3b1hNQTlQcVd2T0t5WXZuQVBtYW5keHFOQTBRQk1PRkhOWlgyYlVRdmI2QzlnVDVoUEdXR0wtVjExaXpQM0xDTGVmSnVpMGV4MTBxTDFoQ3dkaTBtUjhiRg?oc=5",
+        "published": "Mon, 10 Aug 2026 09:12:44 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "日経平均は１１９０円程度高、売買代金はキオクシア、フジクラ、太陽誘電が上位 速報 - kabushiki.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9KdG5KRXVpcFVDeHhObDJOSE82YWdGRjRNNkE5dzBzdjdzUXdzT29qNWRFdUlhS1RlVzRybFprZDF0eEZwS3Zv?oc=5",
+        "published": "Mon, 10 Aug 2026 05:05:00 GMT",
+        "publisher": "kabushiki.jp"
+      },
+      {
+        "title": "キオクシアＨＤ ベインが筆頭株主に 東芝の一部売却で - newsweekjapan.jp",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5rZzlTbzR3dF9RV3NVaVo0bVBweDRTVkIzcXZCSy1JeVJiQnpRN3VLUDVrWDYwRjZCLVBSZ0pqRFJpRlU3MTNBWWphU1EtTnFtemtmVWswNHBPYlljSG14UktwWnN0d2s?oc=5",
+        "published": "Mon, 10 Aug 2026 08:50:00 GMT",
+        "publisher": "newsweekjapan.jp"
+      },
+      {
+        "title": "先週のトウシル記事3選：この夏、キオクシア急落で個人投資家が学んだこと・スペースX初決算！「宇宙×AI」の収益力・円高の恩恵を受けやすい「配当利回り3.5%以上」銘柄5選 - トウシル",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1VaW5lWExMUTM5cGtNNWNHcHlhOV9rczdCVV9fX0psemJSdnVIbVRId2tNU09rUU1GRnRiUVAzVjBIYUdhaXp0b2ZZZFRVN3NvX01nQmlZcXhSQQ?oc=5",
+        "published": "Mon, 10 Aug 2026 02:00:00 GMT",
+        "publisher": "トウシル"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況及び取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260810517251.pdf",
+        "date": "2026-08-10 18:15:00"
+      },
+      {
+        "title": "主要株主である筆頭株主の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260810517256.pdf",
+        "date": "2026-08-10 18:15:00"
+      },
+      {
+        "title": "当社子会社に対する訴訟の判決に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260803506332.pdf",
+        "date": "2026-08-03 15:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505265.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "株式分割及び株式分割に伴う定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505272.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "自己株式の取得枠設定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505280.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "勤務継続型株式報酬制度及び業績連動型株式報酬制度のユニット付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505321.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "当社子会社に対する訴訟の陪審評決に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595788.pdf",
+        "date": "2026-07-17 13:00:00"
+      },
+      {
+        "title": "（訂正）「勤務継続型株式報酬制度及び業績連動型株式報酬制度のユニット付与に関するお知らせ」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586951.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "（訂正）「当社及び当社子会社の役員に対する株式報酬制度の改定に関するお知らせ」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260612569674.pdf",
+        "date": "2026-06-12 15:30:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-08-11T07:44:06+09:00",
+  "price_as_of": "2026-08-10",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ面で、2026年3月期の減益見通しに加え、実績PER23倍、PBR1.8倍という歴史的な割高水準が上値を強く抑制している。",
+        "evidence": "fundamental_view.points[2]: diluted_eps=209.78, fundamental_view.points[3]: trailing_pe=23.111"
+      },
+      {
+        "reason": "テクニカル面では中期的な下落トレンドが継続しており、MACDの勢いも不足しているため、直近の反発は一時的な自律反発に留まる可能性が高い。",
+        "evidence": "technical_view.points[0]: trend_60d=-17.1%, technical_view.points[1]: macd_histogram=-3.26"
+      },
+      {
+        "reason": "資産売却による資金確保などの好材料はあるものの、テクニカルが弱気（bearish）であり、押し目を確認する段階ではないため、統合判断のルールに基づきエントリーを見送る。",
+        "evidence": "fundamental_view.points[0], technical_view.stance=bearish"
+      }
+    ],
+    "risks": [
+      "歴史的高値圏にあるバリュエーションの修正（株価下落）リスク",
+      "資源価格（特に銅）のボラティリティによる利益成長の不確実性",
+      "2026-09-17からの日銀金融政策決定会合に伴う為替および市場全体の変動リスク",
+      "2026-11-03の次回決算発表に向けた業績進捗の不透明感"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ面で、2026年3月期の減益見通しに加え、実績PER23倍、PBR1.8倍という歴史的な割高水準が上値を強く抑制している。\",\n   \"evidence\": \"fundamental_view.points[2]: diluted_eps=209.78, fundamental_view.points[3]: trailing_pe=23.111\"\n  },\n  {\n   \"reason\": \"テクニカル面では中期的な下落トレンドが継続しており、MACDの勢いも不足しているため、直近の反発は一時的な自律反発に留まる可能性が高い。\",\n   \"evidence\": \"technical_view.points[0]: trend_60d=-17.1%, technical_view.points[1]: macd_histogram=-3.26\"\n  },\n  {\n   \"reason\": \"資産売却による資金確保などの好材料はあるものの、テクニカルが弱気（bearish）であり、押し目を確認する段階ではないため、統合判断のルールに基づきエントリーを見送る。\",\n   \"evidence\": \"fundamental_view.points[0], technical_view.stance=bearish\"\n  }\n ],\n \"risks\": [\n  \"歴史的高値圏にあるバリュエーションの修正（株価下落）リスク\",\n  \"資源価格（特に銅）のボラティリティによる利益成長の不確実性\",\n  \"2026-09-17からの日銀金融政策決定会合に伴う為替および市場全体の変動リスク\",\n  \"2026-11-03の次回決算発表に向けた業績進捗の不透明感\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 65,
+      "summary": "中期的な下落トレンドが継続しており、直近の自律反発もMACDの勢い不足から戻り売りに押される可能性が高い状況です。",
+      "points": [
+        {
+          "point": "60営業日騰落率が-17.1%、対TOPIX相対騰落率が-21.42%といずれも大幅なマイナスであり、中期的な下落トレンドから脱却できていない。",
+          "evidence": "price_technical.trend_60d"
+        },
+        {
+          "point": "短期的に5日線が25日線を上回るゴールデンクロスが発生しているが、MACDヒストグラムは-3.26とマイナス圏で推移しており、反転の勢いは限定的である。",
+          "evidence": "price_technical.sma5_vs_sma25, price_technical.macd_histogram"
+        },
+        {
+          "point": "直近5営業日の値動きにおいて、8月7日の反発後、8月10日は-0.39%と小幅に反落しており、期間高値（4972円）付近の抵抗が意識される。",
+          "evidence": "price_technical.recent_5_days, price_technical.period_high"
+        }
+      ],
+      "cautions": [
+        "前夜のADRが+1.33%であり、米国エネルギーセクターETF(XLE)も+4.66%と急騰しているため、寄り付きが強含む可能性がある。",
+        "TOPIXが25日線を上回るアップトレンド（レジーム）にあるため、市場全体の地合いが下値を支えるリスクがある。"
+      ],
+      "key_levels": {
+        "support": 4672.0,
+        "resistance": 4972.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "AI・データセンター向けの銅需要拡大や、保有資産の売却による1,110億円の資金確保といったポジティブな材料はあるものの、2026年3月期の減益見通しと、PER23倍を超える歴史的な割高水準が上値を抑制する要因となっています。",
+      "points": [
+        {
+          "point": "TOYO TIREとの資本提携解消に伴い、1,110億円の資金を回収する。これは資本効率の改善や新たな投資余力に繋がる新規材料。 ",
+          "evidence": "news.headlines[2]"
+        },
+        {
+          "point": "AI需要を背景とした銅価格の先行き期待と、同社の供給能力拡大（40万トン）への攻勢が報じられている。",
+          "evidence": "news.headlines[3]"
+        },
+        {
+          "point": "2026年3月期のEPS予想が209.78円となっており、2025年3月期の235.80円から減益となるトレンドにある。",
+          "evidence": "fundamentals.earnings_trend.annual[0].diluted_eps=209.78"
+        },
+        {
+          "point": "実績PER 23.11倍、PBR 1.84倍は、総合商社セクターの過去の推移と比較して非常に高いバリュエーション水準にある。",
+          "evidence": "fundamentals.valuation.trailing_pe=23.111, fundamentals.valuation.price_to_book=1.843"
+        },
+        {
+          "point": "製造業PMIが54.5と拡大傾向にあり、AI関連の需要増が工場の稼働を支えている状況は、資源・素材を扱う同社の追い風。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.5"
+        }
+      ],
+      "cautions": [
+        "2026年3月期の減益計画を跳ね返すための第1四半期以降の具体的進捗の有無。",
+        "資源価格のボラティリティによる利益成長の不確実性。",
+        "次回の決算発表（2026-11-03）および日銀金融政策決定会合（2026-09-17〜18）に伴うイベントリスク。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "三菱商事(株)【8058】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ScXhBTU9DVmdWalgxWWpQcThsOHBreVdENTJLZUh2YU9xMldYU1dJUmw2NjdWVWY0N2tuZmtZWTkySUZocWhkT24xNVU3OC1PYnZjU3FaTjQ1b0NkdGRV?oc=5",
+        "published": "Mon, 10 Aug 2026 06:53:22 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "三菱商事とメディパル、食品・日用品物流で協業 - LOGISTICS TODAY",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5uOTNFZlkya3BwYXVNTWV5ZFh5ekx3UzlpSTNoZ1dJYUtPckZ0dGJSWTZqWEJxRTM0QTFKMThYS2RiYkpFcG1xRg?oc=5",
+        "published": "Mon, 10 Aug 2026 05:55:06 GMT",
+        "publisher": "LOGISTICS TODAY"
+      },
+      {
+        "title": "TOYO TIRE、三菱商事との資本提携解消 1110億円で自社株取得 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1kVjJkYmZYTnBiWWVPcmhMdml5XzNlRUtBUkxTR3RTaWg4WGh0ay1JNDZnTVRDMVdwWWEwR1BUUW5nYzdpQktQaFNnZGM5c3MyVF9kZWlSUHBuR3JLTlh3QkphaFRiUFR2Y3RDRQ?oc=5",
+        "published": "Mon, 10 Aug 2026 03:25:19 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "三菱商事が「銅」に攻勢、AI・データセンターで需要急増 40万トンは「通過点」 (サンデー毎日×週刊エコノミストOnline) - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNbGg3eTNPN21yVzJzNlRzWU8tWnFiQ1JZckdkNFJ4OHFQb1Q2VEh6eW5HMFhLMjZ2ekpqVmFyVFFmY0dsRE4yV2Q5WVBRazNJcExaRElsNHRoVklOXzFsQ1BBVDBmSWxKYkxHNTN0TnIwM3Fmek54Y01XX3BtbUx4UmVmWE5fa005RDQzeXNB?oc=5",
+        "published": "Mon, 10 Aug 2026 04:24:44 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "三菱商事、丸紅の商社株が予想外の●●に⁉︎決算や業績を比較！配当金や株価など Nyt Strands (N34vcJTZ1X) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5zNV80VmVkbmQtZzI1UWo0Ry04Z0xvQWJvTVFOU1Vrc1BrdS1tOEZXRU9zampaMVZZRDJfeERkR1Z5ekZGcHlTS0lZMG11TVFWUF8xdno4S1d1c0U?oc=5",
+        "published": "Sun, 09 Aug 2026 22:36:24 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "三菱商事が「銅」に攻勢、AI・データセンターで需要急増 40万トンは「通過点」（サンデー毎日×週刊エコノミストOnline） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNenVDRUFjdUhzRWE3N0xyRWJQaTlwRV96X2ZTOG9Xa09tTDhGYTNlYmxRQnlhWjJIQTVvSnJvMk5ISzh6NmF1NmN3MWNQei1KelMxb0g3LWhCMFZLWGl2NGxUWktpNlI1Y3lSM1JobjZIWmpJYllTQTB3YmFrd2N6R19KanJPcUk3?oc=5",
+        "published": "Mon, 10 Aug 2026 03:00:56 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "【トランプ砲中国関税で急落!!レーザーテックフジクラ暴落！/SUMCO/三菱商事/INPEX/関西電力/任天堂/リクルート/マネーフォワード/ニデック/NTT/配当再投資7兆円流入/安川電機/米国株】 Giovanni De Carolis (iwqiain9JW) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1SRjdwRHZmRmp6cTF3azFac1I2dWxkWHMzNk9Fa282QWhvb3hqQ3hid1VZUFV0MkdoelhKZ1ZDekk3SEE4NDRESGpuS2h2OWhiTGlNYkJXMWFDdTZ1MFRsWA?oc=5",
+        "published": "Mon, 10 Aug 2026 04:20:30 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "世界トップだった日本の銀行はなぜ消え、「冬の時代」の商社は復活したのか…30年で明暗を分けた人事とは - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE15c0dSZmhCaGZOQTk3el9CUUtEZGVDdnlza2ZsZ3lMRkQ1bmJSczh4LVJfQll1NkdJLVNXU3dqN19leGxNemVNVEVnZ3JzWmxLYlVxN1VB0gFPQVVfeXFMT25zWVNaaUo1anVyNUdLdXRmTjF0V24tZDNvdEd5MFpNWmZkUWpDdkd0bXV4b1pkdW5DSTM0WEVoMFE0bmxzQjNfOFVHWmc3VQ?oc=5",
+        "published": "Mon, 10 Aug 2026 09:00:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "首都圏の東海道線で「100年ぶりの新駅」どんなとこ？ “隣の市”も大変化 クルマのアクセスも今後便利に！ - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9CTHRuTFp5cTdmR2ctN3ptbEROdjJKZjNtQWNHU0NJN1l0Nk1OcHdnbHpiRFhzX09WTDFXR2pWU2JVZm9yWm8yZzRRR1VsaGlveTgtcmN2a1ZmR1pfVjJQZjBwcDFwRVZZQjNN0gFrQVVfeXFMT0JMdG5MWnlxN2ZHZy03em1sRE52MkpmM21BY0dTQ0k3WXQ2TU5wd2dsemJEWHNfT1ZMMVdHalZTYlVmb3JabzJnNFFHVWxoaW95OC1yY3ZrVmZHWl9WMlBmMHBwMXBFVllCM00?oc=5",
+        "published": "Mon, 10 Aug 2026 10:12:00 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "錦織圭、感動をありがとう！ テニス名勝負戦「ジャパンオープンテニス2012 2回戦 錦織圭vsT.ロブレド」 - WEBザテレビジョン",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5YX2N0djFvSDV3eC1EV0hxMi03MkRGVWRuYURLZUkzUF9XRVZ1RE01ZVhjRi1ETzI0MHdQLUlyMmhyeHliekw0amZoYTBiUDhI?oc=5",
+        "published": "Mon, 10 Aug 2026 15:34:46 GMT",
+        "publisher": "WEBザテレビジョン"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期第1四半期決算短信〔IFRS〕(連結）（監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510489.pdf",
+        "date": "2026-08-06 15:25:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505791.pdf",
+        "date": "2026-08-03 14:00:00"
+      },
+      {
+        "title": "特定子会社の異動（子会社の特定子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260714593288.pdf",
+        "date": "2026-07-15 10:00:00"
+      },
+      {
+        "title": "子会社間の合併及び特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552595.pdf",
+        "date": "2026-05-29 09:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C2プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539898.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C3プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539905.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C4プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539910.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C5プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539918.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C6プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539939.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515679.pdf",
+        "date": "2026-05-01 14:00:00"
+      }
+    ]
+  }
+}

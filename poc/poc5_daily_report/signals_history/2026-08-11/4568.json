@@ -1,0 +1,207 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-08-11T07:45:33+09:00",
+  "price_as_of": "2026-08-10",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ面で、売上収益やコア営業利益の成長は見られるものの、事業再編費用の計上による最終利益の減益予想が重石となり、好悪材料が拮抗しているため。",
+        "evidence": "fundamental_view.summary: 売上収益の拡大と事業再編費用の計上が拮抗している旨"
+      },
+      {
+        "reason": "テクニカル面で25日移動平均線を上抜けるなど反発の兆しはあるが、SMA5とSMA25のデッドクロスが解消されておらず、上昇の持続性を確認する段階にあるため。",
+        "evidence": "technical_view.cautions: SMA5とSMA25がデッドクロス状態にある点"
+      },
+      {
+        "reason": "MACDが依然としてシグナルを下回っており、モメンタムの完全な強気転換を判断するには時期尚早であるため。",
+        "evidence": "technical_view.cautions: price_technical.macd=2.8, price_technical.macd_signal=8.82"
+      }
+    ],
+    "risks": [
+      "事業再編費用の想定以上の膨らみによる利益下振れリスク",
+      "海外事業比率の高さに起因する為替変動リスク（ドル円の円高推移等）",
+      "想定保有期間内に含まれる次回日銀金融政策決定会合（2026-09-17〜18）に伴う金利・市場変動リスク"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 50,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ面で、売上収益やコア営業利益の成長は見られるものの、事業再編費用の計上による最終利益の減益予想が重石となり、好悪材料が拮抗しているため。\",\n      \"evidence\": \"fundamental_view.summary: 売上収益の拡大と事業再編費用の計上が拮抗している旨\"\n    },\n    {\n      \"reason\": \"テクニカル面で25日移動平均線を上抜けるなど反発の兆しはあるが、SMA5とSMA25のデッドクロスが解消されておらず、上昇の持続性を確認する段階にあるため。\",\n      \"evidence\": \"technical_view.cautions: SMA5とSMA25がデッドクロス状態にある点\"\n    },\n    {\n      \"reason\": \"MACDが依然としてシグナルを下回っており、モメンタムの完全な強気転換を判断するには時期尚早であるため。\",\n      \"evidence\": \"technical_view.cautions: price_technical.macd=2.8, price_technical.macd_signal=8.82\"\n    }\n  ],\n  \"risks\": [\n    \"事業再編費用の想定以上の膨らみによる利益下振れリスク\",\n    \"海外事業比率の高さに起因する為替変動リスク（ドル円の円高推移等）\",\n    \"想定保有期間内に含まれる次回日銀金融政策決定会合（2026-09-17〜18）に伴う金利・市場変動リスク\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "直近5営業日で急反発し25日移動平均線を上抜けたものの、テクニカル指標上のデッドクロスが解消されておらず、トレンドの完全な転換を確認する局面です。",
+      "points": [
+        {
+          "point": "株価は直近5日間で約12%上昇し、25日移動平均線（2732.04円）を明確に上放れています。",
+          "evidence": "price_technical.recent_5_days, price_technical.last_close=2805.0, price_technical.sma25=2732.04"
+        },
+        {
+          "point": "中期的なトレンドは依然として良好。60営業日騰落率および対TOPIX相対騰落率が共にプラスを維持しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=8.97, price_technical.trend_60d.relative_to_topix_60d_pct=4.66"
+        },
+        {
+          "point": "RSIが50を超えて上昇しており、短期的には売り過熱感から買い戻しのモメンタムへ移行しつつあります。",
+          "evidence": "price_technical.rsi14=56.7"
+        }
+      ],
+      "cautions": [
+        "SMA5とSMA25がデッドクロス状態にあり、短期的な戻り売りが警戒される水準です（price_technical.sma5_vs_sma25=dead）。",
+        "MACDがシグナルを依然として下回っており、ヒストグラムもマイナス圏にあるため、上昇の持続性には慎重な見極めが必要です（price_technical.macd=2.8, price_technical.macd_signal=8.82）。",
+        "ADRがプラス圏ですが（us_overnight.adr=+0.8%）、寄り付き価格に織り込まれた後の失速リスクを考慮する必要があります。"
+      ],
+      "key_levels": {
+        "support": 2732.0,
+        "resistance": 2912.5
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "売上収益の拡大や通期営業増益見通しがポジティブである一方、直近Q1での事業再編費用計上による営業・最終減益や通期最終減益予想が重しとなり、好悪材料が拮抗しています。",
+      "points": [
+        {
+          "point": "2027年3月期第1四半期は事業再編費用等の影響で営業利益が前年同期比12.0%減、最終利益が19.7%減となったものの、売上収益は21.1%増、コア営業利益は6.2%増と本業の拡大傾向は続いています。",
+          "evidence": "fundamentals.recent_important_disclosures[0]"
+        },
+        {
+          "point": "通期連結業績予想では営業利益3,200億円（前期比24.0%増）と大幅な営業増益を見込む一方、親会社株主に帰属する当期利益は2,510億円（10.3%減）と減益を見込んでおり、評価が分かれます。",
+          "evidence": "fundamentals.recent_important_disclosures[0]"
+        },
+        {
+          "point": "ROE 14.8%と高い資本効率を維持しており、配当利回りも3.63%（年間100円予定）と一定の下値支持力を有しています。",
+          "evidence": "fundamentals.valuation.return_on_equity=0.148, dividend_yield_percent=3.63"
+        }
+      ],
+      "cautions": [
+        "事業再編費用の想定以上の膨らみや、第2四半期以降の業績進捗遅延リスク",
+        "次回決算発表日（2026-10-30）に向けた通期予想修正等のイベントリスク",
+        "海外事業比率が高いことに伴う為替（ドル円等）変動リスク"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "第一三共(株)【DSNKY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1LdkZxbEN5Vm9Scm5nSFgzTDZJZlNtcVFXR0dkU1J3c2RfRFBuNmNiOGFibVNVTE1zT2lad2dyNnA0TFRoT3RVZktKcGRiMVVV?oc=5",
+        "published": "Mon, 10 Aug 2026 15:48:20 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "テクニカルで選ぶ注目銘柄：第一三共＝週足で１３週・２６週の両移動平均線を上回る 速報 - kabushiki.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5HSU9CVDVhT2hQdE93NmZfZ2Mxd3BObmJsZS1lWlplbXd5ZWlEb1h3RmJScTV0elFrT0pKV3RkUzl0VF8zcENN?oc=5",
+        "published": "Mon, 10 Aug 2026 00:44:00 GMT",
+        "publisher": "kabushiki.jp"
+      },
+      {
+        "title": "テクニカルで選ぶ注目銘柄：第一三共＝週足で１３週・２６週の両移動平均線を上回る(ウエルスアドバイザー) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPR3FNZTZZbG1lZjB1Z2tNWGZDaWlicUc5cFN1akRVUFRzclRGVEpaVzhxVWpHNDhLN1h3Nm42SEgxc2MyeVRyaEk4WWRsY3FuNWFSS25DdlNhampzeHJlbU80bFFDeWw2a0dpYmVrZ2o2VHA2M0I4Nmc3cWphR19RSXJmbG5ubGc?oc=5",
+        "published": "Mon, 10 Aug 2026 00:44:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "＜画像2 / 4＞石塚英彦とANZEN漫才(みやぞん・あらぽん)がメキシカン風ユニットでデビュー!? - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5aOFV4b1drMVhyTTZsSjB1cmVHZG5FWURjX0ZnX0VSR3N2RXhxZDhMX3FGeV9zcFExX0N1bWJkS25VNFJsODhqOWFxQ3lEQ2gwQ3luQ29ocW1mOVBXbG1KUkQzUldEOWhpeEUw?oc=5",
+        "published": "Mon, 10 Aug 2026 05:29:40 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "株式会社QREATION、第一三共ヘルスケア「トランシーノ」とDXTEENによるタイアップコンテンツを企画・制作 - Excite エキサイト",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9KZDM3ci1MZ0ZEdzlJS2ctdm1LQlRjQmJWaHp3RmV4ZHVLMHRvQ1RQWHQ2aUtVSzJFV1g3WlNjcktKTUs1YV9mMkNrVTNKZ0xud2x0bW5TRUNlX0R2ejB6VjV4QjNHcnNMUHZxbTBuUDFFMVZM?oc=5",
+        "published": "Mon, 10 Aug 2026 03:15:00 GMT",
+        "publisher": "Excite エキサイト"
+      },
+      {
+        "title": "洗顔後の肌を“うるおいの道”へ。ライスフォース史上初※１、米発酵の力で角質層をほぐすプレケア美容液「アクアチェーンドロップ」誕生 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB4VE5OMDJJWmNCWE5TaXJwSXlMUzVIQUJpdnFJMnVyYzBDaERMb1FyanlGUEY3ZmRhZnRIeW1Ld2JSY0paQ3BrX0RKcUpJd3FFeF96U0d0RVpyUnlXVXduVHJyZFBwTEVqa0E?oc=5",
+        "published": "Mon, 10 Aug 2026 01:10:01 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "ニッポン！こんな未来があるなんて～薬作りの革新と月面ロボ！ＡＩと電力問題(テレ東、2026/8/9 27:00 OA)の番組情報ページ - tv-tokyo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQcWVMbVEtUGxTeHZzQUo3X2gyeTVhbGQyb1lMSnNlM3l4aVJsOENRLXJSMXc2eU1OcExrTkJBWUtmT1RwWFFlOW9IeEVRTHVKeWlsbmJHVEgwLXlEeWR5cy1iUjAzdFdzaTlJRUpnNEw4VXFaRC1FSDJEVHplX193dVQxN0w?oc=5",
+        "published": "Mon, 10 Aug 2026 08:36:22 GMT",
+        "publisher": "tv-tokyo.co.jp"
+      },
+      {
+        "title": "カナダZymeworks社がTheravance Biopharma社を買収、COPD維持療法薬などを獲得 - 日経バイオテクONLINE",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE42Sktfa24tUDhNMl9yRENZcTFKYTJBWlhBZkRqRXdlWWtUdmRoZHVrcDUtTlRGTFREdTBpanF3V0NWTzJlTHJpMVpRbzhPYk5ydkpjQ1VwaTdPWkJBNXZmN2R6bkNZQQ?oc=5",
+        "published": "Mon, 10 Aug 2026 04:05:54 GMT",
+        "publisher": "日経バイオテクONLINE"
+      },
+      {
+        "title": "日本株ＡＤＲ・円換算終値 - みんかぶ FX/為替",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9zbmIyVDh4NkRTZnZhcDUtLVExdGRzejZFR0JLaGZxYUViZ2RFRV9VX0xyZUpfOGpoWTJfemlmNXdQc3R1Q2Vndw?oc=5",
+        "published": "Sun, 09 Aug 2026 22:40:40 GMT",
+        "publisher": "みんかぶ FX/為替"
+      },
+      {
+        "title": "京三製が急騰し年初来高値、２７年３月期第２四半期業績予想を上方修正 速報 - kabushiki.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE0yQVI3M3RBQUhYVndDVVM5NWFJaEZjTDV2eFA4WGRmenYtb2lxZHhEdDRqdHNucWdMVkpvODl5cWZDT1dHQkE0?oc=5",
+        "published": "Mon, 10 Aug 2026 00:45:00 GMT",
+        "publisher": "kabushiki.jp"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "（再訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514622.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2025年度決算および第6期中期経営計画説明会」資料の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514744.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正・数値データ訂正）「2026年３月期 決算短信〔IFRS基準〕(連結)」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504176.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504099.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算補足資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504168.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504173.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "当社米国子会社役職員に対する信託型株式付与制度の継続のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504240.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587542.pdf",
+        "date": "2026-07-16 15:30:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584479.pdf",
+        "date": "2026-06-30 16:30:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260620575199.pdf",
+        "date": "2026-06-22 15:30:00"
+      }
+    ]
+  }
+}
