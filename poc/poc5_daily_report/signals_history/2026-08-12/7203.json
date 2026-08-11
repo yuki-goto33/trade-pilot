@@ -1,0 +1,213 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-08-12T07:42:57+09:00",
+  "price_as_of": "2026-08-10",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "直近（2026年8月5日）に buy シグナルを発行しており、再エントリー抑制ルールに基づき継続監視中のため hold とします。",
+        "evidence": "reference.recent_buy.date=2026-08-05"
+      },
+      {
+        "reason": "テクニカル専門家が弱気（stance=bearish, strength=70）であり、MACDのシグナル下回りや中期下落トレンドからの明確な底打ち反転が確認できていません。",
+        "evidence": "technical_view.stance=bearish (strength=70), price_technical.macd=37.83, price_technical.macd_signal=47.23"
+      },
+      {
+        "reason": "ファンダメンタルズ専門家は強気（stance=bullish, strength=70）で自社株買いやQ1好決算、PBR0.946倍の割安感を評価していますが、テクニカルが弱気のため買いの必須条件を満たしません。",
+        "evidence": "fundamental_view.stance=bullish (strength=70), fundamental_view.points[0], technical_view.stance=bearish"
+      }
+    ],
+    "risks": [
+      "2026年9月17日〜18日の次回日銀金融政策決定会合に伴う為替（ドル円）の急変リスク",
+      "2027年3月期通期計画での営業利益減益（前期比9.7%減）予想による上値の重さ",
+      "テクニカル面での中期下落トレンド継続による2,708円サポート方向への連れ安リスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"直近（2026年8月5日）に buy シグナルを発行しており、再エントリー抑制ルールに基づき継続監視中のため hold とします。\",\n   \"evidence\": \"reference.recent_buy.date=2026-08-05\"\n  },\n  {\n   \"reason\": \"テクニカル専門家が弱気（stance=bearish, strength=70）であり、MACDのシグナル下回りや中期下落トレンドからの明確な底打ち反転が確認できていません。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=70), price_technical.macd=37.83, price_technical.macd_signal=47.23\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ専門家は強気（stance=bullish, strength=70）で自社株買いやQ1好決算、PBR0.946倍の割安感を評価していますが、テクニカルが弱気のため買いの必須条件を満たしません。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=70), fundamental_view.points[0], technical_view.stance=bearish\"\n  }\n ],\n \"risks\": [\n  \"2026年9月17日〜18日の次回日銀金融政策決定会合に伴う為替（ドル円）の急変リスク\",\n  \"2027年3月期通期計画での営業利益減益（前期比9.7%減）予想による上値の重さ\",\n  \"テクニカル面での中期下落トレンド継続による2,708円サポート方向への連れ安リスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "直近株価は保ち合いを見せているものの、60営業日騰落率および対TOPIX相対騰落率がともにマイナスで中期下落トレンド内にあります。MACDも弱気シグナルを示しており、明確な底打ち反転の証拠を欠くため弱気見通しと判断します。",
+      "points": [
+        {
+          "point": "直近60営業日の騰落率および対TOPIX相対騰落率がともにマイナスであり、中期的な下落トレンドが継続しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-3.37, price_technical.trend_60d.relative_to_topix_60d_pct=-7.69"
+        },
+        {
+          "point": "MACDラインがシグナルを下回りヒストグラムがマイナスで推移しており、短期的なモメンタムの弱さが観察されます。",
+          "evidence": "price_technical.macd=37.83, price_technical.macd_signal=47.23, price_technical.macd_histogram=-9.4"
+        },
+        {
+          "point": "直近数営業日の株価は2,980円近辺で小幅推移となっていますが、出来高は減少傾向であり明確な反転シグナルとはなっていません。",
+          "evidence": "price_technical.recent_5_days[4].close=2981.0, price_technical.recent_5_days[4].volume=23489400"
+        }
+      ],
+      "cautions": [
+        "5日移動平均線が25日移動平均線を上回るゴールデンクロスを形成しており（price_technical.sma5_vs_sma25=golden）、短期的な持ち直しが強まるリスクがあります。",
+        "TOPIXが25日線を上回り市場全体が上昇レジーム（macro.market_regime.market_regime=uptrend）にあるため、全般的な相場地合いに牽引される可能性があります。",
+        "前夜NY市場でのADRが上昇（us_overnight.adr.change_1d_pct=0.55）しており、寄り付き直後の買い先行に注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 2708.0,
+        "resistance": 3233.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "2026年8月4日に発表された自社株買い決定や第1四半期の親会社帰属利益大幅増に加え、159円台の円安水準や製造業PMIの拡大が追い風となっています。ただし、通期営業利益の減益計画には注意が必要です。",
+      "points": [
+        {
+          "point": "2026年8月4日の発表にて自己株式取得（自社株買い）の決定と併せ、2027年3月期第1四半期の親会社所有者帰属四半期利益が前年同期比75.6%増の1兆4,770億円となったことが示され、株主還元と最終益の拡大が確認されました。",
+          "evidence": "fundamentals.recent_important_disclosures[1].summary, disclosures.items[7].title"
+        },
+        {
+          "point": "ドル円が159.28円と円安水準で推移しているほか、7月の日本製造業PMIが54.5と拡大局面を維持しており、輸出・製造業の事業環境に追い風となっています。",
+          "evidence": "macro.indices[2].close=159.28, macro.japan_pmi.manufacturing.latest_value=54.5"
+        },
+        {
+          "point": "PBR 0.946倍と1倍割れの水準にあるほか、年間配当予想100円（前期実績95円から増配予想）に基づく配当利回りは3.35%であり、バリュエーション面での下値支持効果が期待できます。",
+          "evidence": "fundamentals.valuation.price_to_book=0.946, fundamentals.valuation.dividend_yield_percent=3.35, fundamentals.recent_important_disclosures[1].summary"
+        }
+      ],
+      "cautions": [
+        "2027年3月期通期の会社予想では営業利益が前期比9.7%減の3兆4,000億円、当期利益が同15.5%減の3兆2,500億円と本業ベースでの減益が見込まれている点。",
+        "2026年9月17日〜18日に次回の日銀金融政策決定会合が控えており、政策変更に伴う為替の急変リスクが存在する点。",
+        "日本公庫の中小企業景況調査（2026年7月）で仕入価格DI（49.2）が販売価格DI（24.6）を上回っており、コスト高圧力が全般的に残存している点。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-05",
+    "days_ago": 7,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "奥田碩さん死去、９３歳…経団連の初代会長、トヨタ自動車元社長（読売新聞オンライン） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE43THRVTlBJZXgyc25aU2dieC1LaTIyVVhNbmhfN0pSWHEwOW4xVEt5S1QyWC1WRVZjVHRteUdlejNrZjNITDl3MUQyU2RyaEtheXNQakdxeUNDQ3ZhdnJhVnpzekxMUS1sZVltREtwZ3UtR3JaOTB1YVlnOWhCQUU?oc=5",
+        "published": "Tue, 11 Aug 2026 22:22:04 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "トヨタ自動車元社長の奥田碩さんが死去 三重県出身、経団連の初代会長を務める - 中日新聞Web",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1uQmRXdHMzbFRsZl9KemNoRllVcF9CNVZ6dnB2NVhVX0p5MFJEX3pyRDVXTmluYVZLOFVSRl9CYzN5VlpTZm1TQkViVnpkR2ZJeHNBNg?oc=5",
+        "published": "Tue, 11 Aug 2026 20:56:18 GMT",
+        "publisher": "中日新聞Web"
+      },
+      {
+        "title": "トヨタ自動車元社長の奥田碩さんが死去 三重県出身、経団連の初代会長を務める - 47NEWS",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5zbE1lU3FQVjBYQk5sQjc4ZE1TOWxIWlRDZU1jV19LN28wUmZoZW5zT2xpbVZFdjRqSHlLckJsSWpxTzFLa3d5WGM4VQ?oc=5",
+        "published": "Tue, 11 Aug 2026 21:15:58 GMT",
+        "publisher": "47NEWS"
+      },
+      {
+        "title": "トヨタ自動車元社長 奥田碩氏が死去 - NHKニュース",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5yUDBsS0hMMFYwdjVyR0VvZFYtWm1MWGJiaXg4ZVdCNDdlTEhUOXZtRGxDRnJkVW95WEJ3ZTJSaHNzNWg4SzY3QlRRNU5QejJQelhGMENaUXc?oc=5",
+        "published": "Tue, 11 Aug 2026 21:28:00 GMT",
+        "publisher": "NHKニュース"
+      },
+      {
+        "title": "元経団連会長、奥田碩さん死去 トヨタ自動車で社長と会長 - yamagata-np.jp",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQYnJMN0lFNE1md1lRemVtWlhISWNhRTVPY0V2bnRucGg5UkxLSE43YTg1dzdFSkd1NW91Wm5ITDd1U1E4blhVUnFPLUR2UGJhdGFTQVJlbU5OX3VZa0F2b1JxZUVFOUJVdWtvQnFENFVVVGsyQ1FDNGJfMmpNSFJYaEplQTFZdw?oc=5",
+        "published": "Tue, 11 Aug 2026 21:24:03 GMT",
+        "publisher": "yamagata-np.jp"
+      },
+      {
+        "title": "元経団連会長の奥田碩さん死去　93歳　元トヨタ自動車社長 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOWG1TeTd3WW5DYVZfdFlMcGpVVDhubkc0UWZMZ2NEWXgwVVp2WHpMRzlEMVpITXRhR29lU0k4aUVFNzNOR01fbUVMQ0Q5eGNQVnV3MkYxU1NmT281TVREQ3JEOVlJOFYtMklTRHc4SkE4cGI2cmJGYlBhdXBkOXdFd3ljXzBKRHpHWnk3T2dUYTZsbzTSAZgBQVVfeXFMTkUzYkthbHpkYWRpRVgzdGVqUW5XR0hIU3RIb3Vma016NTdhQUxTTzI2NGRPWFdOb3ZBSnpBUkhsc2NFOUZuZXV3dWowNkVEZ0t3d0o4bU05Wk1PcnZDTFhrNW9mWGR1RWl6cWJRLUN2Rk9xSkxHNTNqSXdHb0FDSm1ibDBEUGZlOF9DUVVRS0Z6MzJXVE9vNms?oc=5",
+        "published": "Tue, 11 Aug 2026 22:30:07 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "元経団連会長の奥田碩さん死去、93歳 トヨタで会長・社長を歴任 - 朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE91RE9OTWxadm9BQ0lGNVY5VC1UaGpnd3pkOGRURXZJUGEzUG9rZTNaSm5vZGRkMEFGZ3RPLWNRb09xcFRsRzBYallIaWFuajRCWE5ITHRFbWgxOWpsM0VpbWNJNmZWTlE?oc=5",
+        "published": "Tue, 11 Aug 2026 17:00:53 GMT",
+        "publisher": "朝日新聞"
+      },
+      {
+        "title": "元経団連会長、奥田碩さん死去 トヨタ自動車で社長と会長 | 全国のニュース - 福井新聞社",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE0xZlhEc2pISUhDR2VIOTNzcUxHR3NPekRPdWpCUDEtVl9JT1VhdlY4eEVreTcwYXp6anA4a2NuU0dyWVBFS3pmalA0ZFBBS3N0bHdsejRpbUJhQ1NVdnc?oc=5",
+        "published": "Tue, 11 Aug 2026 15:40:14 GMT",
+        "publisher": "福井新聞社"
+      },
+      {
+        "title": "トヨタ自動車元会長の奥田碩氏が93歳で死去 執筆 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1XQ2gtVUFySkJYVWRSRUNzNHpCNl80VlI4LVhFN1dxZnFielhmUjNZMEJUSFhtTFZSNGxhdHlkZVdpTnpHNms2OVdVZklfX210MkVrOERpdWVDT0YyQlVjUGJhREFlWjRiRDZFR3B0Zzc?oc=5",
+        "published": "Tue, 11 Aug 2026 18:10:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      },
+      {
+        "title": "元経団連会長、奥田碩さん死去 トヨタ自動車で社長と会長 - 沖縄タイムス社",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE8yclNyWjZOc0t0aTFUWWtkdHM2ZHJKcm9iUW9Delg2d3VBNDVBZGhETEVQY2FvVWdNdW56dGxfOG9IVnRCa1gxWENoMXFSaFlGN0lxclI2dUFQZ3UxVmc?oc=5",
+        "published": "Tue, 11 Aug 2026 15:38:07 GMT",
+        "publisher": "沖縄タイムス社"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度の継続及び従業員に対する新たな株式交付制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507853.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507884.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503849.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "2027年3月期第１四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507860.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507846.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "役員人事に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572690.pdf",
+        "date": "2026-06-17 16:00:00"
+      }
+    ]
+  }
+}

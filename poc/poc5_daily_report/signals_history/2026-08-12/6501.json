@@ -1,0 +1,185 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-08-12T07:49:43+09:00",
+  "price_as_of": "2026-08-10",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズとテクニカルの両面で強気の見解が揃っており、好材料が既に株価に織り込まれている可能性が高い（織り込み済み局面）。",
+        "evidence": "technical_view.stance=bullish (strength=85) / fundamental_view.stance=bullish (strength=75)"
+      },
+      {
+        "reason": "参照データに基づき、直近（2026-08-11）の buy シグナル発出から日が浅く、現在は新規エントリーではなく継続監視すべき局面である。",
+        "evidence": "reference.recent_buy.date=2026-08-11"
+      },
+      {
+        "reason": "RSIが79.9と極めて高い水準にあり、期間高値である5689.0円付近での利益確定売りや自律調整のリスクがテクニカル的に指摘されている。",
+        "evidence": "technical_view.cautions[0]: RSI14が79.9, technical_view.key_levels.resistance=5689.0"
+      },
+      {
+        "reason": "調整後営業利益の40%増や自社株買いは強力な下支え要因だが、PER 31.55倍というバリュエーションは割安感に欠ける。",
+        "evidence": "fundamental_view.points[0]: 営業利益39.5%増, fundamental_view.cautions[0]: 予想PER 31.55倍"
+      }
+    ],
+    "risks": [
+      "RSI過熱圏に伴う短期的な利益確定売りの発生および5689円の抵抗線での反落",
+      "バリュエーション（PER 31倍超）の高さに起因する、成長期待剥落時の急激な価格調整",
+      "次回日銀金融政策決定会合（2026年9月17日〜18日）に向けた金利上昇および為替変動リスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズとテクニカルの両面で強気の見解が揃っており、好材料が既に株価に織り込まれている可能性が高い（織り込み済み局面）。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=85) / fundamental_view.stance=bullish (strength=75)\"\n  },\n  {\n   \"reason\": \"参照データに基づき、直近（2026-08-11）の buy シグナル発出から日が浅く、現在は新規エントリーではなく継続監視すべき局面である。\",\n   \"evidence\": \"reference.recent_buy.date=2026-08-11\"\n  },\n  {\n   \"reason\": \"RSIが79.9と極めて高い水準にあり、期間高値である5689.0円付近での利益確定売りや自律調整のリスクがテクニカル的に指摘されている。\",\n   \"evidence\": \"technical_view.cautions[0]: RSI14が79.9, technical_view.key_levels.resistance=5689.0\"\n  },\n  {\n   \"reason\": \"調整後営業利益の40%増や自社株買いは強力な下支え要因だが、PER 31.55倍というバリュエーションは割安感に欠ける。\",\n   \"evidence\": \"fundamental_view.points[0]: 営業利益39.5%増, fundamental_view.cautions[0]: 予想PER 31.55倍\"\n  }\n ],\n \"risks\": [\n  \"RSI過熱圏に伴う短期的な利益確定売りの発生および5689円の抵抗線での反落\",\n  \"バリュエーション（PER 31倍超）の高さに起因する、成長期待剥落時の急激な価格調整\",\n  \"次回日銀金融政策決定会合（2026年9月17日〜18日）に向けた金利上昇および為替変動リスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 85,
+      "summary": "短・中期ともに強力な上昇トレンドを維持しており、移動平均線のゴールデンクロスやMACDの拡大が強い買いシグナルを示しています。前夜のADRも堅調で外部環境も追い風ですが、RSIが過熱圏に達している点には注意が必要です。",
+      "points": [
+        {
+          "point": "短期・中期移動平均線がゴールデンクロスを維持し、25日線も上向きで推移する強い上昇トレンドにあります。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.sma25=5018.64"
+        },
+        {
+          "point": "中期的なトレンドが非常に強く、60営業日の騰落率においてTOPIXを大幅にアウトパフォームしています。",
+          "evidence": "price_technical.trend_60d.relative_to_topix_60d_pct=12.47, price_technical.trend_60d.change_60d_pct=16.79"
+        },
+        {
+          "point": "MACDがシグナルを上回って推移し、ヒストグラムもプラス圏で拡大を続けており、上昇モメンタムが継続しています。",
+          "evidence": "price_technical.macd=239.71, price_technical.macd_histogram=57.55"
+        },
+        {
+          "point": "市場全体が上昇レジームにある中、前夜のADRや米国の資本財セクターETFも上昇しており、寄り付きの地合いは良好です。",
+          "evidence": "macro.market_regime.market_regime=uptrend, us_overnight.adr.change_1d_pct=0.99, us_overnight.sector_proxy.change_1d_pct=0.6"
+        }
+      ],
+      "cautions": [
+        "RSI14が79.9と極めて高い水準（過熱圏）にあり、利益確定売りによる短期的な自律調整のリスクがあります。",
+        "現在の株価は期間高値（5689.0）に接近しており、この水準での戻り売りや足踏みが想定されます。",
+        "前夜のADR上昇分は寄り付き価格に織り込まれる傾向があり、寄り付き後の材料出尽くし感に注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 5525.6,
+        "resistance": 5689.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "2027年3月期第1四半期の調整後営業利益が前年同期比約40%増と極めて好調であり、自己株式取得の継続的な実施も相まって、ファンダメンタルズ面でのポジティブな材料が揃っています。",
+      "points": [
+        {
+          "point": "2027年3月期第1四半期決算において、売上高20.0%増、調整後営業利益39.5%増と大幅な成長を達成し、通期でも2桁の増収増益を見込んでいる点。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "2026年8月4日に自己株式取得の状況を開示しており、株主還元を通じたEPS成長への寄与と需給の下支えが期待できる点。",
+          "evidence": "disclosures.items[0].date"
+        },
+        {
+          "point": "製造業PMIが54.5と拡大圏にあり、日銀短観の大企業製造業DIも前回比+5.0と改善しているなど、同社の事業環境が良好である点。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value, macro.boj.tankan.di.large_manufacturing"
+        }
+      ],
+      "cautions": [
+        "予想PERが31.55倍、PBRが3.83倍に達しており、バリュエーション面での割安感は乏しく、成長期待が剥落した際の調整リスクがある。",
+        "日本10年債利回りが2.804%と高水準にあり、金利上昇に伴うグロース的側面を持つ銘柄への売り圧力が懸念される。",
+        "約1ヶ月後（2026年9月17日〜18日）に日銀金融政策決定会合を控えており、為替や金利の変動が業績予想に影響を与える可能性がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-11",
+    "days_ago": 1,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)日立製作所【HTHIY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1sbW5DNlQwVHN5dlZ4RkdjaXVnbjJ4TGtWVWstLVdjcWtGcjdSdmlXSXRKVmdIdl9Fa0lIZ0YyUm5WU1lLZ1hFSWhmU2Q1eHhy?oc=5",
+        "published": "Tue, 11 Aug 2026 15:10:09 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "マーケット速報 - 福島民友新聞社",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNb3p6WXRCczJiaElBYlVORnVaOHVSb0lHaE5WRDkwUjNiT1RocW9zaUFDUTIyaFdRaUtRcWFLaWNMU3RKWkVza3RHTUUxU1dLalJKV2x4bUtFRXJTc3c2dVhTWEEzTXFudlZQRkc3ODlqY0k4SURyM2tNQm00WEVkRVNVOUNLOHNUOXByd0g2dTVmUHQzR1BSSHVMczNwMHozbVNqOVBBcU5QbHpYMC13MTg0cXF0Nzg?oc=5",
+        "published": "Tue, 11 Aug 2026 08:34:02 GMT",
+        "publisher": "福島民友新聞社"
+      },
+      {
+        "title": "台湾新幹線の新車両公開 日立と東芝、山口・下松 - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5ia0VSMTB1VG54ZnlpejF5bllxRG9XODMxblpZTzdXbFJHdDQ2WGZqSXk2RTZSVWxVVWVkYS1vVlA4d08yWnIxZUhjSXhCcXJvLUtxZ1p6U1BVaU5VUHc?oc=5",
+        "published": "Mon, 10 Aug 2026 23:20:19 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "米国株式市場は反落、原油価格や金利の上昇を嫌気 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNYjlFRDRwU3pLRGpiNUdXZ044ZUdSQUw0b2Y5LXMxSnBCT1FNaW80YWV2M2JNUzNVS182UjNUOXQ5ZktFalk5WUI2Sm1ZYTREV0VjM2szR0NvcnhXTXgzdUIyQVltbkk3ZzVDUjNpdFlENE8yRXg5LS0tR0dqSTFDNjB6emlRUk5WQTdmMtIBjAFBVV95cUxNYjlFRDRwU3pLRGpiNUdXZ044ZUdSQUw0b2Y5LXMxSnBCT1FNaW80YWV2M2JNUzNVS182UjNUOXQ5ZktFalk5WUI2Sm1ZYTREV0VjM2szR0NvcnhXTXgzdUIyQVltbkk3ZzVDUjNpdFlENE8yRXg5LS0tR0dqSTFDNjB6emlRUk5WQTdmMg?oc=5",
+        "published": "Mon, 10 Aug 2026 22:57:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804508474.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "（訂正）2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503298.pdf",
+        "date": "2026-07-30 13:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501771.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501801.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(モビリティ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566288.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(コネクティブインダストリーズ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566292.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(デジタルシステム＆サービス事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566294.pdf",
+        "date": "2026-06-09 15:30:00"
+      }
+    ]
+  }
+}
