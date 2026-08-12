@@ -1,0 +1,187 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-08-13T07:50:02+09:00",
+  "price_as_of": "2026-08-12",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の評価がstrength 60（注目に値するがカタリスト不足）に留まっており、buyの基準値である70に達していないため。",
+        "evidence": "fundamental_view.strength=60"
+      },
+      {
+        "reason": "テクニカル面では既にSMA25を上抜けて強気（bullish）に転じており、材料が株価に織り込まれ始めている可能性が高く、追随買いにはリスクが伴う局面と判断。",
+        "evidence": "technical_view.stance=bullish (strength=75)"
+      },
+      {
+        "reason": "大幅な増配発表はポジティブだが、第1四半期の純利益が前年同期比で減少しており、本業の利益成長の回復を確認する必要がある。",
+        "evidence": "fundamental_view.points[2]: 第1四半期の純利益は前年同期の46.01円から37.7円へ減少"
+      }
+    ],
+    "risks": [
+      "2026年9月17-18日の日銀会合による円高進行が、輸出企業の側面を持つ同社の利益押し下げ要因となるリスク（reference.next_boj_meeting）",
+      "直近の大幅上昇による2912.5円付近（直近高値）での戻り売り圧力（technical_view.key_levels.resistance）",
+      "事業再編費用等のコア外費用が継続的に営業利益を圧迫する懸念"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の評価がstrength 60（注目に値するがカタリスト不足）に留まっており、buyの基準値である70に達していないため。\",\n   \"evidence\": \"fundamental_view.strength=60\"\n  },\n  {\n   \"reason\": \"テクニカル面では既にSMA25を上抜けて強気（bullish）に転じており、材料が株価に織り込まれ始めている可能性が高く、追随買いにはリスクが伴う局面と判断。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=75)\"\n  },\n  {\n   \"reason\": \"大幅な増配発表はポジティブだが、第1四半期の純利益が前年同期比で減少しており、本業の利益成長の回復を確認する必要がある。\",\n   \"evidence\": \"fundamental_view.points[2]: 第1四半期の純利益は前年同期の46.01円から37.7円へ減少\"\n  }\n ],\n \"risks\": [\n  \"2026年9月17-18日の日銀会合による円高進行が、輸出企業の側面を持つ同社の利益押し下げ要因となるリスク（reference.next_boj_meeting）\",\n  \"直近の大幅上昇による2912.5円付近（直近高値）での戻り売り圧力（technical_view.key_levels.resistance）\",\n  \"事業再編費用等のコア外費用が継続的に営業利益を圧迫する懸念\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "2500円の安値から急反発し、25日移動平均線を明確に上抜けた。MACDのゴールデンクロスも伴っており、中期的な上昇トレンドの継続が期待される局面。",
+      "points": [
+        {
+          "point": "株価が25日移動平均線を力強く上抜け、短期的には2500円付近で底打ちした形跡が見られる。",
+          "evidence": "price_technical.last_close=2805.0, price_technical.sma25=2733.92, price_technical.period_low=2500.0"
+        },
+        {
+          "point": "MACDがシグナルを上抜け、ヒストグラムがプラスに転じるなど、モメンタムの好転が確認できる。",
+          "evidence": "price_technical.macd_histogram=0.94, price_technical.macd=10.73"
+        },
+        {
+          "point": "中期（60日）の騰落率が市場平均を上回っており、相対的な強さを維持している。",
+          "evidence": "price_technical.trend_60d.relative_to_topix_60d_pct=0.64"
+        },
+        {
+          "point": "市場全体が上昇トレンドにある中、前夜のADRもプラス圏で引けており、追い風が期待できる。",
+          "evidence": "macro.market_regime=uptrend, us_overnight.adr.change_1d_pct=0.4"
+        }
+      ],
+      "cautions": [
+        "5日線が25日線を下回るデッドクロス状態が継続しており、短期的な移動平均線の収束を確認する必要がある",
+        "直近5営業日で大幅に上昇したため、2900円台の戻り売りや利益確定売りに押される可能性がある",
+        "前夜NYの上昇は限定的であり、寄り付き後の伸び悩みリスクに注意"
+      ],
+      "key_levels": {
+        "support": 2733.92,
+        "resistance": 2912.5
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "第1四半期決算は主力品の成長と円安を背景に21%の大幅増収を記録し、年間配当の増額修正（78円から100円）も発表されたが、事業再編費用等の計上で営業利益・純利益ともに前年同期比で減益となっており、利益成長の回復を確認する段階にある。",
+      "points": [
+        {
+          "point": "株主還元の強化として、1株当たり年間配当を従来の78円から100円へ大幅に引き上げる計画を公表した。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "グローバル主力品の伸長とUSD/JPY=159円台の円安推移により、売上収益は前年同期比21.1%増と二桁の伸びを示している。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary, macro.indices[2].close=159.41"
+        },
+        {
+          "point": "第1四半期の純利益は前年同期の46.01円から37.7円へ減少しており、通期業績予想でも親会社帰属利益は10.3%減益の見通しとなっている。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].diluted_eps=37.7, fundamentals.recent_important_disclosures[0].summary"
+        }
+      ],
+      "cautions": [
+        "事業再編費用等のコア外費用が想定を上回り、営業利益を圧迫し続けるリスクがある。",
+        "製造業PMIは54.5と拡大圏にあるが、日銀の金融政策決定会合（9/17-18）を控え、金利上昇や円高方向への為替変動が利益の押し下げ要因となる可能性がある。",
+        "次回決算発表（2026/10/30）に向けた利益改善の進捗確認が必要。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "第一三共(株)【4568】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBIS2NSZTVoVDllRlVKSHozNnpLbWdVNkIwNl9GXzEtSkFNbzVSVFFvYTlBWnFsNlA4SFY2N29xNnhwcWhieWJGdlVNZGdCbFp3ZmE1R0pYRXVOOExmcFdr?oc=5",
+        "published": "Wed, 12 Aug 2026 06:54:36 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "利回りが最大3.5％の注目すべきアジアの配当株3銘柄 - simplywall.st",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNRE9LQ1lUaUZBTlJGVnZLM1VVUVBaam5ZTWxhTmJKSjIyMndFTlYxQWhXNlZOdVppS0l0SEVYRFNYeDM2eUNpamU4QmE3dVdsU0ZONGlJa3dpdTJoVTRrYkZudTdEdlRHSmFzTGkySEprUzBHZktHQVp6LXlFMjBWTkRxQTViSHU0d0M3eExoM3dnRnlwVkZXc3V4MHFkRkJLeEZ0TUthZWl1M3JMamNRctIBtgFBVV95cUxQWGNxYVc4Q3M5dUZSTjlnN25pQVN6SnJVb1o1TEloMzczYmVZNmYwUmRtN1lRREQydXo3MkFhYkZJWjBEWkJGNmN0aFA0QXZPNWxZME1Hd0c5RzZpVjh1dkhSNUVHTU5CYjNsaGVWNks1UTNWbzI2N2hlNS1KYWFNRXZwUU1feDA5NVNhR1BTd1U4WW43MjB1S3VqZDFHMnZlWkNvcmNSWFNhODl4c2xHcGdvdUlZZw?oc=5",
+        "published": "Wed, 12 Aug 2026 06:12:31 GMT",
+        "publisher": "simplywall.st"
+      },
+      {
+        "title": "第一三共(株)【4568】：株つぶやき - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1NS0ZnMTdCNDFBWkw1NXlLWTdVTWZUdmQ1R1ZzU1djVFM1U2FjUmFOelh6VEl0WE96Nm1wNTdhbnNUVUhONDJESGs0WDI0eUxKQXNidHUtVS0?oc=5",
+        "published": "Wed, 12 Aug 2026 10:20:10 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "東証、一時６万５千円割れ 米株安重荷、半導体に売り - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPYWdxcy16aFVnejUzb3pxMGRPZmdKRVFMOFJnZnNXNnRjMnN0RlM1UVhzSE02aWtaalpMb0hHdUhCQmlyNHVGSndMcjJfUmU3cmxHOFNZRkRER1FLanZjNUtOUWR0dmZtT1duYlpETWlPdWdrZzlndVlyeVgtOUJDd19CbUs3UlNf?oc=5",
+        "published": "Wed, 12 Aug 2026 00:56:38 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "米国株式市場は続落、原油高やCPIを警戒 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQaTZ4UzRJMnRMVTB5TzRqdFVuMnVMNGVtNXZDR1kzZmp6UGVHRXRzQngxODNZejRiZzJ2a29qRlVmMTR5SU5nMGhVQmhFb3VSWnBOLXQ5LWszTzBwQUFaM1NWRTRYLTVCT0xYMmhuZnhHaE50NlNEamM1UEtGbnU2djFTclhWVGsyanlGTNIBjAFBVV95cUxQaTZ4UzRJMnRMVTB5TzRqdFVuMnVMNGVtNXZDR1kzZmp6UGVHRXRzQngxODNZejRiZzJ2a29qRlVmMTR5SU5nMGhVQmhFb3VSWnBOLXQ5LWszTzBwQUFaM1NWRTRYLTVCT0xYMmhuZnhHaE50NlNEamM1UEtGbnU2djFTclhWVGsyanlGTA?oc=5",
+        "published": "Tue, 11 Aug 2026 23:27:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "中外製薬(株)【4519】：株つぶやき - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB2a0VNLW1yaWlNbFpNcTFWRTNLamZhRG9zOFd1alJZMi1pYnlqU0VsUlpNUnVCYzdyNk5JR2pCZ3JGOG04ZUoweVg4NnVHZnlsOWlTRlJ0NE4?oc=5",
+        "published": "Wed, 12 Aug 2026 09:57:36 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "（再訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514622.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2025年度決算および第6期中期経営計画説明会」資料の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514744.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正・数値データ訂正）「2026年３月期 決算短信〔IFRS基準〕(連結)」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504176.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504099.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算補足資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504168.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504173.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "当社米国子会社役職員に対する信託型株式付与制度の継続のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504240.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587542.pdf",
+        "date": "2026-07-16 15:30:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584479.pdf",
+        "date": "2026-06-30 16:30:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260620575199.pdf",
+        "date": "2026-06-22 15:30:00"
+      }
+    ]
+  }
+}

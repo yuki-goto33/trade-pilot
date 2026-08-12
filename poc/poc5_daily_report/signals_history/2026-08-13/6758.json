@@ -1,0 +1,208 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-08-13T07:43:00+09:00",
+  "price_as_of": "2026-08-12",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "直近（2026-08-06）に buy シグナルを発出済みのため、ルールに従い継続監視中として新規エントリーは見送ります。",
+        "evidence": "reference.recent_buy.date=2026-08-06"
+      },
+      {
+        "reason": "ファンダメンタルズ専門家は高評価（TSMC合弁契約やQ1黒字化）ですが、テクニカル専門家もすでに強気（strength=75）となっており、材料が株価に織り込まれている可能性が高いため hold と判定します。",
+        "evidence": "fundamental_view.stance=bullish (strength=75), technical_view.stance=bullish (strength=75)"
+      }
+    ],
+    "risks": [
+      "次回決算発表日が不明であり、突然の開示に伴う短期的なボラティリティの上昇リスクがあります。",
+      "想定保有期間内に2026年9月17日〜18日の日銀金融政策決定会合が含まれており、為替や全体地合いの急変リスクがあります。",
+      "直近高値（3964.0円）付近での戻り売り圧力やNY市場ADRの小幅下落による短期的な調整リスクがあります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"直近（2026-08-06）に buy シグナルを発出済みのため、ルールに従い継続監視中として新規エントリーは見送ります。\",\n   \"evidence\": \"reference.recent_buy.date=2026-08-06\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ専門家は高評価（TSMC合弁契約やQ1黒字化）ですが、テクニカル専門家もすでに強気（strength=75）となっており、材料が株価に織り込まれている可能性が高いため hold と判定します。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=75), technical_view.stance=bullish (strength=75)\"\n  }\n ],\n \"risks\": [\n  \"次回決算発表日が不明であり、突然の開示に伴う短期的なボラティリティの上昇リスクがあります。\",\n  \"想定保有期間内に2026年9月17日〜18日の日銀金融政策決定会合が含まれており、為替や全体地合いの急変リスクがあります。\",\n  \"直近高値（3964.0円）付近での戻り売り圧力やNY市場ADRの小幅下落による短期的な調整リスクがあります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "移動平均線のゴールデンクロス維持やMACDのプラス圏推移に加え、全体市場のuptrend地合いも追い風となり、上昇トレンドが継続しやすいテクニカル環境にあります。",
+      "points": [
+        {
+          "point": "株価は5日移動平均線（3687.6円）および25日移動平均線（3548.88円）の上位に位置し、ゴールデンクロスを形成・維持して堅調な価格推移が続いています。",
+          "evidence": "price_technical.last_close=3762.0, price_technical.sma5=3687.6, price_technical.sma25=3548.88, price_technical.sma5_vs_sma25=golden"
+        },
+        {
+          "point": "MACD（90.72）がシグナル（82.43）を上回って推移しており、RSI14も61.4と買われすぎの警戒感がない水準で強気のモメンタムを示しています。",
+          "evidence": "price_technical.macd=90.72, price_technical.macd_signal=82.43, price_technical.rsi14=61.4"
+        },
+        {
+          "point": "TOPIXの機械判定がuptrend（25日線上回り・5日騰落率プラス）となっており、国内市場全体の地合いの良さが下値を支える要因となっています。",
+          "evidence": "macro.market_regime.market_regime=uptrend, macro.market_regime.topix_close_vs_sma25=above"
+        }
+      ],
+      "cautions": [
+        "前夜のNY市場でADR（SONY）が-0.30%と小幅下落しており、寄り付き直後は利益確定売りに押される可能性があります。",
+        "直近の期間高値3964.0円に近づくにつれて戻り売りや手仕舞い売りが意識され、上値が重くなる恐れがあります。"
+      ],
+      "key_levels": {
+        "support": 3548.88,
+        "resistance": 3964.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "2026年6月期の四半期業績で純利益が3,422億円へと回復したほか、直近でTSMCとの合弁会社設立に関する確定契約を締結するなど明確な成長カタリストが確認できるため強気と判断します。",
+      "points": [
+        {
+          "point": "2026年8月11日にTSMCとの次世代画像センサー量産に向けた合弁会社設立の確定契約締結が開示されており、中長期的な事業基盤の強化につながる強力なカタリストとなっています。",
+          "evidence": "disclosures.items[0].title=ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ, date=2026-08-11 18:30:00"
+        },
+        {
+          "point": "直近の第1四半期（2026年6月期）業績は営業利益4,745億円、純利益3,422億円を計上し、前四半期（2026年3月期純利益829億円）や前々四半期赤字から業績が大幅に回復しています。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].period=2026-06, operating_income_oku_jpy=4745, net_income_oku_jpy=3422"
+        },
+        {
+          "point": "日本の製造業PMIが54.5と拡大水準を維持しており、AI関連需要をはじめとする世界的なエレクトロニクス・半導体市況の堅調さが事業環境の追い風となっています。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.5"
+        }
+      ],
+      "cautions": [
+        "2026年3月期通期で-3,269億円の最終赤字を計上していた背景があり、四半期ごとの業績振れ幅が大きい点には注意が必要です。",
+        "次回決算発表日が不明な状態であり、決算開示に伴う短期的なボラティリティの上昇リスクがあります。",
+        "ドル円が159.41円と円安水準にあるため、今後の為替動向や急激な円高修正による業績への影響に留意が必要です。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-06",
+    "days_ago": 7,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソニーグループ(株)【6758】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1MMXVSSGZKbTVWLVg1Wjc5MWxGQ1RzVVNrN25OcndmRklVOE5ueWZrLVdkMXlRcWxpUk5qbTJYTDVkRnluSWtyOENaOGMtSXJhTUVCMFZKVUJHSkItNWVF?oc=5",
+        "published": "Wed, 12 Aug 2026 06:53:23 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "「ソニーコーポレートブログ」更新のご案内 越境し、挑戦する人を増やす。ソニーと東京大学が始める新しい人材育成のかたち - Sony",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9BMkloOExrWFBVcjBiZXB4UVFKd1pwS3Y5UzBBa29NcFVrV1FSd0JZZFd0dWhlVk5Ycm9ydVBYNmRSVTBxRGVaRWh1aU5vNG1SdkhZTjBsRDlOd1VKX2VOckl1N05pNkhrX21IeGR2QkdhQQ?oc=5",
+        "published": "Wed, 12 Aug 2026 12:22:26 GMT",
+        "publisher": "Sony"
+      },
+      {
+        "title": "ソニーの「次期社長候補」と幹部5人の後任は？役員体制を大解剖、出世レースに異変が起きた理由…社員の“官僚化”も深刻《再配信》 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1OUEhSZ1hiMFlBME1waTJ0RFJLZklSTGRPMzA0bHhSSnFUdHVtSzcxQ200U1F6NU9IVUFhZHZvVkl0bnhPVkpuVnZFSDbSAU9BVV95cUxPOW5Edk9CbFRJbGxjQXJYajBVYklxVlpLcnJvSG5ISFFuNHdkc0duN29QTnp3OUNxd25OdzEwVFNVUExOVDlqLXlYNmZ5WU4w?oc=5",
+        "published": "Wed, 12 Aug 2026 19:15:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "ソニーグループとTSMCがスマホ向け次世代画像センサー量産へ 合弁会社を設立し2029年量産開始目指す - news.ntv.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOaHlvNjJLTmNKRVhsVnJaQkh3cERGMm1CcWFmYlFhV0QtQWJWeU5jWXF5MU41TlBGSGNzU3FzMDl1UV84U3dyOVpRdUpPVXM0NFhoMnBxNXptZ3dfaDFQaERGZDlrc3F5ZEM5LXRWb2x2XzJzY2RCa0RZLWJNdGwwOUR6bGR0T2c?oc=5",
+        "published": "Wed, 12 Aug 2026 10:41:00 GMT",
+        "publisher": "news.ntv.co.jp"
+      },
+      {
+        "title": "ソニーグループと台湾の半導体大手「TSMC」 熊本県に合弁会社設立を発表 - article.auone.jp",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1ldnI0OU0xUnoxNk5FaUZieHNRUzJDSU1WMUxPZVJxamQ1NlZHNTZ5XzVFS1c4TE9NeXJxZWJqQzdOZHI1c1lhbXNJQUROUGp2N2k4d2ZRaGs1dVlQcnlhd2hUbS15eFFBeVdEdHdn?oc=5",
+        "published": "Wed, 12 Aug 2026 06:31:40 GMT",
+        "publisher": "article.auone.jp"
+      },
+      {
+        "title": "ソニーG：ソニーセミコンダクタソリューションズがTSMCの合弁に関する確定契約を締結 - c-eye.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBuNWxKeTVMX2lGYzQ4eEJwdVZPbjJiQjR1MG9ScjYtNl9mVlpIM0p1T3d3bDRCOXZDRWgtUkI0dGIzR0xSdndsWUwzTDE?oc=5",
+        "published": "Wed, 12 Aug 2026 02:23:26 GMT",
+        "publisher": "c-eye.co.jp"
+      },
+      {
+        "title": "【アナリスト予想】ソニーＧ、27年3月期経常予想。対前週0.4%上昇。(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQQkRPVnVVMmRFX0pURTZfT1VNdWZDTDluaVZ4bHhtSjlDcl9HYkl3ZE1rNVBvaTRqTkVUZEhta0NqVUJiX2tCMFRCWUY0alVENE00b01YVVA1dW9nMkgyUGFEcFV2RFgxeHZRUmcxaHI0Z05nVmJtSjVrcHU2aE9jbGdmbUFhXzA?oc=5",
+        "published": "Wed, 12 Aug 2026 13:46:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ソニーグループ(6758)の上昇をどう見るか？押し目狙いのパナソニック系企業 Ryan Garcia (2VQloi6fqn) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBHVFI4bDNRR2RCUFluSXlpZDN6dzEwWE9QT0xaeWg2d1BvQmVLR01OX3BzV3dlM0lmeVNKalNkczhqa3FuZ1l5NEdibXBiWnFzVGhQNXNELVQ1UFE?oc=5",
+        "published": "Wed, 12 Aug 2026 03:35:52 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "ソニーとＴＳＭＣが合弁、熊本の新工場でスマホ向け製品量産へ…熊本県知事「経済復興に向けた起爆剤となる」 - article.auone.jp",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1GWU1SYUxuQWpvdnYxUUhPaE4yX0RLU1BaTGt3V240RFRmVnpINU5pSG9HUHp3b1o1dlgtcnlRSXBxN0UxeC13RW5HSEF2dWpzbjZkWEQ2RnUzMU1NYkV0YWpyREFCX3FTd1Y4LWUxRnNEUjhWMkljQw?oc=5",
+        "published": "Wed, 12 Aug 2026 14:53:08 GMT",
+        "publisher": "article.auone.jp"
+      },
+      {
+        "title": "【買うべき？】ソニーグループの“上昇”原因と今後について「わかりやすく」解説 Ve Day (aL8Cs8NUyt) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9STlFMVktBdkRuVFhVRUFDUDQ5UVM1MjJtOEctQTZaT2RpSmlIWHowTW56YXA5S2pIMjAtWjhiVEpadlhjMDFJR1JLMW5JMzBaeEk2OGNXYlM4cVU?oc=5",
+        "published": "Wed, 12 Aug 2026 05:26:22 GMT",
+        "publisher": "Mshale"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260811517496.pdf",
+        "date": "2026-08-11 18:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805509201.pdf",
+        "date": "2026-08-05 11:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504252.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期 連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504254.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の権利確定に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595854.pdf",
+        "date": "2026-07-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587315.pdf",
+        "date": "2026-07-03 11:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584099.pdf",
+        "date": "2026-06-30 15:30:00"
+      },
+      {
+        "title": "米ドル建て無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577032.pdf",
+        "date": "2026-06-24 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260603560934.pdf",
+        "date": "2026-06-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの次世代イメージセンサーに関する戦略的提携に向けた基本合意のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518510.pdf",
+        "date": "2026-05-08 16:15:00"
+      }
+    ]
+  }
+}
