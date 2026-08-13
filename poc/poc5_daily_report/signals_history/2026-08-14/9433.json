@@ -1,0 +1,220 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-08-14T07:46:11+09:00",
+  "price_as_of": "2026-08-13",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近 buy（2026-08-07）の継続監視中であるため、ルールに基づき新規の買い判断を抑制する。",
+        "evidence": "reference.recent_buy: 2026-08-07 (7 days ago)"
+      },
+      {
+        "reason": "ファンダメンタルズは極めて強力だが、テクニカル面で5日線と25日線のデッドクロスが発生しており、押し目を確認する段階にある。",
+        "evidence": "technical_view.stance=bearish / technical_view.points[0]: sma5_vs_sma25=dead"
+      },
+      {
+        "reason": "第1四半期の営業利益が前年比21.1%増と好調で、AIやデータセンター等の成長分野が利益を牽引している。",
+        "evidence": "fundamental_view.points[0]: fundamentals.recent_important_disclosures[0].summary"
+      },
+      {
+        "reason": "3,000億円規模の自社株買いが87%まで進捗しており、これが強力な下値支持として機能している。",
+        "evidence": "fundamental_view.points[1]: fundamentals.recent_important_disclosures[1].summary"
+      }
+    ],
+    "risks": [
+      "自社株買いの残り枠が約400億円と少なくなっており、需給サポートが近いうちに終了するリスクがある。",
+      "MACDヒストグラムがマイナス圏で推移し下落モメンタムが強まっており、調整が長引く可能性がある。",
+      "想定保有期間内に日銀金融政策決定会合（9/17-18）があり、金利上昇による設備投資コスト増のリスクが意識される。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近 buy（2026-08-07）の継続監視中であるため、ルールに基づき新規の買い判断を抑制する。\",\n   \"evidence\": \"reference.recent_buy: 2026-08-07 (7 days ago)\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは極めて強力だが、テクニカル面で5日線と25日線のデッドクロスが発生しており、押し目を確認する段階にある。\",\n   \"evidence\": \"technical_view.stance=bearish / technical_view.points[0]: sma5_vs_sma25=dead\"\n  },\n  {\n   \"reason\": \"第1四半期の営業利益が前年比21.1%増と好調で、AIやデータセンター等の成長分野が利益を牽引している。\",\n   \"evidence\": \"fundamental_view.points[0]: fundamentals.recent_important_disclosures[0].summary\"\n  },\n  {\n   \"reason\": \"3,000億円規模の自社株買いが87%まで進捗しており、これが強力な下値支持として機能している。\",\n   \"evidence\": \"fundamental_view.points[1]: fundamentals.recent_important_disclosures[1].summary\"\n  }\n ],\n \"risks\": [\n  \"自社株買いの残り枠が約400億円と少なくなっており、需給サポートが近いうちに終了するリスクがある。\",\n  \"MACDヒストグラムがマイナス圏で推移し下落モメンタムが強まっており、調整が長引く可能性がある。\",\n  \"想定保有期間内に日銀金融政策決定会合（9/17-18）があり、金利上昇による設備投資コスト増のリスクが意識される。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "移動平均線のデッドクロスに加え、MACDの悪化、さらには直近の大幅下落後の戻りの弱さが目立っており、テクニカル面では下押し圧力が強い状況です。",
+      "points": [
+        {
+          "point": "5日線が25日線を下抜けるデッドクロスが発生しており、株価は両移動平均線を下回って推移する弱い形状となっている。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, last_close=2830.0, sma5=2875.0, sma25=2887.86"
+        },
+        {
+          "point": "MACDがシグナルを下回り、ヒストグラムがマイナス圏で推移しており、下落のモメンタムが強まっている。",
+          "evidence": "price_technical.macd=22.05, macd_signal=43.78, macd_histogram=-21.73"
+        },
+        {
+          "point": "8月10日に出来高を伴う-5.07%の大幅下落を記録した後、株価は安値圏で停滞しており、反発の力が欠如している。",
+          "evidence": "price_technical.recent_5_days[2].change_pct=-5.07, recent_5_days[2].volume=14660100"
+        },
+        {
+          "point": "直近60営業日の対TOPIX相対騰落率がマイナスであり、市場全体の上昇局面においてアンダーパフォームが鮮明である。",
+          "evidence": "price_technical.trend_60d.relative_to_topix_60d_pct=-4.25, macro.market_regime.market_regime=uptrend"
+        }
+      ],
+      "cautions": [
+        "前夜の米市場で通信セクターETF（XLC）が+2.07%と大幅上昇しており、寄り付きでの買い戻しを誘発する可能性がある。",
+        "RSI14が56.0と中立圏にあり、売られすぎ水準（30以下）には達していないため、需給調整が長引くリスクがある。"
+      ],
+      "key_levels": {
+        "support": 2643.0,
+        "resistance": 2887.86
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 80,
+      "summary": "2027年3月期第1四半期の決算が営業利益21.1%増と極めて好調な滑り出しを見せたことに加え、3,000億円規模の自社株買いが着実に進捗しており需給面での安心感が強い。新端末発売等の直近カタリストも揃っている。",
+      "points": [
+        {
+          "point": "第1四半期の業績が通期計画に対して大幅な増益ペースで進捗。モバイル収入の増加に加え、AIインテグレーションやデータセンターなど非通信分野の成長が利益を押し上げている。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "大規模な自己株式取得による株主還元の強化。5月に決議された3,000億円の取得枠に対し、8月6日時点で約2,605億円（進捗率約87%）を消化しており、強力な下値支持として機能している。",
+          "evidence": "fundamentals.recent_important_disclosures[1].summary"
+        },
+        {
+          "point": "直近の販促・製品イベント。8月20日に新型スマートフォン『Google Pixel 11 シリーズ』の発売を控えており、端末販売および通信契約の活性化が期待される。",
+          "evidence": "news.headlines[2].title"
+        }
+      ],
+      "cautions": [
+        "日銀の金融政策決定会合（9/17-18）に伴う金利上昇リスク。日本10年金利（JGB）が2.856%と高水準にあり、金利上昇は設備投資コスト増につながる可能性がある。",
+        "自社株買いの取得枠が残り約400億円となっており、現在のペースでは短期間で終了し、その後の需給サポートが弱まるリスクがある。",
+        "入力データ上のForward PER（1214.592）が異常値を示しており、市場予想との乖離やデータ集計上の不確実性が存在する。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-07",
+    "days_ago": 7,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ＫＤＤＩ(株)【KDDIY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5UeXNVcVVoNnBzaHVrVDJRR3VqcmJrUDk1T0h1dDRJT0ttelAwWVk0UWZWT0JaQTIxMkRtQUxzLW1FdnNRVXpvUWZRb0p4cVlJ?oc=5",
+        "published": "Thu, 13 Aug 2026 14:34:21 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "KDDIが「VTuber」と「Galaxy Z Fold8」でミリ波をアピール、通信量増大に“ミリ波を活用しなければいけない”フェーズに - ケータイ Watch",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9acnctSjRMN2IyRmdpcDhORlVCXy16a0hmVVdqYzFjSkdIU0czLTBTdTVxM2hKRk55Skc5ME1icW5YTU40a1FsaVRVYUtlMTU2bzJJcUlTZVdOV1lRdktqbTJmRFh3czdkVUE?oc=5",
+        "published": "Thu, 13 Aug 2026 21:00:00 GMT",
+        "publisher": "ケータイ Watch"
+      },
+      {
+        "title": "「Google Pixel 11 シリーズ」をauから8月20日に発売 - KDDI ニュースルーム",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9PV2JhWENUa3pGVEhqdWRwUng3UzV0NGJIcW1KekJwbHBIbFZxREZjYkZ0OUt3WFpVSzNXWDlEQ0dOcnVVMHZrYkpSQmlfcVY3UHktanE0SDJwbGFFazd2Ul9KcnQ2dDNydTh5WA?oc=5",
+        "published": "Thu, 13 Aug 2026 00:00:00 GMT",
+        "publisher": "KDDI ニュースルーム"
+      },
+      {
+        "title": "高校生向け実験教室開く 名古屋大とＫＤＤＩ財団 - 中部経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE4tNHdFazFuY01Fd21aOUhQTTRlMWM2ZnFUYTk5QklpZTRpanhaLUpWSTFZSnZaTkZFTTRPZFNTLWUzTHlUOWRad2VtVHFWQ0tqbEFOWGQ3dFN1MTRpVWV1MDVoVXQxSVBUdXY5dzFFSmRRdmM?oc=5",
+        "published": "Thu, 13 Aug 2026 20:15:52 GMT",
+        "publisher": "中部経済新聞"
+      },
+      {
+        "title": "「KDDIミュージアム」で謎解きイベント ラジオ使って解決目指す - 八王子経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1YMVVEYlRyUlRqa0Y4RTNYSlNoMjdUTzJ1dWtKMUduZnlMUUtwQjZ4NEZxRjlOZ0ZKeWtqWC10LVhCSUF0ZE9JYUpKcFFaYkdpZWVZUQ?oc=5",
+        "published": "Thu, 13 Aug 2026 02:03:45 GMT",
+        "publisher": "八王子経済新聞"
+      },
+      {
+        "title": "「ＪＰＸ日経４００」が１１位、定期入れ替え実施による影響注目＜注目テーマ＞ - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5yMS1mRjBTZDFVNDREWE1FNXdSd2pWUU9HYzk2cFBsWHAxZlJ2Q1FERkQ3eE5lNzQ0czItWDIzd0txaHBZckFQMlR4UTI3b0RnVUs2eEs3RUhweUIyZnFTdw?oc=5",
+        "published": "Thu, 13 Aug 2026 03:21:00 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "【KDDI】岩手・千葉・岐阜の3県4自治体と連携！「au PAY」で最大20％還元の地域応援キャンペーンを8月に実施 - DXマガジン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1KWE9lT08tNWtRaEJROHdMZ2p2VWdpVmRDeHR3SUg0bm11R0tIcERjSVpYd3RhYnduT05oQ3huUTVieUczYVpYVVZzajE?oc=5",
+        "published": "Thu, 13 Aug 2026 03:20:41 GMT",
+        "publisher": "DXマガジン"
+      },
+      {
+        "title": "「Google Pixel 11 シリーズ」をauから8月20日に発売 - KDDI ニュースルーム",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5xV01jS3E4UnI4WU1fRW5nZmMtRk0ydEJvLURhMG5GV0VkNS1JLUFaZGRGNkk1UThGdFIzdXY2Y2ZXeHV5WXNSZkdLZlJBdVg3MG5pT09oRkZienhpaDdOUXRlczZmMjUyX00yaWlBbw?oc=5",
+        "published": "Thu, 13 Aug 2026 03:36:04 GMT",
+        "publisher": "KDDI ニュースルーム"
+      },
+      {
+        "title": "＜画像5 / 5＞au体験イベントで小島よしおが自虐ネタ！会場はシーン… - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE8tY2ZGN2RMMTgyVlN3emZObWdNeXpwZXJJU3Nna2JlV1ZPSllsOEdJMmdwaUlWN2EtSmZWb2QzZDNkY21haGlrNnFuU0NfR1QzZngyc1lDZE5uWFBDNXpUWFN6U1M2WE5C?oc=5",
+        "published": "Thu, 13 Aug 2026 18:06:03 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "auの「Pixel 11」シリーズは新規・MNP・機種変更で3万3000円割引、2年3万2800円から - ITmedia Mobile - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE16TmMxWk5RRkllWjMzQWN6UGtaTnlrbDNuM2tsZV9zSGtXbUdnVGc0a2ZWN0psckctck55ZXRhZDFrN1lLWTRvVUNhRlBsRWp0enUtcW44Y2RIR05hMUxVV0ktTWFGVTFP0gFoQVVfeXFMTXpOYzFaTlFGSWVaMzNBY3pQa1pOeWtsM24za2xlX3NIa1dtR2dUZzRrZlY3SmxyRy1yTnlldGFkMWs3WUtZNG9VQ2FGUGxFanR6dS1xbjhjZEhHTmExTFVXSS1NYUZVMU8?oc=5",
+        "published": "Thu, 13 Aug 2026 10:25:00 GMT",
+        "publisher": "ITmedia"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      }
+    ]
+  }
+}

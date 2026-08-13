@@ -1,0 +1,211 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-08-14T07:42:15+09:00",
+  "price_as_of": "2026-08-13",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 25,
+    "reasons": [
+      {
+        "reason": "直近（2026-08-05）に buy シグナルを出しており、再エントリー抑制ルールに従い継続監視とする。",
+        "evidence": "reference.recent_buy.date=2026-08-05 (days_ago=9)"
+      },
+      {
+        "reason": "ファンダメンタルズ面では、円安環境や低PBR・自社株買いが下値を支えるものの、通期減益予想や関税訴訟リスクがあり好悪材料が拮抗している。",
+        "evidence": "fundamental_view.stance=neutral (strength=55), fundamentals.valuation.price_to_book=0.947"
+      },
+      {
+        "reason": "テクニカル面では25日移動平均線を上回るゴールデンクロス状態にあるが、MACDヒストグラムがマイナス圏で推移し方向感を欠くもみ合いとなっている。",
+        "evidence": "technical_view.stance=neutral (strength=55), price_technical.macd_histogram=-9.96"
+      }
+    ],
+    "risks": [
+      "想定保有期間内に次回日銀金融政策決定会合（2026-09-17〜2026-09-18）が控えており、為替の急激な円高反転による収益下振れリスクがある。",
+      "サポート水準である25日移動平均線（2948.46円）を下抜けた場合、下値模索の調整局面へ入るリスクがある。",
+      "米国での関税還付を巡る集団提訴の進展や通商規制強化に伴う業績への悪影響。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 50,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 25,\n  \"reasons\": [\n    {\n      \"reason\": \"直近（2026-08-05）に buy シグナルを出しており、再エントリー抑制ルールに従い継続監視とする。\",\n      \"evidence\": \"reference.recent_buy.date=2026-08-05 (days_ago=9)\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズ面では、円安環境や低PBR・自社株買いが下値を支えるものの、通期減益予想や関税訴訟リスクがあり好悪材料が拮抗している。\",\n      \"evidence\": \"fundamental_view.stance=neutral (strength=55), fundamentals.valuation.price_to_book=0.947\"\n    },\n    {\n      \"reason\": \"テクニカル面では25日移動平均線を上回るゴールデンクロス状態にあるが、MACDヒストグラムがマイナス圏で推移し方向感を欠くもみ合いとなっている。\",\n      \"evidence\": \"technical_view.stance=neutral (strength=55), price_technical.macd_histogram=-9.96\"\n    }\n  ],\n  \"risks\": [\n    \"想定保有期間内に次回日銀金融政策決定会合（2026-09-17〜2026-09-18）が控えており、為替の急激な円高反転による収益下振れリスクがある。\",\n    \"サポート水準である25日移動平均線（2948.46円）を下抜けた場合、下値模索の調整局面へ入るリスクがある。\",\n    \"米国での関税還付を巡る集団提訴の進展や通商規制強化に伴う業績への悪影響。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "株価は25日移動平均線の上でゴールデンクロスを維持しているものの、MACDヒストグラムのマイナス圏推移や直近5営業日のもみ合いから短期的な方向感に欠ける展開です。",
+      "points": [
+        {
+          "point": "株価は25日移動平均線を上回っており、5日線が25日線を上回るゴールデンクロス状態にあります。",
+          "evidence": "price_technical.last_close=2985.0, price_technical.sma25=2948.46, price_technical.sma5_vs_sma25=golden"
+        },
+        {
+          "point": "MACDはシグナル線を下回って推移しており、直近の上値追いモメンタムは低下しています。",
+          "evidence": "price_technical.macd=38.62, price_technical.macd_signal=48.58, price_technical.macd_histogram=-9.96"
+        },
+        {
+          "point": "直近5営業日は2,980円〜3,000円前後の狭いレンジで横ばい推移が続いています。",
+          "evidence": "price_technical.recent_5_days (2026-08-06終値2983.5円〜2026-08-13終値2985.0円)"
+        }
+      ],
+      "cautions": [
+        "前夜のADR（TM）およびセクターETF（XLY）はプラス圏ですが、寄り付きで織り込まれた後は買いが続かない可能性があります。",
+        "サポートとして意識される25日移動平均線（2948.46円）を割り込んだ場合は調整局面入りに注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 2948.46,
+        "resistance": 3233.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "通期営業減益予想や関税関連の訴訟リスクが重荷となる一方、1ドル159円台の円安環境や低PBR水準・自社株買いが下値を支えており、好悪材料が拮抗しています。",
+      "points": [
+        {
+          "point": "2027年3月期の通期計画は営業利益3兆4,000億円（前期比9.7%減）と減益見通しであり、第1四半期営業利益も前年同期比8.8%減と業績の減速感が意識されます。",
+          "evidence": "fundamentals.recent_important_disclosures[1].summary"
+        },
+        {
+          "point": "PBR 0.947倍、予想PER 9.21倍とバリュエーションは低水準にあり、8月4日に公表された自己株式取得および消却が下支え要因となっています。",
+          "evidence": "fundamentals.valuation.price_to_book=0.947, fundamentals.valuation.forward_pe=9.207, disclosures.items[7].title"
+        },
+        {
+          "point": "ドル円が159.48円と円安基調を維持し日本の製造業PMIも54.5と拡大圏にある一方、トランプ政権の関税還付を巡る消費者提訴など海外事業の不透明感が存在します。",
+          "evidence": "macro.indices[2].close=159.48, macro.japan_pmi.manufacturing.latest_value=54.5, news.headlines[0].title"
+        }
+      ],
+      "cautions": [
+        "米国における相互関税還付をめぐる集団提訴の進展や通商規制強化による収益圧迫リスク",
+        "為替相場が急激に円高方向へ反転した場合の業績下振れ懸念"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-05",
+    "days_ago": 9,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "トヨタ自動車など…複数の日本企業・現地法人に消費者が返金求め提訴 トランプ政権の相互関税還付めぐり - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE43LVVtRndKQTdjdkl0ZGdITVFaUXhsNlBXa2tpRUhzRUt6YnRnS2pRNXJDcFpxZWV4QUZwMzB1SFNyaUdPR215aHZfeGJiZGlXdHdlamtrRTNROFVMTWgtbjhTZ0NmOWJDUWhFTWVmN01nNjJfcTYyak1waWZzVzQ?oc=5",
+        "published": "Thu, 13 Aug 2026 22:35:15 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "岡山トヨタ自動車がＮＩＢ研修 若手社員、新聞で伝える力を磨く - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE0zRWZZQk04Qzh3TDF3dnhwdi1SY3didGo1Q0twblN6WGZ6cERuOU9PMXkyZEkwQTRFUG1mQ0F1eEVKQ0FRRFRvRWQ3WnM3R2xjcTdhdkZVTm5LV0M5UG1oTGJKVG9lSVBIcUV3X2VpbzRXM3BVcXFNdzV5VQ?oc=5",
+        "published": "Thu, 13 Aug 2026 02:51:18 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "トヨタ自動車のSUV「RAV4」の新型車 - 高度ソフトウエア車の開発急ぐ 無線で機能更新、収益化課題 - 写真・画像(1/1) - 西日本新聞me",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBmcENqZEdqS1VXY0pNOFpnUmNUOUFoMHBET2YwMGxuZURLUlVucjZaUi1sNnZScVVuZjRFaFVWYWZ4dWZ6c3VRdEJSVm8ydWg5UzB1NVRMaw?oc=5",
+        "published": "Thu, 13 Aug 2026 06:13:35 GMT",
+        "publisher": "西日本新聞me"
+      },
+      {
+        "title": "トヨタ自動車が奥田碩・元社長の「お別れの会」検討 8月8日午後に死去、すでに家族葬 - 産経ニュース",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5XX0RZQkFmbHJ0d25oYkQ5SFJ6NkNVOW9qM01PakZWOVAzSllqX3dEdnlDZ042amlNb1g4VC11LTBsTU5Nd3JqRTJQN0NoeXVPMTk2UGFfVFNYU1kxOVI5dWRMdUdTdkZCVjFIdk05Rk9mQ2NBT3c?oc=5",
+        "published": "Thu, 13 Aug 2026 01:47:34 GMT",
+        "publisher": "産経ニュース"
+      },
+      {
+        "title": "トヨタ自動車(株)【7203】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1EdmpyVngtTjQxZWwxbEhFQ0RiM1VtdzRXWnplQ18yWmhvYlg4MjFlaVUxWW9zU3RlaEdEY1NHSXRwR3VuaW5EcEdYU0kyS2wwTGpvb3luZ243X1A4MGk0?oc=5",
+        "published": "Thu, 13 Aug 2026 06:52:48 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "トヨタ自動車など…複数の日本企業・現地法人に消費者が返金求め提訴 トランプ政権の相互関税還付めぐり - Excite エキサイト",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5FbHozVHFtUkUxNHBMMndBNWkxdzhMbWs3cElEMWhSdnBLeHNRcGJPYmRNUk9LeWJnZjRxTmZDbU5NNWc3ZHFsU2VJTXlWSkk2SmpQME05b1V2WGFxal9aT0x0OFY5akdrODkySW53?oc=5",
+        "published": "Thu, 13 Aug 2026 22:19:00 GMT",
+        "publisher": "Excite エキサイト"
+      },
+      {
+        "title": "高度ソフトウエア車の開発急ぐ - 埼玉新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBKeHZnY3hSZ2U2LVh4bGFrT3A4dXZ4TDF5ZjAwczNENGNjajVjWUJZYkEySmJmYklZRVduUmhEdTlqTnpfeWZpc2JEcnEtNy1mdjlKRzEwRnhob1FYdW1jN3pyUmM?oc=5",
+        "published": "Thu, 13 Aug 2026 05:12:00 GMT",
+        "publisher": "埼玉新聞"
+      },
+      {
+        "title": "高度ソフトウエア車の開発急ぐ - カナロコ",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1VSzVhQ1d5WnU0Q21RaTVRQ2o5UjViSGFEd1l1SUdlOUtwcmxEZXFnVV9BcERuelA1cFpwZUlaWkZoNF9yZVdHcURnaUg2S0c0OS1ncEh6UUw3Sl9pbXhxOVVYTnpFaDB2?oc=5",
+        "published": "Thu, 13 Aug 2026 05:12:43 GMT",
+        "publisher": "カナロコ"
+      },
+      {
+        "title": "奥田碩さん死去 93歳 トヨタ自動車社長や経団連初代会長を歴任 「プリウス」開発推進 小泉内閣で諮問会議委員 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9pV01IQURLbXdsS3FkWnBBYlNwcmc2cnV0ajNRNGJFRGpiN0o3Qy14MVVnUm1jaVBSMmphM28xOE14dWNhOUVEeHJlQ0R6dFR3MVBkYUlDeC1NVmgtaHZNR0V4TGFTUnFteVR5ODZocG85dHFUWEpmaA?oc=5",
+        "published": "Thu, 13 Aug 2026 02:30:56 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "高度ソフトウエア車の開発急ぐ／無線で機能更新、収益化課題 | トヨタ自動車のＳＵＶ「ＲＡＶ４」の新型車 - 四国新聞",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxObUwzczVaX1VVckVDS3Mwd08xTzkyT0JZNktzdGQtc1hYZlJack9pVnhjWUJsdGpMaDE2dndlVmdKekJfMjVaZlRJekJQM2NTVTJWa0gzNEdBOTBzdDg0XzFOSXJoWWVhVktKamNrQmMyS3JRTFdMSUN1RF9qYkNxeWtRTlU?oc=5",
+        "published": "Thu, 13 Aug 2026 05:12:00 GMT",
+        "publisher": "四国新聞"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度の継続及び従業員に対する新たな株式交付制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507853.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507884.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503849.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "2027年3月期第１四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507860.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507846.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "役員人事に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572690.pdf",
+        "date": "2026-06-17 16:00:00"
+      }
+    ]
+  }
+}

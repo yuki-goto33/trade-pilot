@@ -1,0 +1,221 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-08-14T07:47:29+09:00",
+  "price_as_of": "2026-08-13",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近（2026-08-11）に buy シグナルを発行済みであり、現在はその継続監視フェーズにあるためルールに基づき hold とします。",
+        "evidence": "reference.recent_buy.date=\"2026-08-11\""
+      },
+      {
+        "reason": "テクニカル専門家が bullish かつ strength 85 と非常に強く、既に好材料がチャートに織り込まれている可能性が高いため、新規エントリーの優位性が低いと判断しました。",
+        "evidence": "technical_view.stance=\"bullish\", technical_view.strength=85"
+      },
+      {
+        "reason": "RSIが87.7と極めて高い過熱圏にあり、利益確定売りによる短期的な押し目形成のリスクがテクニカル面で指摘されています。",
+        "evidence": "technical_view.cautions[0]: RSI14=87.7"
+      },
+      {
+        "reason": "ファンダメンタルズは極めて堅調で、Q1の営業益39.5%増や5,000億円規模の自社株買いが強力な下支えとなります。",
+        "evidence": "fundamental_view.points[0], fundamental_view.points[1]"
+      }
+    ],
+    "risks": [
+      "RSI 87.7% に伴う短期的なテクニカル調整および利益確定売りの加速",
+      "予想PER 32.01倍、PBR 3.89倍というバリュエーション面の割高感による修正安",
+      "2026年9月17日〜18日の次回日銀金融政策決定会合に伴う為替・金利ボラティリティの拡大",
+      "次回決算発表（10月29日）までのマクロ環境悪化や地政学リスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近（2026-08-11）に buy シグナルを発行済みであり、現在はその継続監視フェーズにあるためルールに基づき hold とします。\",\n   \"evidence\": \"reference.recent_buy.date=\\\"2026-08-11\\\"\"\n  },\n  {\n   \"reason\": \"テクニカル専門家が bullish かつ strength 85 と非常に強く、既に好材料がチャートに織り込まれている可能性が高いため、新規エントリーの優位性が低いと判断しました。\",\n   \"evidence\": \"technical_view.stance=\\\"bullish\\\", technical_view.strength=85\"\n  },\n  {\n   \"reason\": \"RSIが87.7と極めて高い過熱圏にあり、利益確定売りによる短期的な押し目形成のリスクがテクニカル面で指摘されています。\",\n   \"evidence\": \"technical_view.cautions[0]: RSI14=87.7\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは極めて堅調で、Q1の営業益39.5%増や5,000億円規模の自社株買いが強力な下支えとなります。\",\n   \"evidence\": \"fundamental_view.points[0], fundamental_view.points[1]\"\n  }\n ],\n \"risks\": [\n  \"RSI 87.7% に伴う短期的なテクニカル調整および利益確定売りの加速\",\n  \"予想PER 32.01倍、PBR 3.89倍というバリュエーション面の割高感による修正安\",\n  \"2026年9月17日〜18日の次回日銀金融政策決定会合に伴う為替・金利ボラティリティの拡大\",\n  \"次回決算発表（10月29日）までのマクロ環境悪化や地政学リスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 85,
+      "summary": "中期・短期ともに強い上昇トレンドを維持しており、移動平均線やMACDも強い買いシグナルを示しています。ただし、RSIが著しい過熱圏にあるため、短期的な調整をこなしながらの上値を追う展開を想定します。",
+      "points": [
+        {
+          "point": "短期・中期双方で強固な上昇トレンド。SMA5がSMA25の上方に位置するゴールデンクロスを維持し、60営業日騰落率（+15.33%）もTOPIXを大きくアウトパフォームしています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden\", price_technical.trend_60d.change_60d_pct=15.33, price_technical.trend_60d.relative_to_topix_60d_pct=8.69"
+        },
+        {
+          "point": "MACDがシグナルを上回る推移を続けており、ヒストグラムも50.25とプラス圏で拡大傾向にあることから、上昇モメンタムが依然として強力です。",
+          "evidence": "price_technical.macd=257.13, price_technical.macd_signal=206.88, price_technical.macd_histogram=50.25"
+        },
+        {
+          "point": "市場全体がuptrendレジームにあり、VIXも14.63と低水準で安定しているため、個別銘柄への買いが入りやすい良好な地合いとなっています。",
+          "evidence": "macro.market_regime.market_regime=\"uptrend\", macro.indices[3].close=14.63"
+        }
+      ],
+      "cautions": [
+        "RSI14が87.7と極めて高い水準に達しており、テクニカル的な買われすぎ感から、利益確定売りによる急な押し目形成のリスクがあります。",
+        "前夜のADR上昇率が+0.19%に留まっており、米国市場の資本財セクターETFも微減となっているため、寄り付き直後の上値は重くなる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 5622.2,
+        "resistance": 5764.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "2027年3月期第1四半期の好決算と大規模な自己株式取得の継続に加え、AI需要を背景とした製造業PMIの拡大が追い風となっており、中期的な成長期待が強い。",
+      "points": [
+        {
+          "point": "第1四半期の調整後営業利益が前年同期比39.5%増と大幅な増益を達成し、通期増益計画（17.4%増）に対して極めて順調な進捗を見せている。",
+          "evidence": "fundamentals.recent_important_disclosures[1].summary"
+        },
+        {
+          "point": "上限5,000億円の大規模な自己株式取得が継続中であり、2026年7月単月で約455億円を消化するなど、需給面での強力な下支えが機能している。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "AI関連需要の強まりを背景に、日本の製造業PMIが54.5と7ヶ月連続で拡大。日立が注力するAI投資（1兆円規模）やデジタルシステム事業の事業環境と合致している。",
+          "evidence": "macro.japan_pmi.manufacturing.summary_en, news.headlines[1].title"
+        },
+        {
+          "point": "アナリストによる27年3月期の経常利益予想が対前週で引き上げられており、市場のコンセンサスが切り上がっている。",
+          "evidence": "news.headlines[5].title"
+        }
+      ],
+      "cautions": [
+        "予想PERが32.01倍、PBRが3.89倍とバリュエーションに割安感はなく、成長期待が剥落した際の調整幅が大きくなるリスクがある。",
+        "次回の日銀金融政策決定会合（9月17日〜18日）に向けた金利上昇観測や為替の変動は、輸出比率の高い製造業セクター全体のボラティリティを高める要因となる。",
+        "次回決算発表（10月29日）まで期間があるため、マクロ環境の変化や地政学リスクによる市場心理の影響を受けやすい。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-11",
+    "days_ago": 3,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)日立製作所【6501】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4yQ3lneGRPOVV1N3BFRXRGcHFZa3dpWWttOTd2ZWw4dm9FSVU2NXItOUpGOWJyeFpSYm1DWWYtaEpIMDJZZElwbmJwX0FTTDRMZmd2MzZSWDlLMnhnbDRF?oc=5",
+        "published": "Thu, 13 Aug 2026 06:53:50 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "日立、現預金1.3兆円で25年ぶり高水準 AIに1兆円投資の勝算 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5vNXloWHFIY3NhOE1sam1WNi1IUWJvT05tN2FsSGJDdV90ZDhLSnhXVjRNQTBtbDkxQnpEVVN6TzZUZEY4eFVGbFNIcmxGZDlHakRtWUtsM2FGMHdCTlc1NjRNcEx6bUZMb2VXRA?oc=5",
+        "published": "Thu, 13 Aug 2026 17:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "産業春秋／為替より「価格決定権」 - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE11MHJ5V2VwSUhjOHpnOVk5MkFqY2JsQjUzcUllM0ZWLTdYYkV0RWppcW1RdmVHRk00MktRMUR0X0lHaDZHWGJuaEpwTjZMU1FVWG5CNl9RXzNsWFE?oc=5",
+        "published": "Thu, 13 Aug 2026 20:00:00 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "マーケット速報 - 福島民友新聞社",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNc3ZkNi1XZ290RVY1NEhsT2hZWUN6QnZHQ2lKX3JEZGZ5VzYyYUI2SThEUUhvaHRaenNScC1oOVJlUW51XzNYb0hNMjBSanpydTBhMW1NeTdUMmJ0UXJMczZzUEZXSWZGZ01yRFMtaHFHTDB3WjR1a21PMDF3M3RWa3lUREl0MlZtOGtyUVpsbDgyaldEUG5XTGJRSXNqbk9lakVManEwSk9PR3hJbkxpSXdTV01yc0k?oc=5",
+        "published": "Thu, 13 Aug 2026 09:03:32 GMT",
+        "publisher": "福島民友新聞社"
+      },
+      {
+        "title": "第2回：世界株指数の中の日本　〜MSCI Japan指数という視点〜 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNN0Qzc0NFVXRVbGtudUF5TURvVnNNczdrSU1lOWxzclF3YVY3SmpYZHdqRGhKSHd3T2c2NHVjMXBNZDMzMGRuZ1c2R0JqRnJESmtBZExqNWVMT3NwUE9OT0ljTWlLeGVZWVRGM3IxS1p2RjJZVHE2ZFg5MHZfdm8zZtIBfEFVX3lxTE9qdE53MzEtcGVVYVJXM1RFYnlsNnRRTFFNMDBZeVhIMUtXck16VlpzcGloVzlSZGNYbG5DaVlWTFlNQ3lZXzJGQTVtQ3F1LVZkY0t1YTE1NXN0R181YTVoeFY5ZEZHM3FoMFV1U1p6a0xCNmJNNWw4dHlPWm0?oc=5",
+        "published": "Thu, 13 Aug 2026 06:32:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "【アナリスト予想】日立製作所、27年3月期経常予想。対前週0.5%上昇。(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPUVExVWdyZDltbE53aHVBNE9xT29yY21yLUMzaGw3OVBVbFhDM29SSHFVQUdGZHl0VUJ5Q3pYWU5vdUZ3Vm9GSVFhTzZVUDdEV1lvdXduQlBweWRKWFZZVW9NamozYjZYYy1NejdibDI5SFdfZ2d5T0hCZUxRUk5ZS1BVVXZ0RXc?oc=5",
+        "published": "Thu, 13 Aug 2026 13:46:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "【日立・商船三井・JAL】海水から二酸化炭素（CO2）を分離・回収する国内初の実証を沖縄県久米島で開始へ - DXマガジン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1jUVZVcmtRQnZxTklpZ1lxOXAyNnMzZkhSanZKWnp3YkZaQmZrdjVsY2xsWmxtZEdkdEdDZlJVTktfNWdGbUJUVnUtNE8?oc=5",
+        "published": "Thu, 13 Aug 2026 09:04:40 GMT",
+        "publisher": "DXマガジン"
+      },
+      {
+        "title": "米国株式市場はまちまち、ハイテク企業決算やCPI好感も原油高を嫌気 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxORlptT0FQRUpxS2RjcUkxVlVmUFhSWE1TUjBrOXBwMUR0TEFjNUUxX2xJRnBRRGpvOGJWOENtekdHUlBCZG9KWGZWVklTYzVIMEpnaUxuZE1RVUtCYVpRZnpib3praG9pangzVDQ1anZvcVNuS2I4TDNWUVVfWURWamNsU0k1dFBXemhIM9IBjAFBVV95cUxORlptT0FQRUpxS2RjcUkxVlVmUFhSWE1TUjBrOXBwMUR0TEFjNUUxX2xJRnBRRGpvOGJWOENtekdHUlBCZG9KWGZWVklTYzVIMEpnaUxuZE1RVUtCYVpRZnpib3praG9pangzVDQ1anZvcVNuS2I4TDNWUVVfWURWamNsU0k1dFBXemhIMw?oc=5",
+        "published": "Wed, 12 Aug 2026 23:04:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "12日のNY市場はまちまち - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQams0TWk1MEh2VW5yTGx6VzM3ZEhvMlZWdkRWNE5WdXBtNlNvQkZNdGtULXV0cG5xdUpTUXpsYnRBNDVQZG9TTk0tWFlYeXJ1N09WUUVkdnU4NTNTOHZRWExfRm5MSHEtT1k0MmI1Y0h4cUJSaUNwa29aSUhwc2JJN0hpdlN6eXpZZk40b9IBjAFBVV95cUxQams0TWk1MEh2VW5yTGx6VzM3ZEhvMlZWdkRWNE5WdXBtNlNvQkZNdGtULXV0cG5xdUpTUXpsYnRBNDVQZG9TTk0tWFlYeXJ1N09WUUVkdnU4NTNTOHZRWExfRm5MSHEtT1k0MmI1Y0h4cUJSaUNwa29aSUhwc2JJN0hpdlN6eXpZZk40bw?oc=5",
+        "published": "Wed, 12 Aug 2026 23:07:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "【アナリスト評価】明電舎、レーティングやや強気を据置き、目標株価14,000円に引上げ（日系大手証券）(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQTEVkcDlMNGxMRkJoemZSR3pSS2NmQWlKVV8wZkluNXdNVmNDblMySl9ZZ0xybXV2Zmp3d2RTbzgzVVRwd1Q3cTdFODdyZ0xPeWt5Z0JSckdVVHltdzltSC0yUzFEcGhiTjJlSTJERlk5SW9sWTJtLUY2Z09KcmVNZzhGSnBLUEU?oc=5",
+        "published": "Thu, 13 Aug 2026 11:20:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804508474.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "（訂正）2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503298.pdf",
+        "date": "2026-07-30 13:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501771.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501801.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(モビリティ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566288.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(コネクティブインダストリーズ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566292.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(デジタルシステム＆サービス事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566294.pdf",
+        "date": "2026-06-09 15:30:00"
+      }
+    ]
+  }
+}
