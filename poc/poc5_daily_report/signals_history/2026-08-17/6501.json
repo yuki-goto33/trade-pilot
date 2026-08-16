@@ -1,0 +1,200 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-08-17T07:42:26+09:00",
+  "price_as_of": "2026-08-14",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 60,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-08-11）に既に買いシグナルを発行しており、その継続監視中であるため、短期的な再エントリーは控えます。",
+        "evidence": "reference.recent_buy.date=2026-08-11, reference.recent_buy.days_ago=6"
+      },
+      {
+        "reason": "ファンダメンタルズ専門家（strength 75）とテクニカル専門家（strength 85）の両方が強気の見解を示しており、ポジティブな材料は既に株価に織り込まれている可能性が高いと判断されます。",
+        "evidence": "fundamental_view.stance='bullish'(strength=75), technical_view.stance='bullish'(strength=85)"
+      },
+      {
+        "reason": "ファンダメンタルズ面では、安定的な業績成長、積極的な株主還元、AI・インフラ関連の成長期待が評価され、良好な事業環境が継続しています。",
+        "evidence": "fundamental_view.points[0-3]"
+      },
+      {
+        "reason": "テクニカル面では、中期上昇トレンドが継続し、5日線が25日線を上回るゴールデンクロスやMACDの陽転など、短期的な買いシグナルも継続しています。",
+        "evidence": "technical_view.points[0-2]"
+      }
+    ],
+    "risks": [
+      "RSIが76.7と高水準にあり、短期的な過熱感から一時的な調整が入る可能性があります。",
+      "直近高値である5830.0円が意識され、上値が重くなる可能性があります。",
+      "PER・PBRが高水準にあり、バリュエーションが既に成長期待を織り込んでいる可能性があります。",
+      "次回決算発表日（2026-10-29）および次回日銀金融政策決定会合（2026-09-17〜18）が控えており、その内容が株価や市場全体のセンチメントに影響を及ぼす可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 60,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内（2026-08-11）に既に買いシグナルを発行しており、その継続監視中であるため、短期的な再エントリーは控えます。\",\n   \"evidence\": \"reference.recent_buy.date=2026-08-11, reference.recent_buy.days_ago=6\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ専門家（strength 75）とテクニカル専門家（strength 85）の両方が強気の見解を示しており、ポジティブな材料は既に株価に織り込まれている可能性が高いと判断されます。\",\n   \"evidence\": \"fundamental_view.stance='bullish'(strength=75), technical_view.stance='bullish'(strength=85)\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ面では、安定的な業績成長、積極的な株主還元、AI・インフラ関連の成長期待が評価され、良好な事業環境が継続しています。\",\n   \"evidence\": \"fundamental_view.points[0-3]\"\n  },\n  {\n   \"reason\": \"テクニカル面では、中期上昇トレンドが継続し、5日線が25日線を上回るゴールデンクロスやMACDの陽転など、短期的な買いシグナルも継続しています。\",\n   \"evidence\": \"technical_view.points[0-2]\"\n  }\n ],\n \"risks\": [\n  \"RSIが76.7と高水準にあり、短期的な過熱感から一時的な調整が入る可能性があります。\",\n  \"直近高値である5830.0円が意識され、上値が重くなる可能性があります。\",\n  \"PER・PBRが高水準にあり、バリュエーションが既に成長期待を織り込んでいる可能性があります。\",\n  \"次回決算発表日（2026-10-29）および次回日銀金融政策決定会合（2026-09-17〜18）が控えており、その内容が株価や市場全体のセンチメントに影響を及ぼす可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 85,
+      "summary": "日立製作所の株価は、中期的な上昇トレンドと短期的な買いシグナルが揃い、市場全体が良好な地合いの中で堅調な値動きを見せています。引き続き上値を探る展開が期待されます。",
+      "points": [
+        {
+          "point": "過去60営業日でTOPIXをアウトパフォームしており、明確な中期上昇トレンドを形成しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=17.5%, price_technical.trend_60d.relative_to_topix_60d_pct=8.65%"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線を上回るゴールデンクロスを形成しており、MACDもシグナルラインを上回りヒストグラムが陽転しているため、短期的な買いシグナルが継続しています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\", price_technical.macd_histogram=52.54"
+        },
+        {
+          "point": "直近5営業日の株価は連続して上昇し、高値を更新する強いモメンタムを示しています。",
+          "evidence": "price_technical.recent_5_days.[{change_pct: 2.18}, {change_pct: 0.0}, {change_pct: 0.87}, {change_pct: 0.58}, {change_pct: 1.14}], price_technical.last_close=5767.0"
+        },
+        {
+          "point": "市場全体も上昇トレンドにあり、株価を押し上げる追い風となっています。",
+          "evidence": "macro.market_regime.market_regime=\"uptrend\""
+        },
+        {
+          "point": "前夜のNY市場でADRおよび資本財セクターETFがともに上昇しており、当日の寄り付きはポジティブな影響が期待されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=0.36%, us_overnight.sector_proxy.change_1d_pct=0.39%"
+        }
+      ],
+      "cautions": [
+        "RSIが76.7と高水準で推移しており、短期的な過熱感から一時的な調整が入る可能性があります。",
+        "直近の高値である5830.0円に接近しており、この水準では上値が重くなる可能性があります。",
+        "前夜の米国市場の上昇分は、既に当日の寄り付き価格に織り込まれる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 5675.6,
+        "resistance": 5830.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "日立製作所は、堅調な業績トレンドと成長見通し、および直近の自己株式取得や事業関連の好ニュースに支えられ、中長期的な投資価値が高いと判断されます。特に製造業の良好なマクロ環境が追い風です。",
+      "points": [
+        {
+          "point": "年次の売上高・営業利益・純利益・EPSは、2024年3月期から2026年3月期にかけて一貫して成長しており、安定的な業績拡大が続いています。",
+          "evidence": "fundamentals.earnings_trend.annual[0-2]"
+        },
+        {
+          "point": "2026年8月4日に自己株式の取得状況に関する開示があり、株主還元への積極的な姿勢と資本効率改善への取り組みが評価されます。",
+          "evidence": "disclosures.items[0].date=2026-08-04, disclosures.items[0].title='自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)'"
+        },
+        {
+          "point": "AI・インフラ関連の成長牽引や新型新幹線の納入など、主要事業におけるポジティブなニュースが散見され、今後の事業展開への期待が高まります。",
+          "evidence": "news.headlines[2].title='総合電機6社が増収増益 AI・インフラなど成長牽引', news.headlines[3].title='台湾に日本製の新型“新幹線”が到着 来年の夏から営業運転へ'"
+        },
+        {
+          "point": "日本の製造業PMIは7月で54.5と堅調な拡大を示しており、AI関連需要の強い伸びに支えられ、日立製作所の事業環境にとって追い風となっています。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.5, macro.japan_pmi.manufacturing.summary_en"
+        }
+      ],
+      "cautions": [
+        "PERが30倍を超え、PBRも高水準にあり、バリュエーションは既に成長期待を織り込んでいる可能性があります。",
+        "次回決算発表日が2026年10月29日に予定されており、その内容が株価に影響を与える可能性があります。",
+        "日銀の金融政策決定会合が2026年9月17日〜18日に予定されており、金融政策に関する決定が市場全体のセンチメントに影響を及ぼす可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-11",
+    "days_ago": 6,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)日立製作所【HTHIY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1sbW5DNlQwVHN5dlZ4RkdjaXVnbjJ4TGtWVWstLVdjcWtGcjdSdmlXSXRKVmdIdl9Fa0lIZ0YyUm5WU1lLZ1hFSWhmU2Q1eHhy?oc=5",
+        "published": "Sun, 16 Aug 2026 16:01:57 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "日立とBIPROGYが離脱、メインフレームベンダー「撤退」「継続」の胸算用 - 日経クロステック",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9BOWxDcmxjZFlyZG1YUEdZX0xVUkJFWnFlbW82bHhWckhxMXJzbTFncjZ1OGQ0Vi1JX1pSY0ZmUVhxaVBYSE9IQkJYSUM1VVRMS3BSUE8weVVRU0hRNE5j?oc=5",
+        "published": "Sun, 16 Aug 2026 07:13:06 GMT",
+        "publisher": "日経クロステック"
+      },
+      {
+        "title": "総合電機6社が増収増益 AI・インフラなど成長牽引 - chiba-tv.com",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE0yOV8yUHJpbDFnQm5MTWJEUDlPRWVLTUhYUFhEN01CcjQ0ellKdE5vV1R5Wmw4T3NxVHdtbmRubm9HSU5ET2wzSjExcFFxU0dOcldONHVkaVc2RjdjU0k4blgxOW4?oc=5",
+        "published": "Sun, 16 Aug 2026 10:55:00 GMT",
+        "publisher": "chiba-tv.com"
+      },
+      {
+        "title": "台湾に日本製の新型“新幹線”が到着 来年の夏から営業運転へ - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9qVXdGQmxtWURBM0xQdU81bGpFY1pNMU9va1hvUm1LOE5zMGZkallYTW1CZ0ZhaHBhOTZ2eER4Q3lVaU82ZFU2VzY4VnlfRHhkb2JZSGxtYnVZOW9RLVY2YU9icE9jdGZPRm1Qa3BB?oc=5",
+        "published": "Sat, 15 Aug 2026 22:32:46 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "核融合発電の関連銘柄一覧！注目10社の特徴と役割 - t.co",
+        "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE5ReVRrM2Z1UmpsVVdDZExFRkJPSUlsWFpHS3Z4aEZzU1dIejZ0TXc3VldMdnd4STJ1cmt3?oc=5",
+        "published": "Sun, 16 Aug 2026 01:10:24 GMT",
+        "publisher": "t.co"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804508474.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "（訂正）2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503298.pdf",
+        "date": "2026-07-30 13:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501771.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501801.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(モビリティ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566288.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(コネクティブインダストリーズ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566292.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(デジタルシステム＆サービス事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566294.pdf",
+        "date": "2026-06-09 15:30:00"
+      }
+    ]
+  }
+}

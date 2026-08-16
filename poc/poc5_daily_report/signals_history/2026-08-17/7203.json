@@ -1,0 +1,225 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-08-17T07:30:34+09:00",
+  "price_as_of": "2026-08-14",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "直近 buy（2026-08-05）から14日以内のため、統合判断ルールに基づき新規エントリーを避け、継続監視を優先する。",
+        "evidence": "reference.recent_buy.date='2026-08-05' (12 days ago)"
+      },
+      {
+        "reason": "8月4日に発表された大規模な自己株式取得およびQ1純利益の改善は、ファンダメンタルズ上の強力な下支えとなる。",
+        "evidence": "fundamental_view.points[0]: 自己株式取得決定, fundamental_view.points[1]: 純利益改善(14770億円)"
+      },
+      {
+        "reason": "テクニカル面で25日線を上抜けているものの、MACDのデッドクロスが継続しており、短期的なモメンタムの確信が不足している。",
+        "evidence": "technical_view.stance=neutral, price_technical.macd_histogram=-5.57"
+      }
+    ],
+    "risks": [
+      "次回日銀金融政策決定会合（9/17-18）に向けた円高シフトによる輸出採算の悪化リスク",
+      "TOPIXに対する相対的な弱さが解消されず、市場全体の上昇局面で取り残されるリスク",
+      "MACDヒストグラムのマイナス圏推移が長引き、SMA25（2953.7円）付近までの押し目を形成する可能性"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 21,\n  \"reasons\": [\n    {\n      \"reason\": \"直近 buy（2026-08-05）から14日以内のため、統合判断ルールに基づき新規エントリーを避け、継続監視を優先する。\",\n      \"evidence\": \"reference.recent_buy.date='2026-08-05' (12 days ago)\"\n    },\n    {\n      \"reason\": \"8月4日に発表された大規模な自己株式取得およびQ1純利益の改善は、ファンダメンタルズ上の強力な下支えとなる。\",\n      \"evidence\": \"fundamental_view.points[0]: 自己株式取得決定, fundamental_view.points[1]: 純利益改善(14770億円)\"\n    },\n    {\n      \"reason\": \"テクニカル面で25日線を上抜けているものの、MACDのデッドクロスが継続しており、短期的なモメンタムの確信が不足している。\",\n      \"evidence\": \"technical_view.stance=neutral, price_technical.macd_histogram=-5.57\"\n    }\n  ],\n  \"risks\": [\n    \"次回日銀金融政策決定会合（9/17-18）に向けた円高シフトによる輸出採算の悪化リスク\",\n    \"TOPIXに対する相対的な弱さが解消されず、市場全体の上昇局面で取り残されるリスク\",\n    \"MACDヒストグラムのマイナス圏推移が長引き、SMA25（2953.7円）付近までの押し目を形成する可能性\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "短期移動平均線がゴールデンクロスを形成し、株価も25日線を上回るなど底堅さを見せていますが、MACDのデッドクロスや市場平均に対する出遅れ感が上値を抑える要因となっています。",
+      "points": [
+        {
+          "point": "SMA5がSMA25を上回るゴールデンクロス状態にあり、株価も25日移動平均線の上方で推移しています。",
+          "evidence": "price_technical.sma5_vs_sma25='golden', price_technical.last_close=3020.0, price_technical.sma25=2953.7"
+        },
+        {
+          "point": "MACDがシグナルを下回るデッドクロス状態が継続しており、短期的な上昇モメンタムの確信には至っていません。",
+          "evidence": "price_technical.macd_histogram=-5.57"
+        },
+        {
+          "point": "直近60営業日の騰落率はプラスを維持していますが、TOPIXに対しては大幅に劣後しており、相対的な弱さが目立ちます。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=2.65, price_technical.trend_60d.relative_to_topix_60d_pct=-6.2"
+        },
+        {
+          "point": "市場全体のレジームは上昇トレンドにあり、マクロ的な地合いは追い風となっています。",
+          "evidence": "macro.market_regime.market_regime='uptrend'"
+        },
+        {
+          "point": "前夜のADRが1.27%上昇しており、直近の価格形成に対してポジティブな影響が期待されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=1.27"
+        }
+      ],
+      "cautions": [
+        "MACDヒストグラムのマイナス圏推移が続く場合、上値の重さが意識され25日線付近までの押し目を形成する可能性があります。",
+        "ADRの上昇は寄り付き価格に織り込まれるため、寄り付き後の買いが続かないリスクに注意が必要です。",
+        "対TOPIXでの相対的な弱さが解消されない限り、市場全体の上昇局面で利益確定売りに押される懸念があります。"
+      ],
+      "key_levels": {
+        "support": 2953.7,
+        "resistance": 3233.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "直近の第1四半期決算における利益の回復傾向に加え、8月4日に発表された大規模な自己株式取得（自社株買い）が強力な下支え及び株価のカタリストとなる。マクロ環境も製造業PMIが拡大圏を維持し、円安水準が継続していることから、輸出採算の改善が期待できる。",
+      "points": [
+        {
+          "point": "直近2週間以内に、自己株式取得（自社株買い）および消却に関する決定を開示しており、株主還元姿勢が明確な買い材料となっている。",
+          "evidence": "disclosures.items[7].title（2026-08-04: 自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ）"
+        },
+        {
+          "point": "2027年3月期 第1四半期（2026年4-6月）の四半期純利益が、前四半期から大きく改善しており、業績の底打ち・回復傾向が見られる。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].net_income_oku_jpy=14770"
+        },
+        {
+          "point": "PBRが1倍を下回る水準にあり、配当利回りも3.3%を超えるなど、資本効率の改善期待とあわせて投資妙味が強いバリュエーションとなっている。",
+          "evidence": "fundamentals.valuation.price_to_book=0.959, fundamentals.valuation.dividend_yield_percent=3.31"
+        },
+        {
+          "point": "マクロ環境において日本の製造業PMIが7ヶ月連続で拡大しており、輸出企業である同社にとって事業環境は良好である。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.5"
+        }
+      ],
+      "cautions": [
+        "2026年3月期の通期決算における営業利益・純利益は前年比で減少トレンドにあり、通期での利益確保が課題となる（fundamentals.earnings_trend.annual）",
+        "次回の日銀金融政策決定会合（9/17-18）に向けた金利上昇観測や為替の円高シフトが輸出採算を悪化させるリスクがある",
+        "決算発表後の投資家向け説明会における質疑応答の内容など、詳細な分析結果が株価に反映される過程での変動リスク"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-05",
+    "days_ago": 12,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "全日本ビーチ男子で水町泰杜／黒澤孝太ペアが優勝！【第40回ビーチバレージャパン】 - volleyballking.jp",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE54ZkVoUVN1OFVTSFZUZGw5aTc3VEp2T3ZUZG9WMG1WNHp6anFxMDRkMk5xakl0WGdOUkVTdzZHd1NyS2d5cEhySDZfcnQ2eVRxQUE?oc=5",
+        "published": "Sun, 16 Aug 2026 10:00:00 GMT",
+        "publisher": "volleyballking.jp"
+      },
+      {
+        "title": "奥田碩さん「しがらみにとらわれず物事進める方」 トヨタ内山田さんら悼む声：ニュース - 中日BIZナビ",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9ZX0dWWnBLaFFXRlRkVFRWNkI5MF9XdnRadFVEQU0wWTA2Vk1Da1hPdWxmcDA5UWtmVEc0ZGJCUjM4eUJMRnU2aGtiaDRCUTJzNVd4QTFzRURTMnh5UE5j?oc=5",
+        "published": "Sun, 16 Aug 2026 02:37:47 GMT",
+        "publisher": "中日BIZナビ"
+      },
+      {
+        "title": "「おもしろすぎでしょww」爆笑必至!! TOYOTAの新CMが“CV.ファイルーズあい”まみれ!?「一瞬プリキュアがいた」「パワーやキュアサマーが混じってるな」 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE54SVlhZnJJSnVRNXFON1p1di1VUjNrREl5Zk0xQ1ktWEdTZUlxeXBZaENEZlJkdmtOQ3p4Wk5fcWF6UUxTMmlPcGtTNDhOSDRrXzRpTEZ3YjRKLVF0ZnBYYlBnb2MzLVJGQ2dxN0FjTVhwZm9VQ0ZYOQ?oc=5",
+        "published": "Sun, 16 Aug 2026 09:46:07 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "2019/07/23 トヨタ自動車、延長タイブレークサヨナラ勝ちの瞬間 Tobias Harris (pxCKbRLHrt) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBZdVg4TWg5YUVzYkJmQmdzaWZOQzFkdWVGMEU5Mk95eUhGempfaTRhVTVEcHRJbFQ1LTVnZkdHLWdJLTl6aVZDbFloMU5SY3BSMzBJVi1LOEh2QUk?oc=5",
+        "published": "Sun, 16 Aug 2026 03:04:59 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "元トヨタトップ奥田碩さん逝く…日本の「ものづくり」への危機感は格段だった｜Infoseekニュース - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFAyZ2pnd2hmN1RFVXV4VEo4RkliekF5NnhVUmZaaEtxcF83R1ZCSTZhR1J5TnVoWjdyVWhVeS1aNERWODZacDg0Q3U3MVJfcU9qeTJZaDMxYlBYa0V2d3RTcklCRTg?oc=5",
+        "published": "Sun, 16 Aug 2026 21:55:00 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "張本美和、早田ひな組が優勝＝卓球 - 時事通信ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBlVG9ic2Vqb19sNEJORWYyUThGc1JVN3BQbW4zT1NodDdqbHlVUjJPdlpZRElOeS1PMFdTdV9SMTlWWGxlTWx5b1pjaGlaWXJ6R01TUQ?oc=5",
+        "published": "Sun, 16 Aug 2026 00:46:00 GMT",
+        "publisher": "時事通信ニュース"
+      },
+      {
+        "title": "【卓球】張本智和、ストレート勝利で４強進出…気合のチョレイがさく裂　準決勝で松島輝空と対戦 - 日刊スポーツ",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9QTXJkelRJNE9sa09zSGlqUWp5TGRxUXN2SExidjJ5SzBPLXNzLWw0eTJZaEFpcGhsZGhPejBFZG1MbS1OUmp6a1dSWC1rWGdOUERud283SFJYUW91TUdyOVBLYjVqUVltWUpKLUFKM19VS0luN0HSAXZBVV95cUxPUE1yZHpUSTRPbGtPc0hpalFqeUxkcVFzdkhMYnYyeUswTy1zcy1sNHkyWWhBaXBobGRoT3owRWRtTG0tTlJqemtXUlgta1hnTlBEbndvN0hSWFFvdU1HcjlQS2I1alFZbVlKSi1BSjNfVUtJbjdB?oc=5",
+        "published": "Sat, 15 Aug 2026 23:56:37 GMT",
+        "publisher": "日刊スポーツ"
+      },
+      {
+        "title": "【卓球】19歳松島輝空、２週連続で張本智和に敗戦　７点リードから大逆転負け…無念の４強敗退 - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBaMEprWDRhMjdvMU45NDJ5OVJ1cDFqSnRpUEdkOWdabUFfbVRtQVJqaGM3MGVOdm41cjVpcDgzbDdWeUMxckY3S0F5UHVOS1R2TnM4UXg0TC1rU1F2Z3VWS0tyWlFLa1pQLVhEYmRWc2NERVZSRFgxR9IBeEFVX3lxTFBaMEprWDRhMjdvMU45NDJ5OVJ1cDFqSnRpUEdkOWdabUFfbVRtQVJqaGM3MGVOdm41cjVpcDgzbDdWeUMxckY3S0F5UHVOS1R2TnM4UXg0TC1rU1F2Z3VWS0tyWlFLa1pQLVhEYmRWc2NERVZSRFgxRw?oc=5",
+        "published": "Sun, 16 Aug 2026 13:26:47 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "【アジア競技大会】大神雄子HC率いる女子日本代表14名が決定！ジョーンズ杯を経て9月の本番へ - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5GLV8weHJjMWNfTEVndG1QSWlkRUJESGNYU0hWbGxxbTFzN0piMG5OSzc0WXdTTllsemo0WGs1bmtHZjR3T25jR3FycDdXeXVkdF90eU0xZzFiSndsbmdCem93NGpDaE9lbTNnOUN3?oc=5",
+        "published": "Sat, 15 Aug 2026 23:36:44 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "レクサス 「ＬＳ」で見せた自動運転への覚悟 Amanda Seyfried (lOQAEIrBvq) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBJaGxUeVB3T1hPS2tPMTBrTk1aWWNOazc4MXVTSmdUcVR2blMxYUxpeGtQeEo3TTNiS09lbkY2UDFnSkI3RnlsWllwU3o3VlV0VGZYZ2ozYy0zc2M?oc=5",
+        "published": "Sun, 16 Aug 2026 09:14:56 GMT",
+        "publisher": "Mshale"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度の継続及び従業員に対する新たな株式交付制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507853.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507884.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503849.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "2027年3月期第１四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507860.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507846.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "役員人事に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572690.pdf",
+        "date": "2026-06-17 16:00:00"
+      }
+    ]
+  }
+}

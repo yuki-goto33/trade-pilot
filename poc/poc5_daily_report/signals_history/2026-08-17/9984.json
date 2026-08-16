@@ -1,0 +1,219 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-08-17T07:34:57+09:00",
+  "price_as_of": "2026-08-14",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近（2026-08-06）に buy シグナルが出されており、現在は新規エントリーではなく継続監視を行うべきフェーズにあるため。",
+        "evidence": "reference.recent_buy.date=2026-08-06"
+      },
+      {
+        "reason": "テクニカル専門家の見解が bullish（strength=75）に転じており、良好なファンダメンタルズの材料が既に株価に織り込まれ始めている。統合判断ルールに従い、織り込み後の追随買いを避ける。",
+        "evidence": "technical_view.stance=bullish, fundamental_view.strength=75"
+      },
+      {
+        "reason": "NVIDIAによる傘下企業への出資報道やOpenAIへの追加出資など、AI分野の成長期待は極めて強いが、5日線と25日線のデッドクロスが解消されるなどのテクニカルな確認が必要。",
+        "evidence": "fundamental_view.points[0], technical_view.cautions[0]"
+      }
+    ],
+    "risks": [
+      "約1ヶ月後に控える日銀金融政策決定会合（残り31日）に伴う金利上昇および為替変動リスク。",
+      "米テクノロジーセクター（XLK）の下落に伴う、寄り付き後の戻り売り圧力波及の可能性。",
+      "日本10年債金利が2.87%台まで上昇しており、グロース株のPER水準に対する割引率上昇リスク。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"直近（2026-08-06）に buy シグナルが出されており、現在は新規エントリーではなく継続監視を行うべきフェーズにあるため。\",\n      \"evidence\": \"reference.recent_buy.date=2026-08-06\"\n    },\n    {\n      \"reason\": \"テクニカル専門家の見解が bullish（strength=75）に転じており、良好なファンダメンタルズの材料が既に株価に織り込まれ始めている。統合判断ルールに従い、織り込み後の追随買いを避ける。\",\n      \"evidence\": \"technical_view.stance=bullish, fundamental_view.strength=75\"\n    },\n    {\n      \"reason\": \"NVIDIAによる傘下企業への出資報道やOpenAIへの追加出資など、AI分野の成長期待は極めて強いが、5日線と25日線のデッドクロスが解消されるなどのテクニカルな確認が必要。\",\n      \"evidence\": \"fundamental_view.points[0], technical_view.cautions[0]\"\n    }\n  ],\n  \"risks\": [\n    \"約1ヶ月後に控える日銀金融政策決定会合（残り31日）に伴う金利上昇および為替変動リスク。\",\n    \"米テクノロジーセクター（XLK）の下落に伴う、寄り付き後の戻り売り圧力波及の可能性。\",\n    \"日本10年債金利が2.87%台まで上昇しており、グロース株のPER水準に対する割引率上昇リスク。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "25日移動平均線を出来高を伴って明確に上抜けし、MACDの改善も相まって短期的な上昇トレンドへの転換が示唆されています。",
+      "points": [
+        {
+          "point": "直近5営業日で3日続伸し、終値ベースで25日移動平均線を上抜けた。",
+          "evidence": "price_technical.last_close=5739.0, price_technical.sma25=5635.0"
+        },
+        {
+          "point": "MACDヒストグラムが大幅なプラス圏にあり、下値からの回復の勢いが強い。",
+          "evidence": "price_technical.macd_histogram=61.2"
+        },
+        {
+          "point": "直近営業日の出来高が4,000万株を超えて急増しており、買い意欲の強さが確認できる。",
+          "evidence": "price_technical.recent_5_days[4].volume=41591000"
+        },
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともにプラスであり、中期トレンドが崩れていない。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=13.89, price_technical.trend_60d.relative_to_topix_60d_pct=5.04"
+        }
+      ],
+      "cautions": [
+        "5日線が25日線を下回るデッドクロス状態が依然として解消されていない点に注意が必要。",
+        "前夜の米テクノロジーセクターETF（XLK）が下落しており、寄り付き後の戻り売りの圧力となる可能性がある。",
+        "RSIが51.1と中立圏にあり、さらなる上昇には一層のモメンタム加速が求められる。"
+      ],
+      "key_levels": {
+        "support": 5635.0,
+        "resistance": 6660.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "NVIDIAによる傘下企業への巨額出資報道やOpenAIへの継続出資など、AI分野での戦略的展開が加速しており、世界的なAI需要拡大を背景とした成長期待が極めて強い状況です。足元の業績も高いROEを維持しており、マクロ環境の強気トレンドも追い風となっています。",
+      "points": [
+        {
+          "point": "エヌビディアによる傘下SBエナジーへの最大30億ドルの出資検討が報じられ、AIデータセンター分野での強力な提携関係が示唆されています。",
+          "evidence": "news.headlines.1（2026-08-16）: エヌビディアは、ソフトバンクグループ支援のSBエナジーに対し...最大30億ドルの出資を行うことで協議"
+        },
+        {
+          "point": "OpenAIへの追加出資を実行するなど、生成AIの中核企業への関与を深めており、将来的な投資リターンの向上が期待されます。",
+          "evidence": "disclosures.items.3: OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ（2026-07-01）"
+        },
+        {
+          "point": "マクロ経済環境においてAI関連需要が製造業を牽引しており、同社の投資ポートフォリオにとって良好な事業環境が継続しています。",
+          "evidence": "macro.japan_pmi.manufacturing.summary_en: supported by the steepest rise in new orders in four-and-a-half years amid strong AI-related demand"
+        },
+        {
+          "point": "実績ベースのPERが6.58倍と低水準にあり、かつROEが32%と極めて高い資本効率を実現しています。",
+          "evidence": "fundamentals.valuation.trailing_pe=6.579, fundamentals.valuation.return_on_equity=0.32"
+        },
+        {
+          "point": "国内市場全体が上昇トレンドにあり、大型株である同社にとって資金流入が期待しやすい地合いとなっています。",
+          "evidence": "macro.market_regime.market_regime=uptrend"
+        }
+      ],
+      "cautions": [
+        "日本10年債金利が2.87%台まで上昇しており、負債コスト増やグロース株への割引率上昇が意識されるリスクがあります（macro.rates.jgb_10y_percent.value=2.873）。",
+        "約1ヶ月後に日銀金融政策決定会合を控えており、政策修正の観測が高まった場合にはボラティリティが急増する可能性があります（macro.boj.monetary_policy_meeting.days_until_next=31）。",
+        "投資利益に依存する収益構造上、世界的なテック株の調整が直撃するリスクを常に内包しています。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-06",
+    "days_ago": 11,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソフトバンクグループ(株)【SFTBY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9PS0JwdDRlRjRxb1VMWkhNNTEwcUtyQkN0SVdKbk1ZVEN2VkZYZFhkVktRdVlLNUhBdm45Q1ZxY0xZSUtsTDktcWhXNjFPSU5s?oc=5",
+        "published": "Sun, 16 Aug 2026 15:57:50 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "エヌビディアは、ソフトバンクグループ支援のSBエナジーに対し、OpenAI向け巨大データセンターの建設支援を目的として最大30億ドルの出資を行うことで協議を進めている。 - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1PZUQyQUJJVktqdTU3UTAtWXotNXdTMHZMa0NJcGVSTTlFRElTOE9ObnZyd1JWcG5NNmhldVY1RWMwbmFKdnRCYU5idGRsejZjbDdVZ0wyVQ?oc=5",
+        "published": "Sun, 16 Aug 2026 01:15:50 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "ソフトバンクG傘下SBエナジー、NVIDIAが出資検討 米報道 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9EQ0tKREVaMUh3R0g0VV9fUFkzTkMzeWlLWlFPZGc5THgwUDFIaENoZnRWZFRQOWg3Y3Bhc1lYeGc1c0lRT2J6WnpzN0hrYWZOZlhsYS1KMTB6cGFMUW1pR1ZKdHFkZkRvTHdXSw?oc=5",
+        "published": "Sun, 16 Aug 2026 08:43:19 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "約定ライブ！ 2026.01.05（後場） 9984 ソフトバンクG の株式値動き Scott Vincent Borba (Mi9diFjRIz) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9wSmVzYTRZWnF4RGdYSzk1U056ZlktTkhfSFEzT2FyUWI1aTVoZEFteXRWS0NMUmYyYW0xRTZEdl9sZzEyRS1qQmc1WHNLRU5UYXBraDhWQThObFk?oc=5",
+        "published": "Sun, 16 Aug 2026 18:12:05 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "エヌビディア、ソフトバンク傘下SBエナジーに30億ドル出資へ交渉－OpenAI向けデータセンター - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBlX1NVNmRvZ1Y0S2NnLWlINEhodVMyc19PVDc1ZEI4SG1uNWpHUG5BY0lZTXJDb1BEWmdjTjZNQVAyNG85dkN4Y1p6ZUxNQTZRUVhIRnhpSzllLVBJR2J0cnFwNnFHT2VLd1FmTG9DS3NwRGRk?oc=5",
+        "published": "Sun, 16 Aug 2026 02:25:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "「三嶋大祭り」の頼朝行列に寺島進さん 沿道の声援に笑顔、馬を気遣う姿も - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE0zRFEzaVV5X1RDaFdvUkRzbFpfaGltSXhEMEtXa2Z2Z191bUtDeF9HMDlESTVKX2VFeE1zcmV6ZEtEcDJhZFVhQzJkVUhKV2podXRtNXg3TXJfc2VGOW9Wc0JlMExnMnVWYW90SUJfSnlDUUhQbldmeQ?oc=5",
+        "published": "Sun, 16 Aug 2026 09:43:56 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "朝から帰省客らの姿…名古屋駅でUターンラッシュのピーク 中部空港の国際線も帰国のピークで6800人余りが到着予定 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE94NjhocDlld1pkT0taVVBLR2Fqa2hmNWpUcUUwWkw4VWpGYzFHUzNsUDVsUTlIRjU3a1FVU3k0TzhwMFl4bTVmQkZ5bktsMDd6eEZKR0NxR2N5RXJfSlpqQXp5Mm9RZHl6bHJBcThn?oc=5",
+        "published": "Sun, 16 Aug 2026 04:51:18 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "ソフトバンクG 米国に80兆円投資 AI向けデータセンター建設に(2026年3月21日) Ponzi Scheme (EZjwUqg1sC) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE42WVMtMTUwZW9VTWdxX29hOXZHZ05rMlhlXzZWbk1kY1JBMFhSejhNcWYxMTZQTTZvQVNGSDBwOUtwZ1A5bDJRS1BpXy14bDFPYmlhQnc3emJlQkk?oc=5",
+        "published": "Sun, 16 Aug 2026 12:37:15 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "米エヌビディア、ＳＢエナジーに最大30億ドル出資で協議＝報道 - ロイター",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5fQVcyVnhrV3hreURDX3pPSXR2WXVhQW5JWldDWldoSDR6OWV5Mko5SlA1VTlvVVNuWW45dV9EX25taWRfVXVyR3dSbTl6ZXVCWm5nMzBIaW5nTVJsaEdSMWw5cGdSZVJyVWFLMThraDJpd3RMRHc?oc=5",
+        "published": "Sun, 16 Aug 2026 01:02:00 GMT",
+        "publisher": "ロイター"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510515.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行内容確定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503871.pdf",
+        "date": "2026-07-30 17:00:00"
+      },
+      {
+        "title": "第68回及び第69回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501484.pdf",
+        "date": "2026-07-29 10:30:00"
+      },
+      {
+        "title": "OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260701586249.pdf",
+        "date": "2026-07-01 16:00:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577089.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "2021年発行米ドル建普通社債の期限前償還完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566742.pdf",
+        "date": "2026-06-10 11:30:00"
+      },
+      {
+        "title": "国内ハイブリッド社債（利払繰延条項付）の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260605563850.pdf",
+        "date": "2026-06-05 10:30:00"
+      },
+      {
+        "title": "当社の子会社によるT&amp;Dフィナンシャル生命保険株式会社の株式の取得（子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562772.pdf",
+        "date": "2026-06-04 16:00:00"
+      },
+      {
+        "title": "2021年発行米ドル建普通社債の期限前償還に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528551943.pdf",
+        "date": "2026-05-28 15:30:00"
+      },
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得に関するタイ関係当局の許認可等の取得状況および今後の見通しに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260527550260.pdf",
+        "date": "2026-05-27 15:30:00"
+      }
+    ]
+  }
+}

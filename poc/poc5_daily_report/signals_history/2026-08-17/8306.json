@@ -1,0 +1,174 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-08-17T07:33:20+09:00",
+  "price_as_of": "2026-08-14",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近（2026-08-04）に buy シグナルを発行しており、現在はその継続監視フェーズにあるため、ルールに基づき新規エントリーを抑制する。",
+        "evidence": "reference.recent_buy.date=2026-08-04 (13 days ago)"
+      },
+      {
+        "reason": "ファンダメンタルズの strength が 75 と非常に強力だが、テクニカルも強気（strength=75）に揃ったことで、材料の織り込みが進んでいると判断される。",
+        "evidence": "technical_view.stance=bullish (strength=75), fundamental_view.strength=75"
+      },
+      {
+        "reason": "国内長期金利の上昇（2.873%）や第1四半期決算の進捗などファンダメンタルズは堅調だが、バリュエーションに割高感が見られる。",
+        "evidence": "macro.rates.jgb_10y_percent.value=2.873, fundamental_view.cautions[2]: P/B 1.828倍"
+      }
+    ],
+    "risks": [
+      "想定保有期間内に含まれる次回日銀金融政策決定会合（9月17〜18日）における政策変更リスク。",
+      "歴史的高水準にあるPER・P/Bを背景とした、テクニカル的な利益確定売りの発生。",
+      "全国CPIが日銀目標を下回ることによる、追加利上げ期待の後退と金利低下リスク。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近（2026-08-04）に buy シグナルを発行しており、現在はその継続監視フェーズにあるため、ルールに基づき新規エントリーを抑制する。\",\n   \"evidence\": \"reference.recent_buy.date=2026-08-04 (13 days ago)\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズの strength が 75 と非常に強力だが、テクニカルも強気（strength=75）に揃ったことで、材料の織り込みが進んでいると判断される。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=75), fundamental_view.strength=75\"\n  },\n  {\n   \"reason\": \"国内長期金利の上昇（2.873%）や第1四半期決算の進捗などファンダメンタルズは堅調だが、バリュエーションに割高感が見られる。\",\n   \"evidence\": \"macro.rates.jgb_10y_percent.value=2.873, fundamental_view.cautions[2]: P/B 1.828倍\"\n  }\n ],\n \"risks\": [\n  \"想定保有期間内に含まれる次回日銀金融政策決定会合（9月17〜18日）における政策変更リスク。\",\n  \"歴史的高水準にあるPER・P/Bを背景とした、テクニカル的な利益確定売りの発生。\",\n  \"全国CPIが日銀目標を下回ることによる、追加利上げ期待の後退と金利低下リスク。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "中期トレンドが対TOPIXで大幅にアウトパフォームする強気形状を維持しており、5日線と25日線のゴールデンクロス出現により上昇圧力が継続している。MACDの勢いは一時的に鈍化しているものの、良好な市場地合いが下値を支える構図。",
+      "points": [
+        {
+          "point": "60営業日騰落率が+21.65%と非常に高く、対TOPIX相対騰落率も+12.8%と中期的な上昇トレンドが明確である。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=21.65, price_technical.trend_60d.relative_to_topix_60d_pct=12.8"
+        },
+        {
+          "point": "短期・中期の移動平均線がゴールデンクロスを形成しており、直近終値が両ラインの上位に位置していることから、短期的な上昇基調が示唆されている。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.last_close=3686.0 > price_technical.sma5=3615.0"
+        },
+        {
+          "point": "市場全体のレジームが「uptrend」と判定されており、日経平均の5日間騰落率も+4.74%と高く、リスクオンの地合いが追い風となっている。",
+          "evidence": "macro.market_regime.market_regime=uptrend, macro.indices[0].change_5d_pct=4.74"
+        }
+      ],
+      "cautions": [
+        "MACDヒストグラムがマイナス圏で推移しており、直近5営業日の最終日に小幅反落したことから、短期的な利益確定売りに注意が必要（price_technical.macd_histogram=-1.63）。",
+        "前夜の米国ADRおよび金融セクターETFが共にマイナス圏で引けており、寄り付きの重しとなる可能性がある（us_overnight.adr.change_1d_pct=-0.17）。"
+      ],
+      "key_levels": {
+        "support": 3599.88,
+        "resistance": 3813.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "拡大する利益成長トレンドに加え、国内10年債金利が2.8%超と高水準で推移しており、銀行業にとって良好なマクロ環境が継続している。直近2週間以内でも第1四半期決算の進捗や自己資本比率の開示が相次ぎ、ファンダメンタルズの堅固さが再確認されている。",
+      "points": [
+        {
+          "point": "純利益およびEPSの力強い成長トレンドが継続しており、2026年3月期は大幅な増益を達成している。",
+          "evidence": "fundamentals.earnings_trend.annual (2026-03 net_income_oku_jpy=24272, diluted_eps=212.34)"
+        },
+        {
+          "point": "国内長期金利（JGB 10年）が2.873%と高水準にあり、貸出利ざやの改善を通じた収益向上への期待が強い。",
+          "evidence": "macro.rates.jgb_10y_percent.value=2.873"
+        },
+        {
+          "point": "直近の適時開示により、第1四半期の決算内容の妥当性や自己資本の健全性が最新データとして裏付けられている。",
+          "evidence": "disclosures.items[0, 1] (2026-08-14 自己資本比率, 2026-08-06 第1四半期決算短信レビュー完了)"
+        },
+        {
+          "point": "日銀の金融政策決定会合における主な意見（8月9日公表）や、製造業PMIの拡大（54.5）など、金融・実体経済両面で銀行業務に追い風の環境である。",
+          "evidence": "macro.boj.recent_announcements[1], macro.japan_pmi.manufacturing.latest_value=54.5"
+        }
+      ],
+      "cautions": [
+        "次回の日銀金融政策決定会合（9月17〜18日）における政策変更の有無と、それに対する市場の反応。",
+        "全国CPI（1.6%）が日銀の2%目標を下回っており、インフレ鈍化による早期の追加利上げ期待の後退リスク。",
+        "P/B 1.828倍、予想PER 24.3倍と、銀行セクターの歴史的水準から見てバリュエーションに一定の割高感がある点。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-04",
+    "days_ago": 13,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "星乃夢奈、ハイトーンヘアで雰囲気ガラリ キャミワンピから美肩のぞかせる【TGC松山2026】 - モデルプレス",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE83cG40WVE1eWlfMHdXa2xEaXJNUTE5NEhITnR3SEFPemJNdDBxXzMwQkxZR0JYYnB2am9zTVVwMm1tY0dyUDFrME1Tc9IBR0FVX3lxTE5sQlVFX2oxelFQclliLUxkbVhMbGZNQzFmcjRoTVRta2FXT2tTWG9wUHJ1Qy1DMWhCeEpzb25Damgwd1k2cVdZ?oc=5",
+        "published": "Sun, 16 Aug 2026 06:17:37 GMT",
+        "publisher": "モデルプレス"
+      },
+      {
+        "title": "Snow Man佐久間大介「今年も最高でした」コミケ降臨ショット公開「戦利品の量がすごい」「オタクの鑑」 - モデルプレス",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5MMHRhT2N0cndVYjR5MGpfaVZSYzdZLVVHeDBMWW5tLWJINmQ5T08yTm90RVcwMTJkSElUdUprM2NJUUI2RWp3dTd6SdIBR0FVX3lxTE96NTRZYWxwN25LUmFldmwxRzBfcy1rTXlmRGw2RENqeGNEaDNTMm9UdnNZMVhnX0xyT3ptVGRxc19mOUctbnVN?oc=5",
+        "published": "Sun, 16 Aug 2026 11:27:04 GMT",
+        "publisher": "モデルプレス"
+      },
+      {
+        "title": "(関連投稿) Snow Man佐久間大介「今年も最高でした」コミケ降臨ショット公開「戦利品の量がすごい」「オタクの鑑」 - モデルプレス",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFA4WmtocTlIdUFuOUN3YUNEc29sekNqd3E0TFdHOWxIU3JyaFpUUTBNMEdvNnU1UURqOE1XdmlRT2lwUWZicy1uRkJhaw?oc=5",
+        "published": "Sun, 16 Aug 2026 11:27:00 GMT",
+        "publisher": "モデルプレス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期 自己資本比率について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260814520300.pdf",
+        "date": "2026-08-14 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕（連結）（公認会計士又は監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510381.pdf",
+        "date": "2026-08-06 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505851.pdf",
+        "date": "2026-08-03 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      }
+    ]
+  }
+}

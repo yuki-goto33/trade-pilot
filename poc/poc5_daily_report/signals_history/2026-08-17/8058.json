@@ -1,0 +1,188 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-08-17T07:41:24+09:00",
+  "price_as_of": "2026-08-14",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 35,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ面で当期純利益の減益傾向や商社株としては高めのバリュエーション（予想PER 22.5倍）が意識され、新たな買いカタリストが不足しています。",
+        "evidence": "fundamental_view.stance=neutral (strength=50), fundamental_view.points[0], points[1]"
+      },
+      {
+        "reason": "テクニカル面でも中期下落トレンド（対TOPIX 60日相対騰落率-21.12%）が継続しており、MACDの悪化や5日線割れなど短期モメンタムの弱さが目立ちます。",
+        "evidence": "technical_view.stance=bearish (strength=70), technical_view.points[0], points[1]"
+      },
+      {
+        "reason": "ファンダメンタルズの買い条件（bullishかつstrength>=70）を満たしておらず、重大な突発的悪材料もないため、統合ルールに基づき様子見（hold）とします。",
+        "evidence": "fundamental_view.stance=neutral, technical_view.stance=bearish"
+      }
+    ],
+    "risks": [
+      "2026年9月17日〜18日に予定されている日銀金融政策決定会合に伴う為替の急激な変動リスク",
+      "資源価格の急落や世界景気減速による業績下振れリスク",
+      "下値支持線として意識される25日移動平均線（4711.48円）を割り込んだ場合の下落加速リスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 50,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 35,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ面で当期純利益の減益傾向や商社株としては高めのバリュエーション（予想PER 22.5倍）が意識され、新たな買いカタリストが不足しています。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=50), fundamental_view.points[0], points[1]\"\n  },\n  {\n   \"reason\": \"テクニカル面でも中期下落トレンド（対TOPIX 60日相対騰落率-21.12%）が継続しており、MACDの悪化や5日線割れなど短期モメンタムの弱さが目立ちます。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=70), technical_view.points[0], points[1]\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズの買い条件（bullishかつstrength>=70）を満たしておらず、重大な突発的悪材料もないため、統合ルールに基づき様子見（hold）とします。\",\n   \"evidence\": \"fundamental_view.stance=neutral, technical_view.stance=bearish\"\n  }\n ],\n \"risks\": [\n  \"2026年9月17日〜18日に予定されている日銀金融政策決定会合に伴う為替の急激な変動リスク\",\n  \"資源価格の急落や世界景気減速による業績下振れリスク\",\n  \"下値支持線として意識される25日移動平均線（4711.48円）を割り込んだ場合の下落加速リスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "中期下落トレンドが継続する中、短期的なモメンタムもMACDヒストグラムの悪化や5日線割れによって低下しており、弱含みの展開が予想されます。",
+      "points": [
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともに大幅なマイナスであり、明確な中期下落トレンド内にあります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-12.27, relative_to_topix_60d_pct=-21.12"
+        },
+        {
+          "point": "MACDヒストグラムがマイナス圏で推移し、直近3営業日連続で続落するなど、短期的にも売り圧力が強まっています。",
+          "evidence": "price_technical.macd_histogram=-9.09, recent_5_daysの直近3日間の推移"
+        },
+        {
+          "point": "株価が5日移動平均線を下回り、短期的なサポートを失いつつある状況です。",
+          "evidence": "price_technical.last_close=4769.0, price_technical.sma5=4834.8"
+        }
+      ],
+      "cautions": [
+        "市場全体の地合いが上昇レジーム（uptrend）にあり、相場全体の底堅さが支えとなる可能性があります。",
+        "前夜の米国市場でエネルギーセクターETF（XLE）が+1.39%と上昇しており、寄り付きに好影響を与える可能性があります。",
+        "25日移動平均線（4711.48）が目先の下値支持線として機能し、下げ止まる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 4711.48,
+        "resistance": 4834.8
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "通期業績における純利益の減益傾向や商社株としては高めのバリュエーション水準に加え、直近で株価を一方向に押し上げる新規カタリストが不足しており、様子見姿勢が妥当と判断します。",
+      "points": [
+        {
+          "point": "年次業績トレンドにおいて当期純利益が減益傾向（2025年3月期 9,507億円から2026年3月期 8,005億円、EPS 235.80円から209.78円）となっており、業績面からの強い買い材料は見出しにくい状況です。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "予想PER 22.49倍、実績PER 22.73倍、PBR 1.81倍、配当利回り 2.62%と、大手総合商社セクターとして割安感は強くありません。",
+          "evidence": "fundamentals.valuation.trailing_pe=22.727, fundamentals.valuation.forward_pe=22.491, fundamentals.valuation.price_to_book=1.813, fundamentals.valuation.dividend_yield_percent=2.62"
+        },
+        {
+          "point": "ドル円が159円台と円安水準を維持している点は海外事業の円換算利益の下支えになりますが、直近のニュースや開示において新たな上方修正等のカタリストは確認できません。",
+          "evidence": "macro.indices[ドル円].close=159.3, disclosures.items, news.headlines"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日〜18日に控える日銀金融政策決定会合や国内長期金利（JGB10年 2.873%）の上昇に伴う為替変動リスク",
+        "資源価格や世界景気の減速による総合商社事業全般への下振れリスク"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "友人が5年前「三菱商事の株」を“配当金目当て”で100万円分買ったら、今は「450万円」になったと聞き驚き！ ただ配当利回りが「4％台→2％台」に落ちたので、今から買うのは遅いですよね？（ファイナンシャルフィールド） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOZEhzRWUwdW4yMGd1eHAwellYU1pYQW1fa2NUbDRmendmcXJENDFmbTRic0E1bnl5aW9MWmo4ZFN1TFJLRUlTaXZ0dUt4bS1fWWwzZTVSWlByMHdrNnJYSmlEV2ZGOVk4VWYyNGtrQ2VGRm45ZWQ4SmtrV2YwOWd4MUJsWF95WFpm?oc=5",
+        "published": "Sun, 16 Aug 2026 05:40:02 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "友人が5年前「三菱商事の株」を“配当金目当て”で100万円分買ったら、今は「450万円」になったと聞き驚き！ ただ配当利回りが「4％台→2％台」に落ちたので、今から買うのは遅いですよね？ - chiba-tv.com",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9kZkczaHZiNENSRTJiQ2pvb01XeDU1N2JJVzhQUzByUWxob3ViTS1tUEoyai1kOExWWk1hak9oaGV5WEVXZzU4aVBqMzNYZGFwS3QzQXkxcHBvTkJpVlEw?oc=5",
+        "published": "Sun, 16 Aug 2026 05:38:26 GMT",
+        "publisher": "chiba-tv.com"
+      },
+      {
+        "title": "BP撤退、住商は33%出資…「日英洋上風力」で起きる逆流現象の正体 - ビジネスジャーナル",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBGMG1yNzVxMmd6WFAxNHRQUWZKQUtiODZzTmZUVjloUW1xV3Q4b0R1OFFyTDVxNWdDbUEzcGZTT0UxT2hhaGRVaDdzQXZnSHhHc2lIUHN1dzJyVjA?oc=5",
+        "published": "Sun, 16 Aug 2026 20:55:33 GMT",
+        "publisher": "ビジネスジャーナル"
+      },
+      {
+        "title": "錦織圭、感動をありがとう！ テニス名勝負戦「ジャパンオープンテニス2012 決勝 錦織圭vsM.ラオニッチ」 - WEBザテレビジョン",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE93SUFoTW1KV01HbVlLVXE5c2NCeVJnVXBJVWl4cWlNTDdtLTRfRDNXXzVqR1VxRXVYczdDY29YaVdZS0E5Z3Q0cF9hMjZjeVRa?oc=5",
+        "published": "Sun, 16 Aug 2026 08:37:48 GMT",
+        "publisher": "WEBザテレビジョン"
+      },
+      {
+        "title": "三菱商事株を5年前に100万円分買っていたら、今や450万円に育っていた - ライブドアニュース",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBDejh1c3Zjc1FwYTRhUDlXNGxaR2ZSNW1xLXBxYkdSN3dOVU1paWliWHVkTm5ib1FRRkFVWms4S19FTXQ2alVoVWdTM2Yzb1gxaFk0MmtvVFBqT2E4ajJR?oc=5",
+        "published": "Sun, 16 Aug 2026 17:54:31 GMT",
+        "publisher": "ライブドアニュース"
+      },
+      {
+        "title": "小田急8260×6が喜多見へ臨時回送 - 4号車の5号車寄り",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1mUzBvYm9YSEZKV2xYMjdpb3p3LTNsM0swdjdaLXZtdFY4cndrYVd0d3ZBMzVBVlBxeWJMQ2dLTmNYR2JZRE5CWFdaNmlhUlk?oc=5",
+        "published": "Sun, 16 Aug 2026 09:06:23 GMT",
+        "publisher": "4号車の5号車寄り"
+      },
+      {
+        "title": "【画像】三菱商事株を5年前に100万円分買っていたら、今や450万円に育っていた 1/2 - ライブドアニュース",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1XWFhxaXYzcnVESXFuNGNOamNxMmdWQV80NXZiS3NTV3JrVV81VURoMVcwT1cySGZhZlZMQVNYeUxmenlVQmxIeFFya1ZrYVhodFFEUk1QQkwzWGh6MjlZdnB0S1Bnd05pTGNENG1odWlVNzVxOFhNYXVTamM?oc=5",
+        "published": "Sun, 16 Aug 2026 05:30:16 GMT",
+        "publisher": "ライブドアニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期第1四半期決算短信〔IFRS〕(連結）（監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510489.pdf",
+        "date": "2026-08-06 15:25:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505791.pdf",
+        "date": "2026-08-03 14:00:00"
+      },
+      {
+        "title": "特定子会社の異動（子会社の特定子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260714593288.pdf",
+        "date": "2026-07-15 10:00:00"
+      },
+      {
+        "title": "子会社間の合併及び特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552595.pdf",
+        "date": "2026-05-29 09:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C2プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539898.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C3プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539905.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C4プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539910.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C5プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539918.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C6プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539939.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515679.pdf",
+        "date": "2026-05-01 14:00:00"
+      }
+    ]
+  }
+}
