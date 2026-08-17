@@ -1,0 +1,216 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-08-18T07:39:53+09:00",
+  "price_as_of": "2026-08-17",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-08-05）に buy 判断を行っており、現在はその継続監視期間に該当するため、ルールに基づき新規エントリーを抑制します。",
+        "evidence": "reference.recent_buy.date=2026-08-05"
+      },
+      {
+        "reason": "ファンダメンタルズは極めて強気。シティによる目標株価引き上げや大規模な自己株買い、円安環境の維持が株価の下支えとして機能しています。",
+        "evidence": "fundamental_view.points[0]:目標株価引き上げ / fundamental_view.points[1]:自己株式取得"
+      },
+      {
+        "reason": "テクニカル面ではMACDのシグナル下抜けが確認されており、短期的なスピード調整・もみ合いの局面にあります。",
+        "evidence": "technical_view.points[1]: MACDヒストグラムのマイナス転換"
+      }
+    ],
+    "risks": [
+      "2026-09-17からの日銀金融政策決定会合に伴う為替の円高進行および金利上昇リスク。",
+      "米国市場でのトヨタADR軟調に伴う、国内寄り付きでの売り圧力。",
+      "テクニカル上のサポートラインである25日移動平均線（2961.26円）を割り込んだ場合の下落加速。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内（2026-08-05）に buy 判断を行っており、現在はその継続監視期間に該当するため、ルールに基づき新規エントリーを抑制します。\",\n   \"evidence\": \"reference.recent_buy.date=2026-08-05\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは極めて強気。シティによる目標株価引き上げや大規模な自己株買い、円安環境の維持が株価の下支えとして機能しています。\",\n   \"evidence\": \"fundamental_view.points[0]:目標株価引き上げ / fundamental_view.points[1]:自己株式取得\"\n  },\n  {\n   \"reason\": \"テクニカル面ではMACDのシグナル下抜けが確認されており、短期的なスピード調整・もみ合いの局面にあります。\",\n   \"evidence\": \"technical_view.points[1]: MACDヒストグラムのマイナス転換\"\n  }\n ],\n \"risks\": [\n  \"2026-09-17からの日銀金融政策決定会合に伴う為替の円高進行および金利上昇リスク。\",\n  \"米国市場でのトヨタADR軟調に伴う、国内寄り付きでの売り圧力。\",\n  \"テクニカル上のサポートラインである25日移動平均線（2961.26円）を割り込んだ場合の下落加速。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "株価は5日・25日移動平均線の上で推移しゴールデンクロスを維持しているものの、MACDのシグナル下抜けや前夜米ADRの軟調さから短期的な調整・もみ合いが意識される展開です。",
+      "points": [
+        {
+          "point": "株価（3013.0円）は5日線（2999.7円）および25日線（2961.26円）を上回っており、ゴールデンクロスを形成して底堅い形状を保っています。",
+          "evidence": "price_technical.last_close=3013.0, price_technical.sma5=2999.7, price_technical.sma25=2961.26, price_technical.sma5_vs_sma25=golden"
+        },
+        {
+          "point": "MACD（28.96）がシグナル（32.58）を下回りヒストグラムがマイナス（-3.62）に転じているため、上昇モメンタムの一服と短期的なスピード調整が示唆されます。",
+          "evidence": "price_technical.macd=28.96, price_technical.macd_signal=32.58, price_technical.macd_histogram=-3.62"
+        },
+        {
+          "point": "前夜の米国市場でトヨタADRが-1.01%、関連セクターETF（XLY）が-1.23%下落しており、短期的な寄り付きの重石となる可能性があります。",
+          "evidence": "us_overnight.adr.change_1d_pct=-1.01, us_overnight.sector_proxy.change_1d_pct=-1.23"
+        }
+      ],
+      "cautions": [
+        "前夜NY市場のADR下落は寄り付きで織り込まれ、下値支持線として機能する25日線付近では押し目買いが入る可能性があります。",
+        "調整が深まり25日移動平均線（2961.26円）を割り込んだ場合、期間安値（2794.0円）方向への下落圧力が強まるリスクがあります。"
+      ],
+      "key_levels": {
+        "support": 2961.26,
+        "resistance": 3233.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "第1四半期決算での大規模な自己株式取得発表に加え、アナリストによる目標株価引き上げという新規カタリストが発生しており、需給・ファンダメンタルズ両面でポジティブな環境にある。製造業PMIの拡大と円安水準の維持も輸出事業に追い風。",
+      "points": [
+        {
+          "point": "直近（8/17）の外部評価向上。シティによる目標株価引き上げが報じられており、新型RAV4見通しを含めた製品サイクルへの期待が新規の買い材料となっている。",
+          "evidence": "news (2026-08-17) 「シティがトヨタ自動車の目標株価を新型RAV4見通しで引き上げ」"
+        },
+        {
+          "point": "強力な株主還元策の実行。8/4の1Q決算時に自己株式取得および消却を決定しており、PBR1倍割れ水準からの是正に対する強い意志が示されている。",
+          "evidence": "disclosures (2026-08-04) 「自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ」"
+        },
+        {
+          "point": "輸出に有利なマクロ環境の継続。ドル円が159円台と円安水準で推移しており、製造業PMIも54.5と7ヶ月連続で拡大を示している。",
+          "evidence": "macro.indices[2].close=159.41, macro.japan_pmi.manufacturing.latest_value=54.5"
+        },
+        {
+          "point": "資本効率と割安感の共存。ROE12.4%と高い資本効率を維持しつつ、PBR0.956倍、配当利回り3.31%と下値の限定的なバリュエーション水準にある。",
+          "evidence": "fundamentals.valuation.price_to_book=0.956, fundamentals.valuation.dividend_yield_percent=3.31, fundamentals.valuation.return_on_equity=0.124"
+        }
+      ],
+      "cautions": [
+        "約30日後（9/17-18）の日銀金融政策決定会合による金利上昇・為替変動リスク（macro.boj.monetary_policy_meeting）。",
+        "2024年3月期をピークとした連結営業利益の減少トレンド（fundamentals.earnings_trend.annual）。",
+        "中小企業景況調査における仕入価格DI（49.2）と販売価格DI（24.6）の乖離による、サプライチェーン全体でのコスト圧迫懸念（macro.jfc_sme_survey.monthly[2]）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-05",
+    "days_ago": 13,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "トヨタ自動車/トヨタグループ株式ファンド【7931603B】：基準価格・投資信託情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1JV1VLT19ZNXNfQkxlaUo1NWtJRjZrcGZ2Q2dVMmtjVWpxSUhUbXg4Wjc1dDRBN0ZHV0JhdHRuWTQzdHZ2YkNuYWFLaEJ6U0xBZlluZQ?oc=5",
+        "published": "Mon, 17 Aug 2026 18:24:10 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "企業とスポーツ：都市対抗出場・トップに聞く トヨタ自動車・近健太社長（58）／東海理化・二之夕裕美社長（64） - 毎日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5abVk0Uzh4aFVDT2Y0N2lqX29qY0JjNUEwV3FLWGtsekJFR3BqcU5qOHcwX3VRZlVMQkVLTkdvZXdHZmhJLXVOS1pOX3VtWnpBaC1GU0pKaUdUTFk5SzA2NHVBZWxUN2pQ?oc=5",
+        "published": "Mon, 17 Aug 2026 17:00:54 GMT",
+        "publisher": "毎日新聞"
+      },
+      {
+        "title": "トヨテックが札幌トヨタ自動車と共に、作業映像を Azure 活用の生成 AI で分析・言語化する PoC を実施、作業報告作成の自動化や技術継承の円滑化を目指す - Microsoft",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9zc2pYNmx4MElNSkstWVdZbzF2aE1kQjF2VzNVekx4MVhpUTdSakp3YzVFZ2hCNGU5elVWTHNlLWFEWk91OEhmbFEzajBSS3lQbWVic29aRURhTXJVVDhxendCV3hoem9FWmtZaWtOeVhXMWk4T0E?oc=5",
+        "published": "Mon, 17 Aug 2026 04:07:52 GMT",
+        "publisher": "Microsoft"
+      },
+      {
+        "title": "スペースデータ、トヨタ自動車出身の志々目裕太氏がレジリエンス事業責任者（CBO）に就任 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFA5RmpCeFJjaDQteWRYWGZ1ZUxDMVl5bGtpUWJ5cUdjRmxCUUhrYzhmTG9mS0tyZV8wbEFYb1dHd1IwVmVEcTNEV2V5d084YUZmR3ZnMzdKUmdQVkpEbk1VT0hZR1B4RTdXYmc?oc=5",
+        "published": "Mon, 17 Aug 2026 02:30:39 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "シティがトヨタ自動車の目標株価を新型RAV4見通しで引き上げ 執筆 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBzWV9xVEdIcXp1ZkFWLWhnYkpUYWpnQmxsT3lDVHd3QW10bkNqLXpfb0RaSlV5VDJqUW1iTmswUnl3UDFYWDFUV1FHbE5vbHJmeXhMNks0QmRqTFJJZVBhYUZaYnU1SGs2NnNZOTJ5WmM?oc=5",
+        "published": "Mon, 17 Aug 2026 11:03:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      },
+      {
+        "title": "トヨタ自動車・人事情報 2026年7月1日付 1枚目の写真・画像 - レスポンス（Response.jp）",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1tVjIxSHZ5YjNJNzFPSm4xaHV6VmU2VEVvVTVSX3p3aUgwWnlhQ2liN1BPSVQ4c1RncndieHp2VFZUNWNHNElyZVB0MVJTdEp0NkhCcDVTN0dOdmcxX2N6ZlhSN2RKMklXZWtlaDFyWVI0UQ?oc=5",
+        "published": "Mon, 17 Aug 2026 05:45:08 GMT",
+        "publisher": "レスポンス（Response.jp）"
+      },
+      {
+        "title": "細山田武史さん「自分は元気や明るさの提供係」 トヨタ自動車野球部コーチとして「声出し」を重視する理由 - 東京新聞",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5YeVcyVVE0SmVqWGtRcjhRWHk2Y1czTWJoc0UzOEhSMER0aTdyOWRNQnQtbnFudzhXWURqTXVNLXc4WmlZd3A3U1lGNXRzS3J6bmpV?oc=5",
+        "published": "Sun, 16 Aug 2026 22:32:10 GMT",
+        "publisher": "東京新聞"
+      },
+      {
+        "title": "トヨタ自動車・人事情報 2026年6月17日付・7月1日付 - レスポンス（Response.jp）",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE12T2tVV1V1b3o3U0RrR3h6NllMY1Q2Vm1Kc1lRVEoyLTh6Z1RGaEkzUHJ0Tl9qU3kyT3RPM1Z6ajFsX19RcGFvZXRrODRMUlMyMzVBVnFZZzNkNUxndk9z?oc=5",
+        "published": "Mon, 17 Aug 2026 05:45:10 GMT",
+        "publisher": "レスポンス（Response.jp）"
+      },
+      {
+        "title": "トヨタ自動車・人事情報 2026年6月17日付・7月1日付 1枚目の写真・画像 - レスポンス（Response.jp）",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBhVjJkOFdLRHZaN3NSTERkakNvUEFDcnJ6MTVrclpLRU56WXBWNklrbHN2Ync1RFlGcjBOZmhYWEE4alNLbG5QNlRSSzNPYWFoMUd6ZmxxQzdjNExtRnJtbE1rNGpZVmJVU1pkdjlKSWVwdw?oc=5",
+        "published": "Mon, 17 Aug 2026 05:45:10 GMT",
+        "publisher": "レスポンス（Response.jp）"
+      },
+      {
+        "title": "旭鉄工のAIファースト経営03 「AIキムテツ」で“組織の哲学”を根付かせる - 日経BOOKプラス",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE51eFZlZEM0T2VFOXN2QTNzSGlGNVBQZnEtZFRPVGh3Tm15Umd3WnY5UldxWWR0T21uTzN1WFNXZEFXZVRrWmttS1Z4Y2FFQUN4YnB3UldPNG1JMmlWanlmMnNCdDJiR0NISHBXSA?oc=5",
+        "published": "Mon, 17 Aug 2026 20:00:00 GMT",
+        "publisher": "日経BOOKプラス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度の継続及び従業員に対する新たな株式交付制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507853.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507884.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503849.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "2027年3月期第１四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507860.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507846.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "役員人事に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572690.pdf",
+        "date": "2026-06-17 16:00:00"
+      }
+    ]
+  }
+}

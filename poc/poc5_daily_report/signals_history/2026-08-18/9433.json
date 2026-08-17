@@ -1,0 +1,221 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-08-18T07:47:11+09:00",
+  "price_as_of": "2026-08-17",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-08-07）に buy シグナルを発行しており、現在はその継続監視期間に該当するため、統合判断ルールに基づき新規エントリーを抑制します。",
+        "evidence": "reference.recent_buy.date=2026-08-07"
+      },
+      {
+        "reason": "テクニカル面で5日線と25日線のデッドクロスやMACDの弱気シグナルが確認されており、下落の勢いが強い局面での『落ちるナイフ』を掴むリスクを回避します。",
+        "evidence": "technical_view.points[0]: dead(5日線が25日線の下), technical_view.points[1]: macd_histogram=-18.32"
+      },
+      {
+        "reason": "ファンダメンタルズは第1四半期のEPS成長（約19%増）や自社株買い継続など極めて良好ですが、テクニカルが弱気（bearish）である間はエントリー基準を満たしません。",
+        "evidence": "fundamental_view.points[0]: diluted_eps=51.33, fundamental_view.points[1]: 自己株式の取得状況"
+      }
+    ],
+    "risks": [
+      "2026-09-17に予定されている日銀金融政策決定会合に伴う金利上昇と、通信セクターへのコスト増リスク。",
+      "2026-06-25に開示された財務報告に係る内部統制の不備報告に伴う、中長期的なガバナンスリスク。",
+      "ADRの下落（-1.5%）を背景とした寄り付き後の売り圧力の継続、および直近安値（2691.5円）への接近。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"直近14日以内（2026-08-07）に buy シグナルを発行しており、現在はその継続監視期間に該当するため、統合判断ルールに基づき新規エントリーを抑制します。\",\n      \"evidence\": \"reference.recent_buy.date=2026-08-07\"\n    },\n    {\n      \"reason\": \"テクニカル面で5日線と25日線のデッドクロスやMACDの弱気シグナルが確認されており、下落の勢いが強い局面での『落ちるナイフ』を掴むリスクを回避します。\",\n      \"evidence\": \"technical_view.points[0]: dead(5日線が25日線の下), technical_view.points[1]: macd_histogram=-18.32\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズは第1四半期のEPS成長（約19%増）や自社株買い継続など極めて良好ですが、テクニカルが弱気（bearish）である間はエントリー基準を満たしません。\",\n      \"evidence\": \"fundamental_view.points[0]: diluted_eps=51.33, fundamental_view.points[1]: 自己株式の取得状況\"\n    }\n  ],\n  \"risks\": [\n    \"2026-09-17に予定されている日銀金融政策決定会合に伴う金利上昇と、通信セクターへのコスト増リスク。\",\n    \"2026-06-25に開示された財務報告に係る内部統制の不備報告に伴う、中長期的なガバナンスリスク。\",\n    \"ADRの下落（-1.5%）を背景とした寄り付き後の売り圧力の継続、および直近安値（2691.5円）への接近。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "短期・中期ともに上値の重い展開。移動平均線のデッドクロスに加え、MACDの弱気シグナルと前夜ADRの下落が重なり、テクニカル面では下押し圧力が強い状況です。",
+      "points": [
+        {
+          "point": "SMA5がSMA25を下回るデッドクロス状態にあり、現在の株価も両移動平均線を下回る軟調な推移となっている。",
+          "evidence": "price_technical.sma5_vs_sma25=dead(5日線が25日線の下), last_close=2833.5 < sma25=2891.78"
+        },
+        {
+          "point": "MACDがシグナル線を下回り、ヒストグラムもマイナス圏で推移していることから、下落方向へのモメンタムが強まっている。",
+          "evidence": "price_technical.macd=10.35, macd_signal=28.66, macd_histogram=-18.32"
+        },
+        {
+          "point": "60営業日の騰落率で市場平均（TOPIX）をアンダーパフォームしており、相対的な勢いの弱さが継続している。",
+          "evidence": "price_technical.trend_60d.relative_to_topix_60d_pct=-2.38"
+        },
+        {
+          "point": "前夜のNY市場において、当該銘柄のADRおよび対応する通信セクターETFが揃って下落しており、国内市場での寄り付きの重石となる公算が大きい。",
+          "evidence": "us_overnight.adr.change_1d_pct=-1.5, us_overnight.sector_proxy.change_1d_pct=-1.89"
+        }
+      ],
+      "cautions": [
+        "RSIが52.0と中立圏に留まっており、目先で売られすぎによる自律反発が起こるほどの過熱感はない。",
+        "TOPIXが25日線を上回るuptrend（市場レジーム）にあるため、市場全体の地合いの強さが下値支えとして機能する可能性がある。",
+        "ADRの下落による影響は寄り付き時点で織り込まれる可能性が高く、寄り付き後の反転の有無に注視が必要。"
+      ],
+      "key_levels": {
+        "support": 2691.5,
+        "resistance": 2891.78
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "直近の第1四半期決算における大幅な増益（EPS前年同期比約19%増）に加え、自社株買いの継続、さらにAIドローンや人流データ活用といった新規事業の進展が確認され、攻守のバランスが良い状況です。",
+      "points": [
+        {
+          "point": "2027年3月期第1四半期の業績が好調。1株当たり利益（EPS）が前年同期の43.0円から51.33円へと伸長しており、通期利益成長への期待が高い状況です。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].diluted_eps=51.33"
+        },
+        {
+          "point": "株主還元への積極的な姿勢。直近（2026年8月7日）の開示にて自己株式の取得状況が報告されており、需給面および資本効率向上の両面でプラス材料となっています。",
+          "evidence": "disclosures.items[1].title=\"自己株式の取得状況に関するお知らせ\""
+        },
+        {
+          "point": "通信以外の成長分野（AI・データ外販・海外）での材料が豊富。AIドローンのインフラ点検調査やGEOTRAの人流データサービス拡充など、直近で複数の新規施策が報じられています。",
+          "evidence": "news.headlines[1].title=\"KDDI、ベトナムとフィリピンでインフラ点検へのAIドローン活用可能性を調査\", news.headlines[4].title=\"三井物産とKDDIの合弁「GEOTRA」、人流データサービスにバス・自転車の移動データ追加\""
+        },
+        {
+          "point": "市場環境の追い風。TOPIXが25日移動平均線を上回る上昇トレンド（uptrend）にあり、大型株である同社にとって良好な投資環境となっています。",
+          "evidence": "macro.market_regime.market_regime=\"uptrend\""
+        }
+      ],
+      "cautions": [
+        "データ上の予想PER（forward_pe）が1216.094と極端な乖離を示しており、利益予想の前提に何らかの特殊要因が含まれている可能性があるため注視が必要です。",
+        "2026年6月25日の開示において「財務報告に係る内部統制の開示すべき重要な不備」が報告されており、ガバナンス面のリスクとして認識しておく必要があります。",
+        "約30日後に日銀金融政策決定会合（2026年9月17日〜）を控えており、日本の10年金利（JGB）上昇傾向に伴う通信セクターの金利感応度やコスト増リスクが懸念されます。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-07",
+    "days_ago": 11,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ＫＤＤＩ(株)【KDDIY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5UeXNVcVVoNnBzaHVrVDJRR3VqcmJrUDk1T0h1dDRJT0ttelAwWVk0UWZWT0JaQTIxMkRtQUxzLW1FdnNRVXpvUWZRb0p4cVlJ?oc=5",
+        "published": "Mon, 17 Aug 2026 12:34:45 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "KDDI、ベトナムとフィリピンでインフラ点検へのAIドローン活用可能性を調査 - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBMeUxoYm5NVDFrTDB5dFpWUmxLOHY5RjJYeEhsYmRTeGo4R2FDbkNMYkt1LWQxNWwxMFFWTXZTaVVQbFdlN19aQk9zeGxfOWRlbGFsSTFTUG5MS2YzR1BCMkJYUW1EZ1QxQmZQUw?oc=5",
+        "published": "Mon, 17 Aug 2026 06:00:00 GMT",
+        "publisher": "ITmedia"
+      },
+      {
+        "title": "高幡台施設を防災拠点に/URがローソン、KDDIと協定 - 建設通信新聞Digital",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBsLUxjVVhpR0ttWk9ndTVZQjRwMlJfbGRQWVRSMnZnbFA0UFFSMjE3cUI0NVNOMGF4Z25OOWRUQi03RGpMOFdSd1lDc1ptSG9IdXBiOFBEYUY?oc=5",
+        "published": "Mon, 17 Aug 2026 01:55:46 GMT",
+        "publisher": "建設通信新聞Digital"
+      },
+      {
+        "title": "アクシスコンサルティング[9344]：個人投資家様向けIRセミナー「ブリッジサロン」登壇のお知らせ（9/9(水) 13:55～ / KDDIホール） 2026年8月17日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE90RWMtZk5MMWNnVmp6NlJzc0NyZThRZmk3ZERSTjhwaElHS1hQdjFEZ3VicHRJX2NRek1NR3pXNmIxeHZycDZfelFvSFFldTdqQ1BacWNNZ1VDVFVPLXdlZEVmeXFURjdJc1E?oc=5",
+        "published": "Mon, 17 Aug 2026 04:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "三井物産とKDDIの合弁「GEOTRA」、人流データサービスにバス・自転車の移動データ追加…歩行者経路も標準搭載 - レスポンス（Response.jp）",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1WRHJyeDZCUEUzYXE5UUtzSjlXR1ZlSEpPZFg5OFYyaS1WbWJUMUVoZWRWMUtLOUtrRzNDckhjT19zR0taZlNQbWxQVWd2UzJrcGIyYzRNQVhCSS00a1Br?oc=5",
+        "published": "Mon, 17 Aug 2026 01:15:03 GMT",
+        "publisher": "レスポンス（Response.jp）"
+      },
+      {
+        "title": "三木谷落胆！／撤退論が再燃する「楽天モバイル」 - 月刊FACTA",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9lWm0zMWFMWHBtTFpybDJsV0pidWU3QWZsQ1k0M0dOZzZHZVl5dHVHeFhwQllURkxILVNaY19mMF9SckszcXkxaTlhLV9GdTFlb01VNg?oc=5",
+        "published": "Mon, 17 Aug 2026 06:30:12 GMT",
+        "publisher": "月刊FACTA"
+      },
+      {
+        "title": "＜画像5 / 5＞au体験イベントで小島よしおが自虐ネタ！会場はシーン… - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE8tY2ZGN2RMMTgyVlN3emZObWdNeXpwZXJJU3Nna2JlV1ZPSllsOEdJMmdwaUlWN2EtSmZWb2QzZDNkY21haGlrNnFuU0NfR1QzZngyc1lDZE5uWFBDNXpUWFN6U1M2WE5C?oc=5",
+        "published": "Mon, 17 Aug 2026 15:27:08 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "KDDI、夏コミでミリ波中継器とWi-Fiを試験導入 混雑時の5G通信を強化 - plus-web3.com",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE40U2o2YWJNYk54VllxUUw4VHdOOFVNN3hhZEZidlBSUVNxSFNUbjhSem9fcHNwSjhVdGFkalVSVEFVWDQyRlNoaDYyVVZDOU1ybkZ2ZDUzZnhyUWdHdm1N?oc=5",
+        "published": "Mon, 17 Aug 2026 05:30:00 GMT",
+        "publisher": "plus-web3.com"
+      },
+      {
+        "title": "通信大手3社を買ってみた｜NTT・KDDI・ソフトバンクを比較しながら考える【高配当株投資】 America Fc (PjimmswErC) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE03UUdsX2ttNUtnZGp5ZnlEUEx6REdvS05GV1BZY0pFcE5DVk9KQUdwbS0weEhTaHlPY2l5aW05RlBjRkFnM1J1bHBMdENwemlWNG55NWRLZkxnTEk?oc=5",
+        "published": "Mon, 17 Aug 2026 14:48:27 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "auの衛星SOS、「家族の安心ナビ」に対応 圏外から救助要請 - ケータイ Watch",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5VZUhzMDZCNEhtdGxKMTZMbjQ3ZXNBUFNnMTk5RGttQ19LRWdpLVg1S04yem93eU5zVzJkWk5QMHVGU1BLcGRpeHcxN3FpelFlRldMMUdRV2FOMk9QSXN4eWYxeVdTY1E?oc=5",
+        "published": "Mon, 17 Aug 2026 03:13:36 GMT",
+        "publisher": "ケータイ Watch"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-08-18T07:45:20+09:00",
+  "price_as_of": "2026-08-17",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズは目標株価の引き上げや業績上方修正期待で非常に強力だが、テクニカル面でも既に強気シグナルが揃っており、好材料が株価に織り込まれている可能性が高い。",
+        "evidence": "fundamental_view.points[0]: 目標株価120,000円への引き上げ / technical_view.stance=bullish (strength=80)"
+      },
+      {
+        "reason": "5日線が25日線を上回るゴールデンクロスやMACDの好転が既に確認されており、モメンタム追随の遅いエントリーになるリスクがあるため、統合判断ルールに基づきホールドとする。",
+        "evidence": "technical_view.points[0]: price_technical.sma5_vs_sma25=golden / technical_view.points[1]: macd=2732.6"
+      },
+      {
+        "reason": "RSIが66.1と過熱圏に近づいており、直近高値（87,920円）付近での利益確定売りに押される局面が想定される。",
+        "evidence": "technical_view.cautions[0]: price_technical.rsi14=66.1, price_technical.period_high=87920.0"
+      }
+    ],
+    "risks": [
+      "JGB 10年金利が2.878%と高水準にあり、高PER（46.4倍）の同社株にはマルチプル収縮の圧力がかかりやすい。",
+      "ADRのマイナス乖離やVIX指数の上昇により、外部環境の急変による地合い悪化のリスクが存在する。",
+      "次回の日銀金融政策決定会合（2026-09-17〜）に向けた政策修正観測がボラティリティを高める懸念がある。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズは目標株価の引き上げや業績上方修正期待で非常に強力だが、テクニカル面でも既に強気シグナルが揃っており、好材料が株価に織り込まれている可能性が高い。\",\n   \"evidence\": \"fundamental_view.points[0]: 目標株価120,000円への引き上げ / technical_view.stance=bullish (strength=80)\"\n  },\n  {\n   \"reason\": \"5日線が25日線を上回るゴールデンクロスやMACDの好転が既に確認されており、モメンタム追随の遅いエントリーになるリスクがあるため、統合判断ルールに基づきホールドとする。\",\n   \"evidence\": \"technical_view.points[0]: price_technical.sma5_vs_sma25=golden / technical_view.points[1]: macd=2732.6\"\n  },\n  {\n   \"reason\": \"RSIが66.1と過熱圏に近づいており、直近高値（87,920円）付近での利益確定売りに押される局面が想定される。\",\n   \"evidence\": \"technical_view.cautions[0]: price_technical.rsi14=66.1, price_technical.period_high=87920.0\"\n  }\n ],\n \"risks\": [\n  \"JGB 10年金利が2.878%と高水準にあり、高PER（46.4倍）の同社株にはマルチプル収縮の圧力がかかりやすい。\",\n  \"ADRのマイナス乖離やVIX指数の上昇により、外部環境の急変による地合い悪化のリスクが存在する。\",\n  \"次回の日銀金融政策決定会合（2026-09-17〜）に向けた政策修正観測がボラティリティを高める懸念がある。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 80,
+      "summary": "中期的な上昇トレンドが明確であり、MACDの好転や移動平均線のゴールデンクロスなど主要指標が強気を示唆している。直近の高値圏での利益確定売りは見られるものの、地合いの良さとモメンタムの強さから上値を追う展開が期待できる。",
+      "points": [
+        {
+          "point": "SMA5がSMA25を上回るゴールデンクロス状態にあり、短中期のトレンドがともに上向きである。",
+          "evidence": "price_technical.sma5_vs_sma25=golden(5日線が25日線の上), price_technical.sma5=86648.0, price_technical.sma25=79054.4"
+        },
+        {
+          "point": "MACDがシグナルを大きく上回り、かつ中期トレンド（60日騰落率）も対TOPIXでプラスを維持しており、モメンタムが非常に強い。",
+          "evidence": "price_technical.macd=2732.6, price_technical.macd_signal=1814.88, price_technical.trend_60d.relative_to_topix_60d_pct=6.09"
+        },
+        {
+          "point": "市場全体が上昇レジームにあり、個別銘柄の強いトレンドを後押しする環境が整っている。",
+          "evidence": "macro.market_regime.market_regime=uptrend, macro.market_regime.topix_close_vs_sma25=above"
+        }
+      ],
+      "cautions": [
+        "RSIが66.1と強気圏にあるものの、直近の高値（87,920円）付近では利益確定売りが出やすい水準にある。 (price_technical.rsi14=66.1, price_technical.period_high=87920.0)",
+        "前夜のADRが下落しており、当日寄り付きに売り圧力がかかる可能性がある。 (us_overnight.adr.change_1d_pct=-0.77)",
+        "VIX指数が大幅上昇しており、外部環境の急変による地合いの悪化に警戒が必要。 (macro.indices[3].change_1d_pct=6.6)"
+      ],
+      "key_levels": {
+        "support": 79054.4,
+        "resistance": 87920.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "製造業景況感の拡大とAI関連需要の増大を背景に、業績は着実な増収増益トレンドを維持している。直近でアナリストによる目標株価引き上げや利益予想の上方修正が続いており、ファンダメンタルズ面のポジティブな変化が確認できる。",
+      "points": [
+        {
+          "point": "アナリストによる利益予想の上方修正と目標株価の引き上げ。直近（2026-08-17）で27年3月期の経常利益予想が対前週で3.1%上昇し、目標株価が120,000円へ引き上げられたことが報じられている。",
+          "evidence": "news.headlines (2026-08-17: アナリスト評価引き上げ、27年3月期経常予想3.1%上昇)"
+        },
+        {
+          "point": "製造業PMIの拡大とAI関連需要の恩恵。日本の製造業PMIは54.5と7ヶ月連続で拡大しており、特にAI関連需要の強さが受注を押し上げている状況は、センサー・FA機器大手である同社にとって強い追い風となる。",
+          "evidence": "macro.japan_pmi.manufacturing (latest_value=54.5, summary_en: strong AI-related demand)"
+        },
+        {
+          "point": "継続的な増収増益トレンドと高い収益性。2024年3月期から2026年3月期にかけて売上高・営業利益ともに右肩上がりで推移しており、収益拡大の持続性が示されている。",
+          "evidence": "fundamentals.earnings_trend.annual (2024-03 to 2026-03 revenue and operating_income)"
+        }
+      ],
+      "cautions": [
+        "JGB 10年金利が2.878%と高水準にあり、フォワードPER 46.4倍を超える高バリュエーション銘柄にとっては、金利上昇によるマルチプル収縮リスクが常に伴う（macro.rates.jgb_10y_percent=2.878）。",
+        "次回の日銀金融政策決定会合（2026-09-17〜）まで約1ヶ月であり、政策変更の観測が高まった場合には、為替や金利を通じた株価ボラティリティの拡大に注意が必要（macro.boj.monetary_policy_meeting）。",
+        "板状況において売り注文がトップになる局面があり、短期的な需給悪化の懸念が一部存在する（news.headlines: 売りトップ [08:53]）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": 120000.0
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)キーエンス【6861】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFAxcU9waXFEc3Q2aFY1YzRVa1Atd0pCMHhuam9mZmgwaUljMkZFNzcxNXRrNzFrM3NtUzFrelFnTVZTUmxLUEJxZHQxOFJSOUhXb3VOcXhRLTZlcG1LNWpJ?oc=5",
+        "published": "Mon, 17 Aug 2026 06:59:43 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "【アナリスト評価】キーエンス、レーティング強気を継続、目標株価120,000円に引上げ（日系大手証券）(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOMUhQVFBRbTR6UXpRWWlETF9FaElFdGQ4WWlvWC1QVjFZUV9wVEExVzFLelFEYkV6UTNGcHNGVUpwOVZEdUFVSXB6SWVEU3J5XzBQdUJjbWlTOU5pa25Ld3BuanZvSUl2ZFh2a0owNC0wMGh0Zkk4b3pTWTFpY1A5Sl94VDktclk?oc=5",
+        "published": "Mon, 17 Aug 2026 09:51:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "寄前【板状況】注文ランキング 【買いトップ】ネクソン 【売りトップ】キーエンス [08:53] - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE02c3NscDlBYlRtckhLblU4QWl4ZFdQYmJsdlZLOVQwSzhTUmd0eFRGLU1BcDVPWERYdmlYRk9PQXBUMkE5MFBLUXIxRkNIUktlVnp3UGdnZzcwamRMUlA5NQ?oc=5",
+        "published": "Sun, 16 Aug 2026 23:53:24 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "元手240万円から資産5億円へ！「値がさ大型株」に集中投資する理由―ママ投資家ちょる子さん - マネクリ",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1HUzRfRTJLYm5mOUFzMXVLcHlXbWRLOW90Q0hqTHZnbUp1VUxJenNpWXNtNTVKNjNKUDAwVHBHSGxqUThXdDRZcDRhemVnWWdQbm5IZNIBV0FVX3lxTE1RaWctTHFVcFkxZkY3T01UczJGbU9vOUxzNVBORlFEWjlUVVNQczVuQjZLbmVRNTcyRnE1N25Ob2FhSkJtWjJFTFNOY0gtaEw1dnkwWFh3cw?oc=5",
+        "published": "Mon, 17 Aug 2026 09:00:00 GMT",
+        "publisher": "マネクリ"
+      },
+      {
+        "title": "MS＆ADHDが上場来高値更新､1Q決算は33％最終増益 - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9yTUtHZzlYMkllNFlMbUloZU9fRHc0TlpiTk5FRmlOVWt0aUxPYnZqRHFraFo3VFVTS1pDcDNZMFE3NkNqcjFBbC1Hb1F6aHpKS1pfNEdYRQ?oc=5",
+        "published": "Mon, 17 Aug 2026 01:06:55 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "【アナリスト予想】キーエンス、27年3月期経常予想。対前週3.1%上昇。(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPbTZhZXpFUHZjLXZEd0k5VHNLZ3QwS0RRRzlfNGpGSTZRcEZ2YXFjSHVtRnlXMktZbXYtcl9waGZpa3djUU1qUjdWd3ZCQ3dtLVdQT3ZSUkVsc0k2VVVuRVFtcGNuRnN3N3ItYXRnSzhRdnVrN2FrSFEtRENUdFFNbEtJZm1Ha28?oc=5",
+        "published": "Mon, 17 Aug 2026 13:46:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "＜画像2 / 10＞昨年ブレイク！カルピス“男子新体操部”の新CMがスゴイ - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1OZTVGY0ZCN3I2UmVCSUJGU3NmQmlVLVZkWnVfV0ZpYi0xVmp2NFhzTnZsc3BVNFFPMkliMFRrUlpma1I4dTd0S0loU0RNY3FhSUVzeE1ZLXZfQXFKMExBWG45V3Jjdw?oc=5",
+        "published": "Mon, 17 Aug 2026 00:40:12 GMT",
+        "publisher": "ウォーカープラス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      }
+    ]
+  }
+}
