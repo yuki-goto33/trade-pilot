@@ -1,0 +1,219 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-08-19T07:35:50+09:00",
+  "price_as_of": "2026-08-18",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "2026年8月6日に buy シグナルを発出しており、現在はその継続監視期間（14日以内）に該当するため、ルールに基づき新規エントリーを抑制する。",
+        "evidence": "reference.recent_buy (date: 2026-08-06, 13 days ago)"
+      },
+      {
+        "reason": "テクニカル専門家が ADR の大幅下落や中期下落トレンドを根拠に bearish と判定しており、短期的には下押し圧力が強い「落ちるナイフ」の状態にある。",
+        "evidence": "technical_view.stance=bearish (strength=75), us_overnight.adr=-3.91%"
+      },
+      {
+        "reason": "ファンダメンタルズ面では AI 投資の加速や巨額の純利益計画など極めて強気な材料が多いが、テクニカル面での押し目確認が優先される局面である。",
+        "evidence": "fundamental_view.points[0, 2]: AI投資加速および2026年3月期のROE 32%計画"
+      }
+    ],
+    "risks": [
+      "前夜の米国市場および ADR の急落が寄り付き後のパニック売りを誘発する可能性",
+      "日本10年債利回りが2.9%台に上昇しており、多額の有利子負債を抱える同社の財務負担増が懸念される",
+      "2026年9月の日銀金融政策決定会合に伴う為替および金利のボラティリティ上昇",
+      "2026年3月期の営業利益が赤字予想であり、投資損益に依存した収益構造の不透明性"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"2026年8月6日に buy シグナルを発出しており、現在はその継続監視期間（14日以内）に該当するため、ルールに基づき新規エントリーを抑制する。\",\n      \"evidence\": \"reference.recent_buy (date: 2026-08-06, 13 days ago)\"\n    },\n    {\n      \"reason\": \"テクニカル専門家が ADR の大幅下落や中期下落トレンドを根拠に bearish と判定しており、短期的には下押し圧力が強い「落ちるナイフ」の状態にある。\",\n      \"evidence\": \"technical_view.stance=bearish (strength=75), us_overnight.adr=-3.91%\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズ面では AI 投資の加速や巨額の純利益計画など極めて強気な材料が多いが、テクニカル面での押し目確認が優先される局面である。\",\n      \"evidence\": \"fundamental_view.points[0, 2]: AI投資加速および2026年3月期のROE 32%計画\"\n    }\n  ],\n  \"risks\": [\n    \"前夜の米国市場および ADR の急落が寄り付き後のパニック売りを誘発する可能性\",\n    \"日本10年債利回りが2.9%台に上昇しており、多額の有利子負債を抱える同社の財務負担増が懸念される\",\n    \"2026年9月の日銀金融政策決定会合に伴う為替および金利のボラティリティ上昇\",\n    \"2026年3月期の営業利益が赤字予想であり、投資損益に依存した収益構造の不透明性\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "中期的な下落トレンドが継続しており、前夜のADRの大幅下落（-3.91%）が寄り付き後の強い下押し圧力となる可能性が高い。5日線と25日線のゴールデンクロスは確認されるものの、戻り売りの勢いが勝ると判断する。",
+      "points": [
+        {
+          "point": "中期下落トレンドの継続：60営業日騰落率が-13.72%、対TOPIX相対騰落率が-18.23%とともに大幅なマイナスであり、中期的な弱気相場の中にある。",
+          "evidence": "price_technical.trend_60d"
+        },
+        {
+          "point": "外部環境の急激な悪化：前夜のADRが-3.91%、米国テクノロジーセクターETF(XLK)が-2.47%と大幅に下落しており、強い売りシグナルとなっている。",
+          "evidence": "us_overnight.adr, us_overnight.sector_proxy"
+        },
+        {
+          "point": "モメンタムの弱さ：RSI14が47.5と、強気の節目である50を下回って推移しており、買いの勢いが不足している。",
+          "evidence": "price_technical.rsi14"
+        }
+      ],
+      "cautions": [
+        "MACDヒストグラムは71.69と改善傾向にあり、下値の堅さを示す可能性が一部にある",
+        "ADRの下落は寄り付き価格に織り込まれるため、寄り付き後の突っ込み売りには注意が必要",
+        "TOPIX市場レジームがuptrend判定（431.0 vs SMA25 421.86）であるため、相場全体の底堅さが支えになる可能性がある"
+      ],
+      "key_levels": {
+        "support": 5618.56,
+        "resistance": 6660.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "AI分野（NVIDIA、OpenAI）への戦略的投資の具体化と、1兆円規模の社債発行による強固な資金調達力を高く評価する。2026年3月期に巨額の最終利益を見込むなど収益性の改善が期待される一方、高金利環境や営業赤字予想が下押しリスクとして併存する。",
+      "points": [
+        {
+          "point": "AI関連の世界的リーダー企業との提携および投資の加速。傘下企業とエヌビディアの提携によるデータセンター建設支援や、OpenAIへの追加出資により、AIインフラ・サービス両面での成長性が期待される。",
+          "evidence": "news (Tue, 18 Aug 2026 07:28:00), disclosures (2026-07-01 16:00:00)"
+        },
+        {
+          "point": "機動的な大規模資金調達能力の誇示。国内個人向け最大6,300億円、全体で約1兆円規模の社債発行計画は、将来の大型投資に向けたキャッシュポジションの強化と市場の信頼を裏付けている。",
+          "evidence": "news (Tue, 18 Aug 2026 09:35:00), disclosures (2026-07-29 10:30:00)"
+        },
+        {
+          "point": "2026年3月期における巨額の純利益計画と高い資本効率。前期の赤字から一転して5兆円超の純利益を見込んでおり、ROE 32%という極めて高い収益性は投資家にとって強力なインセンティブとなる。",
+          "evidence": "fundamentals.earnings_trend.annual (2026-03), fundamentals.valuation.return_on_equity=0.32"
+        },
+        {
+          "point": "AI需要の拡大を裏付けるマクロ経済環境。製造業PMIが「強いAI関連需要」を背景に7ヶ月連続で拡大しており、同社の投資ポートフォリオにとって強い追い風となっている。",
+          "evidence": "macro.japan_pmi.manufacturing (summary_en, 2026-07)"
+        }
+      ],
+      "cautions": [
+        "2026年3月期の営業利益は-48億円と赤字予想であり、投資損益に依存した収益構造の脆弱性が懸念される（fundamentals.earnings_trend.annual）",
+        "日本10年債利回りが2.9%台に達しており、多額の有利子負債を抱える同社にとって利払い負担増は直接的なリスク要因（macro.rates.jgb_10y_percent）",
+        "日系中堅証券による目標株価の7,160円への引き下げ、および2027年3月期経常予想の下方修正（news: Tue, 18 Aug 2026 10:08:00 / 13:46:00）",
+        "次回決算（2026-11-11）および日銀金融政策決定会合（2026-09-17〜）に伴う不確実性"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": 7160
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-06",
+    "days_ago": 13,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "【アナリスト予想】ソフトバンクＧ、27年3月期経常予想。対前週0.9%下降。(アイフィス株予報) - finance.yahoo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQTnFSQ2QxSWh3V3I3cnZGRGpOejZzWTBuNW5kcXB5cHVRODVGNHBwcnlndWw5TVdsc2x1TThla2pOekdPXzZab01yUTE0MXg2YzZjUHlHTjR6RkkzMU96YUJmZklfRDVxbFN1dXUxeFIzOGUxV1hUUW1pMk0zek9pWEc3WEdySlk?oc=5",
+        "published": "Tue, 18 Aug 2026 13:46:00 GMT",
+        "publisher": "finance.yahoo.co.jp"
+      },
+      {
+        "title": "ソフトバンクG、国内個人向けに過去最大6300億円の社債発行へ - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9RQWlRaFpEclc5Ym1vWmlQcTZzcFVoLXlhcVBoNEVJeE5DQUw2TUJUUlp3RHhkc0xOS1dYdC1DdmdBVFRLZlBaTXpBemFDZXpYM0NJYnlTanFkMzFGUkVsVVVVMk5QR0phWk9aU2lKd1phUmw1?oc=5",
+        "published": "Tue, 18 Aug 2026 09:35:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "最近、日本経済新聞（日経）に面白い記事が掲載された。 チャットGPTとジェミナイ、クロードなど主要生成型人工知能(AI)に「12月1日終値基準で日本で時価総額1位になる企業はどこか」を尋ねたのだ。回答.. - mk.co.kr",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBTSlBJeFlWcDVhRzNHblJuTk5ab1IwamY4eWx3QzZaS0pxcTlVUFZzbHU5ZXVNeDQ2Sk5tOVNFeEVLY2ZyWm5EX2QwQWoxdFk?oc=5",
+        "published": "Tue, 18 Aug 2026 09:18:53 GMT",
+        "publisher": "mk.co.kr"
+      },
+      {
+        "title": "ソフトバンク、個人投資家向けに約1兆円の社債発行を計画 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQMElXWEZ1dWRlc1dmMTZqRFVWQk5GcW5uc3ByTEwtNG5HVWdwM2E4MFMweURJNXBYQVVWeEJCdjJERkY1VWtJQTlXVGRMR24tb043LVNzVkdhX3JqNG5oTGlXbm1SakUwXzBxem1mdDR1T2NiN1lQTTVvaHBDMXFCX00wOXp5TTA?oc=5",
+        "published": "Tue, 18 Aug 2026 09:13:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      },
+      {
+        "title": "ソフトバンクＧ傘下に出資＝データセンター建設後押し―米エヌビディア - 時事通信ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9pc3VNT244akZTOUk2aVhueUpFMHd4OTJmLU50cXJzZ0FMeFloWkVkZFRsbFNOTVA0elNWTko0VWlsaF9JV0o4a3g2allveUlCMnBMag?oc=5",
+        "published": "Tue, 18 Aug 2026 07:28:00 GMT",
+        "publisher": "時事通信ニュース"
+      },
+      {
+        "title": "【アナリスト評価】ソフトバンクＧ、レーティング強気を継続、目標株価7,160円に引下げ（日系中堅証券）(アイフィス株予報) - finance.yahoo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZm9JMTN3clphajF6c0lpTTdYdndVNU56T2R6M3A3UG1UWVdPdkU2cTZfMHpCYkplUHd6QUd6NDU5WDRVMUdLZHRqY3dHVlRIRUpYb0dqekJwSWxTNlpkZl9RbVlYTzNsbmpxZG43NUhNZHF0YjlEN3o4YjQyVGZZM21lU0ZiZWM?oc=5",
+        "published": "Tue, 18 Aug 2026 10:08:00 GMT",
+        "publisher": "finance.yahoo.co.jp"
+      },
+      {
+        "title": "ソフトバンクグループ、株価続騰、年初来高値更新、孫正義 Wnba Standings (8A8iBi498n) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1wMWJHOERkVFg0ZVRJa3NMckRjMGtRWlRPdXNMOUdOcXZUZGZDSTZJMWZfSlQtNTd1a0hnZ1J6N0VXNTZ5Z0loNVNYc0djYy0zQ09DeTBmTWtxUTg?oc=5",
+        "published": "Tue, 18 Aug 2026 09:44:35 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "熊本地震支援で企業の「本業活用」広がる、資金・通信・水・物資で復旧後押し - kabu-ir.com",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5MZWh3Ymx5bWpVTGN1bm5JdGN1WVJHcWdneDZHMktNOHhPOUUzY0dOQ3R2d2dvbWNXR2wzeVZBdWprcGp0bzktbm1VSnBYN3lDRXdVaA?oc=5",
+        "published": "Tue, 18 Aug 2026 05:00:00 GMT",
+        "publisher": "kabu-ir.com"
+      },
+      {
+        "title": "NVIDIA、OpenAIのオハイオAIデータセンターに最大1050億ドルの債務保証──SB Energyと提携 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPNFZrdFNsM21kRkxfNlpvUmI3RVBmRFIzMUlhRkNJTnFaal9IR0ZSbXQtU0JmVThWS1ljM3FlXy1EZzZZREhBRTJCcWdHLWFiZF9PVVRmOFBjZjRhRDI5YU9mR0JZYVJneEhuVHQ5djVnTURBUWlFQU43c1BaczVpUFFBeGQxN0dGV0tJRmZtSjZCTVdXVVo0b2JhRdIBmwFBVV95cUxPNFZrdFNsM21kRkxfNlpvUmI3RVBmRFIzMUlhRkNJTnFaal9IR0ZSbXQtU0JmVThWS1ljM3FlXy1EZzZZREhBRTJCcWdHLWFiZF9PVVRmOFBjZjRhRDI5YU9mR0JZYVJneEhuVHQ5djVnTURBUWlFQU43c1BaczVpUFFBeGQxN0dGV0tJRmZtSjZCTVdXVVo0b2JhRQ?oc=5",
+        "published": "Mon, 17 Aug 2026 22:41:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "日経平均が1528円安と急落、半導体関連に売り 米経済指標に警戒感 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBETWFXSVZLR3puMy1ndnRXNnZkMG5Ud1lxUjVNVTNKWDI0YW9DVm1vcDRrMlNnS0pjMmp0d29wTGZyYjItUVVVWVNUazdRU0dtZjE0RXpNTWJNcFZiTDB5Z0ZWa3R1bmpFeGItRjVZZk82QXVR?oc=5",
+        "published": "Tue, 18 Aug 2026 06:06:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510515.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行内容確定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503871.pdf",
+        "date": "2026-07-30 17:00:00"
+      },
+      {
+        "title": "第68回及び第69回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501484.pdf",
+        "date": "2026-07-29 10:30:00"
+      },
+      {
+        "title": "OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260701586249.pdf",
+        "date": "2026-07-01 16:00:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577089.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "2021年発行米ドル建普通社債の期限前償還完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566742.pdf",
+        "date": "2026-06-10 11:30:00"
+      },
+      {
+        "title": "国内ハイブリッド社債（利払繰延条項付）の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260605563850.pdf",
+        "date": "2026-06-05 10:30:00"
+      },
+      {
+        "title": "当社の子会社によるT&amp;Dフィナンシャル生命保険株式会社の株式の取得（子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562772.pdf",
+        "date": "2026-06-04 16:00:00"
+      },
+      {
+        "title": "2021年発行米ドル建普通社債の期限前償還に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528551943.pdf",
+        "date": "2026-05-28 15:30:00"
+      },
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得に関するタイ関係当局の許認可等の取得状況および今後の見通しに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260527550260.pdf",
+        "date": "2026-05-27 15:30:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-08-19T07:35:04+09:00",
+  "price_as_of": "2026-08-18",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズは長期金利上昇や目標株価引き上げなど極めて強力（strength: 75）だが、テクニカルも既に強気（bullish）に揃っており、材料が株価に織り込まれた「遅いエントリー」になるリスクがあるため。",
+        "evidence": "fundamental_view.strength=75 / technical_view.stance=bullish (strength=75)"
+      },
+      {
+        "reason": "テクニカル面で3700円付近の上値の重さが指摘されており、前夜のADRも-1.35%と下落していることから、短期的には調整や押し目を確認すべき局面である。",
+        "evidence": "technical_view.cautions[0]: us_overnight.adr.change_1d_pct=-135 / technical_view.cautions[1]: 3700円付近で上値が重い"
+      },
+      {
+        "reason": "銀行株としてはフォワードPER 24倍とバリュエーションに割高感が出始めており、期待先行による調整リスクを警戒する必要がある。",
+        "evidence": "fundamental_view.cautions[2]: フォワードPERが24.09倍"
+      }
+    ],
+    "risks": [
+      "2026年9月17日から開催される日銀金融政策決定会合における政策修正への過度な期待とその反動",
+      "VIX指数の上昇に伴うグローバルなリスクオフセンチメントによる連れ安",
+      "国内長期金利の上昇一服による利ざや改善期待の後退"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズは長期金利上昇や目標株価引き上げなど極めて強力（strength: 75）だが、テクニカルも既に強気（bullish）に揃っており、材料が株価に織り込まれた「遅いエントリー」になるリスクがあるため。\",\n      \"evidence\": \"fundamental_view.strength=75 / technical_view.stance=bullish (strength=75)\"\n    },\n    {\n      \"reason\": \"テクニカル面で3700円付近の上値の重さが指摘されており、前夜のADRも-1.35%と下落していることから、短期的には調整や押し目を確認すべき局面である。\",\n      \"evidence\": \"technical_view.cautions[0]: us_overnight.adr.change_1d_pct=-135 / technical_view.cautions[1]: 3700円付近で上値が重い\"\n    },\n    {\n      \"reason\": \"銀行株としてはフォワードPER 24倍とバリュエーションに割高感が出始めており、期待先行による調整リスクを警戒する必要がある。\",\n      \"evidence\": \"fundamental_view.cautions[2]: フォワードPERが24.09倍\"\n    }\n  ],\n  \"risks\": [\n    \"2026年9月17日から開催される日銀金融政策決定会合における政策修正への過度な期待とその反動\",\n    \"VIX指数の上昇に伴うグローバルなリスクオフセンチメントによる連れ安\",\n    \"国内長期金利の上昇一服による利ざや改善期待の後退\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "中期的な上昇トレンドが継続する中、主要な移動平均線がゴールデンクロスを形成し、MACDも陽転を維持しており、テクニカル面では強気な地合いが整っています。",
+      "points": [
+        {
+          "point": "直近60営業日の騰落率が+18.21%と高く、対TOPIXでも+13.7%と市場を大幅にアウトパフォームしており、強い中期上昇トレンドの中にあります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=18.21, price_technical.trend_60d.relative_to_topix_60d_pct=13.7"
+        },
+        {
+          "point": "SMA5がSMA25を上回るゴールデンクロスを維持しており、さらにMACDヒストグラムも正の値を継続していることから、短中期のモメンタムは良好です。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.macd_histogram=1.32"
+        },
+        {
+          "point": "市場全体の地合いが「uptrend」レジームにあり、TOPIX連動ETFも25日移動平均線を上回って推移していることが追い風となります。",
+          "evidence": "macro.market_regime.market_regime=uptrend, macro.market_regime.topix_close_vs_sma25=above"
+        }
+      ],
+      "cautions": [
+        "前夜のADRが-1.35%と下落しており、寄り付き直後は売りが先行する可能性があります(us_overnight.adr.change_1d_pct=-1.35)。",
+        "直近数営業日は3700円付近で上値が重くなっており、短期的な過熱感に注意が必要です(price_technical.recent_5_days)。",
+        "VIX指数が前日比+4.28%と上昇傾向にあり、外部環境の急変によるボラティリティ増大のリスクがあります(macro.indices.VIX.change_1d_pct=4.28)。"
+      ],
+      "key_levels": {
+        "support": 3617.0,
+        "resistance": 3813.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "国内長期金利が30年ぶりの高水準（2.919%）に達し、利ざや改善期待が強まっている。時価総額で国内首位に浮上した象徴性に加え、大手証券による目標株価4200円への引き上げという直近のポジティブな材料が重なり、さらなる上値追いの勢いが期待できる。",
+      "points": [
+        {
+          "point": "国内長期金利が30年ぶりの高水準まで上昇しており、銀行業にとって収益環境の劇的な改善が見込まれる。",
+          "evidence": "macro.rates.jgb_10y_percent.value=2.919, news.headlines[3]:「国内長期金利が連日で30年ぶりの高さに」"
+        },
+        {
+          "point": "国内大手証券が目標株価を4200円に引き上げており、直近の市場センチメントを強力に牽引している。",
+          "evidence": "news.headlines[2]:「国内大手証券は目標株価４２００円に引き上げ（2026-08-18）」"
+        },
+        {
+          "point": "業績は右肩上がりで推移しており、2026年3月期の純利益は2.4兆円規模に達するなど、メガバンクとしての稼ぐ力が向上している。",
+          "evidence": "fundamentals.earnings_trend.annual: net_income_oku_jpy が 14908→18629→24272 と拡大"
+        },
+        {
+          "point": "トヨタやキオクシアを抜き、国内時価総額1位に浮上したことで、日本市場の代表銘柄としての買いが入りやすい状況にある。",
+          "evidence": "news.headlines[4]:「時価総額４２兆円超 キオクシアとトヨタ抜き首位浮上」"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日から開催される日銀金融政策決定会合が近づいており、政策修正の有無による金利変動リスクに注意が必要。",
+        "VIX指数が直近5日間で8.87%上昇しており、マクロ経済全体のリスクオフによる連れ安の可能性がある。",
+        "フォワードPERが24.09倍と、過去の銀行株の水準としては比較的高値圏にあるため、期待先行での調整リスクがある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": 4200
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)三菱ＵＦＪフィナンシャル・グループ【MUFG】：株価・株式情報 - finance.yahoo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1fb09UZ016WWhiUVBjc0RvWFltWjhxVkhJbkpyOEhKLXMzR2JuMk0wY1MybnpuUWNldldDSTJMak1rZV83N2JYNGFMWktSU3M?oc=5",
+        "published": "Tue, 18 Aug 2026 21:03:01 GMT",
+        "publisher": "finance.yahoo.co.jp"
+      },
+      {
+        "title": "インタビュー／三菱UFJフィナンシャル・グループ デジタルソリューション部部長・岩田廉平氏 従業員とAI親和促す - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5OVl9SMjkxcEQxOXBKWE9KUmF1ODhwR3RWbEF3d1VBelhtV0U2MVR6cUpPNUQwYjRFX3BaOVF6U2p2Q3d2N3JHNlcxTVdKZGpJeHpyRHJ0Zm9YY0E?oc=5",
+        "published": "Tue, 18 Aug 2026 02:59:16 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "三菱ＵＦＪは３日ぶり反発、国内大手証券は目標株価４２００円に引き上げ - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5xVVVuUHZyRnBjUDV4bWZLUWJDak1aVXMwYkdmbVZOLWVUQmhWLUlwbE9yVjNYR2VhcEloU3VmVzlqeUlGTjJ4R3N0aFZReWVCVmJVNmZJTEk1SnVlRERQVw?oc=5",
+        "published": "Tue, 18 Aug 2026 05:43:00 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "銀行株がほぼ軒並み高､国内長期金利が連日で30年ぶりの高さに - shikiho.toyokeizai.net",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBRZS1LNWdmaFRoZGYtU1BaZDItM3ZEcWlwdmJMUlFQUkl0ODlONnc4ZUZYb1U4Y0JHWGxxUHpsMUhDX3dSWks5YWkxOUZvczBxdmRzNlVudw?oc=5",
+        "published": "Tue, 18 Aug 2026 00:51:42 GMT",
+        "publisher": "shikiho.toyokeizai.net"
+      },
+      {
+        "title": "【写真・画像】三菱ＵＦＪ、時価総額４２兆円超 キオクシアとトヨタ抜き首位浮上 | | 全国のニュース - 佐賀新聞",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5SdWt2NG9ZYlBhUGxheW5faWsxZmRFdWczLW5xYXdzOTlhZlkzOTRPN1M4anlWQ1BPaHV3RUxSWWd6M3M4V1pyc2VnX0Znb1NwOWo1NkdXLS1qWncxLUE?oc=5",
+        "published": "Tue, 18 Aug 2026 00:48:55 GMT",
+        "publisher": "佐賀新聞"
+      },
+      {
+        "title": "最近、日本経済新聞（日経）に面白い記事が掲載された。 チャットGPTとジェミナイ、クロードなど主要生成型人工知能(AI)に「12月1日終値基準で日本で時価総額1位になる企業はどこか」を尋ねたのだ。回答.. - mk.co.kr",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBTSlBJeFlWcDVhRzNHblJuTk5ab1IwamY4eWx3QzZaS0pxcTlVUFZzbHU5ZXVNeDQ2Sk5tOVNFeEVLY2ZyWm5EX2QwQWoxdFk?oc=5",
+        "published": "Tue, 18 Aug 2026 09:18:53 GMT",
+        "publisher": "mk.co.kr"
+      },
+      {
+        "title": "都市ファンドについて、三菱ＵＦＪは保有割合が減少したと報告 [変更報告書No.5] - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE91Q3B0UWc0T3NKUGJIbDB6YnpDUWhONUZHbF9GQ0pmWXB0QXlqdEhBN01SS2RxOVZpSWZNZVdNT0J4V081WDEzcnRmbklISlFBLXpkNi1qb3A4NEt5a2oyWg?oc=5",
+        "published": "Tue, 18 Aug 2026 01:53:02 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "三菱ＵＦＪ－3日ぶり反発 日米の10年債利回り上昇を好感 銀行株が堅調(トレーダーズ・ウェブ) - finance.yahoo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOcFRqeTRDS19DSUxldzY5RV96Y0wxcEE3dDNXZy1fOWJ0OUh6cDQ0TkN2TnZNaFdrTmFTZ256ZzFEZmR5NkNiSWV0QVNwVmY5Z0NUb0lSaEFlU1IwaVBFalEyZlloSVJrdjZBb3hRU0lGTWpKclM1WVh6MVg0UE1Nakc0cTZLZm8?oc=5",
+        "published": "Tue, 18 Aug 2026 00:59:00 GMT",
+        "publisher": "finance.yahoo.co.jp"
+      },
+      {
+        "title": "ミラースＲについて、三菱ＵＦＪは保有割合が5％を超えたと報告 [大量保有報告書] - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1hQ29ESmZUYklITlJiNkN0bTJPQUE0Q1ZiZXlsVC0wNHE5UGNjTzRQMUh4QVctLTVCUk4tVkFGRFFIdVBMU01GaG5sWnhrajFUV0czQzA0NUtXVG1yclNqcDFn?oc=5",
+        "published": "Tue, 18 Aug 2026 01:36:03 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "極める／三菱UFJFGデジタルソリューション部部長・岩田廉平氏 従業員とAI 親和促す - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBfN214WHVHRXg5Szg2dmJiYkNZOWZvdXZVOC13X2VJR2trWkc5cm51dWp0d09HTFF6Yk5McWxPOUlnR0pHVEtDenRqUElEcVBXN0hQMVZzUEhsMU0?oc=5",
+        "published": "Tue, 18 Aug 2026 20:01:11 GMT",
+        "publisher": "日刊工業新聞"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期 自己資本比率について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260814520300.pdf",
+        "date": "2026-08-14 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕（連結）（公認会計士又は監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510381.pdf",
+        "date": "2026-08-06 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505851.pdf",
+        "date": "2026-08-03 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      }
+    ]
+  }
+}
