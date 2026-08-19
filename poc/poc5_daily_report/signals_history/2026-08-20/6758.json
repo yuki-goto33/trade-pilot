@@ -1,0 +1,217 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-08-20T07:31:37+09:00",
+  "price_as_of": "2026-08-19",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-08-06）にbuyシグナルを発行しており、同一銘柄への短期連続エントリーを避けるため継続監視とする。",
+        "evidence": "reference.recent_buy.date=2026-08-06"
+      },
+      {
+        "reason": "市場レジームがdowntrendにある中、buyの基準（ファンダメンタルズstrength 75以上）を満たしておらず、地合いの影響を考慮して様子見とする。",
+        "evidence": "reference.market_regime=downtrend / fundamental_view.strength=70"
+      },
+      {
+        "reason": "ファンダメンタルズ面ではTSMCとの合弁契約や黒字回復など極めて強い材料があるが、チャート上では直近3営業日続落しており押し目を確認する段階にある。",
+        "evidence": "fundamental_view.points[0], fundamental_view.points[1] / technical_view.points[0]"
+      },
+      {
+        "reason": "株価はSMA5を下回っており、SMA25（3617.68円）付近でのサポートを確認する必要がある。",
+        "evidence": "technical_view.points[1]: 終値はSMA5を下回る / technical_view.key_levels.support=3617.68"
+      }
+    ],
+    "risks": [
+      "市場全体のダウントレンド継続による個別銘柄の連れ安リスク",
+      "25日移動平均線（3617.68円）を下抜けた場合の中期的なトレンド崩壊",
+      "次回日銀会合（9月17-18日）に向けた金融政策修正懸念によるボラティリティ",
+      "PS6発売時期未定によるゲーム事業の中長期的な成長期待の減退"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内（2026-08-06）にbuyシグナルを発行しており、同一銘柄への短期連続エントリーを避けるため継続監視とする。\",\n   \"evidence\": \"reference.recent_buy.date=2026-08-06\"\n  },\n  {\n   \"reason\": \"市場レジームがdowntrendにある中、buyの基準（ファンダメンタルズstrength 75以上）を満たしておらず、地合いの影響を考慮して様子見とする。\",\n   \"evidence\": \"reference.market_regime=downtrend / fundamental_view.strength=70\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ面ではTSMCとの合弁契約や黒字回復など極めて強い材料があるが、チャート上では直近3営業日続落しており押し目を確認する段階にある。\",\n   \"evidence\": \"fundamental_view.points[0], fundamental_view.points[1] / technical_view.points[0]\"\n  },\n  {\n   \"reason\": \"株価はSMA5を下回っており、SMA25（3617.68円）付近でのサポートを確認する必要がある。\",\n   \"evidence\": \"technical_view.points[1]: 終値はSMA5を下回る / technical_view.key_levels.support=3617.68\"\n  }\n ],\n \"risks\": [\n  \"市場全体のダウントレンド継続による個別銘柄の連れ安リスク\",\n  \"25日移動平均線（3617.68円）を下抜けた場合の中期的なトレンド崩壊\",\n  \"次回日銀会合（9月17-18日）に向けた金融政策修正懸念によるボラティリティ\",\n  \"PS6発売時期未定によるゲーム事業の中長期的な成長期待の減退\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "MACDの好転やSMA5/25のゴールデンクロスなど上昇の兆しは残るものの、直近3営業日の続落と市場全体のレジーム悪化が重石となっており、短期的な調整局面にあると判断します。",
+      "points": [
+        {
+          "point": "直近3営業日で連続して下落しており、短期的な売り圧力が強まっている。特に8月14日の高値から大幅に押し戻されている。",
+          "evidence": "price_technical.recent_5_days"
+        },
+        {
+          "point": "SMA5（3759.8円）がSMA25（3617.68円）の上にあるゴールデンクロス状態を維持しているが、終値はSMA5を明確に下回っている。",
+          "evidence": "price_technical.sma5, price_technical.sma25, price_technical.last_close"
+        },
+        {
+          "point": "TOPIXが25日線を下回り、市場全体がdowntrendレジームにあるため、個別株にとって強い向かい風となっている。",
+          "evidence": "macro.market_regime"
+        }
+      ],
+      "cautions": [
+        "ADRは0.26%上昇しているものの、米市場のテクノロジーセクターETF(XLK)は1.07%下落しており、寄り付き後の方向性に不透明感がある。",
+        "25日移動平均線（3617.68円）を下抜けた場合、中期的なサポートが消失し一段の下落につながる可能性がある。"
+      ],
+      "key_levels": {
+        "support": 3617.68,
+        "resistance": 3759.8
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "直近の第1四半期（2026年6月中間）での黒字回復に加え、TSMCとの半導体合弁事業に関する確定契約の締結（8月11日開示）という具体的な成長カタリストが確認できる。製造業PMIも拡大圏を維持しており、AI需要に伴うイメージセンサー事業の拡大期待が強い。",
+      "points": [
+        {
+          "point": "TSMCとの合弁会社設立に関する確定契約を締結し、次世代センサーへの投資を含めた半導体戦略が具体化している。",
+          "evidence": "disclosures: 2026-08-11 18:30:00 ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ"
+        },
+        {
+          "point": "前期（2026年3月期）の通期最終赤字から、直近四半期（2026年6月期）では純利益3,422億円と、収益性が大幅に改善している。",
+          "evidence": "fundamentals.earnings_trend.quarterly: 2026-06 revenue_oku_jpy=28378, net_income_oku_jpy=3422"
+        },
+        {
+          "point": "製造業PMIが54.5と7ヶ月連続で拡大圏にあり、AI関連需要に支えられた工場の生産活動が活発化していることが、デバイス事業に追い風となる。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.5"
+        }
+      ],
+      "cautions": [
+        "市場全体が25日移動平均線を下回るダウントレンドにあり、外部環境の影響を受けやすい（macro.market_regime.market_regime=downtrend）",
+        "PS6の発売時期が未定であるとCEOが明言しており、ゲーム事業の次世代サイクルへの移行に関する不透明感がある（news: Sony CEO が PlayStation 6 の発売時期は“未定”と明言）",
+        "次回決算発表（2026年11月5日）および日銀金融政策決定会合（9月17-18日）を控えており、短期的なボラティリティに注意が必要"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-06",
+    "days_ago": 14,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "伝記映画『Michael/マイケル』の記録的ヒットが追い風 マイケル・ジャクソンの音楽カタログが新たな高みへ - sony.com",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE84MW54STBXSmpfUjg5enF5OEVMM3JWcFFwRjViS05MT1MwbWphZjZGRmFhSDJ6UHRqNHpzWkdCX3Y5MHpkQWJWM1MxdXVxZ1lHMEwxdG5ibHh5emlqS3Y3S1hQQmZkN1hxN0hB?oc=5",
+        "published": "Wed, 19 Aug 2026 10:19:46 GMT",
+        "publisher": "sony.com"
+      },
+      {
+        "title": "ソニーグループ(株)【SONY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBaWnphQUR5QkRjZVlTVmx6UFR5V014TllydmRXWkxLMjQyQlpTTTV0ZXN6b1lsNVZBTGlQMXJGcGFTbHdkcFJuYURxeFRfLTg?oc=5",
+        "published": "Wed, 19 Aug 2026 12:16:31 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "カギは組織の見える化 「ソニーGのデジカメ復活」に学ぶ日本企業の生きる道（日経ビジネス） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAtUUJtQUxFQkFhZGtVUklQVGJwNHVlZEhpN1U5VUMwRVNYUzY3VEZueVduX2NDdER0bHhORFdoVzFCaFNESWpaLVpFSlBSc2twdlJIMW1FUTNpVXRCQ2pSSk9Rdmx4dXRDeUtpcTBSQlNLejlldExfUk0xWHVvd0U?oc=5",
+        "published": "Wed, 19 Aug 2026 21:10:53 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "ソニーG---52週線水準での底堅さが意識される 提供 Fisco - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQTFhhWXk3M29fQngtUHRrVmRSWjg2T2lBWkU4TE9DcTlJVGVaajJmSmtfbWNfMW5reldqbmVFT2lXYmY4THB5QjFuMXpUQWV3STRIZ25XdXhyQ1NaWW1FQnFGQlhJQ0JQOTUyWTFvaEhoRmpRR3c5NzQxZ2hVNXFlTA?oc=5",
+        "published": "Wed, 19 Aug 2026 00:15:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      },
+      {
+        "title": "次世代センサー1兆円規模投資 ソニーとTSMC【WBS】 Bobby Cox (AIWcmSORIz) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5PN1pBbC1MX3R1bE1KVUlKRmlmSmdRcG9ObGZKVXlWY1Y2SzJiZUE4aV9GV0ttVXNiTjFTbThEeUQ1djF0N251WFFjc25NUjY3RTVodExoM0lxTTg?oc=5",
+        "published": "Wed, 19 Aug 2026 01:39:24 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "三菱電機が衛星搭載レーダーの米国スタートアップに出資、AMTI関連事業で協業：製造マネジメントニュース - MONOist",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5STjVlaDdsN3hEUncwaEJlVFF6Z3RkVmR4bW00Q2RlcVkwNWw1WEIxUmNXZnlYNXdlUVFIS1NseFZoU0xFektlUWZPSk9RTWd0SjVXQWJTdXJFM3lUZzVTbUtpNUdUX3lrdF8wellmcw?oc=5",
+        "published": "Wed, 19 Aug 2026 01:00:00 GMT",
+        "publisher": "MONOist"
+      },
+      {
+        "title": "フィジカルAI 開発開始 政府、1兆円規模支援 国産30年度実用化へ 現実の機械制御用 - 沖縄タイムス社",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1oZEc3cDFSeVRMNXVwR1R3SVVSVlFwWGk5azQwUmJfempQY0dRNFZFVW8yc0w0ZGZPZTFPaElMMWhiUFdEWm1GWFJmRkwyd3poUWpLczNsX045NEtuUHc?oc=5",
+        "published": "Wed, 19 Aug 2026 19:00:00 GMT",
+        "publisher": "沖縄タイムス社"
+      },
+      {
+        "title": "Sony CEO が PlayStation 6 の発売時期は“未定”と明言 - Hypebeast",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQT1RubnZaQWV1RkxHQzZNMWtLV3c0QXZqUVpGeEdIZXQ0djFBc1NkX2NTcUp6YW56cVBzOVdJNE1QaXdqajJwRjZIS0lVSEZOcmJjdjlBRm8xeTZISU5FejRDR0NlSW04SDZybzdwbXV5LTFrX1JHSjRjbVlkRHNmMFMyZXFzaW14WlJYU0Z6SXcyMGVLdS1kUXBKN1FhZm9tUk80VExKYw?oc=5",
+        "published": "Wed, 19 Aug 2026 10:09:10 GMT",
+        "publisher": "Hypebeast"
+      },
+      {
+        "title": "米国株式市場は続落、世界的な長期金利の上昇を警戒 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPV1N3ZXM3dTZOQU9wTFBkamlYVHNnT1NfS050d091Y2xhMGJ2S0dnQjBoN3dveFZ5QUhaWktYT0RtMkR5VS1td0RFRkI5aWlQdkpLWmlfM2wxNWh4bzNPMUtmbUhQaU43MWZDYXlyMk5xZTBKNlZOeV9vcWRJWXJ2MGw5RmtpVjRNRUJUetIBjAFBVV95cUxPV1N3ZXM3dTZOQU9wTFBkamlYVHNnT1NfS050d091Y2xhMGJ2S0dnQjBoN3dveFZ5QUhaWktYT0RtMkR5VS1td0RFRkI5aWlQdkpLWmlfM2wxNWh4bzNPMUtmbUhQaU43MWZDYXlyMk5xZTBKNlZOeV9vcWRJWXJ2MGw5RmtpVjRNRUJUeg?oc=5",
+        "published": "Tue, 18 Aug 2026 23:06:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "【京都発・新プロバレーボールチーム】「KYOTO VALLEY」第一期生トライアウトを8月26日(水)に開催！ - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9LMkVEWnI5WXhrX054X29TWURxLUJkREs0bWxRNHktamxNMFkxMS0zeXFXRVp1RmpBNnhEdmJEc3FmY2V6cDJ4NnFVYnpSY1pkTmQ4Z0JTUWVLQ0dBOVduQ2VKZExGVXpzOVJiRTZMUGdta3dhWk1mallTUQ?oc=5",
+        "published": "Wed, 19 Aug 2026 18:30:26 GMT",
+        "publisher": "ニコニコニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260811517496.pdf",
+        "date": "2026-08-11 18:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805509201.pdf",
+        "date": "2026-08-05 11:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504252.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期 連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504254.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の権利確定に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595854.pdf",
+        "date": "2026-07-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587315.pdf",
+        "date": "2026-07-03 11:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584099.pdf",
+        "date": "2026-06-30 15:30:00"
+      },
+      {
+        "title": "米ドル建て無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577032.pdf",
+        "date": "2026-06-24 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260603560934.pdf",
+        "date": "2026-06-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの次世代イメージセンサーに関する戦略的提携に向けた基本合意のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518510.pdf",
+        "date": "2026-05-08 16:15:00"
+      }
+    ]
+  }
+}

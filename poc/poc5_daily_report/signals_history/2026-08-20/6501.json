@@ -1,0 +1,234 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-08-20T07:37:14+09:00",
+  "price_as_of": "2026-08-19",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 60,
+    "reasons": [
+      {
+        "reason": "直近14日以内に買いシグナルを発行済みであり、現在はそのポジションを継続監視する期間であるため、新規の買いは出しません。",
+        "evidence": "reference.recent_buy"
+      },
+      {
+        "reason": "ファンダメンタルズ専門家は、直近決算の大幅な増収増益と通期業績の上方修正（推測）を高く評価しており、業績は非常に好調と見ています。",
+        "evidence": "fundamental_view.points[0]"
+      },
+      {
+        "reason": "日立建機株式売却による特別利益計上やAI関連事業強化のニュースなど、事業構造改革と成長戦略の進展を示す複数の好材料が出ており、ファンダメンタルズは強気です。",
+        "evidence": "fundamental_view.points[1]"
+      },
+      {
+        "reason": "テクニカル専門家は、直近の大幅な株価下落とMACDのデッドクロスから短期的な下落トレンドへの転換を示唆しており、上値の重い展開を予想しています。",
+        "evidence": "technical_view.points[0], technical_view.points[1]"
+      },
+      {
+        "reason": "市場全体の地合いが「downtrend」と判断されており、全体相場からの下押し圧力が継続する可能性があります。",
+        "evidence": "reference.market_regime, fundamental_view.cautions[0]"
+      }
+    ],
+    "risks": [
+      "市場全体の地合いがdowntrendであるため、全体相場からの下押し圧力が継続し、株価がさらに下落する可能性があります。",
+      "テクニカル面では、MACDのデッドクロスやRSIの弱気圏推移が示すように、短期的な下落トレンドが継続するリスクがあります。",
+      "次回の日銀金融政策決定会合（2026年9月17日〜18日）が予定されており、金融政策に関する市場の思惑が株価に影響を与える可能性があります。",
+      "次回の決算発表日（2026年10月29日）まで、新たな好材料が出にくく、株価が膠着状態に陥る可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 60,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内に買いシグナルを発行済みであり、現在はそのポジションを継続監視する期間であるため、新規の買いは出しません。\",\n   \"evidence\": \"reference.recent_buy\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ専門家は、直近決算の大幅な増収増益と通期業績の上方修正（推測）を高く評価しており、業績は非常に好調と見ています。\",\n   \"evidence\": \"fundamental_view.points[0]\"\n  },\n  {\n   \"reason\": \"日立建機株式売却による特別利益計上やAI関連事業強化のニュースなど、事業構造改革と成長戦略の進展を示す複数の好材料が出ており、ファンダメンタルズは強気です。\",\n   \"evidence\": \"fundamental_view.points[1]\"\n  },\n  {\n   \"reason\": \"テクニカル専門家は、直近の大幅な株価下落とMACDのデッドクロスから短期的な下落トレンドへの転換を示唆しており、上値の重い展開を予想しています。\",\n   \"evidence\": \"technical_view.points[0], technical_view.points[1]\"\n  },\n  {\n   \"reason\": \"市場全体の地合いが「downtrend」と判断されており、全体相場からの下押し圧力が継続する可能性があります。\",\n   \"evidence\": \"reference.market_regime, fundamental_view.cautions[0]\"\n  }\n ],\n \"risks\": [\n  \"市場全体の地合いがdowntrendであるため、全体相場からの下押し圧力が継続し、株価がさらに下落する可能性があります。\",\n  \"テクニカル面では、MACDのデッドクロスやRSIの弱気圏推移が示すように、短期的な下落トレンドが継続するリスクがあります。\",\n  \"次回の日銀金融政策決定会合（2026年9月17日〜18日）が予定されており、金融政策に関する市場の思惑が株価に影響を与える可能性があります。\",\n  \"次回の決算発表日（2026年10月29日）まで、新たな好材料が出にくく、株価が膠着状態に陥る可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "直近で株価が大幅に下落し、MACDもデッドクロスを形成しており、弱気トレンドへの転換を示唆しています。市場全体の地合いも悪く、当面は上値の重い展開が予想されます。",
+      "points": [
+        {
+          "point": "直近5営業日で株価が大きく下落しており、特に前日は5%を超える下落で引け、売り圧力が強いことを示しています。",
+          "evidence": "price_technical.recent_5_days, price_technical.last_close=5225.0, price_technical.recent_5_days[4].change_pct=-5.24"
+        },
+        {
+          "point": "MACDがシグナルを下回るデッドクロスを形成しており、下降トレンドへの転換を示唆する売りのシグナルが出ています。",
+          "evidence": "price_technical.macd_histogram=-10.56"
+        },
+        {
+          "point": "株価は5日移動平均線（5555.8円）を大きく下回り、25日移動平均線（5208.6円）に接近しており、上昇勢いが失われています。",
+          "evidence": "price_technical.last_close=5225.0, price_technical.sma5=5555.8, price_technical.sma25=5208.6"
+        },
+        {
+          "point": "RSI14が38.4と弱気圏で推移しており、市場全体のレジームも「downtrend」と判断されており、銘柄を取り巻く環境は厳しいです。",
+          "evidence": "price_technical.rsi14=38.4, macro.market_regime.market_regime=\"downtrend\""
+        },
+        {
+          "point": "前夜のNY市場では日立製作所のADRが下落し、業種別セクターETFもマイナスで引けており、本日の日本市場の寄り付きでの売り圧力となる可能性があります。",
+          "evidence": "us_overnight.adr.change_1d_pct=-2.28, us_overnight.sector_proxy.change_1d_pct=-0.88"
+        }
+      ],
+      "cautions": [
+        "現在の株価は25日移動平均線に近く、ここからの下げ止まりや一時的な反発の可能性も考慮する必要があります。",
+        "60日騰落率はプラスであり、中期的なトレンドはまだ完全に崩れていない可能性があります。",
+        "前夜の米国市場での下落は寄り付きに織り込まれ、その後は自律反発に転じる可能性もゼロではありません。"
+      ],
+      "key_levels": {
+        "support": 5208.6,
+        "resistance": 5555.8
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 85,
+      "summary": "日立製作所は直近の四半期決算で大幅な増収増益を達成し、通期業績予想も上方修正されました。さらに、日立建機株式の売却による特別利益計上やAI関連事業強化のニュースなど、事業構造改革と成長戦略の進展を示す複数の好材料が出ています。",
+      "points": [
+        {
+          "point": "2027年3月期第1四半期決算は売上収益20%増、調整後営業利益39.5%増と大幅な増収増益となり、通期連結業績予想も上方修正（と推測）され、業績が非常に好調です。",
+          "evidence": "fundamentals.recent_important_disclosures[1].summary, fundamentals.earnings_trend.quarterly[0].diluted_eps=42.21, fundamentals.earnings_trend.quarterly[1].diluted_eps=41.98"
+        },
+        {
+          "point": "直近の開示で個別決算における投資有価証券売却益（日立建機株式売却による特別利益）の計上が発表され、同日のニュースでも日立建機売却とAI関連の取り組み加速が報じられており、事業構造改革と成長戦略の進展が明確です。",
+          "evidence": "disclosures.items[0].title=個別決算における投資有価証券売却益(特別利益)の計上に関するお知らせ, news.headlines[0].title=日立建機が日立製作所から「完全独立」 社名を「ランドクロス」に, news.headlines[4].title=日立製作所がAI駆動開発を加速 開発全工程で生産性3割向上へ, fundamentals.recent_important_disclosures[1].summary"
+        },
+        {
+          "point": "2026年7月における自己株式取得が実施され、累計でも継続的に取得が進んでおり、株主還元に対する積極的な姿勢が見られます。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "日本の製造業PMIは7ヶ月連続で拡大基調を維持しており、AI関連需要の強い伸びが報じられていることから、日立製作所の事業環境に追い風が吹いています。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.5, macro.japan_pmi.manufacturing.summary_en"
+        }
+      ],
+      "cautions": [
+        "市場全体がdowntrendの状況にあり、全体相場からの下押し圧力がかかる可能性があります。",
+        "次回の日銀金融政策決定会合が2026年9月17日〜18日に控えており、金融政策に関する市場の思惑が株価に影響を与える可能性があります。",
+        "次回の決算発表日が2026年10月29日に予定されており、それまでの期間は新たな材料が出にくい可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-11",
+    "days_ago": 9,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "日立建機が日立製作所から「完全独立」 社名を「ランドクロス」に - 朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE15RkdhMzlrMmJQM3FrRk5SYWxmRGJveERLSEZJdEhSVUZoTHhWNTdSc2lDclVRMUNZY0RFbTF1cUM5STlaNW8yVTh5ODZBYXhVUnoxbVIzMzVIdENZenhGQU5CMldGYUk?oc=5",
+        "published": "Wed, 19 Aug 2026 10:15:00 GMT",
+        "publisher": "朝日新聞"
+      },
+      {
+        "title": "(株)日立製作所【HTHIY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1sbW5DNlQwVHN5dlZ4RkdjaXVnbjJ4TGtWVWstLVdjcWtGcjdSdmlXSXRKVmdIdl9Fa0lIZ0YyUm5WU1lLZ1hFSWhmU2Q1eHhy?oc=5",
+        "published": "Wed, 19 Aug 2026 20:45:06 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "AIエージェント基盤が刷新する企業経営の在り方：日立製作所が挑む「カスタマーゼロ」変革／ 礒田有哉（日立製作所・研究開発グループ） - WirelessWire",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBDcl9GNG1iN0NCTFR3SkwxZC1ZQ2FpRzl0cExlbmNGN0tYMk5HS3Z5RTA2bFhlalhmX1FOcl9OTUVObVBYMmx3bUx4cFhaM00?oc=5",
+        "published": "Wed, 19 Aug 2026 21:01:42 GMT",
+        "publisher": "WirelessWire"
+      },
+      {
+        "title": "日立製作所が建機全株売却 協力関係は継続 - 沖縄タイムス社",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1nNDN2UmEwOGk4UUJuR0gtMFlQLTN2ZjRkUlMxWTlqUVVGbndfRDNHQjhqZFRKUEJIUFhJcWZEZ2Y4XzBtM2hUd2NJN04wZzlvcWtmbVBEOVFBQWpYdHc?oc=5",
+        "published": "Wed, 19 Aug 2026 18:59:00 GMT",
+        "publisher": "沖縄タイムス社"
+      },
+      {
+        "title": "日立製作所がAI駆動開発を加速 開発全工程で生産性3割向上へ - 日経クロステック",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE8zcDA0ckRFM3VNYWNETngtRzBYcGEzVWx1emtrdWN5YVVpMnY4NU9TaDI0elUtcDVqOUNkMUwteGMza3Z6WGhEbGFmWVNjNDB6VmJ0OTBNTVE3VlItMGhQM3pCSFdXeGpfbUJIQ05VOGR6Zw?oc=5",
+        "published": "Wed, 19 Aug 2026 22:04:00 GMT",
+        "publisher": "日経クロステック"
+      },
+      {
+        "title": "【速報】日立製作所が日立建機の株式売却 - 47NEWS",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5GeGotdEN3S1B2RkYxVTN0RFo5Mm5FdnppeFJncHlOS3FNVWN5cTFuWnlna2lNVXNnUVAwOGVtck1MSnJnVmo3Z29Waw?oc=5",
+        "published": "Wed, 19 Aug 2026 01:40:39 GMT",
+        "publisher": "47NEWS"
+      },
+      {
+        "title": "日立製作所が日立建機の株式売却 - nippon.com",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBvSDVsYWxWUncySFFGRndIMENaNE1vRDNQbkFyU0FNa2hGclpCeU9TN0JGalhSN053NWpOVWkwdDlqYjhfcVYwY2poVUNoY2xOWWR4Qm5HM1Y5Q3ZEVU1WVnhXZw?oc=5",
+        "published": "Wed, 19 Aug 2026 01:41:03 GMT",
+        "publisher": "nippon.com"
+      },
+      {
+        "title": "(株)日立製作所【6501】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE52QVE5d1lfd0MyMkM4cm1odXQ3VksydXpmVjlwSFpVZTRHblVZMGd5V3hyVnc5Q1lNZG5CU19yWDNKbGVhWk52VklQcUowcnJscDBscmpwSjhpTnNZM1hR?oc=5",
+        "published": "Wed, 19 Aug 2026 06:53:31 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "日立製作所、日立建機株の売却益１７９９億円計上 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE10ZVFhTHlBZ19oTE14WVhYa0c3M3BHbXlmbGQ1SFJ6S0NxUFhzdGlTMzJ5dzBJZU9PYjh2UUpJSDR1OU14ZmpuN3h2QmQ5ek5JM3F6NW8yRV9vVXdabjdwQUNxcV9fQlZfNDNZY01jUTdUMzNYSkFVUGNia9IBgAFBVV95cUxQbmY0WDFRdE93UTVJMnB5cWhhY2pncXVJdi1GeEtfU3plNkhPOWZUNm9qbUszbEN2YlJkNmVBRURtT2taUy1USVRfNVVNUDFFbTJCT2tXbzlhSE9KV19taGxNYWJPVXIzeGxLeDBaai1rMmIwQ1BibDRQa1N1YTg1cg?oc=5",
+        "published": "Wed, 19 Aug 2026 08:24:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "日立製作所が日立建機の株式売却 - 下野新聞社",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5iT3pDeUdoVFFJbUJOS0tGQVdtWjZ1N2RLMDRqWlZXYnJGaFl0N3psUFljUmltS09DTzFSeTlMUHlJTzVKWVF6ZDY2ZC1mcGRXTEstRVhtcnI5OTQ?oc=5",
+        "published": "Wed, 19 Aug 2026 01:40:39 GMT",
+        "publisher": "下野新聞社"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "個別決算における投資有価証券売却益(特別利益)の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260819523052.pdf",
+        "date": "2026-08-19 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804508474.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "（訂正）2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503298.pdf",
+        "date": "2026-07-30 13:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501771.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501801.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(モビリティ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566288.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(コネクティブインダストリーズ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566292.pdf",
+        "date": "2026-06-09 15:30:00"
+      }
+    ]
+  }
+}

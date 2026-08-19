@@ -1,0 +1,214 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-08-20T07:36:17+09:00",
+  "price_as_of": "2026-08-19",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "テクニカル専門家が強固な弱気見通し（strength=85）を示す一方で、ファンダメンタルズ専門家は中立（strength=55）であり、バイ・シグナルの必須条件（ファンダstrength≥70かつテクニカルneutral）を満たさないため。",
+        "evidence": "technical_view.stance=bearish (strength=85) / fundamental_view.strength=55"
+      },
+      {
+        "reason": "市場全体が下落トレンド（downtrend）にあり、個別銘柄への新規エントリーには慎重を期すべき局面であると判断したため。",
+        "evidence": "reference.market_regime=downtrend"
+      },
+      {
+        "reason": "直近で5日・25日移動平均線を共に割り込み、MACDの弱気シグナルが拡大していることから、短期的には一段の下値模索のリスクが排除できないため。",
+        "evidence": "technical_view.points[1]: price_technical.last_close=4648.0, price_technical.sma25=4746.48"
+      }
+    ],
+    "risks": [
+      "市場全体の地合い悪化に伴う連れ安およびボラティリティの拡大（market_regime=downtrend）",
+      "2026年9月17日〜18日の次回日銀金融政策決定会合に向けた金利上昇によるバリュエーション調整リスク",
+      "テクニカル上の節目である期間安値 4361.0 円を割り込んだ場合の下落加速"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 50,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"テクニカル専門家が強固な弱気見通し（strength=85）を示す一方で、ファンダメンタルズ専門家は中立（strength=55）であり、バイ・シグナルの必須条件（ファンダstrength≥70かつテクニカルneutral）を満たさないため。\",\n      \"evidence\": \"technical_view.stance=bearish (strength=85) / fundamental_view.strength=55\"\n    },\n    {\n      \"reason\": \"市場全体が下落トレンド（downtrend）にあり、個別銘柄への新規エントリーには慎重を期すべき局面であると判断したため。\",\n      \"evidence\": \"reference.market_regime=downtrend\"\n    },\n    {\n      \"reason\": \"直近で5日・25日移動平均線を共に割り込み、MACDの弱気シグナルが拡大していることから、短期的には一段の下値模索のリスクが排除できないため。\",\n      \"evidence\": \"technical_view.points[1]: price_technical.last_close=4648.0, price_technical.sma25=4746.48\"\n    }\n  ],\n  \"risks\": [\n    \"市場全体の地合い悪化に伴う連れ安およびボラティリティの拡大（market_regime=downtrend）\",\n    \"2026年9月17日〜18日の次回日銀金融政策決定会合に向けた金利上昇によるバリュエーション調整リスク\",\n    \"テクニカル上の節目である期間安値 4361.0 円を割り込んだ場合の下落加速\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 85,
+      "summary": "中期的な下落トレンドが継続する中で、直近では5日・25日移動平均線を共に割り込み、MACDの弱気シグナルも拡大しており、一段の下値模索が警戒される局面です。",
+      "points": [
+        {
+          "point": "中期トレンドが明確な下落基調にあり、対TOPIXでも大幅に劣後しているため、構造的な売り圧力が継続していると判断します。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-12.63, price_technical.trend_60d.relative_to_topix_60d_pct=-12.49"
+        },
+        {
+          "point": "直近の急落により、昨日まで維持していたSMA25を大きく割り込み、短期的なサポートを失っています。",
+          "evidence": "price_technical.last_close=4648.0, price_technical.sma25=4746.48"
+        },
+        {
+          "point": "MACDがデッドクロス状態にあり、かつヒストグラムがマイナス圏で拡大しているため、下落のモメンタムが強まっています。",
+          "evidence": "price_technical.macd_histogram=-21.49, price_technical.macd_signal=56.19"
+        },
+        {
+          "point": "市場全体が「downtrend」レジームに転換しており、個別銘柄にとっても強い逆風が吹いています。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.indices[1].change_1d_pct=-3.16"
+        }
+      ],
+      "cautions": [
+        "前夜のADR（-0.24%）やセクターETFは小幅な下げに留まっていますが、国内市場の強い売り地合いを考慮すると、寄り付き後の戻りは限定的となるリスクがあります。",
+        "RSIが42.2と低下していますが、30を下回る「売られすぎ」水準には至っておらず、値幅調整がさらに進む余地が残されています。"
+      ],
+      "key_levels": {
+        "support": 4361.0,
+        "resistance": 4747.2
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "2026年3月期の減益予想により成長の踊り場にある中、新規の海外投資や資本提携などの材料が出ているが、市場全体の調整局面と相まって強気判断には至らない。",
+      "points": [
+        {
+          "point": "2026年3月期の通期純利益は8,005億円と前期（9,507億円）から減益の見通しであり、EPSも235.8円から209.78円へ低下する計画となっている。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "2026年8月19日にASEAN中小企業投資ファンドの200億円規模の資金調達や、リゾートトラストとの資本業務提携など、成長投資に関する複数の材料が直近で発表されている。",
+          "evidence": "news.headlines"
+        },
+        {
+          "point": "バリュエーション面では予想PER 21.92倍、PBR 1.767倍となっており、配当利回り2.62%も含め、商社セクターとしては過小評価されている水準とは言い難い。",
+          "evidence": "fundamentals.valuation"
+        },
+        {
+          "point": "日本の製造業PMIが54.5と7ヶ月連続で拡大圏を維持しており、世界的な製造・投資需要の回復は商社業務にとってポジティブな外部環境といえる。",
+          "evidence": "macro.japan_pmi.manufacturing"
+        }
+      ],
+      "cautions": [
+        "TOPIXが25日移動平均線を下回り、市場全体がdowntrend（下落トレンド）にある点。",
+        "次回の決算発表（2026年11月3日）および日銀金融政策決定会合（2026年9月17日〜18日）を控えた不透明感。",
+        "日本10年債利回りが2.934%と高い水準にあり、金利上昇によるバリュエーション調整のリスク。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "三菱商事、ASEAN中小企業投資で200億円調達へ 地銀7行超が参画 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9pcTZyYzdrYlB4R3l0MjBxcm5nNjZfc0pmR0hEZEZhbmptelNEVnpvWng0Ul9IOHk4NTlnamljRjlQVlFIN1c4dktlRlNFYWRjdUVzUm9xVS1QTTFZNFhRckZzVGJtd3pyci1uc0h0SlZ2WjNK?oc=5",
+        "published": "Wed, 19 Aug 2026 21:05:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "三菱商事が東南アジアへの投資強化、傘下ファンドが２００億円規模の運用資金調達にめど（読売新聞オンライン） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA4ZUFQYlZ0blRUU0V4UjJhbml5ZTdxYlhmTDFGeTMyQXg5XzVlMjl4TTlpSkdfSXBTT1VFVlhWTWZnamhRNVl4WDhqNzFyM1drdE1pMi1aQWlMOXZoUXBUYkhQbnI5cmJRNFhoaWxPUmRFSFZicmtMMV9BMk1HSW8?oc=5",
+        "published": "Wed, 19 Aug 2026 16:01:42 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "三菱商事 東南アに２００億円 傘下ファンド 未上場企業向け - yomiuri.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE94WEJtT0F6UjJuVWZfLTVhY2hEWElzM0kySF9ONXJ0OHh1bW1HZ1Zfc2NubmVLYzVSVnFnbDVLZ2NDN013UDNVUVBLVV9oNVVJZE9Cd0FmMm50SS1zRTBtZnc4bw?oc=5",
+        "published": "Wed, 19 Aug 2026 20:00:00 GMT",
+        "publisher": "yomiuri.co.jp"
+      },
+      {
+        "title": "リゾートトラスト、三菱商事と海外事業で連携 傘下企業が資本提携 - nikkei.com",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5fTHFfcWNja1dOaDhjeWdmVmJ1a0ZkMGZNamR5UG9zVmtXcHRLWGRIRVNpTnRPYUoxSk91ZEhBM3lZaDRvcXRRcDJNUTdHaDVpV3RQR05zaWFobnJ4dTVsRFEzblJETm9MWlJ1OQ?oc=5",
+        "published": "Wed, 19 Aug 2026 07:59:51 GMT",
+        "publisher": "nikkei.com"
+      },
+      {
+        "title": "リゾートトラスト---もみ合い、グループ会社が三菱商事と資本業務提携 - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1WOEN5TFlrbEFlTlNSV3pXRVpOWEtwTmprR1FtZTVRX0hVT0NlSmt5cGo5YVBxZE9FTlY5bDd3WFQ1UjN1WTF0SVk5S2liZDhqRHc?oc=5",
+        "published": "Wed, 19 Aug 2026 04:11:22 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "リゾートトラスト---もみ合い、グループ会社が三菱商事と資本業務提携 執筆 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9OR0ZsMXpoaElMbWNaWW03b2EtQmlQN244Y1U0NUZneWl1dmNyT3NPR3VsYnVvUjhkcXhNX0plSGpLRmI3NEFOcHc4OWNLaEw2ZW0yc0ZvYzRkcGxlRGJwSW52SWFPR002aG9MSW9WZ2s?oc=5",
+        "published": "Wed, 19 Aug 2026 04:11:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      },
+      {
+        "title": "リゾートトラスト---もみ合い、グループ会社が三菱商事と資本業務提携 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNZGtFdk5oUEg2SkF6b3RzSjlaUUk0UEpZbG9vSEhJOXhRRmhYOU84U2RRT01JbkNrbTYxdmxIYUpWREd5a1p1Q1pCdkRZazREWE9nRzdrWUxtRjBBbWtrOGd4M2hSTUxRempTUUpvemNrYUhTak5NX2NMS3BDWVd1YThvN2JiTXVYNWx3MNIBjAFBVV95cUxNZGtFdk5oUEg2SkF6b3RzSjlaUUk0UEpZbG9vSEhJOXhRRmhYOU84U2RRT01JbkNrbTYxdmxIYUpWREd5a1p1Q1pCdkRZazREWE9nRzdrWUxtRjBBbWtrOGd4M2hSTUxRempTUUpvemNrYUhTak5NX2NMS3BDWVd1YThvN2JiTXVYNWx3MA?oc=5",
+        "published": "Wed, 19 Aug 2026 04:11:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "三菱商事が東南アジアへの投資強化、傘下ファンドが２００億円規模の運用資金調達にめど (読売新聞オンライン) - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPRzdXUDNuTXZNa2RVek5oempWU1pjVzJTVTZyVXg1WEc5QTJPTXc0ZHBnN1dOTWFvMEk5T05IOVF5Z2stZmE2ZmtVU2QtQndPRTJDSEZCOXRYb2hqdkRWRER1SnN0MHlNLU9hM0hYUzhPS19JQXRUUVVSZUZFQncyZFVvN083Z2F3S0hYMDJB?oc=5",
+        "published": "Wed, 19 Aug 2026 17:07:21 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "田辺ファーマ、欧社に希少疾患薬候補を導出 - 化学工業日報 電子版",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE40WE15bll5VWVZOUMwRnZzekZkVUgtUTduRFduRnpCNHpnaUxtSERiMHR6LWc1OTBmVTRLSGRuRzIwdTBpbjdGRDdRTG52V0NqZW1R?oc=5",
+        "published": "Wed, 19 Aug 2026 20:03:12 GMT",
+        "publisher": "化学工業日報 電子版"
+      },
+      {
+        "title": "【本日のおすすめ銘柄】リゾートトラスト、グループ会社が三菱商事と資本業務提携(フィスコ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQWVpjcW5MVWRSdVZnNmprUm9ObFQ1Z0FrYTY0QXBPQ0tNc2NzUW5KQVBwTFJSUG5LN3B6VnhydFc5azdmU0E4Uk1Pd2pPM1BKd3o2bGJlcUIybmdGd19LMVJ3QzBVUGFQdWZwWnVLR1RaNzdNNlg4QU5CdllpcEU3c25uUjYwRUE?oc=5",
+        "published": "Wed, 19 Aug 2026 03:00:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期第1四半期決算短信〔IFRS〕(連結）（監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510489.pdf",
+        "date": "2026-08-06 15:25:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505791.pdf",
+        "date": "2026-08-03 14:00:00"
+      },
+      {
+        "title": "特定子会社の異動（子会社の特定子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260714593288.pdf",
+        "date": "2026-07-15 10:00:00"
+      },
+      {
+        "title": "子会社間の合併及び特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552595.pdf",
+        "date": "2026-05-29 09:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C2プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539898.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C3プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539905.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C4プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539910.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C5プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539918.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C6プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539939.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515679.pdf",
+        "date": "2026-05-01 14:00:00"
+      }
+    ]
+  }
+}

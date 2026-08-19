@@ -1,0 +1,222 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-08-20T07:35:36+09:00",
+  "price_as_of": "2026-08-19",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の評価が strength 60 (neutral) であり、buy の必須条件である strength 70 以上を満たさない。",
+        "evidence": "fundamental_view.strength=60 / fundamental_view.summary"
+      },
+      {
+        "reason": "直近14日以内（2026-08-07）に buy シグナルを出しており、現在はその後の推移を継続監視すべきフェーズである。",
+        "evidence": "reference.recent_buy.date=2026-08-07"
+      },
+      {
+        "reason": "テクニカル面で5日線が25日線を下回るデッドクロスが発生しており、短期的な下落トレンドへの警戒が必要である。",
+        "evidence": "technical_view.points[0]: price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\""
+      },
+      {
+        "reason": "大規模な個人情報漏洩に伴う行政指導や不採算事業の撤退が報じられており、好決算の材料を打ち消す不透明感がある。",
+        "evidence": "fundamental_view.points[2]: 1,223万人分の個人情報漏洩に関する行政指導"
+      },
+      {
+        "reason": "市場全体が downtrend レジームにあり、大型株として指数連動の売り圧力を受けやすい地合いである。",
+        "evidence": "reference.market_regime=\"downtrend\""
+      }
+    ],
+    "risks": [
+      "1,200万人超の個人情報漏洩に伴う社会的信用の失墜および再発防止に向けた追加コストの発生",
+      "フードデリバリー「menu」のサービス終了・解散に伴う特別損失の計上可能性",
+      "次回日銀金融政策決定会合（9/17-18）に向けた金利上昇観測による高配当株の相対的魅力低下",
+      "市場全体の地合い悪化（downtrend）による、個別ファンダメンタルズを無視したパッシブ売りの継続"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の評価が strength 60 (neutral) であり、buy の必須条件である strength 70 以上を満たさない。\",\n   \"evidence\": \"fundamental_view.strength=60 / fundamental_view.summary\"\n  },\n  {\n   \"reason\": \"直近14日以内（2026-08-07）に buy シグナルを出しており、現在はその後の推移を継続監視すべきフェーズである。\",\n   \"evidence\": \"reference.recent_buy.date=2026-08-07\"\n  },\n  {\n   \"reason\": \"テクニカル面で5日線が25日線を下回るデッドクロスが発生しており、短期的な下落トレンドへの警戒が必要である。\",\n   \"evidence\": \"technical_view.points[0]: price_technical.sma5_vs_sma25=\\\"dead(5日線が25日線の下)\\\"\"\n  },\n  {\n   \"reason\": \"大規模な個人情報漏洩に伴う行政指導や不採算事業の撤退が報じられており、好決算の材料を打ち消す不透明感がある。\",\n   \"evidence\": \"fundamental_view.points[2]: 1,223万人分の個人情報漏洩に関する行政指導\"\n  },\n  {\n   \"reason\": \"市場全体が downtrend レジームにあり、大型株として指数連動の売り圧力を受けやすい地合いである。\",\n   \"evidence\": \"reference.market_regime=\\\"downtrend\\\"\"\n  }\n ],\n \"risks\": [\n  \"1,200万人超の個人情報漏洩に伴う社会的信用の失墜および再発防止に向けた追加コストの発生\",\n  \"フードデリバリー「menu」のサービス終了・解散に伴う特別損失の計上可能性\",\n  \"次回日銀金融政策決定会合（9/17-18）に向けた金利上昇観測による高配当株の相対的魅力低下\",\n  \"市場全体の地合い悪化（downtrend）による、個別ファンダメンタルズを無視したパッシブ売りの継続\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "短期的なテクニカル指標はデッドクロスやMACDの弱気形状を示しているが、中期騰落率は市場をアウトパフォームしており、強弱が対立する局面である。",
+      "points": [
+        {
+          "point": "5日線が25日線を下回るデッドクロスが発生しており、短期的な移動平均線が上値抵抗として意識されやすい形状となっている。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\", price_technical.sma5=2847.1, price_technical.sma25=2895.56"
+        },
+        {
+          "point": "MACDがシグナルを大きく下回り、ヒストグラムもマイナス圏で推移しているため、短期的なモメンタムは下向きである。",
+          "evidence": "price_technical.macd=-2.25, price_technical.macd_signal=11.26, price_technical.macd_histogram=-13.51"
+        },
+        {
+          "point": "中期トレンド（60日騰落率）は+7.82%とプラスを維持し、TOPIX対比でも+7.96%と相対的な強さを見せており、下値の堅さが期待される。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=7.82, price_technical.trend_60d.relative_to_topix_60d_pct=7.96"
+        }
+      ],
+      "cautions": [
+        "市場レジームがdowntrendと判定されており、TOPIXが25日線を下回るなど市場全体の地合いが個別銘柄の重石となる可能性がある。",
+        "前夜のADRおよびセクターETFはプラス圏で推移しているが、寄り付き段階で織り込まれる可能性が高く、買い一巡後の動きに注視が必要。"
+      ],
+      "key_levels": {
+        "support": 2691.5,
+        "resistance": 2895.56
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "第1四半期の連結営業利益が前年同期比21.1%増と非常に好調で、大規模な自社株買いも継続中ですが、直近で大規模な個人情報漏洩に伴う行政指導や不採算事業の撤退が報じられており、短期的にはネガティブなニュースと相場全体のダウントレンドが重石となります。",
+      "points": [
+        {
+          "point": "2027年3月期第1四半期決算が大幅な増収増益で着地し、通期進捗も順調であること。モバイル収入や金融、AIインテグレーションが業績を牽引している。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary (2026-08-07)"
+        },
+        {
+          "point": "総額3,000億円を上限とする大規模な自己株式取得を継続しており、2026年8月6日時点で既に約2,605億円（進捗率約86%）を消化するなど、強力な需給下支え要因となっている。",
+          "evidence": "fundamentals.recent_important_disclosures[1].summary"
+        },
+        {
+          "point": "直近の2026年8月19日に、1,223万人分の個人情報漏洩に関する個人情報保護委員会からの行政指導、およびフードデリバリー「menu」のサービス終了・解散が相次いで報じられ、短期的にはガバナンスへの懸念と事業再編コストが意識される。",
+          "evidence": "news.headlines"
+        }
+      ],
+      "cautions": [
+        "1,200万人超の個人情報漏洩に伴う行政指導による社会的信用の低下および追加の再発防止コストの発生",
+        "市場環境が downtrend（TOPIX 25日線の下、かつ5日騰落率マイナス）にあり、大型株として指数連動の売り圧力を受けやすい状況",
+        "2026年9月17日〜18日の日銀金融政策決定会合に向けた金利上昇観測による、高配当・ディフェンシブ株の相対的な魅力低下",
+        "フードデリバリー撤退に伴う減損や解散費用の発生可能性"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-07",
+    "days_ago": 13,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "KDDI子会社のmenu、サービス終了・解散へ - ケータイ Watch",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE0zWUh1bThQWkl1MkZmSGRlR2pRZFp4ZVdLWHhVMGhjLVY2dUxNNXNwS0syb1B5SmdIYVI2NkE0RlBqRUYwUTg4WmJQRDVDWXRodWFSY1g0ZHJUYy1lS1duREdyTHlrWVE?oc=5",
+        "published": "Wed, 19 Aug 2026 05:56:52 GMT",
+        "publisher": "ケータイ Watch"
+      },
+      {
+        "title": "KDDI系料理宅配「menu」が9月でサービス終了 競争環境激化で - nikkei.com",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1hYWJaTjZ4eXM2c3NEdFB6RE9XQVRacVB3Vjk5Rk5tblNvNjZ3M2g5RlBnZEVvWno1SGVuTmdUdFJ2MzVITnJSOHBiS1NGSnF2MkFBOWxIZUs0TDVWZ3lMbjRLQURub1gzYVVrWA?oc=5",
+        "published": "Wed, 19 Aug 2026 06:42:22 GMT",
+        "publisher": "nikkei.com"
+      },
+      {
+        "title": "個人情報保護委 KDDIに行政指導 メールアドレスなど流出で - news.web.nhk",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9VbnZUT0dlMW5YX0drVXdQZlFHUi1ta3pNZ3k3SmRyb3dxMjZBeGJHUDJRUnllT1lhTDA5WThsQlplMFRCTFIyNEh3Y0x2VWFNeDA1czZoZXMteHUzNWUw?oc=5",
+        "published": "Wed, 19 Aug 2026 13:50:24 GMT",
+        "publisher": "news.web.nhk"
+      },
+      {
+        "title": "個人情報保護委員会、KDDIに行政指導 利用者の個人情報1200万人超分漏えいで 10月19日までの報告求める - fnn.jp",
+        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5QbzNNZWNuRHM0el8xX1I0OXlqRnBuTEhyUlpqcEx4SFBoV2xKSHBLRjBHMldRcHpoVmluNldJbkxzb1VKczhybmE5YTFjZw?oc=5",
+        "published": "Wed, 19 Aug 2026 21:31:00 GMT",
+        "publisher": "fnn.jp"
+      },
+      {
+        "title": "KDDI漏えい 政府が行政指導 再発防止求める - 沖縄タイムス社",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBldTVsZVlVdURmZXhFeVRLUzBlYllWeU9HUVljSFJ5WlZNZjN3U190UDByYlBRdi1ybjU0WDhRdURiZTRrdElBRGRoN3NKVTRBYUptTmx2aHBjNERHTVE?oc=5",
+        "published": "Wed, 19 Aug 2026 18:57:00 GMT",
+        "publisher": "沖縄タイムス社"
+      },
+      {
+        "title": "フードデリバリーサービス「menu」9月30日で終了へ KDDI発表 送料や手数料無料のサービス増加…競争激しく - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5tOEFsZVRRT2VtU3dQeUVNV0pZZmxCX2FxX0o1VVJRNU5BeUFIb3AtMHZWSVNYVUF6Sm5FOUZweWdNdklIRGpuMUpQbjJOcTZSSzByXzl0RQ?oc=5",
+        "published": "Wed, 19 Aug 2026 07:55:39 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "個人情報保護委、KDDIに行政指導＝1223万人分の情報漏えい(時事通信) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNdkZ3bEFVSWdqSU9kNUFaTmY5eFJ1c1p6NGZic0NMRXdfTWtpQzIwYVJJR2hQZS1FRV95SkprVmhya0JOVVkwQ3l2OUdLUVVGOXhfY05iclZTN1l1aG93bkllR1k4QnJ6dXJPQnF0LWs1QVZHQkx3Nk1CYnJXTm43akhBbU1OQnM?oc=5",
+        "published": "Wed, 19 Aug 2026 13:39:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "個人情報保護委員会、KDDIと一部ISPを指導、サイバー攻撃で1,223万人のメールアドレス 情報漏洩で - 合同会社ロケットボーイズ",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOY0otWEg3SmlyWGxTOGJ0cWM3cWlTT0c5aGlVR0FWYnE5XzExQlQ1YXdBWklybDVKUUVSa2V2OXJCUnFybzh2NFFONFR0U0s2YmtGYmJ6SUVIUjExYkNOcllkM1BYdWUxaVFvUVE5RzZTZDBrZ0ZJWk02ZUJhY3l5RjF3aV9uVnZqQUpTdlNfcy1sRDlkQUdyVVk0RlFNUlE?oc=5",
+        "published": "Wed, 19 Aug 2026 21:00:32 GMT",
+        "publisher": "合同会社ロケットボーイズ"
+      },
+      {
+        "title": "フードデリバリー「menu」9月で終了 KDDIが発表「市場取り巻く競争環境変化」 - 産経ニュース",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFAzWDZ0MzJ3c3VtN0xhSkd4Y0RTOVdEZ3kyazJPOEVnZ1AybHU5U0xnUnk3TWZ5ckt6NWFVVWhucnFCc0swdEdSRWRkQy1oVWQxdlU3Zk1YNlVkeUZ4UDhxd28wVlFoa1NUQXhoRnUwd0JBaHdSN1E?oc=5",
+        "published": "Wed, 19 Aug 2026 06:44:31 GMT",
+        "publisher": "産経ニュース"
+      },
+      {
+        "title": "個情委、メール漏えいでＫＤＤＩ行政指導 - 京都新聞デジタル",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFA1Wk5qV1hVQU95M0wyYTlsdzg4RXYzMk9vaWVMR3hfOXduTG1paTdZVXZIQTR0cU03X0t1WlRic0tNVDZCWERFS1lnUjBtZ1BNbW9OdnYwUWk?oc=5",
+        "published": "Wed, 19 Aug 2026 10:21:57 GMT",
+        "publisher": "京都新聞デジタル"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      }
+    ]
+  }
+}
