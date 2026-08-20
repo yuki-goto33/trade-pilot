@@ -1,0 +1,211 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-08-21T07:34:42+09:00",
+  "price_as_of": "2026-08-20",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ面で営業利益の減少トレンド（減益計画）が続いており、売上成長に対して収益性が悪化している。buyの基準となる確信度（strength 70以上）に達していない。",
+        "evidence": "fundamental_view.points[0]: 営業利益の継続的な減少トレンド"
+      },
+      {
+        "reason": "テクニカル面ではゴールデンクロスが発生し強気（strength 75）だが、ファンダメンタルズが中立の段階でテクニカルが先行する形となっており、材料の織り込みが進んでいる可能性がある。",
+        "evidence": "technical_view.stance=bullish (strength=75), reference.last_close=3066.0"
+      },
+      {
+        "reason": "PBR 1倍割れや自社株買いといった下値支え要因はあるものの、VIX指数の上昇や米国のセクター安など外部環境の不透明感が強く、即座のエントリーには適さない。",
+        "evidence": "fundamental_view.points[1]: PBR 0.973, technical_view.cautions[1, 2]"
+      }
+    ],
+    "risks": [
+      "2026年9月17日〜18日の日銀金融政策決定会合に伴う為替変動（円高）が輸出採算を悪化させるリスク。",
+      "北米・カナダ間の関税交渉の進展次第で、期待されていた好材料が剥落する可能性。",
+      "通期業績予想（純利益15.5%減）に対する進捗が芳しくない場合の更なる下押しリスク。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 55,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ面で営業利益の減少トレンド（減益計画）が続いており、売上成長に対して収益性が悪化している。buyの基準となる確信度（strength 70以上）に達していない。\",\n      \"evidence\": \"fundamental_view.points[0]: 営業利益の継続的な減少トレンド\"\n    },\n    {\n      \"reason\": \"テクニカル面ではゴールデンクロスが発生し強気（strength 75）だが、ファンダメンタルズが中立の段階でテクニカルが先行する形となっており、材料の織り込みが進んでいる可能性がある。\",\n      \"evidence\": \"technical_view.stance=bullish (strength=75), reference.last_close=3066.0\"\n    },\n    {\n      \"reason\": \"PBR 1倍割れや自社株買いといった下値支え要因はあるものの、VIX指数の上昇や米国のセクター安など外部環境の不透明感が強く、即座のエントリーには適さない。\",\n      \"evidence\": \"fundamental_view.points[1]: PBR 0.973, technical_view.cautions[1, 2]\"\n    }\n  ],\n  \"risks\": [\n    \"2026年9月17日〜18日の日銀金融政策決定会合に伴う為替変動（円高）が輸出採算を悪化させるリスク。\",\n    \"北米・カナダ間の関税交渉の進展次第で、期待されていた好材料が剥落する可能性。\",\n    \"通期業績予想（純利益15.5%減）に対する進捗が芳しくない場合の更なる下押しリスク。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "短期移動平均線のゴールデンクロス発生に加え、直近で出来高を伴う力強い反発を見せており、中期的なトレンドも市場平均を上回る堅調さを維持しています。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日線を上回るゴールデンクロスが発生し、当日の株価も両線の上へ浮上したことで短期的な底打ち感が出ています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden\", price_technical.last_close=3066.0"
+        },
+        {
+          "point": "直近の営業日において前日比+4.25%の大幅上昇を記録し、出来高も直近5日間で最大となる30,687,200株に急増しており、強い買い戻し圧力が確認できます。",
+          "evidence": "price_technical.recent_5_days[4]"
+        },
+        {
+          "point": "60営業日騰落率がプラス圏を維持しており、対TOPIX相対騰落率も+0.16%と市場平均を上回るパフォーマンスを示しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=1.46, price_technical.trend_60d.relative_to_topix_60d_pct=0.16"
+        }
+      ],
+      "cautions": [
+        "MACDがシグナルを依然として下回っており、ヒストグラムもマイナス圏にあるため、モメンタムの完全な好転には至っていません（price_technical.macd_histogram=-0.58）。",
+        "前夜の米国市場で一般消費財セクターETF（XLY）が-1.61%と下落しており、寄り付き後の持続性に不透明感があります（us_overnight.sector_proxy）。",
+        "VIX指数が7.52%急上昇しており、全体相場の波乱に伴う連れ安リスクに注意が必要です（macro.indices[3]）。"
+      ],
+      "key_levels": {
+        "support": 2983.7,
+        "resistance": 3233.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "増収傾向にある一方で本業の営業利益が数期連続で減少する減益トレンドにあり、収益性の低下が懸念されます。直近の北米関税に関する好材料や自社株買いが下値を支えるものの、ファンダメンタルズ面で積極的な買いを推奨する決定打に欠ける状況です。",
+      "points": [
+        {
+          "point": "営業利益の継続的な減少トレンド。2024年3月期から2027年3月期（予想）にかけて、売上高が成長する一方で営業利益は段階的に縮小する見通しにあり、利益率の悪化が顕著です。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.recent_important_disclosures"
+        },
+        {
+          "point": "株主還元の強化と割安感。PBRが1倍を下回る水準（0.973）で推移しており、決算発表に合わせて自社株買いおよび消却を決定したことは資本効率改善への意欲として評価されます。",
+          "evidence": "fundamentals.valuation.price_to_book=0.973, disclosures[2026-08-04]"
+        },
+        {
+          "point": "北米市場におけるポジティブな外部環境の変化。米国がカナダ自動車関税の引き下げを検討しているとの報道は、同社の主要市場における競争力維持に寄与する材料です。",
+          "evidence": "news[2026-08-20]"
+        },
+        {
+          "point": "堅調な事業環境とコスト圧力の混在。製造業PMIが54.5と拡大圏にあり日銀短観のDIも高い水準ですが、中小企業の仕入価格と販売価格のDI差が大きく、サプライチェーン全体でのコスト負担増が利益を圧迫している可能性があります。",
+          "evidence": "macro.japan_pmi.manufacturing=54.5, macro.boj.tankan.large_manufacturing.current_di=22.0, macro.jfc_sme_survey"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日〜18日の日銀金融政策決定会合に伴う為替・金利変動リスク（輸出採算への影響）。",
+        "通期業績予想における営業利益の前期比9.7%減、純利益の15.5%減という大幅減益計画の未達リスク。",
+        "米国・カナダ間の関税交渉の進展次第では、期待された好材料が剥落する可能性。"
+      ],
+      "key_levels": {
+        "support": 2963.5,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "トヨタ自動車(株)【7203】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5HN0FfRUkwaDBoM1BTTk1QZFM2QzVvTHJyTDMyVWI3eEFyUXpQY3EwNUdmZ1RmOWNDUC01UkQ5OE9CZ1ZaY0lJMWtneWlUbWtyeGluSTEzbDA2WndkNkdN?oc=5",
+        "published": "Thu, 20 Aug 2026 06:52:44 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "トヨタ自動車とSTATION Ai、交通安全分野の新サービス創出に向けスタートアップなどを募集 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5ERG9xVXpFWnJ5czNHQVZ5RklXM0RBVHFGVUlqZWZWWWZndkkySW9SczZOWHZ6RndOSVBtQnlDNHVRU2JjRFpIa3hqUDlpYktFWlRXQ0FYc3FjQVlTY0xObFlqRTFaQm5JQ0E?oc=5",
+        "published": "Thu, 20 Aug 2026 01:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "トヨタとSTATION Ai、交通安全の新サービス創出へスタートアップ募集 2枠でPoCを検討 - AMP[アンプ]",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFB3aEMyWEFMU1BoRkZtNGpCbTE4RGJBTTNkOGxGSDk4SDF2U0lxM3E2SmtKemRFSnljSnZMZjU5c1FPWmpkaFBkMmEycGtCb0h6Z01PMWVQLXB6MjFYLXc?oc=5",
+        "published": "Thu, 20 Aug 2026 14:14:01 GMT",
+        "publisher": "AMP[アンプ]"
+      },
+      {
+        "title": "トヨタ自動車の株価が本日上昇している理由とは 執筆 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5OMDdVOVlzY0ZBNGMxTkwzSU9uNU1JOVJWV2w1ZXktZXFHUTZ0ZGlHeHJqNHczaU5ITl8yZXZ0WlRJQi1TbVphRTcyTXNkcy1RMjA5U1FxaUlqSUxBaExOZnhZRHFVX1hOYnBIc1hYalVZOTRiNkEw?oc=5",
+        "published": "Thu, 20 Aug 2026 03:56:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      },
+      {
+        "title": "「我が身を隠すためだった」豊田章男が明かした、本名すら名乗れなかった“苦い過去” - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1KbGJyUHNMMGwzSjYwUTBsQUNRa0Q1MEgtYVhoM0pSTkgtV1gyX01fdjNWS09FczluSGwtalg1YWozcGxkMVFxc2Y2b0fSAU9BVV95cUxNTTMxbVMwOUFsUTZKZGJwbF84MnlHVGFZemtzd2VIbF9XRndybTdzWkIxS1JvY2QwN3AySmNtQzBhLUtRS2VqeG9QT1RNTlJz?oc=5",
+        "published": "Thu, 20 Aug 2026 08:00:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "災害への備え学ぶ検定開催 岡山トヨタ自動車８店で８０人参加 - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5CcEY3dlBoWTZVN2VfUmY2THczbnp2OFJxWTF5bFNBUkxGQ3VvWi00OFROaTdvUjJZb2c5ZTZ6SWJ4VGJ6YVRIUHhoRm03d0VHTXgwR1lzMTJkclZnMEFtXzVXYV9jR3VzWVhDX2dpTDdhYVE?oc=5",
+        "published": "Wed, 19 Aug 2026 22:35:04 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "トヨタ・モビリティ基金、通学路の交通安全を親子で学ぶアプリ「ナナまも」試行開始 1枚目の写真・画像 - レスポンス（Response.jp）",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5zVXJQLVdHRmJyOW5fcUQ1RU54dEE4NVFIbGxVYWM1TXFORzJhQ2tETzUxcDllV2x3RU5PbmV5ZDVTRl8wNURfQTI4cm13SUNDanZ4ZFN4LVZqUkZRVFJ5V0pyQ1ZVZ3JWcFJiTw?oc=5",
+        "published": "Thu, 20 Aug 2026 06:37:54 GMT",
+        "publisher": "レスポンス（Response.jp）"
+      },
+      {
+        "title": "カローラ・サニー誕生60周年を記念、貴重な歴代量販車が集結！トヨタ自動車の文化施設であるトヨタ博物館「日本のモータリゼーション -マイカー元年から60年-」 - Dtimes",
+        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBDcURJa1ZwblNfRWRxaE4xR2JoeGpGY2h1Y1VqaEJiaER6SEJ6MkJWR3hnYkE3X1B3VmZMUnpBUU43dXdXRmc?oc=5",
+        "published": "Thu, 20 Aug 2026 03:27:35 GMT",
+        "publisher": "Dtimes"
+      },
+      {
+        "title": "奥田碩さん「しがらみにとらわれず物事進める方」 トヨタ内山田さんら悼む声：ニュース - 中日BIZナビ",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1yZlpuRHpuYnM2WHU5SUdxQTJ6aHh4ckJaVmNieUNVMlc3Z05RV0x3dFF1MHRZT0NMaWRxYy02UkNnTDItcFl5RGhzU0tSNEhLcFpRZTZFXzBxMWhlREtqTzhWdw?oc=5",
+        "published": "Thu, 20 Aug 2026 01:36:28 GMT",
+        "publisher": "中日BIZナビ"
+      },
+      {
+        "title": "米国がカナダ自動車関税引き下げを検討、トヨタ自動車・ホンダ株が上昇 執筆 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1oRjRqOEF6Z2k2alliNG1GMm5zdklSN2ZDRG1wNnFMeTV0Q25JazVramJONERpSGNXamx6LXhETmJaZkxDSXp4dEhqTGN6aUpBRnVTMUk1S3RHWU1HZThfWlhTUEstNm9jYkhqNE1VMVY?oc=5",
+        "published": "Thu, 20 Aug 2026 04:52:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度の継続及び従業員に対する新たな株式交付制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507853.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507884.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503849.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "2027年3月期第１四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507860.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507846.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "役員人事に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572690.pdf",
+        "date": "2026-06-17 16:00:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-08-21T07:39:01+09:00",
+  "price_as_of": "2026-08-20",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズは極めて強固（strength: 75）であり、Q1営業利益21.1%増や3,000億円規模の自社株買いが強力な支持要因となっている。",
+        "evidence": "fundamental_view.points[0], fundamental_view.points[2]"
+      },
+      {
+        "reason": "テクニカル面では5日線が25日線を下回るデッドクロスが発生しており、短期的には調整圧力が優勢な中立局面にある。",
+        "evidence": "technical_view.points[0]: price_technical.sma5_vs_sma25=dead"
+      },
+      {
+        "reason": "直近14日以内（2026-08-07）に同一銘柄へのbuy判定が出されており、統合判断ルールに基づき新規エントリーを抑制し継続監視とする。",
+        "evidence": "reference.recent_buy.date=2026-08-07"
+      }
+    ],
+    "risks": [
+      "2026-09-17からの次回日銀会合に向けた金利上昇に伴うバリュエーション調整リスク（reference.next_boj_meeting）",
+      "米国セクターETFの下落やVIX指数の上昇による外部環境の悪化（technical_view.cautions）",
+      "予想PERが異常値（1227.8）を示しており、一過性のコスト等による通期利益目標への影響（fundamental_view.cautions）"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズは極めて強固（strength: 75）であり、Q1営業利益21.1%増や3,000億円規模の自社株買いが強力な支持要因となっている。\",\n   \"evidence\": \"fundamental_view.points[0], fundamental_view.points[2]\"\n  },\n  {\n   \"reason\": \"テクニカル面では5日線が25日線を下回るデッドクロスが発生しており、短期的には調整圧力が優勢な中立局面にある。\",\n   \"evidence\": \"technical_view.points[0]: price_technical.sma5_vs_sma25=dead\"\n  },\n  {\n   \"reason\": \"直近14日以内（2026-08-07）に同一銘柄へのbuy判定が出されており、統合判断ルールに基づき新規エントリーを抑制し継続監視とする。\",\n   \"evidence\": \"reference.recent_buy.date=2026-08-07\"\n  }\n ],\n \"risks\": [\n  \"2026-09-17からの次回日銀会合に向けた金利上昇に伴うバリュエーション調整リスク（reference.next_boj_meeting）\",\n  \"米国セクターETFの下落やVIX指数の上昇による外部環境の悪化（technical_view.cautions）\",\n  \"予想PERが異常値（1227.8）を示しており、一過性のコスト等による通期利益目標への影響（fundamental_view.cautions）\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "短期的には5日線が25日線を下回るデッドクロスやMACDのマイナス圏推移が見られるものの、60日騰落率はプラスを維持しており、モメンタムと中期トレンドが拮抗する方向感の乏しい局面です。",
+      "points": [
+        {
+          "point": "短期テクニカル指標は弱気シグナルを示しており、5日移動平均線が25日移動平均線を下回るデッドクロス状態にあります。",
+          "evidence": "price_technical.sma5_vs_sma25=dead(5日線が25日線の下)"
+        },
+        {
+          "point": "MACDがシグナルを下回り、ヒストグラムもマイナス圏で推移していることから、短期的な調整圧力が継続しています。",
+          "evidence": "price_technical.macd=-5.37, price_technical.macd_histogram=-10.23"
+        },
+        {
+          "point": "中期トレンド（60日）はTOPIXを大きく上回るプラス圏を維持しており、他銘柄で見られるような「中期下落トレンド」には至っていません。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=9.34, relative_to_topix_60d_pct=8.05"
+        },
+        {
+          "point": "RSIは48.2と中立圏にあり、直近5営業日の株価も2,800円台半ばで一進一退の動きを見せています。",
+          "evidence": "price_technical.rsi14=48.2, price_technical.recent_5_days"
+        }
+      ],
+      "cautions": [
+        "前夜の米市場で対応セクターETF（XLC）が下落しており、寄り付きの重石となる可能性があります（us_overnight.sector_proxy.change_1d_pct=-0.57）。",
+        "VIX指数が上昇傾向にあり、市場全体のボラティリティ高まりが個別株の押し下げ要因となるリスクがあります（macro.indices.VIX.change_1d_pct=7.52）。",
+        "上値抵抗線として意識される25日線（2,896.6円）を明確に回復できない場合、期間安値方向への再テストが懸念されます。"
+      ],
+      "key_levels": {
+        "support": 2777.5,
+        "resistance": 2896.6
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "2027年3月期第1四半期の営業利益21.1％増という極めて好調な決算に加え、直近2日間でAIを活用した商業支援サービスやAIスタートアップ支援など新材料が相次いでおり、成長期待が高い。3,000億円規模の自社株買いも継続中で、株主還元姿勢と非通信分野の成長が明確なカタリストとなっている。",
+      "points": [
+        {
+          "point": "2027年3月期Q1決算にて、金融やAIインテグレーション、データセンター収入の増加を背景に営業利益が前年同期比21.1％増と大幅な伸びを達成した。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "2026年8月20日にAIを活用した商業施設開発支援「KDDI Market Compass」の提供開始や、Google系ファンドとの提携によるAI支援プログラムなど、新規材料が連続して発表されている。",
+          "evidence": "news.headlines[0].title, news.headlines[4].title"
+        },
+        {
+          "point": "上限3,000億円の大規模な自己株式取得を進行しており、2026年8月6日時点で既に約2,605億円の取得を完了させるなど、強力な下値支持要因となっている。",
+          "evidence": "fundamentals.recent_important_disclosures[1].summary"
+        },
+        {
+          "point": "日本のサービス業PMIが51.2と拡大圏を維持しており、通信・サービス需要にとって底堅いマクロ環境にある。",
+          "evidence": "macro.japan_pmi.services.latest_value=51.2"
+        }
+      ],
+      "cautions": [
+        "データ上の予想PER（forward_pe）が1227.897と極端に高い数値を示しており、通期利益目標に対する一過性のコストやデータ異常の可能性に注意が必要。",
+        "次回の金融政策決定会合（2026-09-17〜18）を27日後に控えており、JGB10年金利（2.894%）の上昇に伴うバリュエーション調整リスクがある。",
+        "次回決算発表（2026-11-12）まで期間があるため、当面の材料出尽くし感による調整リスク。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-07",
+    "days_ago": 14,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "位置情報を活用しAIが商業施設開発支援、「KDDI Market Compass」提供開始 - KDDI ニュースルーム",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE14eVB3LXc4TF83VXNRbFBjYWpOTkVjSk5ZZzdFMXJkSGptbE9TX2tRM2xmZGY3QVZuR1ZvUHFzQVBseTJ6VUJVcHpBdXNQXzBmUmx0MkN1LTduV0syYUtYMHJrZ01Fd1N5cUVIZA?oc=5",
+        "published": "Thu, 20 Aug 2026 04:00:00 GMT",
+        "publisher": "KDDI ニュースルーム"
+      },
+      {
+        "title": "「メンテ不足」の処方箋 KDDI、ビズリーチ キャリア磨きに「ジョブ図鑑」 - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE0zVjBRbmpNS0NOTFdEeTJCNkhXcEt5cjQ3UGZQVm1qbW5YczNfaHVvYkVVSFhoQXdqaG9HWGhhcGstSVc5aFdaM0pyZExnRkhfVzIycks0V1RoY3BCVHIxSmxPT2s?oc=5",
+        "published": "Thu, 20 Aug 2026 15:00:00 GMT",
+        "publisher": "日経ビジネス電子版"
+      },
+      {
+        "title": "KDDI、商業施設開発にAI活用--データと現場の知見を合わせ市場調査を最短1日に - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5JQ0ZhTFpCSGtNM2tyOGVuUnYzY291eFhqbnpwU3lOcXc0VVlmcmpFWGlWQzdwYUV3a0pXYm1NU3Bzb0JpN21kSF9Pcmt1SmZHLWFQV1VNQV9sTHd3R3owb2tSZlRDRUdmZ0sxQ3A1V0hITHdhYVZfejhNWlJjS1U?oc=5",
+        "published": "Thu, 20 Aug 2026 22:00:00 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "KDDI・JR西系、AIが商業施設開発を支援 位置情報活用 - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5fWUgwSTFLYjFrZWl4ZmdxcGhldjdNTHdKa3MteUhnRHF4enRVTmZGdWJMUW1mUG9jNzRLR0taTS13QW9tTnRWVTlDdmRXTU15QnExU3hCcHVLZEU?oc=5",
+        "published": "Thu, 20 Aug 2026 20:05:43 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "KDDI、Google AI Futures Fundと協力し国内AIスタートアップ支援プログラムを開始 - AIsmiley",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1qT2VfaWVpNDk3TC1SVjNEMllDMzZHeDBCbHNaOTU3N1NBUEpnb0xEZWtpd1lqa2Jwa2ZUd0RQc0Y1d3Fybkx2MmZVdTVhM2ZzNVE4R3BOV09yOUNOTTNhcTk3QVQ2VGZJNDVYU2hQTQ?oc=5",
+        "published": "Thu, 20 Aug 2026 09:47:03 GMT",
+        "publisher": "AIsmiley"
+      },
+      {
+        "title": "AIで商業施設開発をサポート、「KDDI Market Compass」開始 - ケータイ Watch",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5kOEhuay03TVVreDUxdC0ycHROVnY1TDFOTGp2RnVGUFhEMWpYU0t4TmJ5NjNuWk5PREJJQjR4ekl3OFdIRlcwanczMS0yS1podUwxZV9WRE05aW9wRGx3emRSS0Qyc0k?oc=5",
+        "published": "Thu, 20 Aug 2026 10:35:00 GMT",
+        "publisher": "ケータイ Watch"
+      },
+      {
+        "title": "保険毎日新聞にKDDI Message Castの「RCS×AI」実践セミナーについての記事が掲載されました - supership.jp",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA3NFpJRUZyTkVfMUJtbEZMcGx5c3BCUFBUTWRuZVdXWXYzYzM2Rmw4ZnZOWlMyQTBJX0xTUS1FZGYxMGpzWmNWbTNueEhKUG4yeFlYTFRB?oc=5",
+        "published": "Thu, 20 Aug 2026 02:22:23 GMT",
+        "publisher": "supership.jp"
+      },
+      {
+        "title": "JR西日本×KDDI／SC開発を支援するAIサービス提供開始、4カ月の検討プロセスを1日に短縮 - 流通ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE95N1hYakpza2RyZWFrbWRvcWtJRUpHQzY1VDlhaEVDSWFocFJCMjJsaXVXcjhlc3pxVWRGU0Nid2k5M2hfZTlMMlZRTkVFcnpa?oc=5",
+        "published": "Thu, 20 Aug 2026 06:36:00 GMT",
+        "publisher": "流通ニュース"
+      },
+      {
+        "title": "KDDIとJR西日本SC開発、AI分析サービス「KDDI Market Compass」の提供を開始 - Biz/Zine",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9UcEtYSWlZODFYVEJPUUtiSFhqOG5LUDdYbXBzV1ktX21nNFF6al93dHN5RFdrT1lTMnpZc2dTOURXeUh5MG9rbGJ3N0c?oc=5",
+        "published": "Thu, 20 Aug 2026 08:20:00 GMT",
+        "publisher": "Biz/Zine"
+      },
+      {
+        "title": "IoTBiz SIM、ドコモ・KDDI・ソフトバンクの3キャリア対応「IoTBiz ジャストプラン」をラインナップに追加 - ASCII.jp",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE0zN290aXBiekZOY1FiUnFHNExkM3g0cFRUU2tkSG1ibms4Z0I3WEpUdEE2OVRDbERkUXZUZVgxLWJxWlpPWGJwWUhCdVVKN09QSnVUbg?oc=5",
+        "published": "Thu, 20 Aug 2026 15:53:14 GMT",
+        "publisher": "ASCII.jp"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      }
+    ]
+  }
+}
