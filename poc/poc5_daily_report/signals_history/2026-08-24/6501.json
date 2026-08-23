@@ -1,0 +1,206 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-08-24T07:32:50+09:00",
+  "price_as_of": "2026-08-21",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 60,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-08-11）にbuyシグナルを発行済みのため、再エントリー抑制ルールに基づき、現在はポジションの継続監視を推奨します。",
+        "evidence": "reference.recent_buy"
+      },
+      {
+        "reason": "ファンダメンタルズは、通期業績予想の上方修正、投資有価証券売却益計上、大規模な自己株式取得の進捗により、依然として強いポジティブ材料に支えられています。",
+        "evidence": "fundamental_view.stance=bullish (strength=75)"
+      },
+      {
+        "reason": "テクニカル面では、短期移動平均線および25日線の下抜け、MACDのデッドクロスにより調整圧力が強い状況ですが、中期トレンドはまだ上向きです。",
+        "evidence": "technical_view.stance=bearish (strength=70)"
+      }
+    ],
+    "risks": [
+      "次回の日銀金融政策決定会合（9月17日〜18日）が控えており、金融政策の変更が市場全体および株価に影響を与える可能性。",
+      "予想PER29倍とバリュエーションに割高感が指摘されており、調整局面が長引く可能性。",
+      "テクニカル面でRSIが売られすぎ水準に達しておらず、さらなる下落余地があること。",
+      "次回決算発表（10月29日）に向けて期待先行による株価上昇後の反落リスク。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 60,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内（2026-08-11）にbuyシグナルを発行済みのため、再エントリー抑制ルールに基づき、現在はポジションの継続監視を推奨します。\",\n   \"evidence\": \"reference.recent_buy\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは、通期業績予想の上方修正、投資有価証券売却益計上、大規模な自己株式取得の進捗により、依然として強いポジティブ材料に支えられています。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=75)\"\n  },\n  {\n   \"reason\": \"テクニカル面では、短期移動平均線および25日線の下抜け、MACDのデッドクロスにより調整圧力が強い状況ですが、中期トレンドはまだ上向きです。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=70)\"\n  }\n ],\n \"risks\": [\n  \"次回の日銀金融政策決定会合（9月17日〜18日）が控えており、金融政策の変更が市場全体および株価に影響を与える可能性。\",\n  \"予想PER29倍とバリュエーションに割高感が指摘されており、調整局面が長引く可能性。\",\n  \"テクニカル面でRSIが売られすぎ水準に達しておらず、さらなる下落余地があること。\",\n  \"次回決算発表（10月29日）に向けて期待先行による株価上昇後の反落リスク。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "短期移動平均線および25日線を割り込み、MACDもデッドクロスを形成したことから、短期的には調整圧力が強い局面と判断します。",
+      "points": [
+        {
+          "point": "株価がSMA5およびSMA25（5243.04円）を明確に下回り、直近5営業日で大幅に調整している。",
+          "evidence": "price_technical.last_close=5196.0, price_technical.sma25=5243.04, price_technical.recent_5_days"
+        },
+        {
+          "point": "MACDがシグナルを大きく下回るデッドクロス状態にあり、ヒストグラムのマイナス幅も拡大しているため、下落モメンタムが強い。",
+          "evidence": "price_technical.macd=121.09, price_technical.macd_signal=173.32, price_technical.macd_histogram=-52.23"
+        },
+        {
+          "point": "前夜の米国ADRが-0.73%と続落しており、国内市場の寄り付きにおいても売り優勢で始まる可能性が高い。",
+          "evidence": "us_overnight.adr.change_1d_pct=-0.73"
+        }
+      ],
+      "cautions": [
+        "中期トレンド（60日騰落率）は依然としてプラス圏かつ市場平均を上回っており、押し目買いが入る可能性がある (price_technical.trend_60d.change_60d_pct=4.76)",
+        "RSI14が43.1と売られすぎ水準（30以下）には達していないため、さらなる下値の余地が残されている",
+        "米国の資本財セクターETF（XLI）は小幅反発しており、セクター全体の地合いが支えとなる可能性がある"
+      ],
+      "key_levels": {
+        "support": 4616.0,
+        "resistance": 5243.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "通期業績予想の上方修正に加え、大規模な自己株式取得の継続的な実施、および直近の投資有価証券売却益の計上など、利益成長と株主還元の両面で強いファンダメンタルズが確認できる。",
+      "points": [
+        {
+          "point": "2027年3月期第1四半期決算において、売上収益・調整後営業利益ともに大幅な増益を達成し、通期の当期利益予想を9,000億円へ上方修正した。",
+          "evidence": "fundamentals.recent_important_disclosures[1].summary"
+        },
+        {
+          "point": "直近の2026年8月19日に投資有価証券売却益（特別利益）の計上を開示しており、個別決算ベースでの利益押し上げ要因となる新規材料が出ている。",
+          "evidence": "disclosures.items[0].title"
+        },
+        {
+          "point": "5,000億円を上限とする大規模な自己株式取得枠を順調に消化しており、2026年7月31日時点で累計約1,455億円の取得を完了している。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "マクロ環境では日本の製造業PMIが55.1と拡大基調にあり、特にAI関連需要が追い風となっている点は、同社のデジタル・AI推進戦略と整合する。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=55.1, macro.japan_pmi.manufacturing.summary_en"
+        }
+      ],
+      "cautions": [
+        "予想PERが29倍を超えており、歴史的な水準と比較してバリュエーションに割高感がある(fundamentals.valuation.forward_pe=29.17)。",
+        "次回の日銀金融政策決定会合が24日後（9月17日〜18日）に控えており、金利上昇による為替や資本コストへの影響がリスク要因となる(macro.boj.monetary_policy_meeting.days_until_next=24)。",
+        "次回決算発表（10月29日）に向けた期待値の上昇による反落リスク(fundamentals.next_earnings_date=2026-10-29)。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-11",
+    "days_ago": 13,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "日立製作所の社内AI推進コミュニティ「AIカフェ」第10回を開催清水建設・古川氏が「建設現場に生成AIを根付かせる仕組みづくり」を講演 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81dnJSN1ZUZ0ZiVTIySEpmMHpEVm9Fbl9JbldzWGhFSG9WbUdVVTdxRUYzSWFlQlBYcmJZTTBGRDVlRVdCX3JIMHBnNUpPeUNJa3psMThFX0Z4UjFnQnNicWVrek1HcEIwU1E?oc=5",
+        "published": "Sun, 23 Aug 2026 22:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "(株)日立製作所【HTHIY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1sbW5DNlQwVHN5dlZ4RkdjaXVnbjJ4TGtWVWstLVdjcWtGcjdSdmlXSXRKVmdIdl9Fa0lIZ0YyUm5WU1lLZ1hFSWhmU2Q1eHhy?oc=5",
+        "published": "Sun, 23 Aug 2026 10:01:05 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "６月の株式分割と決算スケジュール。荏原製作所、日立製作所、アシックス、豊田通商、三井物産の決算と株価。～あす上がる株。最新の日本株での株式投資。高配当株やデイトレ情報も ～ Etiopia (AsWV2y18dB) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9seUVXakpRQUdfMlBTdlZpOUFfdUw1anV6WHRSMjZlQXFUbkdFcTlQWDdtTU95WGdBU0hlREQySjRaRDBpWXZVZ1JXS1dtTS1EQ29tb0VROWQ3VHc?oc=5",
+        "published": "Sat, 22 Aug 2026 23:35:08 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "【まだ買える！明日の株価予想】2024年08月01日(木)の株価速報日刊AI予測【金十字まどか】 Ducks (mqhSyI33xn) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5DWWcxaWlCWFV3VDJabFlja2FTVzNIVVNyeEhBM1VrZGxVOE9ZYVJQa1FfVmRhazN6eVZMb3hoVjdYTHlrTjdlMWg4RFE2ZFVnZnlVZ1Myb0Q0RjA?oc=5",
+        "published": "Sun, 23 Aug 2026 02:55:48 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "【無料公開】《スクープ》三菱電機、日立、NEC、オムロンなどが主導したIoTプラットフォーム「エッジクロスコンソーシアム」が終了へ！ - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE0tZkMwaEw3VFAwT1ZjdGlUdkQyYVk4aS1NMENaNGpMWnhVdFNpQkQtMFdMNFNIQjFpNTNOQlpfbTRCdkxmc0N3eGk1dms?oc=5",
+        "published": "Sun, 23 Aug 2026 20:30:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "日立、「秘匿AI基盤」開発へ 創薬新興と連携支援 - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5MWUpWVTRmelFlZDVNb3JYeHJQR1FKbF9odlM4YVI5R3pRdDd6VzFJQlBFNnFSU0ZVd0QtUlBSckkyMDhWTHZFb204TjFOTzFFOGphNlBMa2w?oc=5",
+        "published": "Sat, 22 Aug 2026 22:43:01 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "（日） - sannichi.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1zcmxpN2dPb2xfaXhQUUlFcjBoWVF5dW0zQVdmWVNBWEF4THhUbVpnZHZGbmtSOGtRQnNZeHNGNGhhRVRIMmNVMXR1S25RQUllV3cycjdlRjhEalh2RG5KWXpfNA?oc=5",
+        "published": "Sun, 23 Aug 2026 04:20:05 GMT",
+        "publisher": "sannichi.co.jp"
+      },
+      {
+        "title": "65歳を超えても働ける日本、「韓国じゃ55歳でクビ」「事情が異なる」ネットで賛否 - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBGVXdYZi1SeHJvM0pKSEhyeUhSdU1mekg3X19wNGUwU29ub3NMa29lN3RPclVxcEQ3UWo4N0R0WHYwbG9SVUZJYmUzdFB5NHVPV3hNWm0zRUdvVVZpOXltRF9HZXIwS0U0VVg3bWE4WUt1cUd3c1E?oc=5",
+        "published": "Sun, 23 Aug 2026 02:41:10 GMT",
+        "publisher": "ニコニコニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "個別決算における投資有価証券売却益(特別利益)の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260819523052.pdf",
+        "date": "2026-08-19 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804508474.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "（訂正）2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503298.pdf",
+        "date": "2026-07-30 13:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501771.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501801.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(モビリティ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566288.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(コネクティブインダストリーズ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566292.pdf",
+        "date": "2026-06-09 15:30:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-08-24T07:31:08+09:00",
+  "price_as_of": "2026-08-21",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズは営業利益21.1%増や3,000億円規模の自社株買いなど非常に強力ですが、テクニカルも既に強気に転じており、好材料が株価に織り込まれ始めている段階と判断されます。",
+        "evidence": "fundamental_view.points[0,1], technical_view.stance=bullish (strength=70)"
+      },
+      {
+        "reason": "統合判断ルールに基づき、テクニカルとファンダメンタルズが共に強気の場合は、モメンタム追随の遅いエントリーを避けるため「hold」とします。",
+        "evidence": "統合判断のルール1（テクニカルも bullish → hold）"
+      },
+      {
+        "reason": "ADRが+2.4%と大幅上昇しており、寄り付きでのギャップアップが想定されますが、テクニカル専門家が指摘するように寄り付き後の利益確定売りに警戒が必要です。",
+        "evidence": "technical_view.points[2], technical_view.cautions[2]"
+      }
+    ],
+    "risks": [
+      "24日後に控える日銀金融政策決定会合による市場全体のボラティリティ波及リスク（reference.next_boj_meeting）",
+      "国内10年債金利の上昇による高配当・ディフェンシブ銘柄としての相対的な魅力低下（fundamental_view.cautions[1]）",
+      "MACDがマイナス圏でシグナルを下回っており、短期的なリバウンドに留まる可能性（technical_view.cautions[0]）"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズは営業利益21.1%増や3,000億円規模の自社株買いなど非常に強力ですが、テクニカルも既に強気に転じており、好材料が株価に織り込まれ始めている段階と判断されます。\",\n   \"evidence\": \"fundamental_view.points[0,1], technical_view.stance=bullish (strength=70)\"\n  },\n  {\n   \"reason\": \"統合判断ルールに基づき、テクニカルとファンダメンタルズが共に強気の場合は、モメンタム追随の遅いエントリーを避けるため「hold」とします。\",\n   \"evidence\": \"統合判断のルール1（テクニカルも bullish → hold）\"\n  },\n  {\n   \"reason\": \"ADRが+2.4%と大幅上昇しており、寄り付きでのギャップアップが想定されますが、テクニカル専門家が指摘するように寄り付き後の利益確定売りに警戒が必要です。\",\n   \"evidence\": \"technical_view.points[2], technical_view.cautions[2]\"\n  }\n ],\n \"risks\": [\n  \"24日後に控える日銀金融政策決定会合による市場全体のボラティリティ波及リスク（reference.next_boj_meeting）\",\n  \"国内10年債金利の上昇による高配当・ディフェンシブ銘柄としての相対的な魅力低下（fundamental_view.cautions[1]）\",\n  \"MACDがマイナス圏でシグナルを下回っており、短期的なリバウンドに留まる可能性（technical_view.cautions[0]）\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "中期的な上昇トレンドが維持される中、株価が25日線を出来高を伴って明確に上抜け、ADRも大幅高となっていることから、目先は上値を試す展開が期待されます。",
+      "points": [
+        {
+          "point": "株価が25日移動平均線を終値で回復し、直近5営業日で最も高い出来高を伴って1.9%の上昇を見せており、短期的な反転の兆しが強いです。",
+          "evidence": "price_technical.last_close=2915.5, price_technical.sma25=2899.12, price_technical.recent_5_days[4].volume=12540600"
+        },
+        {
+          "point": "60営業日騰落率が+8.4%、対TOPIX相対騰落率が+6.36%と、中期的なトレンドは市場平均を上回る堅調さを維持しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=8.4, price_technical.trend_60d.relative_to_topix_60d_pct=6.36"
+        },
+        {
+          "point": "前夜のNY市場でADRが+2.4%と大幅に上昇しており、国内市場の寄り付きから強い買い戻しが期待できる地合いです。",
+          "evidence": "us_overnight.adr.change_1d_pct=2.4"
+        }
+      ],
+      "cautions": [
+        "MACDは依然としてシグナルの下方に位置しマイナス圏にあるため、ヒストグラムの改善傾向が続くか注視が必要です。",
+        "5日線と25日線がデッドクロス状態にあり、一時的なリバウンドに留まり再度25日線を割り込むリスクも残されています。",
+        "ADRの大幅高は寄り付き価格に織り込まれる可能性が高く、寄り付き後の利益確定売りに注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 2899.12,
+        "resistance": 3121.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "直近の第1四半期決算が営業利益21.1%増と好調であり、上限3,000億円の大規模な自己株式取得という強力な需給下支え要因があるため。通信事業の安定性に加え、AIや金融などの成長領域が収益を牽引している点を高く評価する。",
+      "points": [
+        {
+          "point": "2027年3月期第1四半期の連結業績が大幅な増収増益。モバイル収入の増加に加えて金融事業やAIインテグレーションが寄与し、営業利益は前年同期比21.1%増を記録した。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "大規模な株主還元策の継続。上限3,000億円（1億4,600万株）の自己株式取得を進行中であり、2026年8月6日時点で約2,605億円分を取得済みと着実に実行されている。",
+          "evidence": "fundamentals.recent_important_disclosures[1].summary"
+        },
+        {
+          "point": "非製造業の景況感およびサービス業PMIの拡大。マクロ環境においてサービス業PMIが52.3と拡大圏にあり、内需・通信サービスを主力とする同社にとって良好な事業環境が続いている。",
+          "evidence": "macro.japan_pmi.services.latest_value=52.3"
+        }
+      ],
+      "cautions": [
+        "データ上の予想PERが1251.288倍と極めて高く、市場の利益予想や計算プロセスにおける急激な乖離リスクを注視する必要がある（fundamentals.valuation.forward_pe=1251.288）。",
+        "日本10年債金利が2.854%まで上昇しており、高配当・ディフェンシブ銘柄としての相対的な魅力低下や支払利息増加が懸念される（macro.rates.jgb_10y_percent.value=2.854）。",
+        "24日後に日銀金融政策決定会合を控えており、追加利上げ等の政策変更が相場全体のボラティリティを高める可能性がある（macro.boj.monetary_policy_meeting.days_until_next=24）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ＫＤＤＩ(株)【KDDIY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5UeXNVcVVoNnBzaHVrVDJRR3VqcmJrUDk1T0h1dDRJT0ttelAwWVk0UWZWT0JaQTIxMkRtQUxzLW1FdnNRVXpvUWZRb0p4cVlJ?oc=5",
+        "published": "Sun, 23 Aug 2026 14:50:44 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "オール光ネットワーク（APN）の知見や研究成果を体系化した設計指針が国際標準化、KDDI・NTTら7社が策定を主導 - INTERNET Watch",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE04OHA2Q0M2bFMtcEFpcURuRFlZT3pzMzdmMTNvWGZNSlJ0YzFpU0E2RzJ3YjNEaFpmLXJCbXF0LTdzWjRINVc3UkJVR3ZsNlV6dTFMazZ2a0RLV2RUNk5Ncks3c1Y0cHhLMlp3?oc=5",
+        "published": "Sun, 23 Aug 2026 22:00:00 GMT",
+        "publisher": "INTERNET Watch"
+      },
+      {
+        "title": "KDDIが楽天モバイルへの「ローミング」終了でライバルの“品質低下”を狙い撃つ（森岡英樹／経済ジャーナリスト） - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB6eXBuM0NuaTBwNkdkNEl3aUJoVVNxVUJZMml4VG5zdWF1Z0c0Z0pKVWpZSXZiNzNVTGQzazg3OE5SRmNmeUx2N3lJQWd1Smw0Z1BIam5ZZ1BhWmN0dVJ0MkhTaVE?oc=5",
+        "published": "Sun, 23 Aug 2026 21:55:00 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "KDDI LINKSCAPE - j-wave.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBoZXQwNXY1YW5Udi1OWGUzVnpXaTBLbjdJZXpOSDlmLXlEd0dJU3A1VU1pbmczcHgtT3hqTjRoUWhRZDZhYkNxWFRDaURJbnc4Nkx5MHgyN2Z0eXRmWmhRRmtITmhubG9Xa3dhSjVn?oc=5",
+        "published": "Sun, 23 Aug 2026 09:06:23 GMT",
+        "publisher": "j-wave.co.jp"
+      },
+      {
+        "title": "ＫＤＤＩなど７社、ＡＰＮを国際標準化 - 化学工業日報 電子版",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBIUGZTNWcxcmVjQ3dLR3d4b3dnOTJ0bUw3WkhtOWgyNE9JN09KVUh2aS1MM0U0UVRVZjZOeVBlZDZ3TkRGMUlTTVZfR2JVUEsyck5F?oc=5",
+        "published": "Sun, 23 Aug 2026 20:03:39 GMT",
+        "publisher": "化学工業日報 電子版"
+      },
+      {
+        "title": "KDDI、国内スタートアップの米国進出・顧客獲得に特化した新プログラムを開始 - ASCII.jp",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9rNGxQcjZtS3Y2ZkI2VC1kLUNjWUxNVXRtZ281US1ZTTRLOTRDOVJkOGM1NmVlaC10NHBybk0wLUlZb2xEOHpMSXVWc0hDemxEUnl5cA?oc=5",
+        "published": "Sun, 23 Aug 2026 22:00:00 GMT",
+        "publisher": "ASCII.jp"
+      },
+      {
+        "title": "下水処理場でウナギ養殖、排熱活用 環境に優しく美味に - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1tbU43ZXMtS0ZCSUJhRzExaVY5ME1Dbm5HN2ZDQzJuNnBRQlRtUFZFQjFQRnBIakFKaVVIYmhkVnpDTGxrRzBBXzd1QWVOTU8xQlkzLU01R291MkJWVlF5ZXU1WVVTYldnbUJlaDJOS2JIOXJjbHNz?oc=5",
+        "published": "Sun, 23 Aug 2026 20:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "ＫＤＤＩ、日本ＡＩの米進出支援 第１弾は新興企業５社 - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4yZlYyMG84eWc5Z1VlLUMtYVp4UVYzY1QxRjYtaGhpNlBBdjBscDN4YVMtenpmdTNJazdJQm5DUTlfakFqQV9kWVlHQndISkFwckE?oc=5",
+        "published": "Sun, 23 Aug 2026 06:23:04 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "山口茜、連覇ならず 世界バドミントン - 八王子経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1RTEJFSFRPbWJaUlhvU3U3ejVjbzNDM25ySFZiME94ajd5eXlsWUtLZVNid2NfbURWczFXOGhYWWRuUUp2a0xmVTl4RHNUQVVhLUZDTUlR?oc=5",
+        "published": "Sun, 23 Aug 2026 15:17:12 GMT",
+        "publisher": "八王子経済新聞"
+      },
+      {
+        "title": "通信大手が「コンビニ」に急接近、ソフトバンクもセブン-イレブンと提携 - 日経クロステック",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPTkViTTBBVmpOdk9laUZZcXU1eTlwamVIYlptYzdyUGxNRUVON2xNdTlpcEhTdjh6S25iTjRuM2FuWVdTZERhcEw0T2tna0RuRGpuNHRkOGZvVGk1bFFFNmpLdTNteG9DMWVWZE1fdzYxNGM2c25NX3M5dHRxVUVvTUdTTFc1dW9FVDVj?oc=5",
+        "published": "Sun, 23 Aug 2026 20:00:00 GMT",
+        "publisher": "日経クロステック"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      }
+    ]
+  }
+}
