@@ -1,0 +1,215 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-08-25T07:35:12+09:00",
+  "price_as_of": "2026-08-24",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家はAI投資加速に向けた1兆円の社債発行を高く評価（strength=75）しているが、テクニカル専門家が極めて強い弱気判断（strength=90）を下しており、買いの必須条件である「テクニカルがneutral」を満たさない。",
+        "evidence": "fundamental_view.strength=75, technical_view.stance=bearish (strength=90)"
+      },
+      {
+        "reason": "米国ADRが前夜に-4.9%と大幅続落しており、東京市場の終値を下回る水準での寄り付きが予想されるため、短期的には「落ちるナイフ」の状態にある。",
+        "evidence": "technical_view.points[3]: us_overnight.adr.change_1d_pct=-4.9"
+      },
+      {
+        "reason": "テクニカル面では5日線と25日線のデッドクロスに加え、MACDのマイナス幅拡大が顕著であり、下落トレンドの勢いが強い局面である。",
+        "evidence": "technical_view.points[1]: price_technical.sma5_vs_sma25=dead, technical_view.points[2]: price_technical.macd_histogram=-17.38"
+      }
+    ],
+    "risks": [
+      "ADRの大幅安に引きずられ、主要なサポートラインである4500円を割り込むリスク（technical_view.key_levels.support=4500.0）",
+      "日本の10年債金利上昇（2.882%）による、大規模な社債発行を通じた資金調達コストの増加懸念（fundamental_view.cautions）",
+      "2026-09-17からの日銀金融政策決定会合に伴う為替・金利変動の不確実性（reference.next_boj_meeting）"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家はAI投資加速に向けた1兆円の社債発行を高く評価（strength=75）しているが、テクニカル専門家が極めて強い弱気判断（strength=90）を下しており、買いの必須条件である「テクニカルがneutral」を満たさない。\",\n   \"evidence\": \"fundamental_view.strength=75, technical_view.stance=bearish (strength=90)\"\n  },\n  {\n   \"reason\": \"米国ADRが前夜に-4.9%と大幅続落しており、東京市場の終値を下回る水準での寄り付きが予想されるため、短期的には「落ちるナイフ」の状態にある。\",\n   \"evidence\": \"technical_view.points[3]: us_overnight.adr.change_1d_pct=-4.9\"\n  },\n  {\n   \"reason\": \"テクニカル面では5日線と25日線のデッドクロスに加え、MACDのマイナス幅拡大が顕著であり、下落トレンドの勢いが強い局面である。\",\n   \"evidence\": \"technical_view.points[1]: price_technical.sma5_vs_sma25=dead, technical_view.points[2]: price_technical.macd_histogram=-17.38\"\n  }\n ],\n \"risks\": [\n  \"ADRの大幅安に引きずられ、主要なサポートラインである4500円を割り込むリスク（technical_view.key_levels.support=4500.0）\",\n  \"日本の10年債金利上昇（2.882%）による、大規模な社債発行を通じた資金調達コストの増加懸念（fundamental_view.cautions）\",\n  \"2026-09-17からの日銀金融政策決定会合に伴う為替・金利変動の不確実性（reference.next_boj_meeting）\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 90,
+      "summary": "中期・短期ともに強い下落トレンドが継続しており、主要なテクニカル指標は軒並み弱気を示しています。前夜の米国市場でADRが大幅に続落したこともあり、当面は安値模索の展開が続く可能性が高いと判断します。",
+      "points": [
+        {
+          "point": "中期的な下落トレンドの確定。60営業日騰落率が-30%を超え、対TOPIX相対騰落率も大幅なマイナス圏に沈んでいる。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-30.18, price_technical.trend_60d.relative_to_topix_60d_pct=-32.88"
+        },
+        {
+          "point": "短期的な移動平均線のデッドクロス。5日線が25日線を明確に下回っており、直近5営業日のうち4日で下落するなど売り圧力が極めて強い。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.recent_5_days"
+        },
+        {
+          "point": "MACDの弱気シグナルの拡大。MACDがシグナルを大きく下回り、ヒストグラムのマイナス幅も拡大しており下落の勢いが増している。",
+          "evidence": "price_technical.macd=-149.12, price_technical.macd_signal=-131.73, price_technical.macd_histogram=-17.38"
+        },
+        {
+          "point": "前夜の米国市場でのADR大幅安。東京市場の終値(4975円)をさらに下回る水準での取引となっており、寄り付きからの売り圧力が不可避な情勢。",
+          "evidence": "us_overnight.adr.change_1d_pct=-4.9"
+        }
+      ],
+      "cautions": [
+        "RSI14が38.3まで低下しており、30付近に接近した場合は自律反発を狙った買いが入る可能性があるが、トレンド転換の証拠にはならない。",
+        "ADRの下落が寄り付き価格に一気に反映された後、短期的には材料出尽くし感から買い戻されるリスクがある。",
+        "市場レジームはneutralであり、TOPIXが25日線を維持しているため、市場全体の反発に連動して下げ止まる可能性は残されている。"
+      ],
+      "key_levels": {
+        "support": 4500.0,
+        "resistance": 5441.96
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "1兆円規模の個人向け社債発行によるAI分野への投資加速姿勢を評価。2027年3月期第1四半期の純利益確保に加え、マクロ環境におけるAI需要の強さが追い風となっている。",
+      "points": [
+        {
+          "point": "国内最大規模となる1兆円の個人向け社債発行を決定。調達資金をAI関連投資に充当する方針であり、成長投資への意欲が具体的なカタリストとして機能する。",
+          "evidence": "news.headlines[4,8,9], disclosures.items[0] (2026-08-24)"
+        },
+        {
+          "point": "2027年3月期第1四半期において、持株会社投資事業等で1兆8,594億円の投資利益を計上。前年同期比で減益ではあるものの、コア事業である投資活動の収益性は維持されている。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "OpenAIへの追加出資を実行するなど、AIプラットフォームへの戦略的投資を継続。製造業PMIの解説でもAI関連需要が拡大を牽引していると言及されており、投資先の価値向上に寄与する環境にある。",
+          "evidence": "disclosures.items[4], macro.japan_pmi.manufacturing.summary_en"
+        },
+        {
+          "point": "前期（2026年3月期）の純利益が5兆円を超える高水準。直近の投資環境の改善がバランスシートの健全性向上に寄与しており、1兆円規模の資金調達を可能にする信用力の背景となっている。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=50023"
+        }
+      ],
+      "cautions": [
+        "デリバティブ関連損失の発生。第1四半期決算で利益を圧迫した要因であり、ボラティリティリスクとして注視が必要（fundamentals.recent_important_disclosures[0].summary）。",
+        "金利上昇に伴う負債コストの増加懸念。日本の10年債金利が2.882%と高い水準にあり、大規模な社債発行を継続する上でリスク要因となる（macro.rates.jgb_10y_percent）。",
+        "次回の日銀金融政策決定会合（2026-09-17〜18）を控えたマクロ環境の変化（macro.boj.monetary_policy_meeting）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "現金5,000円が当たる！ソフトバンクグループ社債購入キャンペーン - SBI証券",
+        "url": "https://news.google.com/rss/articles/CBMi-AJBVV95cUxPbE9oTzkxaWNQUWRGTFFMQnFDa1VQOHZOM253VG9YcFFFZGFmZ3ZuSElEUjg1UkUwNGRVYktIcUdVaXViVEJtVm95eDlvYzRQNzRGa1E0bW5sNFhwLVk2MUFtZGdBT2hfTnhaRjBMRXlIbUZkSXpRYXBOSnNwbmNXTGx5NjhJVHBYNnNuZGxZckJWVzB2azdkVktNdDhhSEtUZWs2WC1rZ0R4X3pVM0VwU2E3czVTM0JFNzRUVUt0emotXzZvLXRZc3dCYndnRjFhOFVXeVhSYjF3bXRQZUU4cXdTOHVTeHQ0Mk1Yb0RxQjhIRi1ya2dmbDY2R3NRSjVhdHdvU0U3U0pBSnZLNV9hTkd1RkEyZG8xTEVCV1VnMVV2bWhOMVJqOGphQ1Y1Y2d4ZTdIcHFMaWJkR19LOGh1TTdOZUN4VlUyNzVNNkFEcjA1UzJwZW9tTmhyV2RjTHNhWVRpTjR5RlBFVjd1TEVTYlhkSWxHZ2Nz?oc=5",
+        "published": "Mon, 24 Aug 2026 21:02:34 GMT",
+        "publisher": "SBI証券"
+      },
+      {
+        "title": "ソフトバンクグループ 個人投資家向けに1兆円社債発行へ - khb東日本放送",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9XQkV3OFVSMklBb0JTaS13RG1oaXdRM0hjZTdRMVl2OUNjMHgyaDF6WU9sQl9ISUtGUW9TdTN6ZmV5R2FOdl9wME0tWGw3bWs?oc=5",
+        "published": "Mon, 24 Aug 2026 09:55:40 GMT",
+        "publisher": "khb東日本放送"
+      },
+      {
+        "title": "ソフトバンクグループ 個人投資家向けに1兆円社債発行へ – Quebee キュエビー - QAB 琉球朝日放送",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5yOS05TjljTmJHZW1uc3Ixc1kyTk8wTTdEV2xwX2dtaHJtUi1RRkNDeWl6X0dVY2JoOGtCV01MUWZMWGZHcXZkeEFyMzRkYWM2ZmhWWnVKSkM?oc=5",
+        "published": "Mon, 24 Aug 2026 09:55:40 GMT",
+        "publisher": "QAB 琉球朝日放送"
+      },
+      {
+        "title": "ソフトバンクグループ(株)【SFTBY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9PS0JwdDRlRjRxb1VMWkhNNTEwcUtyQkN0SVdKbk1ZVEN2VkZYZFhkVktRdVlLNUhBdm45Q1ZxY0xZSUtsTDktcWhXNjFPSU5s?oc=5",
+        "published": "Mon, 24 Aug 2026 15:24:37 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ソフトバンクグループ[9984]：第70回無担保普通社債の発行に関するお知らせ 2026年8月24日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBPdEtiM2RSNmtVTGJOYUdlY1lCQW5MMU9YQ0RFTGg2UWhFSFBYWXoyWGVsdGpudDFBNEY3c3hIMWNINHp6ei1ZckNyWW54MWVreGV4Mnl6ZmtTNEFoeFBkZGF4VjFVTTk0ZUE?oc=5",
+        "published": "Mon, 24 Aug 2026 00:30:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "ソフトバンクグループ 個人投資家向けに1兆円社債発行へ - テレ朝NEWS",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5DTkpCU2xaWVZ5cS1jMFpyTDM2SlNVYjd0Tm92eDVJMzRtWFhfNGU5RWd1Zm03ZnA0Yk5UakdEZUpEZkFDOWtHb2NPMlNFSTRBOXVuUzRrQ09kZzFjRS1YellOU1k3Rk1oUlVGRG9rMWt1dw?oc=5",
+        "published": "Mon, 24 Aug 2026 09:55:40 GMT",
+        "publisher": "テレ朝NEWS"
+      },
+      {
+        "title": "ソフトバンクグループ 個人投資家向けに1兆円社債発行へ 最新の経済ニュース【随時更新】 - abema.tv",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB0NldhbThjNUlzTjJVQS1rV242eW9DVmZIM2hBYTNyZy1CeEM5cDJKQjgzeWZJY1YxcTd2OG5RU0hvZFlhSmRtNjBSR1ZWcy1ORDlSVnhfb2ZHSFU?oc=5",
+        "published": "Mon, 24 Aug 2026 11:31:35 GMT",
+        "publisher": "abema.tv"
+      },
+      {
+        "title": "ソフトバンクＧ、1兆円の個人向け社債発行へ 7年債 - ロイター",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5BUHBmOWo5cVlfVTE4NWxnVjdWRnBZRFNRQTdCWEw5LWJHYk16amU3ako1UnBHQXZ5aEZ1Tm96bjl0cnBvem5JaHE5ZnI0VnVaNVpxTE1Oc1NaSGc2akN1MFhiS25lOVJ4S2QzYUpQc2ZTOXNXZDhLcQ?oc=5",
+        "published": "Mon, 24 Aug 2026 00:43:00 GMT",
+        "publisher": "ロイター"
+      },
+      {
+        "title": "ソフトバンクG、個人向け社債1兆円 国内最大規模、AI投資を加速 [AIの時代] - 朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE10bUN0aV9SNThfdFNtVDQ4TGNraV9UWDZOSlYxRkp0RVJxVmg2YnlZZ0dVYVhYdjVEVFJhNTluNVoxalY2dGpFdlJFTi1Bcl9xLW9FVm4yTVZscEM2S09ibHdiSEpOSGM?oc=5",
+        "published": "Mon, 24 Aug 2026 02:47:43 GMT",
+        "publisher": "朝日新聞"
+      },
+      {
+        "title": "ソフトバンクG、社債1兆円発行 個人向け、AI投資充当 - 北海道新聞デジタル",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQN2lXRTMzT1MtREJNT2ZWSUQxS0p3TjR4WERKdHJ1OEtZSzNHZ2VYRENreHkyY0EzV2J2VjMzZU10TTNCZ1BSYTdPMUZCUUZPOVlrYUY4T2phSnhuaW9naWdWcFQ5Z1kzVXRnY3dmYTlZblQwX1djalZHYWk0UmR1NUotMlRSTThx?oc=5",
+        "published": "Mon, 24 Aug 2026 05:55:25 GMT",
+        "publisher": "北海道新聞デジタル"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "第70回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824524817.pdf",
+        "date": "2026-08-24 09:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510515.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行内容確定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503871.pdf",
+        "date": "2026-07-30 17:00:00"
+      },
+      {
+        "title": "第68回及び第69回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501484.pdf",
+        "date": "2026-07-29 10:30:00"
+      },
+      {
+        "title": "OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260701586249.pdf",
+        "date": "2026-07-01 16:00:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577089.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "2021年発行米ドル建普通社債の期限前償還完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566742.pdf",
+        "date": "2026-06-10 11:30:00"
+      },
+      {
+        "title": "国内ハイブリッド社債（利払繰延条項付）の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260605563850.pdf",
+        "date": "2026-06-05 10:30:00"
+      },
+      {
+        "title": "当社の子会社によるT&amp;Dフィナンシャル生命保険株式会社の株式の取得（子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562772.pdf",
+        "date": "2026-06-04 16:00:00"
+      },
+      {
+        "title": "2021年発行米ドル建普通社債の期限前償還に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528551943.pdf",
+        "date": "2026-05-28 15:30:00"
+      }
+    ]
+  }
+}

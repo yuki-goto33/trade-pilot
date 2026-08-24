@@ -1,0 +1,215 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-08-25T07:33:59+09:00",
+  "price_as_of": "2026-08-24",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズは極めて強気（Strength 75）であり、TSMCとの合弁契約やQ1の大幅な業績回復、継続的な自社株買いなど強力なカタリストが揃っている。",
+        "evidence": "fundamental_view.points[0, 1, 2]: TSMCとの合弁契約締結およびQ1純利益3,422億円、自己株式取得の継続"
+      },
+      {
+        "reason": "テクニカル面でも強気（Strength 75）でゴールデンクロスや上昇トレンドを維持しているが、統合判断ルールに従い、両専門家が強気で揃った局面は「織り込み済み」と判断し、新規エントリーは見送る。",
+        "evidence": "technical_view.stance=bullish (strength=75) / reference.last_close=3850.0"
+      },
+      {
+        "reason": "米国市場のテクノロジーセクター（XLK）の下落やVIX指数の上昇など、外部環境の不透明感が強まっており、押し目を待つのが妥当な局面である。",
+        "evidence": "technical_view.cautions: XLK -1.78%の大幅下落およびVIX指数 4.76%の上昇"
+      }
+    ],
+    "risks": [
+      "2026年9月17日〜18日の日銀金融政策決定会合に伴う金利・為替変動リスク（reference.next_boj_meeting）",
+      "米国テクノロジー株安の波及によるセクター全体のリスクオフ（technical_view.cautions）",
+      "ドル円相場の円高進行による輸出事業へのネガティブインパクト（fundamental_view.cautions）"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズは極めて強気（Strength 75）であり、TSMCとの合弁契約やQ1の大幅な業績回復、継続的な自社株買いなど強力なカタリストが揃っている。\",\n   \"evidence\": \"fundamental_view.points[0, 1, 2]: TSMCとの合弁契約締結およびQ1純利益3,422億円、自己株式取得の継続\"\n  },\n  {\n   \"reason\": \"テクニカル面でも強気（Strength 75）でゴールデンクロスや上昇トレンドを維持しているが、統合判断ルールに従い、両専門家が強気で揃った局面は「織り込み済み」と判断し、新規エントリーは見送る。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=75) / reference.last_close=3850.0\"\n  },\n  {\n   \"reason\": \"米国市場のテクノロジーセクター（XLK）の下落やVIX指数の上昇など、外部環境の不透明感が強まっており、押し目を待つのが妥当な局面である。\",\n   \"evidence\": \"technical_view.cautions: XLK -1.78%の大幅下落およびVIX指数 4.76%の上昇\"\n  }\n ],\n \"risks\": [\n  \"2026年9月17日〜18日の日銀金融政策決定会合に伴う金利・為替変動リスク（reference.next_boj_meeting）\",\n  \"米国テクノロジー株安の波及によるセクター全体のリスクオフ（technical_view.cautions）\",\n  \"ドル円相場の円高進行による輸出事業へのネガティブインパクト（fundamental_view.cautions）\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "短期・中期ともに上昇トレンドを維持しており、直近3日間の続伸やゴールデンクロスの継続、ADRの上昇など、買い優勢の材料が揃っています。",
+      "points": [
+        {
+          "point": "中期的な上昇トレンドが継続しており、対TOPIXでもアウトパフォームしている。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=11.56, relative_to_topix_60d_pct=8.85"
+        },
+        {
+          "point": "短期移動平均線が長期を上回るゴールデンクロス状態にあり、直近3営業日も続伸してモメンタムが強い。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.recent_5_days (last 3 sessions close: 3777.0, 3785.0, 3850.0)"
+        },
+        {
+          "point": "MACDがシグナルを上回り陽転しており、RSIも過熱圏手前の良好な水準にある。",
+          "evidence": "price_technical.macd_histogram=0.6, price_technical.rsi14=60.2"
+        },
+        {
+          "point": "前夜のNY市場でADRが上昇しており、寄り付き時点での買い材料となる可能性がある。",
+          "evidence": "us_overnight.adr.change_1d_pct=1.42"
+        }
+      ],
+      "cautions": [
+        "米国市場のテクノロジーセクターETF(XLK)が-1.78%と大幅下落しており、業種全体への売り波及に注意が必要。",
+        "VIX指数が4.76%上昇しており、市場全体のリスクオフ心理が重石となる可能性がある。",
+        "直近の期間高値である3964.0円付近では、利益確定売りに押される可能性がある。"
+      ],
+      "key_levels": {
+        "support": 3665.76,
+        "resistance": 3964.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "TSMCとの合弁会社設立に関する確定契約締結という強力な新規カタリストに加え、直近Q1での黒字回復と継続的な自社株買い、好調な製造業PMIが業績成長を裏付けています。",
+      "points": [
+        {
+          "point": "TSMCとの合弁会社設立に関する確定契約を締結しており、イメージセンサー分野における中長期的な供給体制の強化と競争力向上が期待される新規材料が出ている。",
+          "evidence": "disclosures.items[0] (2026-08-11: ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ)"
+        },
+        {
+          "point": "2026年3月期の通期純損失から一転、直近の2026年6月期（第1四半期）では3,422億円の純利益を計上し、営業利益率も約16.7%と高い水準で回復している。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0] (2026-06: revenue_oku_jpy=28378, operating_income_oku_jpy=4745, net_income_oku_jpy=3422)"
+        },
+        {
+          "point": "2026年6月から8月にかけて複数回にわたり自己株式の取得状況を開示しており、継続的な株主還元姿勢が需給の下支え要因となっている。",
+          "evidence": "disclosures.items[1, 5, 8] (自己株式の取得状況に関するお知らせ)"
+        },
+        {
+          "point": "日本の製造業PMIが55.1と拡大圏にあり、特にAI関連需要に伴う新規受注が堅調であることは、同社のイメージセンサーや半導体事業にとって強力なマクロの追い風である。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=55.1"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日〜18日の日銀金融政策決定会合に伴う金利上昇や為替変動のリスク（macro.boj.monetary_policy_meeting）。",
+        "2026年3月期通期の純損失（-3,269億円）の要因が完全に解消されたか、次回の2026年11月5日の決算発表での進捗確認が必要。",
+        "現在158.9円のドル円レートが円高方向に振れた場合、輸出比率の高い業績へのネガティブインパクトが懸念される（macro.indices[2]）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソニーグループ(株)【SONY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBaWnphQUR5QkRjZVlTVmx6UFR5V014TllydmRXWkxLMjQyQlpTTTV0ZXN6b1lsNVZBTGlQMXJGcGFTbHdkcFJuYURxeFRfLTg?oc=5",
+        "published": "Mon, 24 Aug 2026 20:08:12 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ソニーセミコンダクタマニュファクチャリングの50代前半・係長級の年収は？【1万件の口コミ情報データ】 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1MVEJoZko3NV9TYVpCX0tRT1dsZlpoaGZXanBnZERtZjR2ejhIX0lJbVItc0JFQ0NwQnI4VndXcmNxcmZaNWE2Q2loTURBQjTSAU9BVV95cUxNTFRCaGZKNzVfU2FaQl9LUU9XbGZaaGhmV2pwZ2REbWY0dno4SF9JSW1SLXNCRUNDcEJyOFZ3V3JjcXJmWjVhNkNpaE1EQUI0?oc=5",
+        "published": "Mon, 24 Aug 2026 20:20:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "ソニー(株)【6758】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9BQlVRa0U3WXp0ZG1yTzhsVk1OWkItckZaUV8wRkcxNkV4eVdoNWVlT2xWS25IbXR5em1xcThhQXhFWWJxWk1VbmMtZEpPUV9hMHBreXNYNVV2bkFiT1pB?oc=5",
+        "published": "Mon, 24 Aug 2026 06:53:01 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ファイバーゲート、ソニー系と資本業務提携 集合住宅向け光回線を3ブランド展開へ - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE81N1g0bjR0cHMtZWJVb256MjliNU5HZTFaaXRaVS1NWmQ0aFdGR3Q2clU4WlgtSmFDcDBROFdfZ3k2S1FLZ2hqOVFCb1owcUxpS2lEN3VxeVJYRUkwUndiSHk3cUZxcnFOdkw4MlBXNUtLaHNh?oc=5",
+        "published": "Mon, 24 Aug 2026 10:06:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "TV事業合弁化の裏で「音響」を残した理由とは？　エンジニア出身・ソニー田中新社長の挑戦 - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9iUHpPZHYxWV9nOGszaWxxQVdKT1QwYnYtNXA4SGVwWnhRd0wzTFpHejlRRDFPUi12TUsxeDdOc1JWbmNIdVVUbXRycE50X3prLXd5ekgyNGtNWlNYaFQtbHhHOERmZmVCeXg2NUw3TlFsaGplSUHSAXZBVV95cUxPYlB6T2R2MVlfZzhrM2lscUFXSk9UMGJ2LTVwOEhlcFp4UXdMM0xaR3o5UUQxT1Itdk1LMXg3TnNSVm5jSHVVVG10cnBOdF96ay13eXpIMjRrTVpTWGhULWx4RzhEZmZlQnl4NjVMN05RbGhqZUlB?oc=5",
+        "published": "Mon, 24 Aug 2026 03:00:11 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "KOSPI急落、6700台割れ 海外投資家が3兆6758億ウォン売り越し - 디지털투데이",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQckF0dTV6eWQ5cEYxS01vZ3JnMW05MGZfc0hyRHR6R3dWU3dkRW9EZExKOHpobWxBbXhtTlVaOW9JWE9VMTc1NEc4V1NmMzVZNE04NmFLT2NfMDBlLUlfNVdLUFVjVGpSUlhXbEFRQ3Fycm5lbEY1RHJLMFI0R0E4N0pEbTJ3dkY0dzU4bThJV3loeGxvSmtSc3JjZjBOT2otQW1SalJqbVVTVmNGREdtcA?oc=5",
+        "published": "Mon, 24 Aug 2026 07:12:34 GMT",
+        "publisher": "디지털투데이"
+      },
+      {
+        "title": "ソニー系S.BLOX、プライバシー特化型NIGHTを国内初取扱い ADAも同時追加 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1udS1ocXl3Q1RFTDNFNmJXVGpZNUwxOGFsUmxqNmtXZU1iYjR1ZTA0MFVfaG5nQnJyT1ZEdlB5Q19OS1NJS3N3VElraTVyTEE1U2hXS2NCdFp1cW9mMHdzazc3UmlndTJad0VHMHdQeDVOZ1Z0?oc=5",
+        "published": "Mon, 24 Aug 2026 06:55:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "日経平均は236円安、SBGが165円超押し下げ 半導体株は明暗 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9SSmZreVMyYWNFa1VIb1dwaHBLbG9BVTN5SnFzcDZ0eEZ2d3pMOTlTNUYxeEdEcjFKSEZ2d0V0YXZaVndCRjhDWE9qc0U1TDVuZm5XWVpzOVh4QlUtQy1tU201QkZ4OEpXWXhSdHJ0SUktamFm?oc=5",
+        "published": "Mon, 24 Aug 2026 02:26:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "TV事業合弁化の裏で「音響」を残した理由とは？　エンジニア出身・ソニー田中新社長の挑戦（1/6 ページ） - ITmedia PC USER - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBHUTJydzNJUTV0aDJzLXpDRl81WmZzWkdxMXVjWDBTaWJaZ0EwbXpZeEltc0d1T2tQRy1MV1A4b0NoTGdYV3BwdDl0cmUxZDZSMmgweFBaY1JhWFl1QTJReVltWURkbldH0gFoQVVfeXFMUEdRMnJ3M0lRNXRoMnMtekNGXzVaZnNaR3ExdWNYMFNpYlpnQTBtell4SW1zR3VPa1BHLUxXUDhvQ2hMZ1hXcHB0OXRyZTFkNlIyaDB4UFpjUmFYWXVBMlF5WW1ZRGRuV0c?oc=5",
+        "published": "Mon, 24 Aug 2026 02:46:22 GMT",
+        "publisher": "ITmedia"
+      },
+      {
+        "title": "日経平均は小幅続落で寄り付く、米半導体株安嫌気 プラス転換も - ニューズウィーク日本版",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9LSkF5YmlwYnZkOXA0c2hEbVJWWFQ5UDlDOWRqWGJhTWFwNVM4V3BKQ2xRNHU0aW01b3liWkVLWUp2TWlpSVZmRG5FZ2lZT0l3Z3VpTFlZWHFhZzdoUmVGWEtiVXhQMms?oc=5",
+        "published": "Mon, 24 Aug 2026 00:24:00 GMT",
+        "publisher": "ニューズウィーク日本版"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260811517496.pdf",
+        "date": "2026-08-11 18:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805509201.pdf",
+        "date": "2026-08-05 11:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504252.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期 連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504254.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の権利確定に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595854.pdf",
+        "date": "2026-07-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587315.pdf",
+        "date": "2026-07-03 11:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584099.pdf",
+        "date": "2026-06-30 15:30:00"
+      },
+      {
+        "title": "米ドル建て無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577032.pdf",
+        "date": "2026-06-24 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260603560934.pdf",
+        "date": "2026-06-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの次世代イメージセンサーに関する戦略的提携に向けた基本合意のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518510.pdf",
+        "date": "2026-05-08 16:15:00"
+      }
+    ]
+  }
+}
