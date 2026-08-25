@@ -1,0 +1,212 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-08-26T07:39:07+09:00",
+  "price_as_of": "2026-08-25",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズはTSMCとの提携や収益回復により極めて強気（strength 70）だが、テクニカルも既に強気（strength 75）に揃っており、好材料が株価に織り込まれている可能性が高い。",
+        "evidence": "fundamental_view.strength=70 / technical_view.stance=bullish (strength=75)"
+      },
+      {
+        "reason": "RSIが64.2と買われすぎ水準の70に接近しており、短期的には利益確定売りの圧力が高まりやすい水準にある。",
+        "evidence": "technical_view.cautions[2]: price_technical.rsi14=64.2"
+      },
+      {
+        "reason": "2026年9月中旬に日銀金融政策決定会合を控えており、円高進行リスクが輸出セクターである同社の重石となる懸念がある。",
+        "evidence": "fundamental_view.cautions[1]: macro.boj.monetary_policy_meeting (2026-09-17)"
+      }
+    ],
+    "risks": [
+      "日銀会合に伴う為替レートの大幅な変動（円高）による利益圧迫リスク",
+      "RSIが過熱圏に到達することによる自律的な調整の下落",
+      "米国ADRの軟調（-0.87%）を受けた寄り付き後のモメンタム悪化",
+      "組織改革（ニュース）に伴う一時的なリストラ費用の発生"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズはTSMCとの提携や収益回復により極めて強気（strength 70）だが、テクニカルも既に強気（strength 75）に揃っており、好材料が株価に織り込まれている可能性が高い。\",\n      \"evidence\": \"fundamental_view.strength=70 / technical_view.stance=bullish (strength=75)\"\n    },\n    {\n      \"reason\": \"RSIが64.2と買われすぎ水準の70に接近しており、短期的には利益確定売りの圧力が高まりやすい水準にある。\",\n      \"evidence\": \"technical_view.cautions[2]: price_technical.rsi14=64.2\"\n    },\n    {\n      \"reason\": \"2026年9月中旬に日銀金融政策決定会合を控えており、円高進行リスクが輸出セクターである同社の重石となる懸念がある。\",\n      \"evidence\": \"fundamental_view.cautions[1]: macro.boj.monetary_policy_meeting (2026-09-17)\"\n    }\n  ],\n  \"risks\": [\n    \"日銀会合に伴う為替レートの大幅な変動（円高）による利益圧迫リスク\",\n    \"RSIが過熱圏に到達することによる自律的な調整の下落\",\n    \"米国ADRの軟調（-0.87%）を受けた寄り付き後のモメンタム悪化\",\n    \"組織改革（ニュース）に伴う一時的なリストラ費用の発生\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "中期トレンドが市場を上回る強さを維持しており、移動平均線のゴールデンクロスやMACDの好転など、複数のテクニカル指標が上昇継続を示唆しています。",
+      "points": [
+        {
+          "point": "中期トレンドが非常に強力であり、市場平均（TOPIX）を大幅にアウトパフォームしています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=11.27, relative_to_topix_60d_pct=9.16"
+        },
+        {
+          "point": "短期移動平均線が長期線を上回るゴールデンクロス状態にあり、株価も25日線の上方を維持しています。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, last_close=3832.0, sma25=3680.24"
+        },
+        {
+          "point": "MACDがプラス圏でシグナルを上回って推移しており、上昇の勢いが継続していることを示しています。",
+          "evidence": "price_technical.macd=85.01, macd_signal=84.68, macd_histogram=0.33"
+        }
+      ],
+      "cautions": [
+        "前夜の米国市場でADRが下落（-0.87%）しており、本日の寄り付きが軟調になる可能性があります (us_overnight.adr.change_1d_pct=-0.87)。",
+        "市場全体の地合い（レジーム）が中立判定となっており、相場全体の崩れによる連れ安に注意が必要です (macro.market_regime.market_regime=neutral)。",
+        "RSIが64.2と買われすぎ水準の70に接近しており、目先の利益確定売りが出やすい位置にあります (price_technical.rsi14=64.2)。"
+      ],
+      "key_levels": {
+        "support": 3680.24,
+        "resistance": 3964.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "TSMCとの半導体合弁会社設立に関する確定契約締結（2026/08/11）という直近の強力なカタリストに加え、AI需要を背景とした製造業PMIの拡大が主力事業の追い風。第1四半期の営業利益も前四半期比で大幅に改善しており、成長軌道への回帰が期待されます。",
+      "points": [
+        {
+          "point": "TSMCとの合弁会社設立に関する確定契約を締結し、半導体戦略を具体化。2週間以内の新規材料であり、中長期的な供給網の安定と次世代イメージセンサーの開発強化に寄与する。",
+          "evidence": "disclosures (2026-08-11 18:30:00)"
+        },
+        {
+          "point": "2027年3月期第1四半期（2026-06期）の営業利益が4,745億円と、前期第4四半期（2,713億円）から大幅に回復。通期ベースでの収益性改善が示唆されている。",
+          "evidence": "fundamentals.earnings_trend.quarterly (2026-06 period)"
+        },
+        {
+          "point": "日本の製造業PMIが55.1と7ヶ月連続の拡大。特にAI関連需要に伴う新規受注が好調であり、イメージセンサー等のデバイス事業にとって良好なマクロ環境である。",
+          "evidence": "macro.japan_pmi.manufacturing (latest_value: 55.1)"
+        },
+        {
+          "point": "継続的な自己株式の取得による株主還元姿勢。直近数ヶ月間、毎月定期的に取得状況を開示しており、需給の下支え要因となっている。",
+          "evidence": "disclosures (2026-08-05, 2026-07-03, 2026-06-03)"
+        }
+      ],
+      "cautions": [
+        "2026年3月期の通期純損益がマイナス3,269億円の赤字であったことによる財務的影響の精査が必要 (fundamentals.earnings_trend.annual)",
+        "次回の日銀金融政策決定会合（2026-09-17〜）まで22日と迫っており、円高進行時の利益圧迫リスクに注意 (macro.boj.monetary_policy_meeting)",
+        "管理職削減や年功序列廃止といった組織改革（ニュース）に伴う一時的な混乱やリストラ費用の発生リスク (news 2026-08-25)"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソニー「このままではだめになる」で脱年功序列 管理職も削減 - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBRZUJiUmpoYmJ1R0JyZV94M041WXFXOFV6akJyVnVudWZyNjhtbHdYeXNGVmdBMG9EcFNpRnp0RWNsa082a0U0UWFVdjJnZDBiNXVaMEM3ZVJJYVF5dzBSdjFPYkFqTUE?oc=5",
+        "published": "Tue, 25 Aug 2026 20:00:00 GMT",
+        "publisher": "日経ビジネス電子版"
+      },
+      {
+        "title": "【FISCO銘柄コメント】ソニーグループ---世界的AV機器メーカー(フィスコ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNNFpKa3VoVW9MUXBfYjQwZWV6SHFQaWd2OFFvUDJhNF8tM1NHY1ZkaVhvOTBpc01FaEVfSXJhQTdybDJlR3Nod0pWMVdFNXVHUDhrVkl2UFNtcWRiQmpTbWRkaGZzRGM0VkJGdkJVZ2ZpWS1VZ3BZMjgzS0M0UnJMLWxGYW10TnM?oc=5",
+        "published": "Tue, 25 Aug 2026 11:02:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "$ソニーグループ (SONY.US)$12 彼の - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQTWdRdEZ5Z3c1LW4zQW1hNkRVYmVqTVBQLVVfWVFEYjhhYmVENkR4Njdqd1NnRkwwb2ZTMWZUc09XVVg4TkpPbmZ5UHJyLUZwY0t0emx6VHExSzdoWG93aVhuTDJyUngyQmVLa0pkUHFkOEJxbmpQeWdoWnJvbnNyOEFn?oc=5",
+        "published": "Tue, 25 Aug 2026 06:06:40 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "史上初のアニメ・ソート・リーダーシップ・サミット - arabnews.jp",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9qU2xHR3dkU2NpN3lmZlNMY3BWaktPSGJGTDZRZ1pLLVJ2SElfbXRTY1dvLTBWY01rLXZ4Um44aFo0Uk9MUkF2Z0Z6QnFYVWRUMkV3WFlVV3ZHRjBsSFVKcE9JNWFtbVVrTWhybw?oc=5",
+        "published": "Tue, 25 Aug 2026 09:08:10 GMT",
+        "publisher": "arabnews.jp"
+      },
+      {
+        "title": "ソニー「aibo」開発チーム、次世代試作機を米国で披露 学術連携強化とオープン化のねらいを聞く - マイナビニュース",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1BWmx6UTdDeFcxM2MxSWlGQVUxb2RuNWdBNy1nX2h1RmYtbmJVT0NsdGVpeGZfRnZxTkF4YUZZRERwa3hOV1NtSVFHUHVIRGMyMkJrYXozV2dhcDdsTWJsaHFhTmV6YmRJ?oc=5",
+        "published": "Tue, 25 Aug 2026 14:15:00 GMT",
+        "publisher": "マイナビニュース"
+      },
+      {
+        "title": "株塾・株道場とのコラボサイトです。世界のソニーグループですね。... - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5rV3VfOFpaR3BaZ2pCZFREYVYwVkFsVHRJZEdydW15YnRBYkpjTXc0X09zRjloZ2dqRVB4LV83dzVCQzczdVJ2QUtRQldRNjFHd0lpazdDbnZoU2s?oc=5",
+        "published": "Tue, 25 Aug 2026 05:54:58 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "2025年CIS売上高トップは市場シェア50%のソニー、なぜTSMCと合弁するの? - semiconportal.com",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOZzVwcUc5OENUalZaY3FBZHgwRTdDUVdTbnZBbnlUQUNEd3docG9HcmhudFJyX0hVRUxaeS0tcVFMcDR2Zm9Od2hsSjQ1UVNIY1IwbVg2ZV9WNHNnc29tem5NWWdUZy1vUlA4bHJnMUw4dGt2OU91TTZLTGMtTlptcVlSbXl5dw?oc=5",
+        "published": "Tue, 25 Aug 2026 02:56:12 GMT",
+        "publisher": "semiconportal.com"
+      },
+      {
+        "title": "ソニーＧが頑強、車載ＡＩエージェントで独自キャラ活用の新展開へ - みんかぶ",
+        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5yLUY5Y3ZxcEgzTGw5TGgtLXdIYkFqVUZGV1VhWE1FcEQ0Q09qNW1KUnRrOVlhUjZZdVVtbVVMS2JkeE15UWc?oc=5",
+        "published": "Tue, 25 Aug 2026 00:06:05 GMT",
+        "publisher": "みんかぶ"
+      },
+      {
+        "title": "SIE、「Only On PS5」と題したPS5専売タイトルの紹介映像を公開。今後シングルゲーのPC版を出さない方針を明確化か - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQM2tabGFaNDhVakpHeFB1SVpUV3VJbHFLYnZFR1dROUVKdlk4ZGtfNTNHbnRYYTF2MTNQeVV5MHMzZm5zMFotM2l5dEtNRzhmblotR3pHNTFhRVFqZ01FZEtSbHNDQkdjUjJtZk1VSG4wVl84V1JlSFk5MGg1TUpJUEhR0gGCAUFVX3lxTFAza1psYVo0OFVqSkd4UHVJWlRXdUlscUtidkVHV1E5RUp2WThka181M0dudFhhMXYxM1B5VXkwczNmbnMwWi0zaXl0S01HOGZuWi1Hekc1MWFFUWpnTUVkS1Jsc0NCR2NSMm1mTVVIbjBWXzhXUmVIWTkwaDVNSklQSFE?oc=5",
+        "published": "Tue, 25 Aug 2026 05:45:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "SIE、「Only On PS5」と題したPS5専売タイトルの紹介映像を公開。今後シングルゲーのPC版を出さない方針を明確化か - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBISUttZjlLZmtfOUJwUW5DNWFxc05Hemt0NlJ2WV9wOXotdXdjbDNBQVdEVTRZdXJ5b213cjItU2NLY0pOZlVyeEx0V0U5ai1EV1l1bkpXV0VmN0lGWlF4b2lMcw?oc=5",
+        "published": "Tue, 25 Aug 2026 05:45:56 GMT",
+        "publisher": "Infoseek"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260811517496.pdf",
+        "date": "2026-08-11 18:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805509201.pdf",
+        "date": "2026-08-05 11:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504252.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期 連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504254.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の権利確定に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595854.pdf",
+        "date": "2026-07-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587315.pdf",
+        "date": "2026-07-03 11:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584099.pdf",
+        "date": "2026-06-30 15:30:00"
+      },
+      {
+        "title": "米ドル建て無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577032.pdf",
+        "date": "2026-06-24 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260603560934.pdf",
+        "date": "2026-06-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの次世代イメージセンサーに関する戦略的提携に向けた基本合意のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518510.pdf",
+        "date": "2026-05-08 16:15:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-08-26T07:42:59+09:00",
+  "price_as_of": "2026-08-25",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "直近（2026-08-19）に buy 判断を出してから14日以内であり、現在はその後の推移を継続監視すべきフェーズであるため。",
+        "evidence": "reference.recent_buy.date='2026-08-19'"
+      },
+      {
+        "reason": "テクニカル面でゴールデンクロス等の強気サイン（bullish）が既に出現しており、ファンダメンタルズの好材料が株価に織り込まれ始めているため、新規エントリーの優位性が低下している。",
+        "evidence": "technical_view.stance='bullish' (strength=70), technical_view.points[0]"
+      },
+      {
+        "reason": "ファンダメンタルズの strength は 70 と高いものの、統合判断ルールに基づきテクニカルが中立（neutral）でない場合は「織り込み済み」と判断し、新規の買いは推奨しない。",
+        "evidence": "fundamental_view.strength=70, technical_view.stance='bullish'"
+      }
+    ],
+    "risks": [
+      "2026年9月17日〜18日の次回日銀金融政策決定会合に向けた金融政策の不透明感と金利上昇リスク。",
+      "予想PER44倍超という高バリュエーション水準に伴う、地合い悪化時の下方修正圧力。",
+      "MACDが依然としてシグナルを下回って推移しており、戻り売り圧力が完全に解消されていない点（technical_view.cautions）。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 21,\n \"reasons\": [\n  {\n   \"reason\": \"直近（2026-08-19）に buy 判断を出してから14日以内であり、現在はその後の推移を継続監視すべきフェーズであるため。\",\n   \"evidence\": \"reference.recent_buy.date='2026-08-19'\"\n  },\n  {\n   \"reason\": \"テクニカル面でゴールデンクロス等の強気サイン（bullish）が既に出現しており、ファンダメンタルズの好材料が株価に織り込まれ始めているため、新規エントリーの優位性が低下している。\",\n   \"evidence\": \"technical_view.stance='bullish' (strength=70), technical_view.points[0]\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズの strength は 70 と高いものの、統合判断ルールに基づきテクニカルが中立（neutral）でない場合は「織り込み済み」と判断し、新規の買いは推奨しない。\",\n   \"evidence\": \"fundamental_view.strength=70, technical_view.stance='bullish'\"\n  }\n ],\n \"risks\": [\n  \"2026年9月17日〜18日の次回日銀金融政策決定会合に向けた金融政策の不透明感と金利上昇リスク。\",\n  \"予想PER44倍超という高バリュエーション水準に伴う、地合い悪化時の下方修正圧力。\",\n  \"MACDが依然としてシグナルを下回って推移しており、戻り売り圧力が完全に解消されていない点（technical_view.cautions）。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "5日移動平均線が25日線を上抜けるゴールデンクロスが発生し、株価も移動平均線の上に回帰した。前夜ADRの強い反発もあり、短期的には上値を試す展開が期待される。",
+      "points": [
+        {
+          "point": "SMA5がSMA25を上回るゴールデンクロスが発生し、直近2営業日の続伸によって短期的な強気形状へ転換している。",
+          "evidence": "price_technical.sma5_vs_sma25='golden(5日線が25日線の上)', price_technical.recent_5_days"
+        },
+        {
+          "point": "中期（60営業日）の騰落率および対TOPIX相対騰落率がともにプラスを維持しており、底堅いトレンドが継続している。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=2.67, price_technical.trend_60d.relative_to_topix_60d_pct=0.57"
+        },
+        {
+          "point": "前夜のNY市場においてADRが4.3%と大幅に上昇しており、国内市場の寄り付きから強いモメンタムが波及する可能性が高い。",
+          "evidence": "us_overnight.adr.change_1d_pct=4.3"
+        }
+      ],
+      "cautions": [
+        "MACDが依然としてシグナルを下回って推移しており、ヒストグラムもマイナス圏にあるため、戻り売りの圧力には注意が必要である。",
+        "ADRの大幅上昇が寄り付き価格に過度に織り込まれた場合、買い一巡後に利益確定売りに押される可能性がある。"
+      ],
+      "key_levels": {
+        "support": 80530.8,
+        "resistance": 87920.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "盤石な業績拡大トレンドに加え、AI需要を背景とした製造業PMIの力強い回復が追い風。営業利益率54%という圧倒的な収益性と、継続的な増益基調が評価される局面と判断します。",
+      "points": [
+        {
+          "point": "業績の持続的成長と高い収益性。売上高・営業利益ともに右肩上がりの推移を維持しており、直近のニュースでも54%という極めて高い営業利益率が再評価されている。",
+          "evidence": "fundamentals.earnings_trend.annual, news.headlines[1]"
+        },
+        {
+          "point": "マクロ環境の好転。8月の製造業PMIが55.1と拡大を示しており、特にAI関連需要に伴う新規受注の急増が同社のFA（ファクトリーオートメーション）関連製品への需要直結を示唆している。",
+          "evidence": "macro.japan_pmi.manufacturing"
+        },
+        {
+          "point": "日銀短観における大企業製造業の景況感改善。業況判断DIが前回比+5の22.0となっており、主要顧客層である製造業の設備投資意欲が底堅い。",
+          "evidence": "macro.boj.tankan.di.large_manufacturing"
+        }
+      ],
+      "cautions": [
+        "予想PER44倍超とバリュエーションは高水準であり、金利上昇局面（JGB 10年 2.887%）では割高感が意識されやすい。",
+        "次回の日銀金融政策決定会合（9月17日〜18日）を控えた金融政策の不透明感。",
+        "ADR市場での下落（8月24日）に見られるように、海外市場の地合い悪化による短期的な売り圧力。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-19",
+    "days_ago": 7,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)キーエンス【6861】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFAxcU9waXFEc3Q2aFY1YzRVa1Atd0pCMHhuam9mZmgwaUljMkZFNzcxNXRrNzFrM3NtUzFrelFnTVZTUmxLUEJxZHQxOFJSOUhXb3VOcXhRLTZlcG1LNWpJ?oc=5",
+        "published": "Tue, 25 Aug 2026 06:59:02 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "営業利益率は脅威の54％！キーエンスの「稼ぐ力」の正体 円安効果だけでは説明しきれない好決算とAI需要の関係を読み解く - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxObks3TkZUZWNub0pDSF9id2kzZHBBeTE0M3hnVUNqekVTWHU4U1RSemNPcGZwR091SXE0Tk8yd3UyamVjSDhPbXBiSy1vOU5EUXZmV0NRUkZJUk1aRDlQYjNnMWRFbUhrWWl1eUJPb2J1RFdOX3FNUkRjSW5WSDNFVUhhTFRYdXc?oc=5",
+        "published": "Tue, 25 Aug 2026 06:12:23 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ADR主要銘柄（日本）－ＪＲ東日本、野村が上昇、キーエンス、マツダが下落 | 個別記事 | ニュース - トレーダーズ・ウェブ",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE13cXdkWlRqMGhiZkVVOWE2cFUxRFg2VG53RFJRazA1UnlpNURISjNsdFBWSlIyQU5JeTAzRTFSNlBySWxyYlhtQnFwN1NSOHRwWU42dHRmZw?oc=5",
+        "published": "Mon, 24 Aug 2026 23:02:04 GMT",
+        "publisher": "トレーダーズ・ウェブ"
+      },
+      {
+        "title": "２４日のＡＤＲ動向＝円換算値でほぼ全面安、キオクシア、住友電工、フジクラなど安い 速報 - kabushiki.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE1WM2dnN2VSenVpcG95MGZVNTNjSmtOUjVROUR6R3FUUGxJa3hoeUY1Q2ZFUmY4Z1VXTEJDa01Qb1hMSUdfR0Zv?oc=5",
+        "published": "Mon, 24 Aug 2026 22:39:00 GMT",
+        "publisher": "kabushiki.jp"
+      },
+      {
+        "title": "FAで一括りにするな！FA業界（三菱電機・オムロン・キーエンス）を完全解説。業界研究・企業研究・志望動機、これ1本！ Ukraine (zvazGuN40S) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE42bm9QRnlUUy1Ec0RmM05hZy04M3A1MHV2WE5HOXZxLXp5Yllqc2ROQXRhcTgtaXJERWphR3o4bkhwSTU2N0dBTG9JaENMZzRhZXp1Ql81VHpOWkk?oc=5",
+        "published": "Tue, 25 Aug 2026 00:45:37 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "＜画像6 / 10＞昨年ブレイク！カルピス“男子新体操部”の新CMがスゴイ - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1mSTBzQjRFNXZXMXN0OUFRXzVDdjNuenhHNlVQc2wtOUZCOWdYS3ZYQXZhV0VQcEF3VXpvb1pScW5IeFdYZ0hFZEZLRHpxVjRaSWwzZFczZzVJNlpyWG9Ca21Hc3JuUQ?oc=5",
+        "published": "Tue, 25 Aug 2026 05:52:55 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "米住宅・消費指標は未発表、金利観測が焦点【今日の市場はどう動いた？】 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5mUnF0RUtNWEowSmVFWmhoUFVOczE5M0NCaE85aWNkT2RLaVJQSkg3WU5ZQkNUaGVZVk00VmJadno5NjVqbmhvUDNUaGsxcUFiUHgteGgxa1ZBMHJwSjcxNzFvT2s?oc=5",
+        "published": "Tue, 25 Aug 2026 03:02:47 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "＜画像1 / 10＞昨年ブレイク！カルピス“男子新体操部”の新CMがスゴイ - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFB1WG42XzlxcFFrNl80eDAycVhVaDVRRHUwRUttbnRPenQtTlRmMEdPeXZxWDExMFk1RF9XUERVQVNEVnRXUUxUSi1UZ25NVUJiNENZS2wxTmJIVms1UXdtMExNY1RiQQ?oc=5",
+        "published": "Tue, 25 Aug 2026 00:25:16 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "２４日のＡＤＲ動向＝円換算値でほぼ全面安、キオクシア、住友電工、フジクラなど安い(ウエルスアドバイザー) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNXzJpUWlHYmF1bWRhWk83Q256dHc2akVGZjROZlhHSXB1ek5mVUlsTEZ1ejNPanpEbFVYc1NzS2tGc053ZlFyRm5Sd1BIT1RRSnFtWnZZZjRPTUlMQUQ1WmZvdFkwem5xV3Q1UFBnbWFnVjVrbWQ0QXVPNVZsaE0teXlxR3ZncGc?oc=5",
+        "published": "Mon, 24 Aug 2026 22:39:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "注目度平均18.3、過熱ゼロで追随買い慎重【今日の市場はどう動いた？】 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBfUEIxQUxQV0JxRzl6STI5RXFNUzhGZFc1YVBUWW1sRnRhVHAwU25rZ3BNcWc1UHh5Wmo1SWM1aU0wa0o3SE9JMGF3OFlkenc1bzY3eENUZ2FGV2VzRnBob2xfR24?oc=5",
+        "published": "Tue, 25 Aug 2026 03:02:47 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      }
+    ]
+  }
+}
