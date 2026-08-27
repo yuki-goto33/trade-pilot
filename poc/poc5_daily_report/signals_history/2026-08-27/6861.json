@@ -1,0 +1,182 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-08-27T12:04:54+09:00",
+  "price_as_of": "2026-08-27",
+  "signal": {
+    "signal": "hold",
+    "confidence": 62,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "2026年8月19日に出した直近の buy シグナルから14日以内であり、現在は新規エントリーを行わず継続監視すべき期間に該当します。",
+        "evidence": "reference.recent_buy.date=2026-08-19"
+      },
+      {
+        "reason": "ファンダメンタルズ専門家の strength が 60 であり、強気基準の 70 に達していないため、好材料は一部織り込み済みと判断し様子見を推奨します。",
+        "evidence": "fundamental_view.strength=60"
+      },
+      {
+        "reason": "テクニカル面で短期移動平均線のデッドクロスや弱気MACDが確認されており、調整圧力が残る中で「落ちるナイフ」を掴むリスクを避ける必要があります。",
+        "evidence": "technical_view.points[0]: price_technical.sma5_vs_sma25=dead / technical_view.points[1]: macd_signal 乖離"
+      }
+    ],
+    "risks": [
+      "2026年9月17〜18日の日銀金融政策決定会合による金利上昇懸念と、それに伴う高PER銘柄（キーエンス）への売り圧力",
+      "株価が25日移動平均線（81305.6円）を明確に下抜けた場合の調整トレンドの長期化",
+      "次回決算（2026年10月29日）までの個別カタリスト不足による市場関心の低下"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 62,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"2026年8月19日に出した直近の buy シグナルから14日以内であり、現在は新規エントリーを行わず継続監視すべき期間に該当します。\",\n   \"evidence\": \"reference.recent_buy.date=2026-08-19\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ専門家の strength が 60 であり、強気基準の 70 に達していないため、好材料は一部織り込み済みと判断し様子見を推奨します。\",\n   \"evidence\": \"fundamental_view.strength=60\"\n  },\n  {\n   \"reason\": \"テクニカル面で短期移動平均線のデッドクロスや弱気MACDが確認されており、調整圧力が残る中で「落ちるナイフ」を掴むリスクを避ける必要があります。\",\n   \"evidence\": \"technical_view.points[0]: price_technical.sma5_vs_sma25=dead / technical_view.points[1]: macd_signal 乖離\"\n  }\n ],\n \"risks\": [\n  \"2026年9月17〜18日の日銀金融政策決定会合による金利上昇懸念と、それに伴う高PER銘柄（キーエンス）への売り圧力\",\n  \"株価が25日移動平均線（81305.6円）を明確に下抜けた場合の調整トレンドの長期化\",\n  \"次回決算（2026年10月29日）までの個別カタリスト不足による市場関心の低下\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "短期的なSMAのデッドクロスやMACDの弱気シグナルにより調整色が強いものの、株価は25日線を辛うじて上回って推移しており、中期トレンドの底堅さと良好な市場地合いが下値を支える拮抗状態にあります。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日移動平均線を下回るデッドクロスが発生しており、短期的には下落圧力が優勢な状況を示唆しています。",
+          "evidence": "price_technical.sma5_vs_sma25=dead"
+        },
+        {
+          "point": "MACDがシグナル線を下回って推移しており、マイナスのヒストグラムが継続していることから、依然として弱気のモメンタムが支配的です。",
+          "evidence": "price_technical.macd=927.39, price_technical.macd_signal=1508.53"
+        },
+        {
+          "point": "中期（60日）の騰落率および対TOPIX相対騰落率はプラスを維持しており、市場レジームも上昇トレンドにあるため、極端な崩れは回避されやすい地合いです。",
+          "evidence": "price_technical.trend_60d.relative_to_topix_60d_pct=1.44, macro.market_regime.market_regime=uptrend"
+        }
+      ],
+      "cautions": [
+        "ADRや米国セクターETFがプラス（+0.35%〜+0.61%）であり寄り付きの底堅さは期待できますが、前夜の好材料が寄り付き価格に即座に織り込まれた後の失速に注意が必要です。",
+        "RSIが50を下回っており（42.8）、反発の勢いが弱いため、25日移動平均線を明確に割り込むと調整が長引く恐れがあります。"
+      ],
+      "key_levels": {
+        "support": 81305.0,
+        "resistance": 87920.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 60,
+      "summary": "2027年3月期第1四半期の決算が大幅な増収増益となり、AI需要を背景とした製造業PMIの拡大など、主力事業を取り巻くマクロ環境も極めて良好である。一方、直近2週間以内に株価を強力に牽引する新規の個別材料は乏しく、次回の金融政策決定会合や決算発表を控えた待機局面にある。",
+      "points": [
+        {
+          "point": "直近の第1四半期決算において、アジアの半導体・電気精密業界向けの需要増や米州の堅調な推移を背景に、営業利益が前年同期比44.7％増と極めて高い成長を示している。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "日本の製造業PMIが2026年8月に55.1を記録し、AI関連需要の強まりによる新規受注の増加が報告されており、同社のセンサー・制御機器事業にとって強力な追い風となっている。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=55.1"
+        },
+        {
+          "point": "年次業績において、売上高・各利益項目ともに過去3期連続で右肩上がりの成長トレンドを維持しており、収益基盤の盤石さが確認できる。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日〜18日に日銀金融政策決定会合を控えており、JGB10年金利が2.892%と高水準にある中、金融引き締め観測による高PER銘柄への下押し圧力に注意が必要。",
+        "次回の決算発表（2026年10月29日）まで2ヶ月近くあり、好材料が概ね織り込まれた後は、新たな個別カタリストが不足する可能性がある。",
+        "中小企業の仕入価格DIと販売価格DIの乖離（49.2 vs 24.6）が依然大きく、国内製造業におけるコスト圧迫が設備投資意欲に減退をもたらすリスクがある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-19",
+    "days_ago": 8,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ZAICO、キーエンス製ハンディ端末とzaico連動 - LOGISTICS TODAY",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBTckgwODNmUC1WUkRiZ3ZwRHBQOWJ5ckxvVzhNTnpZU05LVlY4ZDFxRFVNMlRTM3pZM2pmRlRseTNkM2l0OHBRQg?oc=5",
+        "published": "Wed, 26 Aug 2026 19:09:53 GMT",
+        "publisher": "LOGISTICS TODAY"
+      },
+      {
+        "title": "zaico、キーエンス製の業務用ハンディターミナルで「スマホが使えない現場」の在庫管理DXを推進 - 山形経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1CSzExeW9BY2tBWmNwZFhlTVNmOXFLR3pRV290VW4wR2JHaVpCV0xEOE1TbndGb19vdm9KbDBrQ1lBUTlCbmY4VUUwWmlQQkdFRWhJdnBB?oc=5",
+        "published": "Wed, 26 Aug 2026 13:49:32 GMT",
+        "publisher": "山形経済新聞"
+      },
+      {
+        "title": "やっぱり豊田章男会長の予測は正しかった…アメリカでハイブリッド車が好調､トヨタに追われる首位GMの誤算 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5zV1IwcWRyNEVNTkpZcWJrXzJFaTQ4UERDUk5lb1BMS1U3SjFwWDEteEk5NjRnQXRBck0zS0QwZXZIckNJRzFkX083Z1duZDg?oc=5",
+        "published": "Wed, 26 Aug 2026 23:03:17 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "AI外観検査・マシンビジョン関連 厳選20銘柄、装置からソフト・部材まで一気通貫で解説｜日本個別株デューデリジェンスセンター - note",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE0zNmZ0NV94bEtoYTkyalFJdVdvTXdwS0lsN0E3cTdpdVZSRURmMlh4YXZfVFZGSnRhS0Z4QkcyQmJiUkdVWktTMmZkMXF0czNsaDZKOTJ2WWRZV2c?oc=5",
+        "published": "Wed, 26 Aug 2026 10:30:00 GMT",
+        "publisher": "note"
+      },
+      {
+        "title": "ポケモンチャンピオンズをやる その3【シーズンM-5】 - t.co",
+        "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE52cVlqZ3g4WTNrSGpjZXVXWHI5eTFRc19ZQ1oyVjR5LVVGdE5HeTJyYk4tNEpMdDRYVVlR?oc=5",
+        "published": "Wed, 26 Aug 2026 13:26:01 GMT",
+        "publisher": "t.co"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      }
+    ]
+  }
+}

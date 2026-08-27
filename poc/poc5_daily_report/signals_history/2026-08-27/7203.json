@@ -1,0 +1,206 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-08-27T12:01:56+09:00",
+  "price_as_of": "2026-08-27",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家が strength 60（中立）としており、通期減益予想や成長性への懸念から強力な上昇カタリストが不足していると判断されるため。",
+        "evidence": "fundamental_view.stance=neutral (strength=60) / fundamental_view.points[0]: 通期営業利益9.7%減予想"
+      },
+      {
+        "reason": "テクニカル面では強気サインが出ているが、統合ルールによりテクニカルが好転した段階では材料が織り込まれている可能性が高く、新規買いは見送る。",
+        "evidence": "technical_view.stance=bullish (strength=70) / 統合判断ルールv5"
+      },
+      {
+        "reason": "9月中旬の日銀会合を控えており、金利上昇や為替の円高進行が輸出企業である同社の重石となるリスクがあるため。",
+        "evidence": "fundamental_view.cautions[0] / reference.next_boj_meeting=2026-09-17"
+      }
+    ],
+    "risks": [
+      "2026年9月の日銀金融政策決定会合に伴う急速な円高進行による収益圧迫",
+      "通期減益見通しに対する市場の懸念継続と、次回決算（11月）までの材料不足",
+      "米国市場でのADRや自動車セクターETFの下落に伴う寄り付きの連れ安"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家が strength 60（中立）としており、通期減益予想や成長性への懸念から強力な上昇カタリストが不足していると判断されるため。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=60) / fundamental_view.points[0]: 通期営業利益9.7%減予想\"\n  },\n  {\n   \"reason\": \"テクニカル面では強気サインが出ているが、統合ルールによりテクニカルが好転した段階では材料が織り込まれている可能性が高く、新規買いは見送る。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=70) / 統合判断ルールv5\"\n  },\n  {\n   \"reason\": \"9月中旬の日銀会合を控えており、金利上昇や為替の円高進行が輸出企業である同社の重石となるリスクがあるため。\",\n   \"evidence\": \"fundamental_view.cautions[0] / reference.next_boj_meeting=2026-09-17\"\n  }\n ],\n \"risks\": [\n  \"2026年9月の日銀金融政策決定会合に伴う急速な円高進行による収益圧迫\",\n  \"通期減益見通しに対する市場の懸念継続と、次回決算（11月）までの材料不足\",\n  \"米国市場でのADRや自動車セクターETFの下落に伴う寄り付きの連れ安\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "株価は25日移動平均線の上で推移し、MACDの好転や60日騰落率のTOPIXアウトパフォームなど中期的な上昇トレンドを維持しています。直近は5日線を下回り小幅調整中ですが、出来高減を伴う押し目形成の範囲内と判断できます。",
+      "points": [
+        {
+          "point": "株価は25日線（3020.12円）を上回って推移しており、5日線と25日線はゴールデンクロスを維持している。",
+          "evidence": "price_technical.last_close=3069.0, price_technical.sma25=3020.12, price_technical.sma5_vs_sma25=golden"
+        },
+        {
+          "point": "MACDはシグナルを上回りヒストグラムもプラス圏で推移し、RSI14も60.6と堅調なモメンタムを示している。",
+          "evidence": "price_technical.macd=36.54, price_technical.macd_signal=32.35, price_technical.macd_histogram=4.19, price_technical.rsi14=60.6"
+        },
+        {
+          "point": "60営業日騰落率が+7.91%とTOPIX（+3.15%）を上回るアウトパフォームを示し、市場レジームも上昇基調にある。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=7.91, price_technical.trend_60d.relative_to_topix_60d_pct=4.76, macro.market_regime.market_regime=uptrend"
+        }
+      ],
+      "cautions": [
+        "直近5営業日は下落傾向で5日線（3095.6円）を下回っており、支持線となる25日線（3020.12円）付近までの押し目を試す可能性がある。",
+        "前夜の米国市場でADR（-0.58%）およびセクターETF（-0.67%）が下落しており、寄り付きの重石となる可能性がある。"
+      ],
+      "key_levels": {
+        "support": 3020.12,
+        "resistance": 3233.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "通期業績予想が営業利益・純利益ともに前期比で減益見通しであり、Q1決算も営業減益となったことから、成長性への懸念が残ります。製造業PMIの拡大や円安水準の維持は追い風ですが、9月の日銀金融政策決定会合を控えた金利上昇リスクもあり、現在は様子見が妥当と判断します。",
+      "points": [
+        {
+          "point": "2027年3月期通期の連結業績予想において、営業利益が前期比9.7%減、当期利益が15.5%減と慎重な見通しが示されています。",
+          "evidence": "fundamentals.recent_important_disclosures[1].summary"
+        },
+        {
+          "point": "日本の製造業PMIが55.1と7ヶ月連続の拡大を示しており、AI需要などを背景とした生産活動の活発化は同社にとってポジティブな外部環境です。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=55.1"
+        },
+        {
+          "point": "PBRが1倍を割り込み、配当利回りも3%を超える水準ですが、これらは下値の限定要因に留まり、強力な上昇カタリストとしては不足しています。",
+          "evidence": "fundamentals.valuation.price_to_book=0.974, fundamentals.valuation.dividend_yield_percent=3.26"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日〜18日に開催される日銀金融政策決定会合による金利・為替への影響",
+        "次回決算発表（2026年11月5日）における通期予想の修正有無",
+        "為替（ドル円）が円高方向に振れた場合の輸出採算の悪化"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "上海で輝く2026 技能五輪国際大会（3）トヨタ自動車・山田夢翔選手 - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE54TEtfZHkxZkRyamR2U3RmWkZLYTFhb3k0dTJDRTRNTll3S1FSZ3YwNDV3LV8zXzd0LXFCNzROSGlrcm51ME83ZzNuUGJvVUZVOHRJM2tLWFlwaXM?oc=5",
+        "published": "Wed, 26 Aug 2026 21:42:36 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "トヨタ自動車(株)【7203】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ZZGdsaERPWFJGS2hIekZwall6QzFzWndlMk5uc3J5ci1MX0tyUmRLYVlVTFJ4QTFLSGQxQ1M2TXgtS0RRb2RTX1pHMW9FWEw4T2hJS1lSdENuNUhlT0U0?oc=5",
+        "published": "Wed, 26 Aug 2026 06:52:36 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "トヨタ自動車 車中泊避難など車を使った防災術を紹介（2026年8月26日掲載）｜中京テレビNEWS NNN - 日テレNEWS NNN",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQeXpSQm9JNXpHMkdKSHpCRWRDcTg5c2dQWmVvSHNibGplbzNfUmhIaTl1dkVWMXd5QjNBdjZ2ejhPQ2JmSHRrdE84WDR4TnpsS3ZMamJMUEhKa002V3lfc2NpNHl0NURoNmRldTBsUlVNQjI3c19CR0VtaFQyU2dDX0JqaHFsWlk?oc=5",
+        "published": "Wed, 26 Aug 2026 13:01:00 GMT",
+        "publisher": "日テレNEWS NNN"
+      },
+      {
+        "title": "応援ダイジェスト2025 トヨタ自動車（豊田市）｜都市対抗野球2026 - 毎日新聞",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5nUFBSOGVhb1c2UEZIUVQ5R0VzU1d3LTg1RnJOY19pR0JLTWhUNFpoalNUYm02MzFvZk9lMks2NjVtb3U0b1VjN1JZeWdOdW5sZmZaZTVMR1JNZ0taTjduRTNtWklWWWJZS210bnRGS2ZobTdnd2RQSg?oc=5",
+        "published": "Wed, 26 Aug 2026 07:01:42 GMT",
+        "publisher": "毎日新聞"
+      },
+      {
+        "title": "トヨタ現役社員25年ぶり起業 新事業創出制度で初 物流効率化サービス：ニュース - 中日BIZナビ",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE80NEc2dW5lMHc2ck9JRGFad1c0azVhU1NVMlBJREp4SHNpLWZEY3FrLVp5U29tS1lTczFPUXhRU1BFNm45d2FKajFWeFJrcjlYdDd2YV80akQ5TVNwdXlERm1YWQ?oc=5",
+        "published": "Wed, 26 Aug 2026 21:28:09 GMT",
+        "publisher": "中日BIZナビ"
+      },
+      {
+        "title": "厳しさの中に愛情、「白い帽子」の工長…トヨタの「おやじ」が目指したリーダー像 - 読売新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5oNHE1bnF5QXc0cmRGVHVxSTZPdzNEVDRvdXAyM0VSRHJOV0VncVJubVFtWEkzbm90eGloc2tqTVZ5SFB4VUVQbzVXUkR5cmt3NnF2QnQxelVUc1FOTEdKSGxmOW0?oc=5",
+        "published": "Wed, 26 Aug 2026 03:00:00 GMT",
+        "publisher": "読売新聞"
+      },
+      {
+        "title": "トヨタ、車の外部給電公開 - 埼玉新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBCOUdpd1hVcmhpaUJqeVBPbGFCeTYyVlNYaGVHYkdzUjVITGNINVlkSW9FMTAxU3kzRkJpaXdRWnZJYklBWDE3czE4TFRiZ2FOTGZETUNmeU1SVjZjQldPLWMwR1Q?oc=5",
+        "published": "Wed, 26 Aug 2026 09:50:00 GMT",
+        "publisher": "埼玉新聞"
+      },
+      {
+        "title": "【アナリスト予想】トヨタ自動車、27年3月期経常予想。対前週0.2%上昇。(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNRFhKaUNiWi1na3pWM0VtQmhjN25uOEVEVk1rdkdOOGlkNG8tY2ctVEZ6Rkc1NWhBeEE4XzhwRlhZWE5WVGJMTkxFcEltTEt1eHZtSXFMd0hremJkeEdiR1FtMExURm5JNnRpZHBubG9ZN2x1Y3lyeTlZMjNaaWE3TEZoS3FDSUE?oc=5",
+        "published": "Wed, 26 Aug 2026 13:47:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "トヨタ自動車の移動型マーケティング支援サービス「mobiMArt」が、地域課題解決アライアンス「YORIMIRAI」のアライアンスパートナーとして活動開始 - MOTA",
+        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFA1NmJteld6QTBzQ2k5WUU0NUF5U0dEUFFfMFZ5MFZDV0Q0bVY5enZtMGZyOFZjN3ZHakhBWkFDenU4T3hQZEI5VEtn?oc=5",
+        "published": "Wed, 26 Aug 2026 03:07:15 GMT",
+        "publisher": "MOTA"
+      },
+      {
+        "title": "車開発に欠かせぬ「空力」評価 トヨタ、風洞施設を公開【動画あり】：ニュース - 中日BIZナビ",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5uNGxNQklnWldFWjJ3THc4YmlqM2cybUVvbXRLNzVreHdzRVdLcVZ0Rmp6aDRabXNfX2czbWdzM1dQcUk1cDVNT19QekxJSHFUZmxiQTBFZEZXSGhjYzRj?oc=5",
+        "published": "Wed, 26 Aug 2026 10:14:00 GMT",
+        "publisher": "中日BIZナビ"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度の継続及び従業員に対する新たな株式交付制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507853.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507884.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503849.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "2027年3月期第１四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507860.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507846.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "役員人事に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572690.pdf",
+        "date": "2026-06-17 16:00:00"
+      }
+    ]
+  }
+}
