@@ -1,0 +1,183 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-08-31T09:31:25+09:00",
+  "price_as_of": "2026-08-28",
+  "signal": {
+    "signal": "hold",
+    "confidence": 62,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-08-19）に buy シグナルを発行済みであり、同一銘柄への短期連続エントリーを避けるため継続監視とする。",
+        "evidence": "reference.recent_buy.date=2026-08-19"
+      },
+      {
+        "reason": "ファンダメンタルズ専門家の strength が 60 となっており、buy 判断の必須条件である 70 に達していない。好業績だがバリュエーションの織り込みが進んでいる。",
+        "evidence": "fundamental_view.strength=60, fundamental_view.points[2]: forward_pe=44.426"
+      },
+      {
+        "reason": "テクニカル面で MACD のデッドクロス継続や前夜 ADR の下落が確認され、地合い悪化による短期的な下押しリスクが拭えない。",
+        "evidence": "technical_view.points[2]: macd_histogram=-541.36, technical_view.cautions[0]: ADR -2.01%"
+      }
+    ],
+    "risks": [
+      "次回日銀金融政策決定会合（9/17-18）に伴う金利上昇観測と、高PERグロース株への下押し圧力。",
+      "前夜ADRの大幅下落（-2.01%）および日経平均の急落（-2.14%）に伴う、寄り付きでの25日移動平均線割り込みリスク。",
+      "160円台の円安水準からの急激な為替の巻き戻しによる、輸出セクターへの心理的悪化。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 62,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"直近14日以内（2026-08-19）に buy シグナルを発行済みであり、同一銘柄への短期連続エントリーを避けるため継続監視とする。\",\n      \"evidence\": \"reference.recent_buy.date=2026-08-19\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズ専門家の strength が 60 となっており、buy 判断の必須条件である 70 に達していない。好業績だがバリュエーションの織り込みが進んでいる。\",\n      \"evidence\": \"fundamental_view.strength=60, fundamental_view.points[2]: forward_pe=44.426\"\n    },\n    {\n      \"reason\": \"テクニカル面で MACD のデッドクロス継続や前夜 ADR の下落が確認され、地合い悪化による短期的な下押しリスクが拭えない。\",\n      \"evidence\": \"technical_view.points[2]: macd_histogram=-541.36, technical_view.cautions[0]: ADR -2.01%\"\n    }\n  ],\n  \"risks\": [\n    \"次回日銀金融政策決定会合（9/17-18）に伴う金利上昇観測と、高PERグロース株への下押し圧力。\",\n    \"前夜ADRの大幅下落（-2.01%）および日経平均の急落（-2.14%）に伴う、寄り付きでの25日移動平均線割り込みリスク。\",\n    \"160円台の円安水準からの急激な為替の巻き戻しによる、輸出セクターへの心理的悪化。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "5日線が25日線を上抜けるゴールデンクロスが確認され短期的な持ち直しは見られるものの、MACDの調整局面継続や前夜ADRの大幅下落、市場地合いの急悪化が重なり、強気判断には至りません。",
+      "points": [
+        {
+          "point": "短期移動平均線（SMA5）が25日線を上回るゴールデンクロスが発生しており、直近5営業日でも底堅い推移が見られます。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.recent_5_days[].change_pct"
+        },
+        {
+          "point": "中期トレンドを示す60日騰落率および対TOPIX相対騰落率がともにプラスを維持しており、中長期的なトレンドは崩れていません。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=2.89, relative_to_topix_60d_pct=0.67"
+        },
+        {
+          "point": "MACDがシグナルを下回るデッドクロス状態が継続しており、ヒストグラムも負の値を示していることから、上昇の勢いは依然として限定的です。",
+          "evidence": "price_technical.macd=1175.38, price_technical.macd_signal=1716.74, price_technical.macd_histogram=-541.36"
+        }
+      ],
+      "cautions": [
+        "前夜のADRが-2.01%と大きく下落しており、翌営業日の寄り付きでSMA25を割り込む水準まで売られるリスクがあります。",
+        "直近の日経平均株価が-2.14%と大幅な下落を見せており、市場全体の地合い悪化による連れ安に警戒が必要です。",
+        "RSIが43.5と中立圏にあり、明確な売られすぎ感がないため、自律反発の力が弱い可能性があります。"
+      ],
+      "key_levels": {
+        "support": 81742.0,
+        "resistance": 87920.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "持続的な増収増益トレンドと製造業PMIの拡大など良好なファンダメンタルズを維持しているが、PER44倍超の高バリュエーションを正当化する新規のカタリストが直近で不足している。",
+      "points": [
+        {
+          "point": "業績は着実な成長路線を継続。2026年3月期も売上高・営業利益ともに前期比で増収増益の計画であり、高い収益性を維持している。",
+          "evidence": "fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=5958, annual[1].operating_income_oku_jpy=5498"
+        },
+        {
+          "point": "マクロ環境はFA関連需要に追い風。日本の製造業PMIが55.1と拡大圏にあり、日銀短観の大企業製造業DIも前回調査から5ポイント改善している。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=55.1, macro.boj.tankan.di.large_manufacturing.change_from_prev=5.0"
+        },
+        {
+          "point": "直近2週間以内に株価を押し上げる新規材料が確認できず、44倍を超える予想PERは成長性を織り込み済みの水準と言える。",
+          "evidence": "fundamentals.valuation.forward_pe=44.426, disclosures (latest_date=2026-07-28)"
+        }
+      ],
+      "cautions": [
+        "日銀金融政策決定会合（9/17-18）を控え、国内金利の上昇が続いた場合、高PERのグロース銘柄である同社には下押し圧力がかかる懸念がある。",
+        "ドル円が160円水準にあるが、為替介入や日銀の政策修正による急激な円高進行が輸出セクターの心理的重石となるリスク。",
+        "次回決算発表（10/29）まで2ヶ月ほど期間があり、材料不足によるレンジ内での推移、または利益確定売りの先行が想定される。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-19",
+    "days_ago": 12,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "上京塾、27卒塾生の74.5％が早期内定を獲得 累計内定数472社に到達 - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5VWTV3YlZzbjY0b044VFJxdzNreTg5cXRneDRsX1pRQTlqX2FEbnZLVmowUERzZTRIVHNQRDZuQ0RDU255QjBldE4zX1dNZnp0U1VCb0lXWklqTkpva042WVIzTEozNnFFQnNFalU1T3FvNWFOMnJ4aUZSQQ?oc=5",
+        "published": "Mon, 31 Aug 2026 00:03:29 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "東北と絆、大雨の氷見に支援物資 救援隊、協力者が配布開始 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE8yOV9rdEZKc3dMQ21WQkpuOHJOVzRtaG9hNHR4VVI0SHpMMDQtYjVRTXk2VGhuQUlncTgxVXpVTHdpNWtSNjJ5UVRLb21fSFNqbHJjRndWbDZYZHN3bWs1WVkyampITXktTm4zNGdqeTk0aHh1T3VvNA?oc=5",
+        "published": "Sun, 30 Aug 2026 10:50:36 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "＜画像10 / 10＞昨年ブレイク！カルピス“男子新体操部”の新CMがスゴイ - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFB6dTlIZEhGcXk1OFlkbHNqYV9IdnpTUDI4RGJSV25fNjNaejRKLVpiNVRDVmQ4WVFhMDFzeFpGbGdaMkNqWlNPVVo5dXhIbndlcDVoYkJHQUwxbWZ1ZFZvQU9WbVhWUQ?oc=5",
+        "published": "Sun, 30 Aug 2026 05:01:37 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "｢6時間も寝てない人｣は糖尿病リスクが上昇…13万人研究から内科医が推奨する｢血糖値にいい睡眠時間｣の正解 (3ページ目) - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBJekdOMk9KbjNuWm1kUFVtRndxZDlaZXRPT29UeGFyMGwzdWxZTWt2RUxQVFZNWUFvajlfV20wdEdXT1BvM2NJQjhyN3g0Vm1RaE5KS3IwdHI?oc=5",
+        "published": "Sun, 30 Aug 2026 02:00:00 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "｢6時間も寝てない人｣は糖尿病リスクが上昇…13万人研究から内科医が推奨する｢血糖値にいい睡眠時間｣の正解 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5JdnB6LV9CZ1F0N3VnSlFmRF9PYmh4NFo4TFU5TDdNd05tcEo1ei1MWHFDSHNHREMxc2NOaWFqMU5TQmwzaFBEOUFrTEEtclU?oc=5",
+        "published": "Sun, 30 Aug 2026 02:01:25 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      }
+    ]
+  }
+}
