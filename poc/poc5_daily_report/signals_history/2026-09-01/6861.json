@@ -1,0 +1,173 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-09-01T10:26:02+09:00",
+  "price_as_of": "2026-09-01",
+  "signal": {
+    "signal": "hold",
+    "confidence": 62,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-08-19）に buy シグナルを出しており、現在は新規エントリーではなく継続監視すべき局面である。",
+        "evidence": "reference.recent_buy (date: 2026-08-19, 13 days ago)"
+      },
+      {
+        "reason": "ファンダメンタルズの評価は強気だが、確信度が 60 と buy 基準（70以上）に達しておらず、短期的には材料不足の状態にある。",
+        "evidence": "fundamental_view.strength=60, fundamental_view.summary"
+      },
+      {
+        "reason": "テクニカル面では MACD がシグナルを下回って推移しており、短期的には調整圧力が残る neutral な状態にある。",
+        "evidence": "technical_view.points[1]: macd=1287.72, macd_signal=1749.27"
+      },
+      {
+        "reason": "株価が25日移動平均線（82,550円）と同水準で膠着しており、方向感を見極める必要がある。",
+        "evidence": "technical_view.points[2]: last_close=82540.0, sma25=82550.4"
+      }
+    ],
+    "risks": [
+      "次回の日銀金融政策決定会合（9/17-18）での金融政策修正観測に伴うボラティリティ増大のリスク。 (reference.next_boj_meeting)",
+      "予想PER 44.2倍と高水準な中、10年債利回りの上昇がマルチプル収縮を招くリスク。 (fundamental_view.cautions)",
+      "25日移動平均線を明確に割り込んだ場合、期間安値（69,950円）に向けた調整が深まる懸念。 (technical_view.cautions)"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 62,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"直近14日以内（2026-08-19）に buy シグナルを出しており、現在は新規エントリーではなく継続監視すべき局面である。\",\n      \"evidence\": \"reference.recent_buy (date: 2026-08-19, 13 days ago)\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズの評価は強気だが、確信度が 60 と buy 基準（70以上）に達しておらず、短期的には材料不足の状態にある。\",\n      \"evidence\": \"fundamental_view.strength=60, fundamental_view.summary\"\n    },\n    {\n      \"reason\": \"テクニカル面では MACD がシグナルを下回って推移しており、短期的には調整圧力が残る neutral な状態にある。\",\n      \"evidence\": \"technical_view.points[1]: macd=1287.72, macd_signal=1749.27\"\n    },\n    {\n      \"reason\": \"株価が25日移動平均線（82,550円）と同水準で膠着しており、方向感を見極める必要がある。\",\n      \"evidence\": \"technical_view.points[2]: last_close=82540.0, sma25=82550.4\"\n    }\n  ],\n  \"risks\": [\n    \"次回の日銀金融政策決定会合（9/17-18）での金融政策修正観測に伴うボラティリティ増大のリスク。 (reference.next_boj_meeting)\",\n    \"予想PER 44.2倍と高水準な中、10年債利回りの上昇がマルチプル収縮を招くリスク。 (fundamental_view.cautions)\",\n    \"25日移動平均線を明確に割り込んだ場合、期間安値（69,950円）に向けた調整が深まる懸念。 (technical_view.cautions)\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "中期トレンドは対TOPIXでアウトパフォームしており堅調ですが、足元ではMACDがシグナルを下回り調整局面を示唆しています。株価は25日移動平均線付近で膠着しており、強弱感が拮抗しています。",
+      "points": [
+        {
+          "point": "60日騰落率および対TOPIX相対騰落率がともにプラスであり、中期的な上昇トレンドは維持されている。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=5.73, price_technical.trend_60d.relative_to_topix_60d_pct=1.81"
+        },
+        {
+          "point": "MACDがシグナルを下回って推移し、ヒストグラムもマイナス圏で推移していることから、短期的には調整圧力が残っている。",
+          "evidence": "price_technical.macd=1287.72, price_technical.macd_signal=1749.27, price_technical.macd_histogram=-461.54"
+        },
+        {
+          "point": "直近終値が25日移動平均線とほぼ同水準にあり、このラインを維持できるかどうかの分岐点にある。",
+          "evidence": "price_technical.last_close=82540.0, price_technical.sma25=82550.4"
+        },
+        {
+          "point": "前夜の米国ADRが上昇しており、寄り付きに関しては買い優勢となる可能性がある。",
+          "evidence": "us_overnight.adr.change_1d_pct=1.82"
+        }
+      ],
+      "cautions": [
+        "MACDのマイナス幅が縮小しておらず、短期的な下押しリスクが継続している点に注意が必要。",
+        "25日移動平均線を明確に割り込んだ場合、期間安値に向けた調整が深まる可能性がある。",
+        "前夜のADR上昇分が寄り付き価格に織り込まれた後、利確売りに押されるリスクがある。"
+      ],
+      "key_levels": {
+        "support": 82550.0,
+        "resistance": 87920.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 60,
+      "summary": "業績は売上・利益ともに右肩上がりの成長が続いており、製造業PMIの拡大や日銀短観の業況改善などマクロ環境もFA（工場自動化）需要に追い風である。直近2週間以内の新規材料が不足しているため、強気ながらもエントリータイミングを計るフェーズと判断する。",
+      "points": [
+        {
+          "point": "売上高・営業利益ともに3期連続の増収増益を達成しており、極めて高い収益性と成長性が維持されている。",
+          "evidence": "fundamentals.earnings_trend.annual: 2024-03期から2026-03期にかけて売上高（9673億円→11693億円）、営業利益（4950億円→5958億円）と拡大"
+        },
+        {
+          "point": "日本の製造業PMIが54.9と拡大圏にあり、大企業製造業の業況判断DIも改善傾向にあることから、同社の主要顧客である製造業の設備投資意欲は堅調と推測される。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9, macro.boj.tankan.di.large_manufacturing.current_di=22.0"
+        },
+        {
+          "point": "市場全体が上昇トレンド（uptrend）にあり、マクロ環境がリスクオンの様相を呈していることが、高バリュエーション銘柄への資金流入を支える。",
+          "evidence": "macro.market_regime.market_regime=uptrend, macro.market_regime.topix_close_vs_sma25=above"
+        }
+      ],
+      "cautions": [
+        "予想PERが44.2倍と高水準であり、金利上昇局面ではマルチプルの収縮（株価下落）リスクが高い。日本10年債利回りは2.943%と高水準にある（macro.rates.jgb_10y_percent=2.943）。",
+        "次回の日銀金融政策決定会合（2026年9月17日〜18日）が16日後に迫っており、金融政策の修正観測が強まった場合のボラティリティ増大に注意が必要。",
+        "次回の決算発表（2026年10月29日）まで期間があり、短期的には明確な上昇カタリストに欠ける。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-19",
+    "days_ago": 13,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ＳＷＣＣ、１株を５株に分割、期末配当は分割後３４円２０銭に修正 - kabu-ir.com",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5hZEU5MFZPa1dXWTJ2UGJrUS02dlFTS2VmeEktbUY3bF95ZTFZcTBDcTJoZWIzY0NwUzB1N2drVzlsU3R2aEZqbGNCeEsybXFBd1NqZg?oc=5",
+        "published": "Mon, 31 Aug 2026 21:54:17 GMT",
+        "publisher": "kabu-ir.com"
+      },
+      {
+        "title": "製造業の調達DXを加速、ビズネットがメイカーズとのシステム連携を実現 - news.nicovideo.jp",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBXR0tVcEM3TVVrV1Uwa1BvTVJUZzlES1JIQTRDaGljMkh6UjhkTmU3RFU3V0Qyb0RxRkNPOWlDVjl5NXNRc1ZOTUg3VUZIX0tKRlhMMjBqdVVpa0dSUm5SaU04VGlnNWZFbnFhYk13SjBpb2FNU3NKcjNIdw?oc=5",
+        "published": "Mon, 31 Aug 2026 15:45:29 GMT",
+        "publisher": "news.nicovideo.jp"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      }
+    ]
+  }
+}

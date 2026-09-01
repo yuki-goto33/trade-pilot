@@ -1,0 +1,210 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-09-01T10:21:05+09:00",
+  "price_as_of": "2026-09-01",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の確信度が55と低く、業績の回復傾向は認められるものの、前期の巨額損失やマクロ環境への不透明感から「buy」の基準（strength 70以上）を満たさない。",
+        "evidence": "fundamental_view.strength=55, fundamental_view.summary"
+      },
+      {
+        "reason": "テクニカル面では強気だが、既に上昇トレンドが明確化しており、価格が期間高値（4041.0円）に接近しているため、材料が相当程度織り込まれている可能性が高い。",
+        "evidence": "technical_view.stance=bullish (strength=75), reference.period_high=4041.0"
+      },
+      {
+        "reason": "約2週間後に日銀金融政策決定会合を控えており、為替や金利の変動リスクを考慮すると、現時点での新規エントリーは時期尚早と判断する。",
+        "evidence": "reference.next_boj_meeting=2026-09-17〜2026-09-18"
+      }
+    ],
+    "risks": [
+      "日銀金融政策決定会合に伴う円高進行が、輸出セクターである同社の収益を圧迫するリスク (macro.boj)",
+      "RSIが65.6と買われすぎ水準の70に接近しており、目先利益確定売りが出やすい水準にある (price_technical.rsi14=65.6)",
+      "前夜のADR下落（-1.17%）による国内寄り付きでの窓開け下落リスク (us_overnight.adr.change_1d_pct=-1.17)"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の確信度が55と低く、業績の回復傾向は認められるものの、前期の巨額損失やマクロ環境への不透明感から「buy」の基準（strength 70以上）を満たさない。\",\n   \"evidence\": \"fundamental_view.strength=55, fundamental_view.summary\"\n  },\n  {\n   \"reason\": \"テクニカル面では強気だが、既に上昇トレンドが明確化しており、価格が期間高値（4041.0円）に接近しているため、材料が相当程度織り込まれている可能性が高い。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=75), reference.period_high=4041.0\"\n  },\n  {\n   \"reason\": \"約2週間後に日銀金融政策決定会合を控えており、為替や金利の変動リスクを考慮すると、現時点での新規エントリーは時期尚早と判断する。\",\n   \"evidence\": \"reference.next_boj_meeting=2026-09-17〜2026-09-18\"\n  }\n ],\n \"risks\": [\n  \"日銀金融政策決定会合に伴う円高進行が、輸出セクターである同社の収益を圧迫するリスク (macro.boj)\",\n  \"RSIが65.6と買われすぎ水準の70に接近しており、目先利益確定売りが出やすい水準にある (price_technical.rsi14=65.6)\",\n  \"前夜のADR下落（-1.17%）による国内寄り付きでの窓開け下落リスク (us_overnight.adr.change_1d_pct=-1.17)\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "短期・中期ともに上昇トレンドが継続しており、主要なテクニカル指標も好転している。前夜のADR下落による一時的な押し目が想定されるが、強固なトレンドを背景にした押し目買いの好機となり得る。",
+      "points": [
+        {
+          "point": "5日線が25日線を上回るゴールデンクロス状態にあり、MACDもシグナルを上抜けてヒストグラムが拡大している。上昇トレンドが明確。 ",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.macd_histogram=16.64"
+        },
+        {
+          "point": "60日騰落率が+12.42%と市場平均を大幅に上回っており、中期的なアウトパフォームが継続している。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=12.42, price_technical.trend_60d.relative_to_topix_60d_pct=8.5"
+        },
+        {
+          "point": "市場全体がレジーム「uptrend」にあり、個別銘柄の上昇を後押しする地合いとなっている。",
+          "evidence": "macro.market_regime.market_regime=uptrend, macro.market_regime.topix_close_vs_sma25=above"
+        }
+      ],
+      "cautions": [
+        "前夜のADRが-1.17%と下落しており、国内寄り付きでの窓開け下落や利益確定売りの誘発が懸念される。(us_overnight.adr.change_1d_pct=-1.17)",
+        "RSIが65.6と買われすぎ水準の70に接近しており、直近の期間高値付近での上値の重さが意識される可能性がある。(price_technical.rsi14=65.6, price_technical.period_high=4041.0)"
+      ],
+      "key_levels": {
+        "support": 3774.76,
+        "resistance": 4041.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "直近第1四半期（2026年6月期）で利益水準が急回復しており、半導体戦略の進展も好材料だが、前期の巨額純損失による不透明感と日銀会合を控えたマクロ環境が拮抗している。",
+      "points": [
+        {
+          "point": "2026年6月中間期の第1四半期において、営業利益4,745億円、純利益3,422億円を計上し、業績のV字回復傾向が鮮明となっている。",
+          "evidence": "fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "TSMCとの合弁会社設立に関する確定契約を締結。次世代イメージセンサーの供給体制強化は中長期的な成長に寄与する。",
+          "evidence": "disclosures.2026-08-11"
+        },
+        {
+          "point": "日本の製造業PMIが54.9と拡大圏にあり、特にAI関連需要が新規受注を牽引している。これは同社のイメージセンサー事業にとって強い追い風。",
+          "evidence": "macro.japan_pmi.manufacturing"
+        },
+        {
+          "point": "音楽著作権保護を目的としたAI企業への提訴など、知的財産収益の守りを固める姿勢がニュースで報じられている。",
+          "evidence": "news.2026-08-31"
+        }
+      ],
+      "cautions": [
+        "2026年3月期に通期で3,269億円の純損失を計上した背景に構造的な要因がないか精査が必要（fundamentals.earnings_trend.annual）。",
+        "次回の日銀金融政策決定会合（2026-09-17〜18）まで約2週間であり、為替や金利の変動が業績に与えるリスク（macro.boj）。",
+        "ドル円が159.78円と歴史的な円安水準にあり、急激な円高に振れた場合の輸出収益への影響（macro.indices）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソニー(株)【6758】：今の株価の理由は？値動きの背景をAIが解説 - finance.yahoo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9BQlVRa0U3WXp0ZG1yTzhsVk1OWkItckZaUV8wRkcxNkV4eVdoNWVlT2xWS25IbXR5em1xcThhQXhFWWJxWk1VbmMtZEpPUV9hMHBreXNYNVV2bkFiT1pB?oc=5",
+        "published": "Mon, 31 Aug 2026 02:52:57 GMT",
+        "publisher": "finance.yahoo.co.jp"
+      },
+      {
+        "title": "好調クランチロールCOOが明かす ソニーグループ傘下とアニメのグローバル展開 - 日経クロストレンド",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5TMTBJZlNNQk9HcUxPclprbVZ3RlNtbUoxSWJtWlhRcjN6S2xySmVEeHFKc2xIbUZUQ3dUMHMzbVN2bDgzMkZvZmJvakktU2lfaU1sV1pta3RveVRZUEpPQTJPVkVmdw?oc=5",
+        "published": "Mon, 31 Aug 2026 15:00:00 GMT",
+        "publisher": "日経クロストレンド"
+      },
+      {
+        "title": "ソニーグループの音楽出版社など35社が、アンソロピックを訴えました - やさしい朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE95MjVVdUxHaE9RMWtYUVY3OWJ0MzJCdGVSR3hoZVRyaGlnT3VTcEF0Qk5adkQ4TTFRRXhoNG9CbUowZEZ1cUVVanJNMW5fY1MwS0pySEZUOHVMUHkwQUtvVktvYlpqeU0?oc=5",
+        "published": "Mon, 31 Aug 2026 05:48:32 GMT",
+        "publisher": "やさしい朝日新聞"
+      },
+      {
+        "title": "AIに歌詞無断利用　ソニーグループ傘下など35社、アンソロピック提訴 - サンスポ",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBCVXplakJleUlZeThoYTdlQzQ5QmVLQ2pGSk11OTdmdm12SDZfb01sY3VvMVlsXzdIV1d3SW5SQi1aR0ZZZGdtdkpCc2E3bTVkZ2lnc3l1YkpWenVEZGVQSEo5b2FJbEVrZk5tcDVZN2xFYzRLcGfSAYoBQVVfeXFMT3Z0bkVqNHhrQ0ZXUXlVY2s0YW8zbzMwVF80TXJiZXdJemRvZEpBRG9FWlo4X1JoaGgwMEx4bVV6VUpxQlV2ZW91QkVieUNYUG0zLUlaT3M3QXBjTEo1VzNKTnBlWlpnQndZRVlOMEFZV2lSdTFzMEloRFVlOHJqcV9qLTRGYWkxYVFn?oc=5",
+        "published": "Mon, 31 Aug 2026 02:01:42 GMT",
+        "publisher": "サンスポ"
+      },
+      {
+        "title": "数万曲がAI学習に「無断使用」 ソニーG傘下企業などがアンソロピックを提訴 - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8yN0FzUmJNdFRzY2ZDb0lJUW00LURpNjlxdktHa3hCSnlGdG94NVlqV2RVSVRpMEtfdEdPR1RhanVwaG1KandMYjltaXJPODRPd2xjYlRvMHlPZ1p3VHRSa0RQeUVVc2c?oc=5",
+        "published": "Mon, 31 Aug 2026 01:06:25 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "日経平均は下げ幅縮小 後場に底堅さ意識、6万5600円台 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1Ia2lPNWMxbFNla2tRbWpwM2VIUjRxMEdBNG1DSUFsUEs1Qld2SUt0aGlTdFJWdWt0cFpISGFwbDZkRkJNSy1qMHM2U3JwR0xkQm9FcEQxYUo0NmRlSlBiQ21jU2F6ZmtkYndQTHVZOVhGbFdJ?oc=5",
+        "published": "Mon, 31 Aug 2026 04:25:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "AIに歌詞無断利用 ソニーグループ傘下など35社、アンソロピック提訴（写真・画像 1/1） - サンスポ",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPLU54MEFlSTB2OTFsb2hzVk5iZlQzdUUxdlktSGxQTGJLMlFfZUhsSE1ETnFjZHpnRTN1c25ueG13bHJlTnRRYkdwNl95X1JwbUcyUUxoR0tuV3djYVo1T3U1MmVlVF85bThuVVZtU3pIM3VMX2NSdWxxUnp6cXJ0aWhySmMwTDZtSW9FUTlEc3Y4ckozc3l1bHVBT2ozOExp?oc=5",
+        "published": "Mon, 31 Aug 2026 02:01:42 GMT",
+        "publisher": "サンスポ"
+      },
+      {
+        "title": "ソニーＧ傘下企業など、米アンソロピックを提訴 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPY1A2OTZhQUFOb2NMSVZRMzFnc0JjY2Fwbm1qd3NrNjdhQlBIQ0xlTngyTHd1aWVJX19aVXBYWFJkOHlXS2RQUEp2WkRqdmQ2OTM2RHVPZml5Q08wT3hxSHhORnVEc2pzbG9iemVJOURGY3lkbnZabUE0VjNBa3ppZdIBgAFBVV95cUxPY1A2OTZhQUFOb2NMSVZRMzFnc0JjY2Fwbm1qd3NrNjdhQlBIQ0xlTngyTHd1aWVJX19aVXBYWFJkOHlXS2RQUEp2WkRqdmQ2OTM2RHVPZml5Q08wT3hxSHhORnVEc2pzbG9iemVJOURGY3lkbnZabUE0VjNBa3ppZQ?oc=5",
+        "published": "Mon, 31 Aug 2026 01:24:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "ソニーG傘下企業など、米アンソロピックを提訴＝著作権侵害で(時事通信) - finance.yahoo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOR3pHaXpwMVRRZjlmOU5leTlYZTR1djRDdEpQclpyeTlBM1BLWGZoQTVqaEZYYU9BYmMxSjFWRWd4THN1WlVhRVN1eDVIV0VaM1RFcThuTndmTmJSMXFlZmV2RFVicUF3X25mLWJVYWlWYlpMSVJ1Um5BcUZTckxmdHhvaEZzN1k?oc=5",
+        "published": "Mon, 31 Aug 2026 03:25:00 GMT",
+        "publisher": "finance.yahoo.co.jp"
+      },
+      {
+        "title": "【徹底分析】NISA出来高3位のソニーFG｜変額保険+1832%の実力と知られざるリスク Connor Bedard (GGQpHNNbxO) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9BNnUtT3BRMjVGdTdpblY0Y2RnQ3prQUVqeDNURGQtMzlKX2FRa2N5Nk45NzU5a0NWaFM1SmVKX1BEbFpURzFDaUFIZ2pCdFdDdUNoejdRQWZONUE?oc=5",
+        "published": "Mon, 31 Aug 2026 22:32:37 GMT",
+        "publisher": "Mshale"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260811517496.pdf",
+        "date": "2026-08-11 18:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805509201.pdf",
+        "date": "2026-08-05 11:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504252.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期 連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504254.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の権利確定に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595854.pdf",
+        "date": "2026-07-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587315.pdf",
+        "date": "2026-07-03 11:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584099.pdf",
+        "date": "2026-06-30 15:30:00"
+      },
+      {
+        "title": "米ドル建て無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577032.pdf",
+        "date": "2026-06-24 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260603560934.pdf",
+        "date": "2026-06-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの次世代イメージセンサーに関する戦略的提携に向けた基本合意のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260507518510.pdf",
+        "date": "2026-05-08 16:15:00"
+      }
+    ]
+  }
+}

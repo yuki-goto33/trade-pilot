@@ -1,0 +1,227 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-09-01T10:33:16+09:00",
+  "price_as_of": "2026-09-01",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 60,
+    "reasons": [
+      {
+        "reason": "直近（2026-08-26）に同一銘柄への buy シグナルを発令済みであり、再エントリー抑制のルールに基づき、今回は新規の buy は出さず継続監視のための hold と判断しました。",
+        "evidence": "reference.recent_buy"
+      },
+      {
+        "reason": "ファンダメンタルズは、堅調な業績成長、AI・DX・環境分野への積極投資、および良好なマクロ経済環境を背景に引き続き強気の見解です。",
+        "evidence": "fundamental_view.stance=bullish (strength=75), fundamental_view.points[0-3]"
+      },
+      {
+        "reason": "テクニカルは短期移動平均線の上昇示唆とMACDの勢い鈍化、米国市場のネガティブな動きが拮抗しており、方向感は中立と判断されます。",
+        "evidence": "technical_view.stance=neutral (strength=50), technical_view.points[0-2, 4]"
+      }
+    ],
+    "risks": [
+      "2026年10月29日に次回決算発表を控えており、その内容が市場に影響を与える可能性があります。",
+      "2026年9月17日〜18日に日銀金融政策決定会合が予定されており、金融政策に関する決定や発言が市場全体のセンチメントに影響を及ぼす可能性があります。",
+      "現在のPER 31.073倍、PBR 3.742倍とバリュエーションは高水準にあり、割安感は限定的です。",
+      "前夜の米国市場での日立ADRおよび資本財セクターETFの下落は、本日の寄り付きに一時的にネガティブな影響を与える可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 60,\n \"reasons\": [\n  {\n   \"reason\": \"直近（2026-08-26）に同一銘柄への buy シグナルを発令済みであり、再エントリー抑制のルールに基づき、今回は新規の buy は出さず継続監視のための hold と判断しました。\",\n   \"evidence\": \"reference.recent_buy\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは、堅調な業績成長、AI・DX・環境分野への積極投資、および良好なマクロ経済環境を背景に引き続き強気の見解です。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=75), fundamental_view.points[0-3]\"\n  },\n  {\n   \"reason\": \"テクニカルは短期移動平均線の上昇示唆とMACDの勢い鈍化、米国市場のネガティブな動きが拮抗しており、方向感は中立と判断されます。\",\n   \"evidence\": \"technical_view.stance=neutral (strength=50), technical_view.points[0-2, 4]\"\n  }\n ],\n \"risks\": [\n  \"2026年10月29日に次回決算発表を控えており、その内容が市場に影響を与える可能性があります。\",\n  \"2026年9月17日〜18日に日銀金融政策決定会合が予定されており、金融政策に関する決定や発言が市場全体のセンチメントに影響を及ぼす可能性があります。\",\n  \"現在のPER 31.073倍、PBR 3.742倍とバリュエーションは高水準にあり、割安感は限定的です。\",\n  \"前夜の米国市場での日立ADRおよび資本財セクターETFの下落は、本日の寄り付きに一時的にネガティブな影響を与える可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "日立製作所の株価は移動平均線が短期的な上昇を示唆していますが、MACDの勢いは弱まっており、前夜の米国市場もネガティブな動きでした。市場全体の地合いは良好ですが、個別の勢いの鈍化と外部要因が拮抗しているため、方向感は中立と見ます。",
+      "points": [
+        {
+          "point": "短期移動平均線はゴールデンクロスを形成し、株価は5日移動平均線および25日移動平均線の上に位置しており、短期的な上昇トレンドを示唆しています。",
+          "evidence": "price_technical.sma5_vs_sma25='golden(5日線が25日線の上)', price_technical.last_close=5485.0, price_technical.sma5=5442.6, price_technical.sma25=5399.36"
+        },
+        {
+          "point": "MACDヒストグラムはマイナス圏にあり、MACDラインがシグナルラインを下回っていることから、短期的な上昇モメンタムは弱まっている可能性があります。",
+          "evidence": "price_technical.macd=82.82, price_technical.macd_signal=100.13, price_technical.macd_histogram=-17.3"
+        },
+        {
+          "point": "過去60営業日騰落率はプラスですが、TOPIXに対する相対騰落率はマイナスであり、市場全体と比較するとパフォーマンスが劣っています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=3.49, price_technical.trend_60d.relative_to_topix_60d_pct=-0.43"
+        },
+        {
+          "point": "市場全体の地合いはTOPIXが25日移動平均線を上回り、直近5日間の騰落率もプラスであるため、良好と判断されます。",
+          "evidence": "macro.market_regime.market_regime='uptrend', macro.market_regime.topix_close_vs_sma25='above', macro.market_regime.topix_return_5d_pct=1.95"
+        },
+        {
+          "point": "前夜の米国市場では、日立製作所のADRおよび資本財セクターのETFがともに下落しており、本日の寄り付きにネガティブな影響を与える可能性があります。",
+          "evidence": "us_overnight.adr.change_1d_pct=-1.74, us_overnight.sector_proxy.change_1d_pct=-1.13"
+        }
+      ],
+      "cautions": [
+        "前夜のNY市場でのADRおよびセクターETFの下落は、本日の寄り付きに一時的にネガティブな影響を与える可能性があります。",
+        "MACDの勢いが鈍化しているため、短期的な反発力が弱まる可能性があり、25日移動平均線を下回る場合はサポートラインの再確認が必要です。",
+        "中期的なTOPIXに対するアンダーパフォームが続く場合、市場全体の上昇の恩恵を受けにくい可能性があります。"
+      ],
+      "key_levels": {
+        "support": 5399.36,
+        "resistance": 5550.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "日立製作所は堅調な業績成長を継続しており、AIや環境技術など将来の成長分野への積極的な投資と具体的な取り組みが評価されます。良好なマクロ経済環境も事業の追い風となるでしょう。",
+      "points": [
+        {
+          "point": "年次業績は着実な増収増益トレンドを示し、2026年3月期も増益計画。直近四半期（2026年6月期）の希薄化後EPSも前年同期を上回っています。",
+          "evidence": "fundamentals.earnings_trend.annual (2024-03, 2025-03, 2026-03), fundamentals.earnings_trend.quarterly (2026-06, 2025-06)"
+        },
+        {
+          "point": "直近のニュースでは、製造業のAIエージェントによる自動化技術提供、量子コンピューターの配線削減技術開発、バイオメタン利用実績のデジタル証明など、AI・DX・環境といった成長分野への具体的な取り組みが複数報じられており、企業の競争力向上と将来性を裏付けています。",
+          "evidence": "news.headlines (例: '日立製作所、製造業の部門間調整をAIエージェントで自動化する技術を2027年に提供' published: Mon, 31 Aug 2026, '日立、量子コンピューターの配線削減技術を開発 imecと16量子ビット試作' published: Mon, 31 Aug 2026, '日立と東京ガスが協創、海外産バイオメタンの利用実績を設備単位でデジタル証明する「Powered by Carbon Neutral Gas」の実証を開始' published: Mon, 31 Aug 2026)"
+        },
+        {
+          "point": "日本経済全体で製造業PMIが54.9と50を大きく上回り、AI関連需要が牽引役となっているほか、日銀短観の大企業製造業DIも改善しており、日立製作所にとって事業環境は良好です。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9, macro.japan_pmi.manufacturing.summary_en, macro.boj.tankan.di.large_manufacturing.current_di=22.0"
+        },
+        {
+          "point": "適時開示において自己株式の取得状況が複数回発表されており、株主還元への意識が見られます。",
+          "evidence": "disclosures.items (例: '自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)' date: 2026-08-04, 2026-07-02)"
+        }
+      ],
+      "cautions": [
+        "現在のPER 31.073倍、PBR 3.742倍とバリュエーションは高水準にあり、割安感は限定的です。",
+        "2026年10月29日に次回決算発表を控えており、その内容が市場に影響を与える可能性があります。",
+        "2026年9月17日〜18日に日銀金融政策決定会合が予定されており、金融政策に関する決定や発言が市場全体のセンチメントに影響を及ぼす可能性があります。",
+        "直近で計上された投資有価証券売却益は個別決算における特別利益であり、一時的な収益であることを考慮する必要があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-26",
+    "days_ago": 6,
+    "confidence": 72,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "入社1年目から目標が叶う場所。社会インフラを動かす「日立の調達」ならではの魅力：日立 - Hitachi Global",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxON0xTSHNVYjZZU0owS2I4LWc4Q2FPbWROMmZHZ0QyQWFUaWdSZXo5WUNwN001NnliMjNiRTJEYnJ2akozM1AxRW9mSzByLVBIbTlNc2Z4c0pFVHg1ZVlzZE1GeEVfLWVHRzZ0ZENoVlVRMmhTZjlNZy1STU96NGwxcGtEM28?oc=5",
+        "published": "Mon, 31 Aug 2026 12:39:28 GMT",
+        "publisher": "Hitachi Global"
+      },
+      {
+        "title": "日立の危機感 徳永流 フィジカルAI総力戦 - business.nikkei.com",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE96VC0wU2lrWTctM0tsOTBXUXYtS2Z4QUdHOTJ4V1ZBVnl2al9yTW5QYXhhLXBrb01Nb1E5MTFJYUQ5LWIzWUJNOUdWejZhSGhXZHBjQW9fRDl4T2Q0Q0VfbFl4Smo?oc=5",
+        "published": "Tue, 01 Sep 2026 00:45:01 GMT",
+        "publisher": "business.nikkei.com"
+      },
+      {
+        "title": "(株)日立製作所【6501】：今の株価の理由は？値動きの背景をAIが解説 - finance.yahoo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE55YktlVWgwaFo0cHlWS0xqWDhtN2tQUGd1RVlXVkxFam82U1RnVy01V1hfYzgwcXc5cUE3NTFkMDRPN3p2WkNDWHA4UWZXQTdndmFsNDhMUUw1dGVYVS1r?oc=5",
+        "published": "Mon, 31 Aug 2026 02:53:24 GMT",
+        "publisher": "finance.yahoo.co.jp"
+      },
+      {
+        "title": "日立製作所、製造業の部門間調整をAIエージェントで自動化する技術を2027年に提供 - IT Leaders",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE0waERJaHh6Y1FSTGt1R2FfcmFtbUxQTDhKMDFLTnI2N093c0pIU0pxNkQ2Q1p5TFFjakVudlo0VXFlS1NhNGY5TTlsSEI5WnVYaUI4?oc=5",
+        "published": "Mon, 31 Aug 2026 01:07:48 GMT",
+        "publisher": "IT Leaders"
+      },
+      {
+        "title": "日立と東京ガスが協創、海外産バイオメタンの利用実績を設備単位でデジタル証明する「Powered by Carbon Neutral Gas」の実証を開始 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBjUG5hamM1YTN0NEkwM1BUdGlFUUdNSkZTd051MGpldl9XN3lKV3RiNnpMRUdWb3lYV3pMQUk1YUcxUmRGb1Zod2tYOEM3UUltQ1JTRnZLRGZTRjd0UU1JQzdwTlI0OXdJaGc?oc=5",
+        "published": "Mon, 31 Aug 2026 04:04:15 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "日立製作所と東京ガス、海外産バイオメタン利用を設備単位でデジタル証明、実証開始 - kabu-ir.com",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBlUnF4Nkg4QmFiT0R0S2FuU3JWc19EZjFNOEJMS2M0dHY4TUZQRERXMTZEUUUzeU5sMm5TRndjdEw2ODB3SmhjOEY4U3RIeUJPSkstRQ?oc=5",
+        "published": "Mon, 31 Aug 2026 07:08:48 GMT",
+        "publisher": "kabu-ir.com"
+      },
+      {
+        "title": "Unitreeの上場が示す、ロボット量産時代の始まり（中村航） - WirelessWire",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE05VjE5MjV1VEliSVRjWHAzTUF6T0pfOHZBaUxyajltaGd1OTB6akJnQThTU2IyMm9wOFVUNnVyWUtXU192MjhKZzBKMVZ6ZDQ?oc=5",
+        "published": "Mon, 31 Aug 2026 21:04:52 GMT",
+        "publisher": "WirelessWire"
+      },
+      {
+        "title": "日立、量子コンピューターの配線削減技術を開発 imecと16量子ビット試作 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBIVGZYUnRKcUotcW1lS1VvSXZXSVFBejc5MjNjcV9rczI3Skw1N1RJY0lVaV8wX2tzMzVzeFdJMmhLak1La0hQTTI3RXFLbDRjYUJNdWRrdFh0alRFaGtwSzh2NFlCRy0xcEpDTkViU1ZKU2h2?oc=5",
+        "published": "Mon, 31 Aug 2026 09:28:21 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "日立、グローバルロジック買収もう1つの効果 遅さとサイロを壊す - business.nikkei.com",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5BN3UtZkVfMDFNZXdEdzRVc082TUpBcHRQcW1JUnhLaGFKOHlxVGUtWFVTOGdFSTV4dEhZc2s1eHJmQTRxRTVEUlJZeUNFanJfOWpFbmU5Q0tCMWRtLTd5YUVJbGNZU3M?oc=5",
+        "published": "Mon, 31 Aug 2026 20:00:00 GMT",
+        "publisher": "business.nikkei.com"
+      },
+      {
+        "title": "日立と東ガス、バイオメタンの利用実績をデジタル証明 - 電波タイムズ",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBka25md1pIcmx4cjhzYnlqMW9JUllOV1p2eG1GMUFiaUJ5Y04yRDVpelcwbmZjRzBGVzVLTHZTdnNaSTJ5STJVRHdCWllYcElicUdCOGl6Umw5VHUwWHUxWVBxU2p3UQ?oc=5",
+        "published": "Mon, 31 Aug 2026 04:28:31 GMT",
+        "publisher": "電波タイムズ"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "個別決算における投資有価証券売却益(特別利益)の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260819523052.pdf",
+        "date": "2026-08-19 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804508474.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "（訂正）2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503298.pdf",
+        "date": "2026-07-30 13:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501771.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501801.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(モビリティ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566288.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(コネクティブインダストリーズ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566292.pdf",
+        "date": "2026-06-09 15:30:00"
+      }
+    ]
+  }
+}

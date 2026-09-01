@@ -1,0 +1,212 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-09-01T10:24:00+09:00",
+  "price_as_of": "2026-09-01",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "2026-08-24の直近buyから14日以内であり、ルールに基づき新規エントリーは控え、現在は継続監視期間とする。",
+        "evidence": "reference.recent_buy.date='2026-08-24'"
+      },
+      {
+        "reason": "テクニカル専門家が非常に強気（strength=85）であり、材料が既に株価に織り込まれている可能性が高いため、新規の買いタイミングとしては遅い局面にある。",
+        "evidence": "technical_view.stance='bullish' (strength=85)"
+      },
+      {
+        "reason": "ファンダメンタルズは国内金利上昇や最高益など極めて強力だが、PBRが1.824倍とメガバンクとして高位にあり、上値追いのリスクリワードが悪化している。",
+        "evidence": "fundamental_view.strength=75, fundamental_view.cautions[2]: PBR 1.824倍"
+      }
+    ],
+    "risks": [
+      "2026年9月17日〜18日の日銀金融政策決定会合における政策変更リスク",
+      "ADR価格の下落および金融セクターETF(XLF)の下げに伴う、寄り付きからの利益確定売りの加速",
+      "RSIが70に接近しており、短期的な過熱感からくるテクニカルな調整局面入りの可能性"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"2026-08-24の直近buyから14日以内であり、ルールに基づき新規エントリーは控え、現在は継続監視期間とする。\",\n   \"evidence\": \"reference.recent_buy.date='2026-08-24'\"\n  },\n  {\n   \"reason\": \"テクニカル専門家が非常に強気（strength=85）であり、材料が既に株価に織り込まれている可能性が高いため、新規の買いタイミングとしては遅い局面にある。\",\n   \"evidence\": \"technical_view.stance='bullish' (strength=85)\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは国内金利上昇や最高益など極めて強力だが、PBRが1.824倍とメガバンクとして高位にあり、上値追いのリスクリワードが悪化している。\",\n   \"evidence\": \"fundamental_view.strength=75, fundamental_view.cautions[2]: PBR 1.824倍\"\n  }\n ],\n \"risks\": [\n  \"2026年9月17日〜18日の日銀金融政策決定会合における政策変更リスク\",\n  \"ADR価格の下落および金融セクターETF(XLF)の下げに伴う、寄り付きからの利益確定売りの加速\",\n  \"RSIが70に接近しており、短期的な過熱感からくるテクニカルな調整局面入りの可能性\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 85,
+      "summary": "中期・短期ともに上昇トレンドが鮮明であり、MACDの好転やTOPIXを大幅に上回るパフォーマンスから、さらなる上値追いが期待できる局面です。",
+      "points": [
+        {
+          "point": "5日線が25日線を上回るゴールデンクロス状態を維持し、MACDもシグナルを上抜けしてヒストグラムが大幅に拡大しており、強い上昇モメンタムを示しています。",
+          "evidence": "price_technical.sma5_vs_sma25='golden', price_technical.macd=10.13, price_technical.macd_histogram=14.37"
+        },
+        {
+          "point": "60日騰落率が+14.26%と高く、対TOPIX相対騰落率も+10.34%と、中期的な買い需要が非常に強いことを示しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=14.26, price_technical.trend_60d.relative_to_topix_60d_pct=10.34"
+        },
+        {
+          "point": "TOPIXが25日線を上回り5日騰落率もプラスであることから、市場全体が「uptrend」レジームにあり、良好な外部環境が追い風となっています。",
+          "evidence": "macro.market_regime.market_regime='uptrend'"
+        }
+      ],
+      "cautions": [
+        "前夜のNY市場でADR価格および金融セクターETF(XLF)が下落しており、本日の寄り付きは利益確定売りに押される可能性があります。",
+        "RSIが66.3と強気圏にあるものの、70の大台に近づいており、短期的な過熱感による一服への警戒が必要です。"
+      ],
+      "key_levels": {
+        "support": 3584.56,
+        "resistance": 3813.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "過去最高水準の利益成長に加え、国内長期金利が2.9%台に到達し米長期金利も高水準で推移するなど、銀行業の収益性に直結する金利環境が極めて良好である。直近の製造業PMIも拡大を示しており、良好なマクロ環境を背景とした業績の上振れ期待が強い。",
+      "points": [
+        {
+          "point": "純利益の強力な拡大トレンド。2024年3月期から2026年3月期にかけて純利益が約1.6倍に増加しており、四半期ベースでも2025年9月期に7,469億円を計上するなど収益力が飛躍的に向上している。",
+          "evidence": "fundamentals.earnings_trend.annual.net_income_oku_jpy, fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "金利上昇による利ざや改善期待の拡大。国内10年債利回りが2.943%と高水準にあることに加え、米長期金利が1年8カ月ぶりの高水準となったニュースは、同社の収益性改善の直接的なカタリストとなる。",
+          "evidence": "macro.rates.jgb_10y_percent=2.943, news.headlines[0].title"
+        },
+        {
+          "point": "堅調なマクロ景況感。製造業PMIが54.9、サービス業PMIが52.3と拡大圏で推移しており、日銀短観の業況判断DIも大企業全産業で+29と良好なため、企業の資金需要および信用コストの両面で追い風が吹いている。",
+          "evidence": "macro.japan_pmi, macro.boj.tankan.di.large_all_industries.current_di=29.0"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日〜18日に控える日銀金融政策決定会合において、政策金利や国債買い入れ方針が市場予想と乖離した場合、銀行セクター全体の株価急変動を招くリスクがある。",
+        "Forward PE（24.2倍）が実績PE（15.5倍）を大きく上回っており、市場の利益成長に対する期待値が既に高水準に設定されている可能性がある。",
+        "PBRが1.824倍と、メガバンクとしては過去の推移と比較して高位にあり、割安感を背景とした下値支持機能が弱まっている懸念がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-24",
+    "days_ago": 8,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "三菱UFJフィナンシャル・グループなど きょう10年債入札、米長期金利は1年8カ月ぶり高水準 - online.nikkei-cnbc.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE0wTWdYcWN6dm1zSzlnQW1oNUpZS2ttVFB6RXFoUEZ2YU5fZVdHdUZFMG5kVms2aWxzNER0RzNDdXoxamtZQWZUb1g2SlEyYklVZjdSZQ?oc=5",
+        "published": "Tue, 01 Sep 2026 00:27:00 GMT",
+        "publisher": "online.nikkei-cnbc.co.jp"
+      },
+      {
+        "title": "(株)三菱ＵＦＪフィナンシャル・グループ【MUFG】：株価・株式情報 - finance.yahoo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1fb09UZ016WWhiUVBjc0RvWFltWjhxVkhJbkpyOEhKLXMzR2JuMk0wY1MybnpuUWNldldDSTJMak1rZV83N2JYNGFMWktSU3M?oc=5",
+        "published": "Mon, 31 Aug 2026 09:00:43 GMT",
+        "publisher": "finance.yahoo.co.jp"
+      },
+      {
+        "title": "ＧＬＰについて、三菱ＵＦＪは保有割合が増加したと報告 [変更報告書No.2] - kabutan.jp",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE55UlE3dXdKdDBPT0hQd2I5WGlQanFFajk3REI0Z1ZyMDZHWnRJMUZQRVhidXJaVXpVMlFwUUVyRGs5OVhkcVMtNEJNUkRmVnF5UVdhczZHbndtYV9NZnBXbnB3?oc=5",
+        "published": "Mon, 31 Aug 2026 02:13:02 GMT",
+        "publisher": "kabutan.jp"
+      },
+      {
+        "title": "国立競技場は「MUFGスタジアム」に 三菱UFJが命名権取得(2025年10月15日) Tim Patrick (2PIR3CecdR) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1FVWlnWDJ3SW01NzkzN2NwOE5TRVZWSFZnd3Q1RFhFTGlaMXJXSlFlc3V3UkZYRXZ2TVNxZU9PZlhjTnpQLVlFa1YtWUtFSW1vc0dBNERQZlVkaW8?oc=5",
+        "published": "Mon, 31 Aug 2026 12:04:17 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "hanyeahwest@mk.co.kr - 매일경제",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5PbnNDeEpZMzUxOVlDblpab1JPT0pQVGluOFRJeHNrZEhucDBtNWtGSlhycnlkVkVaeUc5VDZCcEx0QVZHNlc1Y0VDQjlRbUZjTnc?oc=5",
+        "published": "Mon, 31 Aug 2026 08:31:00 GMT",
+        "publisher": "매일경제"
+      },
+      {
+        "title": "コーポレートブランディング支援のリンクソシュール、「企業価値向上カンファレンス2026」を開催 - news.nicovideo.jp",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9OU25uQzJQeUhWd0NNbUJqR0lENGgwbHJia0FGN2tXZkJWd2t2YXhiTllEakwzTWJGanlSRzhLRzVfenBQTlllTE9kYURZRUdCQk94ZlgzNW9RbnBGc25yQm5kMUhUUF9vem9NN3J0OWtiZkROdTE4ZklYbw?oc=5",
+        "published": "Mon, 31 Aug 2026 19:18:25 GMT",
+        "publisher": "news.nicovideo.jp"
+      },
+      {
+        "title": "株式会社三菱ＵＦＪ銀行が、「Loglass 経営管理」を導入 - news.nicovideo.jp",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5qUXZkenA0R3RieGh5WS00a0QtaEcxVEt2X2R5RW1DNHJtcXZ0bVV5Sk5CR1k1VEJHeVl6MjdMVEJsX1ExVV9NTUdpSjlYb3ZOVVZXYWV5NVhrNjZYcThhc1NiZHBNdjZWbVZCM1MxM0NMVzJYenJ0dGtDYw?oc=5",
+        "published": "Mon, 31 Aug 2026 07:15:19 GMT",
+        "publisher": "news.nicovideo.jp"
+      },
+      {
+        "title": "Ｏｎｅリートについて、三菱ＵＦＪは保有割合が5％を超えたと報告 [大量保有報告書] - kabutan.jp",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5iLTVTcTRwbGxZSFVnZWJPT0lLRlh3YUhvSnEwQ25JSE1zckdmM19DSldHMHREUDZFTWJOVmRYMEtKTDZxNWxHUDl0RWJPQ1lRUlJpLWxwQWtVVlZjeVozM29B?oc=5",
+        "published": "Mon, 31 Aug 2026 02:14:02 GMT",
+        "publisher": "kabutan.jp"
+      },
+      {
+        "title": "Ｏｎｅリートについて、三菱ＵＦＪは保有割合が5％を超えたと報告 [大量保有報告書] - s.kabutan.jp",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9XakJkb2p4S0JHS0JEUTlaY2huMGVMNkpVY3p2bm1wNjJucFBnNmFyMFUyNFpOLU1yWm51VW9ubFozel91YjVzbElfVnJpUjQ3OEE?oc=5",
+        "published": "Mon, 31 Aug 2026 02:14:02 GMT",
+        "publisher": "s.kabutan.jp"
+      },
+      {
+        "title": "モリタＨＤについて、三菱ＵＦＪは保有割合が5％を超えたと報告 [大量保有報告書] - kabutan.jp",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5mcWJKYWlBS2FPNFp2RjNnQk5IM0hqS2NKMzM0OTRXX2p5XzRqVzZHWV90elFycU4xNEo4TXpXWUhjZDFtRlNuRENqQjRsWi1icDFmbXVjVVpBd09iS21xNlNB?oc=5",
+        "published": "Mon, 31 Aug 2026 02:12:02 GMT",
+        "publisher": "kabutan.jp"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期 自己資本比率について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260814520300.pdf",
+        "date": "2026-08-14 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕（連結）（公認会計士又は監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510381.pdf",
+        "date": "2026-08-06 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505851.pdf",
+        "date": "2026-08-03 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      }
+    ]
+  }
+}
