@@ -1,0 +1,205 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-09-02T08:57:16+09:00",
+  "price_as_of": "2026-09-01",
+  "signal": {
+    "signal": "hold",
+    "confidence": 70,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近 2026-08-19 に buy シグナルを発出しており、現在はその継続監視期間中であるため、ルールに基づき新規エントリーを抑制し現状維持とする。",
+        "evidence": "reference.recent_buy.date=2026-08-19 (14日前)"
+      },
+      {
+        "reason": "ファンダメンタルズは営業利益44.7%増やAI搭載新製品の投入など極めて強力だが、テクニカル面で5日線と25日線のデッドクロスが発生しており、短期的な押し目形成を確認する局面にある。",
+        "evidence": "fundamental_view.points[0], technical_view.points[0]: price_technical.sma5_vs_sma25='dead'"
+      },
+      {
+        "reason": "前夜の米国市場およびADRの下落、VIX指数の上昇といった外部環境の悪化により、寄り付きからの売り圧力が予想され、値動きの安定を待つ必要がある。",
+        "evidence": "technical_view.points[3]: us_overnight.adr.change_1d_pct=-2.01, technical_view.cautions[0]"
+      }
+    ],
+    "risks": [
+      "2026-09-17〜18の日銀金融政策決定会合における政策金利動向とそれに伴う為替・金利の乱高下。",
+      "日本10年債利回りの上昇に伴う、高PER（44倍超）グロース株へのバリュエーション調整圧力。",
+      "VIX指数の急上昇に見られる市場全体のボラティリティ拡大による換金売りの加速。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 70,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近 2026-08-19 に buy シグナルを発出しており、現在はその継続監視期間中であるため、ルールに基づき新規エントリーを抑制し現状維持とする。\",\n   \"evidence\": \"reference.recent_buy.date=2026-08-19 (14日前)\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは営業利益44.7%増やAI搭載新製品の投入など極めて強力だが、テクニカル面で5日線と25日線のデッドクロスが発生しており、短期的な押し目形成を確認する局面にある。\",\n   \"evidence\": \"fundamental_view.points[0], technical_view.points[0]: price_technical.sma5_vs_sma25='dead'\"\n  },\n  {\n   \"reason\": \"前夜の米国市場およびADRの下落、VIX指数の上昇といった外部環境の悪化により、寄り付きからの売り圧力が予想され、値動きの安定を待つ必要がある。\",\n   \"evidence\": \"technical_view.points[3]: us_overnight.adr.change_1d_pct=-2.01, technical_view.cautions[0]\"\n  }\n ],\n \"risks\": [\n  \"2026-09-17〜18の日銀金融政策決定会合における政策金利動向とそれに伴う為替・金利の乱高下。\",\n  \"日本10年債利回りの上昇に伴う、高PER（44倍超）グロース株へのバリュエーション調整圧力。\",\n  \"VIX指数の急上昇に見られる市場全体のボラティリティ拡大による換金売りの加速。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "短期的な移動平均線やMACDのデッドクロスに加え、前夜の米国市場およびADRの下落が重石となるが、中期トレンドは対TOPIXでプラスを維持しており、強弱感が拮抗した地合いです。",
+      "points": [
+        {
+          "point": "短期テクニカル指標の悪化。5日線が25日線を下回るデッドクロスが発生しており、直近終値も両移動平均線を下回っています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead\", price_technical.last_close=82280.0 < sma25=82540.0"
+        },
+        {
+          "point": "MACDのデッドクロス継続。MACDがシグナル線を下回って推移しており、ヒストグラムもマイナス圏で推移していることから、短期的な調整圧力が示唆されています。",
+          "evidence": "price_technical.macd=1266.98, macd_signal=1745.12, macd_histogram=-478.14"
+        },
+        {
+          "point": "中期トレンドの底堅さ。60営業日の騰落率はプラスで、かつ対TOPIX相対騰落率もプラスを維持しており、中長期的には依然として上昇基調の中にあります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=5.39, price_technical.trend_60d.relative_to_topix_60d_pct=1.31"
+        },
+        {
+          "point": "前夜の外部環境がネガティブ。ADRおよび米国のテクノロジーセクターETFが大幅に下落しており、寄り付きでの売り圧力が懸念されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=-2.01, us_overnight.sector_proxy.change_1d_pct=-1.53"
+        }
+      ],
+      "cautions": [
+        "VIX指数が急上昇（+9.52%）しており、マクロ環境におけるリスク回避姿勢が強まることで、値嵩株である同銘柄への換金売りが加速する恐れがあります。",
+        "前夜のADR安（-2.01%）は寄り付き価格に織り込まれる可能性が高く、その後の売り一巡後に反転できるかどうかが焦点となります。",
+        "82,500円付近にSMA5とSMA25が密集しており、ここが上値抵抗線として機能した場合、戻りの鈍い展開が予想されます。"
+      ],
+      "key_levels": {
+        "support": 81500.0,
+        "resistance": 83660.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "2027年3月期第1四半期の大幅増収増益に加え、AI搭載新製品の投入といった具体的カタリストが確認できる。製造業PMIの拡大や旺盛なAI需要などマクロ環境も良好で、高収益体質の維持が期待される。",
+      "points": [
+        {
+          "point": "直近の第1四半期決算において、連結営業利益が前年同期比44.7％増と極めて高い成長を実現しており、世界的な設備投資需要を背景とした収益拡大が鮮明である。",
+          "evidence": "fundamentals.recent_important_disclosures[0]"
+        },
+        {
+          "point": "2026年9月1日に報じられたAI搭載画像センサ「IV4シリーズ」などの新製品投入により、同社の強みである高付加価値戦略が継続しており、中期的な競争優位性が担保されている。",
+          "evidence": "news.headlines[1]"
+        },
+        {
+          "point": "日本の製造業PMIが54.9と拡大基調にあり、特にAI関連需要に伴う新規受注の増加が報告されていることは、FA機器最大手の同社にとって強い追い風となる。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日〜18日に日銀金融政策決定会合を控えており、政策金利の動向次第で株価が大きく変動するリスクがある。",
+        "日本10年金利が2.943%と高水準にある中、予想PER44倍超のグロース株として、金利上昇に伴うバリュエーション調整圧力を受けやすい。",
+        "次回決算発表（2026-10-29）まで期間があり、マクロ経済指標の悪化や円高進行によるセンチメント低下には注意を要する。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-19",
+    "days_ago": 14,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "キーエンス、「世界初」の商品を生み続ける営業と開発の仕組み - JBpress",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5zZ3RTMTlvYUJfaTVzWnBXczUwVkpXaXVfdHM0NVBDblJnVDIyT0k4dkhZbUxtMlZCMGRiM2xTVl9vSFdpTGx0UlNxQ0h3RGJ3ck10cjBB?oc=5",
+        "published": "Tue, 01 Sep 2026 21:00:00 GMT",
+        "publisher": "JBpress"
+      },
+      {
+        "title": "キーエンス AI搭載画像センサ「IV4シリーズ」検出と画作りにAIアルゴリズム搭載【FAセンサ特集】 - オートメーション新聞WEB",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8yVi1NTmVaT2kxZkpQZGdobmRVUHBSZkMtOHV3WDBQY19ZLTlVTjNJa0huX3JIVWdzbXZXdk1ZM3N4MHJpSzYxTXhrRlI4Tjh0Q1JXdEdGQTVVQQ?oc=5",
+        "published": "Tue, 01 Sep 2026 04:00:00 GMT",
+        "publisher": "オートメーション新聞WEB"
+      },
+      {
+        "title": "3Dスキャナ型三次元測定機使う Chud The Builder (SPWyhi0llU) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1LYVlIS2o5Y2MxaUN6Yl8zMWZWY0kyX1VPcWcyLVN1a2V5V1RmNVgtZzlaTFVpclcweGhucnk5N1dDY2NZUE02amNEelV0ejEzUHRhRTh0eFVrUQ?oc=5",
+        "published": "Tue, 01 Sep 2026 14:16:09 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "エレコムが8機種ランクイン 半固体モバイルバッテリー人気ランキングTOP10 2026/9/1 - BCN Retail",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQSkZlMVNtWXFORGl4Xy0xenVCVHdHbmV3T29SRllYYXN3VklrbHExaVVUdXQ1ZGphZGJ0SDlhN3dfV3JzRDBkMkJadk9rcWxFVGF1YWpLekxMZkxvckZpeUdHeDFFYmEyNVMwNlV4QmhsT0pFY095QVAxZWVhX1R1RGhVSUM?oc=5",
+        "published": "Tue, 01 Sep 2026 03:00:00 GMT",
+        "publisher": "BCN Retail"
+      },
+      {
+        "title": "約100種類から選びカスタマイズできる非常食セット「おさかなBOX」開発 タンパク質不足解消 山形(放送局のニュース ) - tenki.jp",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE85OTFhOFdiN3E4aFRleUczZHc3N3FQc2xHclFTeHNtMlFSY1QzczZBT3FtVFZjMk1vOGFPRWJ1T095NGMzVWVLT1hfMUh6OEMxTzFwb2pXSWhabndoNXJla3hVV3hJOG5icWdQNlZjOUJ2SzZuaG1SVDQyOWU?oc=5",
+        "published": "Tue, 01 Sep 2026 10:06:00 GMT",
+        "publisher": "tenki.jp"
+      },
+      {
+        "title": "日経平均寄与度ランキング（大引け）〜日経平均は続落、東エレクやファーストリテが2銘柄で約242円分押し下げ - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOWTV4V0pGZEw0WDZ2SEtjTXpFZGFTYTNWc3ltOTdxanltcER5bHBlcS1jQ3h6OWNMcGtfR3NMUW9BN04xYnJwWUljd2lydGx6S0FtOVdpTG1hSHlDN2ZCeGNCZnFINEpxaElZckNPaXE5S2U2YnRBeHdyX2x0WEZNaE4xbFA0Z1B6MmJTejU2Z1jSAYwBQVVfeXFMT1lJa3IzY2ZyaV9WdllHeUV2MHFPc1p2VExMdXc5QkQ4X0llTldBeU1PdTZtcW1rY3pwcklVb2ZrZkloSWowd1Y2b0l1ekQxUEYxNGFCazMwdEVUSTlLZEkta0FPNHpRbW00b0p5cklPSWdWTWVEQ2J0Zk0xMkZoSFZTMzdvZkhyMzhwVlg?oc=5",
+        "published": "Tue, 01 Sep 2026 09:47:18 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "リヴァプール、21歳MFバイチェティッチが古巣セルタへ完全移籍… - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFAxa3RfcnhsUE51ekpKaFZmckN3Tk9oS1lfNGFtVm9FcWs1eWJoaTNJUm1FbzkwellsZzRBT0dNa0J3cXN6OFdvbHZFU2lZN1dHWTVadG10bERySVVwVU1UVjhVSjM5S0pldFlnVjBZQXJ1N29McThTYQ?oc=5",
+        "published": "Tue, 01 Sep 2026 10:10:05 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "運動でも食べ物でもない…研究で証明｢睡眠時間が平均66分延びて朝の眠気を抑制した\"部屋のひと工夫\"｣ - president.jp",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE94XzFIanpWeEEtOXlKQ2JVQXZLV2NsRzF5V2NLbURiSzE3YUJKcFJVMmlEQ3BORlhzcnN5eEZ4U2R4NjBGZjFKX0lkdEl1emc?oc=5",
+        "published": "Tue, 01 Sep 2026 10:02:21 GMT",
+        "publisher": "president.jp"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      }
+    ]
+  }
+}

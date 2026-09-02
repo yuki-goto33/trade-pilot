@@ -1,0 +1,203 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-09-02T09:05:57+09:00",
+  "price_as_of": "2026-09-01",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "テクニカル、ファンダメンタルズともに中立的なスタンスであり、明確な買いシグナルが見られないため、様子見と判断します。",
+        "evidence": "technical_view.stance=neutral, fundamental_view.stance=neutral"
+      },
+      {
+        "reason": "テクニカル面では移動平均線は短期・中期ともに上昇トレンドを示唆していますが、RSIが50近辺で方向感に欠け、直近の株価は上値抵抗線に近づいており、上値の重さが散見されるため、積極的な買いは困難です。",
+        "evidence": "technical_view.rsi14=47.3, technical_view.key_levels.resistance=2931.0, price_technical.sma5_vs_sma25=golden(5日線が25日線の上)"
+      },
+      {
+        "reason": "ファンダメンタルズ面では主力製品の成長ポテンシャルや増配予想があるものの、第1四半期決算は減益であり、次回決算発表を控えていることから、材料出尽くしや決算内容への警戒感から大きな動きは限定的となる可能性があります。",
+        "evidence": "fundamental_view.points[0].point, fundamental_view.points[1].point, fundamental_view.points[3].point"
+      },
+      {
+        "reason": "市場全体は上昇トレンドにありますが、個別銘柄としては、現時点では明確な買いのトリガーとなる要因が不足しています。",
+        "evidence": "reference.market_regime=uptrend, technical_view.stance=neutral, fundamental_view.stance=neutral"
+      }
+    ],
+    "risks": [
+      "直近5営業日での下落場面や、前夜のNY市場のADR下落、米国市場の不安定さが東京市場に波及するリスクがあります。",
+      "為替レートの変動（特にドル円の動向）が業績に影響を与える可能性があります。",
+      "欧米における医薬品開発・販売規制の変更や、競合他社の動向により業績が左右されるリスクがあります。",
+      "次回決算発表（2026-10-30）に向けて、決算内容への警戒感から株価が下落するリスクがあります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"テクニカル、ファンダメンタルズともに中立的なスタンスであり、明確な買いシグナルが見られないため、様子見と判断します。\",\n   \"evidence\": \"technical_view.stance=neutral, fundamental_view.stance=neutral\"\n  },\n  {\n   \"reason\": \"テクニカル面では移動平均線は短期・中期ともに上昇トレンドを示唆していますが、RSIが50近辺で方向感に欠け、直近の株価は上値抵抗線に近づいており、上値の重さが散見されるため、積極的な買いは困難です。\",\n   \"evidence\": \"technical_view.rsi14=47.3, technical_view.key_levels.resistance=2931.0, price_technical.sma5_vs_sma25=golden(5日線が25日線の上)\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ面では主力製品の成長ポテンシャルや増配予想があるものの、第1四半期決算は減益であり、次回決算発表を控えていることから、材料出尽くしや決算内容への警戒感から大きな動きは限定的となる可能性があります。\",\n   \"evidence\": \"fundamental_view.points[0].point, fundamental_view.points[1].point, fundamental_view.points[3].point\"\n  },\n  {\n   \"reason\": \"市場全体は上昇トレンドにありますが、個別銘柄としては、現時点では明確な買いのトリガーとなる要因が不足しています。\",\n   \"evidence\": \"reference.market_regime=uptrend, technical_view.stance=neutral, fundamental_view.stance=neutral\"\n  }\n ],\n \"risks\": [\n  \"直近5営業日での下落場面や、前夜のNY市場のADR下落、米国市場の不安定さが東京市場に波及するリスクがあります。\",\n  \"為替レートの変動（特にドル円の動向）が業績に影響を与える可能性があります。\",\n  \"欧米における医薬品開発・販売規制の変更や、競合他社の動向により業績が左右されるリスクがあります。\",\n  \"次回決算発表（2026-10-30）に向けて、決算内容への警戒感から株価が下落するリスクがあります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "短期的な上昇トレンドと中期的な上昇トレンドが併存しているものの、直近の株価の動きは方向感に欠け、上値抵抗線や下値支持線に近づいているため、中立と判断します。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日移動平均線の上方に位置しており、短期的な上昇トレンドを示唆しています。",
+          "evidence": "price_technical.sma5_vs_sma25=golden(5日線が25日線の上)"
+        },
+        {
+          "point": "60営業日騰落率がプラスであり、対TOPIX相対騰落率もプラスであることから、中期的な上昇トレンドが継続していると考えられます。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=14.48, price_technical.trend_60d.relative_to_topix_60d_pct=10.39"
+        },
+        {
+          "point": "RSI(14)が47.3と50近辺であり、買われすぎでも売られすぎでもない中立的な水準を示しています。",
+          "evidence": "price_technical.rsi14=47.3"
+        },
+        {
+          "point": "MACDのヒストグラムがプラスであり、MACDがシグナル線を上回っているため、短期的には上昇モメンタムがあります。",
+          "evidence": "price_technical.macd_histogram=13.35, price_technical.macd > price_technical.macd_signal"
+        },
+        {
+          "point": "TOPIX連動ETFが25日移動平均線より上にあり、直近5日騰落率もプラスであることから、市場全体としては上昇トレンドにあります。",
+          "evidence": "macro.market_regime.market_regime=uptrend"
+        }
+      ],
+      "cautions": [
+        "直近5営業日では、2931.0円から2848.0円まで下落する場面もあり、上値の重さも散見されます。",
+        "前夜のNY市場でADRが下落しており、東京市場での寄り付きに影響を与える可能性があります。",
+        "S&P500指数が下落し、VIX指数が上昇していることから、米国市場の不安定さが日本市場にも波及するリスクがあります。",
+        "MACDのゴールデンクロスは確認されていません。",
+        "RSIが50近辺で方向感に欠けており、モメンタムの過熱感はありません。"
+      ],
+      "key_levels": {
+        "support": 2848.0,
+        "resistance": 2931.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "第一三共は、主力製品の成長と増配予想があるものの、為替変動や海外での事業再編費用の影響、そして次回決算発表を控えていることから、現状では中立的なスタンスが妥当と考えられます。",
+      "points": [
+        {
+          "point": "第1四半期決算では、主力製品「エンハーツ」の伸長や為替影響により増収を達成しましたが、事業再編費用の計上等で営業利益・最終利益は減益となりました。通期業績予想は修正されていますが、最終利益は減益予想となっています。年間配当予想は増配見込みです。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "「エンハーツ」の併用療法がEUで乳がん一次治療に関する適応追加承認を取得したというニュースがあり、主力製品の成長ポテンシャルを示唆しています。",
+          "evidence": "news.headlines[0].title"
+        },
+        {
+          "point": "配当利回りは3.51%と比較的魅力的であり、通期配当予想も前期から増配見込みです。",
+          "evidence": "fundamentals.valuation.dividend_yield_percent, fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "次回決算発表が2026年10月30日に予定されており、それまでは材料出尽くしや、決算内容への警戒感から大きな動きは限定的となる可能性があります。",
+          "evidence": "fundamentals.next_earnings_date"
+        }
+      ],
+      "cautions": [
+        "為替レートの変動（特にドル円の動向）が業績に影響を与える可能性があります。",
+        "欧米における医薬品開発・販売規制の変更や、競合他社の動向により業績が左右されるリスクがあります。",
+        "株価が前回決算発表後（2026-07-31）にどのように反応したか、テクニカルな観点からの分析が不足しています。",
+        "マクロ経済環境（例: 金利動向、インフレ率）が製薬業界に与える影響について、詳細な分析が不足しています。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "エンハーツとペルツズマブの併用療法 EUで乳がん一次治療に関する適応追加承認取得 第一三共 - 医薬通信社",
+        "url": "https://news.google.com/rss/articles/CBMi3AJBVV95cUxQQVdCMWxabndxMmVQRXVNdzlzWThlQnFyUm9CX2g0R2RlbG5JUHh1aExOSnBmTW5DMG1IRnBEVzdFcnB4Znl5cjFzbW02djRsUW5hcDN3akYzVE8tdjNNNmJqRkc2OElrbjFhYzBLUWpKdDFyOFhWcG1DM2VHSHhHaFJodUo0a0RxZHhpLUh5dTh5Ym92MGxvc2NCb3RXS3RmN0p5SmdGTk1KRWxwdVBsWS1hWDFXd2VfNndVTlhlQ204Zm9rQm91eUxJa1FTV2VqUHhGV2dkSjFlNWU2bTJGenZyUU81SU00NDBiRV9oQ2J2NUNETHJBdFNCeVN6X2xCYVpDdHdBMnFuWjdXZllPOXMyS2g1YlYzRUlWZFBaTWZKLVdhcHNqMENJVDlsVXp4LTI3VnJVak91ZDdkeW1GbTNJMURNdE5XbjA3SmFha2doRWdkSEl3TlpXdVU?oc=5",
+        "published": "Tue, 01 Sep 2026 13:57:53 GMT",
+        "publisher": "医薬通信社"
+      },
+      {
+        "title": "第一三共、「エンハーツ」の併用療法が欧州で一部変更承認を取得（Bloomberg） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1YN3hGYTh5aVRlZm1wTW92bmFuRlNFcXk3QXB4MlFSYnJLZ1ZPbk9lQWtTeFBHUDBQTDcyb01GYWhPa1ZPVXZPTjQwT1J6YkRST0lRX0s5Nmk1MVNCejhNSmRnSzdqb1ZOQjVuOEZVLXZCVlZOMUViNFRkM1BBTXM?oc=5",
+        "published": "Tue, 01 Sep 2026 07:06:48 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "第一三共ヘルスケア、基準最大量の人参3000mg配合の内服液「ルル滋養内服液プレミアム」（指定医薬部外品）をコンビニで発売 - マイライフニュース",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9kU2ZRMV9fMzkxZXVHQVU4elNTYUZyZzJPU1dIWmI2RTJjdkJRNUNkMjZkR2E3YVFhc2tSSVhNdFVUOWlGcjFHQXpGRS0yLU5oRGtXdjdaa1J2MkxmOXc?oc=5",
+        "published": "Tue, 01 Sep 2026 09:56:00 GMT",
+        "publisher": "マイライフニュース"
+      },
+      {
+        "title": "【写真 9/22枚】＝第一三共ヘルスケア提供 - Mantan Web",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFAxS1hHdXV4NDVkSTlIWC1ZeUpQbWQzSWxLOFhRUDVsZ0cxS09ONzhoSTkxSHBzdUo0cktHWUl2Xzg2ajRiZVl3blFublBfUGtuTnBDNkN3cGswOGJDbFhYOWhJWjFIVENuU0FNdjBxSW1YalRxUk1JWGloeHFlUQ?oc=5",
+        "published": "Tue, 01 Sep 2026 01:34:24 GMT",
+        "publisher": "Mantan Web"
+      },
+      {
+        "title": "【写真 11/22枚】＝第一三共ヘルスケア提供 - Mantan Web",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5kMUF4cEhDNkpZSDZoZHUtdTdENHZ6NkxYcTNzcHZLbHpLcTZWNmJkVGV6UFRmSHRrd1l5ZW1mM0xsZktTWm5TYjIzTk55ajhWd0dPS1c4aFNINmVEV29Kc1BSUUZDRDNUNUNTczdwZ3NLZmJsZ2tGN3BRRGVLQQ?oc=5",
+        "published": "Tue, 01 Sep 2026 01:36:30 GMT",
+        "publisher": "Mantan Web"
+      },
+      {
+        "title": "第一三共ヘルスケア、基準最大量の人参3000mg配合の内服液「ルル滋養内服液プレミアム」（指定医薬部外品）をコンビニで発売 - ライブドアニュース",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBVb09ySWtsM2huLThPV0hmTHktQUg2RC1GU3lxNjh4OGZweEhSTmUtRExBci0wWDN3NTF6N0c0WWRIVjZ5SHAxSGVscTA0NE5ycnFHY0FIbU5YSjVHYTJn?oc=5",
+        "published": "Tue, 01 Sep 2026 09:56:44 GMT",
+        "publisher": "ライブドアニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "（開示事項の変更）第一三共ビジネスアソシエの吸収合併（簡易合併・略式合併）の効力発生日変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824525305.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "（再訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514622.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2025年度決算および第6期中期経営計画説明会」資料の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514744.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正・数値データ訂正）「2026年３月期 決算短信〔IFRS基準〕(連結)」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504176.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504099.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算補足資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504168.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504173.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "当社米国子会社役職員に対する信託型株式付与制度の継続のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504240.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587542.pdf",
+        "date": "2026-07-16 15:30:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584479.pdf",
+        "date": "2026-06-30 16:30:00"
+      }
+    ]
+  }
+}

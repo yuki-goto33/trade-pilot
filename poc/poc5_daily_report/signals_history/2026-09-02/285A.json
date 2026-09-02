@@ -1,0 +1,232 @@
+{
+  "code": "285A",
+  "name": "キオクシアホールディングス",
+  "generated_at": "2026-09-02T09:06:21+09:00",
+  "price_as_of": "2026-09-01",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近14日以内に buy シグナルが出ているため、新規の buy は見送り、保有継続・監視とします。",
+        "evidence": "reference.recent_buy"
+      },
+      {
+        "reason": "ファンダメンタルズは強気（strength=75）ですが、テクニカルが弱気（stance=bearish）であり、両者の見解が一致しないため、積極的な買い判断は控えます。",
+        "evidence": "fundamental_view.stance=bullish, technical_view.stance=bearish"
+      },
+      {
+        "reason": "テクニカル専門家は中期下落トレンド継続と判断しており、25日移動平均線を上回れていないことから、弱気シグナルを重視します。",
+        "evidence": "technical_view.stance=bearish, technical_view.points[1].point"
+      },
+      {
+        "reason": "ファンダメンタルズ専門家は業績回復トレンドやSKグループとの協業期待をポジティブ視していますが、PER・PBRが高水準である点はリスクとして認識されています。",
+        "evidence": "fundamental_view.stance=bullish, fundamental_view.cautions[0]"
+      }
+    ],
+    "risks": [
+      "テクニカル分析では中期下落トレンドの継続が示唆されており、25日移動平均線からの乖離が拡大する可能性があります。",
+      "ファンダメンタルズ専門家が指摘するPER・PBRの高水準は、市場期待が剥落した場合の株価下落リスクを示唆しています。",
+      "次回決算発表日（2026年10月30日）が比較的近く、決算内容が市場の期待に沿わない場合、株価にネガティブな影響を与える可能性があります。",
+      "日銀の金融政策決定会合（2026年9月17〜18日）やグローバル市場のリスクオフムードの強まりが、株価に影響を与える可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内に buy シグナルが出ているため、新規の buy は見送り、保有継続・監視とします。\",\n   \"evidence\": \"reference.recent_buy\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは強気（strength=75）ですが、テクニカルが弱気（stance=bearish）であり、両者の見解が一致しないため、積極的な買い判断は控えます。\",\n   \"evidence\": \"fundamental_view.stance=bullish, technical_view.stance=bearish\"\n  },\n  {\n   \"reason\": \"テクニカル専門家は中期下落トレンド継続と判断しており、25日移動平均線を上回れていないことから、弱気シグナルを重視します。\",\n   \"evidence\": \"technical_view.stance=bearish, technical_view.points[1].point\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ専門家は業績回復トレンドやSKグループとの協業期待をポジティブ視していますが、PER・PBRが高水準である点はリスクとして認識されています。\",\n   \"evidence\": \"fundamental_view.stance=bullish, fundamental_view.cautions[0]\"\n  }\n ],\n \"risks\": [\n  \"テクニカル分析では中期下落トレンドの継続が示唆されており、25日移動平均線からの乖離が拡大する可能性があります。\",\n  \"ファンダメンタルズ専門家が指摘するPER・PBRの高水準は、市場期待が剥落した場合の株価下落リスクを示唆しています。\",\n  \"次回決算発表日（2026年10月30日）が比較的近く、決算内容が市場の期待に沿わない場合、株価にネガティブな影響を与える可能性があります。\",\n  \"日銀の金融政策決定会合（2026年9月17〜18日）やグローバル市場のリスクオフムードの強まりが、株価に影響を与える可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 85,
+      "summary": "中期下落トレンドが継続しており、短期的な反発も見られますが、25日移動平均線を上回れていないため、弱気継続と判断します。",
+      "points": [
+        {
+          "point": "60営業日騰落率と対TOPIX相対騰落率がともにマイナスであり、中期的な下落トレンドが継続していると判断できます。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-34.73, price_technical.trend_60d.relative_to_topix_60d_pct=-38.82"
+        },
+        {
+          "point": "直近5営業日では陽線が続いていますが、25日移動平均線（50166.4円）を明確に上回れていません。",
+          "evidence": "price_technical.sma25=50166.4, price_technical.recent_5_days[4].close=51000.0, price_technical.recent_5_days[4].change_pct=2.02"
+        },
+        {
+          "point": "MACDは依然としてマイナス圏で推移しており、デッドクロスを示唆するような形状です。",
+          "evidence": "price_technical.macd=-1140.13, price_technical.macd_signal=-1160.12"
+        },
+        {
+          "point": "前夜の米国市場において、半導体セクターETF（SMH）およびSOX指数が下落しており、日本市場での半導体関連銘柄への売り圧力となる可能性があります。",
+          "evidence": "us_overnight.sector_proxy.change_1d_pct=-2.05, us_overnight.sox_index.change_1d_pct=-2.14"
+        }
+      ],
+      "cautions": [
+        "日足の5日移動平均線が25日移動平均線の上方に位置しており、短期的な上昇トレンドの兆候が見られる点。",
+        "直近5営業日、特に8月27日と9月1日の陽線は、一定の買い意欲の存在を示唆しています。",
+        "市場全体（TOPIX）は上昇トレンド（uptrend）にあるため、市場全体の強さに引きずられて株価が上昇する可能性。",
+        "MACDヒストグラムがプラスに転じている点は、短期的なモメンタムの改善を示唆している可能性があります。"
+      ],
+      "key_levels": {
+        "support": 50000.0,
+        "resistance": 51000.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "キオクシアHDは、足元の業績回復トレンドと、AI関連需要の拡大、さらにはSKグループとの協業期待を背景に、中長期的にポジティブな見通しが期待される。バリュエーションは高水準だが、将来的な成長ポテンシャルを織り込んでいると解釈できる。",
+      "points": [
+        {
+          "point": "キオクシアHDの業績は、2024年3月期の大幅な赤字から、2025年3月期には黒字転換し、2026年3月期には大幅な増収増益へと力強い回復トレンドを示している。これは、半導体市場の回復と、AI関連需要の拡大が寄与している可能性が高い。",
+          "evidence": "fundamentals.earnings_trend.annual[2].operating_income_oku_jpy=-2527, fundamentals.earnings_trend.annual[1].operating_income_oku_jpy=4517, fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=8704, fundamentals.earnings_trend.annual[2].revenue_oku_jpy=10766, fundamentals.earnings_trend.annual[1].revenue_oku_jpy=17065, fundamentals.earnings_trend.annual[0].revenue_oku_jpy=23376"
+        },
+        {
+          "point": "SKグループの会長がキオクシアとの共同生産や日本での工場建設を検討しているとの報道があり、将来的な事業拡大や技術提携への期待が高まる。これは、企業価値向上に繋がるポジティブな材料である。",
+          "evidence": "news.headlines[0].title, news.headlines[4].title"
+        },
+        {
+          "point": "日本経済新聞は、キオクシアがAI関連で再上昇の可能性があると報じており、AI分野における同社の重要性が示唆されている。また、元キオクシア研究開発者も同社株の今後を楽観視している。",
+          "evidence": "news.headlines[1].title, news.headlines[7].title"
+        },
+        {
+          "point": "直近の適時開示として、サンディスクコーポレーションとの投資計画に関するお知らせがあり、主要なパートナーとの連携強化を示唆している。",
+          "evidence": "disclosures.items[0].title"
+        },
+        {
+          "point": "日本の製造業PMIは50を上回る水準で推移しており、製造業全体の景況感は拡張局面にある。これは、半導体関連企業にとって追い風となるマクロ環境を示唆している。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9"
+        }
+      ],
+      "cautions": [
+        "PER（50.5倍）、PBR（11.6倍）は依然として高水準であり、将来の成長期待が株価に織り込まれている可能性が高い。業績が期待通りに伸びなかった場合、株価の下落リスクがある。",
+        "次回決算発表日が2026年10月30日と比較的近い。決算内容が市場の期待に沿わない場合、株価にネガティブな影響を与える可能性がある。",
+        "日銀の金融政策決定会合が2026年9月17〜18日に予定されており、金融政策の動向によっては金利や市場心理に影響が出る可能性がある。",
+        "米国S&P500指数が下落傾向にあり、VIX指数が上昇していることから、グローバル市場のリスクオフムードが強まる可能性も否定できない。これはキオクシアHDのようなグロース株にとって逆風となりうる。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-24",
+    "days_ago": 9,
+    "confidence": 75,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "SK会長、キオクシアと共同生産「選択肢」 日本での工場建設も検討 [AIの時代] - 朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE54RjF0eEl6N0w2V0t2amJKX2tzMDdudHhwQ3BBc1kyelpLVjFLTHNnbXF2Q2MyLUwtd2h4aldWQUR0OFcyQ1VfYV9YQ2JGeHBkX1hJbVIxLVh4Z21UY3ZWVDZMamtocEE?oc=5",
+        "published": "Tue, 01 Sep 2026 23:00:00 GMT",
+        "publisher": "朝日新聞"
+      },
+      {
+        "title": "日本株、AIで再上昇へ キオクシアやレゾナックは過小評価 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE05Qk9nemlkLVRHcHRERWFya2k1QUtJb1o4R09zUFk3YWhJTkJwaTFwRjRHSnRTY3lxQVdUQmdKeTdyN2pZTmY2b0h3OFlRXy1ESU9HWGwwcGhlcE9WdW1JYTNXeGF0ZkYwUDlsY2pHdngzSmw1WkhkV0VEWFo0Zw?oc=5",
+        "published": "Tue, 01 Sep 2026 20:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "キオクシアHDは地方を救えるか－岩手県北上市で見たAI投資の現実、高市政権の試金石に - Bloomberg.com",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9zT2lXRlNVaVFWMjdlQXg4TndxcmUtR2paUUh5UVM1ZkwxQ2ZwNzdoa2tfc21lODdoUVdyVHFzeHp0Ynp3WFVZOVdjQThPZXBzaE56Wm45WmpEejZkMFNuWS1Kak9FUU92Rlp5X1lsemNYZlVMeVVJ?oc=5",
+        "published": "Tue, 01 Sep 2026 21:04:17 GMT",
+        "publisher": "Bloomberg.com"
+      },
+      {
+        "title": "寄前【成行注文】売り越しランキング キオクシア、アドテスト、ＳＢＧ [08:35] - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1rV0pBeEFBNVpXMWthX296cG9XdmtSemxrSFdaVE5vSF82Y3ZmcDByRzhjMjRKb1VVOTVqd0Item1zaVA0aVZLQXZHUkJwa1VyU0E?oc=5",
+        "published": "Tue, 01 Sep 2026 23:35:59 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "SK会長、キオクシアと共同生産「選択肢」 日本での工場建設も検討（朝日新聞） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1BZlFkVXVKSngwb0dKUG9Kbm1TQnVEWDVmalJlQ3E2TENLc09EQndJRlVINE96OVYwZDVXbTNVNllWd2VWcmVrbUJiNE1PRGxncUFkak5FS3VOQW5LT3VpV1NKazlvVmFEc2JQeUhBbHNlUEhIUVlRMHZ0X3RZUEU?oc=5",
+        "published": "Tue, 01 Sep 2026 23:00:00 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "成長株「大化け候補」ランキング【5年後に伸びる150銘柄】23位楽天銀行、21位村田製作所、10位イビデン、1位は？《再配信》 - diamond.jp",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1RVWQzcmc1MlFHbWVSQWtVLVpCNUJOUlp6bTkxV0hUUHhjQk1VR3VBZDJmYmdybTZWLUp3Y1ZWNGJKSktHLXU4VEhtSmNYcFnSAU9BVV95cUxNUVVkM3JnNTJRR21lUkFrVS1aQjVCTlJaem05MVdIVFB4Y0JNVUd1QWQyZmJncm02Vi1Kd2NWVjRiSkpLRy11OFRIbUpjWHBZ?oc=5",
+        "published": "Tue, 01 Sep 2026 19:25:00 GMT",
+        "publisher": "diamond.jp"
+      },
+      {
+        "title": "日経平均は１７０円程度安、売買代金はキオクシア、フジクラ、アドバンテスが上位 速報 - kabushiki.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE1DOUJQcU9ySDR4N3Fud3U1TUVYcTdreDZDTkY0VG5UVWNfUnBlYWlhWk1mbzcyQmVkT3NCMmdldnhXSndfakhv?oc=5",
+        "published": "Tue, 01 Sep 2026 05:05:00 GMT",
+        "publisher": "kabushiki.jp"
+      },
+      {
+        "title": "元キオクシア研究開発者の億り人・もふさんが解説する“半導体業界の構造と市場の注目の変遷” キオクシア株の今後について「楽観的に見ています」と分析する理由 - マネーポストWEB",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE15WVpDWU1hbl9mYTJhUFJPODd2dzFKWGdfRm9PR1UwUF9neGQ1c0dQaFlvQ1MyeEF2b21wMmdsbkJIUHo5YmU4?oc=5",
+        "published": "Tue, 01 Sep 2026 07:01:00 GMT",
+        "publisher": "マネーポストWEB"
+      },
+      {
+        "title": "キオクシアは強弱観対立もやや売り優勢、米サンディスクの大幅高はポジティブ材料 - みんかぶ",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1BUHNBN1RXMGpFOURTT2M1bW5GQWxMc3dIWWI2di1aWXZHSzF5cTI4RXZ1aWc5Q3h5bDVtOVR3YnZxczI2X1V2cA?oc=5",
+        "published": "Tue, 01 Sep 2026 00:12:22 GMT",
+        "publisher": "みんかぶ"
+      },
+      {
+        "title": "キオクシアに追いついた中国半導体企業「日本が勝つ方法」は？ - 現代ビジネス",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9JUjhjVHdoQjlEZWZudFV0dV9pOHdySmlGVjlkS294S0h6WmFmZktVUHk4UmpqNUxvSFl6U1RtZWhJa0pkRXUwaDZvU1FnODNwY1dJX3FoMkM?oc=5",
+        "published": "Tue, 01 Sep 2026 02:13:51 GMT",
+        "publisher": "現代ビジネス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "サンディスクコーポレーションとの投資計画に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260827527338.pdf",
+        "date": "2026-08-27 17:50:00"
+      },
+      {
+        "title": "（訂正）「主要株主である筆頭株主の異動に関するお知らせ」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260817521854.pdf",
+        "date": "2026-08-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況及び取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260810517251.pdf",
+        "date": "2026-08-10 18:15:00"
+      },
+      {
+        "title": "主要株主である筆頭株主の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260810517256.pdf",
+        "date": "2026-08-10 18:15:00"
+      },
+      {
+        "title": "当社子会社に対する訴訟の判決に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260803506332.pdf",
+        "date": "2026-08-03 15:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505265.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "株式分割及び株式分割に伴う定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505272.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "自己株式の取得枠設定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505280.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "勤務継続型株式報酬制度及び業績連動型株式報酬制度のユニット付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505321.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "当社子会社に対する訴訟の陪審評決に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595788.pdf",
+        "date": "2026-07-17 13:00:00"
+      }
+    ]
+  }
+}

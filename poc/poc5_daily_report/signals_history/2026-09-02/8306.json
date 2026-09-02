@@ -1,0 +1,217 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-09-02T08:55:50+09:00",
+  "price_as_of": "2026-09-01",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近（2026-08-24）に buy 判断が出てから9日しか経過しておらず、再エントリー抑制ルールに基づき継続監視とする。",
+        "evidence": "reference.recent_buy.date=2026-08-24"
+      },
+      {
+        "reason": "テクニカル・ファンダメンタルズ共に強気（bullish）で揃っており、好材料は既に株価に織り込まれている可能性が高く、新規エントリーの優位性が低い。",
+        "evidence": "technical_view.stance=bullish (strength=85) / fundamental_view.stance=bullish (strength=80)"
+      },
+      {
+        "reason": "第1四半期の純利益進捗率が約30%と好調であり、マクロ環境（国内金利上昇）も追い風だが、RSIが買われすぎ水準の70に接近しており、目先の押し目を待つべき局面である。",
+        "evidence": "fundamental_view.points[0].evidence / technical_view.cautions[0]: RSI14=67.4"
+      }
+    ],
+    "risks": [
+      "2026年9月17日〜18日の日銀金融政策決定会合に伴う金利・株価の急変動リスク (reference.next_boj_meeting)",
+      "VIX指数の急上昇に見られる市場全体のボラティリティ拡大による下押し圧力 (technical_view.cautions[2])",
+      "PBR 1.83倍という相対的な高評価水準からの利益確定売りの発生 (fundamental_view.cautions[2])"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近（2026-08-24）に buy 判断が出てから9日しか経過しておらず、再エントリー抑制ルールに基づき継続監視とする。\",\n   \"evidence\": \"reference.recent_buy.date=2026-08-24\"\n  },\n  {\n   \"reason\": \"テクニカル・ファンダメンタルズ共に強気（bullish）で揃っており、好材料は既に株価に織り込まれている可能性が高く、新規エントリーの優位性が低い。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=85) / fundamental_view.stance=bullish (strength=80)\"\n  },\n  {\n   \"reason\": \"第1四半期の純利益進捗率が約30%と好調であり、マクロ環境（国内金利上昇）も追い風だが、RSIが買われすぎ水準の70に接近しており、目先の押し目を待つべき局面である。\",\n   \"evidence\": \"fundamental_view.points[0].evidence / technical_view.cautions[0]: RSI14=67.4\"\n  }\n ],\n \"risks\": [\n  \"2026年9月17日〜18日の日銀金融政策決定会合に伴う金利・株価の急変動リスク (reference.next_boj_meeting)\",\n  \"VIX指数の急上昇に見られる市場全体のボラティリティ拡大による下押し圧力 (technical_view.cautions[2])\",\n  \"PBR 1.83倍という相対的な高評価水準からの利益確定売りの発生 (fundamental_view.cautions[2])\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 85,
+      "summary": "短期・中期ともに強い上昇トレンドの中にあり、テクニカル指標の多くがさらなる上値を追う展開を示唆しています。",
+      "points": [
+        {
+          "point": "短期的なゴールデンクロスの発生に加え、直近5営業日連続で株価が上昇し、出来高も増加傾向にあります。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden\", price_technical.recent_5_days(volume_increase)"
+        },
+        {
+          "point": "MACDがシグナルを大きく上回りヒストグラムもプラス圏で拡大しており、強い上昇モメンタムが維持されています。",
+          "evidence": "price_technical.macd=11.89, price_technical.macd_signal=-3.88, price_technical.macd_histogram=15.77"
+        },
+        {
+          "point": "中期トレンドにおいても、60営業日騰落率がTOPIXを大幅にアウトパフォームしており、地合いの強さが裏付けられています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=14.94, price_technical.trend_60d.relative_to_topix_60d_pct=10.86"
+        }
+      ],
+      "cautions": [
+        "RSI14が67.4と、買われすぎの目安である70に接近しており、目先利益確定売りによる押し目形成の可能性があります。",
+        "前夜の米国市場で金融セクターETF（XLF）が-0.88%下落しており、寄り付きの重石となる可能性があります。",
+        "VIX指数が1日で9.52%急上昇しており、全体相場のボラティリティ高まりが波及するリスクに注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 3585.44,
+        "resistance": 3813.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 80,
+      "summary": "2027年3月期第1四半期の純利益が前年同期比48.2%増と極めて好調な進捗を見せている中、国内長期金利が3%近傍まで上昇し利ザヤ改善期待が強まっている。直近では資産運用分野でのグローバル大手との協業検討という新たな成長カタリストも浮上しており、良好なファンダメンタルズが継続している。",
+      "points": [
+        {
+          "point": "第1四半期決算が大幅な増収増益で着地しており、通期純利益目標2兆7,000億円に対して進捗率が約30%と極めて順調である。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "ブラックロックやモルガン・スタンレーといったグローバル大手と、成長分野であるプライベート・クレジットでの協働検討を開始しており、非利息収益の拡大が期待される。",
+          "evidence": "news.headlines[0].title"
+        },
+        {
+          "point": "国内10年債利回りが2.9%台に達しており、銀行業にとって収益構造の根幹を成す利ザヤの改善に直結するマクロ環境となっている。",
+          "evidence": "macro.rates.jgb_10y_percent.value=2.943"
+        },
+        {
+          "point": "ROE 9.5%と国内銀行株として高い資本効率を維持しつつ、前期比10円の増配（年間96円）を予定しており、株主還元姿勢が明確である。",
+          "evidence": "fundamentals.valuation.return_on_equity=0.095, fundamentals.recent_important_disclosures[0].summary"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日〜18日に日銀金融政策決定会合を控えており、政策修正の有無や発言内容による金利急変動のリスクがある。",
+        "米国の長期金利上昇やS&P500の下落、VIX指数の上昇に見られるように、グローバルな金融市場の不安定化がセンチメントを悪化させる可能性がある。",
+        "PBRが1.83倍に達しており、従来の銀行株の評価レンジと比較して相対的な割高感から利益確定売りが出やすい水準にある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-24",
+    "days_ago": 9,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ＭＵＦＧ、ブラックロック・モルガンＳと協働検討 プライベート・クレジットで - ロイター",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQV3M4R0piSld1TUNaVm50RWlOR2tfOU5LVmNxT0dUZTVCdjRIdWZrbEZ0T1VILTFwc0xqQ0RLU1NnSWdDYzFwMjcyeXh1Y09USGw1d3NXaGFxblRmUEN3alYtR0VZNmctalVuX1JTck9POWdjQ1ZSRExPNktiSkUyUg?oc=5",
+        "published": "Tue, 01 Sep 2026 08:07:44 GMT",
+        "publisher": "ロイター"
+      },
+      {
+        "title": "三菱UFJフィナンシャル・グループなど きょう10年債入札、米長期金利は1年8カ月ぶり高水準 - 日経CNBC online",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE0wTWdYcWN6dm1zSzlnQW1oNUpZS2ttVFB6RXFoUEZ2YU5fZVdHdUZFMG5kVms2aWxzNER0RzNDdXoxamtZQWZUb1g2SlEyYklVZjdSZQ?oc=5",
+        "published": "Tue, 01 Sep 2026 00:27:00 GMT",
+        "publisher": "日経CNBC online"
+      },
+      {
+        "title": "「AIは代理人ではなく共生・協働する存在」MUFG亀澤会長らが討論 - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9vTHhMbjJsUEM4OERmZmhZRXRHcDAzSlIzQnF6NTNmYVhBOWpMb01hQVlZOXZHbTJLdmgzcm9vVHdza1hwRjJMeDBRcUpBNm5kT3lyWTI4R096a2hrQUVGS3BlLXV5Vnc?oc=5",
+        "published": "Tue, 01 Sep 2026 08:00:00 GMT",
+        "publisher": "日経ビジネス電子版"
+      },
+      {
+        "title": "ＭＵＦＧ、ブラックロック・モルガンＳと協働検討 プライベート・クレジットで（ロイター） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1CVXV0M1A4bkppVVVxZ1FjLVVMbGhtZEhvS0Q4X051czVBTEwyeWxpQ2xBOWx3dzlzYzJkMTROTUxHNU43dG1ta25peklFSTJqUnY0VWw0OWRUUnlUNEQ4NHBIQWRYZklLSTVtWlc3LUpYbmVZZEMtUEFYdDB0LUE?oc=5",
+        "published": "Tue, 01 Sep 2026 08:06:41 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "ＭＵＦＧ、ブラックロック・モルガンＳと協働検討 プライベート・クレジットで - ニューズウィーク日本版",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAyV25XUjdIM0Ewa1cxY1FNbUJxUDAyYzZ0UkxQT0FTbFUzUW9PNG1IajI4RncxNU1zdFU1WkNUTVpSekNIZ2RiUHdDdXZENHZMcW1XdFN3V0M3UQ?oc=5",
+        "published": "Tue, 01 Sep 2026 08:06:00 GMT",
+        "publisher": "ニューズウィーク日本版"
+      },
+      {
+        "title": "三菱ＵＦＪ、米ブラックロックなどと協業 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOSVBESVR2U19qektJSHdockljYkJoQ0xmRk9BeFl6RzFlVklFRmcxT1l0emxidnJIWVJCVENLaWNLcE5EZjA4Szh5cXh6OEtVazRMWHY1WEJkbGVUYURQUng3d2lkVXZSaWs2V1lpMU0ybTRyUDRuSE1fSHU5YzUwbNIBgAFBVV95cUxOSVBESVR2U19qektJSHdockljYkJoQ0xmRk9BeFl6RzFlVklFRmcxT1l0emxidnJIWVJCVENLaWNLcE5EZjA4Szh5cXh6OEtVazRMWHY1WEJkbGVUYURQUng3d2lkVXZSaWs2V1lpMU0ybTRyUDRuSE1fSHU5YzUwbA?oc=5",
+        "published": "Tue, 01 Sep 2026 10:28:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "ＭＵＦＧ、ブラックロック・モルガンＳと協働検討 プライベート・クレジットで - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBxNFZ3cFZBNnJMbWVMTzhuOFdfMFNxT0k4d1V6Wi1ReDV5Y1RDN2xzSjZ4cGN2Sl9HWnY4ZGpqNzc2aHVnUGVYWnFOV3NMTGIwYkk3SDNCdHlMMEcxN3ljc0RfbW9PMThmMm1IZUlR?oc=5",
+        "published": "Tue, 01 Sep 2026 08:06:41 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "国立競技場は「MUFGスタジアム」に 三菱UFJが命名権取得(2025年10月15日) Tim Patrick (2PIR3CecdR) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1FVWlnWDJ3SW01NzkzN2NwOE5TRVZWSFZnd3Q1RFhFTGlaMXJXSlFlc3V3UkZYRXZ2TVNxZU9PZlhjTnpQLVlFa1YtWUtFSW1vc0dBNERQZlVkaW8?oc=5",
+        "published": "Tue, 01 Sep 2026 04:10:49 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "大阪市、青カビ由来のプベルル酸と製品中のプベルル酸を「同一物質であると推定」 ― その各分析記録の比較を行ったことを示す文書は「作成又は取得した記録はない」と回答（大大保第8306号） - イザ！",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5uemRjTm1tazd5WEM1YWJ5RnRPUVd5OHNJSU9oZFlDRGlmZkxYX0FxVW9zbTUtdEVSUVpYSG1pdDlqOS1jVjJpMjYzeUxCZk5PbWdqYkJZRWtJMFZqOVdiSHJzYUh5MkdyQlBxUS13SURTeVgyTUluX053?oc=5",
+        "published": "Tue, 01 Sep 2026 00:50:00 GMT",
+        "publisher": "イザ！"
+      },
+      {
+        "title": "三菱ＵＦＪ－6日続伸 国内10年債利回りが3％台に 銀行株に買い(トレーダーズ・ウェブ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOMzV0dmlFMDdLZmJNMy1Rd0FlSjh6QzRWNUI4ZlZFdk5yZXdGTVlZUnA3RHg5TE43d3dSS0RSbDBRNTBvVmd6QVZwTTE3ZUFxaTJDR1d5UzFxY1o0TGM5aTd2Y2hiNVpORTlNNmJ0VU41bDNic1dEc2hIaEVJbmxvbkNtNnhKRUU?oc=5",
+        "published": "Tue, 01 Sep 2026 03:43:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期 自己資本比率について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260814520300.pdf",
+        "date": "2026-08-14 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕（連結）（公認会計士又は監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510381.pdf",
+        "date": "2026-08-06 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505851.pdf",
+        "date": "2026-08-03 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-09-02T09:05:33+09:00",
+  "price_as_of": "2026-09-01",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "直近14日以内に buy シグナルが出ているため、新規の buy は見送り、継続監視とする。",
+        "evidence": "reference.recent_buy"
+      },
+      {
+        "reason": "ファンダメンタルズ専門家は割高感やマクロ経済の不透明感を理由に中立（strength 55）と判断しており、buy の必須条件である strength 70 を満たしていない。",
+        "evidence": "fundamental_view.strength=55, fundamental_view.stance=neutral"
+      },
+      {
+        "reason": "テクニカル専門家は上昇トレンドと短期的な好転を示唆しているが、MACDヒストグラムのマイナスや海外市場の動向、VIX指数の上昇など、モメンタムの鈍化やリスク要因も複数指摘されている。",
+        "evidence": "technical_view.stance=bullish, technical_view.strength=70, technical_view.cautions"
+      }
+    ],
+    "risks": [
+      "直近の buy シグナル（2026-08-26）以降、株価が下落するリスク。",
+      "次回決算発表（2026-10-29）でネガティブなサプライズがあった場合。",
+      "日銀金融政策決定会合（2026-09-17〜2026-09-18）でのタカ派的な決定や、それに伴う金利上昇リスク。",
+      "米国市場の不安定化が国内市場に波及するリスク。",
+      "ファンダメンタルズ専門家が指摘するバリュエーションの割高感から、株価上昇が抑制される可能性。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内に buy シグナルが出ているため、新規の buy は見送り、継続監視とする。\",\n   \"evidence\": \"reference.recent_buy\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ専門家は割高感やマクロ経済の不透明感を理由に中立（strength 55）と判断しており、buy の必須条件である strength 70 を満たしていない。\",\n   \"evidence\": \"fundamental_view.strength=55, fundamental_view.stance=neutral\"\n  },\n  {\n   \"reason\": \"テクニカル専門家は上昇トレンドと短期的な好転を示唆しているが、MACDヒストグラムのマイナスや海外市場の動向、VIX指数の上昇など、モメンタムの鈍化やリスク要因も複数指摘されている。\",\n   \"evidence\": \"technical_view.stance=bullish, technical_view.strength=70, technical_view.cautions\"\n  }\n ],\n \"risks\": [\n  \"直近の buy シグナル（2026-08-26）以降、株価が下落するリスク。\",\n  \"次回決算発表（2026-10-29）でネガティブなサプライズがあった場合。\",\n  \"日銀金融政策決定会合（2026-09-17〜2026-09-18）でのタカ派的な決定や、それに伴う金利上昇リスク。\",\n  \"米国市場の不安定化が国内市場に波及するリスク。\",\n  \"ファンダメンタルズ専門家が指摘するバリュエーションの割高感から、株価上昇が抑制される可能性。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "日立製作所は中期的な上昇トレンドを維持しており、短期移動平均線も好転しています。市場全体の地合いも良好ですが、モメンタムの鈍化や米国市場の動向には注意が必要です。",
+      "points": [
+        {
+          "point": "過去60営業日で株価が上昇しており、TOPIXに対してもアウトパフォームしていることから、中期的な上昇トレンドが継続しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=4.55, price_technical.trend_60d.relative_to_topix_60d_pct=0.46"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線を上回るゴールデンクロスを形成しており、現在の株価も両移動平均線の上で推移しているため、短期的な上昇を示唆しています。",
+          "evidence": "price_technical.sma5_vs_sma25='golden(5日線が25日線の上)', price_technical.last_close=5541.0, price_technical.sma5=5453.8, price_technical.sma25=5401.6"
+        },
+        {
+          "point": "市場全体はTOPIXが25日移動平均線を上回り、直近5日間も上昇していることから、上昇トレンドにあります。",
+          "evidence": "macro.market_regime.market_regime='uptrend', macro.market_regime.topix_close_vs_sma25='above'"
+        },
+        {
+          "point": "MACDヒストグラムがマイナスであるため、短期的な上昇モメンタムの勢いは鈍化している可能性があります。",
+          "evidence": "price_technical.macd_histogram=-13.73"
+        },
+        {
+          "point": "直近の株価は前営業日に下落したものの、最新の営業日には反発して引けており、底堅さが見られます。",
+          "evidence": "price_technical.recent_5_days[3].change_pct=-2.02, price_technical.recent_5_days[4].change_pct=1.89"
+        }
+      ],
+      "cautions": [
+        "MACDヒストグラムがマイナスであることから、短期的な調整やモメンタムの弱まりには引き続き注意が必要です。",
+        "前夜の米国市場ではS&P500が下落し、関連する資本財セクターETFも軟調であったため、当日の寄り付きが弱含む可能性があります。",
+        "VIX指数が9.52%と大きく上昇しており、市場の不確実性や警戒感が高まっていることに留意してください。"
+      ],
+      "key_levels": {
+        "support": 5401.6,
+        "resistance": 5830.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "日立製作所は、堅調な業績トレンドと積極的な自己株式取得を示していますが、バリュエーションは割高感があり、マクロ経済環境も不透明であるため、現時点では中立的なスタンスが妥当と考えられます。",
+      "points": [
+        {
+          "point": "日立製作所は、2027年3月期第1四半期において売上収益、調整後営業利益ともに前年同期比で増加し、堅調な業績推移を示しています。また、2027年3月期の通期連結業績予想も上方修正しており、今後の成長期待がうかがえます。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.earnings_trend.quarterly, fundamentals.recent_important_disclosures[1].summary"
+        },
+        {
+          "point": "自己株式の取得を継続的に実施しており、株主還元への積極的な姿勢が見られます。これは、企業価値向上への期待を支える要因となり得ます。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary, fundamentals.recent_important_disclosures[1].summary"
+        },
+        {
+          "point": "直近のニュースでは、設備保全向けフィジカルAIの開発や、データセンター・産業分野への電源ソリューション提供に向けた協業など、技術革新や事業拡大に向けた取り組みが報じられています。これらの取り組みは、中長期的な成長ドライバーとなる可能性があります。",
+          "evidence": "news.headlines[1].title, news.headlines[2].title, news.headlines[6].title"
+        },
+        {
+          "point": "直近のPMIデータでは、製造業、サービス業ともに50を上回っており、景気拡大を示唆しています。しかし、日銀短観では非製造業の先行きDIが低下しており、景気の見通しには不透明感も残ります。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value, macro.japan_pmi.services.latest_value, macro.boj.tankan.di.large_nonmanufacturing.forecast_di"
+        }
+      ],
+      "cautions": [
+        "バリュエーション（PER 31.351倍、PBR 3.78倍）は過去のトレンドや同業他社と比較して割高感があり、株価の上昇余地が限定される可能性があります。",
+        "次回決算発表日（2026年10月29日）が近づいており、発表内容によっては株価が大きく変動するリスクがあります。",
+        "米国S&P500指数の下落やVIX指数の上昇など、国際的な市場の不安定さが増している兆候が見られます。これは国内市場にも影響を与える可能性があります。",
+        "日銀金融政策決定会合（2026年9月17日〜18日）が予定されており、金融政策の動向が金利や市場心理に影響を与える可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-26",
+    "days_ago": 7,
+    "confidence": 72,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)日立製作所【6501】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE55YktlVWgwaFo0cHlWS0xqWDhtN2tQUGd1RVlXVkxFam82U1RnVy01V1hfYzgwcXc5cUE3NTFkMDRPN3p2WkNDWHA4UWZXQTdndmFsNDhMUUw1dGVYVS1r?oc=5",
+        "published": "Tue, 01 Sep 2026 06:56:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "南極観測隊の命綱「発電機」を死守せよ 極限環境で躍動する日立のOTナレッジ：デジタル：日立 - Hitachi Global",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNdGpBWFRVU1FGUXkzdVJ0UHRMSEJIeGVpX3p6VjVpNlZLcUVPakRxazMta0l5QlhENFlLd2N2b1lNaUFJdTRLVnhHM3RNb2tUMk9LaS1TVXF0RXpMRkRmb0R1NjNtV3V6Mzl3Tm9DbmRocFhXY2dHQ3FtVDlGY3J3WmE3TUZrQUR0aHRV?oc=5",
+        "published": "Tue, 01 Sep 2026 02:37:18 GMT",
+        "publisher": "Hitachi Global"
+      },
+      {
+        "title": "日立製作所が設備保全向けフィジカルAIを開発、音や振動を自然言語で解析し異常診断を効率化 - ロボスタ",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1Xc2RYQzJrMFZTd0sxb2wwVjFfeWdWVU9GbHZYcjM4UFNPMVF5amhWcUFSVGx0dXZ1TWdvVUY5SHo3N1NjRzVTTEhhb2RkUEtMaksxdDZEaGM2WDRPTnJmMzIwa2w?oc=5",
+        "published": "Tue, 01 Sep 2026 07:40:03 GMT",
+        "publisher": "ロボスタ"
+      },
+      {
+        "title": "日立の危機感 徳永流 フィジカルAI総力戦 - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE96VC0wU2lrWTctM0tsOTBXUXYtS2Z4QUdHOTJ4V1ZBVnl2al9yTW5QYXhhLXBrb01Nb1E5MTFJYUQ5LWIzWUJNOUdWejZhSGhXZHBjQW9fRDl4T2Q0Q0VfbFl4Smo?oc=5",
+        "published": "Tue, 01 Sep 2026 03:50:23 GMT",
+        "publisher": "日経ビジネス電子版"
+      },
+      {
+        "title": "日立製作所が設備保全向けフィジカルAIを開発、音や振動を自然言語で解析し異常診断を効率化 1枚目の写真・画像 - ロボスタ",
+        "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5yUnI4U0NCWjllaFhSUE5QTURyZGdTUFZIU2p6SmFPOW1wS0Exd2MySlhoZTFKMTdWOEhTRTRLSGJTcDBTT0VYc1BicWxUWFN1OGZnTkNraW9zZ0tCbGh6OW8zU2ZYT0NoWXJlTl9fQjVNY2s?oc=5",
+        "published": "Tue, 01 Sep 2026 07:40:03 GMT",
+        "publisher": "ロボスタ"
+      },
+      {
+        "title": "診断業務を効率化する設備保全向けフィジカルAI技術を開発 - 時事ドットコム",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5yODhBRjRaOGdLTVJ2a09oYzJKN3JuaHMySmQ1WHdCcnY0RmdORlNNZnRvOEFUa2wxYTdYc0owUUZHc0tKRWtkbVpNZ0RjNWlvRUdPdGFIQXE1Q3NwZ2N2TXBKa1ZFemUxNlhN?oc=5",
+        "published": "Tue, 01 Sep 2026 18:10:00 GMT",
+        "publisher": "時事ドットコム"
+      },
+      {
+        "title": "日立、データセンターや産業分野へのオンサイト型電源ソリューション提供に向けBloom Energyと協業 - クラウド Watch",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9tTjY2Wlp6LTQxUVhwMm9iSFJiNjM3eWVsRVl1bWgzaDVyc0kwSzktVk1Pcm5OZjFoYXh3TGtXVnI4SndVRDZGOGRvdHhSa2ZfWS1xelp3RUFidjZjSmdxWnJNNWJTSEk?oc=5",
+        "published": "Tue, 01 Sep 2026 04:28:00 GMT",
+        "publisher": "クラウド Watch"
+      },
+      {
+        "title": "日立レール、欧州企業買収で鉄道事業1兆円 「1万枚の設計書」が生んだ絆 - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE55TndxNWlZeE1hd0prMm1Nak85WTQwLXlJcjhhSW5QUzdDNGp3S0JLUGhzVTZYUjVqZGNJYm1taUs3VnRDOHJxeHBYaHU5dGZlRjJTQjE5Rm5rMjk3NGUzbEhGMXc1Ync?oc=5",
+        "published": "Tue, 01 Sep 2026 08:00:00 GMT",
+        "publisher": "日経ビジネス電子版"
+      },
+      {
+        "title": "日立、国内におけるオンサイト型電源ソリューションの提供に向けBloom Energyと協業開始 - cafe-dc.com",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQREliSGg2M0I4RTh1N2NIMXF6ZjN2OVdad0xRRVdxZHNLaWMwY1QwOTZfYV9MT0o3WExEZTE2dElIMHlOWGo3SlRUVTFLWVNPdTdIRzdsSkZ4QzM2S3Q2Yi15dmYyQjVKT0dmR0t2bWh4enlpZHFKRXFCR0hjeFhxaFZSUG1xSnUyYWY0WEdvbnJwMXdWZjUyeWpGakZJNjUtWnUzaTRNeFJLZU9vZXZTWmVFT1Z4N1R4?oc=5",
+        "published": "Tue, 01 Sep 2026 05:39:55 GMT",
+        "publisher": "cafe-dc.com"
+      },
+      {
+        "title": "都市対抗野球2025 日立製作所応援 キッズチアによるチャンステーマ【ユーロビート】（星に願いを→ミッキーマウスマーチ）2025.9.2 Atlético Madrid - Celta De Vigo (cwdyPUnpC7) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE02dGltdGxPR0x1SnNBRVJXNER1Y2RVaE81WFdVakRRalJfQkRqTVZRRm1LaDNyZTdyTXpET2FwNVlNajM5YnFnWlBBU0hxM2kzUHVHSmNHeDUxRjQ?oc=5",
+        "published": "Tue, 01 Sep 2026 02:19:13 GMT",
+        "publisher": "Mshale"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "個別決算における投資有価証券売却益(特別利益)の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260819523052.pdf",
+        "date": "2026-08-19 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804508474.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "（訂正）2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503298.pdf",
+        "date": "2026-07-30 13:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501771.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501801.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(モビリティ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566288.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(コネクティブインダストリーズ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566292.pdf",
+        "date": "2026-06-09 15:30:00"
+      }
+    ]
+  }
+}

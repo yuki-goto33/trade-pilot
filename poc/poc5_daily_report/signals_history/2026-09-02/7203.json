@@ -1,0 +1,202 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-09-02T08:53:59+09:00",
+  "price_as_of": "2026-09-01",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の評価がneutral（strength=55）にとどまり、通期減益計画や直近カタリスト不足から買いの必須条件（bullishかつstrength 70以上）を満たしていません。",
+        "evidence": "fundamental_view.stance=neutral (strength=55), fundamental_view.points[0], fundamental_view.points[2]"
+      },
+      {
+        "reason": "テクニカル面はゴールデンクロス等で強気（bullish/strength=80）ですが、期間高値3269.0円に接近しRSIも67.7と過熱気味であり、材料出尽くしや高値掴みリスクを避けるため様子見が妥当と判断しました。",
+        "evidence": "technical_view.stance=bullish (strength=80), technical_view.cautions[0], reference.period_high=3269.0"
+      }
+    ],
+    "risks": [
+      "2026年9月17日〜18日の日銀金融政策決定会合に伴う為替の円高シフトによる業績下振れ懸念",
+      "期間高値接近に伴う目先の利益確定売りや、外部環境（米国消費セクター軟調・VIX上昇）による調整リスク",
+      "次回決算発表（2026年11月5日）に向けた本業採算悪化の継続リスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 50,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の評価がneutral（strength=55）にとどまり、通期減益計画や直近カタリスト不足から買いの必須条件（bullishかつstrength 70以上）を満たしていません。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=55), fundamental_view.points[0], fundamental_view.points[2]\"\n  },\n  {\n   \"reason\": \"テクニカル面はゴールデンクロス等で強気（bullish/strength=80）ですが、期間高値3269.0円に接近しRSIも67.7と過熱気味であり、材料出尽くしや高値掴みリスクを避けるため様子見が妥当と判断しました。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=80), technical_view.cautions[0], reference.period_high=3269.0\"\n  }\n ],\n \"risks\": [\n  \"2026年9月17日〜18日の日銀金融政策決定会合に伴う為替の円高シフトによる業績下振れ懸念\",\n  \"期間高値接近に伴う目先の利益確定売りや、外部環境（米国消費セクター軟調・VIX上昇）による調整リスク\",\n  \"次回決算発表（2026年11月5日）に向けた本業採算悪化の継続リスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 80,
+      "summary": "移動平均線のゴールデンクロスに加え、MACDの拡大や対TOPIXでもアウトパフォームする中期上昇トレンドが継続しており、短期・中期ともに上値追いの展開が期待されます。",
+      "points": [
+        {
+          "point": "株価は5日線・25日線を上回り、5日線が25日線を上回るゴールデンクロスを維持している。",
+          "evidence": "price_technical.last_close=3243.0, sma5=3132.4, sma25=3048.54, sma5_vs_sma25=golden"
+        },
+        {
+          "point": "MACDがシグナルを上回りヒストグラムが拡大、直近4営業日連続で上昇しモメンタムが強い。",
+          "evidence": "price_technical.macd=48.07, macd_signal=31.41, macd_histogram=16.66, recent_5_days=[2026-08-27: 3077.0, 2026-08-28: 3116.0, 2026-08-31: 3156.0, 2026-09-01: 3243.0]"
+        },
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともに大幅プラスであり、市場レジームも上昇トレンドにある。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=13.79, relative_to_topix_60d_pct=9.7, macro.market_regime.market_regime=uptrend"
+        }
+      ],
+      "cautions": [
+        "期間高値（3269.0円）接近とRSI14が67.7と買われすぎ水準に近づいており、目先の利食い売りに押される可能性がある。",
+        "前夜の米国市場で一般消費財セクターETF（XLY）が下落しVIXが上昇しているため、外部環境の急変による波乱に注意が必要。"
+      ],
+      "key_levels": {
+        "support": 3132.4,
+        "resistance": 3269.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "PER約9.2倍・PBR約1.03倍とバリュエーション面の割安感や円安の追い風はあるものの、通期営業減益見通しが継続しており、株価を大きく押し上げる新規カタリストに乏しいことから中立と判断します。",
+      "points": [
+        {
+          "point": "2027年3月期通期計画は営業利益3兆4,000億円（前期比9.7%減）と減益見通しであり、年次業績トレンドでも営業利益の減少傾向が続いています。",
+          "evidence": "fundamentals.recent_important_disclosures[2026-08-04], fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "為替相場が1ドル160円台と円安水準で推移しており、第1四半期純利益が前年同期比75.6%増となるなど為替要因が収益を下支えしています。",
+          "evidence": "macro.indices[ドル円=160.17], fundamentals.recent_important_disclosures[2026-08-04]"
+        },
+        {
+          "point": "予想PER10.0倍・PBR1.03倍・配当利回り3.08%（年間5円増配計画）に加え自社株取得枠設定など下値支持材料はあるものの、直近2週間に新たな業績押し上げカタリストは確認されません。",
+          "evidence": "fundamentals.valuation, fundamentals.recent_important_disclosures[2026-08-04], disclosures.items"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日〜18日に日銀金融政策決定会合が控えており、金融政策修正に伴う為替の円高シフトが業績・株価の下振れ要因となるリスクがあります。",
+        "資材費や諸経費の増加による本業（営業利益ベース）の採算悪化が想定以上に拡大する懸念があります。",
+        "次回決算発表日（2026年11月5日）にかけて、通期業績進捗や為替前提の修正動向を注視する必要があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "「私はお金が大好き」トヨタ社長の自己紹介が〈思わず記憶に残る〉納得の理由 - diamond.jp",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5IOUZjVHV0SWVYbDlUWDFDcjVtYWh5WFhZV3FaWHlpQi1DYkRYdGJjZjRUc2pvY29DTXEyak5kWG1BNG1ZM2F3RUhCRHPSAU9BVV95cUxPbDJaeG9JbllrNE1uemtRRzVqLWp0MTVwTVlyc1dJODlGdG12UUx5MUxQbmpCVldFb3liQzlIMFdMQ2NOVm1OdlRINXV0RkZj?oc=5",
+        "published": "Tue, 01 Sep 2026 21:00:00 GMT",
+        "publisher": "diamond.jp"
+      },
+      {
+        "title": "トヨタ自動車(株)【7203】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ZZGdsaERPWFJGS2hIekZwall6QzFzWndlMk5uc3J5ci1MX0tyUmRLYVlVTFJ4QTFLSGQxQ1M2TXgtS0RRb2RTX1pHMW9FWEw4T2hJS1lSdENuNUhlT0U0?oc=5",
+        "published": "Tue, 01 Sep 2026 02:52:30 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "新型「レクサスNX」がハイブリッドシステムを刷新、PHEVのEV走行距離は140kmに：電動化（1/2 ページ） - MONOist",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBMUTMwZXlxeTc3blo5clpKNmdQal9maWllUG14ZWliazhEY0RlY1RjWWQ1WVpFYWtwVzFHN3R2WVoxcHZINVRMa2Jad2J2aHB0RDV4Q0VZRXVTSkVxbExfSEFYdlBDZ2xqYy1GRXdvQQ?oc=5",
+        "published": "Tue, 01 Sep 2026 21:15:00 GMT",
+        "publisher": "MONOist"
+      },
+      {
+        "title": "「未来ですね！小さいときに描いていた漫画とかアニメに近づいてきましたね」トヨタ自動車の実験都市「ウーブン・シティ」で静岡県民を対象とした見学が始まる 9月末まで1日80人限定＝静岡・裾野市 - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5sVzRrUGlBb3VhX2RWbjk3NGV1QVZpaG1xbGZtMXBfanBSeFl0dVFBV1AwNWxPMEtubEdPci1RbzdNd1BwbjhiR21QN2JjSlpYdXRuM3h1elI5STZlYnJUaWpfZ0lpejA?oc=5",
+        "published": "Tue, 01 Sep 2026 11:57:00 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "NX - トヨタ自動車株式会社 公式企業サイト",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9oeW1LN1NwaWp3ZUdCaG40LV91QUd0bjlDS1FOa2xMcVdVTmVnUEpoVG9POEZWU1ZkLVRWUlBaS1JHcE52cmNwbENJNnFDSGZELVA5d0g0UnYyMkU?oc=5",
+        "published": "Tue, 01 Sep 2026 08:01:49 GMT",
+        "publisher": "トヨタ自動車株式会社 公式企業サイト"
+      },
+      {
+        "title": "レクサス新型「NX」世界初公開、PHEVはEV航続140km超へ 26年末から順次投入 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE83ZW9BcDdFQWpVUVdxXzRMM0IwRVE3emdZVmFqdHU0SkdYT3dUamVpMkJvVURMb0MySDAtQmVYMmN2S1FoeVlRTFZUdTQ0Y3BndGMtVmpYSEo1eHRRdmJ4VkxQSExQX0U4RG0tYVNHRW9mSlMx?oc=5",
+        "published": "Tue, 01 Sep 2026 23:25:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "トヨタ自動車陸上長距離部のチーム愛称が「LEGACIA」に決定！ 新たなロゴも発表 - 月刊陸上競技",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE53M3hSakVZT3JfNVNsbDFhc01yeUdacUtzbkwyLWpnbVpFZU1aVmZxQWdDQmZKdHFoN1VsdVNza0VFTnVhMU90TFVtWjVrUnVUMVcyZ29JdWVMZw?oc=5",
+        "published": "Tue, 01 Sep 2026 03:40:06 GMT",
+        "publisher": "月刊陸上競技"
+      },
+      {
+        "title": "組合員との対話が軸 トヨタ労組が定期大会 - 時事ドットコム",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQTnpEQk5IeGZBWjNvWnBNSVVVaTZFNnl0dWV0VXlweWxXMEtibEFaSExrb3BmY0haVkRMUUhSQ2FlaDdEWjVrN0gxS1hKNnhBQ1l5Qk1TMHd4TDdsbC1KcDc5ekNTbHhZTURFNGxhWnI0ZGtUdHRFZkF0bkpaZTBubA?oc=5",
+        "published": "Tue, 01 Sep 2026 10:55:00 GMT",
+        "publisher": "時事ドットコム"
+      },
+      {
+        "title": "トヨタ自動車、次世代自動運転「レベル2++」を2028年めどに市販化へ AIと独自の安全機構で事故削減へ - tokyonewsmedia.com",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5janl6bkpSZDhhT1dSSHZrQUZHUG9Kei14Y0g0VkRkSEZ5VXk1ejhvR3lkQWFFeUxBUVRxZy12aHphYTc3anZVV3dib1h0S1J4Tm5z?oc=5",
+        "published": "Tue, 01 Sep 2026 00:47:44 GMT",
+        "publisher": "tokyonewsmedia.com"
+      },
+      {
+        "title": "「未来ですね！小さいときに描いていた漫画とかアニメに近づいてきましたね」トヨタ自動車の実験都市「ウーブン・シティ」で静岡県民を対象とした見学が始まる 9月末まで1日80人限定＝静岡・裾野市 - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxONUFmXy1qWm90T0E3SHZxMzV2Sk5WSzZXdW1SaWV2aHRBWWlIOTYzSTdDMzZaLXlxTDVnYkd0TW9XUmlrR0Znck03S05mRVVLajNHMGJqZ1BqZEZxdjVQaU9faVM1bWluNmlmeGVmQkh5V0Y1U3BxazBoSjgySFNCa0ZKcjAwb2pDWGJuYUZLNmEtazVBelBhMEVfTUpWSkU5RF8teFNJbWFQd0dkRnN1dzRyd3NZZi1uZmdXcEI0MkpqdDdlLWRHNUF3azVQNTAteTBRR1BVMWgydG1Hd2ZobVUzczhHbkd2VlRxYWZwVm9zZjFXemc?oc=5",
+        "published": "Tue, 01 Sep 2026 10:06:00 GMT",
+        "publisher": "TBS NEWS DIG"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度の継続及び従業員に対する新たな株式交付制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507853.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507884.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503849.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "2027年3月期第１四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507860.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507846.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "役員人事に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572690.pdf",
+        "date": "2026-06-17 16:00:00"
+      }
+    ]
+  }
+}

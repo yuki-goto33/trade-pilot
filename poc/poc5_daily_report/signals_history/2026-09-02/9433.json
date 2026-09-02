@@ -1,0 +1,221 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-09-02T08:58:40+09:00",
+  "price_as_of": "2026-09-01",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-08-26）に同一銘柄で buy シグナルを発行しており、現在はその継続監視期間中であるため、新規のエントリーは抑制します。",
+        "evidence": "reference.recent_buy.date=2026-08-26"
+      },
+      {
+        "reason": "ファンダメンタルズ専門家の強気（strength 70）に対し、テクニカル専門家も既に強気（strength 85）に揃っており、材料が既に株価に織り込まれ始めている局面と判断されます。",
+        "evidence": "technical_view.stance=bullish (strength=85) / fundamental_view.strength=70"
+      },
+      {
+        "reason": "第1四半期の大幅増益や三菱商事との提携など強力なカタリストは存在するものの、テクニカルが中立から強気に変化したため、統合判断ルールに基づきホールドを維持します。",
+        "evidence": "fundamental_view.points[0]: 第1四半期営業利益21.1％増 / technical_view.points[0]: ゴールデンクロス発生"
+      }
+    ],
+    "risks": [
+      "2026-09-17から18日にかけての日銀金融政策決定会合に伴う、金利上昇および為替変動による市場全体のボラティリティ波及。",
+      "設定された3,000億円の自己株式取得枠が87%まで消化されており、将来的な需給サポート剥落による下押しリスク。",
+      "RSI14が60.6と過熱圏の目安である70に接近しており、目先の利益確定売りが強まる可能性。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内（2026-08-26）に同一銘柄で buy シグナルを発行しており、現在はその継続監視期間中であるため、新規のエントリーは抑制します。\",\n   \"evidence\": \"reference.recent_buy.date=2026-08-26\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ専門家の強気（strength 70）に対し、テクニカル専門家も既に強気（strength 85）に揃っており、材料が既に株価に織り込まれ始めている局面と判断されます。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=85) / fundamental_view.strength=70\"\n  },\n  {\n   \"reason\": \"第1四半期の大幅増益や三菱商事との提携など強力なカタリストは存在するものの、テクニカルが中立から強気に変化したため、統合判断ルールに基づきホールドを維持します。\",\n   \"evidence\": \"fundamental_view.points[0]: 第1四半期営業利益21.1％増 / technical_view.points[0]: ゴールデンクロス発生\"\n  }\n ],\n \"risks\": [\n  \"2026-09-17から18日にかけての日銀金融政策決定会合に伴う、金利上昇および為替変動による市場全体のボラティリティ波及。\",\n  \"設定された3,000億円の自己株式取得枠が87%まで消化されており、将来的な需給サポート剥落による下押しリスク。\",\n  \"RSI14が60.6と過熱圏の目安である70に接近しており、目先の利益確定売りが強まる可能性。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 85,
+      "summary": "主要な移動平均線のゴールデンクロスが成立し、MACDやRSIも強い上昇モメンタムを示唆しています。中期トレンドも市場をアウトパフォームしており、強気の見通しです。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日移動平均線を上抜けるゴールデンクロスが発生し、直近3営業日連続で株価が続伸しています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden\", price_technical.recent_5_days"
+        },
+        {
+          "point": "MACDがシグナルを大きく上回って推移しており（ヒストグラム13.19）、上昇トレンドの勢いが加速しています。",
+          "evidence": "price_technical.macd=12.7, price_technical.macd_histogram=13.19"
+        },
+        {
+          "point": "60営業日騰落率が+13.41%、対TOPIX相対騰落率が+9.32%と、中期的なトレンドが非常に強く、市場全体に対しても優位性があります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=13.41, price_technical.trend_60d.relative_to_topix_60d_pct=9.32"
+        },
+        {
+          "point": "前夜の米国市場でADRが1.08%上昇しており、国内市場の寄り付きにおいてもプラスのモメンタムが期待されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=1.08"
+        }
+      ],
+      "cautions": [
+        "VIX指数が前夜比で9.52%急上昇しており、マクロ環境のボラティリティ高まりが日本市場全体の重石となるリスクがあります。",
+        "ADRの上昇分が寄り付き価格に織り込まれた後、直近の上昇に対する利益確定売りが出る可能性があります。",
+        "RSI14が60.6と過熱圏（70以上）に近づいており、目先の上値余地が限定的になる懸念があります。"
+      ],
+      "key_levels": {
+        "support": 2908.64,
+        "resistance": 3121.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "第1四半期の純利益が前年同期比22.1％増と極めて好調な滑り出しを見せており、通期予想に対する進捗が良好です。直近では三菱商事とのリテールメディア事業やAIによる品質改善など、通信以外の収益基盤強化に繋がる新規材料が相次いでおり、株主還元策（自己株式取得）の継続も下値を支える要因となります。",
+      "points": [
+        {
+          "point": "2027年3月期第1四半期決算が大幅な増収増益。モバイル収入の回復に加え、金融やデータセンター等の注力領域が牽引し、営業利益は前年同期比21.1％増を記録しています。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary (2026-08-07)"
+        },
+        {
+          "point": "三菱商事との提携によるリテールメディア事業の始動や、京セラ本社での「オフィスローソン」展開など、ローソンを軸とした非通信分野の事業拡大が具体化しています。",
+          "evidence": "news.headlines[4], news.headlines[9] (2026-09-01)"
+        },
+        {
+          "point": "大規模な自己株式取得枠（3,000億円）を継続しており、直近（8月1日〜6日）でも約23.7億円の買付を実施。累計で枠の約87％を消化していますが、需給面での強力なサポートが続いています。",
+          "evidence": "fundamentals.recent_important_disclosures[1].summary (2026-08-07)"
+        },
+        {
+          "point": "国内のサービス業PMIが52.3と拡大傾向にあり、同社の主軸である国内サービス需要にとって良好なマクロ環境が示唆されています。",
+          "evidence": "macro.japan_pmi.services.latest_value=52.3"
+        }
+      ],
+      "cautions": [
+        "日銀の金融政策決定会合（2026-09-17〜18）が15日後に控えており、日本の10年金利が2.943%と高水準にある中、利上げ観測による株価変動リスクがあります。",
+        "自己株式取得枠（3,000億円）の進捗率が87%に達しており、買付完了後の需給サポート剥落が懸念されます。",
+        "forward_peが1290.558と異常値を示しており、入力データ上の計算上の乖離または一時的な利益急減リスクを精査する必要があります。"
+      ],
+      "key_levels": {
+        "support": 2853.0,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-26",
+    "days_ago": 7,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "自律運用急ぐKDDI AIで障害対応・品質改善、その先へ - ビジネスネットワーク",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9RbGV2bkgwTDVFdXRyMV9zLTE5WW1VaG5PUERxUEt3VW15MzZrSE40eW05NFllQVJUSnh2MGJaRnZTSHVNbEVfaDhqVUQ1eHE4V2ZZ?oc=5",
+        "published": "Tue, 01 Sep 2026 22:29:30 GMT",
+        "publisher": "ビジネスネットワーク"
+      },
+      {
+        "title": "グループ最大級のビジネスイベント「KDDI SUMMIT 2026」を開催 - KDDI ニュースルーム",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1ON1dJMUl4M2dGNEZPTC1sWF9fWGEtcXlVaFFDU21hdHAxejFITi1vQUR4RENaU1IySzNYMHQ2Wi0wM2ZkOTZJTXRXVmlpOEstTGNlZXJOV01KVjE1dS1QQUg0YmFuUWdneEZpbg?oc=5",
+        "published": "Tue, 01 Sep 2026 01:00:00 GMT",
+        "publisher": "KDDI ニュースルーム"
+      },
+      {
+        "title": "食堂に「オフィスローソン」登場 KDDI、京セラ本社に開設 レジなし、アプリで決済 - 京都新聞デジタル",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBLVDM2d3pIcXhGMG5UVnZlT1NrQlN3aFM4eEpTRkhBMnBxTFdfbW9nUjZ2QlB0Y1BvTS1RMXROZFl4dTlNY0tJZHdrWGlJeDRmWUxzSzJtRjlteUU?oc=5",
+        "published": "Tue, 01 Sep 2026 21:00:00 GMT",
+        "publisher": "京都新聞デジタル"
+      },
+      {
+        "title": "KDDI、家族割の証明書類に「ファミリーシップ制度」証明書を追加 - ケータイ Watch",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9OSDV2UW40OWkzODI1T285ZnB1b0VRSl9GcWFncWVmVmZwLW9oVkJpbEJhQ0JfU0NSeDRZc0k1SEVoQXprckxLWGhNX3F0NEpRN1VNMVVjZkhuYjJoN3MyM1dydU4wNEE?oc=5",
+        "published": "Tue, 01 Sep 2026 08:46:50 GMT",
+        "publisher": "ケータイ Watch"
+      },
+      {
+        "title": "KDDIとローソン、京セラ本社に無人コンビニ「オフィスローソン」オープン 食事・軽食をフロア別に展開 - ampmedia.jp",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBoZUFWSExwMXFhaVdHMzQ4RHUyQmQ0c05XWWhnWUR5Y2o5U3p4b2hFQjZaODROdnNuX21yZHEtaVhxMW1ZT2l2NGplQXZtcTd4MmJ5VWI5bXcyTUJOZUZBelZsSQ?oc=5",
+        "published": "Tue, 01 Sep 2026 09:09:50 GMT",
+        "publisher": "ampmedia.jp"
+      },
+      {
+        "title": "京セラ本社に「オフィスローソン」が登場　KDDI社外では初の取り組み - ITmedia Mobile - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE05eEhtSEFZRzRJaThBdWJjRTk0cXhvYkpoNFJTN1ZaSno0V3pMVnBkYm5JZDFyZ0tPbklHYUFkLUxXZTBoSEV3TWlGR0hPTERxR3k5TWF1WGNsM2Z0LXY0amVGd0hTaWpD0gFoQVVfeXFMTTl4SG1IQVlHNElpOEF1YmNFOTRxeG9iSmg0UlM3VlpKejRXekxWcGRibklkMXJnS09uSUdhQWQtTFdlMGhIRXdNaUZHSE9MRHFHeTlNYXVYY2wzZnQtdjRqZUZ3SFNpakM?oc=5",
+        "published": "Tue, 01 Sep 2026 05:00:00 GMT",
+        "publisher": "ITmedia"
+      },
+      {
+        "title": "AI前提社会の最新テクノロジーを披露、「KDDI SUMMIT 2026」10月末に開催 - マイナビニュース",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5OcEd0WTBqOUVLMloydl9pY1d5X1F6MHlHQXk5ZG80bHZCbjdCRzRpMWxmQmMxVmJKaXY4T1o4bFpyRl8tcjJVdzdYZnlsTGI5dzRqVHk0SjdSblNz?oc=5",
+        "published": "Tue, 01 Sep 2026 12:13:23 GMT",
+        "publisher": "マイナビニュース"
+      },
+      {
+        "title": "ローソン×KDDI／「オフィスローソン」を京セラ本社にオープン、他企業に初出店 - 流通ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBxcWtFUXNwVG5CSHRGY3picnJvY1pkdElOc0Y5aEo3cWctdExZWHlnUkROeWNVUDFUUFljUU54YmJfY0VWOWNzcGptVFNjZENaTDhOXw?oc=5",
+        "published": "Tue, 01 Sep 2026 06:21:00 GMT",
+        "publisher": "流通ニュース"
+      },
+      {
+        "title": "KDDI、家族割の証明書類に「ファミリーシップ制度」証明書を追加 (ケータイ Watch) - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNN1dIMDFLVVlKNi1ZSGpmY0FLTlFVOWtvSkYyc2hiRXJZX0RCOWZNRmluZnhtRDdsSlNQMjRES2R4eVZHbVV5aldObDNvNGt6VXk5VzRBUmhJa05CbDFDT2c5dDBheDU5REV4bDlhVGFITDhZZzZJLWc4dGtnNGhfR29NV1dSX0tzNGRBR0JB?oc=5",
+        "published": "Tue, 01 Sep 2026 09:16:00 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "三菱商事とKDDI、コンテンツ配信サービス「ローソンビジョン」を活用したリテールメディア事業始動 - KDDI ニュースルーム",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5qdW5CS2NlaUFkdkQ5d2x2N1cybjM4UHpJbm9KcDZENHZVeW80cG5kdk5aYnRPMWNFWWs3WjdsTl94cFAzT2pXenRvUGg4bDAwU2M3aDdaSENQYW9jdzlqR1VVVk45VVZkeVdBYlg3SQ?oc=5",
+        "published": "Tue, 01 Sep 2026 09:36:09 GMT",
+        "publisher": "KDDI ニュースルーム"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      }
+    ]
+  }
+}
