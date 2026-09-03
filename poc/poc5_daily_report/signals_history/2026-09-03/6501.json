@@ -1,0 +1,234 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-09-03T09:18:46+09:00",
+  "price_as_of": "2026-09-02",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近（8日前）に買シグナルを発出しており、その継続監視期間であるため、新たな買シグナルは出さずホールドと判断します。",
+        "evidence": "reference.recent_buy.date=2026-08-26"
+      },
+      {
+        "reason": "ファンダメンタルズは年次の業績が大幅な増収増益トレンドにあり、自己株式取得や宇宙事業再参入などの新規材料も豊富で、極めて強気な見解です。",
+        "evidence": "fundamental_view.stance=bullish (strength=80), fundamental_view.points[0-5]"
+      },
+      {
+        "reason": "一方、テクニカルは直近終値が主要移動平均線を割り込み、MACDも悪化しており、短期的な下落圧力が継続しているため、慎重な姿勢が必要です。",
+        "evidence": "technical_view.stance=bearish (strength=70), technical_view.points[0-2]"
+      }
+    ],
+    "risks": [
+      "2026年10月29日に次回決算発表を控えており、内容次第では株価が大きく変動する可能性があります。",
+      "2026年9月17日〜18日に日銀金融政策決定会合が開催予定であり、金融政策の変更が市場全体に影響を及ぼす可能性があります。",
+      "市場全体がdowntrendと判定されており、個別銘柄の好材料も相殺される可能性があります。",
+      "現在のPER 30.211倍、PBR 3.64倍といった高めのバリュエーションは、期待される成長が実現しない場合やネガティブ材料が出た場合に調整リスクとなります。",
+      "テクニカル指標は短期的な下落トレンドを示唆しており、さらなる調整が進む可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近（8日前）に買シグナルを発出しており、その継続監視期間であるため、新たな買シグナルは出さずホールドと判断します。\",\n   \"evidence\": \"reference.recent_buy.date=2026-08-26\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは年次の業績が大幅な増収増益トレンドにあり、自己株式取得や宇宙事業再参入などの新規材料も豊富で、極めて強気な見解です。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=80), fundamental_view.points[0-5]\"\n  },\n  {\n   \"reason\": \"一方、テクニカルは直近終値が主要移動平均線を割り込み、MACDも悪化しており、短期的な下落圧力が継続しているため、慎重な姿勢が必要です。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=70), technical_view.points[0-2]\"\n  }\n ],\n \"risks\": [\n  \"2026年10月29日に次回決算発表を控えており、内容次第では株価が大きく変動する可能性があります。\",\n  \"2026年9月17日〜18日に日銀金融政策決定会合が開催予定であり、金融政策の変更が市場全体に影響を及ぼす可能性があります。\",\n  \"市場全体がdowntrendと判定されており、個別銘柄の好材料も相殺される可能性があります。\",\n  \"現在のPER 30.211倍、PBR 3.64倍といった高めのバリュエーションは、期待される成長が実現しない場合やネガティブ材料が出た場合に調整リスクとなります。\",\n  \"テクニカル指標は短期的な下落トレンドを示唆しており、さらなる調整が進む可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "直近で大きく下落し、主要移動平均線を割り込んだほか、MACDも悪化しており、市場全体の地合いも下落トレンドにあるため、短期的な調整が続く可能性が高いと見られます。",
+      "points": [
+        {
+          "point": "直近終値が5日移動平均線および25日移動平均線を下回ったことで、短期的な上昇モメンタムが失われています。",
+          "evidence": "price_technical.last_close=5335.0, price_technical.sma5=5459.4, price_technical.sma25=5419.4"
+        },
+        {
+          "point": "MACDヒストグラムがマイナス圏で推移しており、MACDがシグナルを下回っていることから、売り圧力が強まっている状況です。",
+          "evidence": "price_technical.macd_histogram=-21.19, price_technical.macd=72.55, price_technical.macd_signal=93.74"
+        },
+        {
+          "point": "直近5営業日の最終日に-3.72%と大幅に下落しており、短期的な下落圧力が顕著です。",
+          "evidence": "price_technical.recent_5_days[4].change_pct=-3.72"
+        },
+        {
+          "point": "TOPIXが25日移動平均線を下回っており、市場全体がdowntrendと判定されているため、銘柄にとって逆風となる可能性があります。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\", macro.market_regime.topix_close_vs_sma25=\"below\""
+        },
+        {
+          "point": "前夜のNY市場では、日立製作所のADRおよび資本財セクターETFがともに下落しており、翌日の取引にネガティブな影響を与える可能性があります。",
+          "evidence": "us_overnight.adr.change_1d_pct=-0.38, us_overnight.sector_proxy.change_1d_pct=-1.37"
+        }
+      ],
+      "cautions": [
+        "60日騰落率はプラスであり、TOPIXをアウトパフォームしているため、中期的な上昇トレンドは継続している可能性があります。",
+        "RSI14が53.2と中立圏にあるため、現状では明確な売られすぎ水準には至っていません。",
+        "前夜の米国市場の動きは、当日の寄り付き価格にある程度織り込まれる可能性があります。",
+        "5日線が25日線を上回るゴールデンクロス状態は維持されており、短期的な反発の兆しがあれば再度上昇に転じる可能性もあります。"
+      ],
+      "key_levels": {
+        "support": 4762.0,
+        "resistance": 5459.4
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 80,
+      "summary": "日立製作所は、堅調な業績成長トレンドと、自己株式取得、宇宙事業再参入、事業ポートフォリオ見直しといった複数のポジティブな新規材料があり、短期から中期の株価上昇が期待されます。",
+      "points": [
+        {
+          "point": "年次の業績が大幅な増収増益トレンドにあり、特に直近の2026年3月期は高い成長率を達成しています。",
+          "evidence": "fundamentals.earnings_trend.annual[0].revenue_oku_jpy=105868, fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=11993, fundamentals.earnings_trend.annual[0].net_income_oku_jpy=8024, fundamentals.earnings_trend.annual[0].diluted_eps=176.63 vs fundamentals.earnings_trend.annual[1].revenue_oku_jpy=97834, fundamentals.earnings_trend.annual[1].operating_income_oku_jpy=9716, fundamentals.earnings_trend.annual[1].net_income_oku_jpy=6157, fundamentals.earnings_trend.annual[1].diluted_eps=133.72"
+        },
+        {
+          "point": "直近の適時開示において自己株式の取得状況が公表されており、株主還元策が進行していることは株価を下支えする材料です。",
+          "evidence": "disclosures.items[0].title='自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)', disclosures.items[0].date='2026-09-02 15:30:00'"
+        },
+        {
+          "point": "新規事業として25年ぶりの宇宙事業再参入が報じられており、今後の成長ドライバーとなる可能性があり、ポジティブな材料です。",
+          "evidence": "news.headlines[3].title='日立が25年ぶりの宇宙事業再参入へ、「構造化電波」で衛星地球観測を革新', news.headlines[3].published='Wed, 02 Sep 2026 21:15:00 GMT'"
+        },
+        {
+          "point": "日本国内のマクロ経済指標であるPMI（製造業、サービス業、複合）がいずれも50を超える水準で推移しており、景気拡大基調が日立製作所の幅広い事業活動にとって追い風となります。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9, macro.japan_pmi.services.latest_value=52.3, macro.japan_pmi.composite.latest_value=53.4 (all for 2026-08)"
+        },
+        {
+          "point": "日立建機の保有ゼロ化に関するニュースは、事業ポートフォリオの再構築（選択と集中）を示唆しており、将来的な事業効率性向上への期待が持てます。",
+          "evidence": "news.headlines[0].title='日立製作所、日立建機保有ゼロに LINEアプリ生みの親は出前館を買い増し 2026年8月の大量保有報告書', news.headlines[0].published='Wed, 02 Sep 2026 21:30:00 GMT'"
+        }
+      ],
+      "cautions": [
+        "2026年10月29日に次回決算発表を控えており、内容次第では株価が変動するリスクがあります。",
+        "2026年9月17日〜18日に日銀金融政策決定会合が開催予定であり、金融政策の変更があった場合、市場全体や特定業種に影響を及ぼす可能性があります。",
+        "現在のPER 30.211倍、PBR 3.64倍といった高めのバリュエーションは、期待される成長が実現しない場合や、ネガティブな材料が出た場合に調整リスクとなる可能性があります。",
+        "日本公庫・中小企業景況調査で販売価格DIと仕入価格DIの差が大きく、中小企業における価格転嫁が不十分な状況は、サプライチェーン全体でのコスト圧力として日立製作所にも影響を及ぼす可能性があります。",
+        "市場全体の地合いはTOPIXがdowntrendと判定されており、個別銘柄に好材料があっても上値が抑制される可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-26",
+    "days_ago": 8,
+    "confidence": 72,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "日立製作所、日立建機保有ゼロに LINEアプリ生みの親は出前館を買い増し 2026年8月の大量保有報告書 - M＆A Online",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBlejVVMEN0ZEJaRWdoUW1QcFR5TjVoWFdFNDBaMk05aDlqREJCbGpfZ3NnNGx6SjcyVGM2cy0zTkNvRFdDN2I5TWE2RWtDNVFONm5JTjIwMnlucHFEalBJ?oc=5",
+        "published": "Wed, 02 Sep 2026 21:30:00 GMT",
+        "publisher": "M＆A Online"
+      },
+      {
+        "title": "日立製作所[6501]：自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得) 2026年9月2日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1sZTB0bTR5YktOVHMzaXZmTUZ4WXRsY0hlTVRuNk1wa0RPWFBJb0lwN1RKc0wwOWp2SkJzTW5QQnFiR3RyaHZDS2RNcU5tWGg3VWhLNDRZOGJMQmM5S1R0VFdMRGMwTGV5amc?oc=5",
+        "published": "Wed, 02 Sep 2026 06:30:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "日立製作所、日立建機保有ゼロに LINEアプリ生みの親は出前館を買い増し 2026年8月の大量保有報告書 - UQライフ",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNN3pFUUR0WXFLQUJtOF9CMzJwM2Q5cUwwcDJNVzN4eXBzSWYxWXVOMDIwZjl6V2QwR0dsRzJ2bGU0Y2RBaHdTaDJ6OUpiWndnSDNUNWZDVS01Y0hnemJ4RTVwVHUycThMaFlicDVQdEdmV0hLTkl3dXlrOGExaVhqUw?oc=5",
+        "published": "Wed, 02 Sep 2026 22:25:11 GMT",
+        "publisher": "UQライフ"
+      },
+      {
+        "title": "日立が25年ぶりの宇宙事業再参入へ、「構造化電波」で衛星地球観測を革新：宇宙開発（1/2 ページ） - monoist.itmedia.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5sZVYyZ1VDMVNuQXZ1Q243ZnhRZWU5eVV2LU9wS2E4SElXenl2bC1YTWM4emwwQU1RUkhhX0plM29aa0laNkhLWFBXSnM4OFN4Y0xLdC10dVdLc01fNG5sT1dLZ0xnaFRiTVU3Z1JkUQ?oc=5",
+        "published": "Wed, 02 Sep 2026 21:15:00 GMT",
+        "publisher": "monoist.itmedia.co.jp"
+      },
+      {
+        "title": "日立製作所、日立建機保有ゼロに LINEアプリ生みの親は出前館を買い増し 2026年8月の大量保有報告書 - 千葉テレビ放送",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0yMmdXd3NkZVpsOVlmaEVsU3loeWx0VUdfMDctQW1GamZPQURYS2liZmxuYXU2VGtua0hUUnZIYzhqbE1hYVQteHpmQ2k5Q1dZNUJUNTVqT3pKS1R1RmZZ?oc=5",
+        "published": "Wed, 02 Sep 2026 21:37:33 GMT",
+        "publisher": "千葉テレビ放送"
+      },
+      {
+        "title": "◎日立、宇宙からインフラや災害監視 - 時事通信ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1ZMDZhMHNRUG9wYmV0WDNTMXFZZC15ZnlQOFplSlExUTNUMFJjUE83bmYxc2tfeFIwcWZFSXpHS29iZlJ0Y2Q1N0dPSFZ2VV8ydFo5eQ?oc=5",
+        "published": "Wed, 02 Sep 2026 11:21:00 GMT",
+        "publisher": "時事通信ニュース"
+      },
+      {
+        "title": "海外産バイオメタンの環境価値を証明、ガス空調に活用 - ニュース - メガソーラービジネス plus - 日経BP",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFB6NktqV3RGSUVsQ3A1a0Vabk9IaXB4T3V4Y1NXSENKTHVOeG5faTFEN2ZIckpxWHZZV3ZGUmo3cjljcHFMRkhuUldNajIwUnJhZ3RMZTFvcWtpNnFtcWw1RjNkaE40cEVqVjBsUWZvWHR0am9a?oc=5",
+        "published": "Wed, 02 Sep 2026 00:51:00 GMT",
+        "publisher": "日経BP"
+      },
+      {
+        "title": "【都市対抗野球大会】エイジェックが日本生命を破り初のベスト8進出！ 補強・金原の2打席連続弾など8得点で快勝 - アスリートマガジンWEB",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9FdUxxWElNWFNnVXFISUljRy1VVkk5V2dScVV2dVdhMUNpdmFjdzBod2VoSzJpVE1yX0F5RU1qb1JVaWV6TnliVzFHcVEtX2FYM3ZkSnFYSEV4bnBBVWc?oc=5",
+        "published": "Wed, 02 Sep 2026 08:00:00 GMT",
+        "publisher": "アスリートマガジンWEB"
+      },
+      {
+        "title": "西武鉄道の20000系「里帰り」リニューアル 26年前デビューの通勤型 - 鉄道プレスネット",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBWVThfZXJZZkg3YnlOdHpyUWNKOC10YTgwUGV5cGJYVFh6Z1VGRVpaakx0eHpGQUhUdkN2eHBsUDVwTTFCemluajc2QW5VVGZIY2lXWl9EMnpMakpy?oc=5",
+        "published": "Wed, 02 Sep 2026 06:18:14 GMT",
+        "publisher": "鉄道プレスネット"
+      },
+      {
+        "title": "西武20000系が大幅リニューアル！全144両が笠戸事業所へ「里帰り」で内装・機器はどう変わる？ - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOQ1dTVmRfSXl0eEhHR3RpUklPOXJ6N2JnNWdURXBxUlppSWYxZlppbjBLTzRWMmNyUjBwMU9PRG5FbmQyWTJJRnhGbU16RXRXUW1GQi05Tnl5YmZGTWV0eVdGSG9hRWlhalJtbTJfTkJhR0U2Z1l3Y3VBbEtjQjN1dS1peDJSZ2fSAYcBQVVfeXFMTkNXU1ZkX0l5dHhIR0d0aVJJTzlyejdiZzVnVEVwcVJaaUlmMWZaaW4wS080VjJjclIwcDFPT0RuRW5kMlkySUZ4Rm1NekV0V1FtRkItOU55eWJmRk1ldHlXRkhvYUVpYWpSbW0yX05CYUdFNmdZd2N1QWxLY0IzdXUtaXgyUmdn?oc=5",
+        "published": "Wed, 02 Sep 2026 01:52:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260902530692.pdf",
+        "date": "2026-09-02 15:30:00"
+      },
+      {
+        "title": "個別決算における投資有価証券売却益(特別利益)の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260819523052.pdf",
+        "date": "2026-08-19 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804508474.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "（訂正）2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503298.pdf",
+        "date": "2026-07-30 13:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501771.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501801.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(モビリティ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566288.pdf",
+        "date": "2026-06-09 15:30:00"
+      }
+    ]
+  }
+}

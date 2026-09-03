@@ -1,0 +1,216 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-09-03T09:13:51+09:00",
+  "price_as_of": "2026-09-02",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 60,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家は高確信度（strength 75）で強気判断を示しているものの、テクニカル専門家も強気（strength 70）であるため、統合判断ルールに基づき、新規の買いは推奨されずホールドとします。両者が強気である場合、材料は株価に織り込まれている可能性が高いと判断されます。",
+        "evidence": "fundamental_view.stance=bullish (strength=75), technical_view.stance=bullish (strength=70), 統合判断ルール1"
+      },
+      {
+        "reason": "著名投資家バークシャー・ハサウェイによる長期投資方針の表明や、日本経済の拡大を示す良好なマクロ指標（PMI、日銀短観、円安）は、総合商社である三菱商事にとって強力な追い風であり、引き続き注目に値する銘柄です。",
+        "evidence": "fundamental_view.points[0], fundamental_view.points[1], fundamental_view.points[2], fundamental_view.points[3]"
+      }
+    ],
+    "risks": [
+      "市場全体の地合いがdowntrend（TOPIXが25日線を下回る）であり、個別株の上昇には逆風となる可能性があります。",
+      "直近の年間業績トレンドでは純利益とEPSが減少傾向にあり、今後の業績回復動向には注意が必要です。",
+      "次回決算発表日（2026年11月3日）が控えており、その内容によっては株価に大きな変動をもたらす可能性があります。",
+      "日本銀行金融政策決定会合（2026年9月17〜18日）が予定されており、金融政策に関する決定が市場全体にイベントリスクをもたらす可能性があります。",
+      "直近で株価が反落しており、短期的な上値の重さが意識される可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 60,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家は高確信度（strength 75）で強気判断を示しているものの、テクニカル専門家も強気（strength 70）であるため、統合判断ルールに基づき、新規の買いは推奨されずホールドとします。両者が強気である場合、材料は株価に織り込まれている可能性が高いと判断されます。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=75), technical_view.stance=bullish (strength=70), 統合判断ルール1\"\n  },\n  {\n   \"reason\": \"著名投資家バークシャー・ハサウェイによる長期投資方針の表明や、日本経済の拡大を示す良好なマクロ指標（PMI、日銀短観、円安）は、総合商社である三菱商事にとって強力な追い風であり、引き続き注目に値する銘柄です。\",\n   \"evidence\": \"fundamental_view.points[0], fundamental_view.points[1], fundamental_view.points[2], fundamental_view.points[3]\"\n  }\n ],\n \"risks\": [\n  \"市場全体の地合いがdowntrend（TOPIXが25日線を下回る）であり、個別株の上昇には逆風となる可能性があります。\",\n  \"直近の年間業績トレンドでは純利益とEPSが減少傾向にあり、今後の業績回復動向には注意が必要です。\",\n  \"次回決算発表日（2026年11月3日）が控えており、その内容によっては株価に大きな変動をもたらす可能性があります。\",\n  \"日本銀行金融政策決定会合（2026年9月17〜18日）が予定されており、金融政策に関する決定が市場全体にイベントリスクをもたらす可能性があります。\",\n  \"直近で株価が反落しており、短期的な上値の重さが意識される可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "短期的なテクニカル指標は好転しており、直近の株価も上昇基調にあります。しかし、市場全体の地合いは弱く、上値追いは慎重になる必要があります。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日移動平均線を上回るゴールデンクロスを形成しており、短期的な上昇トレンドを示唆しています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\""
+        },
+        {
+          "point": "MACDがシグナルを上回り、MACDヒストグラムが大きくプラスになっていることから、買いの勢いが強まっていることが示唆されます。",
+          "evidence": "price_technical.macd_histogram=19.29"
+        },
+        {
+          "point": "前夜のNY市場で三菱商事のADRおよび業種対応セクターETFが上昇しており、本日の寄り付きに好影響を与える可能性があります。",
+          "evidence": "us_overnight.adr.change_1d_pct=0.89, us_overnight.sector_proxy.change_1d_pct=1.27"
+        },
+        {
+          "point": "直近5営業日のうち4営業日で上昇しており、特に9月1日には3.16%の大幅高を記録するなど、短期的な上昇基調にあります。",
+          "evidence": "price_technical.recent_5_days"
+        }
+      ],
+      "cautions": [
+        "TOPIXが25日線を下回り「downtrend」と判定されており、市場全体の地合いは弱気であるため、個別株の上昇には逆風となる可能性があります。",
+        "直近5営業日では上昇基調にあったものの、9月2日には-1.94%と反落しており、短期的な上値の重さが意識される可能性があります。",
+        "過去60営業日では株価がわずかに上昇しているものの、TOPIXに対しては3.28%劣後しており、相対的な弱さが継続する可能性に注意が必要です。",
+        "前夜の米国市場の好調は既に寄り付き価格に織り込まれる可能性があり、その後の日本市場での値動きを保証するものではありません。"
+      ],
+      "key_levels": {
+        "support": 4828.6,
+        "resistance": 4972.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "直近の業績トレンドは弱含みであるものの、著名投資家による長期投資方針の表明という強力な好材料があり、日本経済の拡大を示すマクロ指標も追い風となっています。",
+      "points": [
+        {
+          "point": "バークシャー・ハサウェイのCEOが日本の5大商社への長期投資方針を表明したことは、市場からの信頼を高める強力なポジティブ材料です。",
+          "evidence": "news.headlines[6].title"
+        },
+        {
+          "point": "日本の製造業およびサービス業PMIがともに50を上回り、8月にはさらに加速していることから、日本経済の活動は拡大基調にあり、多角的な事業を持つ総合商社にとって追い風となります。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9, macro.japan_pmi.services.latest_value=52.3, macro.japan_pmi.composite.latest_value=53.4"
+        },
+        {
+          "point": "日銀短観の大企業業況判断DIも製造業・非製造業ともに改善傾向を示しており、国内の主要企業を取り巻く事業環境が良好であることが伺えます。",
+          "evidence": "macro.boj.tankan.di.large_manufacturing.current_di=22.0, macro.boj.tankan.di.large_nonmanufacturing.current_di=37.0"
+        },
+        {
+          "point": "ドル円が160円台と円安水準を維持しており、三菱商事の海外事業収益や海外資産価値の円換算額を押し上げる効果が期待できます。",
+          "evidence": "macro.indices[2].close=160.2"
+        }
+      ],
+      "cautions": [
+        "直近の年間業績トレンドでは純利益とEPSが減少傾向にあり、今後の業績回復動向には注意が必要です。",
+        "次回決算発表日が2026年11月3日に控えており、その内容が投資判断に影響を与える可能性があります。",
+        "日本銀行金融政策決定会合が2026年9月17〜18日に予定されており、金融政策に関する決定が市場全体にイベントリスクをもたらす可能性があります。",
+        "TOPIXが25日移動平均線を下回り、直近5日間も下落していることから、市場全体の地合いは軟調です。",
+        "直近90日間の重要開示の本文要約がないため、個別の事業進捗に関する詳細な情報は把握できていません。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "三菱商事(株)【8058】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5mUjNEVUFFMjhWQTIteEZoSTlfVWpCNzM3S21DR2MzYXBnUDhDYkNyYTJQWEd1THI5TV91SXBpYWh6THc0OFR3ZW5DVXJ3aW1mc0N0TXVTOG1LRDdRMjYw?oc=5",
+        "published": "Wed, 02 Sep 2026 06:52:54 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "大阪・平野で物流施設を着工／奥村組、MUCD - 最新不動産ニュースサイト「R.E.port」",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9XQkZfRERFM1UxZW1qUGRrX0V1WWZ6TUw4X1ZJOHI5OHkzYWw1VWJNMnQyNUFsMkUzakk5dXd4WEM3WkVOaTczYXBaeDRXLTMxTXNsOHZLcVZOVEY3?oc=5",
+        "published": "Wed, 02 Sep 2026 09:01:54 GMT",
+        "publisher": "最新不動産ニュースサイト「R.E.port」"
+      },
+      {
+        "title": "Press - インサイド",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNMlYxVlU1ZWpxaG5pS0dmaWg1QjhlYlFRdml3M3dQVDJRT25YeEFnRklUOTVITXJObVM5dFNfa2FUdFN3cC1PQUxoZV8yMExIc1VCUlktMm9Md1pCSFMxQlh4UG9NVk1uM1htYXZ4U295Nm9jcEVXZVVvaXlDSUpHbHBBSnpiQ3ZKVW1Uaw?oc=5",
+        "published": "Wed, 02 Sep 2026 08:14:47 GMT",
+        "publisher": "インサイド"
+      },
+      {
+        "title": "ローソン店頭広告を3000店へ拡大 KDDIらが新会社設立 - PlusWeb3",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFAyNXE4Y2N6TjA3ek04NER3M05sZXpuWlYxLUdUY0ZwazE3Nk1BWkJrZWNtaDkzNjZITHcyeHYyZWJkeExCVmw3SGtUVWRaUWJLWGI2a25oRmZCWlRQMG93?oc=5",
+        "published": "Wed, 02 Sep 2026 05:30:00 GMT",
+        "publisher": "PlusWeb3"
+      },
+      {
+        "title": "J2で記録した驚異の「53973」 昇格目指すも…タイムリミットに本音「怖いんですけど」 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1iNkc4ZmhHVGlQdGZINDRqcmVJWVhQMXNWUzA4MURqYm5ib2Ffbk1mVzY4TndWcjN4RVk3bjllUkU0OGM5bGk5WG82enkxM3NENzdxOTVZSHRSdnlDQW1SbDhPNEZEalQzWFE1RklR?oc=5",
+        "published": "Wed, 02 Sep 2026 20:21:56 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "【28卒】旧帝大早慶の人気企業、商社1位は三菱商事！ コンサル・IT・電機が苦戦【リーディングマーク調べ】 (Web担当者Forum) - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQTkZOS1VPWFp6cHFVbnN1UElqN05zbXQ2bFhndGc3SXdxMDlDZEJTTXpJZXNmbmxwYmpRcTZ6Um1mM0tsUmZJdGxyUVNUU2d4ekFHR3lUSE1IWVg0ZVRIbE5PUy1oZGtxUGdYelp5d1hmNThpOUZYMjJCLU5Ld242RzF4ZFVpTUhfYzRXanZ3?oc=5",
+        "published": "Wed, 02 Sep 2026 05:02:02 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "バークシャーCEO、日本の5大商社へ「今後何十年も」投資続ける方針 - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBtSFN1a2JZdUYzZl9RX193VEdDYzBCRFRNeTFORmlhM3FTYVczZmo2NGZkajRGX0ozU1BxTm1uaGx6VElpcDZ6UC1RVGk1Q1ZaQjYtbjMyNGx2N1VKc3lwMjg1NXBKdG0t0gFoQVVfeXFMUG1IU3VrYll1RjNmX1FfX3dUR0NjMEJEVE15MU5GaWEzcVNhVzNmajY0ZmRqNEZfSjNTUHFObW5obHpUSWlwNnpQLVFUaTVDVlpCNi1uMzI0bHY3VUpzeXAyODU1cEp0bS0?oc=5",
+        "published": "Wed, 02 Sep 2026 14:59:43 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "「AIデータセンター」と「フィジカルAI」を支える次世代技術を発表…東証プライム・値上がり1位となった〈化学メーカー〉 - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9rU3NOSXpOOUxDMGwwSHo3Nzdkd1FibmNpRmxHSEdnaHBIcTFDS1R3OUZlT2dOOFdZbm5JLW1EOG9HSlB3dWdkT196YTlpQ0ZyU0JiSG1uYXA2RFN2Y2w1ekxCR0lPc2x6bjdUN2luMnYwdHJocnEwd2xLVQ?oc=5",
+        "published": "Wed, 02 Sep 2026 05:51:29 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "JO1・金城碧海 東京駅前でウェディングドレス姿に！？純白ミニ丈ドレスで激しすぎるダンス披露「活きのいい花嫁」「度胸がすげぇわw」 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9qa3NmUlpFTktSTjJHeG5fT2xMX1M4QWJuX3Z2NGhDSzJwZEhad2lkQ1BoQ21RMXJWektsek1tU0JfRlJWZmtKS251RG1oOHh5Yi1nRzJ6d1k4WjUxa0lvY0xaeVI3LWJjVkI5ZlJR?oc=5",
+        "published": "Wed, 02 Sep 2026 03:39:37 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "株柴｜日本株 (@510928) on X - t.co",
+        "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE9ZZXpTaERJWGpOaGVzM3phS3JBZklLdC1lOVVtMWo1cXlNa3J2aDJJZzlDblg5cVV3TllB?oc=5",
+        "published": "Wed, 02 Sep 2026 02:31:44 GMT",
+        "publisher": "t.co"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期第1四半期決算短信〔IFRS〕(連結）（監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510489.pdf",
+        "date": "2026-08-06 15:25:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505791.pdf",
+        "date": "2026-08-03 14:00:00"
+      },
+      {
+        "title": "特定子会社の異動（子会社の特定子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260714593288.pdf",
+        "date": "2026-07-15 10:00:00"
+      },
+      {
+        "title": "子会社間の合併及び特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552595.pdf",
+        "date": "2026-05-29 09:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C2プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539898.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C3プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539905.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C4プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539910.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C5プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539918.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C6プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539939.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515679.pdf",
+        "date": "2026-05-01 14:00:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-09-03T09:09:21+09:00",
+  "price_as_of": "2026-09-02",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "テクニカル面でSMA5とSMA25のデッドクロスが発生し、MACDもマイナス圏で拡大するなど、短期的な下落モメンタムが非常に強い。",
+        "evidence": "technical_view.points[1]: price_technical.sma5_vs_sma25='dead', price_technical.macd_histogram=-735.29"
+      },
+      {
+        "reason": "ファンダメンタルズは底堅いものの、高PER銘柄にとって国内金利上昇が重石となっており、現状で株価を押し上げる強力なカタリストが不足している。",
+        "evidence": "fundamental_view.points[2]: macro.rates.jgb_10y_percent=2.987 / fundamental_view.cautions[2]: 反転カタリストに欠ける"
+      },
+      {
+        "reason": "市場全体が下落トレンド（downtrend）にあり、個別銘柄の業績に関わらず外部環境に引きずられるリスクが高い局面である。",
+        "evidence": "reference.market_regime='downtrend' / technical_view.points[2]: macro.market_regime.market_regime='downtrend'"
+      }
+    ],
+    "risks": [
+      "2026-09-17からの日銀金融政策決定会合における追加利上げ等のタカ派的決定によるグロース株への売り圧力",
+      "ADRの大幅下落を受けた寄り付きからのさらなる価格調整と、節目の69,950円に向けた下値模索",
+      "RSIが43.1であり、売られすぎ水準に達していないことから、短期的な調整が長期化する可能性"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"テクニカル面でSMA5とSMA25のデッドクロスが発生し、MACDもマイナス圏で拡大するなど、短期的な下落モメンタムが非常に強い。\",\n   \"evidence\": \"technical_view.points[1]: price_technical.sma5_vs_sma25='dead', price_technical.macd_histogram=-735.29\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは底堅いものの、高PER銘柄にとって国内金利上昇が重石となっており、現状で株価を押し上げる強力なカタリストが不足している。\",\n   \"evidence\": \"fundamental_view.points[2]: macro.rates.jgb_10y_percent=2.987 / fundamental_view.cautions[2]: 反転カタリストに欠ける\"\n  },\n  {\n   \"reason\": \"市場全体が下落トレンド（downtrend）にあり、個別銘柄の業績に関わらず外部環境に引きずられるリスクが高い局面である。\",\n   \"evidence\": \"reference.market_regime='downtrend' / technical_view.points[2]: macro.market_regime.market_regime='downtrend'\"\n  }\n ],\n \"risks\": [\n  \"2026-09-17からの日銀金融政策決定会合における追加利上げ等のタカ派的決定によるグロース株への売り圧力\",\n  \"ADRの大幅下落を受けた寄り付きからのさらなる価格調整と、節目の69,950円に向けた下値模索\",\n  \"RSIが43.1であり、売られすぎ水準に達していないことから、短期的な調整が長期化する可能性\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 80,
+      "summary": "直近の急落に伴う短期トレンドの悪化に加え、MACDのデッドクロス拡大と市場全体の地合い悪化が重なり、さらなる下値模索の可能性が高い状況です。",
+      "points": [
+        {
+          "point": "直近5営業日で出来高を伴う大幅な下落を記録しており、売り圧力が急速に強まっています。",
+          "evidence": "price_technical.recent_5_days[4].change_pct=-5.18, price_technical.recent_5_days[4].volume=746500"
+        },
+        {
+          "point": "SMA5とSMA25のデッドクロスに加え、MACDヒストグラムのマイナス圏での拡大が続いており、下落モメンタムが強まっています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead\", price_technical.macd_histogram=-735.29"
+        },
+        {
+          "point": "市場全体がdowntrendレジームにある中、前夜の米国市場で当該銘柄のADRも大幅に下落しており、寄り付きからの売り圧力が予想されます。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\", us_overnight.adr.change_1d_pct=-2.48"
+        }
+      ],
+      "cautions": [
+        "ADRの大幅下落により寄り付き価格が大きく下振れる可能性があり、その場合は短期的には自律反発が入りやすくなる点に注意が必要です。",
+        "RSI14は43.1と売られすぎ水準（30以下）には達しておらず、価格調整が継続する余地を残しています。"
+      ],
+      "key_levels": {
+        "support": 69950.0,
+        "resistance": 82822.8
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "業績は着実な増収増益トレンドを維持しており、主要顧客層である製造業のPMIも拡大圏にあるが、国内金利上昇観測がPER40倍を超える高バリュエーション株への重石となっている。",
+      "points": [
+        {
+          "point": "2024年3月期から2026年3月期にかけて、売上高・営業利益ともに右肩上がりの成長が継続しており、収益基盤は極めて強固である。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "主要な顧客セクターである日本の製造業PMIが54.9と拡大圏にあり、AI関連需要等を背景とした設備投資意欲の高さがうかがえる。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9"
+        },
+        {
+          "point": "歴史的な円安水準（160.2円）は海外売上比率の高い同社にとって利益押し上げ要因となる一方、国内長期金利の上昇（2.987%）は高PER銘柄の理論株価を抑制する相反するマクロ環境にある。",
+          "evidence": "macro.indices.JPY=X=160.2, macro.rates.jgb_10y_percent=2.987, news.headlines[0].title"
+        }
+      ],
+      "cautions": [
+        "2週間後に日銀金融政策決定会合を控えており、追加利上げ等のタカ派的な決定がなされた場合、グロース株として大きな売り圧力を受けるリスクがある。",
+        "市場全体がdowntrend（TOPIXが25日線を下回り、5日騰落率がマイナス）と判定されており、外部環境の悪化による連れ安に警戒が必要。",
+        "直近2週間以内に同社固有の強力な買い材料（上方修正や新製品発表等）が確認されておらず、株価の反転カタリストに欠ける。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "リクルートＨＤ－大幅続落 世界的な長期金利上昇を嫌気 グロース株が軟調(トレーダーズ・ウェブ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNSGY4Mmw5cU1OZlh5TzJvVlRyLTN2UW05Zk9xcXJDQ2hNdkNlMUdlaE1hcFRuRkhqbW14RXlqVTAzOGU5akNsanowMTFMTGFWdzN2Zl9SLUxYUmUyM29vOXBFV1h5YWdFOW9aQkJIWVh6RmRMbnFSMzhfUDhwclhXTEsxX19Hd1E?oc=5",
+        "published": "Wed, 02 Sep 2026 00:29:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "LINEの便利機能が｢実質有料化｣されていく…｢1億人が使う業務連絡ツール｣にインスタ世代の若者が抱くホンネ (4ページ目) - president.jp",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5weDBqNWMxckhnQUlZUnIyMTZ1eVNBbTdIWmlrSk8ySXlLZ05QVDUtUkx1VXJHbHNHOV81UjJWZE11S2JjOExDbXpEY1R6SDhlSzNzMVNlZGM?oc=5",
+        "published": "Wed, 02 Sep 2026 09:00:00 GMT",
+        "publisher": "president.jp"
+      },
+      {
+        "title": "燃えにくい\"半固体モバイルバッテリーの備蓄と活用の提案｜株式会社メイカーズ（MAKERZ） - テクノエッジ TechnoEdge",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE53RVgyNjFFelZoN2tWVF95QTNFOF9HOWt5SGwyNzRlcFAyYVk0SUJVcUVyNmhxVXYtMkphRWxXcjdfUXpQQUJ0Y1pBampURUU2NlhxWS0wUHZBZFZZaktldEpjX0tZR2VzUzBxd29UNGJYZw?oc=5",
+        "published": "Wed, 02 Sep 2026 06:26:27 GMT",
+        "publisher": "テクノエッジ TechnoEdge"
+      },
+      {
+        "title": "＜画像4 / 10＞昨年ブレイク！カルピス“男子新体操部”の新CMがスゴイ - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1GdWQwYUV5M1kwOWZ2RWF2SldQMl9FTDB0MGtjQ1ZiTUV1YXZpZDcwLUhvd0FXVFhmeHdRTnpmQ0JjTlQ1QTlZODJfek5OZVBhaGdaZ2ZHQXhxemxjSGt2Z1ZGb2c2UQ?oc=5",
+        "published": "Wed, 02 Sep 2026 07:16:18 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "前場コメント No.6 リクルートＨＤ、ＡｌｂａＬｉｎｋ、トライアル、ライトアップ、浜ゴム、住友電(トレーダーズ・ウェブ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZDJXa0toQ1I0aUZhV0NfV2dPdTdxRlV3RjN3bGVrSnZ0eEZoSHhKampmV2xtUzhGZ08wc1Q2UEl3czhsejRnZ3Z3THlIdEJJRkZpWFhHMENYSUQ4LTFmLTh1ZXB3dXBYTklMaDh0ck1YNEpEQnZ0NzFSQ01mZE9CY3NVaklzOVE?oc=5",
+        "published": "Wed, 02 Sep 2026 02:31:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      }
+    ]
+  }
+}

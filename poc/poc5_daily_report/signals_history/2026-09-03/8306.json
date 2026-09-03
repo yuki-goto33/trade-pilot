@@ -1,0 +1,192 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-09-03T09:07:55+09:00",
+  "price_as_of": "2026-09-02",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-08-24）にbuyシグナルが発出されており、現在はその後の継続監視期間に該当するため、新規のエントリーは控える。",
+        "evidence": "reference.recent_buy.date=2026-08-24"
+      },
+      {
+        "reason": "テクニカル面で強気サインが揃っているが、統合ルールに基づき、テクニカルがbullishの状態での追随買いは「織り込み済み」と判断し、回避する。",
+        "evidence": "technical_view.stance=bullish (strength=70)"
+      },
+      {
+        "reason": "ファンダメンタルズ専門家が中立姿勢であり、予想PER 24.2倍などバリュエーション面での割安感が薄れている。",
+        "evidence": "fundamental_view.stance=neutral (strength=60), fundamental_view.cautions[2]"
+      },
+      {
+        "reason": "市場全体のレジームが下降トレンド（downtrend）にあり、個別銘柄の強さにかかわらず地合いの悪化に巻き込まれるリスクが高い局面である。",
+        "evidence": "reference.market_regime=downtrend"
+      }
+    ],
+    "risks": [
+      "reference.next_boj_meeting: 2026-09-17から開催される日銀金融政策決定会合に伴うボラティリティ急増のリスク。",
+      "technical_view.cautions: RSI14が65.3と過熱圏に接近しており、期間高値付近での利益確定売りの発生。",
+      "fundamental_view.cautions: 市場全体の下降トレンドによるTOPIX連動型売りの波及。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 60,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"直近14日以内（2026-08-24）にbuyシグナルが発出されており、現在はその後の継続監視期間に該当するため、新規のエントリーは控える。\",\n      \"evidence\": \"reference.recent_buy.date=2026-08-24\"\n    },\n    {\n      \"reason\": \"テクニカル面で強気サインが揃っているが、統合ルールに基づき、テクニカルがbullishの状態での追随買いは「織り込み済み」と判断し、回避する。\",\n      \"evidence\": \"technical_view.stance=bullish (strength=70)\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズ専門家が中立姿勢であり、予想PER 24.2倍などバリュエーション面での割安感が薄れている。\",\n      \"evidence\": \"fundamental_view.stance=neutral (strength=60), fundamental_view.cautions[2]\"\n    },\n    {\n      \"reason\": \"市場全体のレジームが下降トレンド（downtrend）にあり、個別銘柄の強さにかかわらず地合いの悪化に巻き込まれるリスクが高い局面である。\",\n      \"evidence\": \"reference.market_regime=downtrend\"\n    }\n  ],\n  \"risks\": [\n    \"reference.next_boj_meeting: 2026-09-17から開催される日銀金融政策決定会合に伴うボラティリティ急増のリスク。\",\n    \"technical_view.cautions: RSI14が65.3と過熱圏に接近しており、期間高値付近での利益確定売りの発生。\",\n    \"fundamental_view.cautions: 市場全体の下降トレンドによるTOPIX連動型売りの波及。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "中期トレンドが市場平均を大きく上回る強気相場の中にあり、SMA5/25のゴールデンクロスやMACDの好転など、個別銘柄のテクニカル指標は非常に良好です。ただし、市場全体の地合いが調整局面（downtrend）入りしている点には警戒が必要です。",
+      "points": [
+        {
+          "point": "短期・中期の移動平均線がゴールデンクロスを形成しており、MACDヒストグラムも19.39とプラス圏で拡大傾向にあります。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.macd_histogram=19.39"
+        },
+        {
+          "point": "中期トレンドが極めて強力です。60営業日騰落率は16.29%と高く、対TOPIX相対騰落率でも+12.45%と大幅なアウトパフォームを示しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=16.29, price_technical.trend_60d.relative_to_topix_60d_pct=12.45"
+        },
+        {
+          "point": "前夜の米国市場において、金融セクターETF（XLF）が下落する中でADRは0.35%の上昇を維持しており、相対的な買い意欲の強さが示唆されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=0.35, us_overnight.sector_proxy.change_1d_pct=-0.88"
+        }
+      ],
+      "cautions": [
+        "TOPIXが25日線を割り込み、市場レジームがdowntrend（下降トレンド）と判定されているため、市場全体の大幅な連れ安に巻き込まれるリスクがあります。",
+        "RSI14が65.3と過熱圏の目安である70に接近しており、期間高値（3813.0）付近では利益確定売りが出やすい水準です。"
+      ],
+      "key_levels": {
+        "support": 3586.36,
+        "resistance": 3813.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "業績トレンドは非常に堅調であり、国内金利（JGB 10年）の上昇も収益環境の追い風だが、バリュエーションに割安感が薄れ、直近2週間以内に新規の株価カタリストが確認できないため中立とする。",
+      "points": [
+        {
+          "point": "純利益およびEPSが右肩上がりで推移しており、収益拡大トレンドが明確である。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=24272, diluted_eps=212.33"
+        },
+        {
+          "point": "国内10年債利回りが約3%と高い水準にあり、銀行業にとって利ざや改善が期待できるマクロ環境である。",
+          "evidence": "macro.rates.jgb_10y_percent.value=2.987"
+        },
+        {
+          "point": "ROEが9.5%と国内銀行株としては高く、資本効率の改善と継続的な自己株買いの実施が評価できる。",
+          "evidence": "fundamentals.valuation.return_on_equity=0.095, disclosures.items[4].title"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日から開催される日銀金融政策決定会合を控え、政策変更に伴うボラティリティの上昇リスクがある。",
+        "市場全体が下降トレンド（downtrend）にあり、TOPIX連動ETFも25日移動平均線を下回る不安定な地合いである。",
+        "予想PERが24.2倍と実績PERと比較して高く、今後の利益成長に対する期待が先行している懸念がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-24",
+    "days_ago": 10,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)三菱ＵＦＪフィナンシャル・グループ【8306】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1oNVRyU21seTRreG9UUWh2VU9PUkRfbHNWdWxFMHFIZnZ5dnNPTnR2dU8taVdGb0xkZEc5MkdnZ2tmY1VHc0dkODdqZXpnS01xZGtMMGhoYkg3OUUzamRF?oc=5",
+        "published": "Wed, 02 Sep 2026 02:52:27 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "(株)三菱ＵＦＪフィナンシャル・グループ【MUFG】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1fb09UZ016WWhiUVBjc0RvWFltWjhxVkhJbkpyOEhKLXMzR2JuMk0wY1MybnpuUWNldldDSTJMak1rZV83N2JYNGFMWktSU3M?oc=5",
+        "published": "Wed, 02 Sep 2026 08:10:04 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ＮＴＴファシリティーズ・日本郵船など４社、港湾立地型洋上ＤＣ構想を策定、社会実装を加速 - kabu-ir.com",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1JdS1JMU56eWVydW83cktuNFZJXzlUQUIyRjBSdFlxMHpwVmUwbmktS1FkTlpkNno4SGZtNGY0ZGd5TE5YaVFyVHhZYU1iV0FOdzFsUA?oc=5",
+        "published": "Wed, 02 Sep 2026 01:17:58 GMT",
+        "publisher": "kabu-ir.com"
+      },
+      {
+        "title": "双子の母・中川翔子「双子なんだかいっきに大きくなってきた」家族4ショット公開「2人の成長に感動」「着物姿の夫婦素敵です」の声 - mdpr.jp",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1KSEl6WXI1R2VCRGpMakxsbW1pTkxjakV2UTdDX3pORnZnVDF2QWlNZm5OU005cHVwam1sRWx5R0xOSVY0bmUtU1Bjc9IBR0FVX3lxTFBFYzVncWlSY2R5WmZ1d1VIa1MzXzhKVFZPUzhveG0xaFFLbi1wQ3lZSENvc1dpMkNoN1RTNWFLN3ZvQ1BWMmVv?oc=5",
+        "published": "Wed, 02 Sep 2026 09:41:40 GMT",
+        "publisher": "mdpr.jp"
+      },
+      {
+        "title": "爆笑太田光 脳梗塞の伊達みきおにエール「サンドの漫才って、いとし・こいしレベルなんだよ…」 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5GQ0p2aXdHYUNieS1pSjFuSGhCR2hUaEY5X0hpZ0FiZmF5R0xyX2Y1aUhVTFRoeGExaTBIVTN0bmxxZ2Vsblc2Q3FNb3ZIM2VyalBfdXJxT041Vmx2RDA2RnVYYmhza3NsRURhZVN3?oc=5",
+        "published": "Wed, 02 Sep 2026 01:26:29 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "株柴｜日本株 (@510928) on X - t.co",
+        "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE9ZZXpTaERJWGpOaGVzM3phS3JBZklLdC1lOVVtMWo1cXlNa3J2aDJJZzlDblg5cVV3TllB?oc=5",
+        "published": "Wed, 02 Sep 2026 02:31:44 GMT",
+        "publisher": "t.co"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期 自己資本比率について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260814520300.pdf",
+        "date": "2026-08-14 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕（連結）（公認会計士又は監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510381.pdf",
+        "date": "2026-08-06 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505851.pdf",
+        "date": "2026-08-03 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-09-03T09:04:02+09:00",
+  "price_as_of": "2026-09-02",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズの確信度（strength）が60に留まり、buy判断の基準値（70以上）に達していない。PBR1倍割れの割安感はあるものの、2期連続の減益計画が成長性の懸念となっている。",
+        "evidence": "fundamental_view.strength=60, fundamental_view.points[1]: 2期連続の減益計画"
+      },
+      {
+        "reason": "市場全体のレジームがdowntrend（下落トレンド）にあり、個別銘柄のテクニカルが好転していても地合いによる連れ安リスクを優先すべき局面である。",
+        "evidence": "reference.market_regime=\"downtrend\", technical_view.cautions[0]"
+      },
+      {
+        "reason": "直近5営業日で3%超の下落を記録し、終値が5日移動平均線を割り込んでおり、短期的には25日移動平均線付近までの押し目を試す可能性がある。",
+        "evidence": "technical_view.points[3]: last_close=3133.0 < sma5=3145.0"
+      }
+    ],
+    "risks": [
+      "2026年9月17日からの日銀金融政策決定会合に伴う、為替（円高）および金利上昇による自動車セクターへの逆風リスク",
+      "米国セクターETF（XLY）の下落に見られる、外部環境の悪化に伴う売り圧力の継続",
+      "仕入価格の上昇に対し、販売価格への転嫁が遅れることによる利益率のさらなる圧迫"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズの確信度（strength）が60に留まり、buy判断の基準値（70以上）に達していない。PBR1倍割れの割安感はあるものの、2期連続の減益計画が成長性の懸念となっている。\",\n   \"evidence\": \"fundamental_view.strength=60, fundamental_view.points[1]: 2期連続の減益計画\"\n  },\n  {\n   \"reason\": \"市場全体のレジームがdowntrend（下落トレンド）にあり、個別銘柄のテクニカルが好転していても地合いによる連れ安リスクを優先すべき局面である。\",\n   \"evidence\": \"reference.market_regime=\\\"downtrend\\\", technical_view.cautions[0]\"\n  },\n  {\n   \"reason\": \"直近5営業日で3%超の下落を記録し、終値が5日移動平均線を割り込んでおり、短期的には25日移動平均線付近までの押し目を試す可能性がある。\",\n   \"evidence\": \"technical_view.points[3]: last_close=3133.0 < sma5=3145.0\"\n  }\n ],\n \"risks\": [\n  \"2026年9月17日からの日銀金融政策決定会合に伴う、為替（円高）および金利上昇による自動車セクターへの逆風リスク\",\n  \"米国セクターETF（XLY）の下落に見られる、外部環境の悪化に伴う売り圧力の継続\",\n  \"仕入価格の上昇に対し、販売価格への転嫁が遅れることによる利益率のさらなる圧迫\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "中期的なトレンドは移動平均線のゴールデンクロスやMACDの好転により上向きを維持していますが、直近の急落と市場全体のレジーム悪化が重石となっています。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日線を上回るゴールデンクロスを形成しており、中期的なトレンドは依然として上向きです。",
+          "evidence": "price_technical.sma5_vs_sma25=golden"
+        },
+        {
+          "point": "MACDおよびシグナルがプラス圏で推移しており、ヒストグラムもプラスを維持していることから上昇エネルギーが残存しています。",
+          "evidence": "price_technical.macd=47.46, macd_signal=35.2, macd_histogram=12.26"
+        },
+        {
+          "point": "60営業日騰落率が市場平均を大きく上回っており、個別銘柄としての相対的な強さが確認されます。",
+          "evidence": "price_technical.trend_60d.relative_to_topix_60d_pct=7.16"
+        },
+        {
+          "point": "一方で、直近5営業日では3%を超える大幅な下落を記録し、終値が5日移動平均線を割り込んでいます。",
+          "evidence": "price_technical.recent_5_days[4].change_pct=-3.39, price_technical.sma5=3145.0, last_close=3133.0"
+        }
+      ],
+      "cautions": [
+        "TOPIXが25日移動平均線を下回り、市場レジームがdowntrend（下落トレンド）に判定されているため、全体相場の地合い悪化による連れ安のリスクがあります。",
+        "前夜の米セクターETF（XLY）が-1.72%と下落しており、外部環境が逆風となる可能性があります。",
+        "直近の陰線による押しが深く、25日移動平均線（3053.54円）付近までの調整を試す展開に注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 3053.54,
+        "resistance": 3269.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "PBR1倍割れの割安感や自己株買いによる下値支持はあるものの、純利益の減益トレンドが継続しており、日銀会合を控えた金利上昇やコスト増が重石となる局面です。",
+      "points": [
+        {
+          "point": "バリュエーションの割安感と還元姿勢。PBRが1倍を下回る水準で推移しており、8月4日には自己株式取得および消却を発表し株主還元を強化している。",
+          "evidence": "fundamentals.valuation.price_to_book=0.994, disclosures[7].title"
+        },
+        {
+          "point": "収益性の低下傾向。売上高は増加しているものの、親会社株主に帰属する純利益およびEPSは2024年3月期をピークに2期連続の減益計画となっており、成長性に疑問が残る。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "マクロ環境の強弱入り混じり。1ドル160円台の円安は輸出採算にプラスだが、日本の10年債利回りが2.9%台まで上昇しており、自動車株には金利上昇が逆風との報がある。",
+          "evidence": "macro.indices[2].close=160.2, macro.rates.jgb_10y_percent.value=2.987, news[3].title"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日から開催される日銀金融政策決定会合に伴う為替・金利の乱高下リスク",
+        "仕入価格DI（44.1）に対し販売価格DI（22.9）が低く、中小サプライヤーを含めたコスト転嫁の遅れによる利益圧迫",
+        "次回決算発表（11月5日）での業績予想下方修正のリスク"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "釧路トヨタ自動車芦野店、釧根地区交通育英会に寄付【釧路町】 - kushironews.jp",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5XWC1JdVZoQUxJS3BFd0trZmVmZ1QwVHVRNjFqQlhfOE1lenhTYXRBQk5xMEFmVkVvdTJrNVZrREJQUi1FSzBxZlZDZ1E4MkNBNDBZ?oc=5",
+        "published": "Wed, 02 Sep 2026 19:01:37 GMT",
+        "publisher": "kushironews.jp"
+      },
+      {
+        "title": "【未来実証都市】トヨタ自動車｢ウーブン･シティ｣で県民対象に“日帰り訪問”開始…参加者の感想は？（静岡･裾野市） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1KZEt4a0ljWS1PMy1KZGpsOFMwYmh5anM3eUlIM2gzMXBQcGVlRE1mVnFuUnlBS1JkUnl1QngtNlAxdXc5cGFDMHozbi1IS2I0TEpqa3Q3bnlLLTY1bGl1and5SDdHMXpvQzRGTFpSS19yMjF1ZXViY0hDY3VIRkk?oc=5",
+        "published": "Wed, 02 Sep 2026 08:45:00 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "名古屋市の実証事業に エアロトヨタが採択 - chukei-news.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE96a2R3OFRtQWJhNnExY2ZVM2FYNTUtbDhnR0F1aTlkdmFqRUlJTV9RSVVBVk9ra1dZd1BTWXppYnlieXJVLXkwaS1ESUkwdnQtVTNoR3FpUl81SXZqTzExOWpCU1lLNGx2b1l4REplZ3dCN28?oc=5",
+        "published": "Wed, 02 Sep 2026 20:46:25 GMT",
+        "publisher": "chukei-news.co.jp"
+      },
+      {
+        "title": "自動車株が軒並み安､原油高と金利上昇が逆風に - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE95ZDJhQUl4bWg0MG0yR085ZnpQY1U0LW1GT2h6R1hRYUtfSDJHRjItRFdUT0thQlNNS2wtcWpaQ0hRdGdWd1hxNVExWVhMMUpfRVFXRE53WQ?oc=5",
+        "published": "Wed, 02 Sep 2026 05:14:15 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "レクサスに隠れた物理ボタン タッチ人気から一転再評価 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5tY3BSU0kydXYzM3RNX3pJOGpMSFNkVk5PQU9jOG8wODRBbEREV1BnemppTmxhSVJLM2M2OVFhNk8zeUtha1BrOFVGS2VlZGZ1QVhObFQwRGdYOGtnRHlYeEJoSUJyRFNNNUJIZC1Oa2xjMWd2N3hibUhHNS1oUmM?oc=5",
+        "published": "Wed, 02 Sep 2026 20:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "張本智和＆美和が史上初の兄妹Vを振り返る！次なる目標は混合団体W杯 - tv-tokyo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1iUGlBaVJvekp1R0pFdVFubE9tRnM2UVJlMUh3akdHQktkT2t2LVRkdnYzUW53TE9IQkJsNlp5aXB5djJ4OS1QTjdmMHJPUWgyS2ptd2RHekV0QnZjSWEyMkJhdmFaZGZVbHZyZGdjQ1FYN2Jua2c?oc=5",
+        "published": "Wed, 02 Sep 2026 07:49:46 GMT",
+        "publisher": "tv-tokyo.co.jp"
+      },
+      {
+        "title": "【未来実証都市】トヨタ自動車｢ウーブン･シティ｣で県民対象に“日帰り訪問”開始…参加者の感想は？（静岡･裾野市） - tver.jp",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBBUE9GbklLTk5wMl9iYUF6N0VWT2NDMEFGUFRYWjh5YXRuTGYxbng2RWpMZ0F2ZFlVUXZSeGFSLXgzdTFDVHpYVTUyVQ?oc=5",
+        "published": "Wed, 02 Sep 2026 09:30:45 GMT",
+        "publisher": "tver.jp"
+      },
+      {
+        "title": "60系『RAV4』、アダプティブハイビーム後付け開始…トヨタ アップグレード ファクトリー 2枚目の写真・画像 - レスポンス（Response.jp）",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5OWlI4ekRDUFozQy1Xel9IOEhkYmZhVS1POWdvYTRTNUlPaUhjbTRjOURCMkF2YXFxRDUtOXI2cGctMVFYX2lOcnBvVzFmTWljTVBCMm81cVNnSmNsbVI0aUpsaWNaU2sxM1lhd2NpTQ?oc=5",
+        "published": "Wed, 02 Sep 2026 07:00:03 GMT",
+        "publisher": "レスポンス（Response.jp）"
+      },
+      {
+        "title": "トヨタ『ルーミー』一部改良、スマートアシスト強化…「アナザースタイルパッケージ」も新設定 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9IdGU3REhMVlNYTTlSeVUwcGE4NkxManR4TEhYREFURWZOdG9pb0NnY1k5M19XakpfOTQxQkJDSHZNcEM1SktFNnltaHd6NTVVWUtmVjVUZXZhN0tEc2xSSXpNOGRDZFR3Wm5tWkN3?oc=5",
+        "published": "Wed, 02 Sep 2026 07:36:21 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "【フィギュア】〝りかしん〟が戦闘モード〝しょまりん〟ら参戦で戦国時代突入も「負けないように頑張る」 - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE0yWGhzbUw2Y2dfLUE3aFVGV1JZZ1FKNHc5SmVTT29Hd0x1c01oQlN4UUJSTGJjOE5rNjVlOGRRWW1EbVZIdXlrdXo1MVJ0SlA2RE1DQmw0SEstUGFVeG9IUVNWblhKZUF6a2dmSDZCSEdSVmxV0gF0QVVfeXFMTTJYaHNtTDZjZ18tQTdoVUZXUllnUUo0dzlKZVNPb0d3THVzTWhCU3hRQlJMYmM4Tms2NWU4ZFFZbURtVkh1eWt1ejUxUnRKUDZETUNCbDRISy1QYVV4b0hRU1ZuWEplQXprZ2ZINkJIR1JWbFU?oc=5",
+        "published": "Wed, 02 Sep 2026 11:48:18 GMT",
+        "publisher": "Infoseek"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度の継続及び従業員に対する新たな株式交付制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507853.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507884.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503849.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "2027年3月期第１四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507860.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507846.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "役員人事に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572690.pdf",
+        "date": "2026-06-17 16:00:00"
+      }
+    ]
+  }
+}

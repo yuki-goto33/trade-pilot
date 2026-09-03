@@ -1,0 +1,223 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-09-03T09:11:54+09:00",
+  "price_as_of": "2026-09-02",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 60,
+    "reasons": [
+      {
+        "reason": "直近14日以内に買いシグナルを出しており、新規の買いは行わず、既存ポジションの継続監視中とする。",
+        "evidence": "reference.recent_buy"
+      },
+      {
+        "reason": "ファンダメンタルズ専門家は、業績の着実な成長と高い株主還元意識、中長期的な技術競争力維持への期待から、60点の「注目」評価としている。",
+        "evidence": "fundamental_view.stance=neutral (strength=60), fundamental_view.points"
+      },
+      {
+        "reason": "テクニカル専門家は、ゴールデンクロスやMACDの上昇シグナル、市場平均を上回る騰落率を根拠に強気の見解を示している。",
+        "evidence": "technical_view.stance=bullish (strength=70), technical_view.points"
+      },
+      {
+        "reason": "しかし、市場全体のダウントレンドや金利上昇、極端なフォワードPERなどの懸念材料も存在し、積極的な新規買いには至らない。",
+        "evidence": "reference.market_regime, fundamental_view.cautions, technical_view.cautions"
+      }
+    ],
+    "risks": [
+      "TOPIXが25日移動平均線を下回るダウントレンドにあり、市場全体の悪化による連れ安リスク。",
+      "日本10年金利の上昇が続いており、負債コスト増やディフェンシブ銘柄からの資金流出が加速する可能性。",
+      "2026-09-17から開催される日銀金融政策決定会合が目前に迫っており、政策変更に伴うボラティリティ上昇リスク。",
+      "ファンダメンタルズ分析で指摘された極端に高いフォワードPERが示す、見えない業績リスクや特殊要因。",
+      "RSIは過熱圏ではないものの、直近の期中高値（3121.0円）付近での戻り売り圧力。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 60,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内に買いシグナルを出しており、新規の買いは行わず、既存ポジションの継続監視中とする。\",\n   \"evidence\": \"reference.recent_buy\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ専門家は、業績の着実な成長と高い株主還元意識、中長期的な技術競争力維持への期待から、60点の「注目」評価としている。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=60), fundamental_view.points\"\n  },\n  {\n   \"reason\": \"テクニカル専門家は、ゴールデンクロスやMACDの上昇シグナル、市場平均を上回る騰落率を根拠に強気の見解を示している。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=70), technical_view.points\"\n  },\n  {\n   \"reason\": \"しかし、市場全体のダウントレンドや金利上昇、極端なフォワードPERなどの懸念材料も存在し、積極的な新規買いには至らない。\",\n   \"evidence\": \"reference.market_regime, fundamental_view.cautions, technical_view.cautions\"\n  }\n ],\n \"risks\": [\n  \"TOPIXが25日移動平均線を下回るダウントレンドにあり、市場全体の悪化による連れ安リスク。\",\n  \"日本10年金利の上昇が続いており、負債コスト増やディフェンシブ銘柄からの資金流出が加速する可能性。\",\n  \"2026-09-17から開催される日銀金融政策決定会合が目前に迫っており、政策変更に伴うボラティリティ上昇リスク。\",\n  \"ファンダメンタルズ分析で指摘された極端に高いフォワードPERが示す、見えない業績リスクや特殊要因。\",\n  \"RSIは過熱圏ではないものの、直近の期中高値（3121.0円）付近での戻り売り圧力。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "個別銘柄としては5日・25日移動平均線のゴールデンクロスに加え、MACDの強い上昇シグナルが出ており、市場全体が調整局面にある中で相対的な強さが際立つ形状です。",
+      "points": [
+        {
+          "point": "短期・中期のトレンドを示す移動平均線がゴールデンクロスし、価格が25日線の上方を維持している。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.last_close=2986.0, price_technical.sma25=2908.36"
+        },
+        {
+          "point": "MACDがシグナルを上回り、ヒストグラムが拡大傾向にあることから、上昇モメンタムの加速が示唆される。",
+          "evidence": "price_technical.macd=17.86, price_technical.macd_histogram=14.04"
+        },
+        {
+          "point": "中期（60日）の騰落率が市場平均を大きくアウトパフォームしており、底堅い買い需要が確認できる。",
+          "evidence": "price_technical.trend_60d.relative_to_topix_60d_pct=5.78, price_technical.trend_60d.change_60d_pct=9.62"
+        },
+        {
+          "point": "前夜のADRが上昇しており、直近の微減から再び上昇へ転じるきっかけとなる可能性がある。",
+          "evidence": "us_overnight.adr.change_1d_pct=0.8"
+        }
+      ],
+      "cautions": [
+        "TOPIXが25日線を下回り市場レジームがdowntrend判定となっているため、地合い悪化による連れ安に注意が必要 (macro.market_regime)",
+        "RSIは58.0と過熱圏ではないが、直近の期中高値（3121.0）付近での戻り売り圧力が懸念される"
+      ],
+      "key_levels": {
+        "support": 2908.36,
+        "resistance": 3121.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "業績は増収増益トレンドを維持し第1四半期も好調な滑り出しを見せているが、市場全体の地合い悪化と金利上昇局面、および極端なフォワードPER数値が示す不透明感が重石となる。",
+      "points": [
+        {
+          "point": "業績は着実な成長を維持しており、2026年3月期まで増収増益が継続。2026年6月中間期（Q1）の希薄化後EPSも51.33円と、前年同期の43.0円から伸長している。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "株主還元への意識が高く、継続的な自己株式の取得状況が適時開示されている。また、ROE 14.6%と資本効率も良好な水準にある。",
+          "evidence": "disclosures.items, fundamentals.valuation.return_on_equity"
+        },
+        {
+          "point": "直近（2026-09-02）では6G周波数の実証成功やAI活用に関する包括連携協定のニュースが相次ぎ、中長期的な技術競争力の維持が期待される材料が出ている。",
+          "evidence": "news.headlines"
+        }
+      ],
+      "cautions": [
+        "市場全体が25日移動平均線を下回るダウントレンド（downtrend）にあり、大型株である同社も指数連動の売りに押されるリスクがある。",
+        "日本10年金利が2.987%まで上昇しており、負債コスト増やディフェンシブ銘柄からの資金流出が懸念される。",
+        "2026-09-17から開催される日銀金融政策決定会合が14日後に迫っており、政策変更に伴うボラティリティの上昇リスクがある。",
+        "フォワードPERが1281.545倍と極めて高い値を示しており、データ上の欠損または特殊要因による利益急減の可能性を精査する必要がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-26",
+    "days_ago": 8,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "山口県とKDDI、地域課題の解決に向けた包括連携協定を締結 - KDDI ニュースルーム",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9kQVZ3RFV4amtIeDhwa3RaR3E2Q3VhRml4ejVidTdCX01tOEJTRmxLSDkxazh6Zl9WWWhYT3c3ckx2WjMxVGFoZ19lcmRyRWtRMDVHZENZTGhfYW1iZ2lfQk1hNW9RNFIwTUhnZA?oc=5",
+        "published": "Wed, 02 Sep 2026 07:00:00 GMT",
+        "publisher": "KDDI ニュースルーム"
+      },
+      {
+        "title": "KDDIスマートモビリティ、南阿蘇村でAIオンデマンド交通「みなモビ」運行開始 Web予約にも対応 土日祝日は定時定路線で運行 - LIGARE（リガーレ）",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE8yUlltUzV5VFhKTnRUWXpmdVpsR0Jfei10V3pwQ1NsU3ZhWlA0U2VIb1pKZFJrVEZZZURheVdlNDBfUHJNNnNyVDdiaEM?oc=5",
+        "published": "Wed, 02 Sep 2026 23:30:57 GMT",
+        "publisher": "LIGARE（リガーレ）"
+      },
+      {
+        "title": "KDDIと山口県が包括連携協定 宇宙通信やAIで地域課題の解決目指す - ビジネスネットワーク",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE94S05TTUlVbFlGMU44TEpxaHNYWDdTMnJoVzh1bkNpNUcwaE5yNEYtNm5BUUtMSm5WR2MxUC1Gd2hnZzdjYnNKVVB3ak9WT0Q5bkE?oc=5",
+        "published": "Wed, 02 Sep 2026 07:42:06 GMT",
+        "publisher": "ビジネスネットワーク"
+      },
+      {
+        "title": "KDDI、6G周波数の実証成功 ７ギガヘルツ帯で下り3.6ギガビット - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE82S2F5N3pqOTVuX0lIaVAtQWJoeWZPbnZXV2ljYjdSRWhHR3M3R0VVeUpCNGI4Q0U5emNSMm9HN3d6ZHpTbElrdkhMWl93Wk0tTjNzMnBXQjU?oc=5",
+        "published": "Wed, 02 Sep 2026 08:20:00 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "KDDIが取り組む地域の魅力化 ～山口県～ | 地域共創（Te to Te） | KDDI株式会社 - KDDI",
+        "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQTlhFUFplVG1XTUQ2aGc2Nmd4QjQ4SnhQbTJ6VTVTRWNJVTM5NUxqR0l6VE1XUDNYeDRObzMySkVqNk03anBXa0l6SHpMUXgwWDZZaWs3M1MySE9fZzVDNlZQZnFEaG5yZDEzeUJDZVNhRnNXZUExRHp4OW5lMk91MUdPR21iRmUyc20wTEdhNlZtMkZ3N25vaGx1NnZSbjRxbHcyeTVxdTE0ZnB0ME9jb3BTcnVwelY3d2ZZMVVkQ0pnMUxNR0lpTmZKaXg0WVFaWTc1RHFuZnhpbXJa?oc=5",
+        "published": "Wed, 02 Sep 2026 07:18:05 GMT",
+        "publisher": "KDDI"
+      },
+      {
+        "title": "ビジネスイベント「KDDI SUMMIT 2026」、10月27日から開催 AI社会実装の最新事例を紹介 - ケータイ Watch",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1vV2l3N3FNcU5HU2NPVHVKU1p0eU81WW4wclA5bVcxR0JMUEhnSFp4aHlQMUV5akxaOUZoRzVKdU16VVk3ZXM2eHVpV1loaFF2dW9KMVZnekFYQkptUzVhZHVuRTdxVzg?oc=5",
+        "published": "Wed, 02 Sep 2026 04:38:48 GMT",
+        "publisher": "ケータイ Watch"
+      },
+      {
+        "title": "【山口】県とＫＤＤＩ最先端技術活用し地域活性化へ（yab山口朝日放送） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1kN19uYjM3RXJDcUpGcDZ2OEdNTG1udFAyZS1DUlZEcmZsSTFxZ3lOcjVLUFA3SlZieWtwR3RQcF82a0dCV2h3cm5WTXhNODkwSGUwMVFlQ3d4eDFqTW0yelNEUW1PZldHVmx4bmVkT0RMYmVjbHhPdW9KbXRiRU0?oc=5",
+        "published": "Wed, 02 Sep 2026 13:51:32 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "KDDI、6G候補7GHz帯で屋外3.6Gbps達成 世界最高水準と発表 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBfeE9WMXdtQ2tvcTdld2ZPQ2tLS2JuZmhmZTc1RnZ1R0o5UkxlVEU1Zm00Mm9BbVd1aGVYRl9OM2xEckU5UEV3YkJwYXdmQXZlQy1XSHk2WXZBc3NOWnNYVFNpSmNpMTB5SWFoM1Z4LW5VUzRf?oc=5",
+        "published": "Wed, 02 Sep 2026 09:31:45 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "KDDI、7GHz帯で6G向け実証 ダウンリンク3.6Gbpsを達成 - EnterpriseZine",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5CRGhLUk9QYzEwUUJQNFp0Q0x0QWJYVVd2UlJvQVpzZ054S0p4Nng1aXlMMjBYWHhsd1VoYnI4X1JaNUxFZF8yQWJLWU9LU0VKdW9RN0tn?oc=5",
+        "published": "Wed, 02 Sep 2026 06:03:44 GMT",
+        "publisher": "EnterpriseZine"
+      },
+      {
+        "title": "KDDIら、AI時代の通信需要に応える「6G」へ一歩前進　7GHz帯でも「Sub6並みに電波が届く」のか - ITmedia Mobile - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE84a21QeHJZUXVCVGVlaHVtMmM4b0FnVUlpSUpQbWFyTjNaZEw4cW12U080MGZiRldyS2kxMWRFYmd5NWhIeFBJS3hyaDNKbzdVdkQtdWY4NjBwdlZKaFB6cjFOU0NkYnpK0gFoQVVfeXFMTzhrbVB4cllRdUJUZWVodW0yYzhvQWdVSWlJSlBtYXJOM1pkTDhxbXZTTzQwZmJGV3JLaTExZEViZ3k1aEh4UElLeHJoM0pvN1V2RC11Zjg2MHB2VkpoUHpyMU5TQ2Rieko?oc=5",
+        "published": "Wed, 02 Sep 2026 03:30:00 GMT",
+        "publisher": "ITmedia"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      }
+    ]
+  }
+}
