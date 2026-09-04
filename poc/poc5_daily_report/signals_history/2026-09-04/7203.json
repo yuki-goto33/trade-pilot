@@ -1,0 +1,211 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-09-04T08:56:48+09:00",
+  "price_as_of": "2026-09-03",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の strength が 60 と「織り込み前」の基準（70以上）に達しておらず、減益トレンドや円高進行といった不透明要素が上値を抑えています。",
+        "evidence": "fundamental_view.strength=60, fundamental_view.points[0], fundamental_view.points[1]"
+      },
+      {
+        "reason": "テクニカル面で中期的な上昇トレンドを維持しつつも、短期的には5日移動平均線を下回り調整局面に入っており、押し目を確認する段階にあります。",
+        "evidence": "technical_view.points[0], technical_view.points[1], price_technical.last_close=3117.0"
+      },
+      {
+        "reason": "1兆円規模の自社株買いによる下支え効果が期待される一方で、直近の急速な円高（155.7円）による輸出採算悪化リスクを評価する必要があります。",
+        "evidence": "fundamental_view.points[2], fundamental_view.points[1]"
+      }
+    ],
+    "risks": [
+      "2026年9月17日〜18日の日銀金融政策決定会合に伴う為替・金利の急変動リスク",
+      "下値支持線として意識される25日移動平均線（3049.26円）を割り込んだ場合の下落加速",
+      "想定以上の円高進行に伴う、11月の第2四半期決算での業績下方修正懸念"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 60,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ専門家の strength が 60 と「織り込み前」の基準（70以上）に達しておらず、減益トレンドや円高進行といった不透明要素が上値を抑えています。\",\n      \"evidence\": \"fundamental_view.strength=60, fundamental_view.points[0], fundamental_view.points[1]\"\n    },\n    {\n      \"reason\": \"テクニカル面で中期的な上昇トレンドを維持しつつも、短期的には5日移動平均線を下回り調整局面に入っており、押し目を確認する段階にあります。\",\n      \"evidence\": \"technical_view.points[0], technical_view.points[1], price_technical.last_close=3117.0\"\n    },\n    {\n      \"reason\": \"1兆円規模の自社株買いによる下支え効果が期待される一方で、直近の急速な円高（155.7円）による輸出採算悪化リスクを評価する必要があります。\",\n      \"evidence\": \"fundamental_view.points[2], fundamental_view.points[1]\"\n    }\n  ],\n  \"risks\": [\n    \"2026年9月17日〜18日の日銀金融政策決定会合に伴う為替・金利の急変動リスク\",\n    \"下値支持線として意識される25日移動平均線（3049.26円）を割り込んだ場合の下落加速\",\n    \"想定以上の円高進行に伴う、11月の第2四半期決算での業績下方修正懸念\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "中期的には60日騰落率やゴールデンクロスなど上昇トレンドを維持しているものの、直近2営業日の急落で5日移動平均線を下回っており、短期的には調整局面にあるため中立と判断します。",
+      "points": [
+        {
+          "point": "60営業日騰落率がTOPIXをアウトパフォームし、SMA5がSMA25を上回るゴールデンクロスおよびMACD陽転が継続しており、中期的なトレンドは上向きを維持しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=10.14, price_technical.sma5_vs_sma25='golden(5日線が25日線の上)', price_technical.macd_histogram=7.97"
+        },
+        {
+          "point": "9月1日の高値（終値3243.0円）から2営業日連続で下落し、終値が5日移動平均線を下回り、RSIも中立水準まで低下するなど短期的モメンタムは弱含んでいます。",
+          "evidence": "price_technical.last_close=3117.0, price_technical.sma5=3153.0, price_technical.rsi14=47.9, price_technical.recent_5_days"
+        },
+        {
+          "point": "前夜のNY市場でADRおよび一般消費財セクターETFが上昇しており、寄り付きにおける短期的な下支え効果が期待されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=0.79, us_overnight.sector_proxy.change_1d_pct=1.39"
+        }
+      ],
+      "cautions": [
+        "直近の調整が継続し、下値支持線として意識される25日移動平均線（3049.26円）を割り込むと下落圧力が強まるリスクがあります。",
+        "前夜NY市場でのADR上昇は寄り付き段階で価格に織り込まれ、寄り付き後に戻り売りに押される可能性があります。",
+        "市場レジームがneutralであり、日経平均の直近下落など全体地合いの軟調さが上値を抑える懸念があります。"
+      ],
+      "key_levels": {
+        "support": 3049.26,
+        "resistance": 3269.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "業績が減益トレンドにある中、急激な円高の進行が輸出採算への懸念を強めている。PBR1倍割れの割安感や巨額の自社株買いが下値を支えるものの、上昇を牽引する新規材料に乏しい。",
+      "points": [
+        {
+          "point": "通期連結業績予想において営業利益が前期比9.7%減の3.4兆円を見込んでおり、2024年3月期をピークとした減益トレンドが鮮明となっている。",
+          "evidence": "fundamentals.earnings_trend.annual および fundamentals.recent_important_disclosures (2026-08-04)"
+        },
+        {
+          "point": "直近1日でドル円相場が155.7円（-2.03%）と円高方向に急伸しており、輸出セクターの代表銘柄である同社にとって利益圧縮要因となるリスクが高い。",
+          "evidence": "macro.indices (ドル円)"
+        },
+        {
+          "point": "総額1兆円を上限とする自己株式取得枠に基づき、2026年8月中に約865億円の買付を実施したことが公表され、需給面での一定の下支えが期待される。",
+          "evidence": "fundamentals.recent_important_disclosures (2026-09-03)"
+        },
+        {
+          "point": "製造業PMIは54.9と7ヶ月連続の拡大を示しており外部環境の需要自体は堅調だが、仕入価格DIと販売価格DIの差によるコスト圧迫懸念が残る。",
+          "evidence": "macro.japan_pmi.manufacturing および macro.jfc_sme_survey"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日〜18日に開催される日銀金融政策決定会合に伴う金利・為替の急変動リスク",
+        "円高進行による輸出採算悪化と、それに伴う通期業績の再下方修正リスク",
+        "2026年11月5日に予定されている第2四半期決算発表での進捗確認"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "トヨタ自動車、部品輸送に水素トラック活用を検討―燃料コスト高騰受け 執筆 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBmZmNCaG9RaXdiNWV1S2xyWjY1Q1cyeDA1UUU5NjJsVEU2X2x0NW1USExkSERtQXJzZ241Y3lJQ2NGeDRYZFJvcG95aVRVc1o0M0Vfd1Yya283Y1VtQVRRcjVzVlJ6NG9pODRnT3p1UmhFUUl5Z0hj?oc=5",
+        "published": "Thu, 03 Sep 2026 22:07:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      },
+      {
+        "title": "クラウンを一部改良 | トヨタ | グローバルニュースルーム - トヨタ自動車株式会社 公式企業サイト",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBqeWFJRXhvLWVDT0gtV1hOQlRJalVCVEJ2R3g3SllsM2pZenE3LUFVcVpzSXVGMmYxN3NzLW9ucm9waG50UzhsdTgxVXJKeE5YTWE4VmNDbWI3b3RNVEFYS0drWlE?oc=5",
+        "published": "Thu, 03 Sep 2026 04:30:20 GMT",
+        "publisher": "トヨタ自動車株式会社 公式企業サイト"
+      },
+      {
+        "title": "トヨタ自動車の「おやじの教え」 河合満・元副社長、生産現場一筋を振り返る - yomiuri.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA5UjR1WVBOd0VXMGVoMmsybUF5Z2psZnRpWEduYzJoQTJic0pnTjVOR0NaZElRM3VLSlJxUllqeTA5dXU2dEs1cTdfUE8yUFB0Y3c0YU5oVWdyR0U?oc=5",
+        "published": "Thu, 03 Sep 2026 17:01:36 GMT",
+        "publisher": "yomiuri.co.jp"
+      },
+      {
+        "title": "プロスノーボーダーの鬼塚雅が佐賀トヨタ自動車とスポンサー契約 佐賀との縁と故郷熊本への思い （スポニチアネックス） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE50V25uYW9FSkxtUmtCbWVXMGRycXltNWVfMEtOTFVveVVRcl9kMk9WSHlTdUxOdWliV0RxZXE1WDRYZFFvT2kxZHRiTzI0azRPWFFkSU9XRkpHRjQ5RGRINFpvRnVwYWUxOUViaXNNZU1aUjN0MktQbG1tOXNOT00?oc=5",
+        "published": "Thu, 03 Sep 2026 08:11:59 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "【未来実証都市×静岡県】トヨタ自動車｢ウーブン･シティ｣実証成果の社会反映ねらいに運営母体と県が連携協定 - 日テレNEWS NNN",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNUmlNMWZrcG9CR25NZzI3Sjdwa1pfUlI5RzVBLWRQbW14NUNQSWliT3Jka0h2VFNVUzlhNmEySWp6TzJlRmF0RUlpb3JFcjZVWEhfNGFlajFyNXVBQ2RSR1BrOWtjQ3VEX29NdmdVWXgtcldta2N6Qi1scUstbnp2aXJKVHItVWM?oc=5",
+        "published": "Thu, 03 Sep 2026 09:04:00 GMT",
+        "publisher": "日テレNEWS NNN"
+      },
+      {
+        "title": "プロスノーボーダー・鬼塚雅が佐賀トヨタ自動車とスポンサー契約「自分らしく新しいことに挑戦し続けたい」 - スポーツブル",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE11bGdCYkZvWk9JU0k5WVVXZUh3b05yNEVGdW52THRlSGk1U2M5Y3dTaVhJeGxjRkFIZUs5SHM3bnNkVFBrWmNn?oc=5",
+        "published": "Thu, 03 Sep 2026 09:31:00 GMT",
+        "publisher": "スポーツブル"
+      },
+      {
+        "title": "プロスノーボーダー・鬼塚雅が佐賀トヨタ自動車とスポンサー契約「自分らしく新しいことに挑戦し続けたい」 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOQjFyRzdWQ1JjSHF2TXhydzN4VG84MUJ0ZlNlNHNyUWZaYkZTZ0xDbHdnVXZxaElnQ1RJWnhraFl4dGhHNE0xSzJKOXZfVnJibjdMQ3dZQlhaMGdGUWF4cjdHbU8tLTE2bkNSQ3FrdG1GSXVZazBEajNUUFdGbWNWY2ZmLXfSAYoBQVVfeXFMTmt0dTMzNzg4a3FweWVycWZTenFZSGlDY0Ryd3AtZDl2UkVab2RGSzhHUjN5UFZoN0hIX3lBY2dfMFJSSVdqeEpiYlN3Z2RhSkltaXl0NVZOaWpEZzdtRWNfRzZJMWwzdjc4RHdFTlRySHZCY2JVSnZRQkNYZzQ3TXVkUFVmcjljcG1R?oc=5",
+        "published": "Thu, 03 Sep 2026 09:31:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "【28卒の理系学生が選ぶ】「就職人気企業」ランキングTOP20！　第1位は「トヨタ自動車」【2026年最新調査結果】（1/2） | 就職・転職 ねとらぼリサーチ - ねとらぼ",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE10WkEzbzE2ajlIOW9fZ2VMY2d0bnR4SkJBa1diZ0JPRU5NZXVDeXBMZGw3R2tmWHhZMUJldFlOUFY5VG04eXdCeEpuVTBrQng0WHgxQ3h2dmlCSm1UbExDTnIyMNIBaEFVX3lxTFBEUk1fdm1Kc01QTFZMT0plUmN4Y3JfRnRhSHhxdVZJanh1ZjBUWnZiYlZBRVNWczE3UkU3ZnV4aUZKSXA0eEFWUFpEajh4SGE5MkhnQkJZY3A0RDNBZUx1RlhubmV0aTZL?oc=5",
+        "published": "Thu, 03 Sep 2026 09:30:00 GMT",
+        "publisher": "ねとらぼ"
+      },
+      {
+        "title": "トヨタ『e-Palette』を活用、自動運転の全国展開を加速…NTTモビリティとMay Mobility - レスポンス（Response.jp）",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE43WnVpVUdIYklzSGl0dlJDTHp2enBXWlBUOHN2Z25kZkN2QklqQWtqQzBVdzFHV1NVTUVQbWN5VTZBVkpHcEFGbkk3YjlJdkxLR0huX3U2NkFXQjVpcUZB?oc=5",
+        "published": "Thu, 03 Sep 2026 09:15:03 GMT",
+        "publisher": "レスポンス（Response.jp）"
+      },
+      {
+        "title": "トヨタ クラウン クロスオーバー改良新型、第5世代ハイブリッド導入で燃費・出力向上…リアデザインも変更 - startyourengines.net",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9uc0h1bThndEdWVFA2NXJocVNPUWNUMS1Gbmp3OWdIN1JSQWhBZXB1QWV3b2N6Nk1oTHBydnQxYU5ZbGhGWHU2Y2VPLWpSUXJZc3pUSTBaV1ZLZEVQV0I3S1BuZw?oc=5",
+        "published": "Thu, 03 Sep 2026 08:03:27 GMT",
+        "publisher": "startyourengines.net"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903531084.pdf",
+        "date": "2026-09-03 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度の継続及び従業員に対する新たな株式交付制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507853.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507884.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503849.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "2027年3月期第１四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507860.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507846.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      }
+    ]
+  }
+}

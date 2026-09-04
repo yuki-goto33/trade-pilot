@@ -1,0 +1,223 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-09-04T09:10:27+09:00",
+  "price_as_of": "2026-09-03",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 90,
+    "reasons": [
+      {
+        "reason": "統合判断ルールに基づき、ファンダメンタルズ専門家（strength 75）とテクニカル専門家（strength 75）がともに強気の見解を示しているため、最適なエントリーポイントを過ぎている可能性が高いと判断し、新規の買いシグナルは見送ります。",
+        "evidence": "integration_rule.v5.rule1: ファンダメンタルズ専門家=bullish(strength=75) かつ テクニカル専門家=bullish(strength=75)"
+      },
+      {
+        "reason": "ファンダメンタルズ専門家は、バークシャー・ハサウェイCEOによる大手商社株の長期保有方針、AI関連事業の進展、及び堅調なマクロ経済環境を好材料と捉え、株価上昇への期待が高いとの見解です。",
+        "evidence": "fundamental_view.stance=bullish (strength=75), fundamental_view.points[0-3]"
+      },
+      {
+        "reason": "テクニカル専門家は、5日線と25日線のゴールデンクロス、MACDの強い買い圧力、堅調なRSI、TOPIXをアウトパフォームする中期上昇トレンド、そして直近の大幅高と米国ADRの好調を根拠に、短期・中期の上昇トレンドが継続していると判断しています。",
+        "evidence": "technical_view.stance=bullish (strength=75), technical_view.points[0-4]"
+      }
+    ],
+    "risks": [
+      "次回決算発表（2026年11月3日）の内容によっては株価に変動をもたらす可能性があります。",
+      "日本銀行の金融政策決定会合（2026年9月17日〜18日）が市場に影響を与える可能性があります。",
+      "直近の大幅上昇による短期的な利益確定売りが発生する可能性があります。",
+      "ドル円の円高方向への動きは、総合商社の事業収益に悪影響を及ぼすリスクがあります。",
+      "市場全体の地合いが「neutral」であるため、上値追いの勢いが限定される可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 90,\n \"reasons\": [\n  {\n   \"reason\": \"統合判断ルールに基づき、ファンダメンタルズ専門家（strength 75）とテクニカル専門家（strength 75）がともに強気の見解を示しているため、最適なエントリーポイントを過ぎている可能性が高いと判断し、新規の買いシグナルは見送ります。\",\n   \"evidence\": \"integration_rule.v5.rule1: ファンダメンタルズ専門家=bullish(strength=75) かつ テクニカル専門家=bullish(strength=75)\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ専門家は、バークシャー・ハサウェイCEOによる大手商社株の長期保有方針、AI関連事業の進展、及び堅調なマクロ経済環境を好材料と捉え、株価上昇への期待が高いとの見解です。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=75), fundamental_view.points[0-3]\"\n  },\n  {\n   \"reason\": \"テクニカル専門家は、5日線と25日線のゴールデンクロス、MACDの強い買い圧力、堅調なRSI、TOPIXをアウトパフォームする中期上昇トレンド、そして直近の大幅高と米国ADRの好調を根拠に、短期・中期の上昇トレンドが継続していると判断しています。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=75), technical_view.points[0-4]\"\n  }\n ],\n \"risks\": [\n  \"次回決算発表（2026年11月3日）の内容によっては株価に変動をもたらす可能性があります。\",\n  \"日本銀行の金融政策決定会合（2026年9月17日〜18日）が市場に影響を与える可能性があります。\",\n  \"直近の大幅上昇による短期的な利益確定売りが発生する可能性があります。\",\n  \"ドル円の円高方向への動きは、総合商社の事業収益に悪影響を及ぼすリスクがあります。\",\n  \"市場全体の地合いが「neutral」であるため、上値追いの勢いが限定される可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "三菱商事の株価は、短期・中期の上昇トレンドが継続しており、主要なテクニカル指標も強気を示しています。前夜の米国ADRも好調でした。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日移動平均線を上回るゴールデンクロスを形成しており、短期的な上昇トレンドを示唆しています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\""
+        },
+        {
+          "point": "MACDヒストグラムがプラス圏で大きく推移しており、買い圧力が強い状態を示しています。",
+          "evidence": "price_technical.macd_histogram=32.24"
+        },
+        {
+          "point": "RSI14が64.5と堅調な水準にあり、買われすぎではないものの勢いがあることを示しています。",
+          "evidence": "price_technical.rsi14=64.5"
+        },
+        {
+          "point": "直近60営業日の騰落率が5.29%とプラスであり、TOPIX対比でも1.9%とアウトパフォームしており、中期的な上昇トレンドにあります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=5.29, price_technical.trend_60d.relative_to_topix_60d_pct=1.9"
+        },
+        {
+          "point": "直近5営業日の最終日は4.09%の大幅高で引けており、期間高値に迫る強い値動きを見せました。また、前夜の米国ADRも3.21%上昇しています。",
+          "evidence": "price_technical.recent_5_days[4].change_pct=4.09, price_technical.period_high=5123.0, us_overnight.adr.change_1d_pct=3.21"
+        }
+      ],
+      "cautions": [
+        "市場全体の地合いは「neutral」判定であり、上値追いの勢いが限定される可能性があります。",
+        "前夜のNY市場で同業種のセクターETF（XLE）が下落しており、セクター全体としては逆風となる可能性があります。",
+        "直近の大幅上昇（4.09%）の反動で、短期的な利益確定売りが出る可能性があります。",
+        "前夜の米国ADRの好調は、すでに当日の寄り付き価格に織り込まれる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 4893.0,
+        "resistance": 5123.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "バークシャー・ハサウェイCEOによる大手商社株の長期保有方針表明が直近の株価上昇の強力なカタリストとなっており、AI関連事業の進展と良好なマクロ経済環境がこれを後押しすると考えられます。",
+      "points": [
+        {
+          "point": "バークシャー・ハサウェイCEOが日本の大手商社株を長期保有する姿勢を明らかにしたとの報道が多数あり、これが直近の株価反発・上昇の明確な好材料となっています。",
+          "evidence": "news.headlines[1].title='三菱商事---大幅反発、バークシャーCEOが大手商社株の長期保有姿勢を明らかに - 株探', news.headlines[3].title='三菱商事など商社株が軒並み高、バークシャーCEOが長期保有の方針 - Bloomberg.com', news.headlines[5].title='三菱商事など総合商社株が上昇､バークシャが長期投資方針表明 - 四季報オンライン', news.headlines[8].title='三菱商事など商社株が高い 米バークシャーCEO「何十年も投資」（3日の株式市場） - 日本経済新聞'"
+        },
+        {
+          "point": "AIを活用した法務の強化やAIデータセンター検証施設の開設など、AI関連分野への積極的な取り組みがニュースで報じられており、今後の事業成長への期待が高まります。",
+          "evidence": "news.headlines[0].title='三菱商事、AIで磨く「攻めの法務」 契約・投資の盲点を洗い出す - 日本経済新聞', news.headlines[9].title='三菱商事データセンター子会社デジタルリアルティが印西に作ったNVIDIA最新AIデータセンター検証施設「DRIL」の中身 - さっつーのAIエージェント'"
+        },
+        {
+          "point": "日本の製造業PMIおよびサービス業PMIは2026年8月時点でそれぞれ54.9、52.5と50を超えており、経済活動の拡大が継続していること、特に製造業PMIのサマリーでAI関連需要が指摘されている点は事業環境にとってポジティブです。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9, macro.japan_pmi.services.latest_value=52.5, macro.japan_pmi.manufacturing.summary_en='...steepest rise in new orders in four-and-a-half years amid strong AI-related demand.'"
+        },
+        {
+          "point": "日銀短観（2026年6月調査）において、大企業の業況判断DIは製造業が22.0、非製造業が37.0と、ともに良好な水準を維持しており、国内の景況感が堅調であることが示唆されます。",
+          "evidence": "macro.boj.tankan.di.large_manufacturing.current_di=22.0, macro.boj.tankan.di.large_nonmanufacturing.current_di=37.0"
+        }
+      ],
+      "cautions": [
+        "2026年3月期の年間純利益（8005億円）および希薄化後EPS（209.78円）は、前期（2025年3月期）と比較して減少予想となっています。",
+        "次回決算発表日が2026年11月3日に予定されており、その内容によっては株価に変動をもたらす可能性があります。",
+        "日本銀行の金融政策決定会合が2026年9月17日から18日にかけて開催される予定であり、金融政策に関する市場の動向が株価に影響を与える可能性があります。",
+        "ドル円は直近で円高方向に動いており（1日比-2.03%、5日比-2.76%）、総合商社の事業構造によっては為替変動が収益に影響を及ぼすリスクがあります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "三菱商事、AIで磨く「攻めの法務」 契約・投資の盲点を洗い出す - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE0tQWtBb0YyRGFxVUY4QnNmcGFzeDdfb0N6akpkRTdNamdReVBmT0dSMlFaTkNxeTFpX1dONjNKekhZaG03djlMVEQ0VjFDV0N0bHV5WVZ1UVJFcXF0cnJyUXNCVWxGZ085Rk0wdg?oc=5",
+        "published": "Thu, 03 Sep 2026 17:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "三菱商事(株)【MTSUY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1mS2dERDhJUEpRcDJORFk4NEpnS01xNlVJZ0hkMnlWMDQzLWt0cXlDV3dZSUs2NFRkTlFFRUR2SnRNRkRBeVBFT1Z6elA4UURB?oc=5",
+        "published": "Thu, 03 Sep 2026 11:12:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "三菱商事---大幅反発、バークシャーCEOが大手商社株の長期保有姿勢を明らかに - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5DanotcEZIM2pPd0Z4R3Q0bWNlOXVFMzIxWk5RZHlwQmxSYU43eFlzSFZoVGZVMWltR29WbG9EZldNc3diS1N0SWMwV1V0MmdESWE1SVhFaVU0M1lQbEtGRg?oc=5",
+        "published": "Thu, 03 Sep 2026 03:50:18 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "三菱商事など商社株が軒並み高、バークシャーCEOが長期保有の方針 - Bloomberg.com",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9vLWZLUlBjUTZJNFZycXUtVHZrbzhDaE9JcXVES18wcERXbFlkQVppUlNaTGV6dXFxZW5TTm1pTW5JaGYxTWFNYktuQ1F0U19ZbEhaTzlMUUJNaUJnT2s1NVZoRDlaQVd5NEV3eXM5RTBUZzNJaWhN?oc=5",
+        "published": "Thu, 03 Sep 2026 09:51:33 GMT",
+        "publisher": "Bloomberg.com"
+      },
+      {
+        "title": "（まとめ）日経平均は111円安の64,214円で4日続落　個別材料からニトリや三菱商事に買い - マネクリ",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1oWVd4eF9FcXMzdUZjS3ZrTDNyejdRWFo1LVNqZmdNYy01UjRpOE1IVVBySk1hcVNQbUxDYmxVN0VSUjB5amdoenJGMEpmbmdHUm9nV9IBV0FVX3lxTFByM3pKS0dmMzlVR3V0NEwwTFRNRl84M25uWXpnWDQ2aTFoVFZYbmNXT3E1aXRRUGVZeldoVlhoV0xna3UzV0xMS1czZXE4cE94Nlc5ZFFRNA?oc=5",
+        "published": "Thu, 03 Sep 2026 07:20:00 GMT",
+        "publisher": "マネクリ"
+      },
+      {
+        "title": "三菱商事など総合商社株が上昇､バークシャが長期投資方針表明 - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9pelFHUVVhN1QyQ2lWSmozcEdFbVNGdi1OWFVhT0RuWVhkNVRDWk5xcjRPS0lrUU5POUtkdlFndzBqa3R2WHZwUE00WGdnVG45UHhBVlhMWQ?oc=5",
+        "published": "Thu, 03 Sep 2026 02:17:57 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "【奥村組と三菱商事都市開発】大阪市で3万㎡の物流施設着工 - 建設通信新聞Digital",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE85d3dVRmljMnRhcVVDbWhZNVIyUzhVeElSRGJLQl9Va0ZqemU0N2pPM3hhTm42OEdKeDEwSGZ3ZDU4RFdQYkVsNDhyXzF2SjBVNDJHWjNaOA?oc=5",
+        "published": "Thu, 03 Sep 2026 00:58:00 GMT",
+        "publisher": "建設通信新聞Digital"
+      },
+      {
+        "title": "三菱商事の株価が本日急騰した理由とは 執筆 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1CQVNSS1hNcHpZelEyMmJ1bV9KNFlSZ19DMTktME0xZmhwM2NWY2ZGZW8zN3N2N0o4OTVzOTJXazM0NUlOY3k1cWRtOW5ROVJpU3JJd3pQdUZrUW5TeUhMOGpjRFVPYzB5Zll0eG9BN0YzY282MDE4?oc=5",
+        "published": "Thu, 03 Sep 2026 04:03:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      },
+      {
+        "title": "三菱商事など商社株が高い 米バークシャーCEO「何十年も投資」（3日の株式市場） - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFA3bkh6Q1BOQ3A1eVhlcHRXSlpmYXp5MTBVbGc1WnZIX3FPcXJ3bDBWODBsUXB6T0VWanlEckpiR0dObDFtQ0E4VjltcHdwLXd1VWVEVlFxT2dMdzV6aDJuaklEUU03eXdHWUNCeQ?oc=5",
+        "published": "Thu, 03 Sep 2026 07:30:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "三菱商事データセンター子会社デジタルリアルティが印西に作ったNVIDIA最新AIデータセンター検証施設「DRIL」の中身 - さっつーのAIエージェント",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0ycklQTkYtZGZocEVhZlNUQU5hTnZkMlZ4MUtnYnFHUS15NDhqU2dKbVpkdktFLWQta0hPUDBWSk5xVlhrY1pmZW1UUFBEck40b3k1eUQ5QlFpSURPRkt6Vmp4N1pwLTMyU3c?oc=5",
+        "published": "Thu, 03 Sep 2026 20:54:37 GMT",
+        "publisher": "さっつーのAIエージェント"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期第1四半期決算短信〔IFRS〕(連結）（監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510489.pdf",
+        "date": "2026-08-06 15:25:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505791.pdf",
+        "date": "2026-08-03 14:00:00"
+      },
+      {
+        "title": "特定子会社の異動（子会社の特定子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260714593288.pdf",
+        "date": "2026-07-15 10:00:00"
+      },
+      {
+        "title": "子会社間の合併及び特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552595.pdf",
+        "date": "2026-05-29 09:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C2プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539898.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C3プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539905.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C4プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539910.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C5プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539918.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C6プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539939.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515679.pdf",
+        "date": "2026-05-01 14:00:00"
+      }
+    ]
+  }
+}

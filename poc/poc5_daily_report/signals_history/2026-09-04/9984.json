@@ -1,0 +1,211 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-09-04T09:05:02+09:00",
+  "price_as_of": "2026-09-03",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ面では米子会社SBエナジーのIPO申請による8兆円超の資産価値顕在化や、1兆円規模の資金調達によるAI投資加速が極めて強力な買い材料と評価されます。",
+        "evidence": "fundamental_view.points[0]: 米SBエナジー新規上場申請、fundamental_view.points[1]: 個人向け債で1兆円調達"
+      },
+      {
+        "reason": "一方でテクニカル面は極めて弱気であり、直近1日の大幅下落（-6.42%）やSMA5/SMA25のデッドクロス、TOPIX比での大幅劣後など、下落モメンタムが依然として強い状態にあります。",
+        "evidence": "technical_view.stance=bearish (strength=75), technical_view.points[1]: SMA5とSMA25のデッドクロス"
+      },
+      {
+        "reason": "統合判断ルールに基づき、ファンダメンタルズが強気であってもテクニカルが弱気（下落トレンド）の場合は、押し目確認が必要な「落ちるナイフ」の状態とみなし、エントリーを見送ります。",
+        "evidence": "technical_view.points[2]: 直近5109.6円を大きく下回る5001円での引け、統合判断ルール1"
+      }
+    ],
+    "risks": [
+      "13日後に控える日銀金融政策決定会合に伴う円高・金利上昇が、同社の有利子負債やデリバティブ損益に与えるネガティブな影響",
+      "テクニカル的なサポートラインである4500円付近までのさらなる調整リスク",
+      "日経平均株価自体の短期的な下落基調継続による、投資ポートフォリオ評価額の減少"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ面では米子会社SBエナジーのIPO申請による8兆円超の資産価値顕在化や、1兆円規模の資金調達によるAI投資加速が極めて強力な買い材料と評価されます。\",\n   \"evidence\": \"fundamental_view.points[0]: 米SBエナジー新規上場申請、fundamental_view.points[1]: 個人向け債で1兆円調達\"\n  },\n  {\n   \"reason\": \"一方でテクニカル面は極めて弱気であり、直近1日の大幅下落（-6.42%）やSMA5/SMA25のデッドクロス、TOPIX比での大幅劣後など、下落モメンタムが依然として強い状態にあります。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=75), technical_view.points[1]: SMA5とSMA25のデッドクロス\"\n  },\n  {\n   \"reason\": \"統合判断ルールに基づき、ファンダメンタルズが強気であってもテクニカルが弱気（下落トレンド）の場合は、押し目確認が必要な「落ちるナイフ」の状態とみなし、エントリーを見送ります。\",\n   \"evidence\": \"technical_view.points[2]: 直近5109.6円を大きく下回る5001円での引け、統合判断ルール1\"\n  }\n ],\n \"risks\": [\n  \"13日後に控える日銀金融政策決定会合に伴う円高・金利上昇が、同社の有利子負債やデリバティブ損益に与えるネガティブな影響\",\n  \"テクニカル的なサポートラインである4500円付近までのさらなる調整リスク\",\n  \"日経平均株価自体の短期的な下落基調継続による、投資ポートフォリオ評価額の減少\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "中期トレンドが市場（TOPIX）に対して大幅に劣後しており、短期・中期移動平均線のデッドクロスやMACDの悪化から、下落基調が継続していると判断します。",
+      "points": [
+        {
+          "point": "深刻な中期下落トレンドの継続。60営業日騰落率が-29%を超え、対TOPIX相対騰落率も大幅なマイナスを示しており、構造的な弱気相場にある。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-29.04, relative_to_topix_60d_pct=-32.43"
+        },
+        {
+          "point": "トレンド指標およびモメンタムの悪化。SMA5とSMA25がデッドクロス状態にあり、MACDもシグナルを下回ってマイナス圏で推移している。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.macd_histogram=-24.41"
+        },
+        {
+          "point": "直近の急落による売り圧力の強さ。9月2日に-6.42%の大幅下落を記録し、直近5営業日のSMA5（5109.6円）を大きく下回る水準まで売り込まれている。",
+          "evidence": "price_technical.recent_5_days[3].change_pct=-6.42, price_technical.last_close=5001.0"
+        }
+      ],
+      "cautions": [
+        "前夜のADRが+5.04%と大幅上昇しており、当日の寄り付きで窓を開けて上昇する可能性がある（us_overnight.adr）",
+        "RSI14が30.6と売られすぎ水準に接近しており、テクニカル的な自律反発が入りやすい価格帯である（price_technical.rsi14）",
+        "米国市場のS&P500やセクターETFが上昇しており、外部環境の改善が戻り試しのきっかけになる可能性がある（macro.indices, us_overnight.sector_proxy）"
+      ],
+      "key_levels": {
+        "support": 4500.0,
+        "resistance": 5343.36
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "傘下のSBエナジーによる米国ナスダックへのIPO申請という強力な資産価値顕在化の材料に加え、1兆円規模の個人向け社債発行によるAI分野への投資加速姿勢を評価します。マクロ面でもAI関連需要の強さが製造業PMIを押し上げており、同社の投資戦略と整合しています。",
+      "points": [
+        {
+          "point": "子会社SBエナジーが米国でIPOを申請し、企業価値が8兆円を超える可能性が報じられたことは、保有資産のバリュエーション再評価に直結する強い材料です。",
+          "evidence": "news.headlines[1]（米SBエナジー 新規上場を申請 企業価値8兆円超か 2026-09-03）"
+        },
+        {
+          "point": "個人向け債で1兆円の資金調達を実施するなど、AI投資を加速させるための財務基盤の確保が迅速に進んでいます。",
+          "evidence": "news.headlines[0]（ソフトバンクグループ、個人向け債で1兆円 2026-09-03）"
+        },
+        {
+          "point": "2027年3月期第1四半期において1.8兆円超の投資利益を計上しており、投資会社としての収益獲得能力が維持されています。",
+          "evidence": "fundamentals.recent_important_disclosures（2026-08-06 投資利益1兆8,594億円を計上）"
+        },
+        {
+          "point": "日本の製造業PMIがAI関連需要に支えられて拡大傾向にあり、同社が注力するAIインフラ投資に対する外部環境の追い風が確認できます。",
+          "evidence": "macro.japan_pmi.manufacturing（latest_value=54.9, strong AI-related demand）"
+        }
+      ],
+      "cautions": [
+        "13日後に日銀金融政策決定会合を控えており、国内金利の上昇や為替の円高進行が財務費用およびデリバティブ関連損益に与えるリスク（macro.boj.monetary_policy_meeting）",
+        "1Q決算において販管費や財務費用の増加により、前年同期比で親会社利益が17.7%減益となっている点（fundamentals.recent_important_disclosures）",
+        "日経平均が短期的に下落基調（5日騰落率-2.73%）にあり、市場全体の地合い悪化に伴う投資ポートフォリオ評価額への影響（macro.indices）"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソフトバンクグループ、個人向け債で1兆円 社債市場もAIに踊る - 日経ヴェリタス - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1aQlhWZnN1UUNmOE1uSzJUVVFnZTZaZ3B3WkM2SkxZRHc0a0VoaFpPT0xZU2ppeEdYaWVUdjJuX2ZTRUpjUXZ5OWJWZmZFU3kzOVdNTG5UMGhTcENSSWQ1QkpVWGtUV0FYVWpCVnY4SFdjUjVPYzI3M3QtWV9BZw?oc=5",
+        "published": "Thu, 03 Sep 2026 20:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "米SBエナジー 新規上場を申請 企業価値8兆円超か - 沖縄タイムス社",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9vTFI1OEx0OTltbHNIdXlTZnBiUUYtbUVsY1dpVjQ1aExKZ2FKZXdlOVZGLThQWXZlenhXUFFUX1p1UzRrb1ZnaDFQN1M2b2t5eU91SW5rUU1pMFFyR0E?oc=5",
+        "published": "Thu, 03 Sep 2026 18:57:00 GMT",
+        "publisher": "沖縄タイムス社"
+      },
+      {
+        "title": "SBエナジー ナスダック市場にIPO申請 米投資計画第1号データセンターインフラ手がける - HOME広島ホームテレビ",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1RY09Yd1VnUWM3SmNZeDhKZmY3N2J4cWI2LTZVYVJmRU1yZVJidkJ2MXdNU1BDdV84RFlISXFpdkllcVlYbDAwRmhNcjAxTzhBWkJWX19EbVdjTm5XbE9leHdSdmFJWExL?oc=5",
+        "published": "Thu, 03 Sep 2026 06:26:00 GMT",
+        "publisher": "HOME広島ホームテレビ"
+      },
+      {
+        "title": "ソフトバンクG、財務余力はAI相場に連動 1兆円社債の利率4日決定 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9uX0plYnVfYS1ITTQxRWhEYjRQRmdRNVN3LTdqTTZLN3RQa3dVUXVlT3J5cFhEbFAyQXJVM043clVEaExaaHdtSFRLRTVKUnU3NnppYzZEWjdWSmFQbi1QU3VjSkNvWENOa2JxWQ?oc=5",
+        "published": "Thu, 03 Sep 2026 20:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "SBエナジー ナスダック市場にIPO申請 米投資計画第1号データセンターインフラ手がける - abema.tv",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBtMnhLYXN1amlvVmhrYU1XWVI4R3dETDVqb3FRajhCdDVuM0t6WFFnZ2ZsajVRS2VfNEFtV25HdVZ0YmZjakFWREJDUGpfeE1mdm0xQWozRzFONTQ?oc=5",
+        "published": "Thu, 03 Sep 2026 06:55:40 GMT",
+        "publisher": "abema.tv"
+      },
+      {
+        "title": "日経平均は後場に強含み、アジア株高と米先物上昇が追い風 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1xaUs3SXc1VU9nLXc4OVdhVzQ1anpoQ2dtOWFubTYwN3F4SXNNME92aVp1blh3Z01mR3NPRXlyZVRVMUF1TjFKeTl4c1dtVC12S3BtXy1PZ3V4YUpvdkFNTE55LTNZQ3VFaVF6cThwMGpaUHpj?oc=5",
+        "published": "Thu, 03 Sep 2026 04:25:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "全国のニュース - KBC九州朝日放送",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9DVWthTzhtMmZicUZLamVSaTc2b1Etd2RYUmdfOXluSVVjcFZSU2o0TFVaNHdoM2NLczFqOTZnaFhvTGRlRVdmOVlvTWU4bkxiYnFBWTRfOUt6M0phTXF3RExtTDZLSE5TdUhIdU13VWVab1VjMHYzSmhQZ2Y?oc=5",
+        "published": "Thu, 03 Sep 2026 06:26:00 GMT",
+        "publisher": "KBC九州朝日放送"
+      },
+      {
+        "title": "後場に注目すべき3つのポイント～買い戻し先行も上げ幅を縮小(フィスコ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZnQzMzR0cGlMejRWdVl0bzZ5dlhZVGRyTEdTRWlDbTN1am9mZnZhdlFsb0R4b0FmRktzVDh2cmx6N0wxSkxlS0ZkRG9fajdtSkduSC1tbTNiZHlha2ttc3ZOVkRkaXczNGxmX18tWDB5cWV1V29vSGdQYW5pandhb0N0c2E3VlU?oc=5",
+        "published": "Thu, 03 Sep 2026 03:26:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "【日本株速報】26/5/20 日経6万円割れ！いや〜な節目割れしているチャートが多い？ #日本株 #半導体 #topix #fomc Franklin High School (o1383Ec9v7) - mshale.com",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8ySlFZRThrdm12eUREb1pOVTVkN3ZPNGZWQ3BKN0NxREtucGtGQmZwRWFGSWNMcUdJOXllV3dCa3NxbzNxeE9UUWZHRnIyZWFGOU1yRmNZeWlWZm8?oc=5",
+        "published": "Thu, 03 Sep 2026 11:15:17 GMT",
+        "publisher": "mshale.com"
+      },
+      {
+        "title": "日経平均は買い先行へ、米金利上昇一服で半導体・AI関連に買い戻し - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5NUHdERU1MMGRiTFRrVkdNN1VFSEhxbDRvZ09vVFJoLTlsdGhvX2Z0eVhSYk8yVmxOOF8wUnp6SldRek4zdDVTekZkckp2N1RLRS1xQ1EyZE1RVkdrWEE2WTBGX0xvR1JvT1JHR1BzYTV1cllo?oc=5",
+        "published": "Thu, 03 Sep 2026 00:05:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得の完了時期の変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260828527943.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824524817.pdf",
+        "date": "2026-08-24 09:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510515.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行内容確定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503871.pdf",
+        "date": "2026-07-30 17:00:00"
+      },
+      {
+        "title": "第68回及び第69回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501484.pdf",
+        "date": "2026-07-29 10:30:00"
+      },
+      {
+        "title": "OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260701586249.pdf",
+        "date": "2026-07-01 16:00:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577089.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "2021年発行米ドル建普通社債の期限前償還完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566742.pdf",
+        "date": "2026-06-10 11:30:00"
+      },
+      {
+        "title": "国内ハイブリッド社債（利払繰延条項付）の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260605563850.pdf",
+        "date": "2026-06-05 10:30:00"
+      },
+      {
+        "title": "当社の子会社によるT&amp;Dフィナンシャル生命保険株式会社の株式の取得（子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562772.pdf",
+        "date": "2026-06-04 16:00:00"
+      }
+    ]
+  }
+}

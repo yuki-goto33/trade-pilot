@@ -1,0 +1,219 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-09-04T09:09:08+09:00",
+  "price_as_of": "2026-09-03",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 60,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-08-26）にbuyシグナルを発出しているため、規定に従い新規のbuyは行わず、既存のポジションを継続監視とします。",
+        "evidence": "reference.recent_buy"
+      },
+      {
+        "reason": "ファンダメンタルズは好調な四半期決算、大規模な自己株式取得、非通信分野の成長で強気の見解ですが、新規カタリスト不足と判断され、高確信のbuy条件（strength≥70）を満たしません。",
+        "evidence": "fundamental_view.stance=bullish (strength=60), fundamental_view.points[0], fundamental_view.points[1]"
+      },
+      {
+        "reason": "テクニカルは中期的な上昇トレンドと強いモメンタム（ゴールデンクロス、MACD拡大）を示すものの、RSIが買われすぎ水準に接近しており、短期的には上値が重くなる可能性があります。",
+        "evidence": "technical_view.stance=bullish (strength=80), technical_view.points[0], technical_view.cautions[0]"
+      }
+    ],
+    "risks": [
+      "RSIが買われすぎの目安とされる70に接近しており、短期的には利益確定売りが出やすい局面です。",
+      "日銀金融政策決定会合（9月17〜18日）を控え、金利上昇がディフェンシブ・高配当株である同社株の重石となる可能性があります。",
+      "自己株式取得枠の残りが少なく、完了後の需給悪化懸念があります。",
+      "市場レジームがneutralであり、日経平均の急落に見られるような外部環境の不安定さが株価に波及するリスクがあります。",
+      "次回決算発表（11月12日）を控えており、結果次第で株価が変動する可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 60,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内（2026-08-26）にbuyシグナルを発出しているため、規定に従い新規のbuyは行わず、既存のポジションを継続監視とします。\",\n   \"evidence\": \"reference.recent_buy\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは好調な四半期決算、大規模な自己株式取得、非通信分野の成長で強気の見解ですが、新規カタリスト不足と判断され、高確信のbuy条件（strength≥70）を満たしません。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=60), fundamental_view.points[0], fundamental_view.points[1]\"\n  },\n  {\n   \"reason\": \"テクニカルは中期的な上昇トレンドと強いモメンタム（ゴールデンクロス、MACD拡大）を示すものの、RSIが買われすぎ水準に接近しており、短期的には上値が重くなる可能性があります。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=80), technical_view.points[0], technical_view.cautions[0]\"\n  }\n ],\n \"risks\": [\n  \"RSIが買われすぎの目安とされる70に接近しており、短期的には利益確定売りが出やすい局面です。\",\n  \"日銀金融政策決定会合（9月17〜18日）を控え、金利上昇がディフェンシブ・高配当株である同社株の重石となる可能性があります。\",\n  \"自己株式取得枠の残りが少なく、完了後の需給悪化懸念があります。\",\n  \"市場レジームがneutralであり、日経平均の急落に見られるような外部環境の不安定さが株価に波及するリスクがあります。\",\n  \"次回決算発表（11月12日）を控えており、結果次第で株価が変動する可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 80,
+      "summary": "中期トレンドが対TOPIXでも強気であり、移動平均線のゴールデンクロスとMACDの拡大が継続していることから、上昇基調にあると判断します。",
+      "points": [
+        {
+          "point": "直近60営業日の騰落率が+9.57%と堅調で、対TOPIX相対騰落率もプラスを維持しており、中期的な上昇トレンドが明確である。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=9.57, relative_to_topix_60d_pct=6.19"
+        },
+        {
+          "point": "5日線が25日線を上回るゴールデンクロスを形成しており、株価は両移動平均線の上方で推移している。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\", last_close=2981.5"
+        },
+        {
+          "point": "MACDおよびヒストグラムがプラス圏で拡大しており、上昇の勢い（モメンタム）が強い状態にある。",
+          "evidence": "price_technical.macd=21.33, macd_histogram=13.49"
+        },
+        {
+          "point": "前夜のADRが1.38%上昇し、セクターETFも堅調であることから、翌日の寄り付きに買い優勢の力が働く可能性が高い。",
+          "evidence": "us_overnight.adr.change_1d_pct=1.38, us_overnight.sector_proxy.change_1d_pct=0.85"
+        }
+      ],
+      "cautions": [
+        "RSI14が65.4まで上昇しており、買われすぎの目安とされる70に接近しているため、短期的には3000円の大台付近で利益確定売りが出やすい。",
+        "市場レジームがneutralであり、日経平均の急落（-2.85%）に見られるような外部環境の不安定さが波及するリスクがある。",
+        "ADRの上昇は寄り付き価格に反映されるため、寄り付き直後の材料出尽くしによる失速に注意が必要。"
+      ],
+      "key_levels": {
+        "support": 2903.3,
+        "resistance": 3121.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 60,
+      "summary": "2027年3月期第1四半期の純利益が前年同期比22.1％増と好調な滑り出しを見せており、金融やAI等の非通信分野の成長が顕著です。直近ではローソンとの協業進展や光ネットワークの国際標準獲得といったポジティブなニュースが続いていますが、主要な決算材料から時間が経過しているため、勢いは限定的と判断します。",
+      "points": [
+        {
+          "point": "第1四半期決算が大幅な増収増益で着地し、モバイル・金融・AIインテグレーション等の幅広い分野が寄与している。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary (2027年3月期第1四半期：売上高5.1％増、営業利益21.1％増、当期利益22.1％増)"
+        },
+        {
+          "point": "3,000億円規模の大規模な自己株式取得が進行中であり、8月時点で進捗率が約87%に達するなど、強い下値支持と株主還元姿勢が示されている。",
+          "evidence": "fundamentals.recent_important_disclosures[1].summary (取得価額総額260,530,623,325円、上限3,000億円)"
+        },
+        {
+          "point": "直近（9月3日）のニュースで、光ネットワークの国際標準獲得やローソンとの実証実験拡大など、技術力と事業多角化の進展が相次いで報じられている。",
+          "evidence": "news.headlines[7].title (NTTやKDDIなど国内7社が「低遅延・省電力な光ネットワーク」の設計指針で国際標準を獲得), news.headlines[9].title (KDDI×ローソン、「オフィスローソン」を京セラ本社に初の社外展開)"
+        }
+      ],
+      "cautions": [
+        "日銀金融政策決定会合（9月17〜18日）を控え、日本の10年債金利が3%台で推移しており、金利上昇がディフェンシブ・高配当株である同社株の重石となる可能性がある。",
+        "入力データの予想PER（forward_pe=1279.614）に異常値が見られるが、通期業績予想の当期利益は7,310億円（前期比2.7%増）であり、成長鈍化や利益構成の変化に注視が必要。",
+        "自己株式取得枠の残りが少なくなっており、完了後の需給悪化懸念がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-26",
+    "days_ago": 9,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "JX金属サーキュラーソリューションズ、KDDIのLIB製品回収実証に参画（鉄鋼新聞） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9XdjF5RU5fMFVPUkpTRGxXNW9Vd3k3U0M0eHBLN2pRczNOUUNJZG5YWE1tSF82N05tNGZLWFhETm9UbDlqUzkyM01XX3ZWTER1MFJDcTdUekg1TG9mXzNwUkxCdDhEa0JpSEk1Y0Y4YzNiSVBPUm52a0hrY1JVZ3M?oc=5",
+        "published": "Thu, 03 Sep 2026 21:01:45 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "ローソン高輪ゲートウェイシティ店付近設置のAI自動分別ボックスでリチウムイオン電池回収を実施 - newsroom.kddi.com",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBDeGphTU5mSlAwdmtWTGNPdjJmUlR4WFVrdGw5ZVhYTlYxMk54d292amt2dnFCR1g0dWFkTV9vd1d1UTNLNldCdmRQbG9oU0Vuajh6VzBRR3pXZHJJSlM4TWdHbko5Z3J1cFhFUA?oc=5",
+        "published": "Thu, 03 Sep 2026 01:00:00 GMT",
+        "publisher": "newsroom.kddi.com"
+      },
+      {
+        "title": "「AIで業務アプリを作成する仕組み」で特許取得、KDDI傘下のELYZA X上では一部批判も【追記あり】 - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBURDJkU1BfLXMwbGdxMFU2dmFHNDl4T3RSZ0IxMERTUkhndlJ4bTNaQi10c2pFLVhKMlV6V09mbU1yVmZaT3lMang1VXRmVjJtaWZwalZrTFBGZGlhSm5hZ1dBejhON0gtS0lzYw?oc=5",
+        "published": "Thu, 03 Sep 2026 14:09:57 GMT",
+        "publisher": "ITmedia"
+      },
+      {
+        "title": "ＪＸ金属サーキュラーソリューションズ／ＫＤＤＩのＬＩＢ製品回収実証に参画 - 日刊鉄鋼新聞 Japan Metal Daily",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1mcWd5WVRnMUZQbWYyU1pDOExYWnRLM3VyR3hfOHJjZV9sQzFnUnJUZmxjSUNISnZYZWhqWElYNEQzOEdvWlR5VWhhWnZEazRCZEg3d2ZWMl9mdU5OLUE?oc=5",
+        "published": "Thu, 03 Sep 2026 20:00:00 GMT",
+        "publisher": "日刊鉄鋼新聞 Japan Metal Daily"
+      },
+      {
+        "title": "「オフィスローソン」を京セラ本社の食堂2フロアに導入（KDDI/ローソン） - ペイメントナビ",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9TdndLWUxFSDJzOFNET213Q2Z0QV9aRVRaVnk2Z0RhM1hBMjhFdjNEcHBoWG5PX3A3VkJXR3dTTWhQTVZPbmp5NHVHbmZjZXpwN3NnT2pyU3lTUDg?oc=5",
+        "published": "Thu, 03 Sep 2026 07:08:00 GMT",
+        "publisher": "ペイメントナビ"
+      },
+      {
+        "title": "山口県とKDDI、宇宙やAIを活用した包括連携協定を締結 - ケータイ Watch",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9uMUhQdmJiZWZwbDRPekFGM3NCd2dGLTJBTnZtWGpSZmFucGNQWmNhZ1ExMnpYZFc4bE1CVERrUnFlaks2ajh6ZVpld3gxWGVDbVQ0T0lvSG9hZlc3LXBZWGFndVpRQ1U?oc=5",
+        "published": "Thu, 03 Sep 2026 07:22:32 GMT",
+        "publisher": "ケータイ Watch"
+      },
+      {
+        "title": "KDDI、ローソン店舗でモバイルバッテリーやスマホの回収を開始 予約不要で利用可能 - news.infoseek.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9wTGZBVTdoWUFyWW5CRHFyV2xCV05xUzF5ZU8yMEhjN05KQ1R3MERoQmo0dkhqSlVnZVBkRVI2MVFPQ3FMSmVKNkpRMGFKMmdZWGc1ejNveENJWE51Wi1J?oc=5",
+        "published": "Thu, 03 Sep 2026 09:45:00 GMT",
+        "publisher": "news.infoseek.co.jp"
+      },
+      {
+        "title": "世界中で使える通信規格へ！NTTやKDDIなど国内7社が「低遅延・省電力な光ネットワーク」の設計指針で国際標準を獲得 - DXマガジン",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5UOVpGQmF1WWV5NVdta1FrUVJCUXBSR2hGNnFkZWg5ZHk1cFlueHM5N003UDBiZkNjQll3eUZDVklJelk0LTNrYy1VdFZVUzJzWHg4?oc=5",
+        "published": "Thu, 03 Sep 2026 10:06:45 GMT",
+        "publisher": "DXマガジン"
+      },
+      {
+        "title": "地域の未来を考える「ヤマグチ会議」を開催 - KDDI",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQeHYyUWtvdEVoTnkxalZQc3VudWx3amt1ZmdSZWp3S2VRZC16a2RHbGQxUnlKTDBHc2w2ZW9hVkR6eGlSaGVFcXpPMFBtV3RGNE1HM3Fnb3pFYi13REdhQkJxbEtlNlY0QkJYb0hKd3h1dDRoTXRDc0VJekVpTVJTN3lxNVN1NkJaZjBldg?oc=5",
+        "published": "Thu, 03 Sep 2026 02:58:16 GMT",
+        "publisher": "KDDI"
+      },
+      {
+        "title": "KDDI×ローソン、「オフィスローソン」を京セラ本社に初の社外展開 - 2027年度に事業化へ - マイナビニュース",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE42a0NTZzNfNHZBT2YtUGh6MzdWSjNqR2dMTTBfbjREZGNDRFNDdmdkaE9IMC0xSkJ6UHdyQm1ENlA2ek40Z3RadG5pWXJzTlpMdEpkZkphTXpNU0No?oc=5",
+        "published": "Thu, 03 Sep 2026 04:17:19 GMT",
+        "publisher": "マイナビニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      }
+    ]
+  }
+}

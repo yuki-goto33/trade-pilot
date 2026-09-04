@@ -1,0 +1,205 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-09-04T09:00:25+09:00",
+  "price_as_of": "2026-09-03",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の評価は strength=75 と極めて高いが、テクニカル専門家の見解も bullish であり、統合ルールに基づき「織り込み済み」と判断して新規買いは見送る。",
+        "evidence": "fundamental_view.strength=75 / technical_view.stance='bullish'"
+      },
+      {
+        "reason": "8月中に約434億円の自社株買いを実施するなど、強力な株主還元策が下値を支える要因となっている。",
+        "evidence": "fundamental_view.points[0]: news.headlines[3] (8月中の自社株買い実績報告)"
+      },
+      {
+        "reason": "前年度の巨額損失から四半期利益が正常化しており、TSMC合弁やタムロンへの買収提案など成長投資への姿勢もポジティブである。",
+        "evidence": "fundamental_view.points[1], [2]: fundamentals.earnings_trend.quarterly[0]"
+      }
+    ],
+    "risks": [
+      "直近1日で2%超進行した急速な円高（155.7円）が輸出採算を悪化させるリスクがある。",
+      "9月17日〜18日の日銀金融政策決定会合を控えた、金利上昇観測によるグロース株への売り圧力。",
+      "テクニカル面で5日移動平均線を割り込んでおり、ADR高に伴う寄り付き後の利益確定売り（寄り天）の懸念。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の評価は strength=75 と極めて高いが、テクニカル専門家の見解も bullish であり、統合ルールに基づき「織り込み済み」と判断して新規買いは見送る。\",\n   \"evidence\": \"fundamental_view.strength=75 / technical_view.stance='bullish'\"\n  },\n  {\n   \"reason\": \"8月中に約434億円の自社株買いを実施するなど、強力な株主還元策が下値を支える要因となっている。\",\n   \"evidence\": \"fundamental_view.points[0]: news.headlines[3] (8月中の自社株買い実績報告)\"\n  },\n  {\n   \"reason\": \"前年度の巨額損失から四半期利益が正常化しており、TSMC合弁やタムロンへの買収提案など成長投資への姿勢もポジティブである。\",\n   \"evidence\": \"fundamental_view.points[1], [2]: fundamentals.earnings_trend.quarterly[0]\"\n  }\n ],\n \"risks\": [\n  \"直近1日で2%超進行した急速な円高（155.7円）が輸出採算を悪化させるリスクがある。\",\n  \"9月17日〜18日の日銀金融政策決定会合を控えた、金利上昇観測によるグロース株への売り圧力。\",\n  \"テクニカル面で5日移動平均線を割り込んでおり、ADR高に伴う寄り付き後の利益確定売り（寄り天）の懸念。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "中期トレンドが極めて強固であり、テクニカル指標も概ね好転を維持しています。直近2営業日の調整で5日線を割り込みましたが、前夜の米国市場およびADRの反発が支えとなり、押し目買いが優勢となる展開を予想します。",
+      "points": [
+        {
+          "point": "直近60営業日の騰落率が市場を大幅にアウトパフォームしており、強力な中期上昇トレンドを形成しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=13.13, relative_to_topix_60d_pct=9.74"
+        },
+        {
+          "point": "MACDがシグナルを上回るプラス圏で推移しており、5日線と25日線のゴールデンクロスも維持されています。",
+          "evidence": "price_technical.macd=92.45, price_technical.macd_signal=87.98, price_technical.sma5_vs_sma25='golden(5日線が25日線の上)'"
+        },
+        {
+          "point": "前夜のNY市場でADR価格および関連セクターETFがともに1%超上昇しており、国内市場での反転示唆となっています。",
+          "evidence": "us_overnight.adr.change_1d_pct=1.26, us_overnight.sector_proxy.change_1d_pct=1.29"
+        }
+      ],
+      "cautions": [
+        "直近2営業日で5日移動平均線（3961.0円）を下回っており、短期的には売り圧力が残る可能性があります。",
+        "ADRの上昇は寄り付き価格に反映されるため、寄り付き直後の利益確定売りによる失速（寄り天）には警戒が必要です。",
+        "国内市場全体の地合い（日経平均の不安定な動き）が重石となるリスクがあります。"
+      ],
+      "key_levels": {
+        "support": 3790.32,
+        "resistance": 4070.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "継続的な大規模自社株買いによる需給の下支えに加え、TSMCとの合弁や買収提案といった成長投資への積極姿勢が評価できる。足元の四半期純利益も前年度の損失から回復傾向にあり、製造業PMIの拡大などマクロ環境の追い風も考慮し、強気と判断する。",
+      "points": [
+        {
+          "point": "総額5000億円の自社株買い枠の着実な履行。2026年9月3日の開示にて、8月中に約434億円（1161万株）を取得したことが報告されており、継続的な株主還元が株価のサポート材料となっている。",
+          "evidence": "disclosures.items[0], news.headlines[3]"
+        },
+        {
+          "point": "半導体およびエレキ事業における戦略的な投資。8月11日のTSMCとの合弁契約締結に加え、9月3日には交換レンズ大手タムロンへの買収提案も報じられており、中長期的な収益基盤の強化が期待される。",
+          "evidence": "disclosures.items[1], news.headlines[6]"
+        },
+        {
+          "point": "足元の四半期業績の回復。2026年6月期の営業利益は4745億円、純利益は3422億円と、2025年12月期の多額の純損失（-10086億円）から脱し、利益創出能力が正常化している。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0], fundamentals.earnings_trend.quarterly[2]"
+        },
+        {
+          "point": "日本の製造業PMIが54.9と拡大圏を維持。8月の製造業活動は7ヶ月連続の拡大を示しており、デバイスやエンタテインメント機器を手掛ける同社にとって良好な事業環境が続いている。",
+          "evidence": "macro.japan_pmi.manufacturing"
+        }
+      ],
+      "cautions": [
+        "急速な円高進行による収益圧迫リスク。直近1日で2%超の円高（155.7円）が進行しており、グローバル展開する同社にとって為替感応度は無視できない。",
+        "日銀金融政策決定会合（9月17日〜18日）を控え、金利上昇観測に伴う市場全体のボラティリティ上昇およびグロース株への売り圧力。",
+        "2026年3月期に見られた純損失計上の背景（2025年12月期の巨額赤字）について、一時的要因の精査と再発の懸念。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソニーグループ(株)【SONY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBaWnphQUR5QkRjZVlTVmx6UFR5V014TllydmRXWkxLMjQyQlpTTTV0ZXN6b1lsNVZBTGlQMXJGcGFTbHdkcFJuYURxeFRfLTg?oc=5",
+        "published": "Thu, 03 Sep 2026 20:03:28 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ソニーグループ[6758]：自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得） 2026年9月3日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB4ZjVuUjJnaTdoQzNjLVVjLS1yV2hDNzd0RGI0ZVMzakQtT3lxRzU3RTJDaURlazl3VnUwQ0t4NWsxNFl2MzlFeHVKVi05cGlRdGMyQU12WXVteGJZX1ZNUng5VGhTYjFIY2c?oc=5",
+        "published": "Thu, 03 Sep 2026 02:30:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "ソニー(株)【6758】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9BQlVRa0U3WXp0ZG1yTzhsVk1OWkItckZaUV8wRkcxNkV4eVdoNWVlT2xWS25IbXR5em1xcThhQXhFWWJxWk1VbmMtZEpPUV9hMHBreXNYNVV2bkFiT1pB?oc=5",
+        "published": "Thu, 03 Sep 2026 06:52:51 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ソニーグループ、８月に１１６１万株・４３４億円の自社株買い、５０００億円枠で取得進む - kabu-ir.com",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBVWWJELTg5VVluVmRtOFE2NmktSnNMQWRSMnY1UFdpVnR0T3FxZ2hFRENIZ3I5NDByOFM4amJrbVNTd0VRQUNUV0FtcHV3dk9rXzI0WQ?oc=5",
+        "published": "Thu, 03 Sep 2026 04:04:01 GMT",
+        "publisher": "kabu-ir.com"
+      },
+      {
+        "title": "【28卒の理系学生が選ぶ】「就職人気企業」ランキングTOP20！ 第1位は「トヨタ自動車」【2026年最新調査結果】 - ねとらぼ",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9lQ0ZnT3pubGJ2N3lJbE9hdnNuNlppWHQ1dDVIWUZwZlZvLWZLcGpnMlNDeUZFWG5xbzBMQjJOU3RXU0p2bjhYSkZ1Q0tVeTgzaHQxMjhhNXJWQy01S3liallKckdvdw?oc=5",
+        "published": "Thu, 03 Sep 2026 09:30:00 GMT",
+        "publisher": "ねとらぼ"
+      },
+      {
+        "title": "【28卒の理系学生が選ぶ】「就職人気企業」ランキングTOP20！ 第1位は「トヨタ自動車」【2026年最新調査結果】 - ねとらぼ",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5ZbUJWRG1XS2xHd3oweWdVVFljUnVmRURZZWZHdnZ5RHJzbG1lYmVoY2wxVnlaTjZsNUhCNU1SM3M2cmtWWmp5VnRDWnZCX1VONkVLQ1Q1Ylk5TUJRSnZEc0NZd3l0Zw?oc=5",
+        "published": "Thu, 03 Sep 2026 09:30:00 GMT",
+        "publisher": "ねとらぼ"
+      },
+      {
+        "title": "【スクープ】ソニーが交換レンズ大手タムロンに2000億円規模で買収提案！具体的な中身と、エレキ部門がM＆Aに動いた狙いとは？《再配信》 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9zUWNvVHVSZGtmNEcxSWotbUJTaUszSTBSOVByNE80ZnZPLUw1MGx4OTNmM2RZMVBGeDQtSURBSG9Cck95Yi1JeVhOYWjSAU9BVV95cUxQa3RmVDAtc1BHSFdPc216ekpya0RNcUVITkJjay1ZLUtNZEgtUk5iX1FCcF9jbVFLR1I5MWJFaTNwWXhYRzJEeFYtNDNnejZn?oc=5",
+        "published": "Thu, 03 Sep 2026 19:10:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "アップル新製品も追い風？サブスク課金膨らむアプリ銘柄 - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5NV3lNYzgybFltN3U3XzhFSGxyM0h3Y0JlTllCbHR6ZkdibVVOeUljZTZuYlVMdWJXTk9kNjJELUFSOUJZS25GTnlLQkNsaGVydXNGak1UNA?oc=5",
+        "published": "Thu, 03 Sep 2026 02:30:00 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "【加賀温泉郷】「ソニー 日本女子プロゴルフ選手権大会」9月10日開幕！ - iza.ne.jp",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE0tQkxFQ21wUGstaURTYmVmaGxzVWZzWnhEQTIxMkZiaGpVOTJCb2RyMENhRkpLaF9UdlgybkVKMk1lV29ySmhDdFJkSVQ2djZZdTdGZW0zcDlZRXhLRTRDWGVtcGFwbFdpcEtLOG9hUExLd284ZVdTTVhn?oc=5",
+        "published": "Thu, 03 Sep 2026 08:06:09 GMT",
+        "publisher": "iza.ne.jp"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903530947.pdf",
+        "date": "2026-09-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260811517496.pdf",
+        "date": "2026-08-11 18:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805509201.pdf",
+        "date": "2026-08-05 11:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504252.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期 連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504254.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の権利確定に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595854.pdf",
+        "date": "2026-07-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587315.pdf",
+        "date": "2026-07-03 11:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584099.pdf",
+        "date": "2026-06-30 15:30:00"
+      },
+      {
+        "title": "米ドル建て無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577032.pdf",
+        "date": "2026-06-24 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260603560934.pdf",
+        "date": "2026-06-03 11:30:00"
+      }
+    ]
+  }
+}
