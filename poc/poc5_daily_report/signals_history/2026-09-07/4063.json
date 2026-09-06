@@ -1,0 +1,154 @@
+{
+  "code": "4063",
+  "name": "信越化学工業",
+  "generated_at": "2026-09-07T08:48:10+09:00",
+  "price_as_of": "2026-09-04",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "テクニカル面で中期的な下落トレンドが鮮明（60日騰落率-13.58%）である一方、RSIが14.2と極めて低い売られすぎ水準にあり、安易な売りは踏み上げのリスクがある。",
+        "evidence": "technical_view.points[0]: change_60d_pct=-13.58 / technical_view.cautions[0]: RSI14=14.2"
+      },
+      {
+        "reason": "ファンダメンタルズは2026年3月期の14%減益計画が重石となる一方、製造業PMIに象徴されるAI需要が下値を支えており、強弱材料が拮抗している。",
+        "evidence": "fundamental_view.points[0]: 営業利益14%減益計画 / fundamental_view.points[1]: 製造業PMI 54.9"
+      },
+      {
+        "reason": "約2週間後に日銀金融政策決定会合を控えており、為替や金利の変動が輸出企業である同社に与える影響を見極める必要があるため、現在は様子見が妥当である。",
+        "evidence": "reference.next_boj_meeting / fundamental_view.cautions[0]"
+      }
+    ],
+    "risks": [
+      "RSIの売られすぎ水準からの急速な自律反発による売り方の踏み上げ",
+      "日銀会合による為替変動（円高進行）に伴う輸出採算の悪化",
+      "SOX指数や米半導体株のボラティリティ波及によるセクター全体の下落",
+      "次回決算（10/23）に向けた業績進捗懸念によるバリュエーション調整"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"テクニカル面で中期的な下落トレンドが鮮明（60日騰落率-13.58%）である一方、RSIが14.2と極めて低い売られすぎ水準にあり、安易な売りは踏み上げのリスクがある。\",\n   \"evidence\": \"technical_view.points[0]: change_60d_pct=-13.58 / technical_view.cautions[0]: RSI14=14.2\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは2026年3月期の14%減益計画が重石となる一方、製造業PMIに象徴されるAI需要が下値を支えており、強弱材料が拮抗している。\",\n   \"evidence\": \"fundamental_view.points[0]: 営業利益14%減益計画 / fundamental_view.points[1]: 製造業PMI 54.9\"\n  },\n  {\n   \"reason\": \"約2週間後に日銀金融政策決定会合を控えており、為替や金利の変動が輸出企業である同社に与える影響を見極める必要があるため、現在は様子見が妥当である。\",\n   \"evidence\": \"reference.next_boj_meeting / fundamental_view.cautions[0]\"\n  }\n ],\n \"risks\": [\n  \"RSIの売られすぎ水準からの急速な自律反発による売り方の踏み上げ\",\n  \"日銀会合による為替変動（円高進行）に伴う輸出採算の悪化\",\n  \"SOX指数や米半導体株のボラティリティ波及によるセクター全体の下落\",\n  \"次回決算（10/23）に向けた業績進捗懸念によるバリュエーション調整\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 85,
+      "summary": "中期・短期ともに明確な下落トレンドの中にあり、複数のテクニカル指標が強い売りシグナルを継続しています。RSIは極めて低い水準にありますが、反転の兆しが確認できないため、中期トレンドの勢いに従い弱気継続と判断します。",
+      "points": [
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともに大幅なマイナスであり、中期的な下落トレンドが鮮明です。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-13.58, price_technical.trend_60d.relative_to_topix_60d_pct=-18.41"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線を下回るデッドクロス状態にあり、MACDヒストグラムもマイナス圏で拡大しており下落の加速を示唆しています。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.macd_histogram=-16.68"
+        },
+        {
+          "point": "直近5営業日で4日続落しており、価格は主要な移動平均線を大きく下回って推移しています。",
+          "evidence": "price_technical.recent_5_days, price_technical.last_close=5786.0, price_technical.sma5=5901.2"
+        }
+      ],
+      "cautions": [
+        "RSI14が14.2と極めて低い「売られすぎ」水準にあり、自律反発が発生しやすい局面です",
+        "前夜のSOX指数が3.37%と大幅上昇しており、セクターETF(SMH)も堅調なため、寄り付きでの買い戻し圧力が想定されます",
+        "前夜のADRは-1.38%と下落しており、SOX指数の上昇と個別銘柄の弱気地合いが拮抗する可能性があります"
+      ],
+      "key_levels": {
+        "support": 5636.0,
+        "resistance": 6079.04
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "2026年3月期の減益計画が重石となる一方、製造業PMIに見られるAI関連需要の強さが下値を支えており、強弱材料が拮抗しています。直近2週間以内に株価を動かす新規材料が乏しく、10日後の日銀金融政策決定会合を前に様子見姿勢が強まる見通しです。",
+      "points": [
+        {
+          "point": "2026年3月期は売上・利益ともに成長が鈍化し、営業利益ベースで前期比約14%の減益を見込む慎重な計画となっています。",
+          "evidence": "fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=6352"
+        },
+        {
+          "point": "8月の製造業PMIは54.9と7カ月連続の拡大を示しており、特にAI関連需要に伴う新規受注の増加が同社の主力事業にポジティブな外部環境を提供しています。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9"
+        },
+        {
+          "point": "自己株式の取得（ToSTNeT-3）が2026年7月30日時点で終了しており、直近での需給面における下支え材料が一つ剥落した状態にあります。",
+          "evidence": "disclosures.items[0].title"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日〜18日に日銀金融政策決定会合を控えており、為替や金利の変動が輸出採算や株価バリュエーションに影響を与えるリスクがあります。",
+        "次回決算発表（2026年10月23日）まで期間があり、業績進捗の確認待ちとなるため、目先は積極的な買い材料に欠ける可能性があります。",
+        "22.9倍の予想PERは過去の成長期待を織り込んだ水準であり、減益計画の中ではバリュエーション調整の圧力がかかる懸念があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "信越化学工業(株)【SHECY】：株価・株式情報 - finance.yahoo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFAwQzY0SXQxN2pTTnB1djAxVGExeFpGb0stX0Zmc1ZQb1h6ZGR3Rm5xRVp2R3JLT1ROeVhjd21RSXBoOTFycjNfdzQ0NUZ6U3A5?oc=5",
+        "published": "Sun, 06 Sep 2026 09:36:26 GMT",
+        "publisher": "finance.yahoo.co.jp"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による取得結果および自己株式の取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730502910.pdf",
+        "date": "2026-07-30 11:30:00"
+      },
+      {
+        "title": "コミットメント型自己株式取得（FCSR）による自己株式取得のための第三者割当による第27回および第28回新株予約権の発行条件の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503103.pdf",
+        "date": "2026-07-30 11:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による自己株式の買付けに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729502228.pdf",
+        "date": "2026-07-29 16:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598954.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "業績予想および配当予想に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598982.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による自己株式の買付けに関するお知らせ（コミットメント型自己株式取得（FCSR）による自己株式取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598998.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573248.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260605563833.pdf",
+        "date": "2026-06-05 15:30:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541941.pdf",
+        "date": "2026-05-20 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541943.pdf",
+        "date": "2026-05-20 15:30:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-09-07T08:48:55+09:00",
+  "price_as_of": "2026-09-04",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-08-26）に buy シグナルを発行済みであり、現在はその継続監視期間に該当するため、新規のエントリーは控える。",
+        "evidence": "reference.recent_buy.date=2026-08-26"
+      },
+      {
+        "reason": "テクニカル指標が強気（strength=75）に転じており、好材料がすでに株価に織り込まれ始めている可能性が高い。この局面での追随買いは優位性が低いと判断する。",
+        "evidence": "technical_view.stance=bullish (strength=75)"
+      },
+      {
+        "reason": "ファンダメンタルズは非常に強固であり、第1四半期の大幅増益（EPS+19.3%）や継続的な自己株買いが下値を支える要因となっている。",
+        "evidence": "fundamental_view.points[0, 1]"
+      }
+    ],
+    "risks": [
+      "2026-09-17〜18に予定されている日銀金融政策決定会合に伴う市場全体のボラティリティ波及リスク（reference.next_boj_meeting）。",
+      "財務報告に係る内部統制の「開示すべき重要な不備」公表に伴うガバナンスリスク（fundamental_view.cautions）。",
+      "RSI（62.6）が過熱圏に接近しており、3,000円の節目手前での短期的な利益確定売りの発生（technical_view.cautions）。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内（2026-08-26）に buy シグナルを発行済みであり、現在はその継続監視期間に該当するため、新規のエントリーは控える。\",\n   \"evidence\": \"reference.recent_buy.date=2026-08-26\"\n  },\n  {\n   \"reason\": \"テクニカル指標が強気（strength=75）に転じており、好材料がすでに株価に織り込まれ始めている可能性が高い。この局面での追随買いは優位性が低いと判断する。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=75)\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは非常に強固であり、第1四半期の大幅増益（EPS+19.3%）や継続的な自己株買いが下値を支える要因となっている。\",\n   \"evidence\": \"fundamental_view.points[0, 1]\"\n  }\n ],\n \"risks\": [\n  \"2026-09-17〜18に予定されている日銀金融政策決定会合に伴う市場全体のボラティリティ波及リスク（reference.next_boj_meeting）。\",\n  \"財務報告に係る内部統制の「開示すべき重要な不備」公表に伴うガバナンスリスク（fundamental_view.cautions）。\",\n  \"RSI（62.6）が過熱圏に接近しており、3,000円の節目手前での短期的な利益確定売りの発生（technical_view.cautions）。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "中期トレンドがTOPIXをアウトパフォームする強気局面を維持しており、25日移動平均線を支持線とした上昇トレンドが継続しています。MACDの強い買いシグナルも加わり、直近の足踏みは高値圏での健全な調整の範囲内と判断します。",
+      "points": [
+        {
+          "point": "中期トレンドが非常に堅調であり、市場全体（TOPIX）に対しても優位性を保っています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=8.32, price_technical.trend_60d.relative_to_topix_60d_pct=3.49"
+        },
+        {
+          "point": "短期・中期移動平均線がゴールデンクロスを形成し、株価は25日線を明確に上回って推移しています。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.last_close=2981.0, price_technical.sma25=2900.5"
+        },
+        {
+          "point": "MACDがプラス圏で力強く推移しており、ヒストグラムも大幅なプラスを維持していることから、上昇の勢いが継続しています。",
+          "evidence": "price_technical.macd=18.56, price_technical.macd_signal=4.48, price_technical.macd_histogram=14.08"
+        }
+      ],
+      "cautions": [
+        "前夜のADR（-0.42%）および米国通信セクター（-1.19%）の下落を受け、寄り付きは弱含みで始まる可能性があります。",
+        "RSIが62.6と過熱圏に近づきつつあり、短期的には3,000円手前での戻り売りに押されるリスクがあります。",
+        "市場全体のレジームが「neutral」判定となっており、地合いの悪化が個別銘柄の上値を重くする懸念があります。"
+      ],
+      "key_levels": {
+        "support": 2900.5,
+        "resistance": 3121.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "業績が拡大傾向にある中、第1四半期のEPSが前年同期比で大幅増益を達成しており、積極的な自己株買いという株主還元姿勢も継続している。直近では「auひかりプラス」の提供開始という新規材料もあり、収益拡大への期待感が高い。",
+      "points": [
+        {
+          "point": "四半期業績の力強い成長。2026年6月期（第1四半期）の希薄化後EPSは51.33円と、前年同期の43.0円から約19.3%増加しており、通期増益計画の達成に向けて順調な滑り出しを見せている。",
+          "evidence": "fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "継続的な自己株買いによる株主還元。直近数ヶ月（2026年6月、7月、8月）にわたり、自己株式の取得状況を継続的に開示しており、資本効率の向上と株価の下支えに寄与している。",
+          "evidence": "disclosures.items[1, 5, 6, 9]"
+        },
+        {
+          "point": "新規サービスによる収益機会の拡大。2026年9月17日より、光回線と5Gを組み合わせたハイブリッド接続サービス「auひかりプラス」の提供を開始。通信需要の取り込み加速が期待される。",
+          "evidence": "news.headlines[0, 4, 8]"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日〜18日に日銀金融政策決定会合が控えており、金利変動に伴うマーケット全体のボラティリティ上昇リスクがある。",
+        "2026年6月25日付の開示にて、財務報告に係る内部統制に「開示すべき重要な不備」があることを公表しており、ガバナンス面での懸念が残る。",
+        "入力データ上の予想PER（forward_pe=1279.399）が実績PERに比して極端に高い数値を示しており、市場の収益期待値と実績トレンドに乖離が生じるリスクに留意が必要。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-26",
+    "days_ago": 12,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "「auひかりプラス」でKDDIが攻める「日本の光回線」の課題解決【西田宗千佳のイマトミライ】 - Impress Watch",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5vUWM0aGdGaEpRY2FMTG5DY1VaWHhIZWg2NWJzYmljYjdEMFlWR3VicG44Mm8tcDcyTFVDSXllZjNweVdLaDNwSms0dWJwZGZuYktpUjdWVlFnTHNOUksyU0xmTjQ2eUFTUGh4UGdYSUFpUQ?oc=5",
+        "published": "Sun, 06 Sep 2026 23:20:00 GMT",
+        "publisher": "Impress Watch"
+      },
+      {
+        "title": "光×5G ルーター1台で KDDIが通信サービス - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9KUzMxZXVTaEZhNjZleVNMMFNCVFRkX0E3UmlZMDYtOGdaUTQzaHowdDFUQ2pSekEzc2syTWNGSlM2eFEtbjZkLWo5ZmxkdWNEOG1oWkRlSXo?oc=5",
+        "published": "Sun, 06 Sep 2026 20:00:00 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "KDDI・ローソン、他企業へ初出店となる「ローソンS京セラ本社ビル店」オープン - diamond-rm.net",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5DTzk2Q3FnNzgwN1hYeXNDcEQ3QS0xVmxGMmozZkM1dklVU2R4eEVzQk9GRDRlZUoydl9XOTdOdjkwMzZUbU9fdmtfWGhFX2d1TmhV?oc=5",
+        "published": "Sun, 06 Sep 2026 20:08:08 GMT",
+        "publisher": "diamond-rm.net"
+      },
+      {
+        "title": "【蔵書検索・予約システム】システムメンテナンスに伴う書影表示の制限について - city.adachi.tokyo.jp",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1nRk9aTlN4RjRxdmktR3FnVzFQYk10bHNBLWwtcWYtYTNYOS1fRzdCNktiVEdzcXVGOFJCQlVKVHppa2pLVnNFbHljNS1oWFpEMUQ0cHJPM3hnNmFCTlVvX2J1aENnbW9Yc0JEcXVXdEVYNnBaR0Qw?oc=5",
+        "published": "Sun, 06 Sep 2026 15:05:08 GMT",
+        "publisher": "city.adachi.tokyo.jp"
+      },
+      {
+        "title": "光回線と5G融合の新サービス！ KDDIが「auひかりプラス」を9月17日提供開始 - AppBank",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9EcUpyRVQ0ZWxuRTBPX2NGNzR0eHh5OUI1SEJYcUdweFdEZ0hXTnhuY0xNVFlaQ2d5ZFhHeVluTThSZ1d1dC11N3R5N2g0NlZHZV96X2V1Sy1wdTNvM3RBS2lxSk01VmxhZ2c?oc=5",
+        "published": "Sun, 06 Sep 2026 23:17:41 GMT",
+        "publisher": "AppBank"
+      },
+      {
+        "title": "石川県でドローンを活用した大雨被害状況の緊急調査を実施 - KDDI ニュースルーム",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1nZi1jTGczZnZidkh4RG44MlFGaVlXbG9vRjNrYm9aRVB4aGNKTkY4WDNSRVBrMEtzYnJBLS0tcXRqWVNqNWVJN2U0ZnA4TE9zcWtjZmNsQkJsc3RKc09VaXhnaDEyMUpmTGdjT25EUQ?oc=5",
+        "published": "Sat, 05 Sep 2026 23:44:12 GMT",
+        "publisher": "KDDI ニュースルーム"
+      },
+      {
+        "title": "5Gを光回線開通前から提供、災害時にはバックアップ回線に、ハイブリッド接続サービス「auひかりプラス」をKDDIが提供 - INTERNET Watch",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5Mc0p2WFR1TE5YWWNVc0E5MS13UHVMVm9yR0lxLXpCUFVxRTl1TWtHVlBTNVVZaTEwUThzVm1Ibmh3REpmSjZaZXREV2tLeWdZbE9nQ1hFb0dWMS1VaTE4eVpCa19PdU90ek9R?oc=5",
+        "published": "Sun, 06 Sep 2026 21:30:00 GMT",
+        "publisher": "INTERNET Watch"
+      },
+      {
+        "title": "9月の「三太郎の日」「お買い物ラリー」、最大21%ポイント還元（auコマース＆ライフ） - ペイメントナビ",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE03WWo0VmVjbTI4VUk5cDJHSmtkME1reV9qaG5fVGNGRDVyOFZiT0ROcTgwX3VTd1hfQ1JTbEhiX3cxdzB3d1lGeG8tUXdIMHR1RktpLUtOdlBlZUk?oc=5",
+        "published": "Sun, 06 Sep 2026 22:00:00 GMT",
+        "publisher": "ペイメントナビ"
+      },
+      {
+        "title": "KDDI、光回線と5Gを組み合わせた「auひかりプラス」を9月17日開始 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1STmpNMjh6Z3pSUGZvX1hpU3Y0cUtKWGlGbVFsSTJTUGM1S1doSEJ4X2x2Vi1FeFBUNGh0UUd5N0k5SmNlUE9LWXJIR0wxd0xUQkJoSjBHQTF0cWpqdXhmbVFwQlBkbmxPUjN3cHk0TTU2aGJES3NNM2NB0gF_QVVfeXFMUGd5b0R5MW4wUHljMkxXZ1RUVlJvc3JoQU4zZWtCM3paeWVLdGR6eFdaZHViSFlEenVYTS01V1VIdElNcnN1NFpwMk5JZjdJVkpRZEtJa0h1SFR5MG41U0UzWmVPQ1RwdDY2cWN2SzZiSC01WmNpZlRhWG9aMUlQbw?oc=5",
+        "published": "Sun, 06 Sep 2026 07:50:36 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "5Gを光回線開通前から提供、災害時にはバックアップ回線に、ハイブリッド接続サービス「auひかりプラス」をKDDIが提供 - 千葉テレビ放送",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9yX1k2RlEzb19KTXp6Q0k3dXRVTDZzZDA0cjc4Tkp1UEVwTXA0RjBvTVRsRDdjbzE4ZURUWU5EUnBTb3NzMHZMOTFxWTBycDhQTU93LUdGdmN0WUkzMWlR?oc=5",
+        "published": "Sun, 06 Sep 2026 21:38:31 GMT",
+        "publisher": "千葉テレビ放送"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      }
+    ]
+  }
+}
