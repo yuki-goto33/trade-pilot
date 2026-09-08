@@ -91,6 +91,20 @@ def fetch_ohlc(codes: list, start: str) -> dict:
                 out[code] = df
         except KeyError:
             continue
+
+    # 一括ダウンロードは稀に一部銘柄だけ失敗する（スレッド起因の一時エラー）ため、
+    # 欠けた銘柄は個別 API でリトライする
+    for code, ticker in zip(codes, tickers):
+        if code in out:
+            continue
+        try:
+            df = yf.Ticker(ticker).history(start=start, auto_adjust=False,
+                                           actions=True)
+            df = df.dropna(subset=["Open", "High", "Low", "Close"])
+            if not df.empty:
+                out[code] = df
+        except Exception:  # noqa: BLE001 - 欠損銘柄はスキップして続行
+            continue
     return out
 
 
