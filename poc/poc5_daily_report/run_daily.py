@@ -188,6 +188,12 @@ def main() -> int:
     if not args.report_only:
         step_persist_history(args.date)
 
+        # e. 資産推移シミュレーション（signals_history 反映後に全期間を再計算。
+        #    失敗しても Slack 送信済みレポートには影響させない）
+        if not run_script(POC_DIR / "portfolio_page.py"):
+            print("[WARN] 資産推移ページ生成に失敗（レポートは配信済み）",
+                  file=sys.stderr)
+
     return 0 if report_ok else 1
 
 

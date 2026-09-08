@@ -463,7 +463,9 @@ def build_index_html(dates: list) -> str:
            '<meta name="viewport" content="width=device-width, initial-scale=1">',
            "<title>trade-pilot デイリーレポート一覧</title>",
            f"<style>{CSS}</style></head><body>", '<div class="wrap">',
-           "<h1>📚 デイリーレポート一覧</h1><ul>"]
+           "<h1>📚 デイリーレポート一覧</h1>",
+           '<p><a href="../portfolio.html">📈 資産推移シミュレーション</a></p>',
+           "<ul>"]
     for d in dates:
         out.append(f'<li><a href="{esc(d)}.html">{esc(d)}</a></li>')
     out.append("</ul></div></body></html>")
