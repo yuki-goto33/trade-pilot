@@ -1,0 +1,197 @@
+{
+  "code": "4063",
+  "name": "信越化学工業",
+  "generated_at": "2026-09-08T09:20:49+09:00",
+  "price_as_of": "2026-09-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "中期および短期のトレンドが明確な下落基調にあり、SMA5がSMA25を大きく下回るデッドクロス状態が継続しているため。",
+        "evidence": "technical_view.points[0]: change_60d_pct=-15.16, technical_view.points[1]: sma5_vs_sma25=dead"
+      },
+      {
+        "reason": "中国による日本産ジクロロシランへの反ダンピング措置という新たな悪材料が浮上し、業績への不透明感が高まっているため。",
+        "evidence": "fundamental_view.points[0]: news.headlines[1,5,6], 2026-09-07"
+      },
+      {
+        "reason": "直近5日間で4%もの急激な円高が進行しており、海外売上比率の高い同社にとって利益圧縮要因となる懸念があるため。",
+        "evidence": "fundamental_view.points[2]: macro.indices.ドル円.change_5d_pct=-4.0"
+      },
+      {
+        "reason": "RSIが21.9と極めて低い売られすぎ水準にあり、短期的には自律反発の可能性があるため、ここからの追随売りはリスクが高い。",
+        "evidence": "technical_view.cautions[0]: price_technical.rsi14=21.9"
+      }
+    ],
+    "risks": [
+      "中国による輸出規制や貿易摩擦のさらなる激化による供給網への悪影響",
+      "次回の日銀金融政策決定会合（2026-09-17〜18）に伴う為替のさらなる円高進行",
+      "米国半導体株（SOX指数）の上昇に反応しない個別銘柄としての相対的な弱さの継続"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"中期および短期のトレンドが明確な下落基調にあり、SMA5がSMA25を大きく下回るデッドクロス状態が継続しているため。\",\n   \"evidence\": \"technical_view.points[0]: change_60d_pct=-15.16, technical_view.points[1]: sma5_vs_sma25=dead\"\n  },\n  {\n   \"reason\": \"中国による日本産ジクロロシランへの反ダンピング措置という新たな悪材料が浮上し、業績への不透明感が高まっているため。\",\n   \"evidence\": \"fundamental_view.points[0]: news.headlines[1,5,6], 2026-09-07\"\n  },\n  {\n   \"reason\": \"直近5日間で4%もの急激な円高が進行しており、海外売上比率の高い同社にとって利益圧縮要因となる懸念があるため。\",\n   \"evidence\": \"fundamental_view.points[2]: macro.indices.ドル円.change_5d_pct=-4.0\"\n  },\n  {\n   \"reason\": \"RSIが21.9と極めて低い売られすぎ水準にあり、短期的には自律反発の可能性があるため、ここからの追随売りはリスクが高い。\",\n   \"evidence\": \"technical_view.cautions[0]: price_technical.rsi14=21.9\"\n  }\n ],\n \"risks\": [\n  \"中国による輸出規制や貿易摩擦のさらなる激化による供給網への悪影響\",\n  \"次回の日銀金融政策決定会合（2026-09-17〜18）に伴う為替のさらなる円高進行\",\n  \"米国半導体株（SOX指数）の上昇に反応しない個別銘柄としての相対的な弱さの継続\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 80,
+      "summary": "中期および短期のトレンドが明確な下落基調にあり、MACDの乖離拡大やADRの軟調さから下値模索が続く見通しです。RSIは売られすぎを示唆していますが、反転の兆候は確認できません。",
+      "points": [
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともに大幅なマイナスであり、中期的な下落トレンドから脱却できていない。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-15.16, price_technical.trend_60d.relative_to_topix_60d_pct=-21.02"
+        },
+        {
+          "point": "SMA5がSMA25を大きく下回るデッドクロス状態にあり、MACDヒストグラムもマイナス圏で拡大を続けている。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.macd_histogram=-33.39"
+        },
+        {
+          "point": "米国市場で半導体関連指数（SOX）が上昇した一方で、当該銘柄のADRは下落しており、個別銘柄としての弱さが際立つ。",
+          "evidence": "us_overnight.adr.change_1d_pct=-1.38, us_overnight.sox_index.change_1d_pct=3.37"
+        }
+      ],
+      "cautions": [
+        "RSI14が21.9と極めて低い水準にあり、売られすぎからの短期的な自律反発が発生するリスク（price_technical.rsi14）",
+        "前夜のSOX指数やセクターETF（SMH）の2.6%超の大幅上昇を受け、寄り付きで買いが先行し、下落トレンドが一時的に遮られる可能性（us_overnight）",
+        "TOPIXが25日線を上回るニュートラルな地合いが支えとなり、直近安値付近で下げ渋る展開"
+      ],
+      "key_levels": {
+        "support": 5636.0,
+        "resistance": 6079.76
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "中国による半導体材料への反ダンピング措置（保証金徴収）という新たな悪材料と、急激な円高進行が短期的重石となる一方、積極的な自己株買いなどの株主還元姿勢が下値を支える構図です。",
+      "points": [
+        {
+          "point": "中国政府が日本産ジクロロシランに対し、反ダンピング措置として最大99.2%の保証金徴収を決定したとの報道があり、半導体材料部門の収益への悪影響が懸念されます。",
+          "evidence": "news.headlines[1,5,6], 2026-09-07"
+        },
+        {
+          "point": "2026年3月期の通期連結業績は、売上高は横ばい圏ながら営業利益が前期比で約14%の減益となる計画であり、成長鈍化が意識されやすい状況にあります。",
+          "evidence": "fundamentals.earnings_trend.annual.2026-03, operating_income_oku_jpy=6352"
+        },
+        {
+          "point": "マクロ環境において、直近5日間でドル円が4%下落（円高進行）しており、海外売上比率の高い同社にとって利益圧縮要因となります。",
+          "evidence": "macro.indices.ドル円.change_5d_pct=-4.0"
+        },
+        {
+          "point": "直近で自己株買いの完了や、コミットメント型自己株式取得（FCSR）に関する開示を行うなど、資本効率向上と株主還元を重視する姿勢は継続しています。",
+          "evidence": "disclosures.2026-07-30, 2026-07-24"
+        }
+      ],
+      "cautions": [
+        "中国による輸出規制や貿易摩擦のさらなる激化による供給網への影響",
+        "次回の日銀金融政策決定会合（2026-09-17〜18）に伴う為替および金利のボラティリティ上昇",
+        "10月23日に予定されている次回決算発表における業績進捗の確認"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "信越化学工業(株)【4063】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9fZnZfbnFJTWhtSjluMV80eDlsYnl0bVoxOUVfbzdCaGFUV0tSdzBOV1BpUUlKc3pwWlBkVG8zMlFMa0dBcWpPZ01jTkZzQkpNajM3eW1WaW9sRndYaFk0?oc=5",
+        "published": "Mon, 07 Sep 2026 06:53:26 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "中国、日本産ジクロロシランに最大99.2％の保証金 8日から - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1nbk1jdjM4b0pVYktqVXZrejRRb0k5M1BWdWQzTFoxUk9jR2IydGN5b0dTcTdIOVV3QWY0cnlTWEV6aS10dEtyNkhQRENaNXFZUGdXTUwtWEtDdF9RdklUUWxCWHA5RVUwYm1GMENIUklZOFdG?oc=5",
+        "published": "Mon, 07 Sep 2026 11:25:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "【FISCO銘柄コメント】信越ポリマー---信越化学工業傘下の樹脂加工メーカー(フィスコ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQVDktZVpfWlRKWXNyTHBBUURrZnk5TGRjX2xTbi1VRGs5RXpxMTNweHNtM1RBcUFzaXJ1TENVSVlLRHJFbGVuTXhCdVY5TUFYNk95UUMzUlk4X19vRTVIbVpXTnZBU1REVEdaU2d6ZklQTm82NU03Z3VfOFhFUllGUXpSRXJqcEU?oc=5",
+        "published": "Mon, 07 Sep 2026 05:18:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "中国、日本産ジクロロシランに最大99.2%の暫定反ダンピング保証金を課す - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1uS3VPTEEzeHVWcWdOMW9mRmJSXzJQNW05Vmw3M1JQcWVkR0JIYzJHSENhTGctUjhpb0wtenpfdjdSdm9UQXZuYW94d202dDlLTGZSRHBRS3pPX2l0NmlnSnZIYnhlNGlzTXFvdGd2TUI5WE9m?oc=5",
+        "published": "Mon, 07 Sep 2026 08:36:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "日本産特殊ガスは「ダンピング」　中国、保証金率最大99％に - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBWT2Ntdk13M05lb0xnSW8wY0R6bXI0VkpVYWY4MkxlYzEtQUhlVEY0VTFxem9FYUV0OC1EQ2prbkpES3hycGJyQ29VVFVEb2VtMUg2YjM5N05XUDJVdVJlaFU0c0JiNlpBY2JxSFRGWVJnX2pF0gF0QVVfeXFMUFZPY212TXczTmVvTGdJbzBjRHptcjRWSlVhZjgyTGVjMS1BSGVURjRVMXF6b0VhRXQ4LURDamtuSkRLeHJwYnJDb1VUVURvZW0xSDZiMzk3TldQMlV1UmVoVTRzQmI2WkFjYnFIVEZZUmdfakU?oc=5",
+        "published": "Mon, 07 Sep 2026 10:59:20 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "信越化学の半導体材料に「保証金」＝反ダンピング措置―中国 - 時事通信ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5xbUt1RmxhQlpMRzJERjlTYlQ5RFhYUWVhVjh6ZGRMYnEtM29fcmZDa21RNzZpMEZGejI1NzF1U25KVkNaVG5fRzI4bWlzamgzaEZSNw?oc=5",
+        "published": "Mon, 07 Sep 2026 09:50:00 GMT",
+        "publisher": "時事通信ニュース"
+      },
+      {
+        "title": "中国、信越化学の半導体材料に「保証金」＝反ダンピング措置(時事通信) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOWmkxZktIWjNDazlTZDlpMjlZQ1VWQVBvRVp1a1NlN25XaVZ4c1RUcURyVmR4RHViWjgwU2hiUzNkLXhLWWVCVTQtdERZSzlBMWhEV25pQkM0eTlCcUVINklUUmtxb0JfbElTOGktZnl0QnpZeG0yc19wamEtRzYwck01OUZMcjA?oc=5",
+        "published": "Mon, 07 Sep 2026 11:54:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による取得結果および自己株式の取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730502910.pdf",
+        "date": "2026-07-30 11:30:00"
+      },
+      {
+        "title": "コミットメント型自己株式取得（FCSR）による自己株式取得のための第三者割当による第27回および第28回新株予約権の発行条件の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503103.pdf",
+        "date": "2026-07-30 11:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による自己株式の買付けに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729502228.pdf",
+        "date": "2026-07-29 16:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598954.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "業績予想および配当予想に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598982.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による自己株式の買付けに関するお知らせ（コミットメント型自己株式取得（FCSR）による自己株式取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598998.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573248.pdf",
+        "date": "2026-06-18 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260605563833.pdf",
+        "date": "2026-06-05 15:30:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541941.pdf",
+        "date": "2026-05-20 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260520541943.pdf",
+        "date": "2026-05-20 15:30:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-09-08T09:20:07+09:00",
+  "price_as_of": "2026-09-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ面では大手証券による目標株価95,000円への引き上げやAI需要拡大という強いポジティブ材料があるが、テクニカル面で強い下落トレンドが継続しており、エントリー基準を満たさない。",
+        "evidence": "fundamental_view.points[0]: 目標株価95,000円、technical_view.stance=bearish"
+      },
+      {
+        "reason": "5日移動平均線が25日移動平均線を下回るデッドクロス状態にあり、MACDヒストグラムもマイナス圏で拡大していることから、短期的には「落ちるナイフ」の状態にあると判断した。",
+        "evidence": "technical_view.points[0]: SMA5_vs_SMA25=dead, technical_view.points[1]: macd_histogram=-814.43"
+      },
+      {
+        "reason": "製造業PMIの改善など事業環境は良好であるが、現在のテクニカルな売り圧力を吸収して底打ちを確認するまで待機が妥当である。",
+        "evidence": "fundamental_view.points[1]: macro.japan_pmi.manufacturing.latest_value=54.9"
+      }
+    ],
+    "risks": [
+      "2026年9月17日から開催される日銀金融政策決定会合に伴う金利上昇懸念と、高PER銘柄への売り圧力",
+      "直近で進行している円高（1ドル153.8円）による海外利益の目減りリスク",
+      "テクニカル指標のRSIが売られすぎ水準に近いが、自律反発が限定的となりSMA25付近の抵抗線に跳ね返されるリスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ面では大手証券による目標株価95,000円への引き上げやAI需要拡大という強いポジティブ材料があるが、テクニカル面で強い下落トレンドが継続しており、エントリー基準を満たさない。\",\n   \"evidence\": \"fundamental_view.points[0]: 目標株価95,000円、technical_view.stance=bearish\"\n  },\n  {\n   \"reason\": \"5日移動平均線が25日移動平均線を下回るデッドクロス状態にあり、MACDヒストグラムもマイナス圏で拡大していることから、短期的には「落ちるナイフ」の状態にあると判断した。\",\n   \"evidence\": \"technical_view.points[0]: SMA5_vs_SMA25=dead, technical_view.points[1]: macd_histogram=-814.43\"\n  },\n  {\n   \"reason\": \"製造業PMIの改善など事業環境は良好であるが、現在のテクニカルな売り圧力を吸収して底打ちを確認するまで待機が妥当である。\",\n   \"evidence\": \"fundamental_view.points[1]: macro.japan_pmi.manufacturing.latest_value=54.9\"\n  }\n ],\n \"risks\": [\n  \"2026年9月17日から開催される日銀金融政策決定会合に伴う金利上昇懸念と、高PER銘柄への売り圧力\",\n  \"直近で進行している円高（1ドル153.8円）による海外利益の目減りリスク\",\n  \"テクニカル指標のRSIが売られすぎ水準に近いが、自律反発が限定的となりSMA25付近の抵抗線に跳ね返されるリスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "短期移動平均線のデッドクロスに加え、MACDの急速な悪化が続いており、調整局面が継続していると判断されます。",
+      "points": [
+        {
+          "point": "SMA5（78978円）がSMA25（82698円）を明確に下回るデッドクロス状態にあり、短期的なトレンドが下向きに転じている。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\""
+        },
+        {
+          "point": "MACDがマイナス圏でシグナルを下回り、ヒストグラムが-814.43まで大幅に拡大していることから、強い下落モメンタムが示唆される。",
+          "evidence": "price_technical.macd_histogram=-814.43"
+        },
+        {
+          "point": "直近5営業日の推移で、9/2に-5.18%の急落を記録して以降、SMA5を回復できない状態が続いており、上値の重さが目立つ。",
+          "evidence": "price_technical.recent_5_days[1].change_pct=-5.18"
+        }
+      ],
+      "cautions": [
+        "RSI14が34.4と売られすぎ水準に接近しており、目先の自律反発が入りやすい水準である点には注意が必要。",
+        "前夜のADRが+0.89%、テクノロジーセクターETFが+0.7%と堅調であり、寄り付きは買い先行となる可能性がある。",
+        "中期トレンド（60日騰落率）は+10.69%と依然プラスを維持しており、長期的なサポート意識が働く可能性がある。"
+      ],
+      "key_levels": {
+        "support": 69950.0,
+        "resistance": 82698.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "製造業PMIがAI需要を背景に拡大を続ける中、直近の米系大手証券によるレーティング及び目標株価の引き上げが強力なファンダメンタルズ上のカタリストとなっている。",
+      "points": [
+        {
+          "point": "米系大手証券がレーティングを「強気」に引き上げ、目標株価を95,000円に設定したことが2026年9月7日に報じられており、投資家心理を好転させる強力な材料となっている。",
+          "evidence": "news.headlines[0].title=\"【アナリスト評価】キーエンス、レーティング強気に引上げ、目標株価95,000円に引上げ\""
+        },
+        {
+          "point": "2026年8月の製造業PMIが54.9と7ヶ月連続の拡大を示しており、特にAI関連需要による新規受注の増加が同社の高付加価値センサー事業にとって追い風となっている。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9, macro.japan_pmi.manufacturing.summary_en=\"strong AI-related demand\""
+        },
+        {
+          "point": "売上高・利益ともに右肩上がりの成長を継続しており、2026年3月期の営業利益率は50%を超え、極めて高い収益性と成長性を両立している。",
+          "evidence": "fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=5958, fundamentals.earnings_trend.annual[0].revenue_oku_jpy=11693"
+        }
+      ],
+      "cautions": [
+        "9日後に控える日銀金融政策決定会合（9/17-18）に伴う金利上昇懸念は、PER42倍超のバリュエーションを持つ同社にとって割引率上昇による株価下押しリスクとなる。",
+        "直近5日間で4%進行している円高（1ドル153.8円）は、グローバル展開する同社の為替変換利益を減少させる要因となる。",
+        "次回決算発表（2026-10-29）まで期間があり、業績期待が先行しすぎた場合の反動に注意が必要。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": 95000.0
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "【アナリスト評価】キーエンス、レーティング強気に引上げ、目標株価95,000円に引上げ（米系大手証券）(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNdFR5bVdteWpLUVl3S1Bvb3NSR2cwWDNVYlNKYXNpTWMtNy1wZDdfVGRteWFWdW51OG1sTDVlTUlSQ2QxSl9JVmEySm5oaWVZdkdtblhsdTFIOVVjci1OcEphd0lCaVpiVG1zeVhzN24wSzJOWm5HMzdza3ZqSE1xbEFON1REN2c?oc=5",
+        "published": "Mon, 07 Sep 2026 10:24:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "【アナリスト予想】キーエンス、27年3月期経常予想。対前週0.1%上昇。(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPYWpQMWktbmJUejhMY2Z3b3plYzB5RGhpWlBMeEltb0daUW01dTd4WHhITmVRNWx0eFVlN3hNczQ1Vk9tR1BQbXBGbjVpa1RFenU3YWMzV3AxakNhQUJtdXo3WXpwQ2dtLTc2NHJvRGFtVFNSTmttTmZjaUl5Mk95Y0pPai03NU0?oc=5",
+        "published": "Mon, 07 Sep 2026 13:46:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "株式会社PROXERA、キーエンス出身トップセールス集団による実践型営業コーチング「Sales Coaching Lab」を正式ローンチ - Excite エキサイト",
+        "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5QMi1qQmNaU0Nsc1ZZYUJ1YWtaM1lhYWEtaTJ1Q1VqOWNuRFVLMEFYQUpjVUFXbkh4WVdzemhIRUNGOGdsR0t4eXNCdFMxTmY5TmN2WjNlQTJIeS1FM0NjRWpYMWdCQjFrT19jVm82VjVSaGs?oc=5",
+        "published": "Mon, 07 Sep 2026 05:15:00 GMT",
+        "publisher": "Excite エキサイト"
+      },
+      {
+        "title": "【記事全文】【社会人ゴルフ】レギュラーは木村武志、シニアは佐々木厚造がともに初優勝 日本選手権へ - スポニチ Sponichi Annex",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQcDNMeTJVNGZvZDFEUWo5bUNNODQ2UnJSZndKbVhhZ0VBb3dWWURvaTB0UUVqNE9ManFvWGcwNlBsX1RRcTNQMFNtWWp5WnJDckotSXhBZDJvTmgtWU5XbzZXT01oYzhIVTdrZWg5ZlFLQXdLNnVFWmljWmhVdjlXVWJLRFYyTkV6MWc2MXktclp1UQ?oc=5",
+        "published": "Mon, 07 Sep 2026 20:30:00 GMT",
+        "publisher": "スポニチ Sponichi Annex"
+      },
+      {
+        "title": "ファナックでも安川電機でもない 「フィジカルAI」注目4銘柄の実名 - 現代ビジネス",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBtcWM3OEFxZ0VlX3F5bEZWdm5nem8wa2tmMU1fWTdpY2Uwdko3MHBUbnFCMW5XTk8yRktTQnhMa0k3aGdkdmQ1ZERtSXFFWk0?oc=5",
+        "published": "Mon, 07 Sep 2026 20:04:10 GMT",
+        "publisher": "現代ビジネス"
+      },
+      {
+        "title": "AI検索 引用ドメインランキング 2026年8月号 - valuepress",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9QM1RZMnhBVlNheldOb0JJUFNqNEVjbkNfOXJfNWMyMUN1ZmhjUWJKUTNqcGRBLVhIbERwUFFkRmYtMUdXbmMzRUg4emVRZlNndUlqdTdIR0JvQ1E?oc=5",
+        "published": "Mon, 07 Sep 2026 03:00:00 GMT",
+        "publisher": "valuepress"
+      },
+      {
+        "title": "新型CX-5の販売は好調だが…マツダの看板｢ディーゼル｣を捨てざるを得なかった\"のっぴきならない事情\" - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFA4cEVIUlNURjZGbmJEVDVBT1I3QU10eERwN21IT0k1M3c1ZU9fRzFCYW92NUxTNnhOcTZ3eW93X2dJOTAxLXRybk5lSVkzMFk?oc=5",
+        "published": "Mon, 07 Sep 2026 01:01:46 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      }
+    ]
+  }
+}

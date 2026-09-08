@@ -1,0 +1,206 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-09-08T09:18:44+09:00",
+  "price_as_of": "2026-09-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家が neutral かつ strength 55 であり、良好な事業環境や利上げ期待が既に株価（PBR 1.84倍）に織り込まれているとの見解を採用しました。",
+        "evidence": "fundamental_view.points[2]: PBR 1.84倍、予想PER 24.466倍とバリュエーション面では従前の割安感が薄れている"
+      },
+      {
+        "reason": "テクニカル専門家は bullish（strength 75）ですが、ルールに基づき両者が強気に揃う、あるいはテクニカルが先行して強気な局面は「織り込み済み」と判断し、新規エントリーを避けます。",
+        "evidence": "technical_view.stance=bullish (strength=75) / 統合判断のルール1"
+      },
+      {
+        "reason": "9日後に日銀金融政策決定会合を控えており、政策金利や為替の動向に対する不透明感から、現状での新規買いはリスクが高いと判断しました。",
+        "evidence": "reference.next_boj_meeting: 2026-09-17〜2026-09-18"
+      }
+    ],
+    "risks": [
+      "日銀金融政策決定会合における利上げの有無や植田総裁の会見内容によるボラティリティの急拡大",
+      "ドル円の急速な円高（直近5日で-4.0%）が続くことによる、輸出株から金融株への連鎖的なリスクオフ波及",
+      "短期的には5日移動平均線を割り込んでおり、25日線（3606.64円）付近までの調整が長引く可能性"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家が neutral かつ strength 55 であり、良好な事業環境や利上げ期待が既に株価（PBR 1.84倍）に織り込まれているとの見解を採用しました。\",\n   \"evidence\": \"fundamental_view.points[2]: PBR 1.84倍、予想PER 24.466倍とバリュエーション面では従前の割安感が薄れている\"\n  },\n  {\n   \"reason\": \"テクニカル専門家は bullish（strength 75）ですが、ルールに基づき両者が強気に揃う、あるいはテクニカルが先行して強気な局面は「織り込み済み」と判断し、新規エントリーを避けます。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=75) / 統合判断のルール1\"\n  },\n  {\n   \"reason\": \"9日後に日銀金融政策決定会合を控えており、政策金利や為替の動向に対する不透明感から、現状での新規買いはリスクが高いと判断しました。\",\n   \"evidence\": \"reference.next_boj_meeting: 2026-09-17〜2026-09-18\"\n  }\n ],\n \"risks\": [\n  \"日銀金融政策決定会合における利上げの有無や植田総裁の会見内容によるボラティリティの急拡大\",\n  \"ドル円の急速な円高（直近5日で-4.0%）が続くことによる、輸出株から金融株への連鎖的なリスクオフ波及\",\n  \"短期的には5日移動平均線を割り込んでおり、25日線（3606.64円）付近までの調整が長引く可能性\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "中期的な上昇トレンドが継続する中でMACDも好転しており、直近の反落は25日線付近を支持線とした押し目形成の範疇と捉えられます。",
+      "points": [
+        {
+          "point": "中期トレンドが非常に強力で、市場全体を大幅にアウトパフォームしています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=18.15, relative_to_topix_60d_pct=12.29"
+        },
+        {
+          "point": "MACDがシグナルを上回り、ヒストグラムが拡大傾向にあるため、上昇モメンタムの再加速が示唆されています。",
+          "evidence": "price_technical.macd=19.02, macd_signal=-7.55, macd_histogram=26.57"
+        },
+        {
+          "point": "5日線が25日線を上回るゴールデンクロス状態を維持し、長期的な支持線である25日線より上で推移しています。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, last_close=3711.0, sma25=3606.64"
+        }
+      ],
+      "cautions": [
+        "直近営業日に-1.96%の反落があり、5日移動平均線(3726.8)を割り込んでいるため、短期的には調整が長引く可能性があります。",
+        "前夜の米国市場で金融セクターETF(XLF)が-0.79%、ADRが-0.17%と軟調であり、当日の寄り付きから売りが先行するリスクがあります。",
+        "RSI14が39.9まで低下しており、目先の反発力が一時的に弱まる懸念があります。"
+      ],
+      "key_levels": {
+        "support": 3606.64,
+        "resistance": 3813.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "長期金利高水準を背景とした力強い業績拡大が続く一方、PBR1.84倍・予想PER24.47倍と好材料の織り込みが進んでおり、9日後の日銀金融政策決定会合を控えて拮抗しています。",
+      "points": [
+        {
+          "point": "純利益は2024年3月期の1兆4908億円から2026年3月期の2兆4272億円まで拡大基調にあり、2026年6月期も四半期純利益8094億円と高水準を維持しています。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.earnings_trend.quarterly[0].net_income_oku_jpy=8094"
+        },
+        {
+          "point": "日本10年国債利回りが2.91%で推移しており、国内金利の上昇環境は銀行業の利ざや拡大にとって好ましいマクロ環境です。",
+          "evidence": "macro.rates.jgb_10y_percent.value=2.91"
+        },
+        {
+          "point": "PBR 1.84倍、予想PER 24.466倍とバリュエーション面では従前の割安感が薄れており、良好な事業環境や利上げ期待が先行して織り込まれている水準です。",
+          "evidence": "fundamentals.valuation.price_to_book=1.84, fundamentals.valuation.forward_pe=24.466"
+        }
+      ],
+      "cautions": [
+        "2026年9月17〜18日に日銀金融政策決定会合（あと9日）を控えており、利上げ思惑の織り込み状況に応じたボラティリティ急拡大リスクがあります。",
+        "ドル円が直近5日で-4.0%下落（153.8円）しており、急激な為替変動に伴う株式市場全体のリスクオフが波及する可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)三菱ＵＦＪフィナンシャル・グループ【MUFG】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1fb09UZ016WWhiUVBjc0RvWFltWjhxVkhJbkpyOEhKLXMzR2JuMk0wY1MybnpuUWNldldDSTJMak1rZV83N2JYNGFMWktSU3M?oc=5",
+        "published": "Mon, 07 Sep 2026 20:18:07 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "(株)三菱ＵＦＪフィナンシャル・グループ【8306】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1oNVRyU21seTRreG9UUWh2VU9PUkRfbHNWdWxFMHFIZnZ5dnNPTnR2dU8taVdGb0xkZEc5MkdnZ2tmY1VHc0dkODdqZXpnS01xZGtMMGhoYkg3OUUzamRF?oc=5",
+        "published": "Mon, 07 Sep 2026 06:52:38 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ＨＵＬＩＣＲについて、三菱ＵＦＪは保有割合が増加したと報告 [変更報告書No.1] - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9sOGhJdXMwdmdzYTZiM2tscXEzY3NaOUxHU0pCSU1nMTZvT0ZpaUg1TDIwYVJPc0s5ay1tVVNMeEs0NHJyYmo3ekVqNEhlRnlGeUluLWlWMEJxZjRBT2FjcA?oc=5",
+        "published": "Mon, 07 Sep 2026 02:11:02 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "【三菱ＵＦＪ銀行】口座開設キャンペーンを9月7日から開始！条件達成で最大2万円、抽選でさらに2万円当たる - 上毛新聞電子版",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE41MmpRZDI3TExFbDZ2NWQtejIzZEJZWHM1Q0s5WnVqNGVvY2YxOEN4MWcyZWVZYkhVS2NBOGJka3lVTVNwd2g4bTdCV1R6WkhySndrTnRIUzVadw?oc=5",
+        "published": "Mon, 07 Sep 2026 01:30:00 GMT",
+        "publisher": "上毛新聞電子版"
+      },
+      {
+        "title": "みずほ銀、貯蓄預金を約16年半ぶり復活 預金額で段階金利、3メガ初 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9XemxVSnpqVFg0X3c2aUVZWmVHVVItZHpZbDJJWElKRkJ3Vlc4UWtFVUF3dmlOTkR4WllpdVdUUkdtaFBVbWY2VUQ3aEc4ZkRaaG1vNGR4QnFqN1hmRUpuUE44WGdleXJ5WGNadTZOLXFNSXJN?oc=5",
+        "published": "Mon, 07 Sep 2026 07:25:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "【新NISA】9月配当取りを狙える、注目の日本株「連続増配株5選」を実名公開（桶井 道） - 4ページ目 | マネー現代 | 講談社 - 現代ビジネス",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE00LWNtNnZoWTFGN2VRYjJ4R3NVQ0VHYzJJWFpQMGV3RXprVGg3aUtwdTExdjJtVk4wNWNYRjNNOTd1ZkFqdVpyemlIVHZlZTFqSW5FbGxqQ2c?oc=5",
+        "published": "Mon, 07 Sep 2026 03:43:17 GMT",
+        "publisher": "現代ビジネス"
+      },
+      {
+        "title": "Ｌドリンクについて、三菱ＵＦＪは保有割合が減少したと報告 [変更報告書No.2] - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBYbGhfa0J1dFZNQ0ZBZnF4TVJ2UnRxRzdUbmxTbjZJLWpUTnpZMEpQb0plYVZxQ1VNRVZ5bVZMYVVLWmhRY3pzNnkwck5Wc3g5aUE?oc=5",
+        "published": "Mon, 07 Sep 2026 02:06:02 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "日経平均が一時1600円超高、6万6000円台回復 半導体高でAI関連に買い - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4zX0NJRUlMLWpQalNTS0E0ckZqQW5CU05lLVVYbFdaSF9xV0xiNzZEeUZPMzJoMWU0QkVqSXlFNlZaYjcyODlQdUVlM2o1R1lFTElPTVgwdVJSTVd3ZmoxcVJJaUdfOEIwSENNN2FHeF9KM0ps?oc=5",
+        "published": "Mon, 07 Sep 2026 03:05:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "【三菱ＵＦＪ銀行】口座開設キャンペーンを9月7日から開始！条件達成で最大2万円、抽選でさらに2万円当たる - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9FTDZhcFZLSVJGOGpFWVlZc1Nabjl5REhuVS1fd21Xd2VvTU8zQXdULXlRcTB5VklnZ0tvNWswWnVoMEpwbWhDRm84VldWQjF6elFsaUpaZ01sZ0s0Wkxzc0VxVEZ5aGc?oc=5",
+        "published": "Mon, 07 Sep 2026 01:30:00 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "日圓急伸、155円台を突破し半年ぶり高値 市場は日銀の来週利上げを織り込む - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4yRTcyd3IzcFZ1ZFJ5MUhmNnlwcGdITmNfVUJfbTlCRnFYVmVzZVRnQXk5ZkxUMjdlcXZVeXM4UUhBc3dmaWF0bmplY0trRjdJRGFGRFVNTWJqczJuSlpfZ1VZN2cxY25FMW1XZHRLZWRtU1hO?oc=5",
+        "published": "Mon, 07 Sep 2026 12:55:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期 自己資本比率について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260814520300.pdf",
+        "date": "2026-08-14 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕（連結）（公認会計士又は監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510381.pdf",
+        "date": "2026-08-06 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505851.pdf",
+        "date": "2026-08-03 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      }
+    ]
+  }
+}

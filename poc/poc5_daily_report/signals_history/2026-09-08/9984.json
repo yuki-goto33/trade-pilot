@@ -1,0 +1,209 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-09-08T09:19:24+09:00",
+  "price_as_of": "2026-09-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズはAI需要の拡大や資金調達成功により極めて強気（Strength 75）ですが、統合判断ルールに基づき、テクニカル面でも既に強気サイン（bullish）が出揃っているため、材料の織り込みが進んだ「遅いエントリー」を避けるべき局面と判断しました。",
+        "evidence": "fundamental_view.strength=75, technical_view.stance=bullish (strength=75)"
+      },
+      {
+        "reason": "わずか2営業日で株価が20%以上急騰しており、RSIの急上昇に伴う短期的な過熱感から利食い売りが出やすい水準に達しています。",
+        "evidence": "technical_view.cautions[1]: price_technical.rsi14=58.3"
+      },
+      {
+        "reason": "直近の抵抗帯である期間高値（6230円）に極めて接近しており、ここを確実に更新して地固めを確認するまで、リスクリワードの観点から新規エントリーは控えるべきです。",
+        "evidence": "reference.last_close=6217.0, reference.period_high=6230.0"
+      }
+    ],
+    "risks": [
+      "2026年9月17日から開催される日銀金融政策決定会合による金利上昇リスクと利払い負担増の懸念（fundamental_view.cautions）",
+      "ドル円153.8円水準での急速な円高進行による、海外投資資産の円換算価値の減少リスク",
+      "2026年3月期の営業利益マイナス予測に伴う収益構造の不透明感",
+      "ADRの大幅上昇を受けた当日の寄り付き天井による、目先の材料出尽くし感"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズはAI需要の拡大や資金調達成功により極めて強気（Strength 75）ですが、統合判断ルールに基づき、テクニカル面でも既に強気サイン（bullish）が出揃っているため、材料の織り込みが進んだ「遅いエントリー」を避けるべき局面と判断しました。\",\n      \"evidence\": \"fundamental_view.strength=75, technical_view.stance=bullish (strength=75)\"\n    },\n    {\n      \"reason\": \"わずか2営業日で株価が20%以上急騰しており、RSIの急上昇に伴う短期的な過熱感から利食い売りが出やすい水準に達しています。\",\n      \"evidence\": \"technical_view.cautions[1]: price_technical.rsi14=58.3\"\n    },\n    {\n      \"reason\": \"直近の抵抗帯である期間高値（6230円）に極めて接近しており、ここを確実に更新して地固めを確認するまで、リスクリワードの観点から新規エントリーは控えるべきです。\",\n      \"evidence\": \"reference.last_close=6217.0, reference.period_high=6230.0\"\n    }\n  ],\n  \"risks\": [\n    \"2026年9月17日から開催される日銀金融政策決定会合による金利上昇リスクと利払い負担増の懸念（fundamental_view.cautions）\",\n    \"ドル円153.8円水準での急速な円高進行による、海外投資資産の円換算価値の減少リスク\",\n    \"2026年3月期の営業利益マイナス予測に伴う収益構造の不透明感\",\n    \"ADRの大幅上昇を受けた当日の寄り付き天井による、目先の材料出尽くし感\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "直近2営業日で20%を超える急騰を見せ、25日移動平均線を大幅に上放れる強いリバウンドが発生しています。MACDの好転と出来高の急増を伴っており、中期下落トレンドからの反転の兆しが極めて濃厚です。",
+      "points": [
+        {
+          "point": "出来高を伴う大幅な反発により、主要な抵抗帯である25日移動平均線を明確に突破しました。",
+          "evidence": "price_technical.last_close=6217.0, price_technical.sma25=5420.36, price_technical.recent_5_days[4].volume=83638700"
+        },
+        {
+          "point": "MACDヒストグラムが大幅にプラス圏へ拡大し、MACDラインもシグナルを上回るなど、短期的なモメンタムが急速に強まっています。",
+          "evidence": "price_technical.macd_histogram=61.71, price_technical.macd=33.47"
+        },
+        {
+          "point": "前夜の米国市場でADRが約7.8%と大幅に上昇しており、寄り付きから強い買い意欲が期待できる地合いです。",
+          "evidence": "us_overnight.adr.change_1d_pct=7.79"
+        }
+      ],
+      "cautions": [
+        "60日騰落率および対TOPIX相対騰落率は依然としてマイナスであり、中期的な調整局面を完全に脱したと断定するには、期間高値（6230円）の確実な更新が必要です (price_technical.trend_60d.change_60d_pct=-2.46)。",
+        "わずか2営業日で株価が20%以上上昇しており、RSIの上昇に伴う短期的過熱感からの利確売りに注意が必要です (price_technical.rsi14=58.3)。",
+        "ADRの大幅上昇により、当日の寄り付き価格が大きく跳ね上がることで、目先の材料を織り込み尽くすリスクがあります。"
+      ],
+      "key_levels": {
+        "support": 5420.0,
+        "resistance": 6230.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "AI・半導体関連の需要拡大を背景とした市場環境の改善と、直近の資金調達成功およびAI分野への積極投資が評価され、強い買い材料となっている。",
+      "points": [
+        {
+          "point": "AI需要の拡大と投資ポートフォリオへの追い風。2026年9月7日のニュースでAI・半導体関連株への買いが集中し、同社が値上がり率トップとなった。また、日本の製造業PMIサマリーでもAI関連需要の強さが言及されている。",
+          "evidence": "news.headlines[7].title, macro.japan_pmi.manufacturing.summary_en"
+        },
+        {
+          "point": "円滑な資金調達と投資余力の確保。2026年9月4日に第70回無担保普通社債の条件決定が行われており、継続的な投資活動に向けた財務基盤の安定が示唆されている。",
+          "evidence": "disclosures.items[0].date=\"2026-09-04 10:30:00\""
+        },
+        {
+          "point": "高い資本効率と戦略的投資の実行。ROEが32%と極めて高い水準にあり、OpenAIへの追加出資など成長分野へのリソース配分が継続している。",
+          "evidence": "fundamentals.valuation.return_on_equity=0.32, disclosures.items[6].title"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日から開催される日銀金融政策決定会合。金利上昇観測は有利子負債の多い同社にとって利払い負担増のリスクとなる。",
+        "急速な円高進行（ドル円153.8円）。海外投資資産の円換算価値を押し下げる要因となる。",
+        "業績のボラティリティ。2026年3月期の営業利益がマイナス圏（-48億円）と予測されており、投資損益に左右される収益構造がリスクとなる。",
+        "次回決算発表（2026年11月11日）に向けた不透明感。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "前日に動いた銘柄 part1ソフトバンクグループ、キオクシアHD、レーザーテックなど - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9PdGpCaWo3V0hwTXlZd1ZpajBTcW9iVHhyU1ZkN0lxRE9GUFY2aXFIMlc2SHVJTUZ2UERia0Z3Y0VESXJMS0xPUlg4aDJTa3l0dXlaTURRQm5ESEloVkZsZzVB?oc=5",
+        "published": "Mon, 07 Sep 2026 22:15:00 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "前日に動いた銘柄 part1ソフトバンクグループ、キオクシアHD、レーザーテックなど(フィスコ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPa1M3cjRTc2x0dDlVMlNLNWU3MXZYelJ4bGZRM01xeVVtUU9ISkNpMnV1TFZwQ2VQUmRqWG5nMHpwTzZkTTY2RENQX3JpM2RwSDluei1yZjRSdUI1RHZlbUFNRUtELVRwbmJjaXpsbm9vT1k0bHBiMi1odF9LUjBFU0pJdW9LeTg?oc=5",
+        "published": "Mon, 07 Sep 2026 22:18:52 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "$ソフトバンクグループ (9984.JP)$ いいですねぇ！ 皆さん、これですよ！！ 金のガチョウがね、どんどんどんどん... - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPVHZCdlc2N2JJRm9ndlpiMmJ2QkJFMDJEYlRfdTZSeUlVWk5mMXdaazJ0eTYwcWowQjk1TDFDX05ieXZyVDJ0X3J2YTNaSkFZT2dEcTFEU2l4ZFYxdGxkVzZwc3gyUlE0cGRDQW0tM01iUEVNR2hhd0U5TGlXcVVacmJlZnY0anUyWHlwbGRvekR5ZW5LYmlVZ1JTbENfVk1QRVZNM3lvd0YtYmxGOTQwYzkzTFY?oc=5",
+        "published": "Mon, 07 Sep 2026 04:23:17 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "マルチ決済サービスと顔認証技術を連携 NECとソフトバンクグループ - 電波新聞デジタル",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9qbmxISzJlcjJmLU5LOUNyODZGODhUeUNUUm5kWlpsMWJvdTFWMG1jYVRZRkI3VDNWRWhBSWFfZC1YSWJJRE8wMWVnX010bFVqbXc?oc=5",
+        "published": "Mon, 07 Sep 2026 01:03:49 GMT",
+        "publisher": "電波新聞デジタル"
+      },
+      {
+        "title": "動いた株・出来た株（前場）part1：レーザーテック、ソフトバンクグループなど15社(フィスコ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPeUxXcG5yTHpPNVFyMW9oQWZRWnZVWndYUTE3VHFGSkxuNy10UEhDSU5jSlhRR0NVVjNkd00zazY5WXNlcUpvdGE0SzJyZk5VQ1VqX2RNSE8td2UyanBCTGxMN0g3Z1JIdDRvcWNJVVFhQ0l6cW9hcEVwcEV0SGZJQkROVE9VUGc?oc=5",
+        "published": "Mon, 07 Sep 2026 04:57:00 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "日経平均が一時1600円超高、6万6000円台回復 半導体高でAI関連に買い - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4zX0NJRUlMLWpQalNTS0E0ckZqQW5CU05lLVVYbFdaSF9xV0xiNzZEeUZPMzJoMWU0QkVqSXlFNlZaYjcyODlQdUVlM2o1R1lFTElPTVgwdVJSTVd3ZmoxcVJJaUdfOEIwSENNN2FHeF9KM0ps?oc=5",
+        "published": "Mon, 07 Sep 2026 03:05:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "【株式市場】日経平均１３７８円高、６万６０００円台回復、ＡＩ・半導体株がけん引 - kabu-ir.com",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5ic0tkM0hHVm1HejdqOWY2OTZWU1EzNGprZ0plcmtkX1FRYjdfaml6dzIydEdUNnhTMHNhRmk5aXpWcEtRYnpfNldFZkU4LWNidkpUMQ?oc=5",
+        "published": "Mon, 07 Sep 2026 07:01:33 GMT",
+        "publisher": "kabu-ir.com"
+      },
+      {
+        "title": "【動いた日本株トップ】ソフトバンクグループは11.22%上昇し、日経225の構成銘柄の中で値上がり率トップとなった。キオクシアホールディングスは売買代金で首位となった。 - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOQ1A1VENTcURjTmNtay1ONzJqS3liTmo1dUtzZXBJR0RpZDR3c1ZncXhuQ0JTc2duRmMzbGZlM2tNdzNDeHludjFFZlNTR3g3SUlJU0JJTEVnNEt4dzJ3M0k0WTFmakpxQzJncmJnZE5FVUxTMllBWE1kVmpZQXdrVXFtNm03Zm9WZjJUTkZOMENlQ3F2bDJ3VGVtQXVGNDh6?oc=5",
+        "published": "Mon, 07 Sep 2026 06:54:09 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "【速報】ソフトバンクG社債、年4.75％で決定！100万円入れる価値はある？ Taxi (pAw9UniLXg) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1TdHZ3dzlqS1RWUXVBNHNiVDdWSGI0Y0E2azdObFZLRDR5SWRnWU03c29DOFkwbVJVQnpwUG5Kb0paZWx2UVpRTzFnNy0tT3pmWno3aHVpNlU2a1k?oc=5",
+        "published": "Mon, 07 Sep 2026 11:26:06 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "ソフトバンク(株)第1回社債型種類株式【94345】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9ha0hGSmJoT3VwVjhic0hiTVNMbUNCWGJkUWktVFVUR0w0OTVHUEZzZzVhRF9UejVlSm83SlRaSWxpZ2tQQlVSaEVwSDBEUk8taHk4?oc=5",
+        "published": "Mon, 07 Sep 2026 21:39:01 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "第70回無担保普通社債の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260904531576.pdf",
+        "date": "2026-09-04 10:30:00"
+      },
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得の完了時期の変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260828527943.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824524817.pdf",
+        "date": "2026-08-24 09:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510515.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行内容確定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503871.pdf",
+        "date": "2026-07-30 17:00:00"
+      },
+      {
+        "title": "第68回及び第69回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501484.pdf",
+        "date": "2026-07-29 10:30:00"
+      },
+      {
+        "title": "OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260701586249.pdf",
+        "date": "2026-07-01 16:00:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577089.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "2021年発行米ドル建普通社債の期限前償還完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566742.pdf",
+        "date": "2026-06-10 11:30:00"
+      },
+      {
+        "title": "国内ハイブリッド社債（利払繰延条項付）の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260605563850.pdf",
+        "date": "2026-06-05 10:30:00"
+      }
+    ]
+  }
+}
