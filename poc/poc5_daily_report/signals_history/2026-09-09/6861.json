@@ -1,0 +1,177 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-09-09T09:10:38+09:00",
+  "price_as_of": "2026-09-08",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ評価の strength が 60 に留まり、41.1倍という高い PER を正当化する新規カタリストが不足しているため。",
+        "evidence": "fundamental_view.strength=60, fundamental_view.points[2]: forward_pe=41.105"
+      },
+      {
+        "reason": "テクニカル面で 5日線と 25日線のデッドクロスが確定し、MACD もマイナス圏で拡大するなど下落モメンタムが強いため。",
+        "evidence": "technical_view.stance=bearish, technical_view.points[0], technical_view.points[1]"
+      },
+      {
+        "reason": "市場全体が downtrend にあり、個別銘柄の好材料よりも地合い悪化による押し下げ圧力が勝る局面であるため。",
+        "evidence": "reference.market_regime=downtrend, technical_view.points[2]"
+      }
+    ],
+    "risks": [
+      "期間安値である 69,950円に向けたテクニカル的な下値模索の継続 (technical_view.key_levels.support=69950.0)",
+      "2026年9月17日〜18日に控える日銀金融政策決定会合による金利・為替の変動リスク (fundamental_view.cautions[0])",
+      "高バリュエーション銘柄に対する市場の選別姿勢と、次回決算（10月29日）までの材料不足"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ評価の strength が 60 に留まり、41.1倍という高い PER を正当化する新規カタリストが不足しているため。\",\n   \"evidence\": \"fundamental_view.strength=60, fundamental_view.points[2]: forward_pe=41.105\"\n  },\n  {\n   \"reason\": \"テクニカル面で 5日線と 25日線のデッドクロスが確定し、MACD もマイナス圏で拡大するなど下落モメンタムが強いため。\",\n   \"evidence\": \"technical_view.stance=bearish, technical_view.points[0], technical_view.points[1]\"\n  },\n  {\n   \"reason\": \"市場全体が downtrend にあり、個別銘柄の好材料よりも地合い悪化による押し下げ圧力が勝る局面であるため。\",\n   \"evidence\": \"reference.market_regime=downtrend, technical_view.points[2]\"\n  }\n ],\n \"risks\": [\n  \"期間安値である 69,950円に向けたテクニカル的な下値模索の継続 (technical_view.key_levels.support=69950.0)\",\n  \"2026年9月17日〜18日に控える日銀金融政策決定会合による金利・為替の変動リスク (fundamental_view.cautions[0])\",\n  \"高バリュエーション銘柄に対する市場の選別姿勢と、次回決算（10月29日）までの材料不足\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 80,
+      "summary": "5日線が25日線を下回るデッドクロスに加え、MACDのマイナス圏での拡大と市場全体の地合い悪化が重なり、短中期的に下値を試す可能性が高い局面です。",
+      "points": [
+        {
+          "point": "短期移動平均線が25日線を下抜けるデッドクロスが確定しており、現値も5日線を下回る弱い推移が続いています。",
+          "evidence": "price_technical.sma5_vs_sma25=dead(5日線が25日線の下), price_technical.last_close=76760.0, price_technical.sma5=77874.0"
+        },
+        {
+          "point": "MACDおよびヒストグラムが大幅なマイナス圏で拡大しており、下落のモメンタムが強まっています。",
+          "evidence": "price_technical.macd_histogram=-973.31, price_technical.macd=-183.18"
+        },
+        {
+          "point": "TOPIXが25日線を割り込み、5日騰落率もマイナスの「downtrend」レジームにあるため、個別株への強い押し下げ圧力が想定されます。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.market_regime.topix_close_vs_sma25=below"
+        }
+      ],
+      "cautions": [
+        "RSI14が62.9と底打ちを示唆する水準にはなく、短期的な売られすぎによる自律反発の期待は現時点では時期尚早です。",
+        "前夜のADRが微減（-0.08%）となっており、寄付きから反転する兆しが乏しい状況です。",
+        "期間安値である69,950円までの下値余地が意識されるリスクがあります。"
+      ],
+      "key_levels": {
+        "support": 69950.0,
+        "resistance": 82544.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "長期的な業績拡大トレンドは極めて強固であり、製造業PMIの拡大も追い風だが、直近2週間以内の新規材料に欠け、日銀会合等のイベントリスクを前に積極的な買い推奨は困難である。",
+      "points": [
+        {
+          "point": "2024年3月期から2026年3月期予想にかけて一貫した増収増益トレンドを維持しており、営業利益率も極めて高い水準で推移している。",
+          "evidence": "fundamentals.earnings_trend.annual[2024-03 to 2026-03]"
+        },
+        {
+          "point": "日本の製造業PMIが54.9と7カ月連続で拡大しており、AI関連需要等による外部環境の改善が同社のFA（工場自動化）需要の追い風となっている。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9"
+        },
+        {
+          "point": "ADRでの上昇やオーナー企業ランキング1位といったニュースはポジティブだが、Forward PERが41.1倍と高い成長期待を織り込んだ水準にあり、さらなる上値には新たなカタリストが必要である。",
+          "evidence": "fundamentals.valuation.forward_pe=41.105, news.headlines[0,1]"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日〜18日に日銀金融政策決定会合が控えており、金利上昇や円高進行が国内市場全体及び高バリュエーション銘柄の重石となるリスクがある。",
+        "市場全体がdowntrend（TOPIXが25日線を下回り5日騰落率もマイナス）にあるため、銘柄固有のファンダメンタルズが良好でも連れ安する可能性がある。",
+        "次回決算発表（2026年10月29日）まで期間があり、直近で株価を押し上げる業績面の新規開示が不足している。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ADR主要銘柄（日本）－キーエンス、ＩＮＰＥＸが上昇、任天堂、ソフトバンクＧが下落(トレーダーズ・ウェブ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOZWo1VG1KLXg4Y0VsYnJwUVdRNXVOemRXcDZVeFRwemJ0OXRfT0xMdWl2MnlhV2o1dVF0bnVadlJMVEc0cGo2bkRPTXFhWEthVlEzN2p6a0FkYkYtb1FlbUpnOVQxMmQxNGlYSHMtd3hCUXExQUhTR3cybnJzUEpGR1U5SjBnLUU?oc=5",
+        "published": "Tue, 08 Sep 2026 22:17:02 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "上場オーナー企業ランキング【総合版前編・上位942社】全1885社を6指標で判定！19位キッコーマン、7位ファストリ、1位は？ - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1YSVZzSDlnVDZMcml0cWxTMnQ4YkNnUHpkcHZmMG5uT050bkxRZVRSUHZqQXBoSHYyamZHdlVKY2l4aDJDY3phbVNPR3kzZTDSAU9BVV95cUxNWElWc0g5Z1Q2THJpdHFsUzJ0OGJDZ1B6ZHB2ZjBubk9OdG5MUWVUUlB2akFwaEh2MmpmR3ZVSmNpeGgyQ2N6YW1TT0d5M2Uw?oc=5",
+        "published": "Tue, 08 Sep 2026 19:50:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "８日のＡＤＲ動向＝円換算値で高安まちまち、三井金属、古河電工、住友電工など高い 速報 - kabushiki.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5KS3VXU0sweXJtUjdhejNjOGZ3SGVDd0VVUUV1Q21HZFpvZXRRUHI2VUxkR1pGaHZkcE1wQmZBSTRLcS1tNzJJ?oc=5",
+        "published": "Tue, 08 Sep 2026 22:38:00 GMT",
+        "publisher": "kabushiki.jp"
+      },
+      {
+        "title": "株式会社PROXERAが提供する実践型営業コーチング「Sales Coaching Lab」の魅力と効果 - ニュースメディアVOIX",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE4wNENXZnZxMEFsQTJBUzBVSjR3TENEWXMyNDU2UlBkdF96OVJ2MTVhZ3NaaVRpemQtRzJac3NrSDBDcG5ESFo4Ykp3RWRKaVJISnlfeHBZR1lRMlFZVFVsTmpKc2JXd2s?oc=5",
+        "published": "Tue, 08 Sep 2026 07:52:43 GMT",
+        "publisher": "ニュースメディアVOIX"
+      },
+      {
+        "title": "｢ダミ声｣は絶大な信頼を勝ち取った…吃音だった田中角栄が｢角栄節｣を築き上げた\"日本の伝統的な話芸の名前\" - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE80d29mWFBqNGRiRGtJdk54c3ZFWFZzVTJ1aklySDVTREdaYW1aTVdFUDJiRHlqaEIxSzdoYXFnN0pTTG1zRDRuR0Vma1NVQk0?oc=5",
+        "published": "Tue, 08 Sep 2026 10:06:23 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      }
+    ]
+  }
+}

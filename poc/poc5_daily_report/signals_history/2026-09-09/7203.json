@@ -1,0 +1,220 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-09-09T09:07:15+09:00",
+  "price_as_of": "2026-09-08",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家が円高進行（想定160円に対し154円台）による業績下振れリスクを強く指摘しており、2期連続の減益トレンドも重なり上値が重い局面である。",
+        "evidence": "fundamental_view.points[0]: 今期想定1ドル=160円を大幅に下回る / fundamental_view.points[1]: 2期連続の減益トレンド"
+      },
+      {
+        "reason": "テクニカル面では25日移動平均線を割り込み、MACDも弱気シグナルを示している。短期的な下落圧力が強く、即時のエントリーはリスクが高い。",
+        "evidence": "technical_view.points[0]: 株価が25日線(3048.82円)を下回る / technical_view.summary: MACDも弱気シグナル"
+      },
+      {
+        "reason": "市場レジームがdowntrendと判定されており、TOPIX連動ETFも25日線を下回るなど、地合いの悪化が個別銘柄の反発を妨げる要因となっている。",
+        "evidence": "reference.market_regime=\"downtrend\" / technical_view.points[2]: 市場全体の下落トレンド"
+      },
+      {
+        "reason": "テクニカル上の重要節目である期間安値（2869.5円）が目前に迫っており、このラインでの支持を確認するまで静観が妥当である。",
+        "evidence": "technical_view.key_levels.support=2869.5 / reference.period_low=2869.5"
+      }
+    ],
+    "risks": [
+      "2026年9月17〜18日の日銀金融政策決定会合による為替相場のさらなる円高進行",
+      "テクニカル上の下値支持線 2869.5円を割り込んだ場合の売り加速",
+      "中国市場における販売不振の長期化による業績予想の下方修正リスク",
+      "11月5日の次期決算発表に向けた為替前提の見直しに伴うボラティリティの上昇"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家が円高進行（想定160円に対し154円台）による業績下振れリスクを強く指摘しており、2期連続の減益トレンドも重なり上値が重い局面である。\",\n   \"evidence\": \"fundamental_view.points[0]: 今期想定1ドル=160円を大幅に下回る / fundamental_view.points[1]: 2期連続の減益トレンド\"\n  },\n  {\n   \"reason\": \"テクニカル面では25日移動平均線を割り込み、MACDも弱気シグナルを示している。短期的な下落圧力が強く、即時のエントリーはリスクが高い。\",\n   \"evidence\": \"technical_view.points[0]: 株価が25日線(3048.82円)を下回る / technical_view.summary: MACDも弱気シグナル\"\n  },\n  {\n   \"reason\": \"市場レジームがdowntrendと判定されており、TOPIX連動ETFも25日線を下回るなど、地合いの悪化が個別銘柄の反発を妨げる要因となっている。\",\n   \"evidence\": \"reference.market_regime=\\\"downtrend\\\" / technical_view.points[2]: 市場全体の下落トレンド\"\n  },\n  {\n   \"reason\": \"テクニカル上の重要節目である期間安値（2869.5円）が目前に迫っており、このラインでの支持を確認するまで静観が妥当である。\",\n   \"evidence\": \"technical_view.key_levels.support=2869.5 / reference.period_low=2869.5\"\n  }\n ],\n \"risks\": [\n  \"2026年9月17〜18日の日銀金融政策決定会合による為替相場のさらなる円高進行\",\n  \"テクニカル上の下値支持線 2869.5円を割り込んだ場合の売り加速\",\n  \"中国市場における販売不振の長期化による業績予想の下方修正リスク\",\n  \"11月5日の次期決算発表に向けた為替前提の見直しに伴うボラティリティの上昇\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "出来高を伴う急落により株価が25日線を割り込みMACDも弱気シグナルを示す一方、60日騰落率はプラスで中期上昇基調を維持しており、短期の調整と中期の底堅さが拮抗しています。",
+      "points": [
+        {
+          "point": "直近営業日に出来高を伴って前日比-4.12%と急落し、株価が25日移動平均線（3048.82円）を下回ったほか、MACDヒストグラムも-9.71とシグナル線を下回る軟調な推移となっています。",
+          "evidence": "price_technical.last_close=2968.5, price_technical.sma25=3048.82, price_technical.macd_histogram=-9.71, price_technical.recent_5_days[2026-09-08]"
+        },
+        {
+          "point": "一方で60営業日騰落率は+6.95%（対TOPIX比+4.53%）と中期トレンドは堅調であり、5日線と25日線の関係もゴールデンクロス状態を保っています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=6.95, price_technical.trend_60d.relative_to_topix_60d_pct=4.53, price_technical.sma5_vs_sma25=golden"
+        },
+        {
+          "point": "TOPIX連動ETFが25日線を下回り市場レジームがdowntrendと判定されていることから、全体地合いの悪化が短期的な下押し圧力となっています。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.indices[ticker=1306.T].change_1d_pct=-1.84"
+        }
+      ],
+      "cautions": [
+        "期間安値である2869.5円を割り込むと、中期的な上昇トレンドが崩れて下落基調へ転換するリスクがあります。",
+        "前夜NY市場のADR（TM）および一般消費財ETF（XLY）がともに下落していますが、これらは当日の寄り付き価格に織り込まれる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 2869.5,
+        "resistance": 3048.82
+      }
+    },
+    "fundamental": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "急激な円高の進行により、今期想定為替レート（1ドル=160円）を大幅に下回る水準での推移が続いており、輸出採算の悪化による業績下振れリスクが極めて高い状況です。また、中国市場での苦戦や、市場全体の下落トレンドも重なり、短期的には売り圧力が強まりやすい局面と判断します。",
+      "points": [
+        {
+          "point": "為替レートが今期想定の1ドル=160円を大幅に下回り、利益下押し要因となっていること。",
+          "evidence": "news.headlines[6].title: トヨタ自動車 円上昇、半年ぶり154円台 今期想定は1ドル=160円"
+        },
+        {
+          "point": "2024年3月期をピークに、営業利益・純利益ともに2期連続の減益トレンドにあること。",
+          "evidence": "fundamentals.earnings_trend.annual: 2024-03 営業益53,529億円 → 2026-03 37,662億円"
+        },
+        {
+          "point": "主要海外市場である中国において、販売台数が半減するなど苦戦が鮮明になっていること。",
+          "evidence": "news.headlines[5].title: 日産とホンダ 中国販売半減 8月 トヨタも苦戦"
+        },
+        {
+          "point": "TOPIXが25日線を下回り、市場全体が下落トレンド（downtrend）に転じていること。",
+          "evidence": "macro.market_regime: market_regime=downtrend, topix_close_vs_sma25=below"
+        },
+        {
+          "point": "自己株式取得の継続は下値を支える要因となるが、現在の外部環境悪化を打ち消すには至っていないこと。",
+          "evidence": "disclosures.items[0].title: 自己株式の取得状況に関するお知らせ (2026-09-03)"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日から開催される日銀金融政策決定会合による為替・金利の乱高下リスク",
+        "11月5日の次期決算発表に向けた為替前提の見直しや業績予想の修正発表",
+        "PBR 1倍割れおよび配当利回り3.37%によるバリュエーション面からの下値支持意識",
+        "米国の景気動向や金利政策によるドル円相場の急激な反転"
+      ],
+      "key_levels": {
+        "support": 2500.0,
+        "resistance": 3100.0
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "トヨタ自動車(株)【TM】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBBVUdJM0U0aFlkR0FQN05mMW1YR2VRTlVLdEE1d19aRE9MWndrR1NnWTJZb1VtZmtjSGxRTzZseVZQaVhNU1NNUUJFSU8?oc=5",
+        "published": "Tue, 08 Sep 2026 21:29:11 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "カルビーやキヤノン、トヨタ自動車らが登壇、「design surf seminar 2026」が11月6日に開催 - japandesign.ne.jp",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9XenhLaVFaLXp6RmVVazJxR3ZqRm5LTVRCR3AyM0w5YWpMRGhpUlpQN0J6Y1VjUVgzU0dOQlFjX0ZPbDRWUEtTRzJsZmlSdUtiRHZ1ZXhxUTZndnlkOFE?oc=5",
+        "published": "Tue, 08 Sep 2026 03:05:00 GMT",
+        "publisher": "japandesign.ne.jp"
+      },
+      {
+        "title": "円上昇で一時152円台、4.1%安のトヨタなど「自動車株」1カ月ぶり安値［新聞ウォッチ］ 1枚目の写真・画像 - s.response.jp",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPZUs5YzZNamt3YVBhcHAxWmtodjZzRjhzVXRHQWw3ejF0UVJxRjAtNm9UZkRCZW42MTNkMDRyb2JhdTBHOEpFQ1dkMzVLTFNEelNrVmxjbHVpaGVxakw3cHhfa0lZcXFtVkpXQlpIcnZiV1R5S1JkcUNQV2xtYVc0YV9lLU94TFFtZ2xaQjZmb1M?oc=5",
+        "published": "Tue, 08 Sep 2026 23:11:20 GMT",
+        "publisher": "s.response.jp"
+      },
+      {
+        "title": "元テレ朝・富川悠太氏、トヨタ・豊田章男会長からの“誕生日祝い”に感激「嬉しすぎます」「朝イチでオメコメもいただきました」 - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBVQjhUR3RWR25hcWJyTVRfRlpXOThJUnd6TjNpMU56YnNkdGVRNjV5QlBDa1VuWWtYaEZyekpTSENHeC1ORnY4X3JzeTNKcE1rMkF4SmJob1hsVFhFcVE0bmRNcEFqNmdPeDhTRzZJc1lXUQ?oc=5",
+        "published": "Tue, 08 Sep 2026 20:50:53 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "高橋 慶帆 - トヨタイムズスポーツ",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOdlM3d0FvN2Viek83ZzdyZjV0NGN2LTRhSm82aXViaHM4eHZMY2pkRk1uVUtXYTJwajE3Mk1aMDIzV3FvYUhsZW43TDE2T2tmSFlZTHhmbWZIWlVSZmJ5c0d6NlY5WWF2YlVUM3FNN2JVcnpOLW51YjBvYkNOOGpqNkZkNld0ZXlNNTZnYlVCOGhKbXYzWHpyUGc2N1FseUtIOV9Xb2VXdw?oc=5",
+        "published": "Tue, 08 Sep 2026 11:03:48 GMT",
+        "publisher": "トヨタイムズスポーツ"
+      },
+      {
+        "title": "日産とホンダ 中国販売半減 8月 トヨタも苦戦 - 沖縄タイムス社",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE42Mjc2eFZmTEZaeVBJNnVaa2JlcjN0aHdiazA0c001bG82MHZ4Nnh1bEJ2QzFoZnpnUEEwT3NTRjl0d19SX0J4UXFHRlJnUmh2VlMyNldBZm5QUDhtWWc?oc=5",
+        "published": "Tue, 08 Sep 2026 18:59:00 GMT",
+        "publisher": "沖縄タイムス社"
+      },
+      {
+        "title": "トヨタ自動車 円上昇、半年ぶり154円台 今期想定は1ドル=160円 - 日経CNBC online",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1VTTNlcE84OUVYUm1pdXFVZ2dLS3otaUJ5MFA3WlM3QVZCVThiWUVyMXZVTE8yOTFVd3J6ZE9fYzVMR2NuVmpQLW9ka3dROWY5VUF0NA?oc=5",
+        "published": "Tue, 08 Sep 2026 00:27:00 GMT",
+        "publisher": "日経CNBC online"
+      },
+      {
+        "title": "2026年開催のアジア大会 最高位スポンサーにトヨタ自動車 選手らの移動に使う車両提供など22億円規模を拠出 Télécommunications (aQJkQRvPDc) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5xbzFtaC1ZQkc4dF9zbVNrTUZCN2tLeHpVRlVXcUVDR2ZTaFZfUkV1WU11Tm56VTc0dmJaZkhvSHhrWGtHeWwzdWtpTkJ1dWtHVHg2czh0XzRlQ1E?oc=5",
+        "published": "Tue, 08 Sep 2026 20:29:12 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "小田凱人組、上地結衣組など４強＝全米テニス車いす - 時事通信ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE95QW5uRnI0UDVvbGJQQlBLWDE3ZTl2VWppRGdzTG45X2QyaDhGRlBQZmtaajI2VXZPWFFDM1pNNWpZZXNGRWdrSjJCS29QMm1DNWdRUQ?oc=5",
+        "published": "Tue, 08 Sep 2026 22:51:00 GMT",
+        "publisher": "時事通信ニュース"
+      },
+      {
+        "title": "ようこそ先輩！マラソン 服部勇馬選手が母校の中里中学校で生徒たちと交流 - 十日町タウン情報",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9KWUk1Z2lGQ0I0RG4xWnZsa3FCTF9QUC1HVm9MQnJILWRsVjhDVE1CdXgzNkg1R0s1ODZ2bzQ1dld2VFdPRkdNTUozbkFlUnVHTmVCQkZRbUxDOWpOWFhJ?oc=5",
+        "published": "Tue, 08 Sep 2026 08:16:00 GMT",
+        "publisher": "十日町タウン情報"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903531084.pdf",
+        "date": "2026-09-03 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度の継続及び従業員に対する新たな株式交付制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507853.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507884.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503849.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "2027年3月期第１四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507860.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507846.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-09-09T09:12:01+09:00",
+  "price_as_of": "2026-09-08",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の確信度が58であり、新規買い基準である70を下回っているため、様子見が妥当と判断。",
+        "evidence": "fundamental_view.strength=58"
+      },
+      {
+        "reason": "テクニカル専門家は強気だが、両者が強気の状態での buy は織り込み済みで的中率が下がる傾向にあるため、ルールに従いエントリーを見送る。",
+        "evidence": "technical_view.stance=bullish (strength=75)"
+      },
+      {
+        "reason": "直近14日以内（2026-08-26）に同一銘柄への buy シグナルが存在するため、再エントリー抑制ルールに基づき継続監視とする。",
+        "evidence": "reference.recent_buy.date=2026-08-26"
+      },
+      {
+        "reason": "市場全体が downtrend レジームにあり、個別銘柄のテクニカル的な強さが地合いの悪化によって相殺されるリスクが高い。",
+        "evidence": "reference.market_regime=\"downtrend\""
+      }
+    ],
+    "risks": [
+      "RSIが71.5と買われすぎ水準に達しており、短期的利益確定売りの発生リスクがある。",
+      "想定保有期間内に日銀金融政策決定会合（2026-09-17〜18）が含まれており、マクロ環境の急変リスクがある。",
+      "財務報告に係る内部統制の不備が指摘されており、ガバナンス面での信頼性毀損が続く可能性がある。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の確信度が58であり、新規買い基準である70を下回っているため、様子見が妥当と判断。\",\n   \"evidence\": \"fundamental_view.strength=58\"\n  },\n  {\n   \"reason\": \"テクニカル専門家は強気だが、両者が強気の状態での buy は織り込み済みで的中率が下がる傾向にあるため、ルールに従いエントリーを見送る。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=75)\"\n  },\n  {\n   \"reason\": \"直近14日以内（2026-08-26）に同一銘柄への buy シグナルが存在するため、再エントリー抑制ルールに基づき継続監視とする。\",\n   \"evidence\": \"reference.recent_buy.date=2026-08-26\"\n  },\n  {\n   \"reason\": \"市場全体が downtrend レジームにあり、個別銘柄のテクニカル的な強さが地合いの悪化によって相殺されるリスクが高い。\",\n   \"evidence\": \"reference.market_regime=\\\"downtrend\\\"\"\n  }\n ],\n \"risks\": [\n  \"RSIが71.5と買われすぎ水準に達しており、短期的利益確定売りの発生リスクがある。\",\n  \"想定保有期間内に日銀金融政策決定会合（2026-09-17〜18）が含まれており、マクロ環境の急変リスクがある。\",\n  \"財務報告に係る内部統制の不備が指摘されており、ガバナンス面での信頼性毀損が続く可能性がある。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "MACDの好転や移動平均線のゴールデンクロス、中期的な対TOPIXでのアウトパフォームなど、複数のテクニカル指標が強い上昇トレンドを示唆しています。",
+      "points": [
+        {
+          "point": "MACDがシグナルを大きく上回り、ヒストグラムも大幅なプラス圏で推移しており、強い上昇モメンタムが確認されます。",
+          "evidence": "price_technical.macd=14.49, price_technical.macd_histogram=13.02"
+        },
+        {
+          "point": "60営業日の騰落率がプラス8%であり、TOPIXに対しても5.57%のプラス乖離を見せるなど、中期的なトレンドが非常に堅調です。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=8.0, price_technical.trend_60d.relative_to_topix_60d_pct=5.57"
+        },
+        {
+          "point": "5日線が25日線を上回るゴールデンクロス状態にあり、直近営業日も1%の反発を見せて SMA5（2980.0）を上回って引けています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden\", price_technical.recent_5_days[4].change_pct=1.0, price_technical.last_close=2990.5"
+        },
+        {
+          "point": "前夜のADRが大幅に上昇しており、国内市場の寄り付きにおいても堅調なスタートが期待されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=2.0"
+        }
+      ],
+      "cautions": [
+        "RSIが71.5と買われすぎ水準の目安である70を超えており、短期的には利益確定売りに押されるリスクがあります。",
+        "TOPIXが25日線を下回り「downtrend」レジームにあるため、市場全体の地合い悪化が個別銘柄の重石となる可能性があります。",
+        "ADRの上昇は寄り付き価格に織り込まれるため、寄り天（寄り付きが高値となる現象）に注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 2905.6,
+        "resistance": 3121.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 58,
+      "summary": "第1四半期の好調な決算と継続的な自社株買いは評価できるものの、日銀会合を控えたマクロ環境の不透明感や市場全体の下降トレンドが上値を抑える要因となっている。",
+      "points": [
+        {
+          "point": "2027年3月期第1四半期の1株利益（EPS）が51.33円と、前年同期の43.0円から約19%増加しており、本業の収益性は堅調に推移している。",
+          "evidence": "fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "2026年6月から8月にかけて断続的に自社株買いの取得状況および公開買付けの結果が開示されており、需給面での下支えと株主還元姿勢が継続している。",
+          "evidence": "disclosures.items"
+        },
+        {
+          "point": "日本のサービス業PMIが52.5と拡大圏を維持しており、内需中心の通信事業にとって良好な事業環境が継続している。",
+          "evidence": "macro.japan_pmi.services.latest_value"
+        }
+      ],
+      "cautions": [
+        "8日後に日銀金融政策決定会合（2026-09-17〜18）を控えており、金利変動に伴う大型株全体へのボラティリティ波及リスクがある。",
+        "TOPIXが25日移動平均線を下回るdowntrend（市場環境）にあり、個別銘柄の好材料が相場全体の地合いに打ち消されやすい状況。",
+        "2026年6月25日に開示された「財務報告に係る内部統制の開示すべき重要な不備」によるガバナンス・信頼性への影響。",
+        "入力データ上の予想PER（forward_pe）が1283.476と極めて高い値を示しており、将来の利益成長に対する市場の急激な期待変動やデータ上のノイズに注意が必要。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-08-26",
+    "days_ago": 14,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ＫＤＤＩ(株)【KDDIY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5UeXNVcVVoNnBzaHVrVDJRR3VqcmJrUDk1T0h1dDRJT0ttelAwWVk0UWZWT0JaQTIxMkRtQUxzLW1FdnNRVXpvUWZRb0p4cVlJ?oc=5",
+        "published": "Tue, 08 Sep 2026 15:55:59 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "山口県を宇宙の玄関口に/談話室 ＫＤＤＩ社長 松田浩路さん（５４） - 山口新聞 電子版",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5vVWdfenAyS0JNY3E0bk1qcVlrU3R4UldMQ2dtQ3RDSDR2eDh1dDhOdmNCTVM5OXdhSE1FbFF4TWJNbUtnR1dkcEp3S2RoVExwVVJ5S1NzTUhMTDg4UjNBNHhIdU5vMXI1c1E?oc=5",
+        "published": "Tue, 08 Sep 2026 21:00:00 GMT",
+        "publisher": "山口新聞 電子版"
+      },
+      {
+        "title": "ニデック悪材料出尽くしは遠く KDDIなど「改善銘柄」の回復は長期戦 ヴェリタスEYE（9月8日） - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBYRkVQLW1FbXRRY29uQ1AtcjFTN1JWOTV6clNVcEZYdU5KUE9La1hLR3VVMVFIa2NENnFlQk9JVGVMbHk1bVBxNjF3SzE0S21Bcm5lb0lfeTBhaWNUM1hRdDk4b05aRFRBUnZleWYxQWhnUno3S09ITWJCbldrUQ?oc=5",
+        "published": "Tue, 08 Sep 2026 07:04:50 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "ニデック悪材料出尽くしはまだ遠く KDDIなど「改善銘柄」の回復は長期戦 - 日経CNBC online",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1FRFZyWHQtVDVfdFBZQU51SnoxLUM2cXpuVW9zWlNTUjhuOFdiSkg0d1A2U3ViaVlQNklkUTNrUmRCWFExR1hQZGNmZkZPQmlGcFR3ag?oc=5",
+        "published": "Tue, 08 Sep 2026 06:35:00 GMT",
+        "publisher": "日経CNBC online"
+      },
+      {
+        "title": "ＫＤＤＩ／スターリンク利用の通信エリア構築ソリューション／ＮＥＴＩＳ登録で拡大 - 日刊建設工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9NVVJpY2VYXzlMbC1PQ3JjcDYxcjFCWnBYV2FMZmVOTzJKeDJwSmZObEF5WDBaeGpYSnlPV2c3aEh0UTl2YndV?oc=5",
+        "published": "Tue, 08 Sep 2026 21:03:50 GMT",
+        "publisher": "日刊建設工業新聞"
+      },
+      {
+        "title": "AIの質問に答えていくことで自己理解が深まり何が最適な仕事かを考える手がかりに KDDIと真庭市が連携【岡山】 - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNM0oza056ZlZ4MXdvSFFxbFdNWm9handsT0JURW9qV2dXUHlMeFc0LTE0UlVlVzlxRUJBQllIU1E4WnhaWlZCMGRsR3dxang3S3VJSl92SEprOXZTOWZ0VEZmVnhGd2p2Z2dNZ2pacnU0UmNuVEJPVkZYQ3p6VUFaTHBGNFRmNEg4NjRNcUdwb19CbzAxdHNVVWVrUVpFNXJiYmJFTGFkNUZEcmZoSGQ2US1EQlJmN1NKV1FXQTZqQXQ2ZTNVcTY3akFySDBpWXA4Mkw3ZXU1a1ptd2QxVmYzQk43ajQ4TzgwLU5oUHRaWktJWk5nTVE?oc=5",
+        "published": "Tue, 08 Sep 2026 10:30:00 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "ＫＤＤＩ／スターリンク利用の通信エリア構築ソリューション／ＮＥＴＩＳ登録で拡大 - 千葉テレビ放送株式会社",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5HNGp0MGVsdGVFVk1zLU5lUnd3a1hDc08waVRqdFF0d3RhbTZBbE15cHBldWVtQTVZY0M4SmxGX3JHcVRQSXRYYkV6NmUzSGM2bzZLNEpKamNuVTZjSHU0?oc=5",
+        "published": "Tue, 08 Sep 2026 21:06:33 GMT",
+        "publisher": "千葉テレビ放送株式会社"
+      },
+      {
+        "title": "楽天モバイルのKDDIローミングは10月以降も継続！iPhoneでの接続回線の確認方法も - iPhone Mania - iPhone Mania",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1jd2ZXeElaT0FlVEJjcTNtNDQ4NXFBaGRobUhTMjNTSzVzRHdSMnNlVEVKWU01Vkpxb0RoNjFIUDJnRncybXFRX093dUhGVml00gFWQVVfeXFMT1BlbE5JcTFtRTJjOWQ0Y19HRDJTamluU3RhR3gzOXFxRTdpN2ZGSzZTc2x1alhfck9iQkNUblBvV0RKTXAzNmxCXzZ6QkoxM1ZXbVp2b1E?oc=5",
+        "published": "Tue, 08 Sep 2026 09:34:43 GMT",
+        "publisher": "iPhone Mania"
+      },
+      {
+        "title": "ＫＤＤＩが松山市にポータブル電源一式を寄贈【愛媛】（eat愛媛朝日テレビ） - news.yahoo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE94dDNBaTRvZXFYQUdsR3dYOGU1eUFfNWFPbkhEelZZb0Fjb2dLLWs3bWQ3WU0wUmxENjQwQ3owQ2IyV1h4Z21nWDBqNjVfTGstcmcxQUJNMGhFQXpZYUFSRmV3SjBzSXFLQ3diWmF4SzJsbzd5X0xZU3RBMzlnaFk?oc=5",
+        "published": "Tue, 08 Sep 2026 11:18:02 GMT",
+        "publisher": "news.yahoo.co.jp"
+      },
+      {
+        "title": "AIの質問に答えていくことで自己理解が深まり何が最適な仕事かを考える手がかりに　KDDIと真庭市が連携【岡山】 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9SLUhqLV9URTBza1UxZ1AwVUhSbUhzbW9jRWZ6OWZybkZjbWdCSHNmLXpjZzFjWEhaS2Jkd2xyRWZna1o3Mjh6NGcwSzJRR3NDOFY2NGlZYjZXRmhCNUFLRzZIV1dsamZyZlFrOGJlMEJJX01J0gF0QVVfeXFMT1ItSGotX1RFMHNrVTFnUDBVSFJtSHNtb2NFZno5ZnJuRmNtZ0JIc2YtemNnMWNYSFpLYmR3bHJFZmdrWjcyOHo0ZzBLMlFHc0M4VjY0aVliNldGaEI1QUtHNkhXV2xqZnJmUWs4YmUwQklfTUk?oc=5",
+        "published": "Tue, 08 Sep 2026 10:30:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260604562629.pdf",
+        "date": "2026-06-04 15:30:00"
+      }
+    ]
+  }
+}
