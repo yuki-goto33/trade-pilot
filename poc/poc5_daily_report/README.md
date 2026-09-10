@@ -12,6 +12,8 @@ PoC-1（データ取得）と PoC-3（LLM シグナル生成）をつなぎ、
 | `report_builder.py` | `data/signals/<date>/*.json` から Markdown / Slack mrkdwn レポートを構築 |
 | `html_report.py` | リッチ版 HTML レポート（SVG チャート + 両専門家の見解 + 総合判断 + 引用リンク） |
 | `slack_notify.py` | Slack Incoming Webhook への送信（分割対応・未設定時は stdout フォールバック） |
+| `simulate.py` | シグナル完全遵従の売買シミュレーション（毎日フル再計算。ルールは `specs/2026-09-08-firebase-portfolio-sim-design.md`） |
+| `portfolio_page.py` | 資産推移ページ生成（`docs/portfolio.html` / `portfolio.json`、TOPIX 比較付き） |
 | `signals_history/<date>/` | シグナル JSON の履歴（**git 管理下**。フォワードテスト 4 週間の記録用） |
 | `reports_history/<date>.md` | レポート Markdown の履歴（**git 管理下**） |
 | `../../docs/reports/<date>.html` | リッチ版 HTML の公開先（**git 管理下**。GitHub Pages 配信用） |
@@ -29,6 +31,8 @@ git に残す履歴は `signals_history/` と `reports_history/`、HTML は `doc
 2. **シグナル生成**: PoC-3 `generate_signal.py --provider gemini` を subprocess 実行
 3. **レポート構築 → 配信**: `data/reports/<date>.md` に保存 → Slack 送信（URL 未設定なら stdout）
 4. **履歴永続化**: `data/signals/<date>/` → `signals_history/<date>/`、レポート md → `reports_history/<date>.md`
+5. **資産シミュレーション**: `portfolio_page.py` が `signals_history/` 全期間を再計算し
+   `docs/portfolio.html` / `portfolio.json` を更新（失敗しても配信には影響させない）
 
 ## レポートの内容
 
@@ -57,6 +61,16 @@ Slack は 1 メッセージ 3,000 字を超える場合に自動分割される�
 Source = `Deploy from a branch`、Branch = `main` / `/docs` を選択すると、
 `https://<user>.github.io/trade-pilot/reports/<date>.html` で配信される
 （Slack のリンクはこの URL を指す。`REPORT_PAGES_URL` 環境変数で上書き可）。
+
+### Firebase Hosting（Spark プラン・完全無料）
+
+`docs/` は Firebase Hosting でも配信される: **https://trade-pilot-yg.web.app**
+（`/` は資産推移ページへリダイレクト、レポート一覧は `/reports/index.html`）。
+
+- デプロイは `.github/workflows/firebase-deploy.yml`。daily-report の commit は
+  `GITHUB_TOKEN` push のため `on.push` を起動しない → `workflow_run`（daily-report 完了）で発火
+- プロジェクト `trade-pilot-yg` は請求先アカウント未紐付け（= Spark 固定・課金され得ない）。
+  再構築は `tools/bootstrap-firebase.sh`（冪等）
 
 ## ローカル実行
 
