@@ -1,0 +1,59 @@
+name: firebase-deploy
+
+# docs/ の静的ファイルを Firebase Hosting（Spark プラン・無料）へデプロイする。
+#
+# トリガーが 3 系統ある理由:
+#   - workflow_run: daily-report の commit は GITHUB_TOKEN による push のため、
+#     GitHub の再帰防止仕様で on.push を起動しない。完了イベントで拾う
+#   - push: 人手による docs/ 変更はこちらで即デプロイ
+#   - workflow_dispatch: 手動再デプロイ用
+on:
+  workflow_run:
+    workflows: [daily-report]
+    types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - "firebase.json"
+  workflow_dispatch:
+
+concurrency:
+  group: firebase-deploy
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    # ビルド工程がない静的サイトのため単一 job。main の内容のみをデプロイする
+    if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_run'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      # action-hosting-deploy が結果を check-run として作成するために必要
+      checks: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          ref: main
+          persist-credentials: false
+
+      - name: 前提の確認（fail-closed）
+        env:
+          FIREBASE_PROJECT_ID: ${{ vars.FIREBASE_PROJECT_ID }}
+        run: |
+          test -n "${FIREBASE_PROJECT_ID}" \
+            || { echo "FIREBASE_PROJECT_ID が未設定です。tools/bootstrap-firebase.sh を実行してください。"; exit 1; }
+          test -f docs/portfolio.html \
+            || { echo "docs/portfolio.html がありません（デプロイ対象が不完全）"; exit 1; }
+
+      - name: 本番チャンネルへデプロイ
+        uses: FirebaseExtended/action-hosting-deploy@500ac625ca2dd40cbd15f7659af953801858032a # v0.11.0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          projectId: ${{ vars.FIREBASE_PROJECT_ID }}
+          channelId: live

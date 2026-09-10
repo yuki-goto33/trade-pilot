@@ -1,0 +1,25 @@
+{
+  "hosting": {
+    "site": "trade-pilot-yg",
+    "public": "docs",
+    "cleanUrls": false,
+    "ignore": ["firebase.json", "**/.*"],
+    "redirects": [
+      { "source": "/", "destination": "/portfolio.html", "type": 302 }
+    ],
+    "headers": [
+      {
+        "source": "**",
+        "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }]
+      },
+      {
+        "source": "/portfolio.json",
+        "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }]
+      }
+    ]
+  },
+  "emulators": {
+    "hosting": { "port": 5002 },
+    "singleProjectMode": true
+  }
+}
