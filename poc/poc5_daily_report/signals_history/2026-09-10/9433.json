@@ -1,0 +1,212 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-09-10T09:12:50+09:00",
+  "price_as_of": "2026-09-09",
+  "signal": {
+    "signal": "buy",
+    "confidence": 75,
+    "target_price": 3120.0,
+    "stop_loss": 2904.0,
+    "holding_period_days": 60,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズが強気（strength 80）で、堅調な業績トレンド、積極的な株主還元、多角的な新規事業への投資が評価され、成長期待が高いと判断されます。",
+        "evidence": "fundamental_view.stance=bullish (strength=80), fundamental_view.points[0-2]"
+      },
+      {
+        "reason": "テクニカルは中立的であるものの、5日線が25日線を上回るゴールデンクロスやMACDの改善が見られ、ファンダメンタルズの好材料が株価に織り込まれる前のエントリー機会と判断します。",
+        "evidence": "technical_view.stance=neutral, technical_view.points[0], Rule 1: 'ファンダ専門家が bullish かつ strength≥70、かつテクニカル専門家が neutral の場合のみ buy を許可する'"
+      },
+      {
+        "reason": "日本国内のサービス業PMIや日銀短観の業況判断DIが良好な水準を維持しており、KDDIの事業環境は追い風にあると見られます。",
+        "evidence": "fundamental_view.points[3]"
+      }
+    ],
+    "risks": [
+      "市場全体の地合いが下降トレンド（downtrend）と判定されており、個別銘柄の上昇を抑制する可能性があります。",
+      "次回の日銀金融政策決定会合（2026年9月17〜18日）が予定されており、政策変更は市場に大きな変動をもたらすイベントリスクです。",
+      "VIX指数が急上昇しており、市場全体のボラティリティ高まりによる調整売りに注意が必要です。",
+      "過去に財務報告に係る内部統制の開示すべき重要な不備の開示履歴があり、今後の情報開示には留意が必要です。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"buy\",\n \"confidence\": 75,\n \"target_price\": 3120.0,\n \"stop_loss\": 2904.0,\n \"holding_period_days\": 60,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズが強気（strength 80）で、堅調な業績トレンド、積極的な株主還元、多角的な新規事業への投資が評価され、成長期待が高いと判断されます。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=80), fundamental_view.points[0-2]\"\n  },\n  {\n   \"reason\": \"テクニカルは中立的であるものの、5日線が25日線を上回るゴールデンクロスやMACDの改善が見られ、ファンダメンタルズの好材料が株価に織り込まれる前のエントリー機会と判断します。\",\n   \"evidence\": \"technical_view.stance=neutral, technical_view.points[0], Rule 1: 'ファンダ専門家が bullish かつ strength≥70、かつテクニカル専門家が neutral の場合のみ buy を許可する'\"\n  },\n  {\n   \"reason\": \"日本国内のサービス業PMIや日銀短観の業況判断DIが良好な水準を維持しており、KDDIの事業環境は追い風にあると見られます。\",\n   \"evidence\": \"fundamental_view.points[3]\"\n  }\n ],\n \"risks\": [\n  \"市場全体の地合いが下降トレンド（downtrend）と判定されており、個別銘柄の上昇を抑制する可能性があります。\",\n  \"次回の日銀金融政策決定会合（2026年9月17〜18日）が予定されており、政策変更は市場に大きな変動をもたらすイベントリスクです。\",\n  \"VIX指数が急上昇しており、市場全体のボラティリティ高まりによる調整売りに注意が必要です。\",\n  \"過去に財務報告に係る内部統制の開示すべき重要な不備の開示履歴があり、今後の情報開示には留意が必要です。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "中期トレンドの強さとMACDの改善が見られるものの、RSIの弱含みと市場全体の下降レジームが重石となり、短期的には方向感に欠ける展開が予想されます。",
+      "points": [
+        {
+          "point": "5日線が25日線を上回るゴールデンクロス状態にあり、MACDヒストグラムもプラス圏で拡大するなど、テクニカル指標の底打ちは鮮明です。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden\", price_technical.macd_histogram=14.7"
+        },
+        {
+          "point": "過去60営業日の騰落率は市場を大きくアウトパフォームしており、中期的な上昇トレンドは維持されています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=9.51, price_technical.trend_60d.relative_to_topix_60d_pct=10.24"
+        },
+        {
+          "point": "一方でRSIは50を下回る水準で推移しており、直近5営業日の株価も2900円台後半でのもみ合いに終始し、上値追いの勢いに欠けています。",
+          "evidence": "price_technical.rsi14=42.3, price_technical.recent_5_days"
+        }
+      ],
+      "cautions": [
+        "TOPIXが25日線を下回るdowntrend判定となっており、地合いの悪化が個別銘柄の足を引っ張るリスクがあります (macro.market_regime.market_regime=\"downtrend\")",
+        "前夜の米国市場でADRおよび同セクターETFが下落しており、寄り付きが弱含む可能性があります (us_overnight.adr.change_1d_pct=-0.41, us_overnight.sector_proxy.change_1d_pct=-0.46)",
+        "VIX指数が急上昇しており、市場全体のボラティリティ高まりによる調整売りに注意が必要です (macro.indices.VIX.change_1d_pct=4.71)"
+      ],
+      "key_levels": {
+        "support": 2909.72,
+        "resistance": 3121.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 80,
+      "summary": "KDDIは堅調な増収増益基調を維持しており、直近の自己株式取得開示や新規事業への多角的な投資は株主還元と将来の成長期待を高めます。国内サービス業の良好な景況感も事業を後押ししています。",
+      "points": [
+        {
+          "point": "年次および直近四半期のEPSは順調に成長しており、堅調な業績トレンドが確認できます。",
+          "evidence": "fundamentals.earnings_trend.annual[0].diluted_eps=183.55, fundamentals.earnings_trend.annual[1].diluted_eps=161.81, fundamentals.earnings_trend.annual[2].diluted_eps=141.72, fundamentals.earnings_trend.quarterly[0].diluted_eps=51.33, fundamentals.earnings_trend.quarterly[1].diluted_eps=43.0"
+        },
+        {
+          "point": "2026年9月9日付で自己株式の取得状況に関する開示があり、株主還元への積極的な姿勢が示されています。",
+          "evidence": "disclosures.items[0].title='自己株式の取得状況に関するお知らせ', disclosures.items[0].date='2026-09-09 15:30:00'; news.headlines[2].title='ＫＤＤＩ[9433]：自己株式の取得状況に関するお知らせ 2026年9月9日(適時開示) ：日経会社情報DIGITAL', news.headlines[2].published='Wed, 09 Sep 2026 06:30:00 GMT'"
+        },
+        {
+          "point": "小売物流業向けロボット基盤モデルの研究開発、エネルギー事業の地域拡大、衛星通信の新たな役割、次世代通信技術の世界標準化など、多角的な新規事業への投資と取り組みが報じられており、今後の成長ドライバーとなる可能性があります。",
+          "evidence": "news.headlines[1].title='ＫＤＤＩ、小売物流業等の現場業務を代替するロボット基盤モデルの研究開発がＧＥＮＩＡＣに採択 速報 - kabushiki.jp', news.headlines[3].title='【各種住宅・建築・他】auエネルギー＆ライフ・KDDI：オール電化向け「auでんき」を中国・四国へ拡大、10月1日から提供 - みんなの広報宣伝部', news.headlines[5].title='KDDI｢山口衛星通信所｣が宇宙の玄関口に､海外通信を支えた57年の拠点が低軌道衛星時代に狙う新たな役割 - 東洋経済オンライン', news.headlines[6].title='日本の通信技術が世界標準へ！NTTやKDDIなど7社が作った「超高速＆省エネ通信」の新ルール - dxmagazine.jp'"
+        },
+        {
+          "point": "日本国内のサービス業PMIが52.5と拡大基調を維持しており、日銀短観の大企業非製造業の業況判断DIも37.0と良好な水準であることから、KDDIの事業環境は追い風にあると言えます。",
+          "evidence": "macro.japan_pmi.services.latest_value=52.5, macro.japan_pmi.services.latest_month='2026-08'; macro.boj.tankan.di.large_nonmanufacturing.current_di=37.0"
+        }
+      ],
+      "cautions": [
+        "市場全体はTOPIXが25日線を下回るdowntrendと判定されており、個別銘柄の上昇を抑制する可能性があります。",
+        "次回の日銀金融政策決定会合が2026年9月17〜18日に控えており、政策変更は市場に大きな変動をもたらすイベントリスクとなります。",
+        "2026年6月には財務報告に係る内部統制の開示すべき重要な不備に関するお知らせがあり、今後の情報開示には留意が必要です。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ＫＤＤＩ(株)【KDDIY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5UeXNVcVVoNnBzaHVrVDJRR3VqcmJrUDk1T0h1dDRJT0ttelAwWVk0UWZWT0JaQTIxMkRtQUxzLW1FdnNRVXpvUWZRb0p4cVlJ?oc=5",
+        "published": "Wed, 09 Sep 2026 19:27:46 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ＫＤＤＩ、小売物流業等の現場業務を代替するロボット基盤モデルの研究開発がＧＥＮＩＡＣに採択 速報 - kabushiki.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFBKM3Z3VHI3U3JfY0FBOUtUdWM2bHRVQ3p0NjdrWG1RWk5UWE14UWE0cWZuNHNuNEl5SER1c25kYUV6TFVZSy1j?oc=5",
+        "published": "Wed, 09 Sep 2026 23:38:00 GMT",
+        "publisher": "kabushiki.jp"
+      },
+      {
+        "title": "ＫＤＤＩ[9433]：自己株式の取得状況に関するお知らせ 2026年9月9日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPSG13Wldmd1ktZkdHVTVYeUFEcTFjSVFjbnlsTFgyYm5zb3BkWVdyc3VsbWNfSlp0UmFvUW1HRkkwa1NOUV82dmRXLWpnWDMySWFhcDV3UXF2SjNuRnhEamVKVGxLc1hmbW5MVC1sLTkzYjRCU1B2YnZnOTJMX2h6cGtKc09rTWVFWWtpZmQxTEFJdDgyNHI1VkY5a3labWwxM1NVcHhETzI1YU5FaVpiUWtDT0NvTExmU3JSbmFFUVZ6dGpHOFlvYTZHSEo?oc=5",
+        "published": "Wed, 09 Sep 2026 06:30:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "【各種住宅・建築・他】auエネルギー＆ライフ・KDDI：オール電化向け「auでんき」を中国・四国へ拡大、10月1日から提供 - みんなの広報宣伝部",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBndXAtRXAybFdIai12bEx1ZkNxUnR2YU9oemNmVTZrU1UwNmJXM192al9vWXVEMmNhSm85eWdOX09IS2tNN01Mb1VjMXVfZExJS05hVE5WNm5Qd3pxaFF6ZDRzM0xWX0FSLWE0NExQb2pKQQ?oc=5",
+        "published": "Wed, 09 Sep 2026 22:55:00 GMT",
+        "publisher": "みんなの広報宣伝部"
+      },
+      {
+        "title": "KDDI、ローソン店舗で小売・物流向けロボット基盤モデル研究開発を開始 - 株式会社インプレス",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE52X0JVelFSMy1GQzZqUG0yNFBsWkNxbHFvbFlRZ09XMHJETjF1NGZBNTZJXzlsMG5BajFYZnhGc096SXdFazdBWHp1dnYtU00wMDNqMlBYTDNGOTJHZzJoVjdjTQ?oc=5",
+        "published": "Wed, 09 Sep 2026 09:59:40 GMT",
+        "publisher": "株式会社インプレス"
+      },
+      {
+        "title": "KDDI｢山口衛星通信所｣が宇宙の玄関口に､海外通信を支えた57年の拠点が低軌道衛星時代に狙う新たな役割 - 東洋経済オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1yUW5RVTd3VmtDdGdWTkgxU0NMbU5IMWZ0SkEzNnV4cC1NZGJLdllfeFI5NWRLR1FXckx3empGRlBjUzhodXBMdExrdkw0dW1OYnZtM0lKMjE1T0U?oc=5",
+        "published": "Wed, 09 Sep 2026 03:30:00 GMT",
+        "publisher": "東洋経済オンライン"
+      },
+      {
+        "title": "日本の通信技術が世界標準へ！NTTやKDDIなど7社が作った「超高速＆省エネ通信」の新ルール - dxmagazine.jp",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9HQlVLNjNyUWp6ZlhtY04tVVFmeHJrQjhkdlhsVGVIQjduTjNINHY5MEU1d3p5SGlfZlROeldXWmVHUHBQaGNwdjZ1UGxPcWZpNlplNlI4Ukc2Y283?oc=5",
+        "published": "Wed, 09 Sep 2026 12:07:32 GMT",
+        "publisher": "dxmagazine.jp"
+      },
+      {
+        "title": "社員が積み立てた20万円を寄付 KDDIが南アルプスの整備にと飯田市に - 信濃毎日新聞デジタル",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA0UlQxaVY5dC1kSVZTLTVlOUwzWWtjbUFOSG03UnFWS1YxX21FQldmZnMwcHh1MEhBTFJFa3dIcktuMjhYWnhEV3pkRFZTMmpMcWlrYWhVUExHTHR4T1FHYTlUamlRU2ZZaFl0UmRhQjQ?oc=5",
+        "published": "Wed, 09 Sep 2026 02:07:00 GMT",
+        "publisher": "信濃毎日新聞デジタル"
+      },
+      {
+        "title": "KDDI・ローソン、他企業へ初出店となる「ローソンS京セラ本社ビル店」オープン - ダイヤモンド・チェーンストアオンライン",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5DTzk2Q3FnNzgwN1hYeXNDcEQ3QS0xVmxGMmozZkM1dklVU2R4eEVzQk9GRDRlZUoydl9XOTdOdjkwMzZUbU9fdmtfWGhFX2d1TmhV?oc=5",
+        "published": "Wed, 09 Sep 2026 05:58:41 GMT",
+        "publisher": "ダイヤモンド・チェーンストアオンライン"
+      },
+      {
+        "title": "povo、ベネフィット・ステーションでトッピングの販売を開始 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFA3dk9hN21YMk9HOC1BeFNSY0JJSnFUX1VVSms4N3g1MFJMZXNNbVJuRlBTSF9lRFNTTF9kMXQ2d1E3UXJXV0RzSDJTSmpjMEMzd3pNU3BfM2w2blpkYU4wSmZPR3d0Y2xmaVE?oc=5",
+        "published": "Wed, 09 Sep 2026 01:00:02 GMT",
+        "publisher": "PR TIMES"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533350.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      }
+    ]
+  }
+}

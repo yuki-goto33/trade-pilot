@@ -1,0 +1,200 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-09-10T09:15:51+09:00",
+  "price_as_of": "2026-09-09",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "テクニカル指標はデッドクロス形成やMACDの売りシグナルを示しており、強い下降モメンタムが継続し、短期的な下落圧力が高い状況です。",
+        "evidence": "technical_view.points[0]: 5日移動平均線と25日移動平均線のデッドクロス / technical_view.points[1]: MACDの売りシグナル"
+      },
+      {
+        "reason": "ファンダメンタルズ面では、年次・四半期ともに増収ながら利益減少のトレンドにあり、株価を押し上げるような明確な新規ポジティブ材料が不足しています。",
+        "evidence": "fundamental_view.points[0]: 年次業績の純利益およびEPS減少見込み / fundamental_view.points[2]: ポジティブな新規材料の不足"
+      },
+      {
+        "reason": "市場全体の地合いがダウントレンドと判定されており、VIX指数も上昇傾向にあるため、個別銘柄への買いが入りにくいマクロ環境です。",
+        "evidence": "reference.market_regime=downtrend / fundamental_view.points[3]: 市場全体の地合いがdowntrend"
+      },
+      {
+        "reason": "両専門家の見解を総合すると、積極的な買い推奨を行うだけの根拠が不足しており、下降トレンド継続のリスクも高いため、様子見が適切と判断されます。",
+        "evidence": "technical_view.stance=bearish (strength=75) / fundamental_view.stance=neutral (strength=50)"
+      }
+    ],
+    "risks": [
+      "RSIが売られすぎ水準に近づいており、短期的な自律反発が発生する可能性も排除できません。",
+      "日本銀行金融政策決定会合（2026年9月17日〜18日）が予定されており、金融政策の決定が市場全体に与える影響に注意が必要です。",
+      "直近の業績トレンドが減益傾向にあるため、今後の決算内容が市場予想を下回るリスクがあります。",
+      "中期的な60営業日騰落率はプラスであり、長期的なトレンドには変化がない点に留意が必要です。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"テクニカル指標はデッドクロス形成やMACDの売りシグナルを示しており、強い下降モメンタムが継続し、短期的な下落圧力が高い状況です。\",\n   \"evidence\": \"technical_view.points[0]: 5日移動平均線と25日移動平均線のデッドクロス / technical_view.points[1]: MACDの売りシグナル\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ面では、年次・四半期ともに増収ながら利益減少のトレンドにあり、株価を押し上げるような明確な新規ポジティブ材料が不足しています。\",\n   \"evidence\": \"fundamental_view.points[0]: 年次業績の純利益およびEPS減少見込み / fundamental_view.points[2]: ポジティブな新規材料の不足\"\n  },\n  {\n   \"reason\": \"市場全体の地合いがダウントレンドと判定されており、VIX指数も上昇傾向にあるため、個別銘柄への買いが入りにくいマクロ環境です。\",\n   \"evidence\": \"reference.market_regime=downtrend / fundamental_view.points[3]: 市場全体の地合いがdowntrend\"\n  },\n  {\n   \"reason\": \"両専門家の見解を総合すると、積極的な買い推奨を行うだけの根拠が不足しており、下降トレンド継続のリスクも高いため、様子見が適切と判断されます。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=75) / fundamental_view.stance=neutral (strength=50)\"\n  }\n ],\n \"risks\": [\n  \"RSIが売られすぎ水準に近づいており、短期的な自律反発が発生する可能性も排除できません。\",\n  \"日本銀行金融政策決定会合（2026年9月17日〜18日）が予定されており、金融政策の決定が市場全体に与える影響に注意が必要です。\",\n  \"直近の業績トレンドが減益傾向にあるため、今後の決算内容が市場予想を下回るリスクがあります。\",\n  \"中期的な60営業日騰落率はプラスであり、長期的なトレンドには変化がない点に留意が必要です。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "5日移動平均線が25日移動平均線を下回りデッドクロスを形成し、MACDも売りシグナルを示している。市場全体がダウントレンドにある中、短期的な下落圧力が継続する可能性が高い。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日移動平均線を下回り、デッドクロスを形成している。これは短期的な下降トレンドへの転換を示唆する。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\""
+        },
+        {
+          "point": "MACDがシグナルラインを下回り、MACDヒストグラムがマイナス圏で拡大している。強い下降モメンタムを示している。",
+          "evidence": "price_technical.macd=-7.46, price_technical.macd_signal=5.75, price_technical.macd_histogram=-13.21"
+        },
+        {
+          "point": "RSI14が50を下回る41.6であり、下降トレンドにおけるモメンタムの弱さを示唆している。",
+          "evidence": "price_technical.rsi14=41.6"
+        },
+        {
+          "point": "直近5営業日のうち4日で株価が下落しており、短期的に売り圧力が強い状態が続いている。",
+          "evidence": "price_technical.recent_5_days"
+        },
+        {
+          "point": "TOPIXの市場レジームがダウントレンドと判定されており、市場全体の地合いも下向きである。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\""
+        }
+      ],
+      "cautions": [
+        "RSIが売られすぎ水準に近づいており、短期的な自律反発の可能性も排除できない。",
+        "中期的な60営業日騰落率はプラスであり、対TOPIXでもアウトパフォームしているため、長期的なトレンドには変化がない点には留意が必要。",
+        "前夜のNY市場でのADRやセクターETFの下落は、当日の寄り付き価格にすでに織り込まれる可能性がある。"
+      ],
+      "key_levels": {
+        "support": 2500.0,
+        "resistance": 2789.12
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "直近の四半期決算および年次見込みにおいて増収ながら利益は減少するトレンドが見られ、明確な株価上昇のカタリストとなる新規材料も不足しています。市場全体の地合いが軟調で、日銀会合を控える中、中立的な見解とします。",
+      "points": [
+        {
+          "point": "年次業績は増収トレンドですが、2026年3月期の純利益および希薄化後EPSは2025年3月期比で減少する見込みです。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=2599, fundamentals.earnings_trend.annual[0].diluted_eps=140.37, fundamentals.earnings_trend.annual[1].net_income_oku_jpy=2958, fundamentals.earnings_trend.annual[1].diluted_eps=155.87"
+        },
+        {
+          "point": "直近の2026年6月期四半期EPSは前年同期比で減少しており、利益の減少トレンドを裏付けています。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].diluted_eps=37.7, fundamentals.earnings_trend.quarterly[1].diluted_eps=46.01"
+        },
+        {
+          "point": "直近の適時開示やニュースには、株価を大きく動かすようなポジティブな新規材料が確認できません。",
+          "evidence": "disclosures.items, news.headlines"
+        },
+        {
+          "point": "日経平均やTOPIX連動ETFが軟調な動きを示し、市場全体の地合いは「downtrend」と判定されており、市場の不確実性を示すVIX指数も上昇傾向にあります。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.indices[0].change_1d_pct=-1.7, macro.indices[1].change_1d_pct=-0.19, macro.indices[4].change_1d_pct=4.71, macro.indices[4].change_5d_pct=14.94"
+        }
+      ],
+      "cautions": [
+        "日本銀行金融政策決定会合が2026年9月17日〜18日に開催予定であり、金融政策の決定が市場全体に与える影響に注意が必要です。",
+        "直近の業績トレンドが減益傾向にあるため、今後の決算内容が市場予想を下回るリスクがあります。",
+        "マクロ環境として市場全体の地合いが軟調であり、個別銘柄への買いが入りにくい可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "第一三共(株)【DSNKY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1LdkZxbEN5Vm9Scm5nSFgzTDZJZlNtcVFXR0dkU1J3c2RfRFBuNmNiOGFibVNVTE1zT2lad2dyNnA0TFRoT3RVZktKcGRiMVVV?oc=5",
+        "published": "Wed, 09 Sep 2026 12:42:51 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "『今夜もシリアルキラーと待ち合わせ』エリート刑事・鶴岡楓役の山崎紘菜が取材会に出席！ 横山裕との撮影を振り返り、山崎「私の方こそ助けていただいた」あと残り2話「最後までテレビの前で待ち合わせできたら」 - miyoca.jp",
+        "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTE1SUVY2YnlXWlZJX2dKVWpMbzBMTm5nRVhyYi0tbGx1MzJjclhhZWpCaEpYUFFsWk5ILUxRdnBJMEhsd0tI?oc=5",
+        "published": "Wed, 09 Sep 2026 11:18:00 GMT",
+        "publisher": "miyoca.jp"
+      },
+      {
+        "title": "「薬価が安い」はずなのに…中国が日本の医薬品市場をうらやむ「深い」理由 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5JV2xBZGFmSUVtWDFXbmlPVEVTTklFXzZXLVVqVThhemZpTW4zNDZEbVJ6X040RG9WZDAxdjFOa2ZHVlNlU1NlVXhZdDVCX1XSAU9BVV95cUxOSVdsQWRhZklFbVgxV25pT1RFU05JRV82Vy1ValU4YXpmaU1uMzQ2RG1Sel9ONERvVmQwMXYxTmtmR1ZTZVNTZVV4WXQ1Ql9V?oc=5",
+        "published": "Wed, 09 Sep 2026 20:15:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "「ライスフォース」から1品7役のオールインワンジェルクリームが登場 - 美容マスク級のハリ・ツヤ肌へ - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9KMVR6blI5M21lZzF4NHFwWUN5TWN3YnR0TGpIMHhLSUJoejlQejctc1pPQ1NUTzZMQThvTlN3NVFXMmpJV2xSc2FpQmdEcFhhMkt3LXlOZlM4eXFBYlVGbWpVbDlQSUVPOEs1TzNB?oc=5",
+        "published": "Wed, 09 Sep 2026 03:56:02 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "米国株式市場は続落、原油高でインフレ懸念が再燃 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQV0JmU21vVVVqdGRPSVB0cjJVaG5wMm14MWt3aGJ3MzlSQ0pnS1N5Z29BUkFYQ1o4ZW5zcjR1end2eGJlMWlESUQwT1lxXzFDQlFaek1EX1BIXzFpOWZnWEoydjNZaGtXSGNxNzNsRkVFYmRIMVFvUldKdFZzWjRmSHVWYnR3YjDSAYwBQVVfeXFMUEp5eFYyWTZ6LUJzRGoteW5pcGtyR2lXNTJWc1IycDdoT2VWeHRKSHpEWlREQWFxdVVwZVBLV1pKelpGcGxWUlp4NUNpWmVlV0dIclhVMHRMM2I0ZExFRVdCV1QyMm9rcG9mdUFrQk1taHU1b19BYnpFWks0dlZMNG1iY29ka2xMZTFPQjM?oc=5",
+        "published": "Wed, 09 Sep 2026 23:15:57 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "無人機用リチウム電池パック市場統計2026：2032年4631百万米ドル規模へ発展 - ドリームニュース",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1RR3RqMVJ3ZUt0dzhnUHJabUxpd0VfVG1OeTI2bFI3cDVUaUYxUUhwQzFGRkZCMllYbnJVdDIxNUNpUGpFc3BEZHo3NE9wYTFMcHI0?oc=5",
+        "published": "Wed, 09 Sep 2026 02:30:00 GMT",
+        "publisher": "ドリームニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "（開示事項の変更）第一三共ビジネスアソシエの吸収合併（簡易合併・略式合併）の効力発生日変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824525305.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "（再訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514622.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2025年度決算および第6期中期経営計画説明会」資料の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514744.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正・数値データ訂正）「2026年３月期 決算短信〔IFRS基準〕(連結)」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504176.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504099.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算補足資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504168.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504173.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "当社米国子会社役職員に対する信託型株式付与制度の継続のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504240.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587542.pdf",
+        "date": "2026-07-16 15:30:00"
+      },
+      {
+        "title": "当社取締役等に対する中計業績連動株式報酬としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584479.pdf",
+        "date": "2026-06-30 16:30:00"
+      }
+    ]
+  }
+}

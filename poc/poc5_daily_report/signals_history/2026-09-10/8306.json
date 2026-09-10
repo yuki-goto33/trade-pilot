@@ -1,0 +1,187 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-09-10T09:08:59+09:00",
+  "price_as_of": "2026-09-09",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズの strength は 70 と高いが、市場レジームが downtrend のため、buy 基準（strength 75 以上）を満たさない。",
+        "evidence": "fundamental_view.strength=70 / reference.market_regime=\"downtrend\""
+      },
+      {
+        "reason": "株価が25日移動平均線を下回っており、テクニカル面で短期的な下押し圧力が継続している。",
+        "evidence": "technical_view.stance=\"neutral\" / reference.last_close=3601.0 < reference.sma25=3615.44"
+      },
+      {
+        "reason": "米国市場のADRが下落しており、短期的には寄り付きからの窓開け下落による調整リスクがある。",
+        "evidence": "technical_view.points[2]: us_overnight.adr.change_1d_pct=-2.03"
+      },
+      {
+        "reason": "直近第1四半期の純利益進捗は極めて良好であり、金利環境も追い風だが、日銀会合を前に不確実性が高い。",
+        "evidence": "fundamental_view.points[0]: 2027年3月期第1四半期の純利益 8,094億円"
+      }
+    ],
+    "risks": [
+      "2026年9月17-18日の日銀金融政策決定会合に伴う金利政策の不透明感とボラティリティの拡大",
+      "市場全体のレジームが downtrend であることによる、セクターを超えた連れ安リスク",
+      "予想PER（23.74倍）が実績PERから大きく乖離しており、期待先行に対する修正売りの発生"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズの strength は 70 と高いが、市場レジームが downtrend のため、buy 基準（strength 75 以上）を満たさない。\",\n   \"evidence\": \"fundamental_view.strength=70 / reference.market_regime=\\\"downtrend\\\"\"\n  },\n  {\n   \"reason\": \"株価が25日移動平均線を下回っており、テクニカル面で短期的な下押し圧力が継続している。\",\n   \"evidence\": \"technical_view.stance=\\\"neutral\\\" / reference.last_close=3601.0 < reference.sma25=3615.44\"\n  },\n  {\n   \"reason\": \"米国市場のADRが下落しており、短期的には寄り付きからの窓開け下落による調整リスクがある。\",\n   \"evidence\": \"technical_view.points[2]: us_overnight.adr.change_1d_pct=-2.03\"\n  },\n  {\n   \"reason\": \"直近第1四半期の純利益進捗は極めて良好であり、金利環境も追い風だが、日銀会合を前に不確実性が高い。\",\n   \"evidence\": \"fundamental_view.points[0]: 2027年3月期第1四半期の純利益 8,094億円\"\n  }\n ],\n \"risks\": [\n  \"2026年9月17-18日の日銀金融政策決定会合に伴う金利政策の不透明感とボラティリティの拡大\",\n  \"市場全体のレジームが downtrend であることによる、セクターを超えた連れ安リスク\",\n  \"予想PER（23.74倍）が実績PERから大きく乖離しており、期待先行に対する修正売りの発生\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "短期的な売り圧力が強まり25日移動平均線を割り込んだが、MACDや移動平均線のクロス状況などのトレンド指標は強気を維持しており、テクニカル指標の方向感が対立している。",
+      "points": [
+        {
+          "point": "トレンド指標であるMACDがシグナルを上回って推移しており、SMA5とSMA25もゴールデンクロスの状態を維持している。",
+          "evidence": "price_technical.macd=22.81, price_technical.macd_signal=17.56, price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\""
+        },
+        {
+          "point": "直近3営業日の続落により、株価は25日移動平均線（3615.44円）を下回っており、短期的なモメンタムは弱気に転じている。",
+          "evidence": "price_technical.last_close=3601.0, price_technical.sma25=3615.44, price_technical.recent_5_days"
+        },
+        {
+          "point": "市場全体のレジームが「downtrend」と判定されており、前夜の米国市場でADRが-2.03%と下落していることから、外部環境は依然として厳しい。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\", us_overnight.adr.change_1d_pct=-2.03"
+        }
+      ],
+      "cautions": [
+        "ADRの下落を受けて寄り付きから下窓を開ける可能性が高く、その際の窓埋めの勢いを確認する必要がある",
+        "RSIが35.2と売られすぎ水準に接近しており、テクニカル的な自律反発が入りやすい水準にある",
+        "25日移動平均線を明確に下放れた場合、中期的な調整が長引くリスクがある"
+      ],
+      "key_levels": {
+        "support": 3415.0,
+        "resistance": 3615.44
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "直近第1四半期の純利益が非常に高い進捗を見せていることに加え、国内長期金利の高水準推移と経営体制の刷新がポジティブな材料となり、中長期的な成長期待が持てる。ただし、直近の日銀会合を控えたマクロ環境の不確実性が短期的なリスクとなる。",
+      "points": [
+        {
+          "point": "業績の力強い拡大トレンド。2026年3月期の大幅増益に続き、2027年3月期第1四半期（2026-06期）の純利益は8,094億円と、前年同期や前四半期を上回る極めて高い収益性を維持している。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "利ざや改善に寄与する金利環境。日本の10年債利回りが2.896%と高水準で推移しており、貸出利ざやの拡大など本業の収益環境に追い風が吹いている。",
+          "evidence": "macro.rates.jgb_10y_percent"
+        },
+        {
+          "point": "経営トップの交代による新体制への期待。半沢頭取が社長に昇格するという6年ぶりのトップ交代が直近で報じられ、ガバナンス刷新や戦略加速への期待感が醸成されている。",
+          "evidence": "news.headlines[1]"
+        }
+      ],
+      "cautions": [
+        "2026年9月17-18日に日銀金融政策決定会合を控えており、金利政策の行方次第で株価が急変するイベントリスクがある。",
+        "予想PER（forward_pe）が23.74倍と実績PER（15.45倍）から大きく乖離しており、市場の期待先行による割高感が意識される可能性がある。",
+        "市場全体（TOPIX）が25日移動平均線を下回るダウントレンドにあり、地合い悪化による下押し圧力を受けやすい状況にある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "MUFGドル債：4NC3で初のリローンチ、NIC抑えて6倍 – CAPITAL EYE - c-eye.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9feE5uNHpGeDBqcDhXTElRZEl2U3BYV09NVlBjc1QzZTdENVAxdTdIdGdqVU1PLXc1WUhOVHZDYUoxMzN0bkE0ejN2M0w?oc=5",
+        "published": "Wed, 09 Sep 2026 08:42:56 GMT",
+        "publisher": "c-eye.co.jp"
+      },
+      {
+        "title": "半沢頭取が社長に昇格…三菱UFJフィナンシャル・グループ6年ぶりトップ交代 Fcb (eQyPaWg97g) - Mshale",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBfOGN6VjNjb29hMDBKU0FzOFdLMVQ2LV8xRHgzTWl5T0JfY2MtWktWN0k3c21yMVNGNXYySEdMMzM4d1NISzZHVzBkeXpERVZyYjRnTVB0WkJER3M?oc=5",
+        "published": "Wed, 09 Sep 2026 13:22:49 GMT",
+        "publisher": "Mshale"
+      },
+      {
+        "title": "日経平均株価、182円11銭安で始まる - 寄り付き解説 きょうのトピック - 日経CNBC online",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBDZnE5ZDNUZl9Od2k3QkNCTnJadjgtNVRPSG5TSVpqS1U5WHhOZTVzWlZaeFN0SDRXZHFsaW4xVzUxMTRiaGJBcmpyY0o4amlRODhxag?oc=5",
+        "published": "Wed, 09 Sep 2026 00:00:00 GMT",
+        "publisher": "日経CNBC online"
+      },
+      {
+        "title": "ソフトバンクG、マネーの一極集中が鮮明 前日までの4日で株価33%高 - 日経CNBC online",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBfclpwUEtSb2hWM3F3T0V2azBHS1JUbG5Ic0hNb3VFY2ZHZ3BpTlQ2V0R2U05yV0dFU2xTTkhoWmhWSEV3M0dMcWFEWFZnYkZwdzdBag?oc=5",
+        "published": "Wed, 09 Sep 2026 00:27:00 GMT",
+        "publisher": "日経CNBC online"
+      },
+      {
+        "title": "美人ボーカル、幼少期ショットに反響「面影がある」「美少女だ」 - モデルプレス",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5JQjdqZkRMTUt6TXh3MFhIRk1wb01YekJqR0pFZmpLVHBjWUFscjJzVnVMZ2NLeEt0QlB3NGd2THNYeFdPemJOa3dTWdIBR0FVX3lxTE9XU3NyVG9QUUFZTkhfNnV0Q3djYUxNSllyZXhSRkNlaTdPamxfQ25yWEZJazNuN2NzWnkyOUIyRFNLWE9LS3JJ?oc=5",
+        "published": "Wed, 09 Sep 2026 03:09:21 GMT",
+        "publisher": "モデルプレス"
+      },
+      {
+        "title": "（まとめ）日経平均は126円安の65,142円で続落 中東情勢の悪化などから上値重く - ライブドアニュース",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFB5X2lkemNkeWRQVE8xS21XM0Ywc2pQYmY1UjViNmJDWFhCMmxzYk1xTUs2M3JnMVQ1TDFiTUlNNXJZUXVVWWxZMXFEeFdrTHVnWHRwRHdXS3BNQTU0QUNN?oc=5",
+        "published": "Wed, 09 Sep 2026 19:45:29 GMT",
+        "publisher": "ライブドアニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期 自己資本比率について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260814520300.pdf",
+        "date": "2026-08-14 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕（連結）（公認会計士又は監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510381.pdf",
+        "date": "2026-08-06 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505851.pdf",
+        "date": "2026-08-03 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      }
+    ]
+  }
+}
