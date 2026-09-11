@@ -1,0 +1,221 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-09-11T09:12:45+09:00",
+  "price_as_of": "2026-09-10",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "直近（2026-09-10）に buy シグナルを発行した履歴があり、ルールに基づき現在は新規エントリーを控え継続監視するフェーズである。",
+        "evidence": "reference.recent_buy.date=2026-09-10"
+      },
+      {
+        "reason": "ファンダメンタルズの strength が 60 であり、buy 判断の必須条件である 70 を下回っているため、様子見が妥当である。",
+        "evidence": "fundamental_view.strength=60"
+      },
+      {
+        "reason": "テクニカル指標で RSI14 が 81.5 と極めて高い過熱感を示しており、かつ前夜 ADR も下落しているため、短期的調整リスクが非常に高い。",
+        "evidence": "technical_view.points[1]: rsi14=81.5 / technical_view.points[2]: adr.change_1d_pct=-2.26"
+      },
+      {
+        "reason": "市場全体が下落トレンド（downtrend）にあり、地合いによる下押し圧力が強い局面である。",
+        "evidence": "reference.market_regime=downtrend"
+      }
+    ],
+    "risks": [
+      "6日後に日銀金融政策決定会合を控えており、政策変更に伴う金利・為替のボラティリティ急増リスクがある（macro.boj.monetary_policy_meeting.days_until_next=6）。",
+      "VIX指数の急上昇（直近5日+22.78%）に見られる市場全体のリスクオフ姿勢の強まり。",
+      "テクニカル的な過熱状態（RSI 80超）からの、窓開けを伴う急激な価格調整の可能性。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 21,\n \"reasons\": [\n  {\n   \"reason\": \"直近（2026-09-10）に buy シグナルを発行した履歴があり、ルールに基づき現在は新規エントリーを控え継続監視するフェーズである。\",\n   \"evidence\": \"reference.recent_buy.date=2026-09-10\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズの strength が 60 であり、buy 判断の必須条件である 70 を下回っているため、様子見が妥当である。\",\n   \"evidence\": \"fundamental_view.strength=60\"\n  },\n  {\n   \"reason\": \"テクニカル指標で RSI14 が 81.5 と極めて高い過熱感を示しており、かつ前夜 ADR も下落しているため、短期的調整リスクが非常に高い。\",\n   \"evidence\": \"technical_view.points[1]: rsi14=81.5 / technical_view.points[2]: adr.change_1d_pct=-2.26\"\n  },\n  {\n   \"reason\": \"市場全体が下落トレンド（downtrend）にあり、地合いによる下押し圧力が強い局面である。\",\n   \"evidence\": \"reference.market_regime=downtrend\"\n  }\n ],\n \"risks\": [\n  \"6日後に日銀金融政策決定会合を控えており、政策変更に伴う金利・為替のボラティリティ急増リスクがある（macro.boj.monetary_policy_meeting.days_until_next=6）。\",\n  \"VIX指数の急上昇（直近5日+22.78%）に見られる市場全体のリスクオフ姿勢の強まり。\",\n  \"テクニカル的な過熱状態（RSI 80超）からの、窓開けを伴う急激な価格調整の可能性。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "中期騰落率および対TOPIX相対騰落率がともにマイナスであり、厳格な基準に基づき中期下落トレンド継続中と判断します。短期的には急反発しましたが、RSIの過熱感と外部環境の悪化から調整のリスクが高い状態です。",
+      "points": [
+        {
+          "point": "60営業日騰落率と対TOPIX相対騰落率がともにマイナスであり、中期的な下落トレンドから脱却できていないと判断されます。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-4.11, price_technical.trend_60d.relative_to_topix_60d_pct=-4.02"
+        },
+        {
+          "point": "RSI14が80を超えており、直近の急激な上昇によるテクニカル的な買われすぎが顕著です。",
+          "evidence": "price_technical.rsi14=81.5"
+        },
+        {
+          "point": "前夜の米国市場でADRが大幅に下落し、セクターETFも軟調であるため、当日の寄り付きから売り圧力が強まる可能性が高いです。",
+          "evidence": "us_overnight.adr.change_1d_pct=-2.26, us_overnight.sector_proxy.change_1d_pct=-1.41"
+        },
+        {
+          "point": "市場全体のレジームがdowntrend（下落トレンド）にあり、個別銘柄の上値を抑える重石となります。",
+          "evidence": "macro.market_regime.market_regime=downtrend"
+        }
+      ],
+      "cautions": [
+        "MACDおよびヒストグラムは依然として拡大傾向にあり、短期的な上昇モメンタムが完全に消失したわけではない点に注意が必要です",
+        "前夜ADRの下落分が寄り付きで過度に織り込まれた場合、自律反発が発生する可能性があります",
+        "VIX指数が急上昇しており、市場全体のボラティリティ増大による予期せぬ乱高下のリスクがあります"
+      ],
+      "key_levels": {
+        "support": 5564.24,
+        "resistance": 6959.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "財務健全化に向けたブリッジローンの返済やAI分野への継続投資はポジティブだが、VIX指数の急騰や6日後に控える日銀会合など、マクロ環境のリスクオフ姿勢が強く、短期的には拮抗する見通し。",
+      "points": [
+        {
+          "point": "ブリッジローンの期限前返済を実施し、有利子負債の削減と財務体質の改善に向けた動きが確認できる。",
+          "evidence": "disclosures.items[0].title（2026-09-09 15:30:00）"
+        },
+        {
+          "point": "OpenAIへの追加出資やAIグラスの販売開始など、成長期待の高いAI関連事業へのリソース集中を継続している。",
+          "evidence": "disclosures.items[7].title（2026-07-01）, news.headlines[1].title（2026-09-10）"
+        },
+        {
+          "point": "2025年3月期に最終黒字化を達成しており、ROEも32%と極めて高い水準を記録している。",
+          "evidence": "fundamentals.earnings_trend.annual[1].net_income_oku_jpy=11533, fundamentals.valuation.return_on_equity=0.32"
+        }
+      ],
+      "cautions": [
+        "日銀金融政策決定会合が6日後に迫っており、金利上昇や円高進行が投資環境の重石となるリスクがある（macro.boj.monetary_policy_meeting.days_until_next=6）。",
+        "市場全体が下降トレンド（downtrend）にあり、VIX指数が直近5日間で約22.8%上昇するなど、リスク回避の動きが強まっている（macro.market_regime.market_regime, macro.indices[4].change_5d_pct=22.78）。",
+        "米国のS&P500など主要指数が軟調であり、同社が保有する投資ポートフォリオの時価評価額に悪影響を及ぼす可能性がある（macro.indices[3].change_5d_pct=-2.01）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-10",
+    "days_ago": 1,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "「ソフトバンクグループ」ってどんな会社？ なぜ時価総額がトップに？ - asahi.com",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB2WXp3YnNsR2xsOHYtZU1hZHY4YzRqRkFUdVM5MGdOLTB3Z2lvWldPY0dGU3FzRkhJUVNKTHN1Wmd2Qkg0NkVqNUM2SHE3OFVtRkl5RVY1eVpVQmJ6WFVqb2dkVlZhbmY3?oc=5",
+        "published": "Thu, 10 Sep 2026 15:00:00 GMT",
+        "publisher": "asahi.com"
+      },
+      {
+        "title": "話題のAIグラスの販売を開始しました | スマートフォン・携帯電話 - ソフトバンク",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5tdVRnRTM3X25tbHloSnotSm1CYmU0YjNOV0VPQWxuYTlmMFctVTAxMFlXNEtySk9TT3JhZXp5VDBhREp2TlUtZlBnZUt1RXlWRGJveGItU21INnBGelF3Wmd3VGdfX0dkNENzbHF5eUJVZw?oc=5",
+        "published": "Thu, 10 Sep 2026 03:54:30 GMT",
+        "publisher": "ソフトバンク"
+      },
+      {
+        "title": "社説／変わる社債市場 「深み」と流動性強化で活性化を - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1fY2lpYWxNZWNUN1ROUnVNejg1N0FZcTFPQ2NUbGl0clNWQURkZk5iSzZReFhxQkZrUjJHX3dXQTRRRXpxTGlNZE5iNnV4MEFscXNQQVpOZHQ?oc=5",
+        "published": "Thu, 10 Sep 2026 20:00:00 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "ワイモバイルのシェアプランでeSIMを利用できるようになりました - ソフトバンク",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE05ak1uMDJRWmNqcVdyLUNlQW81V3RhZDhjSHFneWtvRzctX2ZZaUQ1OFpLS0p0am9NWTBZeHlwQzE3VkVNbkpiYXVQNXBCWjZoS1R4M0tQS3JpaEVTOV9hb3NRNl9ZUTg3cEV3VG1ONTVMdw?oc=5",
+        "published": "Thu, 10 Sep 2026 03:54:29 GMT",
+        "publisher": "ソフトバンク"
+      },
+      {
+        "title": "2400兆円の個人資産も呼び込め - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1GeFZGY1JjM3plTW56d1JBNTk4dHNTRUkzcFg1anNSeDQ2OVRpYW52WWZ5cTE3ajRfa2lSYllpNFFQNXdZOUFZTFdUNW02LUdrRlRMZjhHRWhBVTRvRDhNSndfNWI?oc=5",
+        "published": "Thu, 10 Sep 2026 15:00:00 GMT",
+        "publisher": "日経ビジネス電子版"
+      },
+      {
+        "title": "Grab、シンガポールのAtomeの過半株式取得を交渉中 評価額は最大20億ドル - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5oaUFNeFJiZ3poUFBHX2dLb2FaRmFnQjBRdkFaT2hPVE9fV0pjUkg4R0dVZnotWUlDNGZMN0RGV0JnV2dqWXNXRGFfS0JsWU1kU3VwMXhIRWRKaFlkbENkSjBPN1FvWGVGeW5ETjRyMUJDVWZl?oc=5",
+        "published": "Thu, 10 Sep 2026 07:05:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "【株】意外と知らない「あの有名企業の株主優待」まとめ！ソフトバンク、森永製菓など6選 - ぴあエンタメ情報",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1KR1N4TjlzUGN1Q09yellLZk1BaVRha3JlWUxETk9lUlV3OXc5UF81SThUdkQzczBiSTNHU1RaMk41VjZ5cV9hcGdQU1FCYzdOSDg4aWx1Z01oR1NBOXVj?oc=5",
+        "published": "Thu, 10 Sep 2026 11:00:00 GMT",
+        "publisher": "ぴあエンタメ情報"
+      },
+      {
+        "title": "LYPプレミアムの会員限定特典がさらに充実しました - ソフトバンク",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBSSXpQNVdwcHFNZlQ0aWM2UHVHSDg1ajRUSUY3eXpkZmNVNE9SX25MWnBNWFNxcWRDUWtneXNTUWxwcU9pNlhnYnJFZXczc0JZSjdsc3pPT1hleVVXamRhN05iVElBMG9XdWtRQVJBaUNBdw?oc=5",
+        "published": "Thu, 10 Sep 2026 03:54:29 GMT",
+        "publisher": "ソフトバンク"
+      },
+      {
+        "title": "マイクロンが1兆5000億円を投資　半導体特需で変わる街　広島・東広島市 - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE01bWxJeGk2ZHFXZGJYM1pLTlBKNjFUd0tTVkx3NEtheUpKMWk0VzhzTzg4UXRfdlVCSjlfenN1YWl5UDZzSXhhRnhLa0h6UVgwM2otOV9LbTRkUm5la3NSR1FoVTlPQXNDNVRQLUhR0gFuQVVfeXFMTTVtbEl4aTZkcVdkYlgzWktOUEo2MVR3S1NWTHc0S2F5SkoxaTRXOHNPODhRdF92VUJKOV96c3VhaXlQNnNJeGFGeEtrSHpRWDAzai05X0ttNGRSbmVrc1JHUWhVOU9Bc0M1VFAtSFE?oc=5",
+        "published": "Thu, 10 Sep 2026 11:10:00 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "日経平均は3日続落、東エレクが1銘柄で約128円分押し下げ - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNSHBaUlZSMGJ5WWdNVEpqd2YzWWthYjRGZHVEaWpyeVdMVXhpZFNBWXVhZUpTVS1PR21zNWUwdDBrbHRqYWM2b3F3Q0ZOaU1TelRSd0JnaUwzQ0o0U0xnMUlwQ3Y1eFhwWVZlMHVfQW1GTDdNSEkxTnVFSkdWWG9sOXZ2WGtMLXpsd0lkd9IBjAFBVV95cUxNSHBaUlZSMGJ5WWdNVEpqd2YzWWthYjRGZHVEaWpyeVdMVXhpZFNBWXVhZUpTVS1PR21zNWUwdDBrbHRqYWM2b3F3Q0ZOaU1TelRSd0JnaUwzQ0o0U0xnMUlwQ3Y1eFhwWVZlMHVfQW1GTDdNSEkxTnVFSkdWWG9sOXZ2WGtMLXpsd0lkdw?oc=5",
+        "published": "Thu, 10 Sep 2026 03:31:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "ブリッジローンの期限前返済に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533573.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260904531576.pdf",
+        "date": "2026-09-04 10:30:00"
+      },
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得の完了時期の変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260828527943.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824524817.pdf",
+        "date": "2026-08-24 09:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510515.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行内容確定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503871.pdf",
+        "date": "2026-07-30 17:00:00"
+      },
+      {
+        "title": "第68回及び第69回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501484.pdf",
+        "date": "2026-07-29 10:30:00"
+      },
+      {
+        "title": "OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260701586249.pdf",
+        "date": "2026-07-01 16:00:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577089.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "2021年発行米ドル建普通社債の期限前償還完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566742.pdf",
+        "date": "2026-06-10 11:30:00"
+      }
+    ]
+  }
+}

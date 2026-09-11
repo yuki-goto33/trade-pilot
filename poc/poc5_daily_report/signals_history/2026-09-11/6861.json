@@ -1,0 +1,199 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-09-11T09:13:27+09:00",
+  "price_as_of": "2026-09-10",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "テクニカル面で25日移動平均線を大幅に下抜け、デッドクロスが発生しており、短中期の強い調整局面にある。",
+        "evidence": "technical_view.points[0]: price_technical.last_close=76500, price_technical.sma25=81844"
+      },
+      {
+        "reason": "ファンダメンタルズ面で業績は堅調だが、予想PER 40.9倍の割高感と直近のポジティブ材料不足が上値を抑える要因となっている。",
+        "evidence": "fundamental_view.points[2]: fundamentals.valuation.forward_pe=40.966"
+      },
+      {
+        "reason": "市場全体がdowntrendレジームにあり、VIX指数の上昇を背景としたリスクオフ環境がグロース株への売りを助長している。",
+        "evidence": "reference.market_regime=\"downtrend\" / fundamental_view.cautions[2]"
+      }
+    ],
+    "risks": [
+      "2026-09-17からの日銀金融政策決定会合における追加利上げ観測とそれに伴う円高進行リスク",
+      "直近の期間安値（75,330円）を割り込んだ場合の下落加速の可能性",
+      "次回決算（2026-10-29）まで期間があり、自律反発を促す新規材料が不足している点"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 60,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"テクニカル面で25日移動平均線を大幅に下抜け、デッドクロスが発生しており、短中期の強い調整局面にある。\",\n      \"evidence\": \"technical_view.points[0]: price_technical.last_close=76500, price_technical.sma25=81844\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズ面で業績は堅調だが、予想PER 40.9倍の割高感と直近のポジティブ材料不足が上値を抑える要因となっている。\",\n      \"evidence\": \"fundamental_view.points[2]: fundamentals.valuation.forward_pe=40.966\"\n    },\n    {\n      \"reason\": \"市場全体がdowntrendレジームにあり、VIX指数の上昇を背景としたリスクオフ環境がグロース株への売りを助長している。\",\n      \"evidence\": \"reference.market_regime=\\\"downtrend\\\" / fundamental_view.cautions[2]\"\n    }\n  ],\n  \"risks\": [\n    \"2026-09-17からの日銀金融政策決定会合における追加利上げ観測とそれに伴う円高進行リスク\",\n    \"直近の期間安値（75,330円）を割り込んだ場合の下落加速の可能性\",\n    \"次回決算（2026-10-29）まで期間があり、自律反発を促す新規材料が不足している点\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 80,
+      "summary": "25日線の大幅な下抜けとデッドクロスの発生に加え、MACDの弱気シグナル拡大と市場全体の地合い悪化が重なり、下値模索の展開が予想されます。",
+      "points": [
+        {
+          "point": "短期・中期移動平均線のデッドクロスが発生しており、株価はSMA25を大きく下回る強い調整局面にある。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.last_close=76500, price_technical.sma25=81844"
+        },
+        {
+          "point": "MACDがシグナルを大きく下回り、ヒストグラムのマイナス幅も拡大しており、下落のモメンタムが強まっている。",
+          "evidence": "price_technical.macd=-1340.48, price_technical.macd_histogram=-698.66"
+        },
+        {
+          "point": "市場全体がdowntrendレジームに転換しており、ボラティリティの上昇も相まって個別銘柄に売り圧力がかかりやすい状況にある。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.indices[3].change_1d_pct=8.38"
+        },
+        {
+          "point": "前夜のADRおよび米国テクノロジーセクターETFが下落しており、当日の寄り付きから軟調な推移が示唆される。",
+          "evidence": "us_overnight.adr.change_1d_pct=-1.46, us_overnight.sector_proxy.change_1d_pct=-1.41"
+        }
+      ],
+      "cautions": [
+        "RSI14は48.7と中立圏にあり、テクニカル的な「売られすぎ」による自律反発のサインはまだ確認できない",
+        "前夜ADRの下落は寄り付き価格に織り込まれるため、寄り底となるリスクには注意が必要",
+        "直近の期間安値（75330円）を割り込むと、下落が加速する可能性がある"
+      ],
+      "key_levels": {
+        "support": 75330.0,
+        "resistance": 77230.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "業績は着実な増収増益トレンドを維持し、製造業PMIの拡大など事業環境も良好だが、40倍を超えるPERには割安感がなく、日銀会合直前のマクロ不透明感が上値を抑える要因となっている。",
+      "points": [
+        {
+          "point": "収益性の高い安定した成長トレンドの継続。2026年3月期においても売上高・営業利益ともに増収増益の計画であり、営業利益率は50%を超える極めて高い水準を維持している。",
+          "evidence": "fundamentals.earnings_trend.annual[0]"
+        },
+        {
+          "point": "主要顧客層である製造業の景況感が良好。日本の製造業PMIは54.9と7ヶ月連続で拡大しており、特にAI関連需要に支えられた新規受注の伸びが同社のFAセンサー需要を後押しする環境にある。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9"
+        },
+        {
+          "point": "バリュエーションの割高感と市場環境の悪化。予想PERは40.9倍と高水準であり、TOPIXが25日線を下回るダウントレンドにある中で、金利上昇局面におけるグロース株への利益確定売りが出やすい局面である。",
+          "evidence": "fundamentals.valuation.forward_pe=40.966, macro.market_regime.market_regime=downtrend"
+        }
+      ],
+      "cautions": [
+        "日銀金融政策決定会合が6日後に迫っており、追加利上げの観測による円高進行やグロース株への下押し圧力が懸念される（macro.boj.monetary_policy_meeting.days_until_next=6）",
+        "次回決算発表（2026-10-29）まで1ヶ月半以上あり、短期的には新規のポジティブな材料が不足する可能性がある",
+        "VIX指数が直近5日間で22.78%上昇しており、グローバルなリスクオフ環境の波及に警戒が必要（macro.indices[4].change_5d_pct=22.78）"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "株式会社アセットリード様の「ジシュトレAI」導入事例を公開。「キーエンスで培われたロープレ文化・営業育成の知見を活かした仕組みと、運用面での伴走支援に期待しています。」 - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBhTVdGWmJOblFrZE5MUnYwdVRpYjhfZ3ViZklNOERYTW1UeVhjRnR4cWVlb0F0MGhaNlpJc0ZDTHR0SEt2T2huVkVDSzN4YlRnbnowUF9FeXZPVnZkOUpFN1ExeEhkUFZRQnh5c3d2MkRwUQ?oc=5",
+        "published": "Thu, 10 Sep 2026 15:10:02 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "画像 | だから｢マルチタスクに慣れている人｣ほど仕事がデキない…集中を切らさないために真っ先に取り入れたい一手 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9IcXUxTUdtYzlpT2w2ZXdibGxBX2xfclZfYzZzR0c5NUxWSzdvWFpmd0tvRFB2MEhCVnpPSFZkZk94MFBMbDVnQ0FmLUh0eVJXd18tNg?oc=5",
+        "published": "Thu, 10 Sep 2026 16:26:58 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "【睿生光電 FY2026 Q2 決算説明会】上半期EPS4.44台湾ドルと146.7%急増、FPDモジュール比率が4割超え・インド出荷は前年比1.6倍 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5ZdWdPLW9BYl82Z1lqazByV1lURTFhbmFzMTEtMnFaa2ZUTjlNZTFoR3lHeEhuTFpuZjIzdS01RXNxQlQ1djRsU0lsU29yWWhkQWNlam1qZmxLWFY2OFFJaw?oc=5",
+        "published": "Thu, 10 Sep 2026 10:04:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "『One-inch Tactics』のミッション数が40に！Version 1.0.7で5つの新ミッションを追加 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1kbXNkbFQ4UmxCYnV1UjhpX3g4U2NCWDhaV1VZM2YyNlN3ZUNpcjJ2c1NtRlJ2VVNxQVpmdUF1R0xPSk1qeXJqdEFXVktyc3pGVmdKcko2SE40M1ZuYlRDbFYyRC04TzVpWGc?oc=5",
+        "published": "Thu, 10 Sep 2026 01:01:18 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "好決算なのに株価がなぜか伸びない…日本の雄｢ファナック､安川電機｣と最強AIロボット中国勢を分けるもの - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9ZZW1uZk9oQ19HSnRHenlrU09KcVlqNzFvbVRiSVVVelAtZUFSTEZRRXJQWjhxV2JGUTlyM1JDRU94Q05tVjJMMW1pTmk4QlU?oc=5",
+        "published": "Thu, 10 Sep 2026 22:04:14 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "タバコ1日15本と同じくらい体に悪い…脳卒中の発症率32%､糖尿病14%上げる\"WHOも警告する意外な落とし穴\" - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFA3WGY0UFgxWWpNc0NWenptX3VfZkM5X29jT2pydUFwNkE3Q2xrRkx5R0UxQVFEY2hweFZ2VlEyZzBnQVhvOURoOUUzNVJpVm8?oc=5",
+        "published": "Thu, 10 Sep 2026 11:02:36 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "だから｢マルチタスクに慣れている人｣ほど仕事がデキない…集中を切らさないために真っ先に取り入れたい一手 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE44RmFRYkN0SnJlTWlMRnNEdlNHQWVRRmRCUE44UXVMNURGSE82cE42aWRheGZMeWpmb2hpakR2RHJDWVc3MUFreThIN0tFc2M?oc=5",
+        "published": "Thu, 10 Sep 2026 08:01:42 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "松下幸之助もドラッカーも使い方次第で逆効果…名言を引用しても\"サムい\"と思われる人がハマっている落とし穴 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1GTlBjU2tRb0tNTGhPbmRiMnd5S3lONDJPbHhBcnBIN01GSllFZzF2TU9vWC1jbktGdGZHcnlmNWdGYUdaQ3pBMHVuWFlRcXM?oc=5",
+        "published": "Thu, 10 Sep 2026 01:05:47 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      }
+    ]
+  }
+}

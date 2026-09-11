@@ -1,0 +1,211 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-09-11T08:59:08+09:00",
+  "price_as_of": "2026-09-10",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ評価がニュートラル（strength 60）であり、buy の必須条件である「strength 70以上」を満たさないため、様子見と判断します。",
+        "evidence": "fundamental_view.stance=neutral, fundamental_view.strength=60"
+      },
+      {
+        "reason": "テクニカル面で5日線と25日線のデッドクロスが発生しており、短期的には下落トレンドが強く、「落ちるナイフ」を掴むリスクを回避します。",
+        "evidence": "technical_view.points[0]: price_technical.sma5_vs_sma25=dead"
+      },
+      {
+        "reason": "市場全体が downtrend レジームにあり、地合いの悪化が個別銘柄の押し下げ要因となる可能性が高い状況です。",
+        "evidence": "reference.market_regime=downtrend, technical_view.points[2]: macro.market_regime.market_regime=downtrend"
+      },
+      {
+        "reason": "大規模な自己株買いによる下値支えは期待できるものの、日銀会合を控えた不透明感が強く、エントリーの好機とは言えません。",
+        "evidence": "fundamental_view.points[0]: 1兆円規模の自己株式取得枠, reference.next_boj_meeting=2026-09-17〜2026-09-18"
+      }
+    ],
+    "risks": [
+      "2026年9月17日からの日銀金融政策決定会合による為替（円高）および金利の急変動リスク",
+      "テクニカル上のサポートラインである2869.5円を下抜けた場合のさらなる下落加速",
+      "通期営業利益が前期比9.7%減という業績軟化の見通しによる上値の重さ",
+      "TOPIXの25日線割れに伴う市場全体のリスクオフムードの継続"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ評価がニュートラル（strength 60）であり、buy の必須条件である「strength 70以上」を満たさないため、様子見と判断します。\",\n   \"evidence\": \"fundamental_view.stance=neutral, fundamental_view.strength=60\"\n  },\n  {\n   \"reason\": \"テクニカル面で5日線と25日線のデッドクロスが発生しており、短期的には下落トレンドが強く、「落ちるナイフ」を掴むリスクを回避します。\",\n   \"evidence\": \"technical_view.points[0]: price_technical.sma5_vs_sma25=dead\"\n  },\n  {\n   \"reason\": \"市場全体が downtrend レジームにあり、地合いの悪化が個別銘柄の押し下げ要因となる可能性が高い状況です。\",\n   \"evidence\": \"reference.market_regime=downtrend, technical_view.points[2]: macro.market_regime.market_regime=downtrend\"\n  },\n  {\n   \"reason\": \"大規模な自己株買いによる下値支えは期待できるものの、日銀会合を控えた不透明感が強く、エントリーの好機とは言えません。\",\n   \"evidence\": \"fundamental_view.points[0]: 1兆円規模の自己株式取得枠, reference.next_boj_meeting=2026-09-17〜2026-09-18\"\n  }\n ],\n \"risks\": [\n  \"2026年9月17日からの日銀金融政策決定会合による為替（円高）および金利の急変動リスク\",\n  \"テクニカル上のサポートラインである2869.5円を下抜けた場合のさらなる下落加速\",\n  \"通期営業利益が前期比9.7%減という業績軟化の見通しによる上値の重さ\",\n  \"TOPIXの25日線割れに伴う市場全体のリスクオフムードの継続\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "短期移動平均線のデッドクロスに加え、MACDのマイナス圏拡大と市場地合いの悪化が重なっており、短期的な下落圧力が強い状態にあります。",
+      "points": [
+        {
+          "point": "5日線が25日線を下抜けるデッドクロスが発生しており、価格も両移動平均線を下回る軟調な推移となっています。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.last_close=2994.0, price_technical.sma25=3054.1"
+        },
+        {
+          "point": "MACDがシグナルを大きく下回り、ヒストグラムのマイナス幅も拡大しているため、下落の勢いが強いことが示唆されています。",
+          "evidence": "price_technical.macd=-9.96, price_technical.macd_signal=4.16, price_technical.macd_histogram=-14.12"
+        },
+        {
+          "point": "TOPIXが25日線を下回りdowntrend判定となっているほか、VIX指数の急上昇により市場全体の投資家心理が悪化しています。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.indices.vix_change_1d_pct=8.38"
+        }
+      ],
+      "cautions": [
+        "前夜のADRが+0.79%と小幅に反発しており、寄り付き直後は買い戻しが先行する可能性があります。",
+        "RSIが36.1と売られすぎ水準に近づいており、直近安値の2869.5付近では自律反発が意識されやすい点に注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 2869.5,
+        "resistance": 3054.1
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "PBR1倍割れの割安感と大規模な自己株買いによる下値支えがある一方、通期営業減益予想や日銀会合を控えた為替・金利変動リスクが重石となっています。",
+      "points": [
+        {
+          "point": "1兆円規模の自己株式取得枠の執行が開始されており、2026年8月だけで約865億円（2,821万株）を取得したことが発表されています。",
+          "evidence": "fundamentals.recent_important_disclosures[0], disclosures.items[0]"
+        },
+        {
+          "point": "2027年3月期は営業利益・純利益ともに減益予想ですが、年間配当は前期の95円から100円への増配を計画しており、株主還元姿勢は維持されています。",
+          "evidence": "fundamentals.recent_important_disclosures[1].summary"
+        },
+        {
+          "point": "製造業PMIが54.9と7ヶ月連続の拡大圏にあり、新規受注の増加など事業環境自体は堅調な拡大傾向を示しています。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9, summary_en"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日から開催される日銀金融政策決定会合を控え、円高進行や金利上昇が輸出採算に与えるリスクに警戒が必要です。",
+        "TOPIXが25日移動平均線を下回るdowntrend判定となっており、市場全体のリスクオフムードが波及する可能性があります。",
+        "通期業績予想において営業利益が前期比9.7%減、純利益が同15.5%減と見込まれており、本業の収益性鈍化が懸念材料です。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "トヨタ自動車(株)【TM】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBBVUdJM0U0aFlkR0FQN05mMW1YR2VRTlVLdEE1d19aRE9MWndrR1NnWTJZb1VtZmtjSGxRTzZseVZQaVhNU1NNUUJFSU8?oc=5",
+        "published": "Thu, 10 Sep 2026 16:26:08 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "「楽しさ特化」レーシングカート発売 トヨタ、価格抑え３８万５千円 - asahi.com",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFAzNXlGUUV5VThNZE15VVY2T3J3WFhRblQ2TTBhYmtCeXpHT1dQRHdWYUtwbmQ2LVA1Wl9JNUpZZXRUblkxVS1TNDQzclhucEhjV0VTQzZYZUJSLWFT?oc=5",
+        "published": "Thu, 10 Sep 2026 20:00:00 GMT",
+        "publisher": "asahi.com"
+      },
+      {
+        "title": "LEXUS、「LS」を一部改良 | レクサス | グローバルニュースルーム - global.toyota",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBlaEZzOUx0Z0xYWFhZRDc1TlZtUVhZUVdlUGhLVlBRbmU1NEdXaG1QYXJneEw1QTBwTWRXX0d4SzZHQ3ZqNm03V1l5ejU2Vnl0WVBHdDZxSVJWY2xmUVNHS0N6MA?oc=5",
+        "published": "Thu, 10 Sep 2026 04:33:07 GMT",
+        "publisher": "global.toyota"
+      },
+      {
+        "title": "トヨタ自動車が発売した入門用レーシングカート「GRカート」 - トヨタ、入門用カートを発売 38万5千円、子どもも対象 - 写真・画像(1/1) - nishinippon.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5vcFBNeFo5aGxNQ3BEdlFLMWYxYXl2UHdOYXZUY1Y4R2MtZEVGaGdwZHNmMXVnT21wU2ZuX1JIQUd0WlBDS25CZ1BBMHJoMktLUnRlRDNJOA?oc=5",
+        "published": "Thu, 10 Sep 2026 07:42:51 GMT",
+        "publisher": "nishinippon.co.jp"
+      },
+      {
+        "title": "トヨタ、入門用カートを発売 - 埼玉新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5qN3pnWTJjTGdhLUJJNThmODR2NklxQWJTSlB3NDlDUUJYMFE4aFJlTFo1bVprc2xyZWtnSU83c3lDLWlJeDUzeERMVjNmYkRnaWhXWTdOWjJxTVhjLUdkZ1cwbEQ?oc=5",
+        "published": "Thu, 10 Sep 2026 06:53:00 GMT",
+        "publisher": "埼玉新聞"
+      },
+      {
+        "title": "応援ダイジェスト2025 トヨタ自動車（豊田市）｜都市対抗野球2026 - mainichi.jp",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5nUFBSOGVhb1c2UEZIUVQ5R0VzU1d3LTg1RnJOY19pR0JLTWhUNFpoalNUYm02MzFvZk9lMks2NjVtb3U0b1VjN1JZeWdOdW5sZmZaZTVMR1JNZ0taTjduRTNtWklWWWJZS210bnRGS2ZobTdnd2RQSg?oc=5",
+        "published": "Thu, 10 Sep 2026 00:58:38 GMT",
+        "publisher": "mainichi.jp"
+      },
+      {
+        "title": "トヨタ、入門用カートを発売 ３８万５千円、子どもも対象 - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBFTXJROWYxYWZnMGttUGh6ZlRITEYyTWRBaGFRc0xFaTU0WEdtdjJmTGNBX25PMGFMWnducW9UaUxXUmdUalo2U1U2RVhDNWpWZHRTYWV5WEtOblAzblNQTEQyV3E3bWJaZWVwRzFFWTdCZw?oc=5",
+        "published": "Thu, 10 Sep 2026 06:53:00 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "トヨタ、入門用カートを発売／３８万５千円、子どもも対象 - shikoku-np.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPOHpLcjROd0ZCVmUybE1yb09YU2FlTGJaYVVUbzFackxSOHZEYmhYZ1E1ZWp6V3Y0ODRUZktPdmRxZjdhTEpzenRsY3VUUWxHT1l1aGJXZk1oV2czT3BnVk9aYzFzT29MYlVPdV84MEJsQjVsVFpVakU5MEw2QWo5bzk2ODJ2SlhN?oc=5",
+        "published": "Thu, 10 Sep 2026 06:53:00 GMT",
+        "publisher": "shikoku-np.co.jp"
+      },
+      {
+        "title": "トヨタ『GR KART』発売、子どもから大人まで共有できる入門用カート…38万5000円 4枚目の写真・画像 - レスポンス（Response.jp）",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQOEdnTkRHVzlYTktueDFHX1gwYngydWNIRW9CdGVYUmZBZ1ZhV1Fub1d4RWk2NDVVek1VLU9iZE9EZXh6T0FwQVUtR3dTT3Y3Qk4ySWQ2cmtlNWxWS0k5N3NkT3FrX3RzdzVLMTVqRVJqaC0wTTBRbjNRX0VYUTZKNEg0YnZVSXlib2pDNER0aw?oc=5",
+        "published": "Thu, 10 Sep 2026 02:00:03 GMT",
+        "publisher": "レスポンス（Response.jp）"
+      },
+      {
+        "title": "トヨタ『GR KART』発売、子どもから大人まで共有できる入門用カート…38万5000円 - startyourengines.net",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1wNWtEc2Z2d3ZOdHNyOERmVEdMbjk1T2FKbEpodllTZ0E5aHpQRFVGUUdDN3ZEUDdxUHRRMzhWaWp4SnhGV1V0NzVJOXk5RDhvcDJpeHNpdDl2b2ZqV0Z6eUYxOA?oc=5",
+        "published": "Thu, 10 Sep 2026 03:01:41 GMT",
+        "publisher": "startyourengines.net"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903531084.pdf",
+        "date": "2026-09-03 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度の継続及び従業員に対する新たな株式交付制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507853.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507884.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503849.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "2027年3月期第１四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507860.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507846.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      }
+    ]
+  }
+}

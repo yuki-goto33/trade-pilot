@@ -1,0 +1,224 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-09-11T09:18:02+09:00",
+  "price_as_of": "2026-09-10",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 60,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズは、巨額訴訟勝訴、新製品販売開始、AI創薬への取り組みなどの好材料により、強気の見方（strength=75）を示しています。",
+        "evidence": "fundamental_view.stance=bullish (strength=75), fundamental_view.points[0], fundamental_view.points[1], fundamental_view.points[2]"
+      },
+      {
+        "reason": "テクニカルは、短期移動平均線のデッドクロス、MACDの下降トレンド、RSIの売られすぎ水準ながらも下落基調継続などから、短期的な下落圧力が継続するとの弱気見解（strength=65）です。",
+        "evidence": "technical_view.stance=bearish (strength=65), technical_view.points[0], technical_view.points[1], technical_view.points[2]"
+      },
+      {
+        "reason": "両専門家の見解が対立しており、特にテクニカル専門家が明確なbearish stanceであるため、ルールの「テクニカル専門家が neutral の場合のみ buy を許可」に合致せず、新規の買いは時期尚早と判断します。",
+        "evidence": "technical_view.stance=bearish, fundamental_view.stance=bullish"
+      },
+      {
+        "reason": "市場レジームが「downtrend」であるため、地合いが弱く、個別銘柄の上昇を抑制する可能性があります。",
+        "evidence": "reference.market_regime=downtrend, technical_view.points[3]"
+      }
+    ],
+    "risks": [
+      "2026年10月30日に予定されている次回決算発表の内容が株価にネガティブな影響を与える可能性。",
+      "2026年9月17日〜9月18日に開催される次回日銀金融政策決定会合の結果が市場全体のセンチメントに影響を及ぼすリスク。",
+      "テクニカル分析が示す短期的な下落トレンドが継続し、株価がさらに下落する可能性。",
+      "ファンダメンタルズの好材料が株価に期待通り織り込まれない、または業績計画の減益予想が重石となる可能性。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 60,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズは、巨額訴訟勝訴、新製品販売開始、AI創薬への取り組みなどの好材料により、強気の見方（strength=75）を示しています。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=75), fundamental_view.points[0], fundamental_view.points[1], fundamental_view.points[2]\"\n  },\n  {\n   \"reason\": \"テクニカルは、短期移動平均線のデッドクロス、MACDの下降トレンド、RSIの売られすぎ水準ながらも下落基調継続などから、短期的な下落圧力が継続するとの弱気見解（strength=65）です。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=65), technical_view.points[0], technical_view.points[1], technical_view.points[2]\"\n  },\n  {\n   \"reason\": \"両専門家の見解が対立しており、特にテクニカル専門家が明確なbearish stanceであるため、ルールの「テクニカル専門家が neutral の場合のみ buy を許可」に合致せず、新規の買いは時期尚早と判断します。\",\n   \"evidence\": \"technical_view.stance=bearish, fundamental_view.stance=bullish\"\n  },\n  {\n   \"reason\": \"市場レジームが「downtrend」であるため、地合いが弱く、個別銘柄の上昇を抑制する可能性があります。\",\n   \"evidence\": \"reference.market_regime=downtrend, technical_view.points[3]\"\n  }\n ],\n \"risks\": [\n  \"2026年10月30日に予定されている次回決算発表の内容が株価にネガティブな影響を与える可能性。\",\n  \"2026年9月17日〜9月18日に開催される次回日銀金融政策決定会合の結果が市場全体のセンチメントに影響を及ぼすリスク。\",\n  \"テクニカル分析が示す短期的な下落トレンドが継続し、株価がさらに下落する可能性。\",\n  \"ファンダメンタルズの好材料が株価に期待通り織り込まれない、または業績計画の減益予想が重石となる可能性。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 65,
+      "summary": "株価は短期移動平均線を下回り、MACDも下降トレンドを示しており、市場地合いも弱いことから、短期的な下落圧力が継続すると考えられます。ただし、中期的な上昇トレンドは維持されています。",
+      "points": [
+        {
+          "point": "短期移動平均線（5日線）が長期移動平均線（25日線）をデッドクロスしており、株価も両移動平均線を下回る弱いトレンドにあります。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\", price_technical.last_close=2709.0, price_technical.sma5=2740.0, price_technical.sma25=2794.08"
+        },
+        {
+          "point": "MACDはシグナルを下回り、ヒストグラムもマイナス圏で下降トレンドが継続していることを示しています。",
+          "evidence": "price_technical.macd=-14.07, price_technical.macd_signal=1.52, price_technical.macd_histogram=-15.59"
+        },
+        {
+          "point": "RSIは20.7と売られすぎ水準にありますが、直近5営業日の値動きは小幅な反発を挟んで全体的に下落基調が続いています。",
+          "evidence": "price_technical.rsi14=20.7, price_technical.recent_5_days"
+        },
+        {
+          "point": "TOPIXが25日線を下回る「downtrend」の市場レジームであり、市場全体の地合いが弱いです。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\""
+        },
+        {
+          "point": "前夜のNY市場では、当該銘柄のADRおよびヘルスケアセクターETFがともに下落しており、寄り付きにネガティブな影響を与える可能性があります。",
+          "evidence": "us_overnight.adr.change_1d_pct=-0.57, us_overnight.sector_proxy.change_1d_pct=-0.55"
+        }
+      ],
+      "cautions": [
+        "RSIが売られすぎ水準（20.7）に達しているため、短期的な自律反発の可能性には注意が必要です。",
+        "60営業日騰落率が7.52%とプラスであり、中期的な上昇トレンド自体は維持されています。",
+        "前夜のNY市場での下落は、当日の寄り付き価格にすでに織り込まれる可能性があります。",
+        "期間安値である2500.0円付近での下げ止まりが意識される可能性があります。"
+      ],
+      "key_levels": {
+        "support": 2500.0,
+        "resistance": 2740.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "直近で巨額損害賠償請求訴訟での勝訴や新製品の販売開始など複数の好材料が発表され、短期的な不透明感が払拭されたことに加え、中長期的な成長を期待させるAI創薬への取り組みも進んでおり、強気の見方をする。",
+      "points": [
+        {
+          "point": "2026年9月10日付で、当社に対するNTKからの損害賠償等請求訴訟において勝訴判決を得たことが開示され、巨額訴訟という財務上の不確実性が解消された。",
+          "evidence": "disclosures.items[0].title=当社に対するNTKからの損害賠償等請求訴訟に関する判決（勝訴）のお知らせ, news.headlines[3].title=第一三共、巨額損害賠償請求訴訟で勝訴 東京地裁、NTK社の訴え退け"
+        },
+        {
+          "point": "アレルギー専用鼻炎薬「クラリチンEX」の販売開始が同日報じられており、今後の売上貢献が期待される新規材料である。",
+          "evidence": "news.headlines[6].title=第一三共ヘルスケア、アレルギー専用鼻炎薬「クラリチンEX」を販売開始, news.headlines[7].title=「クラリチン®EX」販売開始に関するお知らせ＜発売日：2026 年10 月13日（火）＞"
+        },
+        {
+          "point": "AIエージェントを活用したデータドリブン創薬研究への取り組みがニュースで報じられており、中長期的な競争力強化と成長に繋がる可能性がある。",
+          "evidence": "news.headlines[2].title=第一三共の挑戦、AIエージェントを相棒にしてデータドリブン創薬研究の「次のボトルネック」を解く"
+        },
+        {
+          "point": "日本の製造業PMIは2026年8月に54.9と50を上回り、企業活動が拡大していることを示しており、同社の事業環境にとって追い風となる。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9"
+        },
+        {
+          "point": "2026年3月期の年次業績計画では増収が見込まれるものの、営業利益および純利益は減益計画であり、直近の四半期EPSも前年同期比で減少傾向にある。",
+          "evidence": "fundamentals.earnings_trend.annual[0].revenue_oku_jpy=21230, fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=2291, fundamentals.earnings_trend.annual[0].net_income_oku_jpy=2599, fundamentals.earnings_trend.quarterly[0].diluted_eps=37.7, fundamentals.earnings_trend.quarterly[1].diluted_eps=46.01"
+        }
+      ],
+      "cautions": [
+        "2026年3月期の通期業績計画が減益予想であり、直近四半期EPSも前年同期比で減少している点は注意が必要。",
+        "次回決算発表が2026年10月30日に予定されており、その内容が株価に影響を与える可能性がある。",
+        "日銀金融政策決定会合が2026年9月17日〜9月18日に開催され、金融政策の変更が市場全体のセンチメントに影響を及ぼすリスクがある。",
+        "市場全体がdowntrendにあり、個別銘柄の上昇を抑制する可能性がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "第一三共(株)【4568】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBIS2NSZTVoVDllRlVKSHozNnpLbWdVNkIwNl9GXzEtSkFNbzVSVFFvYTlBWnFsNlA4SFY2N29xNnhwcWhieWJGdlVNZGdCbFp3ZmE1R0pYRXVOOExmcFdr?oc=5",
+        "published": "Thu, 10 Sep 2026 06:53:49 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "第一三共 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQUFhEMGNIdEhhZkx5bGlYaGdxZ3pzSTRLbTlzZzBnQWlzQ1ZhdVhqN3M1UGYzU2dfS1hZaVBJeE1oRm1CaFdWOF9oaG1MY253czR0bmh1ZXhBVFpiNFhxZGtfeFJNb1BMc19aaUxYdkk1emdqU1NNdVhGdEJURFJIOXF5Q1ljLVV1TEtsb0p5akFkWFNqNllaU1ppYkpZLUFDLVQwNW1hQmJTUWw4SXhNSGljWTZxUVluNlN2NWU4M3puX0dqT0F2ZnNmTks?oc=5",
+        "published": "Thu, 10 Sep 2026 08:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "第一三共の挑戦、AIエージェントを相棒にしてデータドリブン創薬研究の「次のボトルネック」を解く - EnterpriseZine",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBfWDhaYWhJTnU4NU0zYXBMQjNoQzJRUl9fcGp0bjhrYWJ5UU0teGNySE1xbDZCcWx4TkZnLTNmMnRHdmI5cldhY21wSUROQ3RQM1BnbS1QbE9JZw?oc=5",
+        "published": "Thu, 10 Sep 2026 17:36:18 GMT",
+        "publisher": "EnterpriseZine"
+      },
+      {
+        "title": "第一三共、巨額損害賠償請求訴訟で勝訴 東京地裁、NTK社の訴え退け | 日刊薬業 - 医薬品産業の総合情報サイト - 日刊薬業",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBxYnFSSmN6UERTdUMxNlVyZjZvclNjLUtucHhKM0ZNd0ZUSVk3Zjk4Z3o0M0s0QUhvMVBmVWhHZUYxZk1tUVdHUg?oc=5",
+        "published": "Thu, 10 Sep 2026 13:20:15 GMT",
+        "publisher": "日刊薬業"
+      },
+      {
+        "title": "圧倒的な記憶定着で認知＋7pt超。第一三共ヘルスケアが「BeReal.」と挑んだ若年層マーケティング (1/3) - MarkeZine",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE44SUlYTFFvVkRiOXppYWswZGZDTjQ0UnB2UTdmTTMyUXZXRlZHOUJ4RVU2S1lEbEp0WDV6ZkZMUGZ1eDBzTjhuVkM3aTBIaVZlWEpV?oc=5",
+        "published": "Thu, 10 Sep 2026 02:08:11 GMT",
+        "publisher": "MarkeZine"
+      },
+      {
+        "title": "第一三共への損害賠償請求認めず 地裁判決、IHHヘルスケア系が提起 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9NUGNXcmhWNVdYLXM1RVZCZDBJNmJBVENVSDVyNHltQWJqcnV0N3Z0bnBDRThLWHZaVUllVGstdURPTFpVcEZ2Tld4enN3LS1aRmNkNGVkVFR2NUhSWF85TG9rNk9HZ3EySHI0NQ?oc=5",
+        "published": "Thu, 10 Sep 2026 09:58:54 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "第一三共ヘルスケア、アレルギー専用鼻炎薬「クラリチンEX」を販売開始 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1Qa0ZHcDJxU1YzTGx0Qko5a0l5d0hKRFZyb1B4cjBTYzlWV1k4N2U2STNFQWZrWDRTbVgycE9FY1YzSmUxQjdmVUNzRU5Xa0w5NVk3NWVNZ1ZiU2pMeERmMDNnbVc4cUctN1M0OQ?oc=5",
+        "published": "Thu, 10 Sep 2026 05:44:47 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "「クラリチン®EX」販売開始に関するお知らせ＜発売日：2026 年10 月13日（火）＞ - Digital PR Platform",
+        "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFBZTVlzVFU4LUY0QmFoZEVSOEtSXzU4WkwxeXRzallrTzdTMmp6V1V4b2NjLU9jZTROOWd0b0RQa3JtcjA?oc=5",
+        "published": "Thu, 10 Sep 2026 02:22:32 GMT",
+        "publisher": "Digital PR Platform"
+      },
+      {
+        "title": "「クラリチン®EX」販売開始に関するお知らせ＜発売日：2026 年10 月13日（火）＞ - 沖縄タイムス社",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBvZWxuOWlBX3U1d3V4Z2hCUDAwOF96M3dpNVJmU2dOaURHVWtxemhrOV85YkZfRUdvOHF4cVdWaVJTMUNLTXdiWlZWYjd4ZzVVZ2VYOVVTN0kzTkJzdlE?oc=5",
+        "published": "Thu, 10 Sep 2026 02:20:12 GMT",
+        "publisher": "沖縄タイムス社"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "当社に対するNTKからの損害賠償等請求訴訟に関する判決（勝訴）のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260910534407.pdf",
+        "date": "2026-09-10 17:00:00"
+      },
+      {
+        "title": "（開示事項の変更）第一三共ビジネスアソシエの吸収合併（簡易合併・略式合併）の効力発生日変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824525305.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "（再訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514622.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2025年度決算および第6期中期経営計画説明会」資料の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514744.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正・数値データ訂正）「2026年３月期 決算短信〔IFRS基準〕(連結)」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504176.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504099.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算補足資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504168.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504173.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "当社米国子会社役職員に対する信託型株式付与制度の継続のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504240.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587542.pdf",
+        "date": "2026-07-16 15:30:00"
+      }
+    ]
+  }
+}
