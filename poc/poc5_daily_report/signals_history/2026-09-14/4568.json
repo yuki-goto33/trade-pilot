@@ -1,0 +1,185 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-09-14T09:20:23+09:00",
+  "price_as_of": "2026-09-11",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家は訴訟勝訴による不透明感の払拭（strength 70）を高く評価しているが、市場地合いがdowntrendであるため、buy判断の基準値（strength 75以上）に届かず様子見とする。",
+        "evidence": "fundamental_view.points[0]: 損害賠償等請求訴訟に関する判決（勝訴）の公表 / reference.market_regime=\"downtrend\""
+      },
+      {
+        "reason": "テクニカル面では中期的な優位性は認められるものの、5日線と25日線のデッドクロスが形成されており、短期的には下降圧力が残る「neutral」判定となっている。",
+        "evidence": "technical_view.points[1]: price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\" / technical_view.stance=\"neutral\""
+      },
+      {
+        "reason": "日銀金融政策決定会合が目前に迫っており、マクロ経済環境の変化によるボラティリティ上昇のリスクを考慮すべき局面である。",
+        "evidence": "reference.next_boj_meeting: 2026-09-17〜2026-09-18"
+      }
+    ],
+    "risks": [
+      "市場全体の下降トレンド（market_regime=\"downtrend\"）が継続し、個別材料の好感よりも地合いの悪化が勝るリスク。",
+      "日銀会合でのタカ派的な政策変更に伴う円高の進行が、大型株である同社の株価を圧迫する可能性。",
+      "短期テクニカル指標のMACDマイナス圏推移やデッドクロスに伴う、押し目買い不在の続落リスク。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家は訴訟勝訴による不透明感の払拭（strength 70）を高く評価しているが、市場地合いがdowntrendであるため、buy判断の基準値（strength 75以上）に届かず様子見とする。\",\n   \"evidence\": \"fundamental_view.points[0]: 損害賠償等請求訴訟に関する判決（勝訴）の公表 / reference.market_regime=\\\"downtrend\\\"\"\n  },\n  {\n   \"reason\": \"テクニカル面では中期的な優位性は認められるものの、5日線と25日線のデッドクロスが形成されており、短期的には下降圧力が残る「neutral」判定となっている。\",\n   \"evidence\": \"technical_view.points[1]: price_technical.sma5_vs_sma25=\\\"dead(5日線が25日線の下)\\\" / technical_view.stance=\\\"neutral\\\"\"\n  },\n  {\n   \"reason\": \"日銀金融政策決定会合が目前に迫っており、マクロ経済環境の変化によるボラティリティ上昇のリスクを考慮すべき局面である。\",\n   \"evidence\": \"reference.next_boj_meeting: 2026-09-17〜2026-09-18\"\n  }\n ],\n \"risks\": [\n  \"市場全体の下降トレンド（market_regime=\\\"downtrend\\\"）が継続し、個別材料の好感よりも地合いの悪化が勝るリスク。\",\n  \"日銀会合でのタカ派的な政策変更に伴う円高の進行が、大型株である同社の株価を圧迫する可能性。\",\n  \"短期テクニカル指標のMACDマイナス圏推移やデッドクロスに伴う、押し目買い不在の続落リスク。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "中期的な上昇トレンドは維持されているものの、短期的なテクニカル指標は弱気シグナルを示しており、市場全体の地合いも下落トレンドにあるため、方向感に乏しい状況です。",
+      "points": [
+        {
+          "point": "60営業日の騰落率はプラスであり、TOPIXと比較しても優位性を示しているため、中期トレンドは堅調です。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=6.8, price_technical.trend_60d.relative_to_topix_60d_pct=8.16"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線を下回るデッドクロスを形成しており、MACDヒストグラムもマイナスであるため、短期的な下降圧力が示唆されます。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\", price_technical.macd_histogram=-22.52"
+        },
+        {
+          "point": "直近5営業日では、3日間の下落の後、最終日には2.33%の大幅な反発を見せました。",
+          "evidence": "price_technical.recent_5_days[4].change_pct=2.33"
+        },
+        {
+          "point": "前夜の米国市場では、当該銘柄のADRが3.43%上昇しており、寄り付きに買い圧力がかかる可能性があります。",
+          "evidence": "us_overnight.adr.change_1d_pct=3.43"
+        },
+        {
+          "point": "TOPIXは25日移動平均線を下回り、機械判定で下降トレンドとされており、市場全体の地合いは弱いです。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\", macro.market_regime.topix_close_vs_sma25=\"below\""
+        }
+      ],
+      "cautions": [
+        "市場全体の地合いが下降トレンドにあるため、上値が重くなる可能性があります。",
+        "短期的なテクニカル指標の弱気シグナルが継続した場合、直近の反発は一時的なものに終わる可能性があります。",
+        "前夜のADR上昇は寄り付きに織り込まれる可能性があり、その後の値動きが鈍化することもあります。"
+      ],
+      "key_levels": {
+        "support": 2709.0,
+        "resistance": 2798.56
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "直近の損害賠償訴訟での勝訴判決により不透明要因が解消されたこと、および売上高の継続的な成長と良好なマクロ経済環境を評価し、強気の見解とします。",
+      "points": [
+        {
+          "point": "直近の損害賠償訴訟において勝訴判決が確定し、不透明要因が解消されたことは株価にとってポジティブな材料です。",
+          "evidence": "disclosures.items[0].date=2026-09-10, disclosures.items[0].title=\"当社に対するNTKからの損害賠償等請求訴訟に関する判決（勝訴）のお知らせ\", news.headlines[0].title=\"第一三共への損害賠償訴訟、東京地裁が棄却\""
+        },
+        {
+          "point": "年次の売上高は継続して増加トレンドを維持しており、事業の拡大が示唆されます。",
+          "evidence": "fundamentals.earnings_trend.annual[0].revenue_oku_jpy=21230, fundamentals.earnings_trend.annual[1].revenue_oku_jpy=18863, fundamentals.earnings_trend.annual[2].revenue_oku_jpy=16017"
+        },
+        {
+          "point": "日本の製造業PMIが50を超えて拡大傾向にあり、医薬品製造業である同社にとってマクロ経済環境は追い風となっています。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9 (2026-08)"
+        }
+      ],
+      "cautions": [
+        "2026年3月期の通期業績および直近四半期（2026年6月期）のEPSは前年比で減益予想となっており、利益成長の鈍化が懸念されます。",
+        "日銀の金融政策決定会合が3日後に迫っており（2026-09-17〜2026-09-18）、金融政策の変更リスクが存在します。",
+        "市場全体はTOPIXがdowntrendにあり、個別銘柄の上昇を阻害する可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "第一三共への損害賠償訴訟、東京地裁が棄却 - nna.jp",
+        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5sVWYyeUd0bE1XQnRjSldIOFFLek5QQUcwc09GNHlzWGFqYTRjcHJyRUxOVDVqNDZnNWdMUExRdnNNM2hkb0E?oc=5",
+        "published": "Sun, 13 Sep 2026 15:00:00 GMT",
+        "publisher": "nna.jp"
+      },
+      {
+        "title": "セールスフォースが発表した新ハーネス 6つの機能を統合、AIエージェントの一元把握・管理・制御が可能 - EnterpriseZine",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBCWU9FZUd3Nk5vODBGeFppZFZmeUxiWEIyZEszZVpERFZFQmhIcElzcF85RDdfUjJaX0pzYWZ4bEE0cVdXcXV4dkpuRFZCaWlvTjVZWE1B?oc=5",
+        "published": "Sun, 13 Sep 2026 08:39:51 GMT",
+        "publisher": "EnterpriseZine"
+      },
+      {
+        "title": "（日） - sannichi.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBmelFsbWhOYkd2VFhuTVpXOWxYMUd3MGR0VFBpb20weEN5cGkxMDFfTUxneEJqakctdGIxOUdQaXRiSllNNkpUVmszWXJCdVprTFc0YVZtLUxydnMwVUFnRHVn?oc=5",
+        "published": "Sun, 13 Sep 2026 07:56:42 GMT",
+        "publisher": "sannichi.co.jp"
+      },
+      {
+        "title": "Synology、ミッションクリティカル環境下で急増するデータ管理が必要な組織向け「高性能ストレージシステム」を発売 - EnterpriseZine",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9FOG5TTWstemJvSnRIWTU0c21xVmVIVjZFWlZsczhCcmc3X0JnWUNob0ZQTlNqN2lOODgyU1c3d2lMUG1JVV80di1CSHBpMXdKa1lUYXJn?oc=5",
+        "published": "Sun, 13 Sep 2026 16:50:04 GMT",
+        "publisher": "EnterpriseZine"
+      },
+      {
+        "title": "東京電力パワーグリッド、Genetecの統合セキュリティプラットフォームを採用 監視カメラの一元管理・運用効率化に寄与 - EnterpriseZine",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE45SER5UVdHLXhiM0IwekpoNTQ2cU44SFh4MG1tOHJzalB5ajNnaGxPd1hTcWxZR3hETjRoUkg1Y2phNTE1U2hITndwZGptRXhCV2FuU0x3?oc=5",
+        "published": "Sun, 13 Sep 2026 08:46:06 GMT",
+        "publisher": "EnterpriseZine"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "当社に対するNTKからの損害賠償等請求訴訟に関する判決（勝訴）のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260910534407.pdf",
+        "date": "2026-09-10 17:00:00"
+      },
+      {
+        "title": "（開示事項の変更）第一三共ビジネスアソシエの吸収合併（簡易合併・略式合併）の効力発生日変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824525305.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "（再訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514622.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2025年度決算および第6期中期経営計画説明会」資料の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514744.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正・数値データ訂正）「2026年３月期 決算短信〔IFRS基準〕(連結)」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504176.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504099.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算補足資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504168.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504173.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "当社米国子会社役職員に対する信託型株式付与制度の継続のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504240.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587542.pdf",
+        "date": "2026-07-16 15:30:00"
+      }
+    ]
+  }
+}

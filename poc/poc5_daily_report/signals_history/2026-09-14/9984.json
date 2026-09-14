@@ -1,0 +1,183 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-09-14T09:14:14+09:00",
+  "price_as_of": "2026-09-11",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "直近（2026-09-10）に buy シグナルが出されており、短期連続のエントリーを避けて継続監視を行うべきフェーズである。",
+        "evidence": "reference.recent_buy.date=2026-09-10"
+      },
+      {
+        "reason": "ファンダメンタルズ評価が neutral (strength 55) であり、buy エントリーに必須な高確信（strength 70以上）を満たしていない。",
+        "evidence": "fundamental_view.stance=neutral, strength=55"
+      },
+      {
+        "reason": "テクニカル面で中期下落トレンドが継続しており、直近の大幅反落により5日移動平均線を下回るなど短期的な調整圧力が強い。",
+        "evidence": "technical_view.points[0, 1]: price_technical.trend_60d < 0, price_technical.last_close=6540.0"
+      }
+    ],
+    "risks": [
+      "3日後に控える日銀金融政策決定会合における追加利上げ等のタカ派サプライズ (reference.next_boj_meeting)",
+      "市場レジームがdowntrendにあり、地合い悪化に伴う投資ポートフォリオ評価額の減少 (reference.market_regime)",
+      "国内10年債金利の上昇（2.92%）による有利子負債の調達コスト増大懸念 (fundamental_view.points[2])"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 21,\n  \"reasons\": [\n    {\n      \"reason\": \"直近（2026-09-10）に buy シグナルが出されており、短期連続のエントリーを避けて継続監視を行うべきフェーズである。\",\n      \"evidence\": \"reference.recent_buy.date=2026-09-10\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズ評価が neutral (strength 55) であり、buy エントリーに必須な高確信（strength 70以上）を満たしていない。\",\n      \"evidence\": \"fundamental_view.stance=neutral, strength=55\"\n    },\n    {\n      \"reason\": \"テクニカル面で中期下落トレンドが継続しており、直近の大幅反落により5日移動平均線を下回るなど短期的な調整圧力が強い。\",\n      \"evidence\": \"technical_view.points[0, 1]: price_technical.trend_60d < 0, price_technical.last_close=6540.0\"\n    }\n  ],\n  \"risks\": [\n    \"3日後に控える日銀金融政策決定会合における追加利上げ等のタカ派サプライズ (reference.next_boj_meeting)\",\n    \"市場レジームがdowntrendにあり、地合い悪化に伴う投資ポートフォリオ評価額の減少 (reference.market_regime)\",\n    \"国内10年債金利の上昇（2.92%）による有利子負債の調達コスト増大懸念 (fundamental_view.points[2])\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 65,
+      "summary": "中期騰落率および対TOPIX相対騰落率がともにマイナスであり、定義上「中期下落トレンド」を脱していません。直近の急騰後の大幅反落と市場全体の下降レジームを背景に、弱気の見通しを維持します。",
+      "points": [
+        {
+          "point": "60営業日騰落率(-4.94%)と対TOPIX相対騰落率(-3.58%)がともにマイナスであり、中期的な下落トレンドが継続していると判断されます。",
+          "evidence": "price_technical.trend_60d"
+        },
+        {
+          "point": "直近の急騰局面から9月11日に-3.96%の大幅反落を見せ、終値が5日移動平均線を下回ったことで短期的な調整局面入りを示唆しています。",
+          "evidence": "price_technical.last_close=6540.0, price_technical.sma5=6586.6"
+        },
+        {
+          "point": "市場全体がdowntrendレジーム（TOPIX終値が25日線の下かつ5日騰落率がマイナス）にあり、個別銘柄への逆風が強い環境です。",
+          "evidence": "macro.market_regime"
+        }
+      ],
+      "cautions": [
+        "前夜のADRが+2.07%と上昇しており、寄り付きが買い先行となる可能性があります。",
+        "MACDおよびシグナルのゴールデンクロスが継続中であり、下値が限定的になるリスクがあります。",
+        "米国市場（S&P500）の反発とVIXの低下が日本市場のリスクオンを誘発する可能性があります。"
+      ],
+      "key_levels": {
+        "support": 5598.0,
+        "resistance": 6959.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "積極的な負債管理と成長分野への投資は継続しているものの、国内金利の上昇や日銀会合直前の不透明感、および市場全体のダウントレンドが重石となっており、短期的には方向感に乏しい状況です。",
+      "points": [
+        {
+          "point": "財務基盤の安定化に向けた機動的な動きが見られます。ブリッジローンの期限前返済や無担保普通社債の条件決定など、負債コストの最適化と資金繰りの管理が着実に行われています。",
+          "evidence": "disclosures.items[0].date=2026-09-09, disclosures.items[1].date=2026-09-04"
+        },
+        {
+          "point": "AIおよび自動運転分野への投資進展が続いています。OpenAIへの追加出資に加え、孫氏が出資するWayveの英国進出など、ポートフォリオ企業の事業拡大というポジティブな材料も確認できます。",
+          "evidence": "disclosures.items[7].title, news.headlines[2].title"
+        },
+        {
+          "point": "マクロ環境は厳しさを増しています。日本10年金利が2.92%に達しており、有利子負債の大きい同社にとって調達コスト面での懸念が生じているほか、市場全体がダウントレンドにあります。",
+          "evidence": "macro.rates.jgb_10y_percent.value=2.92, macro.market_regime.market_regime=downtrend"
+        }
+      ],
+      "cautions": [
+        "3日後に控えた日銀金融政策決定会合における政策金利の動向および追加利上げ示唆のリスク（macro.boj.monetary_policy_meeting.days_until_next=3）",
+        "日経平均が1ヶ月ぶり安値を付けるなど、国内株式市場全体の地合い悪化による投資ポートフォリオ評価額への影響（macro.indices[0].change_1d_pct=-1.93）",
+        "営業利益がマイナス圏（-48億円）で推移する一方、純利益が投資評価に依存する構造のため、業績のボラティリティが極めて高いこと（fundamentals.earnings_trend.annual[0]）"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-10",
+    "days_ago": 4,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "SBエナジーのIPO、期待実現には課題山積 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE92aDU3dko3MUF5X0lIVWVBVEhxWDJaeXBELVJFamVNZ1N2c3Y3VkRkUXBZamItazZaRXdFOF9ET2hSNTdhTllvNm4zNHc?oc=5",
+        "published": "Sun, 13 Sep 2026 19:00:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "東証反落、１カ月ぶり安値 終値６万４０１１円、原油高で - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0zSkNlVkRrcHFqSnE4V0dSaHZWSWJrOXJOYkhfdjBvdzhsb2Rpc19LN09DVkYzTHVGWEQ2M2V1aFUtMmtVUE94SERaR0NKU2FUUWc?oc=5",
+        "published": "Sun, 13 Sep 2026 17:50:03 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "ソフトバンクG孫正義が出資の「自動運転タクシー」Wayveが英国初上陸 - 自動運転ラボ",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1uWEhUNnBxRl84VnpDeFBkMUlSQmtfd0duTTlaaG1EN1dZNGN6X1c2Ml9QbVJvblhUZkFRalMwcG1lMDAwd2dsaA?oc=5",
+        "published": "Sun, 13 Sep 2026 07:00:30 GMT",
+        "publisher": "自動運転ラボ"
+      },
+      {
+        "title": "俳優スーザン・サランドン、政治的発言で仕事を失うも「私は自分の居場所を見つけた」 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1RQU9PMllzdGNTX0NTWkFaWEpmWUh5R0NEbDRJZjRfYjl2M2tFV296c2p0S3Nvem9wVnVmbXJOa0dhM1FJNzBUT1d2RWRqanZXMlB6LUhxd1JEdzRKYnloTEp2ODZqNUNid1lfTklB?oc=5",
+        "published": "Sun, 13 Sep 2026 18:30:16 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "うるうるおめめに“エモキュン”！「サンリオキャラクターズ」めじるしアクセサリーが発売、ハローキティやポムポムプリンなど全5種 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE44TXNLd2NiRlpYTVN4eWlxaTRSSHF1bjZqbUE5ZVdCOGM2andLZUxoR29mZzZXZUpiYjNvYnNyVm1STnVLU0FBZURHUkU5ckNsQmRUbFozcGQyUW1JeTFYQmtGVlBiRjJGeTZvam1B?oc=5",
+        "published": "Sun, 13 Sep 2026 07:25:24 GMT",
+        "publisher": "au Webポータル"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "ブリッジローンの期限前返済に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533573.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260904531576.pdf",
+        "date": "2026-09-04 10:30:00"
+      },
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得の完了時期の変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260828527943.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824524817.pdf",
+        "date": "2026-08-24 09:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510515.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行内容確定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503871.pdf",
+        "date": "2026-07-30 17:00:00"
+      },
+      {
+        "title": "第68回及び第69回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501484.pdf",
+        "date": "2026-07-29 10:30:00"
+      },
+      {
+        "title": "OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260701586249.pdf",
+        "date": "2026-07-01 16:00:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577089.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "2021年発行米ドル建普通社債の期限前償還完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566742.pdf",
+        "date": "2026-06-10 11:30:00"
+      }
+    ]
+  }
+}

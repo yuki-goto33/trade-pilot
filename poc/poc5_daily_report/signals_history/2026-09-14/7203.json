@@ -1,0 +1,206 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-09-14T09:09:52+09:00",
+  "price_as_of": "2026-09-11",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の強度が60であり、割安感や自己株買いの下支えはあるものの、今期減益計画が重石となり積極的な買い推奨基準（70以上）に達していない。",
+        "evidence": "fundamental_view.strength=60, fundamental_view.points[0], fundamental_view.cautions[0]"
+      },
+      {
+        "reason": "テクニカル面では25日移動平均線の下方でデッドクロス状態にあり、ADR上昇による反発も戻り売りの域を脱していない。また市場全体がdowntrendであることも慎重判断の理由である。",
+        "evidence": "technical_view.points[0], technical_view.cautions[1], reference.market_regime=\"downtrend\""
+      },
+      {
+        "reason": "3日後に日銀金融政策決定会合という重大なマクロイベントを控えており、為替変動リスクを考慮するとイベント前のエントリーは不適切である。",
+        "evidence": "fundamental_view.cautions[1], reference.next_boj_meeting=\"2026-09-17〜2026-09-18\""
+      }
+    ],
+    "risks": [
+      "2026年9月17日からの日銀会合における追加利上げ示唆や円高進行による輸出採算の悪化",
+      "市場レジーム（downtrend）継続による、25日移動平均線付近での戻り売り圧力の強まり",
+      "米国市場の景気後退懸念に伴う、外需セクターである自動車株への資金流出リスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の強度が60であり、割安感や自己株買いの下支えはあるものの、今期減益計画が重石となり積極的な買い推奨基準（70以上）に達していない。\",\n   \"evidence\": \"fundamental_view.strength=60, fundamental_view.points[0], fundamental_view.cautions[0]\"\n  },\n  {\n   \"reason\": \"テクニカル面では25日移動平均線の下方でデッドクロス状態にあり、ADR上昇による反発も戻り売りの域を脱していない。また市場全体がdowntrendであることも慎重判断の理由である。\",\n   \"evidence\": \"technical_view.points[0], technical_view.cautions[1], reference.market_regime=\\\"downtrend\\\"\"\n  },\n  {\n   \"reason\": \"3日後に日銀金融政策決定会合という重大なマクロイベントを控えており、為替変動リスクを考慮するとイベント前のエントリーは不適切である。\",\n   \"evidence\": \"fundamental_view.cautions[1], reference.next_boj_meeting=\\\"2026-09-17〜2026-09-18\\\"\"\n  }\n ],\n \"risks\": [\n  \"2026年9月17日からの日銀会合における追加利上げ示唆や円高進行による輸出採算の悪化\",\n  \"市場レジーム（downtrend）継続による、25日移動平均線付近での戻り売り圧力の強まり\",\n  \"米国市場の景気後退懸念に伴う、外需セクターである自動車株への資金流出リスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "前夜のADRの大幅上昇により短期的なリバウンドが期待されるが、主要な移動平均線の下方で推移しており、市場地合いの悪化も踏まえると自律反発の域を脱していない。",
+      "points": [
+        {
+          "point": "5日線が25日線を下回るデッドクロス状態にあり、MACDヒストグラムもマイナス圏で推移するなど、テクニカル形状は依然として弱気を示唆している。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead\", price_technical.macd_histogram=-14.12"
+        },
+        {
+          "point": "前夜の米国市場でADRが2.97%上昇しており、当日の寄り付きで25日移動平均線（3056円）水準までの急反発が強く見込まれる。",
+          "evidence": "us_overnight.adr.change_1d_pct=2.97, price_technical.sma25=3056.0"
+        },
+        {
+          "point": "60営業日騰落率は対TOPIXでプラスを維持しており、中期的には底堅い推移が続いている。直近3日も続伸しており、RSIが35.8と低水準から回復傾向にある。",
+          "evidence": "price_technical.trend_60d.relative_to_topix_60d_pct=9.23, price_technical.rsi14=35.8, price_technical.recent_5_days"
+        }
+      ],
+      "cautions": [
+        "市場レジームがdowntrend（下降トレンド）にあり、地合いの悪化に伴う指数連動の売りに押されるリスクがある。",
+        "ADRの上昇分は寄り付き価格に織り込まれるため、寄り付き後に25日移動平均線を明確に上放れられない場合、戻り売りに転じる可能性がある。"
+      ],
+      "key_levels": {
+        "support": 2869.5,
+        "resistance": 3056.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "継続的な自己株式取得や堅調な製造業PMIが下値を支える一方、年次ベースの減益トレンドと3日後に控える日銀会合に伴うマクロ環境の不透明感から、当面は様子見が妥当と判断します。",
+      "points": [
+        {
+          "point": "2026年9月3日に自己株式の取得状況を開示しており、株主還元策を通じた需給の下支えが継続している。",
+          "evidence": "disclosures.items[0].date=2026-09-03"
+        },
+        {
+          "point": "8月の日本の製造業PMIが54.9と高い水準を維持しており、AI需要等を背景とした製造業の景況感は拡大基調にある。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9"
+        },
+        {
+          "point": "PBRが0.962倍と1倍を割り込み、配当利回りも3.3%に達していることから、バリュエーション面での下値の限定感が強い。",
+          "evidence": "fundamentals.valuation.price_to_book=0.962, fundamentals.valuation.dividend_yield_percent=3.3"
+        }
+      ],
+      "cautions": [
+        "2026年3月期の通期営業利益が前期比で大幅な減益計画となっており、利益成長の鈍化が重石となっている (fundamentals.earnings_trend.annual)",
+        "3日後の2026年9月17日より日銀金融政策決定会合が開催されるため、為替や金利の変動による輸出採算への影響に警戒が必要 (macro.boj.monetary_policy_meeting.days_until_next=3)",
+        "市場全体が25日移動平均線を下回るダウントレンドの中にあり、リスクオフの売りに押されやすい環境である (macro.market_regime.market_regime=downtrend)"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "「車で給電」防災意識向上へ 自動車ディーラーによる防災イベント 栃木トヨタ自動車（とちぎテレビ） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5oSEw5bmt6dDJUOEZuYjVFMV9uLWVibGYxMVJGY1J6LWhhdnh3ZFU5SUZmOG1oU1dxQmF6UWZQdEtReWZveW1ObmlQU0NsYlg5RURKemxIM29OYnhtZDZTaFAxc29SS1RMRzJEWWE1RVBtbXdLbVJ2UmZMUDBrb0E?oc=5",
+        "published": "Sun, 13 Sep 2026 09:53:01 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "水素社会の実現に意欲 トヨタ自動車副社長の中嶋裕樹氏、根本通商社長の根本克頼氏に聞く - 福島民報デジタル",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE40WVZjWGRsVlAwQnpOMWVkQzN4ZHJsd01LUXhreGFveWJxbTVZUFFuSl9lV1JGY0lYTzA2cTBSMC05eUVpRlBZZTgtejA2WGc?oc=5",
+        "published": "Sun, 13 Sep 2026 01:30:00 GMT",
+        "publisher": "福島民報デジタル"
+      },
+      {
+        "title": "水素社会の実現に意欲 トヨタ自動車副社長の中嶋裕樹氏、根本通商社長の根本克頼氏に聞く - 47NEWS",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9fZWFJcGNLMWVTZWZJNllJWS0xaGxwN3REUmtuUkFhY3BzQWJLY2NSOEtKWEczY0JxRDhVdUNWMGVXbzFzZS00bDhySQ?oc=5",
+        "published": "Sun, 13 Sep 2026 01:30:00 GMT",
+        "publisher": "47NEWS"
+      },
+      {
+        "title": "「この値段でこの装備は凄い！」トヨタが発売した『GRカート』38万5000円に反響…「ノア/ヴォクに積めるのは上手い」の声も - startyourengines.net",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5fMEpQOTdmNmhkZlEyOFFmVkl2MjBfSTd2M2FGQTZKNnA3c2Z3emc3eHNZYmNrNmhVU19fTzl6QVRTd2lMajh2SGpQM1M1OTBzN3daNl9wNHRVWnQ1SmJhaEctaw?oc=5",
+        "published": "Sun, 13 Sep 2026 10:04:47 GMT",
+        "publisher": "startyourengines.net"
+      },
+      {
+        "title": "「この値段でこの装備は凄い！」トヨタが発売した『GRカート』38万5000円に反響…「ノア/ヴォクに積めるのは上手い」の声も 1枚目の写真・画像 - レスポンス（Response.jp）",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNSjRiMkNzaTRia3F3cmxFdGU5UzhIbEZKdXQwWm1nQV91RVlsdGxmNmNmbHB3ckM0MF9CVFlOSHVTNjIxd01LYktxcGxmWTdNOXBuSHZyekxJdzhmOFAzUnk2ODdqMVZnWXlFLUdqMjhuamluVGRtcG9hbUJpYl9ROEdweGlyNGlaS2VWQ3c4Tm4?oc=5",
+        "published": "Sun, 13 Sep 2026 09:00:03 GMT",
+        "publisher": "レスポンス（Response.jp）"
+      },
+      {
+        "title": "社長も部長もみんなAI 旭鉄工のAI成功モデル - 日経クロステック",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE56R1pHVVBMSkV3NDRjMjlSLWhya3BMRGlscVE3VndpMDBzMmdUM1RSNVg5cDRaR3JFVnhJNktvcWlUNDBzVmhMSWpjNzZTbnFIaEl4ZWs5RVVXMjFXMV9J?oc=5",
+        "published": "Sun, 13 Sep 2026 08:42:14 GMT",
+        "publisher": "日経クロステック"
+      },
+      {
+        "title": "「車で給電」防災意識向上へ　自動車ディーラーによる防災イベント　栃木トヨタ自動車 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPb3NONlFJYVRSXzdCQXFuMjg4YWl1b21EOXJyekFZM1c2WnV0eG52bjVVdVlfSTFpSzUwN0I3T3c1RUM1T0JKOHlWRW5ULXk1YXJNdEZKX2pXZU90RVlEajVEaUJESDV5c0VIVVE4YndDNHh0dHJxMnV5ME05WVRzOGdQZHZYRVo2Vld1OXZGbElGc0NFRWt3YtIBmAFBVV95cUxPb3NONlFJYVRSXzdCQXFuMjg4YWl1b21EOXJyekFZM1c2WnV0eG52bjVVdVlfSTFpSzUwN0I3T3c1RUM1T0JKOHlWRW5ULXk1YXJNdEZKX2pXZU90RVlEajVEaUJESDV5c0VIVVE4YndDNHh0dHJxMnV5ME05WVRzOGdQZHZYRVo2Vld1OXZGbElGc0NFRWt3Yg?oc=5",
+        "published": "Sun, 13 Sep 2026 09:47:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "公正取引委員会、徳島トヨタに下請法違反で勧告 6社が車両を2728回無償運送 - netdenjd.com",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9fVm9ZLUFTVzUyYmFtZmI5U0VxQ1ZFaDN5MFFXTEVOb1V4b3RMOEJWZjVYOE9VcEY4WDZzeFN1SXIxaVhWMGlBbnNEMlYxQUt0VVE?oc=5",
+        "published": "Sun, 13 Sep 2026 07:14:04 GMT",
+        "publisher": "netdenjd.com"
+      },
+      {
+        "title": "元アナ・富川悠太&森田京之介が感じる、“マスメディア”と企業発“オウンドメディア”の違い「『100万回再生』よりも『1万回再生100いいね』の方が価値がある」 - オリコンニュース",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBkMURWdFFPOExCS3Q4dUx5dUptZVdWSGZXNVV4UDJQc29nckpXeGxGUExxSGl4QjZmbksyR3owakRGZWpMQS1TM3N6NDF3amM?oc=5",
+        "published": "Sun, 13 Sep 2026 23:10:00 GMT",
+        "publisher": "オリコンニュース"
+      },
+      {
+        "title": "張本智和、チャンピオンズ連覇ならず パリ五輪銀メダリストにフルゲームデュースで惜敗＜卓球・WTTチャンピオンズマカオ2026＞ - rallys.online",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNSGU0VUdYb1FWak9RdWRza1c5ejVkWGpKYUxTNTRmclBFOEVVZjQtcEI5eHpjMWFRRlRGQnI1OGNvYkpqQXFpeGtGUThqY1QzX2RieWpVTWFGMVJSRVdKdkViOE4ybm84MzRvbnhsSS1DS28yZlhXU1kwel9zWHlDTjM2c3RGX0JhOUE?oc=5",
+        "published": "Sun, 13 Sep 2026 10:49:27 GMT",
+        "publisher": "rallys.online"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903531084.pdf",
+        "date": "2026-09-03 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度の継続及び従業員に対する新たな株式交付制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507853.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507884.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503849.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "2027年3月期第１四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507860.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507846.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      }
+    ]
+  }
+}
