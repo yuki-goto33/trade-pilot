@@ -1,0 +1,216 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-09-15T09:47:33+09:00",
+  "price_as_of": "2026-09-15",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 45,
+    "reasons": [
+      {
+        "reason": "中期的な上昇トレンドは維持されているものの、短期的なテクニカル指標（デッドクロス、MACDマイナス）は下落圧力を示唆しており、方向感に欠けます。",
+        "evidence": "technical_view.points[0], technical_view.points[2]"
+      },
+      {
+        "reason": "ファンダメンタルズでは年次売上高の成長は続く一方で、主力製品エンハーツの臨床試験結果のネガティブな報道や来期の利益減少予測が懸念材料です。",
+        "evidence": "fundamental_view.points[0], fundamental_view.points[1]"
+      },
+      {
+        "reason": "NTKからの訴訟勝訴やAI創薬に関するポジティブなニュースもあるものの、市場全体の地合いが下落トレンドにあるため、積極的な売買を推奨する根拠が不足しています。",
+        "evidence": "fundamental_view.points[2], fundamental_view.points[3], technical_view.points[3]"
+      }
+    ],
+    "risks": [
+      "2026年9月17日〜18日の日銀金融政策決定会合の結果が市場全体の変動要因となる可能性があります。",
+      "2026年10月30日の次回決算発表で、業績見通しやガイダンスが株価に大きく影響を与える可能性があります。",
+      "主力薬エンハーツの臨床試験結果に関する詳細や、それが今後の承認プロセスおよび市場展開に与える具体的な影響は不透明です。",
+      "市場全体の地合いが下落トレンドであるため、個別銘柄の上昇も抑制される可能性があります。",
+      "現在の利益減速傾向が想定以上に長期化する場合、株価評価に下方圧力がかかる可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 45,\n \"reasons\": [\n  {\n   \"reason\": \"中期的な上昇トレンドは維持されているものの、短期的なテクニカル指標（デッドクロス、MACDマイナス）は下落圧力を示唆しており、方向感に欠けます。\",\n   \"evidence\": \"technical_view.points[0], technical_view.points[2]\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズでは年次売上高の成長は続く一方で、主力製品エンハーツの臨床試験結果のネガティブな報道や来期の利益減少予測が懸念材料です。\",\n   \"evidence\": \"fundamental_view.points[0], fundamental_view.points[1]\"\n  },\n  {\n   \"reason\": \"NTKからの訴訟勝訴やAI創薬に関するポジティブなニュースもあるものの、市場全体の地合いが下落トレンドにあるため、積極的な売買を推奨する根拠が不足しています。\",\n   \"evidence\": \"fundamental_view.points[2], fundamental_view.points[3], technical_view.points[3]\"\n  }\n ],\n \"risks\": [\n  \"2026年9月17日〜18日の日銀金融政策決定会合の結果が市場全体の変動要因となる可能性があります。\",\n  \"2026年10月30日の次回決算発表で、業績見通しやガイダンスが株価に大きく影響を与える可能性があります。\",\n  \"主力薬エンハーツの臨床試験結果に関する詳細や、それが今後の承認プロセスおよび市場展開に与える具体的な影響は不透明です。\",\n  \"市場全体の地合いが下落トレンドであるため、個別銘柄の上昇も抑制される可能性があります。\",\n  \"現在の利益減速傾向が想定以上に長期化する場合、株価評価に下方圧力がかかる可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "中期的な上昇トレンドは維持されているものの、短期的な指標は混在しており、市場全体の地合いも弱いため、方向感に欠ける展開が予想されます。",
+      "points": [
+        {
+          "point": "過去60営業日における株価は対TOPIXで大幅なアウトパフォームを示しており、中期的な上昇トレンドを維持しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=11.96, price_technical.trend_60d.relative_to_topix_60d_pct=14.34"
+        },
+        {
+          "point": "直近2営業日で株価は大きく反発し、終値が5日移動平均線および25日移動平均線を上回る水準まで回復しました。",
+          "evidence": "price_technical.recent_5_days[3].change_pct=2.65, price_technical.recent_5_days[4].change_pct=0.0, price_technical.last_close=2845.5, price_technical.sma5=2776.5, price_technical.sma25=2803.92"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線を下回るデッドクロスを形成しており、MACDヒストグラムもマイナスであることから、短期的な下落圧力が示唆されています。",
+          "evidence": "price_technical.sma5_vs_sma25=dead(5日線が25日線の下), price_technical.macd_histogram=-11.49"
+        },
+        {
+          "point": "市場全体の地合いは、TOPIXが25日移動平均線を下回っており、機械判定で下落トレンドにあります。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.market_regime.topix_close_vs_sma25=below"
+        }
+      ],
+      "cautions": [
+        "市場全体の地合いが下落トレンドにあるため、個別銘柄の上昇も抑制される可能性があります。",
+        "前夜のADRは上昇したものの、ヘルスケアセクターETFは下落しており、翌日の寄り付きに影響を与える可能性があります。",
+        "MACDがデッドクロスを形成しており、株価が再び移動平均線を下回る場合、短期的な下落圧力が強まる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 2776.5,
+        "resistance": 2958.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "増収トレンドは維持されているものの、直近の四半期および来期予測で利益が減少傾向にあること、主力薬に関するネガティブなニュースが出ていることから、中立的な見解です。",
+      "points": [
+        {
+          "point": "年次売上高は成長している一方で、営業利益、純利益、希薄化後EPSは2025年3月期をピークに2026年3月期は減少予測となっており、直近四半期（2026年6月）のEPSも前年同期比で減少しています。",
+          "evidence": "fundamentals.earnings_trend.annual[0-2], fundamentals.earnings_trend.quarterly[0-1]"
+        },
+        {
+          "point": "主力製品の一つであるエンハーツの肺がん一次治療データでOS（全生存期間）がネガティブな結果だったとの報道があり、今後の業績への影響が懸念されます。",
+          "evidence": "news.headlines[6].title"
+        },
+        {
+          "point": "2026年9月10日にNTKからの損害賠償等請求訴訟で勝訴したとの開示があり、これはポジティブな材料です。",
+          "evidence": "disclosures.items[0].title, disclosures.items[0].date"
+        },
+        {
+          "point": "AIを活用した創薬研究や顔画像解析への取り組みなど、中長期的な成長に繋がる技術革新に関するニュースが継続的に報じられています。",
+          "evidence": "news.headlines[1].title, news.headlines[2].title, news.headlines[5].title"
+        },
+        {
+          "point": "マクロ環境では円安が進行しており（ドル円154.56円）、輸出中心の医薬品企業にとっては業績にプラスに作用する可能性がありますが、日経平均やTOPIX連動ETFが下落トレンドにあるなど、日本市場全体はリスクオフの地合いです。",
+          "evidence": "macro.indices[2].close, macro.market_regime.market_regime"
+        }
+      ],
+      "cautions": [
+        "2026年10月30日に次回決算発表を控えており、業績見通しやガイダンスが株価に影響を与える可能性があります。",
+        "2026年9月17日〜18日には日銀金融政策決定会合が予定されており、金融政策に関する発表が市場に変動をもたらす可能性があります。",
+        "主力薬エンハーツの臨床試験結果に関する詳細や、それが今後の承認プロセスおよび市場展開に与える具体的な影響を注視する必要があります。",
+        "現在の利益減速傾向が想定以上に長期化する場合、株価評価に下方圧力がかかる可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "第一三共(株)【DSNKY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1LdkZxbEN5Vm9Scm5nSFgzTDZJZlNtcVFXR0dkU1J3c2RfRFBuNmNiOGFibVNVTE1zT2lad2dyNnA0TFRoT3RVZktKcGRiMVVV?oc=5",
+        "published": "Mon, 14 Sep 2026 10:17:35 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "第一三共ヘルスケア、AIによる顔画像解析を活用し顔に現れるサインと体内・心身状態との関連を確認 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5ILXVQMjFmYUJ0bkdEamZpNGlOMENZM2tEQkpjdl9KU2hZT2JUS3NHMVZic01xTkNxS0d0Z2d6OUZRWkhBMHAxZHVvM2VYRUNFc0lMcS1RQTVPQ2M1ZUtDV1ZkSDNMMW8xdHp5Wg?oc=5",
+        "published": "Mon, 14 Sep 2026 05:30:55 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "第一三共の挑戦、AIエージェントを相棒にしてデータドリブン創薬研究の「次のボトルネック」を解く - EnterpriseZine",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBfWDhaYWhJTnU4NU0zYXBMQjNoQzJRUl9fcGp0bjhrYWJ5UU0teGNySE1xbDZCcWx4TkZnLTNmMnRHdmI5cldhY21wSUROQ3RQM1BnbS1QbE9JZw?oc=5",
+        "published": "Mon, 14 Sep 2026 01:19:45 GMT",
+        "publisher": "EnterpriseZine"
+      },
+      {
+        "title": "ハーセプチン HER2遺伝子変異非小細胞肺がん一次治療P3試験最新データをWCLC 2026で発表 第一三共 - 医薬通信社",
+        "url": "https://news.google.com/rss/articles/CBMi1AJBVV95cUxQZlp2aVFLLU5QeUhXVGREVG5aTkt3NDZKWjF0YWs1dHA4cC10TjBKNlJqTTFHTGsxMXZ4QkMxaW91YnhGMGw4djRKQmRhUjBEbHgzeVdVeGd2V3lVVVR5MnNjQlBJNThRNFdjUExNenpDNGpfbC0ydzJWa1d5WWlUN0hLdTZyYjJrQ2c2Qm05dUMzSlhweDBhQjJnQk42cUJFNTYxdU1IWTgwZnExc1RlNlFsOTNtLXdrNnJqVVlfVC0wMUJOcVAxbzE5UWZXWWdkN0tzLUtycV9XTkdoenotR2lSbFd4S3NwY0xVc1Z2NmhJVTUwZ0dvM2c2X3J4Vmg4ZGFSRDUzUDN4RTR1TE03V201djdPVGRoa2ttREg0OFltSTFwUllSZklpaHo0UlQ2UF96VUVWTEhtTG95U1VxVGJaVzN5SzlhRnBseThxZWlaMi1P?oc=5",
+        "published": "Mon, 14 Sep 2026 07:12:11 GMT",
+        "publisher": "医薬通信社"
+      },
+      {
+        "title": "第一三共(株)【4568】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4zLVI2U0Z5bnhzaGQ3cUtWbHVocDh6RVl6VzBvSUV0YkgxZWZRSUhiWDJ3aS1HQUNiWmQzdmtIUkZQdFFiTG5aNmF5OGxray1kR1Fya1lEWDNDNWhiRGJ3?oc=5",
+        "published": "Mon, 14 Sep 2026 06:53:47 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "AIによる顔画像解析で、顔に現れるサインと体内・心身状態との関連を確認 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9oM1JqeUtTSVpYbU9DV2dkMUEzbU1mY2FLQ05wclFtdTNVYUs3Y1lMX01PRTI5UVhvYUV2Y0NBYWVldWxiWGpadnRLOXBvNFItbUwtNlVKakVSU3o2WWZ5OXhIQUM4eFhfQWc?oc=5",
+        "published": "Mon, 14 Sep 2026 02:20:01 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "第一三共/アストラゼネカのエンハーツの肺がん1次治療データがPFS延長するもOSでネガティブな結果に｜Taro Watanabe - note",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE90OUEyemh5Q0RrWVNicFg2QTN3U3U2YUFlUGhnbHBjcnViRnJuN2JYbFp2VlBMY21kNVBUSGE2VkxQak0xZTh6V3FmbGVWMzB2?oc=5",
+        "published": "Mon, 14 Sep 2026 08:36:08 GMT",
+        "publisher": "note"
+      },
+      {
+        "title": "証金残（日証金）増減ランキング9/14発表分－第一三共の貸株残増加(トレーダーズ・ウェブ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOUkNja3BSM1YzblZJUzdHakdnWEdSTm13YUlhSnFWWGdsVWVib3ZELXBqVHRvM0M2Zng0TE5FX3NtcHZpQ1BCZE5HVVBDZXBBeUFoYlk1cUNKdHBiXzhzWV9reWo2R3lYV3Z0QjN0NEpHUENPOU5VUXZmcXBTYjRndlBhaHhJdmM?oc=5",
+        "published": "Mon, 14 Sep 2026 22:05:02 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "【2026年8月・心臓血管外科医196名調査】製薬会社の講演満足度１位はCSLベーリング｜２位は第一三共 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE51ZXRaclYwcG1TVUREYVRwWHViOFpvTTFoREd0VGkzeDdPV1dsSDYwenVKMDgteXJHNXd5dTNRWEJreUtnc21OTHF2em1xYVpESWkxTXdFcU44MTd2NUtVQkpzYkRMVzA0WlE?oc=5",
+        "published": "Tue, 15 Sep 2026 00:00:02 GMT",
+        "publisher": "PR TIMES"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "当社に対するNTKからの損害賠償等請求訴訟に関する判決（勝訴）のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260910534407.pdf",
+        "date": "2026-09-10 17:00:00"
+      },
+      {
+        "title": "（開示事項の変更）第一三共ビジネスアソシエの吸収合併（簡易合併・略式合併）の効力発生日変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824525305.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "（再訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514622.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2025年度決算および第6期中期経営計画説明会」資料の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514744.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正・数値データ訂正）「2026年３月期 決算短信〔IFRS基準〕(連結)」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504176.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504099.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算補足資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504168.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504173.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "当社米国子会社役職員に対する信託型株式付与制度の継続のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504240.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587542.pdf",
+        "date": "2026-07-16 15:30:00"
+      }
+    ]
+  }
+}

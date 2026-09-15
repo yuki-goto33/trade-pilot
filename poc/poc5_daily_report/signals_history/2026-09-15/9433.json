@@ -1,0 +1,218 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-09-15T09:44:18+09:00",
+  "price_as_of": "2026-09-15",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 45,
+    "reasons": [
+      {
+        "reason": "直近（2026年9月10日）に本銘柄へ buy シグナルを発令済みのため、新規の買付は推奨せず、現状維持（hold）として継続監視します。",
+        "evidence": "reference.recent_buy.note"
+      },
+      {
+        "reason": "第1四半期の好調な利益成長（EPS前年同期比約19.4%増）や継続的な自己株式取得により、ファンダメンタルズは堅調です。",
+        "evidence": "fundamental_view.points[0], fundamental_view.points[1]"
+      },
+      {
+        "reason": "株価は5日線・25日線を上回り、MACDも拡大しており、中期的な強い上昇モメンタムが継続しています。",
+        "evidence": "technical_view.points[0], technical_view.points[1], technical_view.points[2]"
+      }
+    ],
+    "risks": [
+      "2日後（2026年9月17日）に日銀金融政策決定会合を控えており、追加利上げ等の政策変更が高配当・ディフェンシブ株としての相対的な魅力を低下させたり、市場全体を下押しする可能性があります。",
+      "市場全体が『downtrend』レジームにあり、マクロ的なセンチメント悪化に連動し株価が下落するリスクがあります。",
+      "直近高値（3095.0円）が上値抵抗線として機能し、戻り売りや利益確定売りに押される可能性があります。",
+      "過去に報告された「財務報告に係る内部統制の開示すべき重要な不備」に関して、ガバナンス面の懸念が完全に払拭されているか注視が必要です。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 45,\n \"reasons\": [\n  {\n   \"reason\": \"直近（2026年9月10日）に本銘柄へ buy シグナルを発令済みのため、新規の買付は推奨せず、現状維持（hold）として継続監視します。\",\n   \"evidence\": \"reference.recent_buy.note\"\n  },\n  {\n   \"reason\": \"第1四半期の好調な利益成長（EPS前年同期比約19.4%増）や継続的な自己株式取得により、ファンダメンタルズは堅調です。\",\n   \"evidence\": \"fundamental_view.points[0], fundamental_view.points[1]\"\n  },\n  {\n   \"reason\": \"株価は5日線・25日線を上回り、MACDも拡大しており、中期的な強い上昇モメンタムが継続しています。\",\n   \"evidence\": \"technical_view.points[0], technical_view.points[1], technical_view.points[2]\"\n  }\n ],\n \"risks\": [\n  \"2日後（2026年9月17日）に日銀金融政策決定会合を控えており、追加利上げ等の政策変更が高配当・ディフェンシブ株としての相対的な魅力を低下させたり、市場全体を下押しする可能性があります。\",\n  \"市場全体が『downtrend』レジームにあり、マクロ的なセンチメント悪化に連動し株価が下落するリスクがあります。\",\n  \"直近高値（3095.0円）が上値抵抗線として機能し、戻り売りや利益確定売りに押される可能性があります。\",\n  \"過去に報告された「財務報告に係る内部統制の開示すべき重要な不備」に関して、ガバナンス面の懸念が完全に払拭されているか注視が必要です。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "株価は5日線・25日線を上回る強い上昇トレンドにあり、MACDの拡大や対TOPIXの大幅アウトパフォームなど中期・短期ともに堅調なモメンタムが確認されます。",
+      "points": [
+        {
+          "point": "株価がSMA5（3031.1円）およびSMA25（2934.14円）を上回って推移し、短期・中期の移動平均線がゴールデンクロスを形成している。",
+          "evidence": "price_technical.sma5=3031.1, price_technical.sma25=2934.14, price_technical.sma5_vs_sma25=golden(5日線が25日線の上)"
+        },
+        {
+          "point": "MACDがシグナルを上回りヒストグラムがプラス圏で拡大しているほか、RSI14も63.8と過熱感のない健全な買いモメンタムを示している。",
+          "evidence": "price_technical.macd=43.52, price_technical.macd_signal=32.28, price_technical.macd_histogram=11.24, price_technical.rsi14=63.8"
+        },
+        {
+          "point": "60営業日騰落率が+12.81%、対TOPIX相対騰落率が+15.19%と、地合いの軟調さに反して中期的な強さが明確である。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=12.81, price_technical.trend_60d.relative_to_topix_60d_pct=15.19"
+        }
+      ],
+      "cautions": [
+        "TOPIXの市場レジームがdowntrend判定であり、全体市場の調整圧力が強まった場合には連れ安となるリスクがある。",
+        "直近高値（3095.0円）が間近に迫っており、同水準での戻り売り・利益確定売りに押される可能性がある。",
+        "前夜NYでのADR上昇（+0.46%）は当日の寄り付き価格に即座に織り込まれる可能性がある。"
+      ],
+      "key_levels": {
+        "support": 3031.1,
+        "resistance": 3095.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "第1四半期の好調な利益成長（EPS前年同期比約19.4%増）に加え、継続的な自己株式取得という明確な株主還元姿勢が下値を支える。直近でも自動運転実証やiPhone関連サービスの拡充など複数のポジティブな事業展開が報じられており、成長期待は維持されている。",
+      "points": [
+        {
+          "point": "直近の第1四半期（2026年4-6月期）において、1株当たり利益（EPS）が前年同期の43.0円から51.33円へと大幅に伸長しており、増益トレンドが鮮明である。",
+          "evidence": "fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "2026年9月9日に自己株式の取得状況を開示しており、継続的な資本効率向上と株主還元へのコミットメントが確認できる。",
+          "evidence": "disclosures.items[0].date=\"2026-09-09 15:30:00\""
+        },
+        {
+          "point": "日産自動車等との自動運転車両の通信技術実証（2026年9月14日発表）やiPhone向けサポートの拡充など、通信を核とした非通信領域や付加価値サービスの拡大がニュースで報じられている。",
+          "evidence": "news.headlines[1], news.headlines[7]"
+        },
+        {
+          "point": "サービス業PMIが52.5と拡大圏にあり、内需・サービスセクターにとって良好な事業環境が継続している。",
+          "evidence": "macro.japan_pmi.services.latest_value=52.5"
+        }
+      ],
+      "cautions": [
+        "2日後（2026-09-17）に日銀金融政策決定会合を控えており、追加利上げ等の政策変更が発表された場合、高配当・ディフェンシブ株としての相対的魅力やマーケット全体への下押し圧力になるリスクがある。",
+        "市場環境全体が『downtrend』と判定されており、マクロ的なセンチメント悪化に引きずられる可能性がある。",
+        "2026年6月25日の開示において「財務報告に係る内部統制の開示すべき重要な不備」が報告されており、ガバナンス面での懸念が完全に払拭されているか注視が必要。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-10",
+    "days_ago": 5,
+    "confidence": 75,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "楽天の携帯投資、ドコモの4割どまり KDDI頼み響き5G通信網見劣り - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9uMDdtUjdIUU9XLWE5dDJpVmNIdEdPYVBaSWZoTlZsNGR1dUxaTVlJZFdHclRuYlM2cDRpSDJoQjlEZFc3a0k5VUh5SkdwTEdoTno0cXlNN05DRXJ2SjVJcnEtcERFV2pvMnVHSg?oc=5",
+        "published": "Mon, 14 Sep 2026 09:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "日産自動車、Moplus、KDDI、自動運転車両10台による通信技術実証を実施 - KDDI ニュースルーム",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5ua3lacDVuWEUzbmFqaTJudlpRbHY1YWQtWEIySnkybFptcTBZOHhzcC1ENmxETmt1TGdSYVIxWWY5ZExvX3g4ZWpvZk9QaldlZ3l1UDFIcThmY3M1dVBBYlJRZUlTdHc0dGhyNg?oc=5",
+        "published": "Mon, 14 Sep 2026 05:00:00 GMT",
+        "publisher": "KDDI ニュースルーム"
+      },
+      {
+        "title": "「東京ゲームショウ2026」にKDDIと共同出展、次世代3Dコンテンツ生成体験を展示 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9QYjVfUFViMU9rOVVHMGJCODhXOG5hRjc1X0dZNDdGLVh6dnJGRnF5Y1BfTUJMQV9wdWdqWWQ5eVQ3UGFxczBJbHptZnBvd0dVV3pNeU5PaHJpZkw2SjBZYTdKbGRJSFBNTFE?oc=5",
+        "published": "Mon, 14 Sep 2026 10:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "攻撃者より先に動くサイバーセキュリティへ - kddi-research.jp",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5DaW1fSXN1ZXhWYU9fd014MXhUaEZJVkE3TGhIYk5oeVRLOXJRY1dQN1BKWkoyZ3JSZ29ZS0RxZlJPZE9haVh0eVRXNzg1OEI3cXJTQTVvYk9JdVZubWkzYUE3Y0RadUhjQTgtVHlhVU40RDJSdEtoSw?oc=5",
+        "published": "Mon, 14 Sep 2026 04:15:41 GMT",
+        "publisher": "kddi-research.jp"
+      },
+      {
+        "title": "日産・KDDIら、横浜で自動運転体験 500名募集 - Impress Watch",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5JQ3RfT0QwcXNncWZTUzFQUUtiVk9ITGxZVjRtbW5FN3FlNk8wc1BmTjd1QzBWa3FaZkxCU3kzdjNoRnlRMDRFZFd6ZDNYRjRSbTF6WmM4TUN5ZEVPbDUyMFhaR0E?oc=5",
+        "published": "Mon, 14 Sep 2026 08:40:58 GMT",
+        "publisher": "Impress Watch"
+      },
+      {
+        "title": "KDDI・日産ら、自動運転車両10台を運用・制御する通信技術の実証をみなとみらいで実施 - ビジネスネットワーク",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE96ZkZ5dVZvNEZRUXEtbXRRVVN1eWpxa29tMUpDT2VsWGk5MmJhS3pwODh6N0lUUWV0RTBOS2NKRGwzV2ZfaWJSNVgxdUFBd2syNzBJ?oc=5",
+        "published": "Mon, 14 Sep 2026 05:23:49 GMT",
+        "publisher": "ビジネスネットワーク"
+      },
+      {
+        "title": "KDDIなど、自動運転車両10台による通信技術実証 - 電波タイムズ",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1qcUJnZHAyc09wQk9ZeUlOV2xKYkYtQktwdmViSlNKbXh3VGlISHp2cG56QW9YZnoyVWI4SF8zQ3RxSFZkSTVwYzlFWVVXal9EYnBpbDdCV2xjQTNwaVNGa0xVQ2kwUQ?oc=5",
+        "published": "Mon, 14 Sep 2026 06:31:14 GMT",
+        "publisher": "電波タイムズ"
+      },
+      {
+        "title": "KDDI、iPhone／iPad向け「故障紛失サポート」を拡充 機種変更時に最大2万2000円割引やポイント還元（ITmedia Mobile） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE83aDNWNkwxT1FWZ3RfcDlvSDYzbnVLQWdfTWtjR0RVVTgyLWFiOG1uUmlWZEdfQ1FPcEc2YlU2QmoyS0R3eDNieDdwTFBHX04tdnRXWnk5N19DWW9qS2IzbHY0U0VERDVBcVNaZFJhZzViSzNQRW9FM1ZzMEdCR0U?oc=5",
+        "published": "Mon, 14 Sep 2026 05:39:57 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "楽天の携帯事業投資、ドコモの4割 KDDI頼み、脱却急務 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBrOFU4alpLRjFDQVkwcmxUZVU3M09DTjNrU3BiVkJ5R0s4aVp4VXZVOWlRQ3JhY2ljamV0WVlaUkJoU1VZUFNBTjZYX3NRRUNEcHlhZG5GdEhRT21FcmlRR3BtaWh0V1ZaZWNoSw?oc=5",
+        "published": "Mon, 14 Sep 2026 17:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "KDDI、iPhone／iPad向け「故障紛失サポート」を拡充　機種変更時に最大2万2000円割引やポイント還元 - ITmedia Mobile - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBYX2VjdjFudndBMUJyNk1Ma2J6SUdVYUlIOWEyM29DNUh4QVRTY0FxcUJPNEMtcU94NHZpaGRfbG50bElzUldURmZSd2RqR1hUMlBtU1cxNUVzNzNxcTlsbXd1X3dXb0p20gFoQVVfeXFMUFhfZWN2MW52d0ExQnI2TUxrYnpJR1VhSUg5YTIzb0M1SHhBVFNjQXFxQk80Qy1xT3g0dmloZF9sbnRsSXNSV1RGZlJ3ZGpHWFQyUG1TVzE1RXM3M3FxOWxtd3Vfd1dvSnY?oc=5",
+        "published": "Mon, 14 Sep 2026 04:30:00 GMT",
+        "publisher": "ITmedia"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533350.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-09-15T09:39:37+09:00",
+  "price_as_of": "2026-09-15",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の評価がstrength 60のneutralであり、買いの必須条件（strength 70以上）を満たさないため、様子見とします。",
+        "evidence": "fundamental_view.strength=60"
+      },
+      {
+        "reason": "テクニカルが既にbullish（strength 75）であり、好材料が株価に織り込まれている可能性が高く、モメンタム追随の遅いエントリーになるリスクがあります。",
+        "evidence": "technical_view.stance=bullish (strength=75)"
+      },
+      {
+        "reason": "日銀金融政策決定会合が2日後に迫っており、政策変更の有無によるボラティリティの急増が懸念される局面です。",
+        "evidence": "reference.next_boj_meeting=2026-09-17〜2026-09-18"
+      },
+      {
+        "reason": "PBRが1.84倍と銀行セクターとしては割高な水準にあり、利益確定売りが出やすいバリュエーションです。",
+        "evidence": "fundamental_view.cautions[1]: fundamentals.valuation.price_to_book=1.845"
+      }
+    ],
+    "risks": [
+      "2026年9月17日からの日銀金融政策決定会合の結果が市場予想（利上げ）と乖離した場合の急落リスク",
+      "市場レジームがdowntrend（下落トレンド）にあり、指数急落時に主力大型株として連れ安するリスク",
+      "予想PER 24.5倍が示す、将来の業績鈍化や希薄化に対する市場の警戒感"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の評価がstrength 60のneutralであり、買いの必須条件（strength 70以上）を満たさないため、様子見とします。\",\n   \"evidence\": \"fundamental_view.strength=60\"\n  },\n  {\n   \"reason\": \"テクニカルが既にbullish（strength 75）であり、好材料が株価に織り込まれている可能性が高く、モメンタム追随の遅いエントリーになるリスクがあります。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=75)\"\n  },\n  {\n   \"reason\": \"日銀金融政策決定会合が2日後に迫っており、政策変更の有無によるボラティリティの急増が懸念される局面です。\",\n   \"evidence\": \"reference.next_boj_meeting=2026-09-17〜2026-09-18\"\n  },\n  {\n   \"reason\": \"PBRが1.84倍と銀行セクターとしては割高な水準にあり、利益確定売りが出やすいバリュエーションです。\",\n   \"evidence\": \"fundamental_view.cautions[1]: fundamentals.valuation.price_to_book=1.845\"\n  }\n ],\n \"risks\": [\n  \"2026年9月17日からの日銀金融政策決定会合の結果が市場予想（利上げ）と乖離した場合の急落リスク\",\n  \"市場レジームがdowntrend（下落トレンド）にあり、指数急落時に主力大型株として連れ安するリスク\",\n  \"予想PER 24.5倍が示す、将来の業績鈍化や希薄化に対する市場の警戒感\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "市場全体が下落トレンドにある中で、中期的な上昇トレンドを維持しつつ逆行高の強さを見せています。短期移動平均線のゴールデンクロスも確認され、上値追いの姿勢が鮮明です。",
+      "points": [
+        {
+          "point": "中期的な上昇トレンドが極めて強力であり、市場平均を大幅にアウトパフォームしています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=13.48, price_technical.trend_60d.relative_to_topix_60d_pct=15.87"
+        },
+        {
+          "point": "短期移動平均線が25日線を上回るゴールデンクロス状態にあり、直近5営業日でも底堅い推移が続いています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\", price_technical.recent_5_days[3].change_pct=1.61"
+        },
+        {
+          "point": "RSIは強気圏を維持しており、モメンタムの強さが示唆されています。",
+          "evidence": "price_technical.rsi14=66.5"
+        }
+      ],
+      "cautions": [
+        "市場全体のレジームがdowntrend(macro.market_regime)にあり、指数急落時の連れ安リスクには警戒が必要です。",
+        "MACDシグナルをわずかに下回っており(macd_histogram=-0.35)、上昇ペースが鈍化する可能性があります。",
+        "ADRがプラス圏(change_1d_pct=2.58)ですが、基準日との乖離があるため寄り付き後の利益確定売りに注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 3638.4,
+        "resistance": 3795.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "直近の第1四半期決算が極めて好調であり、国内金利の上昇も収益環境には追い風ですが、PBR1.8倍超とバリュエーションに割安感がなく、2日後に迫る日銀金融政策決定会合の不確実性を考慮すると、現時点での新規買いは慎重を要します。",
+      "points": [
+        {
+          "point": "2027年3月期第1四半期の純利益が8,094億円と非常に高い進捗を示しており、前年度までの増益トレンドが加速しています。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].net_income_oku_jpy=8094"
+        },
+        {
+          "point": "国内10年債金利が2.987%まで上昇しており、銀行業にとって利ざや改善が期待できる良好なマクロ環境が続いています。",
+          "evidence": "macro.rates.jgb_10y_percent.value=2.987"
+        },
+        {
+          "point": "市場では日銀の利上げ確率が7割超と報じられており、金融政策の正常化期待が株価の下支え要因となっています。",
+          "evidence": "news.headlines[4].title"
+        },
+        {
+          "point": "直近の日本PMI（製造業54.9、サービス業52.5）が共に拡大圏にあり、国内の資金需要を支える景況感が維持されています。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日〜18日の日銀金融政策決定会合が直近に控えており、結果次第でボラティリティが急増するリスクがあります（macro.boj.monetary_policy_meeting.days_until_next=2）。",
+        "PBRが1.845倍に達しており、銀行セクターとしては過去の基準や他行比較でも割高感が意識されやすい水準です（fundamentals.valuation.price_to_book=1.845）。",
+        "市場全体が25日移動平均線を下回るダウントレンドにあり、地合い悪化に伴う連れ安のリスクがあります（macro.market_regime.market_regime=downtrend）。",
+        "予想PERが24.5倍と実績PER（15.48倍）を大きく上回っており、市場が先行きの減益や希薄化を警戒している可能性があります（fundamentals.valuation.forward_pe=24.525）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)三菱ＵＦＪフィナンシャル・グループ【8306】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1oNVRyU21seTRreG9UUWh2VU9PUkRfbHNWdWxFMHFIZnZ5dnNPTnR2dU8taVdGb0xkZEc5MkdnZ2tmY1VHc0dkODdqZXpnS01xZGtMMGhoYkg3OUUzamRF?oc=5",
+        "published": "Mon, 14 Sep 2026 06:52:24 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "市場動向：三菱UFJフィナンシャル・グループ、2,000億円の無期限債を発行 - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOX2Q2eEpMMjFpSXpJRXBJS2twcnZoOTNrdjZpV3Zmbmx5MmNONE1wZ29GSnBiV2R3dWNWcGJ3ZTdjWkN4bzRDdTlYVGFKN3JHQ04tbjJUVUZvZzdaOEJlM2lDb01xcThiWmlCTEdWV1UyTm54Z1Viajc5X2pjTm5pb1FqMERfRFBqRjN0SzE4QXpHSjZyZkliX0ZrdDM5NEpETHJSNk5zTVpFS1dYa2NXZC12SQ?oc=5",
+        "published": "Mon, 14 Sep 2026 10:46:40 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "地域に開かれた施設へ/MUFG本館着工で地鎮祭/設計＝三菱地所設計、施工＝大林組JV - kensetsunews.com",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBKeWFWSzFjTjhSdHlpVTQ2eTBsMUxXRWFHSERCdEY5QXRxT3k5NzRqem92SF80OWIyalZhYVl4X0UyVExYSFBWMGFmVVBUMFo4bVA1ekw0Y2w?oc=5",
+        "published": "Mon, 14 Sep 2026 20:01:42 GMT",
+        "publisher": "kensetsunews.com"
+      },
+      {
+        "title": "ＭＵＦＧら／新本館建設へ地鎮祭開く／設計は三菱地所設計、施工は大林組ＪＶ - 日刊建設工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFA4M3pyS2FLQU00TzN0N1FxYzNuQ2t3V0lWV2pZWmVySUpqU0hwdHhkcDhxWFBQZERqY3ZtOUdUY2tkY0sxbWdB?oc=5",
+        "published": "Mon, 14 Sep 2026 21:02:53 GMT",
+        "publisher": "日刊建設工業新聞"
+      },
+      {
+        "title": "米日スーパー中央銀行ウィーク開幕 日銀利上げ確率7割超 キャリートレード巻き戻しリスク高まる - finance.biggo.jp",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBxeGpIVU04NEpLUFZiWVhuNTFHWjRnMkdpaGdQWnhTam0ycTBrOE9Qdk5YNlhtamF5U0YzUzlKdzNScUhuUTVKMVhoVDFGMlIxOGlrWFVSRWxhMVNQNFNfd2pxVW5HRUJ1SFM0Rk13Y0wxWmFq?oc=5",
+        "published": "Mon, 14 Sep 2026 01:55:00 GMT",
+        "publisher": "finance.biggo.jp"
+      },
+      {
+        "title": "1児の母・丸山桂里奈、娘の七五三ショット公開「赤基調で素敵な着物」「素足もポーズも可愛すぎる」と反響 - mdpr.jp",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5BUVNsdndIX0xUeUlCNzhLdnNaZTJSUXE4YUM1TEp1bnEtRDUtUXZTUW9BY0VQcXpMSlhSU1dOTmJma2tCaFB0UkFSNNIBR0FVX3lxTFBPTEx4Tmd3cEk4TXhZckozMTdSN2VGR09Nc05nazhTOHBOS1pja0pDdzRibXMxUXlTMThjTk9KTVBDc25yb3N3?oc=5",
+        "published": "Mon, 14 Sep 2026 05:53:52 GMT",
+        "publisher": "mdpr.jp"
+      },
+      {
+        "title": "日経平均は351円安でスタート、キオクシアHDや東京エレクトロンなどが下落 提供 Fisco - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNM3BQQnhORFBUZ0x6dGd4MFZKaVltakktaFQ5TURibDR5SXk1U2FfczZ4WnZPOFAtT3J3a1d2d1FNX3ZrVUhkcFRjaGVwVWpyNGF3bmpIMnFEOE9XOUNGekRFMmR6Z01hU0x6QmQwNGpPckJBSFVxYnZtMDlmQTRkRA?oc=5",
+        "published": "Mon, 14 Sep 2026 00:45:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期 自己資本比率について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260814520300.pdf",
+        "date": "2026-08-14 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕（連結）（公認会計士又は監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510381.pdf",
+        "date": "2026-08-06 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505851.pdf",
+        "date": "2026-08-03 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      }
+    ]
+  }
+}

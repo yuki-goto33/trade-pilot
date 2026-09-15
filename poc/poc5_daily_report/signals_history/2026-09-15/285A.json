@@ -1,0 +1,222 @@
+{
+  "code": "285A",
+  "name": "キオクシアホールディングス",
+  "generated_at": "2026-09-15T09:48:34+09:00",
+  "price_as_of": "2026-09-15",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家は、2026年3月期の大幅な業績回復とADR上場を通じた大規模資金調達の検討を新規の好材料と評価し、強気の見方を示しています。",
+        "evidence": "fundamental_view.stance=bullish (strength=75), fundamental_view.points[0], fundamental_view.points[1]"
+      },
+      {
+        "reason": "しかし、テクニカル専門家は、中期的な下落トレンド、主要移動平均線の下回る推移、MACDの売りシグナルから強い弱気の見解を示しており、一段の下落リスクを指摘しています。",
+        "evidence": "technical_view.stance=bearish (strength=85), technical_view.points[0], technical_view.points[1], technical_view.points[2]"
+      },
+      {
+        "reason": "統合判断ルールに基づき、ファンダメンタルズが強気（strength≥70）であっても、テクニカルが中立でなく弱気である場合は「落ちるナイフを掴まない」ため、現状はホールドと判断します。",
+        "evidence": "統合判断のルール1"
+      }
+    ],
+    "risks": [
+      "翌日（2026-09-17〜2026-09-18）に日本銀行の金融政策決定会合が控えており、市場全体が変動する可能性があります。",
+      "AI開発減速懸念が市場に広がり、キオクシアの需要動向に影響を及ぼす可能性があります。",
+      "現在のバリュエーション（PER 50.071倍、PBR 11.531倍）は高水準であり、今後の業績成長が期待を下回った場合、調整圧力が生じる可能性があります。",
+      "テクニカル指標が示す強い下降トレンドが継続し、株価がさらに下落する可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家は、2026年3月期の大幅な業績回復とADR上場を通じた大規模資金調達の検討を新規の好材料と評価し、強気の見方を示しています。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=75), fundamental_view.points[0], fundamental_view.points[1]\"\n  },\n  {\n   \"reason\": \"しかし、テクニカル専門家は、中期的な下落トレンド、主要移動平均線の下回る推移、MACDの売りシグナルから強い弱気の見解を示しており、一段の下落リスクを指摘しています。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=85), technical_view.points[0], technical_view.points[1], technical_view.points[2]\"\n  },\n  {\n   \"reason\": \"統合判断ルールに基づき、ファンダメンタルズが強気（strength≥70）であっても、テクニカルが中立でなく弱気である場合は「落ちるナイフを掴まない」ため、現状はホールドと判断します。\",\n   \"evidence\": \"統合判断のルール1\"\n  }\n ],\n \"risks\": [\n  \"翌日（2026-09-17〜2026-09-18）に日本銀行の金融政策決定会合が控えており、市場全体が変動する可能性があります。\",\n  \"AI開発減速懸念が市場に広がり、キオクシアの需要動向に影響を及ぼす可能性があります。\",\n  \"現在のバリュエーション（PER 50.071倍、PBR 11.531倍）は高水準であり、今後の業績成長が期待を下回った場合、調整圧力が生じる可能性があります。\",\n  \"テクニカル指標が示す強い下降トレンドが継続し、株価がさらに下落する可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 85,
+      "summary": "中期的な下落トレンドが継続しており、直近で主要移動平均線を下回って推移しています。MACDも売りシグナルを示しており、市場地合いや前夜の半導体セクターの動きも弱気であるため、一段の下落に警戒が必要です。",
+      "points": [
+        {
+          "point": "過去60営業日で大幅に下落しており、TOPIXに対しても大きくアンダーパフォームしているため、中期的な下落トレンドが継続中です。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-53.42%, price_technical.trend_60d.relative_to_topix_60d_pct=-51.03%"
+        },
+        {
+          "point": "株価は5日移動平均線と25日移動平均線の両方を大きく下回って推移しており、下降圧力が強い状態です。",
+          "evidence": "price_technical.last_close=50590.0, price_technical.sma5=54060.0, price_technical.sma25=53182.8"
+        },
+        {
+          "point": "MACDヒストグラムがマイナス圏で推移しており、MACDがシグナルを下回っていることから、売りトレンドが示唆されています。",
+          "evidence": "price_technical.macd_histogram=-207.06"
+        },
+        {
+          "point": "市場全体の地合いも下落トレンドにあり、個別銘柄への上値圧力がかかりやすい環境です。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\""
+        },
+        {
+          "point": "前夜のNY市場で半導体指数（SOX指数）が大幅に下落しており、翌日の関連銘柄に売り圧力がかかる可能性があります。",
+          "evidence": "us_overnight.sox_index.change_1d_pct=-5.86%"
+        }
+      ],
+      "cautions": [
+        "直近の株価は下げ止まって横ばいとなっており、一時的な反発が起こる可能性も否定できません。",
+        "RSI14が51.4と中立圏にあり、過度な売られすぎとは判断できず、一時的な買い戻しが入る可能性もあります。",
+        "前夜のNY市場の半導体セクターの動きは、本日の寄り付き価格に既に織り込まれる可能性があります。",
+        "市場全体のトレンドが好転した場合、当銘柄も追随して反発する可能性があります。"
+      ],
+      "key_levels": {
+        "support": 44170.0,
+        "resistance": 53182.8
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "キオクシアホールディングスは、2024年3月期の赤字から2026年3月期には大幅な増収増益を計画しており、業績が力強く回復しています。加えて、ADR上場による大規模な資金調達の検討が報じられており、今後の事業成長への期待が高まります。",
+      "points": [
+        {
+          "point": "業績が力強い回復トレンドにあり、2024年3月期の赤字から2026年3月期には大幅な増収増益を見込んでいる点が評価されます。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=5545, fundamentals.earnings_trend.annual[1].net_income_oku_jpy=2723, fundamentals.earnings_trend.annual[2].net_income_oku_jpy=-2437"
+        },
+        {
+          "point": "直近のニュースで、ADR上場を通じて100億ドル規模の資金調達を検討していると報じられており、これは事業拡大や財務基盤強化に繋がる新規の好材料です。",
+          "evidence": "news.headlines[0].title='キオクシア、米ＡＤＲ上場で100億ドル調達検討＝ＢＢＧ', news.headlines[2].title='キオクシアHD、ADR上場で1兆5000億円規模の調達を検討－関係者'"
+        },
+        {
+          "point": "サンディスクとの投資計画や自己株式取得枠の設定、株式分割など、事業拡大と株主還元に積極的な姿勢が見られます。",
+          "evidence": "disclosures.items[0].title='サンディスクコーポレーションとの投資計画に関するお知らせ', disclosures.items[2].title='自己株式の取得状況及び取得終了に関するお知らせ', disclosures.items[6].title='株式分割及び株式分割に伴う定款の一部変更に関するお知らせ'"
+        },
+        {
+          "point": "日本の製造業PMIは2026年8月に54.9と景気拡大を示しており、特にAI関連需要が牽引していると報告されており、キオクシアの事業環境にとって追い風となります。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9, macro.japan_pmi.manufacturing.summary_en='...supported by the steepest rise in new orders in four-and-a-half years amid strong AI-related demand.'"
+        }
+      ],
+      "cautions": [
+        "AI開発減速懸念が市場に広がっており、キオクシアの需要動向に影響を及ぼす可能性があります。",
+        "2日後に日銀の金融政策決定会合が控えており（2026-09-17〜2026-09-18）、市場全体が変動するリスクがあります。",
+        "現在のバリュエーション（PER 50.071倍、PBR 11.531倍）は高水準であり、今後の業績成長が期待を下回った場合、調整圧力が生じる可能性があります。",
+        "東芝によるキオクシア株売却のニュースがあり、一時的に需給面での重しとなる可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "キオクシア、米ＡＤＲ上場で100億ドル調達検討＝ＢＢＧ - jp.reuters.com",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPei1INTQyQkdNSlZub1hjWDM3cDlxRllOUFF4ZThCU2RzbUFkdkt5bTFCdXkzSlc1S1NwcVgzeG01M19EaF85a1RNS3FjejdQVEdQVHNzNDVJSFk0Nmp5RFE5WmpXRWNuc205X2hsZ2JUTlFMUjM1UzlGb0gzdEVwYmFQQWo?oc=5",
+        "published": "Mon, 14 Sep 2026 23:18:31 GMT",
+        "publisher": "jp.reuters.com"
+      },
+      {
+        "title": "東芝がキオクシア株売却 保有比率12.84%に低下 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8yTjVwdTVJX2dlUVFZbkpXZlllNjRjLVNyY3o0UFRxY21RajJBclBQT1c0ckpjNC1Xa3oxa0xraEZBcXVuMEpoc3plM1Y1YUw4U3B2T2xjVWItazBqMmphbUFlVldaRzhkSDVFeg?oc=5",
+        "published": "Mon, 14 Sep 2026 07:53:23 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "キオクシアHD、ADR上場で1兆5000億円規模の調達を検討－関係者 - bloomberg.com",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5aeE00ZG8xb2xkb25CU0pVTnB0dVhydExYX3RTVFkwX3Z5MGJXNUo1NXM4Y245WUdGT0VKcVZFcUw5OVN6Mkg0SU5UckYxcUU2dzhEb0NmRmQwV01FYmpaQmJHTzFwY215ODJYVFlUYUVpZWNiSWQw?oc=5",
+        "published": "Mon, 14 Sep 2026 10:48:01 GMT",
+        "publisher": "bloomberg.com"
+      },
+      {
+        "title": "キオクシアHD、ADR上場で1兆5000億円規模の調達を検討－関係者(Bloomberg) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQaG5oeW9NeFJDQV9fVlBIcTFYQ0NLMFAwZUlpTy14dGtZY2VsRTVsT1NOcEVaRHBXTXpuaUhMWFM2YkxjbEtGLVhiME9FcDFyY1VqUHBRVzBKUDNiYlpabVFCWV9wa19kdzRtemdsVE00M002aFY3Nl9CMTQyX21zRGJta3BHeUU?oc=5",
+        "published": "Mon, 14 Sep 2026 10:48:01 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "キオクシアが大幅続落し７５日線割れ、最先端ＡＩ開発競争の減速懸念広がる - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5NQnVleUVFbWVxdk8zT3UzVU1qa19YOWxGMGROTW8wTjRibzVXdWpJRUZPNkM5YkE1bHp3WDQ3ak85cjJYaVdpaGZiM0N5V21iMGdYdDdnOGozVjN3LXI0UA?oc=5",
+        "published": "Mon, 14 Sep 2026 00:48:00 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "東芝がキオクシアHD株を売却 保有比率12.84％に低下 - QUICK Money World",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE82VUlWSHI0Rkkzc1ZJeVZFV1hXQ1UxMFpuT2N4ZGEyZlZsN0ttU2l6TDVWYUFoT3oybmtkWTBFeENkX2ZsQXVUX0lfbGV3VGMycXhwUWdB?oc=5",
+        "published": "Mon, 14 Sep 2026 09:00:00 GMT",
+        "publisher": "QUICK Money World"
+      },
+      {
+        "title": "キオクシアHD、ADR上場で1兆5000億円規模の調達を検討－関係者 - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBHWU4zRWhOSVcxdW5JTzYzMFNkbnVxNk05dUNRdmZ3T3NzYVo4YWtaM1hzdUhaZ3lvWVdQRHlJeDYwNGdwLVg2cHRBUjF0dWduM0tseEtqSllWQVcwQmktM1BCb2tBUWc?oc=5",
+        "published": "Mon, 14 Sep 2026 10:48:00 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "AI開発“減速論”過熱でソフトバンク、キオクシア株急落 その他AI関連株も - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBCXzllRFZpRUdjZW9zYTFuMTdFekphaURqelRUc1lWOUpEdmE4czVnWmVQWC02ZjZiT3YtVjQ1M0ctdldqdkdEY2V5TXVfRkZxb1B5Y1YzWEZUNzhyOW1nbmxZdXhnbnI3MDgtNw?oc=5",
+        "published": "Mon, 14 Sep 2026 11:16:05 GMT",
+        "publisher": "ITmedia"
+      },
+      {
+        "title": "キオクシア、米国でADR発行を検討 調達規模は100億ドル超の見通し - finance.biggo.jp",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5SQ1hfaGNhNk5SNHFRam1WejU0c3pBZEZBUVYza0IySDNjV3BRTmV6QTVBOUxIeFoyYnVXNmZFTWZHXy1zXzc0NlVvYXRWcWhNc2tyaHY1WjdhY01SaEY1Snl4WWNaZ1ZIYXNiNFBTM1lyYmt1?oc=5",
+        "published": "Mon, 14 Sep 2026 18:38:00 GMT",
+        "publisher": "finance.biggo.jp"
+      },
+      {
+        "title": "キオクシア発新興、次世代暗号技術サービス 計算能力50倍以上に向上 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE44d2FuMFFfR1preVlkM053RFIwV3NwYXNsdV9Wb2xnT1BRNy1FX1JlT1k0Uy1aa09xYUJ6T0xCd2NqcFE2b3hpUlc1a0xidEhRSGtjTXFGVjJERXcyTnY5VUotQWFLQk9BRkJXaA?oc=5",
+        "published": "Mon, 14 Sep 2026 05:30:36 GMT",
+        "publisher": "日本経済新聞"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "サンディスクコーポレーションとの投資計画に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260827527338.pdf",
+        "date": "2026-08-27 17:50:00"
+      },
+      {
+        "title": "（訂正）「主要株主である筆頭株主の異動に関するお知らせ」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260817521854.pdf",
+        "date": "2026-08-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況及び取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260810517251.pdf",
+        "date": "2026-08-10 18:15:00"
+      },
+      {
+        "title": "主要株主である筆頭株主の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260810517256.pdf",
+        "date": "2026-08-10 18:15:00"
+      },
+      {
+        "title": "当社子会社に対する訴訟の判決に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260803506332.pdf",
+        "date": "2026-08-03 15:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505265.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "株式分割及び株式分割に伴う定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505272.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "自己株式の取得枠設定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505280.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "勤務継続型株式報酬制度及び業績連動型株式報酬制度のユニット付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505321.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "当社子会社に対する訴訟の陪審評決に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595788.pdf",
+        "date": "2026-07-17 13:00:00"
+      }
+    ]
+  }
+}

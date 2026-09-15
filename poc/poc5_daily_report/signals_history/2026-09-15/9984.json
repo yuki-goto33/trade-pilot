@@ -1,0 +1,212 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-09-15T09:40:31+09:00",
+  "price_as_of": "2026-09-15",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "主要投資先であるOpenAIのIPO見送り報道により、保有資産の流動化期待が剥落し、投資シナリオが根本から覆されたため。",
+        "evidence": "fundamental_view.points[0]: news.headlines: \"ソフトバンクグループ株、OpenAIが2026年IPOを否定し11%急落\""
+      },
+      {
+        "reason": "前夜のADRが15%超の暴落を記録しており、寄り付き時点でSMA25を大幅に下回る(-11.7%想定)ため、売りの例外条件(-7%以内)を満たさず、追っかけ売りを避けるべき局面である。",
+        "evidence": "technical_view.points[1]: us_overnight.adr.change_1d_pct=-15.06 / reference.sma25=5623.72"
+      },
+      {
+        "reason": "直近（2026-09-10）にbuyシグナルを発出済みであり、ルールの「再エントリー抑制」および「下落局面での原則hold」を適用し、継続監視とする。",
+        "evidence": "reference.recent_buy.date=2026-09-10"
+      }
+    ],
+    "risks": [
+      "2日後に控える日銀金融政策決定会合（2026-09-17〜18）を受けた為替の円高進行および金利上昇による負債コスト増大",
+      "ADRの暴落が国内市場の寄り付きで過剰に反応し、窓を開けた後のパニック売りの連鎖",
+      "市場レジームがdowntrend（TOPIX 25日線以下）にあり、指数寄与度の高い本銘柄が裁定売りの標的となるリスク"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"主要投資先であるOpenAIのIPO見送り報道により、保有資産の流動化期待が剥落し、投資シナリオが根本から覆されたため。\",\n      \"evidence\": \"fundamental_view.points[0]: news.headlines: \\\"ソフトバンクグループ株、OpenAIが2026年IPOを否定し11%急落\\\"\"\n    },\n    {\n      \"reason\": \"前夜のADRが15%超の暴落を記録しており、寄り付き時点でSMA25を大幅に下回る(-11.7%想定)ため、売りの例外条件(-7%以内)を満たさず、追っかけ売りを避けるべき局面である。\",\n      \"evidence\": \"technical_view.points[1]: us_overnight.adr.change_1d_pct=-15.06 / reference.sma25=5623.72\"\n    },\n    {\n      \"reason\": \"直近（2026-09-10）にbuyシグナルを発出済みであり、ルールの「再エントリー抑制」および「下落局面での原則hold」を適用し、継続監視とする。\",\n      \"evidence\": \"reference.recent_buy.date=2026-09-10\"\n    }\n  ],\n  \"risks\": [\n    \"2日後に控える日銀金融政策決定会合（2026-09-17〜18）を受けた為替の円高進行および金利上昇による負債コスト増大\",\n    \"ADRの暴落が国内市場の寄り付きで過剰に反応し、窓を開けた後のパニック売りの連鎖\",\n    \"市場レジームがdowntrend（TOPIX 25日線以下）にあり、指数寄与度の高い本銘柄が裁定売りの標的となるリスク\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 85,
+      "summary": "中期下落トレンドが継続する中、前夜のADR暴落と市場全体の地合い悪化が重なり、一段の下値模索が避けられない極めて弱い局面です。",
+      "points": [
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がいずれも大幅なマイナスであり、厳格な中期下落トレンド内にあります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-17.89, price_technical.trend_60d.relative_to_topix_60d_pct=-15.51"
+        },
+        {
+          "point": "前夜のADRが15%を超える記録的な下落を演じており、当日の寄り付きから極めて強い下押し圧力がかかることが想定されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=-15.06"
+        },
+        {
+          "point": "TOPIXが25日線を下回り、5日騰落率もマイナスの「downtrend」レジームにあるため、相場全体の地合いが逆風となっています。",
+          "evidence": "macro.market_regime.market_regime=downtrend"
+        }
+      ],
+      "cautions": [
+        "ADRの暴落が寄り付き価格に過剰に織り込まれた場合、目先の「売られすぎ」を意識した自律反発が発生する可能性があります。",
+        "MACDは現時点でプラス圏を維持していますが、直近の急落を受けデッドクロスが目前に迫っている点に注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 4882.0,
+        "resistance": 5623.72
+      }
+    },
+    "fundamental": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "OpenAIの2026年IPO見送り報道による投資出口戦略への期待剥落が直撃し、株価は11%超の急落を記録した。営業利益の赤字見通しや、日銀会合直前の金利上昇局面における多額の負債コスト懸念も重なり、短期的には下値模索の展開を予想する。",
+      "points": [
+        {
+          "point": "主要投資先であるOpenAIが2026年のIPOを否定したことで、保有資産の流動化や含み益の拡大期待が急速に後退し、大きな売り圧力となっている。",
+          "evidence": "news.headlines: \"ソフトバンクグループ株、OpenAIが2026年IPOを否定し11%急落\""
+        },
+        {
+          "point": "2026年3月期の通期営業損益が赤字見通しとなっており、純利益の規模（5兆円超）に対して本業の収益性が不安定である点が嫌気されやすい。",
+          "evidence": "fundamentals.earnings_trend.annual: 2026-03 operating_income_oku_jpy = -48"
+        },
+        {
+          "point": "有利子負債による資金調達を継続する中で、国内10年金利が2.987%まで上昇しており、日銀会合を控えた金融引き締め観測が負債コスト増大リスクとして意識されている。",
+          "evidence": "macro.rates.jgb_10y_percent = 2.987, disclosures: \"第70回無担保普通社債の条件決定に関するお知らせ\""
+        }
+      ],
+      "cautions": [
+        "2日後に控える日銀金融政策決定会合（2026-09-17〜18）の結果を受けた為替・金利の乱高下リスク",
+        "AI関連銘柄全体の地合い改善や、OpenAI以外の投資先（Arm等）に関するポジティブな進展",
+        "市場全体がdowntrend（TOPIX 25日線以下）にあり、指数寄与度の高い銘柄として裁定売りの影響を受けやすいこと"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-10",
+    "days_ago": 5,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソフトバンクグループ(株)【9984】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9DZkVwWjE1QUxJT001ekM0SkZLSDQwRTZ3c2JJU1VocDJuQTFoU1Fsb25ySWJWRHpSbHc2a19vdEhnS3NtdkVfeGVTc3FxWVZqbDhENmRGZFB5X1puX24w?oc=5",
+        "published": "Mon, 14 Sep 2026 06:52:35 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "（まとめ）ソフトバンクグループが大きく下げた日経平均は518円安の63,492円で続落 - マネクリ",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9POGI3WUdyX2xBa2g2VHZ5NjFub3duZmpRS1dRRzFwNXoyRmFfTUtHZmNoWlR5ZDdGZ2dGVDAyREd4a0V0TlZ2SVU5eXMyRThta2M4ctIBV0FVX3lxTE5rYUVkMy0tdU1STWVYalNUM3lxa2cyTUw3bWJubG1yM0Z2X2RqMlZ5RVJIUm12QVVWV1BDU285ZVY0M1daYU5qR29jYUZfMmNYbEJxRVR1NA?oc=5",
+        "published": "Mon, 14 Sep 2026 07:22:00 GMT",
+        "publisher": "マネクリ"
+      },
+      {
+        "title": "ソフトバンクグループ株、OpenAIが2026年IPOを否定し11%急落 執筆 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5rZXlTSXBOb1p3aDBxNXoyOFA1VWxQX0MxYXlLdVloRHN4VEZlT1k1V1FJQnpQUVN0UmQ3NUQ3a2ZqOXpVOVNJb0FVdGN2ektyQnZmVjN4NGF0a0I5T0FVeHdGYTdIWEd1d0tmWEg0U2I?oc=5",
+        "published": "Mon, 14 Sep 2026 05:27:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      },
+      {
+        "title": "日経平均が続落、終値518円安 AI・半導体に売り広がる - finance.biggo.jp",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFAzUWVBY1llVVJHcTg3Tko5LXEwY3RiRFFNbDVNSW5HM1ZMeE1QLTBDU0U0NUY3QjYyX0ZmQjZsSFlyUDZNODVhWlVid3NxNDk0MTJfNHdIWGJ6VHAyMkcweW9NVUtFaERKSTFEV1RPeUtVMmIz?oc=5",
+        "published": "Mon, 14 Sep 2026 18:38:00 GMT",
+        "publisher": "finance.biggo.jp"
+      },
+      {
+        "title": "【本日の買い売り優勢状況】09/14ソフトバンクグループの買い優勢金額は248.43億円 - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQm9jeXFITzduNVBBWGxPT3lteW5ic090R2JsdkYzUzJUTXlYMHpkS1VCWk4tWDU1Q3R6S3Y2R3hhMWl4aXlqcjVkcHdNM3l6QVMzUy1Kck1LelpLSFJld3lTd3lIZ1FDSEExcXNMZmowS0V5MmJkYWI1ZzF0Yjl6ZlZuVC1YZ0o2Qk16aFFUZUJLVlRaSkpTSA?oc=5",
+        "published": "Mon, 14 Sep 2026 06:45:00 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "ソフトバンクグループ(株)【SFTBY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9PS0JwdDRlRjRxb1VMWkhNNTEwcUtyQkN0SVdKbk1ZVEN2VkZYZFhkVktRdVlLNUhBdm45Q1ZxY0xZSUtsTDktcWhXNjFPSU5s?oc=5",
+        "published": "Mon, 14 Sep 2026 14:12:17 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ソフトバンクGが大幅続落､オープンAIは26年のIPO見送り - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1yUDlpelN1MXlxZjFCMjBiVFRVQzhNdDVObUNSWlBHdjYyYXlHLWdlVGhXSERVMXpsc1ZFNVZDTUdhRUhqR1dGUU9YSGxhRkJwOHBDcXdsbw?oc=5",
+        "published": "Mon, 14 Sep 2026 01:03:48 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "ソフトバンクGが1日で1割超安 オープンAIの一言で #shorts - YouTube",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9HUHdwaUpLZTZGRkYweTRpQzRlQWJMNGZJYWN6dHQyZ0JGQ0R3TlRYeUxNeUZHVmhNQjJWUDdDRWJOWUFkRnp2THlnWml1bXhGM1ZnWHBJcTFiVFc2?oc=5",
+        "published": "Mon, 14 Sep 2026 10:25:06 GMT",
+        "publisher": "YouTube"
+      },
+      {
+        "title": "ソフトバンクグループが118.7億ドルの融資調達 OpenAIへの投資を一段と拡大 - finance.biggo.jp",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE42aEdvRUFYSnU4bGtnUlh1YkMtT1hHdTZKZHpaTHotc0ViVmtaMFhPRXhFOWZmV3FmVFdSTmh3VGRLR011XzJKdkdCeUFsbllmemM1Ym5fX01qaHQ5RVVnRGZId25xN3BiYXh0UWExYkFSeEpM?oc=5",
+        "published": "Mon, 14 Sep 2026 04:25:00 GMT",
+        "publisher": "finance.biggo.jp"
+      },
+      {
+        "title": "読売３３３は２・３％安、３指数そろって下落…９月７日週の読売３３３分析 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQQUV6WkRDWHJiLW4yRXVXYUxUdENYS3prdUwtd0F3TzNRaEhHY0ZyUFNZMjEzRTJxYzRoQzJvaXpnaHA1TjdKWnBBakRHbGhUYzBnVzlTUDRhY19uZVJneERRajR6cjVaZHdlVEF2OFFVVGNZcHpMVHpNQ091WkloZV9ZTXdHSzhpNk4xRtIBjAFBVV95cUxQQUV6WkRDWHJiLW4yRXVXYUxUdENYS3prdUwtd0F3TzNRaEhHY0ZyUFNZMjEzRTJxYzRoQzJvaXpnaHA1TjdKWnBBakRHbGhUYzBnVzlTUDRhY19uZVJneERRajR6cjVaZHdlVEF2OFFVVGNZcHpMVHpNQ091WkloZV9ZTXdHSzhpNk4xRg?oc=5",
+        "published": "Mon, 14 Sep 2026 02:00:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "ブリッジローンの期限前返済に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533573.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260904531576.pdf",
+        "date": "2026-09-04 10:30:00"
+      },
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得の完了時期の変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260828527943.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824524817.pdf",
+        "date": "2026-08-24 09:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510515.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行内容確定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503871.pdf",
+        "date": "2026-07-30 17:00:00"
+      },
+      {
+        "title": "第68回及び第69回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501484.pdf",
+        "date": "2026-07-29 10:30:00"
+      },
+      {
+        "title": "OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260701586249.pdf",
+        "date": "2026-07-01 16:00:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577089.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "2021年発行米ドル建普通社債の期限前償還完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566742.pdf",
+        "date": "2026-06-10 11:30:00"
+      }
+    ]
+  }
+}

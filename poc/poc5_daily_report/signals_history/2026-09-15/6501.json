@@ -1,0 +1,229 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-09-15T09:46:32+09:00",
+  "price_as_of": "2026-09-15",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "直近 2026-09-14 に出した buy シグナルの継続監視中であり、新規のエントリーは控える。",
+        "evidence": "reference.recent_buy.date=2026-09-14"
+      },
+      {
+        "reason": "ファンダメンタルズの強気度は 60 と注目に値するが、バックテスト上、確信度が 70 未満の場合はカタリスト不足により収益性が低下する傾向がある。",
+        "evidence": "fundamental_view.strength=60"
+      },
+      {
+        "reason": "テクニカル面では25日移動平均線を下回っており、短期的なデッドクロスが継続しているため、反発を確認する段階にある。",
+        "evidence": "technical_view.points[0]: price_technical.sma5_vs_sma25=\"dead\""
+      },
+      {
+        "reason": "市場全体の地合いが下降トレンドにあり、個別銘柄の好材料が相殺されやすい局面である。",
+        "evidence": "reference.market_regime=\"downtrend\""
+      }
+    ],
+    "risks": [
+      "2026-09-17〜18に予定されている日銀金融政策決定会合に伴う為替および株価の急変動リスク。",
+      "25日移動平均線（5382.2円）を明確に上抜けない場合の下落トレンド継続リスク。",
+      "予想PER 29.89倍というセクター内での相対的な割高感による、地合い悪化時の売り圧力。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 60,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"直近 2026-09-14 に出した buy シグナルの継続監視中であり、新規のエントリーは控える。\",\n      \"evidence\": \"reference.recent_buy.date=2026-09-14\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズの強気度は 60 と注目に値するが、バックテスト上、確信度が 70 未満の場合はカタリスト不足により収益性が低下する傾向がある。\",\n      \"evidence\": \"fundamental_view.strength=60\"\n    },\n    {\n      \"reason\": \"テクニカル面では25日移動平均線を下回っており、短期的なデッドクロスが継続しているため、反発を確認する段階にある。\",\n      \"evidence\": \"technical_view.points[0]: price_technical.sma5_vs_sma25=\\\"dead\\\"\"\n    },\n    {\n      \"reason\": \"市場全体の地合いが下降トレンドにあり、個別銘柄の好材料が相殺されやすい局面である。\",\n      \"evidence\": \"reference.market_regime=\\\"downtrend\\\"\"\n    }\n  ],\n  \"risks\": [\n    \"2026-09-17〜18に予定されている日銀金融政策決定会合に伴う為替および株価の急変動リスク。\",\n    \"25日移動平均線（5382.2円）を明確に上抜けない場合の下落トレンド継続リスク。\",\n    \"予想PER 29.89倍というセクター内での相対的な割高感による、地合い悪化時の売り圧力。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "短期的な下降トレンドの中で直近は反発を見せていますが、主要な移動平均線を回復できておらず、市場全体の地合いも悪いため、方向感は不透明です。",
+      "points": [
+        {
+          "point": "短期的な5日移動平均線は25日移動平均線を下回っており、デッドクロス状態が継続しています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\""
+        },
+        {
+          "point": "MACDはシグナルを下回り、ヒストグラムもマイナス圏で下降トレンドが続いていることを示唆しています。",
+          "evidence": "price_technical.macd=-48.17, price_technical.macd_signal=-41.99, price_technical.macd_histogram=-6.18"
+        },
+        {
+          "point": "直近2営業日では反発を見せ、特に前日には2.42%の上昇を記録しましたが、終値は25日移動平均線を下回っています。",
+          "evidence": "price_technical.recent_5_days[3].change_pct=2.42, price_technical.last_close=5325.0, price_technical.sma25=5382.2"
+        },
+        {
+          "point": "中期的な60営業日の騰落率はプラスであり、TOPIXに対してもアウトパフォームしており、中期トレンドは良好です。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=11.78, price_technical.trend_60d.relative_to_topix_60d_pct=14.16"
+        },
+        {
+          "point": "市場全体の地合いはTOPIXが下降トレンドと判定されており、VIX指数も上昇しているため、警戒が必要です。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\", macro.indices[3].change_1d_pct=7.95"
+        }
+      ],
+      "cautions": [
+        "市場全体の地合いが下降トレンドであるため、個別銘柄の上昇が阻害される可能性があります。",
+        "前夜の米国ADRおよびセクターETFは上昇しましたが、これは当日の寄り付き価格にある程度織り込まれる可能性があります。",
+        "25日移動平均線（5382.2円）を明確に上抜けて維持できない場合、再び下落に転じるリスクがあります。"
+      ],
+      "key_levels": {
+        "support": 5040.0,
+        "resistance": 5382.2
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "デジタル事業を収益の柱とする構造変革と堅調な業績トレンドは評価できるが、直近第1四半期の利益成長鈍化と高水準なバリュエーションが上値を抑える要因となっている。",
+      "points": [
+        {
+          "point": "2026年3月期の年次業績において、営業利益が前年比約23%増と大幅な成長を達成しており、利益率の改善を伴う拡大トレンドにある。",
+          "evidence": "fundamentals.earnings_trend.annual[0]"
+        },
+        {
+          "point": "売上の26%を占めるデジタル事業が営業利益の首位となるなど、収益構造が高収益なデジタル/AI分野へシフトしていることがニュースで報じられている。",
+          "evidence": "news.headlines[0].title"
+        },
+        {
+          "point": "製造業PMIが54.9と拡大圏を維持しており、AI関連需要の強まりが同社の事業環境にとって追い風となっている。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9"
+        },
+        {
+          "point": "継続的な自己株式取得の実施を適時開示しており、株主還元姿勢と需給の下支えが確認できる。",
+          "evidence": "disclosures[0].title"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日〜18日に日銀金融政策決定会合を控えており、金利変動に伴うマクロ的なボラティリティのリスクがある。",
+        "2027年3月期 第1四半期（2026-06）のEPSが42.21円と前年同期の41.98円から微増に留まっており、成長のモメンタムに一服感が見られる。",
+        "予想PERが29.89倍、PBRが3.63倍と、過去の推移や大型重電セクターの中では割安感に乏しい水準にある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-14",
+    "days_ago": 1,
+    "confidence": 75,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "日立製作所、最も稼いでいるのはエネルギーではなくデジタル事業。株価は昨秋以降の高い水準へ（LIMO） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPQlZ6SGhVQmR1RF9MT0EzVTM2cl9IVUVrQ3ZJYnpJcUFRTi1mQ3B4NVA1RlpoRjhBZzNNbElGeVEtV256OVJJcTFOYW1jOGo3YjZVVk1NejNoZksxSnJPTW41T0VHQ1hqcEZ0QjRtejZXVHZMRTF1T0xlMW5vUGJnVUlzMkZpQm15?oc=5",
+        "published": "Mon, 14 Sep 2026 23:21:10 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "【イベントレポート】日立のIT×電力・エネルギー分野で働く！キャリア採用社員によるパネルトーク - Hitachi Global",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSmh1MklSamRJTGdrMjVneTdtYVZCY3ZFSEJSNkxDaGIwYmZIUVF5ek80Q1BfdjFNcXZzUEZsS0laeUMyaDJRdlU0aXdhNHhlNnJDdVRnekhLWkVPS2YzM1BIZVFiLW5IT3NaM05tVzcyamQyMnZOVFlWRVJrM29idzA1UWk2UQ?oc=5",
+        "published": "Mon, 14 Sep 2026 03:49:57 GMT",
+        "publisher": "Hitachi Global"
+      },
+      {
+        "title": "日立製作所、社会インフラ向けフィジカルAIの安全運用を支える制御ガードレール技術を開発 - robotstart.info",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1nSTNpZGlEMk1FLTM5UjNYS2VoWDFyVjR5ZjVyRHhvQWhtVFN3LW1tRkRVZE5ZdThlaUVmWUpISlBOYU4yMTBJRm9DMmVwSWJLd202bnhacDQ2VFRDbFVTTlZJQlo?oc=5",
+        "published": "Mon, 14 Sep 2026 07:00:03 GMT",
+        "publisher": "robotstart.info"
+      },
+      {
+        "title": "日立製作所、利益の柱は売上3番手のデジタル事業だった。昨秋以降の高い水準まで戻した株価が示唆するもの 売上構成比26%の事業が営業利益では首位。セグメント分解で見える日立製作所の収益構造 | 概要 | LIMO | くらしとお金の経済メディア - LIMO | くらしとお金の経済メディア",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1rWFVRQl9YbElCVFNOZUpubWhrRlQ2V2V4cFdwSlg1SndqTS14akU4XzhhcGY1UzJuaFpnZGZnR3MwY0dTUHd3NW9JYmc?oc=5",
+        "published": "Mon, 14 Sep 2026 09:40:00 GMT",
+        "publisher": "LIMO | くらしとお金の経済メディア"
+      },
+      {
+        "title": "ビッグテックが秋波 東原氏、変革への執念 - 日経クロステック",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE11TlZvMHRwSEtBTnJxVlpsNTM4U0h0VXRpWG1GLWQ5bW4tX2t3UEhLQVJUYmNKWkVPajVpTG84MUdSQ3FsWGJOSkNXMm1fRUtpQ3paWURnVmdDOWFlMVVvZnBYWGR0ZEF1N0hWd1V4dzlGdw?oc=5",
+        "published": "Mon, 14 Sep 2026 22:01:00 GMT",
+        "publisher": "日経クロステック"
+      },
+      {
+        "title": "日立製作所、ガードレール技術を開発 フィジカルAI安全運用 - 電波タイムズ",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBneHRZRXpxY2dsSk1Jb1FMbi1NQ1BHMjB5SDEtakl0Umx2dlJ3bDI0bHhtSkhONjBXcUNhTHl2ZWJuV3J5NDBaSlNiRWxQc19vSko5dmktZDhMWjc1LTVJMHhkRXgtUQ?oc=5",
+        "published": "Mon, 14 Sep 2026 02:32:24 GMT",
+        "publisher": "電波タイムズ"
+      },
+      {
+        "title": "日立、フィジカルAI向けのガードレール技術を開発、制御指令をリアルタイムに補正 - IT Leaders",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFByLXlpLVU3V1NwZXVjalRMLUk5Q2s2WEw5cWljZjU3RzJaNDhYeTBxbDFZM211T1NPVFlSVDZsQmg3R19NZ2pOcG5GdU5BUW5KbVRV?oc=5",
+        "published": "Mon, 14 Sep 2026 07:05:43 GMT",
+        "publisher": "IT Leaders"
+      },
+      {
+        "title": "社会インフラにおけるフィジカルAIの安全運用に向けたガードレール技術を開発 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5fLTNhUjZLY2E0RXg2WkNlV3pndnFDbHAwUmNuM3VELXBYSkRsa2N1WTdMdGRlMWc2UU5mRkJGeHBvRGUwSzc1VFV4STZqZE41UVJOMnB4Mk9mNkVZYW5wdjZVUE9XWkVGblE?oc=5",
+        "published": "Mon, 14 Sep 2026 02:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "日立製作所、社会インフラ向けフィジカルAIの安全運用を支える制御ガードレール技術を開発 1枚目の写真・画像 - robotstart.info",
+        "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFB2UUNncEZYalhRMmh5RlNHV20tWWJLLUdNTFYzbDJPVEZaRDI4WFA1dEFydWZ6b1lkT3ZzVDhxa1d1TjhwbHZ1VVdkSm9sYUQ2Q2NQMEl4ZUdXaXlyeDJHQTBIUGlPMThzOVVDX1lCUWR1cGc?oc=5",
+        "published": "Mon, 14 Sep 2026 07:00:03 GMT",
+        "publisher": "robotstart.info"
+      },
+      {
+        "title": "日立製作所が開発したフィジカルAIの安全運用を支えるガードレール技術の革新 - ニュースメディアVOIX",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5pWmRjbHVJME1PVlpWLVNQOTVGM3dLQjFCeWhYSnVwUmNuRFAzVlBHM2d6dXNmMVhXUTZzX3JLNnB4U2FmSkpvV25USjdvaFY5WjM3TGR3ei1TM2t5d2hSMmczNkU0OTl6Qi13Y1B0cjdZMlNhUmJ4SQ?oc=5",
+        "published": "Mon, 14 Sep 2026 06:09:23 GMT",
+        "publisher": "ニュースメディアVOIX"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260902530692.pdf",
+        "date": "2026-09-02 15:30:00"
+      },
+      {
+        "title": "個別決算における投資有価証券売却益(特別利益)の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260819523052.pdf",
+        "date": "2026-08-19 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804508474.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "（訂正）2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503298.pdf",
+        "date": "2026-07-30 13:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501771.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501801.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(モビリティ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566288.pdf",
+        "date": "2026-06-09 15:30:00"
+      }
+    ]
+  }
+}
