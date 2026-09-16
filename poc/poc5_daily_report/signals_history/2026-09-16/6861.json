@@ -1,0 +1,208 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-09-16T09:16:22+09:00",
+  "price_as_of": "2026-09-15",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズは極めて強固（1Q営業利益+45%）だが、テクニカル面で明確な弱気トレンドが継続しており、押し目を確認する段階にある。",
+        "evidence": "fundamental_view.points[0]: 営業利益+45% / technical_view.stance=bearish (strength=90)"
+      },
+      {
+        "reason": "MACDがマイナス圏でデッドクロスし拡大傾向にあり、下落のモメンタムが強いため、現時点でのエントリーはリスクが高い。",
+        "evidence": "technical_view.points[1]: MACD -1978.09, ヒストグラム -423.22"
+      },
+      {
+        "reason": "市場全体が下落トレンド（downtrend）にあり、かつ数日内に日銀会合という重要なイベントを控えているため、地合いの悪化が個別銘柄の好材料を上書きしている。",
+        "evidence": "reference.market_regime=downtrend / reference.next_boj_meeting=2026-09-17"
+      }
+    ],
+    "risks": [
+      "2026年9月17日から開催される日銀金融政策決定会合による市場ボラティリティの急増",
+      "期間安値である73,510円を割り込んだ場合のテクニカル的な投げ売り加速",
+      "米国ハイテク株の軟調（ADRのマイナス乖離）に伴う国内セクター全体の売り圧力",
+      "予想PER 40倍超という高割当による、成長鈍化懸念への過敏な反応"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズは極めて強固（1Q営業利益+45%）だが、テクニカル面で明確な弱気トレンドが継続しており、押し目を確認する段階にある。\",\n   \"evidence\": \"fundamental_view.points[0]: 営業利益+45% / technical_view.stance=bearish (strength=90)\"\n  },\n  {\n   \"reason\": \"MACDがマイナス圏でデッドクロスし拡大傾向にあり、下落のモメンタムが強いため、現時点でのエントリーはリスクが高い。\",\n   \"evidence\": \"technical_view.points[1]: MACD -1978.09, ヒストグラム -423.22\"\n  },\n  {\n   \"reason\": \"市場全体が下落トレンド（downtrend）にあり、かつ数日内に日銀会合という重要なイベントを控えているため、地合いの悪化が個別銘柄の好材料を上書きしている。\",\n   \"evidence\": \"reference.market_regime=downtrend / reference.next_boj_meeting=2026-09-17\"\n  }\n ],\n \"risks\": [\n  \"2026年9月17日から開催される日銀金融政策決定会合による市場ボラティリティの急増\",\n  \"期間安値である73,510円を割り込んだ場合のテクニカル的な投げ売り加速\",\n  \"米国ハイテク株の軟調（ADRのマイナス乖離）に伴う国内セクター全体の売り圧力\",\n  \"予想PER 40倍超という高割当による、成長鈍化懸念への過敏な反応\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 90,
+      "summary": "中期下落トレンド内にあり、MACDの弱気転換や市場レジームの悪化に加え、前夜のADR・セクターETFも揃って下落していることから、下値を模索する展開が強く示唆されます。",
+      "points": [
+        {
+          "point": "60日騰落率と対TOPIX相対騰落率がともにマイナスであり、中期的な弱気トレンドが継続していることが確認される。",
+          "evidence": "price_technical.trend_60d.change_60d_pct = -2.63, relative_to_topix_60d_pct = -0.67"
+        },
+        {
+          "point": "MACDがマイナス圏でシグナルを下回り、ヒストグラムも拡大傾向にあることから、下落のモメンタムが依然として強い。",
+          "evidence": "price_technical.macd = -1978.09, macd_histogram = -423.22"
+        },
+        {
+          "point": "前夜のNY市場においてADRおよびハイテク関連のセクターETFが大幅に下落しており、国内市場での売り圧力が想定される。",
+          "evidence": "us_overnight.adr.change_1d_pct = -1.52, sector_proxy.change_1d_pct = -1.81"
+        }
+      ],
+      "cautions": [
+        "TOPIX全体がdowntrend（market_regime）にあり、外部要因による更なる下押しリスクが高い。",
+        "RSI14が57.3と極端な売られすぎ水準にないため、値ごろ感からの自律反発を期待しにくい状態にある。",
+        "期間安値である73,510円を明確に割り込んだ場合、テクニカル的な投げ売りが加速する可能性がある。"
+      ],
+      "key_levels": {
+        "support": 73510.0,
+        "resistance": 80723.2
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "2027年3月期第1四半期の営業利益が前年同期比45%増と極めて高い成長を示しており、AI需要を背景とした製造業PMIの拡大も同社のビジネスモデルに強い追い風となっている。バリュエーションは高位にあるが、強力な利益成長のカタリストが確認されたことで、中長期的な投資価値は高いと判断する。",
+      "points": [
+        {
+          "point": "直近の2027年3月期1Qにおいて営業利益が前年同期比45%増と急拡大しており、成長の加速が確認された。",
+          "evidence": "news.headlines[0].title (キーエンス、2027年3月期1Qは営業利益+45%)"
+        },
+        {
+          "point": "日本の製造業PMIが54.9と7ヶ月連続で拡大しており、特にAI関連需要が新規受注を牽引する良好な外部環境にある。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9"
+        },
+        {
+          "point": "2024年3月期から2026年3月期にかけて売上高・営業利益ともに一貫した増収増益トレンドを維持しており、収益基盤が極めて堅実である。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        }
+      ],
+      "cautions": [
+        "明日（9月17日）から開催される日銀金融政策決定会合を控え、金利や為替の変動による市場全体のボラティリティ高揚リスクがある (macro.boj.monetary_policy_meeting.next_meeting)",
+        "予想PERが40倍を超えており、高成長への期待が既に価格に織り込まれているため、利益確定売りに押されやすい (fundamentals.valuation.forward_pe=40.516)",
+        "市場全体が25日移動平均線を下回るダウントレンドにあり、地合いの悪化が個別銘柄のパフォーマンスを抑制する可能性がある (macro.market_regime.market_regime=downtrend)"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "キーエンス、2027年3月期1Qは営業利益+45%。株価は昨秋から大幅に水準を切り上げ（LIMO） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1pZWx2UGJaMnU0ZXc2TC13eFZzMVM1WXpKNWZ4Vm1JSmFySTZ1enE1WlNoaWxnaUtmRjVxOEpiV0dGSWx3blhUcFdzV25QeHh3ZmtqVmp4YndUSGo5cmdmNEJXR3pVX2c3QjVpZmRYM3BIQzRFcFFsSHNYUGZjVHc?oc=5",
+        "published": "Tue, 15 Sep 2026 20:33:33 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "キーエンス発の安全なモバ充 踏んでも曲げても斧を使っても発火しにくい半固体を採用したワイヤレス充電対応モデルが登場 - BCN Retail",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBOWUhDVGtiQ0xFcjdGdmNSVGNWY3VBRmFaXzFsVERCX3p0TzkzbjdfOWxRRmk0aUtIZWI3V3RPSEQ5Y1R3dzR3UjBua24wZjdmZG5UX0RPcGE3YUlmeDdzZjFhM24zUQ?oc=5",
+        "published": "Tue, 15 Sep 2026 21:00:00 GMT",
+        "publisher": "BCN Retail"
+      },
+      {
+        "title": "キーエンス発の安全なモバ充 踏んでも曲げても斧を使っても発火しにくい半固体を採用したワイヤレス充電対応モデルが登場 - topics.smt.docomo.ne.jp",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPZzNua2pQSGo3a0hXLUlzdHNRRm9fM19RZm0tb29na25rUnphMHBvb3RONDZ3R2xsU1oyb1JQUWhvUElydUJwT21WZGtva1A3UTAwNzRXR2FpaTlkMTlxUVNiRjdETEN0Q1JGNmpPLWl5QVBRR1VpQ2pjSkU1Y0NvRm9n0gGCAUFVX3lxTE9nM25ralBIajdrSFctSXN0c1FGb18zX1FmbS1vb2drbmtSemEwcG9vdE40NndHbGxTWjJvUlBRaG9QSXJ1QnBPbVZka29rUDdRMDA3NFdHYWlpOWQxOXFRU2JGN0RMQ3RDUkY2ak8taXlBUFFHVWlDamNKRTVjQ29Gb2c?oc=5",
+        "published": "Tue, 15 Sep 2026 21:00:00 GMT",
+        "publisher": "topics.smt.docomo.ne.jp"
+      },
+      {
+        "title": "海外投資家の評価軸は「変化力」 カギは稼ぐ力の改善 ヴェリタスEYE（9月15日） - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE0zNnctd0NsejZyenJ4RFRzWTljV0NiMGxXYUZNdDB2TTZiS283cEo1Wl93TUtveU1ZM2ozVlB0V0tyZ0JlaEpOcWZETUNmMEdOa3NfZjFUY1lva044RXgtRjhoZFFpMWNuYUhSQjNhZjhrYno5U3pZREdxVXU1Zw?oc=5",
+        "published": "Tue, 15 Sep 2026 07:07:35 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "キーエンス発の安全なモバ充 踏んでも曲げても斧を使っても発火しにくい半固体を採用したワイヤレス充電対応モデルが登場 - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE52VF9mNUlLTDBYRVNaYUNFUXVxbi00TF8xNlVkbVM1TnVRRWNLamhaZmJpMWFvai04MHA3Q3lSUy1ENnFVTk9LOWdfdWdCR1ViUFdyR3lURmI1WEc1MjllUUVBSEJuRmhnbndqWkVlMGdqeDlWTmZONXlLU25sbDg?oc=5",
+        "published": "Tue, 15 Sep 2026 21:23:42 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "キーエンス、2027年3月期1Qは営業利益+45%。昨秋から大幅高となった株価と、利益率50%超を生む費用構造はどこから来たのか 原価率17%という土台と、人件費を軸に膨らんだ販管費。利益率50%超の源泉を過去5期の費用構造から探る | 概要 | LIMO | くらしとお金の経 - LIMO | くらしとお金の経済メディア",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5Zd19TTU8tMFVqYkU0OTMwNFg2VUFNTU1sdHVkSzE4YzNiUjJ4VDkxbmRTR3VuREtQMTNoSzVOR21BcEFtU2ZkWVE0LWg?oc=5",
+        "published": "Tue, 15 Sep 2026 10:40:00 GMT",
+        "publisher": "LIMO | くらしとお金の経済メディア"
+      },
+      {
+        "title": "キーエンス、2027年3月期1Qは営業利益+45%。昨秋から大幅高となった株価と、利益率50%超を生む費用構造はどこから来たのか 原価率17%という土台と、人件費を軸に膨らんだ販管費。利益率50%超の源泉を過去5期の費用構造から探る - LIMO | くらしとお金の経済メディア",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBMcHBEeDdZbDFGbkY4anpDN1BFbXIyUDVUV1FhTGNOZ01wQzVaTDMzSFJSS1hpSW9adkpGNVQwTDBwTERBLXR0dHVvaHlHSXMwSk5SSU1R?oc=5",
+        "published": "Tue, 15 Sep 2026 10:40:00 GMT",
+        "publisher": "LIMO | くらしとお金の経済メディア"
+      },
+      {
+        "title": "『STEAM FRAME』日本、台湾、香港で本日より販売開始 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5peTBEQWNXb2VyQ1hrMWtVbi1EZFpzX0FIN19vZHRZTFFCM3NaMUN6LVYxaWl1YzZRWGtVWDlqZE40bG50Rk5zcEVZWElid25jcFZqeGJycFVqMDBXVE53N0VxaHRHNS04LXc?oc=5",
+        "published": "Tue, 15 Sep 2026 01:03:42 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "インサイトアカデミー非常勤取締役の藤田孝が登壇するグローバル人事戦略解説WEBセミナーを開催 - topics.smt.docomo.ne.jp",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPUGREVk5XTVZjYUptQlpzelluaGgwa2tlVEdJZDYyZ19pbWdTc0VTM0d2cTNFNU95aWl5YXpKdmpzeEZnaUEwbFZVcm53UE9BMDdJOEZ4RmpZMnNXb1BiTndVU2kzSGtwcHEyVGVxLVNUSXVycmloVEZKZTBENHhsWXdYcWwtNUp4eFJKZll4d9IBiwFBVV95cUxQTHZFR2lRWnRkWTdta2llN0E4NDZlSmZIMUdINHJjbUlaVHhKbWhTRWpNVmhGX1JYcUpJb3B2OEtURVUycXNlN3JNMTZwS01FNHBvejhScVlROFA3UWJiQVhYWFVBT1NxVXVWYlhQbmpEVi01YWY1dnV0akV1NzJDR1B1M1dnZWllLVJB?oc=5",
+        "published": "Tue, 15 Sep 2026 13:20:08 GMT",
+        "publisher": "topics.smt.docomo.ne.jp"
+      },
+      {
+        "title": "＜画像7 / 10＞昨年ブレイク！カルピス“男子新体操部”の新CMがスゴイ - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE53ZkROMDhfbDNLdmdINW9hZXJSeTRrZmFiRGROcFg1ZjJLS095Z2JKVGxpYzJIdHBYcDFXZi1CUUhOUHdJYlpQSXdpNmJkQXlWeGRTeGczWWFmeHhmUVRNbE1DUXVGdw?oc=5",
+        "published": "Tue, 15 Sep 2026 02:23:25 GMT",
+        "publisher": "ウォーカープラス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      }
+    ]
+  }
+}

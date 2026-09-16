@@ -1,0 +1,219 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-09-16T09:22:24+09:00",
+  "price_as_of": "2026-09-15",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近14日以内（6日前）に同一銘柄への買いシグナルが出ているため、新規の買いエントリーはせず、既存ポジションの継続監視と判断します。",
+        "evidence": "reference.recent_buy"
+      },
+      {
+        "reason": "ファンダメンタルズ専門家は「中立」かつstrengthが60であり、新規の買いシグナルを発出する条件（bullishかつstrength≧70）を満たしません。",
+        "evidence": "fundamental_view.stance='neutral', fundamental_view.strength=60"
+      },
+      {
+        "reason": "テクニカルは強気を示していますが、両専門家が強気に揃った時点では材料が織り込み済みである可能性が高く、このタイミングでの新規エントリーは避けるべきです。",
+        "evidence": "technical_view.stance='bullish', technical_view.strength=75"
+      },
+      {
+        "reason": "日銀金融政策決定会合を翌日に控え、マクロ環境の不透明感が非常に高く、異常な高PERや内部統制上の課題などファンダメンタルズ上の懸念も複数存在します。",
+        "evidence": "fundamental_view.cautions[0], fundamental_view.cautions[1], fundamental_view.cautions[2]"
+      }
+    ],
+    "risks": [
+      "翌日に日銀金融政策決定会合が予定されており、長期金利の急騰など金融政策の変更によるマクロ環境の急変リスクが極めて高いです。",
+      "市場全体のレジームがdowntrendにあり、外部環境の悪化がKDDIの株価の重石となる可能性があります。",
+      "入力データにおける予想PERが異常に高い値を示しており、利益見通しに関する重大な不確実性や、2026年6月公表の内部統制の不備が示すガバナンス上の課題が残ります。",
+      "楽天モバイル向けローミング提供が9月末で終了することに伴い、ローミング収入の減少影響が懸念されます。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内（6日前）に同一銘柄への買いシグナルが出ているため、新規の買いエントリーはせず、既存ポジションの継続監視と判断します。\",\n   \"evidence\": \"reference.recent_buy\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ専門家は「中立」かつstrengthが60であり、新規の買いシグナルを発出する条件（bullishかつstrength≧70）を満たしません。\",\n   \"evidence\": \"fundamental_view.stance='neutral', fundamental_view.strength=60\"\n  },\n  {\n   \"reason\": \"テクニカルは強気を示していますが、両専門家が強気に揃った時点では材料が織り込み済みである可能性が高く、このタイミングでの新規エントリーは避けるべきです。\",\n   \"evidence\": \"technical_view.stance='bullish', technical_view.strength=75\"\n  },\n  {\n   \"reason\": \"日銀金融政策決定会合を翌日に控え、マクロ環境の不透明感が非常に高く、異常な高PERや内部統制上の課題などファンダメンタルズ上の懸念も複数存在します。\",\n   \"evidence\": \"fundamental_view.cautions[0], fundamental_view.cautions[1], fundamental_view.cautions[2]\"\n  }\n ],\n \"risks\": [\n  \"翌日に日銀金融政策決定会合が予定されており、長期金利の急騰など金融政策の変更によるマクロ環境の急変リスクが極めて高いです。\",\n  \"市場全体のレジームがdowntrendにあり、外部環境の悪化がKDDIの株価の重石となる可能性があります。\",\n  \"入力データにおける予想PERが異常に高い値を示しており、利益見通しに関する重大な不確実性や、2026年6月公表の内部統制の不備が示すガバナンス上の課題が残ります。\",\n  \"楽天モバイル向けローミング提供が9月末で終了することに伴い、ローミング収入の減少影響が懸念されます。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "中期的なトレンドがTOPIXを大幅にアウトパフォームしており、MACDや移動平均線のゴールデンクロスなどテクニカル形状は強気を示唆しています。ただし、市場全体の地合い悪化と前夜ADRの下落に伴う短期的な押し目形成に注意が必要です。",
+      "points": [
+        {
+          "point": "中期トレンドが非常に強力であり、市場全体が軟調な中で明確な逆行高の傾向にあります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=11.85, relative_to_topix_60d_pct=13.8"
+        },
+        {
+          "point": "MACDがシグナルを上回り、ヒストグラムもプラス圏で拡大しており、上昇モメンタムが継続しています。",
+          "evidence": "price_technical.macd=41.44, macd_signal=31.87, macd_histogram=9.58"
+        },
+        {
+          "point": "5日移動平均線が25日線を上回るゴールデンクロス状態にあり、短期・中期ともに上向きの力が働いています。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, sma5=3025.9, sma25=2933.1"
+        }
+      ],
+      "cautions": [
+        "市場全体のレジームがdowntrend（TOPIXが25日線の下）にあり、外部環境の悪化が重石となる可能性があります。",
+        "前夜のNY市場でADR（KDDIY）が-1.91%と下落しており、翌営業日の寄り付き価格にマイナスの影響を与える懸念があります。",
+        "RSIが59.3と過熱圏ではないものの、直近5営業日の高値3070円（2026-09-14）からの反落が見られ、目先の利益確定売りに注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 2933.1,
+        "resistance": 3095.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "第1四半期の増益や次世代衛星通信「Starlink」に関する好材料があるものの、極端に高い予想PER数値や内部統制の不備、さらに翌日に控えた日銀会合等のマクロ不透明感を考慮し、現在は静観すべき局面と判断します。",
+      "points": [
+        {
+          "point": "アジア初となる次世代衛星「Starlink Mobile V2」のサービス提供契約を締結。2027年内の高速通信・音声通話開始という具体的かつ新規性の高い成長カタリストが確認できる。",
+          "evidence": "news.headlines[0], news.headlines[3]"
+        },
+        {
+          "point": "直近の2026年6月期（第1四半期）において、EPSが51.33円と前年同期の43.0円から大きく伸長しており、業績トレンドは堅調に推移している。",
+          "evidence": "fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "継続的な自己株式の取得。2026年9月9日にも取得状況が開示されており、株主還元への積極姿勢が下値支持要因として機能している。",
+          "evidence": "disclosures.items[0]"
+        }
+      ],
+      "cautions": [
+        "日銀金融政策決定会合（9月17日〜18日）を翌日に控えており、長期金利の上昇を含むマクロ環境の急変リスクが極めて高い。(macro.boj.monetary_policy_meeting.next_meeting)",
+        "入力データにおける予想PER（forward_pe）が1306.438倍と異常に高い値を示しており、利益の見通しに関する重大な不確実性がある。(fundamentals.valuation.forward_pe)",
+        "2026年6月25日に「財務報告に係る内部統制の開示すべき重要な不備」を公表しており、ガバナンス及び信頼性におけるリスクが継続している。(disclosures.items[8])",
+        "楽天モバイル向けローミング提供が2026年9月末で終了することに伴う、ローミング収入の減少影響。(news.headlines[2])"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-10",
+    "days_ago": 6,
+    "confidence": 75,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "アジア初、次世代衛星「Starlink Mobile V2」契約を締結 - KDDI ニュースルーム",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFA2cHZtVmliZHhNemtGZ01kdHF6b3JjV2FQSHNfa1V0dG45b3NrRFliQTh5eVlYRG81TGc3OVRUbnJsUkFYb0NjRkpiZ05vQTZSU2pRQWpBbjlhTVpzbU5CNW9uTmYzeDQtUWhYbQ?oc=5",
+        "published": "Tue, 15 Sep 2026 01:00:00 GMT",
+        "publisher": "KDDI ニュースルーム"
+      },
+      {
+        "title": "「東京ゲームショウ2026」で自分を3D化、KDDIが出展 - k-tai.watch.impress.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8xZ0VsYTBCRmo1MTdjekdLTEJEaHBTb2prWVZjQW5FanlGd2FYaUpaal9LQVpoQXJObEtuQ3N6NzY3OGl4bkhVbmFCMlNRZ0hCLVV0Skg1MWVOeG92MDYzQ1lCX1ZpeDQ?oc=5",
+        "published": "Tue, 15 Sep 2026 21:00:00 GMT",
+        "publisher": "k-tai.watch.impress.co.jp"
+      },
+      {
+        "title": "楽天モバイル、ID連携必須の自動解約方針を撤回 KDDIローミングも9月末で終了へ - 東京報道新聞",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5GTTR3M3oyeE9USnAtMHkzajVyQVVZdmxrN2s2U1EyRTRFMzdlNTJ3bTVTVEEzcFU4d1lUUGg0NG9vZE01cUxRS0EtVVpXQ2xTckdz?oc=5",
+        "published": "Tue, 15 Sep 2026 23:00:14 GMT",
+        "publisher": "東京報道新聞"
+      },
+      {
+        "title": "KDDI、「Starlink Mobile V2」27年導入 通信速度が向上しVoLTEも利用可能 - CNET Japan",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE04a09rMzZWMTFZdE4tb3k2VUpHZU4ybWdJUGU4QmprUHNJR0lreVZvLUZHb3dVQ3lPa19fN1EzSjItZVZWM0lINHFDRWtMRVAzUUE?oc=5",
+        "published": "Tue, 15 Sep 2026 06:40:00 GMT",
+        "publisher": "CNET Japan"
+      },
+      {
+        "title": "KDDI、衛星とスマホの通信サービス拡充 圏外の山や離島も通話可能に - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBtdlVYNkVQUDlhbGlkMGd5dGhXUzlSaVJJeFRCeHVOM01KWDJWVWZLUXZiVkVMck1xaHFBMjNNNkJNMVFkanFNdFoydDRBUmhaR3h2SUVCOU5ONTJVZW9PV0pWUkhleEpIWGNveQ?oc=5",
+        "published": "Tue, 15 Sep 2026 04:22:08 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "KDDI、米SpaceXと次世代衛星「Starlink Mobile V2」のサービス提供契約を締結 - ビジネスネットワーク",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1YcDRCVDFNWjh5TGFFblVjRnI2d3I0RzFmUE44dFQwSktWY0FKNVZVam1ObDlOZEsydk5yZlc0aFpjMTZGUVotZlNqR0I4YXpRQmVn?oc=5",
+        "published": "Tue, 15 Sep 2026 01:43:32 GMT",
+        "publisher": "ビジネスネットワーク"
+      },
+      {
+        "title": "KDDI、「Starlink Mobile V2」27年導入 通信速度が向上しVoLTEも利用可能 - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPRmtKc2dHdU5KRWlLekdxZXhLUnlvR2NXUlo2dzRIR3Uxa1pCZWtRWURmT2RUWEVJTng1Z1Zxa1hYc3pkYV9KZXRqQzRUR0g1TzFYbThnMENwSDZGWGM0WXYzR1FGb2dPLTZPb3RGSzhtRDJYLV96TlZYZHV5bElNNGF2dVY3cDZzNDZpUjZn?oc=5",
+        "published": "Tue, 15 Sep 2026 06:40:00 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "KDDI、次世代衛星をアジア初契約 「Starlink Mobile V2」を利用 27年中に高速通信・音声通話へ - 電波新聞デジタル",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBsaTFabTF5dzZDcC1mZEwzemVycjZHa3NOajV0cm5OeERpMlN1RXhnMm1EaWMzdnZ3TE15ZUJPVlJycnVNb0p2WlFXMlFCaVFVUFE?oc=5",
+        "published": "Tue, 15 Sep 2026 03:24:02 GMT",
+        "publisher": "電波新聞デジタル"
+      },
+      {
+        "title": "KDDI、次世代衛星「Starlink Mobile V2」契約を締結 - 電波タイムズ",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE85MjNMVE5XNDlscmYxVG9COXNDcUR5U2NkaFZHN1hRZm9ucXBDbjZkM0FuVnJxMF9WRHQ4eXV1aXg1bk1qNlJwSng5RDdzUHhPYzRxU3B3VnZTTGQ4SDFJUDFuTVdIUQ?oc=5",
+        "published": "Tue, 15 Sep 2026 01:28:45 GMT",
+        "publisher": "電波タイムズ"
+      },
+      {
+        "title": "KDDIとSpaceX、次世代衛星「Starlink Mobile V2」契約を締結 - アジア初、2027年内に高速通信と音声通話へ - news.mynavi.jp",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1TamozeHhKLWpjY3M5d2g1X0sxYkZ5QmFOUEd6WTlyd3NPcTdCNGVmRTNvWDNSZWt6eFVEOG1Kb3Y1ampqdUhERzd4SUdtT2JQbnF4bGFOZG9KY0wz?oc=5",
+        "published": "Tue, 15 Sep 2026 05:11:49 GMT",
+        "publisher": "news.mynavi.jp"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533350.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      }
+    ]
+  }
+}

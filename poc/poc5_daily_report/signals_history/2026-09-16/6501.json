@@ -1,0 +1,221 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-09-16T09:28:54+09:00",
+  "price_as_of": "2026-09-15",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "2026-09-14にbuyシグナルを発行しており、短期的な連続エントリーを避けるための再エントリー抑制ルール（14日以内）を適用し、継続監視とする。",
+        "evidence": "reference.recent_buy (date: 2026-09-14)"
+      },
+      {
+        "reason": "ファンダメンタルズはAI需要への積極投資や強力な自社株買いを背景に非常に強力（strength 75）だが、テクニカル面では5日・25日線のデッドクロスが確認され、短期的な下落リスクがある。",
+        "evidence": "fundamental_view.strength=75 / technical_view.points[0]: price_technical.sma5_vs_sma25"
+      },
+      {
+        "reason": "市場全体が下降トレンド（downtrend）にあり、米国ADRの下落も加わって寄り付きからの下押し圧力が懸念される局面である。",
+        "evidence": "reference.market_regime=\"downtrend\" / technical_view.points[2]: us_overnight.adr.change_1d_pct=-1.43"
+      }
+    ],
+    "risks": [
+      "2026-09-17から開催される日銀金融政策決定会合に伴う、為替および株式市場全体のボラティリティ上昇リスク (reference.next_boj_meeting)",
+      "市場全体が25日線を下回るダウントレンドにあり、個別株の材料が無視され全体相場に引きずられるリスク (macro.market_regime)",
+      "予想PERが29倍台と過去比で高水準にあり、利益確定売りが加速した場合の調整余地 (fundamentals.valuation.forward_pe=29.31)"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"2026-09-14にbuyシグナルを発行しており、短期的な連続エントリーを避けるための再エントリー抑制ルール（14日以内）を適用し、継続監視とする。\",\n   \"evidence\": \"reference.recent_buy (date: 2026-09-14)\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズはAI需要への積極投資や強力な自社株買いを背景に非常に強力（strength 75）だが、テクニカル面では5日・25日線のデッドクロスが確認され、短期的な下落リスクがある。\",\n   \"evidence\": \"fundamental_view.strength=75 / technical_view.points[0]: price_technical.sma5_vs_sma25\"\n  },\n  {\n   \"reason\": \"市場全体が下降トレンド（downtrend）にあり、米国ADRの下落も加わって寄り付きからの下押し圧力が懸念される局面である。\",\n   \"evidence\": \"reference.market_regime=\\\"downtrend\\\" / technical_view.points[2]: us_overnight.adr.change_1d_pct=-1.43\"\n  }\n ],\n \"risks\": [\n  \"2026-09-17から開催される日銀金融政策決定会合に伴う、為替および株式市場全体のボラティリティ上昇リスク (reference.next_boj_meeting)\",\n  \"市場全体が25日線を下回るダウントレンドにあり、個別株の材料が無視され全体相場に引きずられるリスク (macro.market_regime)\",\n  \"予想PERが29倍台と過去比で高水準にあり、利益確定売りが加速した場合の調整余地 (fundamentals.valuation.forward_pe=29.31)\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "中期トレンドは堅調ですが、短期的な下落モメンタムが強く、市場全体の地合いも悪化しているため、上値は重い展開が予想されます。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日移動平均線を下回りデッドクロスを形成しており、MACDも売りシグナルを示しています。直近営業日も大幅に下落しました。",
+          "evidence": "price_technical.sma5_vs_sma25, price_technical.macd_histogram=-12.82, price_technical.recent_5_days[4].change_pct=-1.95"
+        },
+        {
+          "point": "TOPIXが25日線を下回り、市場レジームは下降トレンドにあります。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\", macro.market_regime.topix_close_vs_sma25=\"below\""
+        },
+        {
+          "point": "前夜の米国市場では、ADRおよび業種対応セクターETFがともに下落しており、本日の寄り付きに下押し圧力がかかる可能性があります。",
+          "evidence": "us_overnight.adr.change_1d_pct=-1.43, us_overnight.sector_proxy.change_1d_pct=-1.42"
+        },
+        {
+          "point": "過去60営業日ではTOPIXを大きく上回るパフォーマンスを維持しており、中期的なトレンドは堅調です。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=9.59, price_technical.trend_60d.relative_to_topix_60d_pct=11.55"
+        }
+      ],
+      "cautions": [
+        "中期的なトレンドの堅調さが意識され、下値で買い支えが入り反発する可能性があります。",
+        "前夜の米国市場における下落は、既に本日の寄り付き価格に織り込まれている可能性があります。",
+        "RSIが中立圏（48.6）にあり、売られすぎのサインは出ていないため、さらなる下落余地があることには注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 5040.0,
+        "resistance": 5378.04
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "AI需要を背景とした米国での大規模な変圧器工場新設などの積極投資に加え、2026年3月期の強い増益見通しと継続的な自社株買いが株価の下支えおよび上昇カタリストとして機能しています。",
+      "points": [
+        {
+          "point": "AI関連需要の拡大を背景に、米ミシシッピ州へ約800億円を投じ変圧器の新工場を建設するという具体的な成長投資が示されました。",
+          "evidence": "news.headlines[0], news.headlines[5]"
+        },
+        {
+          "point": "2026年3月期は売上高10兆円超、純利益も前期比約30%増の8,024億円を見込む強い業績トレンドにあります。",
+          "evidence": "fundamentals.earnings_trend.annual[0]"
+        },
+        {
+          "point": "5,000億円規模の自社株買い枠を設定しており、8月単月でも約572億円を市場から買い付けるなど、強力な株主還元と需給サポートが継続しています。",
+          "evidence": "fundamentals.recent_important_disclosures[0]"
+        },
+        {
+          "point": "日本の製造業PMIが54.9と拡大基調にあり、特にAI関連需要が生産を押し上げているマクロ環境は同社の事業構造に強い追い風です。",
+          "evidence": "macro.japan_pmi.manufacturing"
+        }
+      ],
+      "cautions": [
+        "2026年9月17日から開催される日銀金融政策決定会合が直近の大きなボラティリティ要因となります (macro.boj.monetary_policy_meeting)",
+        "市場全体が25日移動平均線を下回るダウントレンドにあり、地合い悪化による連れ安のリスクがあります (macro.market_regime)",
+        "予想PERが29倍台と過去のトレンド比で高水準にあり、業績期待が剥落した際の調整幅が大きくなる可能性があります (fundamentals.valuation.forward_pe=29.31)"
+      ],
+      "key_levels": {
+        "support": 5451.0,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-14",
+    "days_ago": 2,
+    "confidence": 75,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "日立製作所が米南部に800億円投資、変圧器の新工場 AI需要増で - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1mZXMtMDM3dVJ4bHZTMUJHcGFiZTBPU2lWaGV6akhBZW1JRWlvdmZ1THJ4ZEZzbnFxd2daT0NkUlVnVUhRalBWWTlrLThya2F5MWJZZzU4QjZERkpLbm5kWi1iQ0U0YnBKUVRFWg?oc=5",
+        "published": "Tue, 15 Sep 2026 18:29:16 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "(株)日立製作所【HTHIY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1sbW5DNlQwVHN5dlZ4RkdjaXVnbjJ4TGtWVWstLVdjcWtGcjdSdmlXSXRKVmdIdl9Fa0lIZ0YyUm5WU1lLZ1hFSWhmU2Q1eHhy?oc=5",
+        "published": "Tue, 15 Sep 2026 14:26:05 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "西武鉄道と日立製作所、西武鉄道20000系全車両のリニューアルを発表：鉄道技術 - MONOist",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBsVTUzNTlrQmJlYktuZ0pNcmR0WDg2ZkNkM1BydUdmc0dTNkFzcUdHUXlSUE1nalN6VUJMUW9VZmdjc2hQQkdNM1d2cEpYc3plTzBCcC1rQ1l2VjRkWnBKblI4V21WUE1jM1hqQXRxRQ?oc=5",
+        "published": "Tue, 15 Sep 2026 07:00:00 GMT",
+        "publisher": "MONOist"
+      },
+      {
+        "title": "日立の放射線治療装置が三菱重工・三菱電機の事業買収で急成長、ライバルの東芝・住友重機械に差をつけた「独自戦略」とは？ - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFA4Vms5T1EzY0dMQkQ3Yk5YejRSZlBZbjJuRmZoTjNyT2hrVkkzeTYzenJfQThIUTY4eGN5Tkt0VkFaa0dmWDFHbEZJU3rSAU9BVV95cUxPdmdKLURFdEE3bWZzb2d3QkhiaVp5Y09HTmJZSnI1TzBMM0N2MzVJVGRXYW4wTnptOXgzdGYzTDZyb3BhandLZjFQaHQzT084?oc=5",
+        "published": "Tue, 15 Sep 2026 19:50:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "HMAXのAI事業拡大は、日立株（東証：6501）の強気シナリオを変えるのか？ - simplywall.st",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNSHJSM2o2SlpSVk9ZZFpVblVHUDcwMjRnX1BwdEFKbkctdExaSE5GTmx4UFh3WjhHTmVtTGtsMG9KS3F3ckxYRGVieUhtTHRFZGFhZG9JUmlaUkVoTnFvY1o2WnltZFpzWTVmT1I0MmdXVUdORUNRMmJIeFRlTHZQZHBCV1NDV25TQVNaOHp1N2MtUGVHdnVGNFFleWloeEnSAZ8BQVVfeXFMTUhyUjNqNkpaUlZPWWRaVW5VR1A3MDI0Z19QcHRBSm5HLXRMWkhORk5seFBYd1o4R05lbUxrbDBvSktxd3JMWERlYnlIbUx0RWRhYWRvSVJpWlJFaE5xb2NaNlp5bWRac1k1Zk9SNDJnV1VHTkVDUTJiSHhUZUx2UGRwQldTQ1duU0FTWjh6dTdjLVBlR3Z1RjRRZXlpaHhJ?oc=5",
+        "published": "Tue, 15 Sep 2026 05:22:58 GMT",
+        "publisher": "simplywall.st"
+      },
+      {
+        "title": "日立エナジー、米ミシシッピ州に変圧器工場を新設 政府合意の一環、820億円投資 - 産経ニュース",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1jZ0ZONXllMTMwU0xjVVQ0TDhXSjcydl9ZNC1CYnQwM2MyLVNXU0dnQ0lDSHFyUTVTbDFPMnNKQURXVE40dDZ3UlI2N05LZTNqbGhBX3EzNDg1R3ptcVFzNkRQNkVJc3p5V2Q5d0NQeWdtdEhla1E?oc=5",
+        "published": "Tue, 15 Sep 2026 15:03:09 GMT",
+        "publisher": "産経ニュース"
+      },
+      {
+        "title": "現地に人を配置せず、無人でインフラ点検。日立、Nokia ECE製ドローン「Nokia Drone Networks」の国内販売権を初取得 - digital-construction.jp",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5rV051RDVVTHNqeDNacTNlUFd6LTlxYUFfSTh6LVF3U0JxQ3V4WGI0VnNfcnBpc0hMSDhnLU5HNTFVVUkyOXVuS25zWHR2NzBKVGRz?oc=5",
+        "published": "Tue, 15 Sep 2026 07:12:44 GMT",
+        "publisher": "digital-construction.jp"
+      },
+      {
+        "title": "空調世界王者ダイキンのグローバル戦略を支える「2大施策」とは？最高益を連続更新も“一本足打法”に漂う不安 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9jcFBtQVJlQXpTdmxiMlV5cnJ3SnlhWmVJemlyVzFrN0lFa3FzR0x0Y2dLSlJuS2x5NXdIMHB5VFIwalFTUmFGUjZCT3bSAU9BVV95cUxQeWZsRGIwWGFHZjdKeHdlRFYtSmVmT25RZHhPS0tMRzlXaTBkM2dGX2pRODRJZFJneGpyTEo2cl9uMnQtdzRWUnpUSnY1T3BB?oc=5",
+        "published": "Tue, 15 Sep 2026 19:55:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "日立、米に変圧器工場を新設 政府合意の一環、820億円 - 47NEWS",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBhVkhyMV8yR2pFVVhHQkFBY01kSlh3dTZ3cWhSRkZDUUl3ckM5Z1YwMGYxcWpFVG51aFhfeUtDYURHRzQ1S3dvZDhyZw?oc=5",
+        "published": "Tue, 15 Sep 2026 15:02:17 GMT",
+        "publisher": "47NEWS"
+      },
+      {
+        "title": "(株)日立製作所【6501】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5FOGFhZTRqdlZZOUdHOFdVVmNKdzRFZEhobkFIaW5uR3VtY1lyaHMybXppSmI1M2FpRXN5eVNMTmZwUXhtNXkzQTdGLVNkQ3lkNW9ZTUlRNEZrMU5GQ2hZ?oc=5",
+        "published": "Tue, 15 Sep 2026 02:53:23 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260902530692.pdf",
+        "date": "2026-09-02 15:30:00"
+      },
+      {
+        "title": "個別決算における投資有価証券売却益(特別利益)の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260819523052.pdf",
+        "date": "2026-08-19 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804508474.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "（訂正）2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503298.pdf",
+        "date": "2026-07-30 13:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501771.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501801.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(モビリティ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566288.pdf",
+        "date": "2026-06-09 15:30:00"
+      }
+    ]
+  }
+}

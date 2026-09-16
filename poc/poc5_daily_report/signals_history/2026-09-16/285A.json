@@ -1,0 +1,224 @@
+{
+  "code": "285A",
+  "name": "キオクシアホールディングス",
+  "generated_at": "2026-09-16T09:30:51+09:00",
+  "price_as_of": "2026-09-15",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 45,
+    "reasons": [
+      {
+        "reason": "株価は中期的な下落トレンドにあり、主要移動平均線を下回るなどテクニカル指標は強い売りシグナルを示しています。",
+        "evidence": "technical_view.stance=bearish (strength=80), technical_view.points[0,2,3]"
+      },
+      {
+        "reason": "ファンダメンタルズは将来的な業績急回復を予測しているものの、PER50倍超、PBR11倍超とバリュエーションが高水準であり、成長期待は織り込み済みと判断されます。",
+        "evidence": "fundamental_view.points[0,1]"
+      },
+      {
+        "reason": "ADR上場報道、大株主売却、AI減速懸念など、株価に影響を与える材料がポジティブ・ネガティブ双方に混在し、方向感が定まっていません。",
+        "evidence": "fundamental_view.points[2]"
+      },
+      {
+        "reason": "TOPIXが下降トレンドにあり、市場全体の地合いが弱いため、個別の買い材料が出ても上値が重い展開が予想されます。",
+        "evidence": "reference.market_regime=downtrend, fundamental_view.points[3]"
+      }
+    ],
+    "risks": [
+      "翌日（2026年9月17日〜18日）に日銀金融政策決定会合を控えており、為替や金利の変動による相場急変リスクがあります。",
+      "大株主である東芝による保有株売却が継続し、需給悪化による株価下落圧力となる可能性があります。",
+      "次回決算発表（2026年10月30日）に向けて、AI関連需要やメモリ市況の変動が業績見通しに不透明感をもたらす可能性があります。",
+      "米国半導体セクター（特にSOX指数やSMH）の動向によっては、国内半導体関連株も連動して変動するリスクがあります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 45,\n \"reasons\": [\n  {\n   \"reason\": \"株価は中期的な下落トレンドにあり、主要移動平均線を下回るなどテクニカル指標は強い売りシグナルを示しています。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=80), technical_view.points[0,2,3]\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは将来的な業績急回復を予測しているものの、PER50倍超、PBR11倍超とバリュエーションが高水準であり、成長期待は織り込み済みと判断されます。\",\n   \"evidence\": \"fundamental_view.points[0,1]\"\n  },\n  {\n   \"reason\": \"ADR上場報道、大株主売却、AI減速懸念など、株価に影響を与える材料がポジティブ・ネガティブ双方に混在し、方向感が定まっていません。\",\n   \"evidence\": \"fundamental_view.points[2]\"\n  },\n  {\n   \"reason\": \"TOPIXが下降トレンドにあり、市場全体の地合いが弱いため、個別の買い材料が出ても上値が重い展開が予想されます。\",\n   \"evidence\": \"reference.market_regime=downtrend, fundamental_view.points[3]\"\n  }\n ],\n \"risks\": [\n  \"翌日（2026年9月17日〜18日）に日銀金融政策決定会合を控えており、為替や金利の変動による相場急変リスクがあります。\",\n  \"大株主である東芝による保有株売却が継続し、需給悪化による株価下落圧力となる可能性があります。\",\n  \"次回決算発表（2026年10月30日）に向けて、AI関連需要やメモリ市況の変動が業績見通しに不透明感をもたらす可能性があります。\",\n  \"米国半導体セクター（特にSOX指数やSMH）の動向によっては、国内半導体関連株も連動して変動するリスクがあります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 80,
+      "summary": "キオクシアHDは中期的な下落トレンドが継続しており、MACDも売りシグナルを示しています。直近の急落と主要移動平均線を下回る株価に加え、市場全体の地合いも弱気であり、下落圧力が強いと判断されます。",
+      "points": [
+        {
+          "point": "過去60営業日で株価が大幅に下落しており、TOPIXに対しても大きくアンダーパフォームしているため、中期的な下落トレンドが継続していると判断されます。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-52.35, price_technical.trend_60d.relative_to_topix_60d_pct=-50.39"
+        },
+        {
+          "point": "MACDがシグナルを下回り、MACDヒストグラムもマイナス圏にあり、売りの勢いが優勢であることを示しています。",
+          "evidence": "price_technical.macd=490.6, price_technical.macd_signal=623.63, price_technical.macd_histogram=-133.03"
+        },
+        {
+          "point": "株価は5日移動平均線と25日移動平均線の両方を下回っており、短期的にも上値が重い状況です。",
+          "evidence": "price_technical.last_close=51750.0, price_technical.sma5=54292.0, price_technical.sma25=53229.2"
+        },
+        {
+          "point": "直近5営業日では、2日間で6%を超える下落を経験しており、強い売り圧力が確認されています。",
+          "evidence": "price_technical.recent_5_days[2].change_pct=-6.99, price_technical.recent_5_days[3].change_pct=-6.37"
+        },
+        {
+          "point": "TOPIXが下降トレンドにあり、前夜の米国半導体セクターETF（SMH）も大幅下落していることが、ネガティブな市場センチメントを裏付けています。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\", us_overnight.sector_proxy.change_1d_pct=-4.75"
+        }
+      ],
+      "cautions": [
+        "直近の取引で小幅ながら反発が見られる点には注意が必要です。",
+        "フィラデルフィア半導体指数（SOX指数）は前夜に小幅ながら上昇しており、個別株への影響は読みにくい可能性があります。",
+        "前夜の米国市場の動きは、当日の寄り付き価格にすでに織り込まれる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 50590.0,
+        "resistance": 53229.2
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "業績は急回復・高収益基調にあるものの、PER50倍超・PBR11倍超とバリュエーションは高水準です。ADR上場報道と大株主売却・AI減速懸念といった材料が交錯し、直近の日銀会合リスクも重なるため中立と判断します。",
+      "points": [
+        {
+          "point": "2024年3月期の営業赤字（-2527億円）から2026年3月期には営業利益8704億円、純利益5545億円へと業績が急拡大しており、ROEも87.1%と高い収益性を示しています。",
+          "evidence": "fundamentals.earnings_trend.annual[0,2], fundamentals.valuation.return_on_equity=0.871"
+        },
+        {
+          "point": "実績PERが50.25倍、PBRが11.80倍に達しており、ファンダメンタルズ上の成長期待が相当程度織り込まれたバリュエーション水準となっています。",
+          "evidence": "fundamentals.valuation.trailing_pe=50.251, fundamentals.valuation.price_to_book=11.795"
+        },
+        {
+          "point": "2026年9月15日にADR上場による大規模調達報道が出た一方、会社側の『未定』発表や東芝による保有株売却報道、AI減速論の報道などポジティブ・ネガティブ双方の材料が拮抗しています。",
+          "evidence": "news.headlines (published: Tue, 15 Sep 2026)"
+        },
+        {
+          "point": "製造業PMIは54.9と好調を維持しているものの、TOPIX連動ETFが25日線を下回るダウントレンドにあり、相場環境全体の地合いが重荷となっています。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9, macro.market_regime.market_regime=downtrend"
+        }
+      ],
+      "cautions": [
+        "翌日（2026年9月17日〜18日）に日銀金融政策決定会合を控えており、為替・金利変動による相場急変リスクが存在します。",
+        "東芝による株式売却など大株主の保有比率低下に伴う需給悪化が継続する懸念があります。",
+        "次回決算発表（2026年10月30日）に向けてAI関連需要やメモリ市況の変動が業績見通しに与える影響に注意が必要です。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "キオクシアHD、株価反発 「ADR上場で100億ドル調達検討」報道 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5QVXpHSF9IWTlneWljcm40ZTlNa2pVUW9vSGR3ZUhmdzRxMjBUZXhIeTdwaVFkMS1mX3FoaFJ4NHZQcVhKbGlKTi05MnhiUmhoQk1paWYwSWlGZVN6c0VhVC1PN3RDelh4cmFpeg?oc=5",
+        "published": "Tue, 15 Sep 2026 01:36:24 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "キオクシア初参加のTGSで注目！好業績eスポーツ関連株 - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE12d1RuVXFLUHJZMk84a0VndUpLd2FjQ1M1UTl0eFh5SWthbWdYVW9MQ3hnaVVOeVN0MHhadnJ5anB6dFlIeHZXaVE1MUtIVEx5bG50SURDUQ?oc=5",
+        "published": "Tue, 15 Sep 2026 21:00:00 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "キオクシアHD、米上場の時期や方法「未定」（時事通信） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5lajlYT21qbTQwbkRXRk5wRk5jMllCTjk1TmRpSFZUYzFWaDFXY2RNQUtRRU1iWGtpOUliYnQ3cGUxelZ6d3I5OWlMRjM1bXVxaGVqbEk2TXBQWXVubE9pdzd3bUZjYlJnQWNINUNGTWIxNVJIQ09nbEJmeHNNejQ?oc=5",
+        "published": "Tue, 15 Sep 2026 11:00:45 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "Lister、キオクシア投資の需要波及DBを提供 - LOGISTICS TODAY",
+        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE00aWhSUnE3Zlh3b1l0dndwX3BDc2stMTRuNnBGRThVcFgweERxQTQ5R3JCRUtDMXRPazJvR2hvNnNzeU1MUzBGZGtR?oc=5",
+        "published": "Tue, 15 Sep 2026 10:51:09 GMT",
+        "publisher": "LOGISTICS TODAY"
+      },
+      {
+        "title": "話題株ピックアップ【昼刊】：レオパレス、ＧＯ、キオクシア - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA1WWJ3TjRpMWd3X3VteTRDd1QtVWVvSkgtR29Nd2l5ZDFLbU1LUXVIY0lnUnVrazlGQjZVX00wbHJRd3ZzNHpENW1hbDlFRWNmWlFVNTFnNU9LREtKYXQ5WQ?oc=5",
+        "published": "Tue, 15 Sep 2026 02:37:55 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "東芝がキオクシア株を売却 保有率1年で半減 7日時点で12.84％ - khb東日本放送",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5pb2syN04tSFFsbHRxZWwzNWNXd21EWURrMTc5WnZ2VjBKaUlmc29CMG1nYnJ1bFM5bDU1Tko0UXprTUZSRDFJLUtacWpWQlk?oc=5",
+        "published": "Tue, 15 Sep 2026 01:02:11 GMT",
+        "publisher": "khb東日本放送"
+      },
+      {
+        "title": "キオクシアHD、ADR上場で1兆5000億円規模の調達を検討－関係者 フォトギャラリー | TBS CROSS DIG with Bloomberg - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNOWZhNzYwb3cxR1MybWlRNUFXZGhYWDFYVTVGdkNEbW9QSm9FdHlWb1JIZUFWMW5BTnNxNHdQWEFqYkMyYTJMTlZLbkw2bVBhcGVIQ3NOVV8zd1pUYTl4YmJkMFJWam9FNVpwMmplLWpib21FZDVHOGlHR2VFMlhycWlIM2FXNGc?oc=5",
+        "published": "Tue, 15 Sep 2026 07:00:30 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "日経平均は１３０円程度安、売買代金はキオクシア、ソフバンＧ、太陽誘電が上位 速報 - kabushiki.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE1qbHBIYktBd2laeWxNNjR5UGE3THRPM3VKV2dqV2xpNXFyMDhubl9UREh4UHN3V2oxb09ucUsyb2RGb1NoQmFz?oc=5",
+        "published": "Tue, 15 Sep 2026 05:03:00 GMT",
+        "publisher": "kabushiki.jp"
+      },
+      {
+        "title": "AI開発“減速論”過熱でソフトバンク、キオクシア株急落 その他AI関連株も - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBCXzllRFZpRUdjZW9zYTFuMTdFekphaURqelRUc1lWOUpEdmE4czVnWmVQWC02ZjZiT3YtVjQ1M0ctdldqdkdEY2V5TXVfRkZxb1B5Y1YzWEZUNzhyOW1nbmxZdXhnbnI3MDgtNw?oc=5",
+        "published": "Tue, 15 Sep 2026 01:08:30 GMT",
+        "publisher": "ITmedia"
+      },
+      {
+        "title": "東芝がキオクシア株を売却 保有率1年で半減 7日時点で12.84％ - テレ朝NEWS",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9WdVIzRkp2eHR0VWJFaWczOUM0cTlFVHRnRDk4Yl9ic2UzNjBQdTdKTy1fY2sxNkxZM1ZhcTRWTTAxWW9LVXFEb3JjcnZZbTJIVDZRcUFMd04yb1RmbzdqeW5vaEgyaEVDTjljZ1lYSHdDQQ?oc=5",
+        "published": "Tue, 15 Sep 2026 01:02:11 GMT",
+        "publisher": "テレ朝NEWS"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "サンディスクコーポレーションとの投資計画に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260827527338.pdf",
+        "date": "2026-08-27 17:50:00"
+      },
+      {
+        "title": "（訂正）「主要株主である筆頭株主の異動に関するお知らせ」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260817521854.pdf",
+        "date": "2026-08-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況及び取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260810517251.pdf",
+        "date": "2026-08-10 18:15:00"
+      },
+      {
+        "title": "主要株主である筆頭株主の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260810517256.pdf",
+        "date": "2026-08-10 18:15:00"
+      },
+      {
+        "title": "当社子会社に対する訴訟の判決に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260803506332.pdf",
+        "date": "2026-08-03 15:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505265.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "株式分割及び株式分割に伴う定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505272.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "自己株式の取得枠設定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505280.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "勤務継続型株式報酬制度及び業績連動型株式報酬制度のユニット付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505321.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "当社子会社に対する訴訟の陪審評決に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595788.pdf",
+        "date": "2026-07-17 13:00:00"
+      }
+    ]
+  }
+}

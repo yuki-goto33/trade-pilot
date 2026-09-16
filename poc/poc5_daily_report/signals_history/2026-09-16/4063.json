@@ -1,0 +1,211 @@
+{
+  "code": "4063",
+  "name": "信越化学工業",
+  "generated_at": "2026-09-16T09:21:37+09:00",
+  "price_as_of": "2026-09-15",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ面では、創立100周年記念配当および増配、自己株式取得の継続という強力な株主還元策が示されており、本来は買いを検討すべき局面である。",
+        "evidence": "fundamental_view.points[0]: 2026-09-15 記念配当20円・年間136円への増額発表"
+      },
+      {
+        "reason": "しかし、テクニカル面では5日線と25日線のデッドクロスに加え、MACDもマイナス圏で拡大しており、非常に強い下落トレンドの中にある。",
+        "evidence": "technical_view.points[1]: sma5_vs_sma25 デッドクロス, technical_view.points[2]: macd=-99.65"
+      },
+      {
+        "reason": "統合判断ルールに基づき、ファンダメンタルズが強気であってもテクニカルが弱気（strength 85）かつ市場全体がダウントレンドの場合、底打ちを確認するまでエントリーを控えるべきと判断した。",
+        "evidence": "technical_view.stance=bearish, reference.market_regime=downtrend"
+      }
+    ],
+    "risks": [
+      "2026-09-17から18日に控える日銀金融政策決定会合による為替および金利の急変動リスク (reference.next_boj_meeting)",
+      "市場全体の下降トレンド継続による、好材料の織り込みの無効化 (reference.market_regime)",
+      "直近安値 5,628円（technical_view.key_levels.support）を維持できず、さらなる下値模索に入る可能性"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ面では、創立100周年記念配当および増配、自己株式取得の継続という強力な株主還元策が示されており、本来は買いを検討すべき局面である。\",\n   \"evidence\": \"fundamental_view.points[0]: 2026-09-15 記念配当20円・年間136円への増額発表\"\n  },\n  {\n   \"reason\": \"しかし、テクニカル面では5日線と25日線のデッドクロスに加え、MACDもマイナス圏で拡大しており、非常に強い下落トレンドの中にある。\",\n   \"evidence\": \"technical_view.points[1]: sma5_vs_sma25 デッドクロス, technical_view.points[2]: macd=-99.65\"\n  },\n  {\n   \"reason\": \"統合判断ルールに基づき、ファンダメンタルズが強気であってもテクニカルが弱気（strength 85）かつ市場全体がダウントレンドの場合、底打ちを確認するまでエントリーを控えるべきと判断した。\",\n   \"evidence\": \"technical_view.stance=bearish, reference.market_regime=downtrend\"\n  }\n ],\n \"risks\": [\n  \"2026-09-17から18日に控える日銀金融政策決定会合による為替および金利の急変動リスク (reference.next_boj_meeting)\",\n  \"市場全体の下降トレンド継続による、好材料の織り込みの無効化 (reference.market_regime)\",\n  \"直近安値 5,628円（technical_view.key_levels.support）を維持できず、さらなる下値模索に入る可能性\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 85,
+      "summary": "中期的な下落トレンドが継続しており、移動平均線やMACDなどの主要指標も弱気を示唆しています。市場全体がダウントレンドにある中、明確な反転の兆しが見られません。",
+      "points": [
+        {
+          "point": "60日騰落率が-22.12%、対TOPIX相対騰落率が-20.17%と、中期的に極めて強い下落トレンドの中にあります。",
+          "evidence": "price_technical.trend_60d"
+        },
+        {
+          "point": "5日線が25日線を下回るデッドクロス状態にあり、株価は5,991円の25日線を大きく下回って推移しています。",
+          "evidence": "price_technical.sma5_vs_sma25, price_technical.last_close=5693.0, price_technical.sma25=5991.76"
+        },
+        {
+          "point": "MACDがマイナス圏でシグナルを下回って推移しており、ヒストグラムもマイナス圏で拡大傾向にあります。",
+          "evidence": "price_technical.macd=-99.65, price_technical.macd_histogram=-22.16"
+        },
+        {
+          "point": "市場全体がダウントレンド（downtrend）と判定されており、個別銘柄への売り圧力が強まりやすい地合いです。",
+          "evidence": "macro.market_regime.market_regime=downtrend"
+        }
+      ],
+      "cautions": [
+        "ADR（+0.22%）やSOX指数（+0.4%）が小幅に上昇しており、寄り付き直後は自律反発を見せる可能性があります。",
+        "RSI14が52.9と中立圏にあり、売られすぎの過熱感は解消されているため、売り一巡後の戻り売りに警戒が必要です。",
+        "直近の安値である5,628円付近で下げ止まるかどうかが当面の焦点となります。"
+      ],
+      "key_levels": {
+        "support": 5628.0,
+        "resistance": 5991.76
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "創立100周年記念配当の実施および配当予想の増額修正、継続的な自己株式取得策の提示により、株主還元姿勢が強く評価される。AI需要を背景とした製造業PMIの拡大も事業環境への追い風となる。",
+      "points": [
+        {
+          "point": "2026年9月15日に、創立100周年記念配当20円の実施と、年間配当予想を136円に増額する修正を発表した。これは直接的な株価の押し上げ要因となる。",
+          "evidence": "news.headlines (published: 2026-09-15)"
+        },
+        {
+          "point": "コミットメント型自己株式取得（FCSR）の事後調整や、過去数ヶ月にわたるToSTNeT-3等を用いた自社株買いの継続により、資本効率の改善と需給の引き締まりが期待される。",
+          "evidence": "disclosures (2026-09-15 / 2026-07-30)"
+        },
+        {
+          "point": "日本の製造業PMIが54.9と7ヶ月連続で拡大しており、特にAI関連需要の強さが指摘されている点は、半導体材料等の高付加価値製品に強みを持つ同社のファンダメンタルズを支える。",
+          "evidence": "macro.japan_pmi.manufacturing (2026-08)"
+        }
+      ],
+      "cautions": [
+        "日銀金融政策決定会合（2026-09-17〜18）が目前に控えており、為替や金利の変動による市場全体のリスクオフ心理が波及する可能性がある (macro.boj.monetary_policy_meeting)",
+        "2026年3月期の営業利益は前期比で減益（6,352億円）となっており、今後の四半期決算における利益率の回復状況を確認する必要がある (fundamentals.earnings_trend.annual)",
+        "市場全体が下降トレンド（downtrend）にあり、個別銘柄の好材料が相場の地合いに相殺されるリスクに注意が必要 (macro.market_regime)"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "信越化学工業[4063]：コミットメント型自己株式取得（FCSR）における事後調整のお知らせ 2026年9月15日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNbnFJd1NqcmFMc2FCUS1NVW8tcGNLRzVsWXJJY0E1YUkyb3dQbnFyTW9xbGE1WUY3V3hiYmFZVEpSX0xjX09XRzVxRTdXSk1nMWk1bGI0LTl4RTlMNXA1QWZ2NUdfYnhDbGYxNzVXRHliSk52RDUxSjN6dTByb0lYb2ZubG43bV9PUGRJeGRaRkZaVXpXTWVtWkhNMkxhZG9xMXRnT3JMdk5OdHM2RkVKWHpmMEQxQjBvb2d0aFdTQzhuYnRrU1FxWUVmcDA?oc=5",
+        "published": "Tue, 15 Sep 2026 06:30:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "信越化学工業、創立１００周年記念配当２０円を実施へ、年間配当予想１３６円に増額 - kabu-ir.com",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9td1JzV3RpNFdmUkJoaS1PSTdoNG9GOElaV2t2SzJ3UUVnYXh6SVpkdklWWVA5SmFySy1mYjV3Wno2VkVUS1c3bzV3a1ZoTjVjc1ZQaA?oc=5",
+        "published": "Tue, 15 Sep 2026 21:00:00 GMT",
+        "publisher": "kabu-ir.com"
+      },
+      {
+        "title": "信越化、今期配当を20円増額修正 - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE14VEdPRDlYZE1odUpxZzR6TFpHaHl5MW8zQVhPVkkxRWVYbHNXVV9JUlZZV1pZRmlGOWNSZ250aFVycHNWRkx3YnFzN040dUd5c0E?oc=5",
+        "published": "Tue, 15 Sep 2026 06:30:00 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "9月15日に業績・配当予想を修正した会社はこちら - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1paW50UWhWMjJEelhWWGpzblQtMGhUZ09DZ1FhcnFVZWlRNE42Z05GVUprTjFoWGpIRXRXYnB1ZDJvY2prcnhGcWZmWkVKbHN2U1pCTmRaNA?oc=5",
+        "published": "Tue, 15 Sep 2026 07:30:00 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "信越化学工業[4063]：創立100周年記念配当の実施 及び 配当予想の修正に関するお知らせ 2026年9月15日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1UaXotSERuMUFFNlctcE9TT0NPRVhhVVNDbHRCTWFJb0VVVFFxNzd4WUY5cjZ1RWtHemd0WnFraXgySFNUZm14bzhUWm9BV0J2ZVpNSzFrMEt5UldCLVZWeFM0YVNMcmNvdHc?oc=5",
+        "published": "Tue, 15 Sep 2026 06:30:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "信越化学工業[4063]：ストックオプション（新株予約権）の割当てに関するお知らせ 2026年9月15日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9zXy1IQms4Z0RtUDJfTzg3WDRXVF9IcE5JcW5MQ0tFUEdkbmhoZDlsU19GRkNaUFpLUGNxUXJDNUF1R1NoTVBXenp4ZnpjTzJiSzlKdlMtSXMyM1I3QjJqeWlwQVFSeWd5T1E?oc=5",
+        "published": "Tue, 15 Sep 2026 06:30:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "【決算速報】信越化、今期配当を20円増額修正(株探ニュース) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNT01OZkxFSThuRnQ3UjR5SEt2Z0R0azg1RWRaM2FzSGlrcUVYalpTdDNJVnIwSjEtanh4ZFdVWS1BaDFDZjVVRG9uUEVDNzUxZXN2RG9pYWFfTG5NelltTXFwWTZRR0V5ZDZMTjRLX1ZwbTF3Zl9PTHhOMUF0dlRfaHhxWTNBQmc?oc=5",
+        "published": "Tue, 15 Sep 2026 06:31:10 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "信越化、配当予想を増額修正 創立100周年で1株20円の記念配 - ニューズウィーク日本版",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE12SlA3NnZGQlpOeVdaMS16NXp6c2tyeXhVd1BMSmV0ZHAyblVYVHgxSE8yXzBhN0hqcXZEcjctRjNVNVd6UXVjWXhRMHhCWmNlc09CVV9xZEZqQQ?oc=5",
+        "published": "Tue, 15 Sep 2026 07:27:00 GMT",
+        "publisher": "ニューズウィーク日本版"
+      },
+      {
+        "title": "信越化が中間配当予想を増額修正 - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1HNi0tZHNVTE9UZkJTZGtGcG5RME1MVUlOVWw4X0VoVUx5V2VTOGl1amhUVkJUWnlURnBMdlRpdXVKMzY3UnllQmRZajdKNFJFM1gtOWZlNjFYWm1YYmNsdEd3?oc=5",
+        "published": "Tue, 15 Sep 2026 07:02:00 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "信越化、自社株買いの実施を発表(株探ニュース) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNNUhTcE4tT2hab1VJUTdnbmZ1ZVJfQjZ6UXVuazNVdEtXQVY4OUwzdDVoaWQxalNha0xVME1JY0tBck14X29EcXBBQWlxLUZpcjBvRXd1NW96U25jVEZGcmYtaW0wODhKSnJKWFRsQ0NXWHNMT2NxV0tjOWRIWDA3SVRkQ0dFczQ?oc=5",
+        "published": "Tue, 15 Sep 2026 06:30:59 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "創立100周年記念配当の実施 及び 配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260914536275.pdf",
+        "date": "2026-09-15 15:30:00"
+      },
+      {
+        "title": "コミットメント型自己株式取得（FCSR）における事後調整のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260915536456.pdf",
+        "date": "2026-09-15 15:30:00"
+      },
+      {
+        "title": "ストックオプション（新株予約権）の割当てに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260915536486.pdf",
+        "date": "2026-09-15 15:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による取得結果および自己株式の取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730502910.pdf",
+        "date": "2026-07-30 11:30:00"
+      },
+      {
+        "title": "コミットメント型自己株式取得（FCSR）による自己株式取得のための第三者割当による第27回および第28回新株予約権の発行条件の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503103.pdf",
+        "date": "2026-07-30 11:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による自己株式の買付けに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729502228.pdf",
+        "date": "2026-07-29 16:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598954.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "業績予想および配当予想に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598982.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による自己株式の買付けに関するお知らせ（コミットメント型自己株式取得（FCSR）による自己株式取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598998.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573248.pdf",
+        "date": "2026-06-18 15:30:00"
+      }
+    ]
+  }
+}
