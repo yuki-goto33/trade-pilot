@@ -1,0 +1,227 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-09-17T09:17:58+09:00",
+  "price_as_of": "2026-09-16",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-09-07）に buy シグナルを発出しており、現在はその継続監視期間中であるため、ルールに基づき新規エントリーを抑制する。",
+        "evidence": "reference.recent_buy.date=2026-09-07"
+      },
+      {
+        "reason": "ファンダメンタルズ専門家の確信度が60にとどまり、buy 発火基準である70以上に達していない。",
+        "evidence": "fundamental_view.strength=60"
+      },
+      {
+        "reason": "短期的なテクニカル指標が悪化しており、5日線が25日線を下回るデッドクロスが発生しているため、押し目を確認する段階にある。",
+        "evidence": "technical_view.points[0]: price_technical.sma5_vs_sma25=dead"
+      },
+      {
+        "reason": "本日より開催される日銀金融政策決定会合を控え、金利や為替の変動に伴うマクロ的な不透明感が極めて高い局面である。",
+        "evidence": "fundamental_view.cautions[0]: macro.boj.monetary_policy_meeting.days_until_next=0"
+      }
+    ],
+    "risks": [
+      "日銀金融政策決定会合の結果を受けた為替・金利の急変動によるバリュエーション調整",
+      "前夜ADRの軟調（-2.25%）を受けた寄り付き後の売り圧力継続",
+      "RSIが売られすぎ水準に達していないことによる、サポートライン（3515円）までの値幅調整リスク",
+      "国内10年債金利の高止まりによるグロース株への下押し圧力"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内（2026-09-07）に buy シグナルを発出しており、現在はその継続監視期間中であるため、ルールに基づき新規エントリーを抑制する。\",\n   \"evidence\": \"reference.recent_buy.date=2026-09-07\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ専門家の確信度が60にとどまり、buy 発火基準である70以上に達していない。\",\n   \"evidence\": \"fundamental_view.strength=60\"\n  },\n  {\n   \"reason\": \"短期的なテクニカル指標が悪化しており、5日線が25日線を下回るデッドクロスが発生しているため、押し目を確認する段階にある。\",\n   \"evidence\": \"technical_view.points[0]: price_technical.sma5_vs_sma25=dead\"\n  },\n  {\n   \"reason\": \"本日より開催される日銀金融政策決定会合を控え、金利や為替の変動に伴うマクロ的な不透明感が極めて高い局面である。\",\n   \"evidence\": \"fundamental_view.cautions[0]: macro.boj.monetary_policy_meeting.days_until_next=0\"\n  }\n ],\n \"risks\": [\n  \"日銀金融政策決定会合の結果を受けた為替・金利の急変動によるバリュエーション調整\",\n  \"前夜ADRの軟調（-2.25%）を受けた寄り付き後の売り圧力継続\",\n  \"RSIが売られすぎ水準に達していないことによる、サポートライン（3515円）までの値幅調整リスク\",\n  \"国内10年債金利の高止まりによるグロース株への下押し圧力\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "中期トレンドでは市場をアウトパフォームしているものの、短期的には25日移動平均線の割り込みやSMAのデッドクロスが発生しており、前夜ADRの下落も加わって調整局面が継続する見通しです。",
+      "points": [
+        {
+          "point": "短期トレンドの弱気転換。5日線が25日線を下回るデッドクロスが発生しており、株価も25日移動平均線の下方で推移している。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.last_close=3719.0, price_technical.sma25=3801.76"
+        },
+        {
+          "point": "モメンタム指標の悪化。MACDがマイナス圏でシグナルを下回り、ヒストグラムも大幅なマイナスを記録しており、下押し圧力が強い。",
+          "evidence": "price_technical.macd=-5.7, price_technical.macd_histogram=-24.29"
+        },
+        {
+          "point": "前夜米国市場でのADRの大幅下落。ADRが-2.25%と軟調であったことから、当日の寄り付きでの下押しが強く意識される。",
+          "evidence": "us_overnight.adr.change_1d_pct=-2.25"
+        },
+        {
+          "point": "中期的なトレンドの底堅さ。60営業日騰落率が+16.84%とTOPIX相対で19%以上高く、中期的には依然として強いトレンドを維持している。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=16.84, price_technical.trend_60d.relative_to_topix_60d_pct=19.28"
+        }
+      ],
+      "cautions": [
+        "前夜ADRの下落を反映した寄り付き後に、SMA5(3700.8円)を回復・維持できない場合、期間安値の3515円を試すリスクがある。",
+        "VIX指数が上昇しており、米国市場および市場全体のセンチメント悪化が反発の重石となる可能性がある。",
+        "RSIが53.8と中立圏にあり、売られすぎ水準（30以下）に達していないため、値幅調整がさらに進む余地がある。"
+      ],
+      "key_levels": {
+        "support": 3515.0,
+        "resistance": 3801.76
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "営業利益の二桁増益基調と継続的な自社株買いが下値を支える一方、日銀金融政策決定会合当日の不透明感と国内長期金利の上昇がバリュエーションの重石となり、短期的には強気になりにくい。",
+      "points": [
+        {
+          "point": "2026年3月期の営業利益は前期比約21.3%増と好調で、本業の収益拡大トレンドが継続している。",
+          "evidence": "fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=15537"
+        },
+        {
+          "point": "2026年9月3日に自己株式の取得状況を開示しており、継続的な株主還元策による需給の下支えが期待できる。",
+          "evidence": "disclosures[0].date=2026-09-03"
+        },
+        {
+          "point": "製造業PMIが54.9と拡大圏にあり、AI関連需要の恩恵を受ける事業環境が整っている。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9"
+        },
+        {
+          "point": "TSMCとの合弁会社設立など、半導体セグメントにおける中長期的な成長に向けた戦略的提携が進展している。",
+          "evidence": "disclosures[1].title=2026-08-11"
+        }
+      ],
+      "cautions": [
+        "日銀金融政策決定会合（本日〜明日）による金利・為替の大幅な変動リスク（macro.boj.monetary_policy_meeting.days_until_next=0）。",
+        "日本10年債金利が3.028%と高水準にあり、高PERなグロース株へのバリュエーション調整圧力となる懸念（macro.rates.jgb_10y_percent.value=3.028）。",
+        "2026年3月期における大幅な最終赤字計上の背景（fundamentals.earnings_trend.annual[0].net_income_oku_jpy=-3269）。",
+        "次回決算発表（2026-11-05）に向けた業績進捗の確認。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-07",
+    "days_ago": 10,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソニーグループ、「CEATEC 2026」に出展。投資・育成事例を紹介 - 電波タイムズ",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB5Zy1oRlZtanBuNl9jN0FxZXp6aXlWdUtoX0dlUnJwekFaSEVUUTNUcDhQekExdHpkNWJaWGQ5RDF0S0R3UmFTZEFXalBfQlRFYm9vQzBiN3V5Um9GTm1yOVYwUWU?oc=5",
+        "published": "Wed, 16 Sep 2026 01:59:53 GMT",
+        "publisher": "電波タイムズ"
+      },
+      {
+        "title": "ソニーグループ十時社長ＣＥＯ、理工系女子大学生を激励 - 読売新聞",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9sNVhrYXFYdUIzM0ZQNkVTVVNDRTdtWjNNR1VTYWxKRS1MQlVnTXZ1d1FySzFvMWhseUxMemdueWg2T3JGMTIzbXllRFRDbEZZQkl6T2xOTGZrbzQ?oc=5",
+        "published": "Wed, 16 Sep 2026 01:40:00 GMT",
+        "publisher": "読売新聞"
+      },
+      {
+        "title": "パナソニックが来年のＣＥＳ単独出展を取りやめ…不参加は初、ソニーグループも今年見送り（読売新聞オンライン） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA3Tkg0dTBfYzU4dFJLcVo1bjNtbkp3RmstR2NjS1pyMU9RMGVhZndhSTVFc1BOZXY4Uk9UUlMxMkUtVnVRYS1VNzdJZ0tPT2hDVG5nSlo4bXZpd2FEenNMdlVzUXQ1dGFiQzBMVGVMZFZGTUVlTEV5OXp3Tl95SGs?oc=5",
+        "published": "Wed, 16 Sep 2026 02:19:13 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "パナソニックが来年のＣＥＳ単独出展を取りやめ…不参加は初、ソニーグループも今年見送り (読売新聞オンライン) - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNT0dfOG5EWTh3SFhsaE81MC02UHlSaWVHMmNjQVBuVVJLU2xVLTcwNXpXTlROdXVvQk5NLUxZV25uVm5XbG1MQmtfNGkzbzk1WE1OUW9JcV9XNUZlNnBocDlMUHE5eEliV0RnVnpsczY4NzlMNmpta3ZMVDFsNFhONE02MFRqSUhTeWpIZVJn?oc=5",
+        "published": "Wed, 16 Sep 2026 02:19:13 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "ソニー「aibo」開発チームに聞く④世界初の家庭用ロボット「aibo」現行機種の国内販売終了、その本音に迫る - innovations-i.com",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1sVTRhRDBNd0VaRFVRaS1GQmRBY3I1RjNRaXV1SHVlT1F6SThfMkxKUmp2eWNRcjJja1JRYjdMeHpWbEJyNXdFd0pmaURIN0N6eWFKVXFIR2Rxb2pDd296ZGR2VkNpUQ?oc=5",
+        "published": "Wed, 16 Sep 2026 21:00:00 GMT",
+        "publisher": "innovations-i.com"
+      },
+      {
+        "title": "健康経営関連市場は2025年に1兆4,712億円へ - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE50d0Ezd0dEYWZ0VjhqYXRzQktqaklCckRCRlNQZ3EzaEFrSHlMZWp4S0FYSHNtV3VCZzRXU29vc1plRmZRNmF6WEpOQzZETVowS0xYOFRrbEpsNlNybTM4cEFYWVJscjU0UkE?oc=5",
+        "published": "Wed, 16 Sep 2026 11:30:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "米長期金利が一時５・０４％と１９年ぶり高水準…ベッセント氏、米債券市場は「先進国で最も好調」主張 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1TTEF3bThSUThuSEI3b3VsVlJTQXZETTI5VEJWOEhPUGJJbF9kRV96RFdzSFJURHdPQkxlMUpUNV9XZmpvZEE3RmdoUG5FRC1KOHcwRzJ0NHRUaUxDdFFVei16LUdITXVZTjI3X0ZB?oc=5",
+        "published": "Wed, 16 Sep 2026 03:20:00 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "「KOROKORO SNOOPY マーブルアクリルチャーム」がカプセルトイに登場！ - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5vQmV3VGVZanltRjNqVjIzTFBxUEFod1BOQWdFcF9jQldCdGxvTm9VZnFQSXZSRVRXMDZKZlNWamJoSnJYRTJ2aG1KUVVmMFVQLW5sOQ?oc=5",
+        "published": "Wed, 16 Sep 2026 12:15:39 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "日経平均は一進一退の値動き、午前の終値は８８円安の６万３３９６円ちょうど - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1qZncyazc2UGk4OUF1QXRlSmpKdGdVV2I2YnlUcDM2cWpjZ25tYk9UVVVuR013VjJlNktWN2ZYelNBejNLRGthMFVIWU1UUnNKLTFpVzVQWkZIUXBzWkMyREFxM2JaNWZHMUI4NlJB?oc=5",
+        "published": "Wed, 16 Sep 2026 04:51:27 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "【画像】パナソニックが来年のＣＥＳ単独出展を取りやめ…不参加は初、ソニーグループも今年見送り - ライブドアニュース",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE81XzdYRXNjQng0aEJKTTVaYUJ1eWhXa25fWDZ0Z0VzQVNBd1BWei04NFl4SFVLemZoZnMwRldSNmdEVFJXeEMyUHBlUk8xX041dS1FbWg0LXhuMVBHSzhhRG5Fd3R6QlI2dFpEOEdUWFJSWDZyYktMVldvc0c?oc=5",
+        "published": "Wed, 16 Sep 2026 02:18:00 GMT",
+        "publisher": "ライブドアニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903530947.pdf",
+        "date": "2026-09-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260811517496.pdf",
+        "date": "2026-08-11 18:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805509201.pdf",
+        "date": "2026-08-05 11:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504252.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期 連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504254.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の権利確定に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595854.pdf",
+        "date": "2026-07-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587315.pdf",
+        "date": "2026-07-03 11:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584099.pdf",
+        "date": "2026-06-30 15:30:00"
+      },
+      {
+        "title": "米ドル建て無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577032.pdf",
+        "date": "2026-06-24 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260603560934.pdf",
+        "date": "2026-06-03 11:30:00"
+      }
+    ]
+  }
+}

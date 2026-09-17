@@ -1,0 +1,167 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-09-17T09:34:20+09:00",
+  "price_as_of": "2026-09-16",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の判断がneutral（strength=55）であり、高水準の利回り環境は追い風なものの、バリュエーション面の織り込みや固有のカタリスト不足から買いの基準（bullishかつstrength>=70）を満たしていません。",
+        "evidence": "fundamental_view.stance=neutral (strength=55)"
+      },
+      {
+        "reason": "テクニカル専門家もneutral（strength=55）と評価しており、中期的な上昇トレンドは維持されているものの、MACDデッドクロスや終値のSMA5割れなど短期的な調整シグナルが点灯しています。",
+        "evidence": "technical_view.stance=neutral (strength=55), technical_view.points[2]: MACDがシグナルを割り込みヒストグラムがマイナス圏"
+      },
+      {
+        "reason": "日銀金融政策決定会合が直前（2026-09-17〜2026-09-18）に迫っており、政策動向を見極めるまで方向感が出にくい局面です。",
+        "evidence": "fundamental_view.cautions[0]: 日銀金融政策決定会合が直前"
+      }
+    ],
+    "risks": [
+      "明日から開催される日銀金融政策決定会合（2026-09-17〜2026-09-18）の結果や政策スタンスによって、金利感応度の高い銀行株のボラティリティが急激に高まるリスク。",
+      "テクニカル面で25日移動平均線（3638.28円）を明確に下抜けた場合、短期的な調整が長引くリスク。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 50,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 21,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の判断がneutral（strength=55）であり、高水準の利回り環境は追い風なものの、バリュエーション面の織り込みや固有のカタリスト不足から買いの基準（bullishかつstrength>=70）を満たしていません。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=55)\"\n  },\n  {\n   \"reason\": \"テクニカル専門家もneutral（strength=55）と評価しており、中期的な上昇トレンドは維持されているものの、MACDデッドクロスや終値のSMA5割れなど短期的な調整シグナルが点灯しています。\",\n   \"evidence\": \"technical_view.stance=neutral (strength=55), technical_view.points[2]: MACDがシグナルを割り込みヒストグラムがマイナス圏\"\n  },\n  {\n   \"reason\": \"日銀金融政策決定会合が直前（2026-09-17〜2026-09-18）に迫っており、政策動向を見極めるまで方向感が出にくい局面です。\",\n   \"evidence\": \"fundamental_view.cautions[0]: 日銀金融政策決定会合が直前\"\n  }\n ],\n \"risks\": [\n  \"明日から開催される日銀金融政策決定会合（2026-09-17〜2026-09-18）の結果や政策スタンスによって、金利感応度の高い銀行株のボラティリティが急激に高まるリスク。\",\n  \"テクニカル面で25日移動平均線（3638.28円）を明確に下抜けた場合、短期的な調整が長引くリスク。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "中期トレンドはTOPIXを大きく上回る強い上昇基調を維持しているが、足元ではMACDのデッドクロスやADRの下落が重なり、短期的な調整局面に入っている。",
+      "points": [
+        {
+          "point": "直近60営業日の騰落率はTOPIXに対して+12.1%と極めて高く、中期的な上昇トレンドは依然として強固である。",
+          "evidence": "price_technical.trend_60d.relative_to_topix_60d_pct=12.1"
+        },
+        {
+          "point": "SMA5とSMA25はゴールデンクロスを維持しているが、直近の終値はSMA5を下回っており、短期的には上昇の勢いが鈍化している。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden\", price_technical.last_close=3655.0, price_technical.sma5=3673.2"
+        },
+        {
+          "point": "MACDがシグナルを割り込み、ヒストグラムがマイナス圏で推移しており、テクニカル的な調整のサインが出ている。",
+          "evidence": "price_technical.macd=26.06, price_technical.macd_signal=29.7, price_technical.macd_histogram=-3.64"
+        },
+        {
+          "point": "前夜の米国ADRが-0.75%の下落となり、金融セクターETFも軟調であったことから、当日の寄り付きは売りが先行しやすい地合いである。",
+          "evidence": "us_overnight.adr.change_1d_pct=-0.75, us_overnight.sector_proxy.change_1d_pct=-0.32"
+        }
+      ],
+      "cautions": [
+        "MACDのデッドクロスが継続しており、25日移動平均線（3638.28円）を明確に割り込むと、調整が長引く恐れがある。",
+        "VIX指数が上昇しており、外部環境の不透明感からリスク回避の売りが出やすい。",
+        "前夜のADR下落が寄り付き価格に織り込まれた後、さらに売りが加速するか、押し目買いが入るかの見極めが必要。"
+      ],
+      "key_levels": {
+        "support": 3638.28,
+        "resistance": 3795.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "業績拡大基調と高水準な国債利回り環境は追い風である一方、直近2週間の新規カタリストが不在であり、開催直前の日銀金融政策決定会合を控えて様子見姿勢が妥当と判断します。",
+      "points": [
+        {
+          "point": "業績は順調な拡大が継続しており、直近四半期（2026年6月期）も純利益8,094億円と高い収益水準を維持しています。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].net_income_oku_jpy=8094, fundamentals.earnings_trend.annual[0].net_income_oku_jpy=24272"
+        },
+        {
+          "point": "日本10年国債利回りは3.028%と高水準で銀行業の利ざや拡大環境が整っているものの、PBR1.812倍および予想PER24.097倍とすでに一定の評価が進んでいます。",
+          "evidence": "macro.rates.jgb_10y_percent.value=3.028, fundamentals.valuation.price_to_book=1.812, fundamentals.valuation.forward_pe=24.097"
+        },
+        {
+          "point": "直近2週間以内に株価を新たに刺激する適時開示や固有のニュース材料が存在せず、短期的には新たな上昇カタリストを欠いています。",
+          "evidence": "disclosures.items[0].date='2026-08-14 16:00:00', news.headlines"
+        }
+      ],
+      "cautions": [
+        "日銀金融政策決定会合が直前（2026-09-17〜2026-09-18、残り日数0日）に控えており、結果や政策見通し次第で金利感応度の高い銀行株のボラティリティが急激に高まるリスクがあります。",
+        "次回決算発表（2026-11-12）まで約2ヶ月あり、それまでの間はマクロ金融政策の動向に左右されやすい展開が想定されます。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "インフルエンザ患者が前週の約３倍に 大分県内で今年度初の学校閉鎖 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBKV2ZEU0lUUjdKRVh2akM3UGptWmhRak5CUk02T0hmcWhHckFrdS05WnRnMmp4R2xMb0hrVU9KS3R1M3FTS1Q5bGR2enllaUk0VEpoOXN3QlBZS2RSekNjbUM2Z1ozbzBOSzViTm45dFByVTd1c3hxTA?oc=5",
+        "published": "Wed, 16 Sep 2026 08:31:00 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "レッド・アイ／陰謀の大使館「見えない敵」 - WEBザテレビジョン",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE96S2V2bmQ3VXEzUG04TUZhTmJPcjFsWUZUWVE4LWsyX2JfbTFadkRpaEZFUjh3SVZBdUVBLXNDYU1Da0dQLUtJWVB4RWJBb3c?oc=5",
+        "published": "Wed, 16 Sep 2026 06:34:48 GMT",
+        "publisher": "WEBザテレビジョン"
+      },
+      {
+        "title": "大石田｜県内イベント情報 - 山形新聞",
+        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNRGdBeTNubXZfWHVrX2xmemd5NTlFMEx2Qk00WkdpNFMxUnB2bFNrWVAxWlljUzlvb2NCVnJDQ0VwUHVrYXJHWTVtUy1BRmdQNWdFR0p4bDU0X0lWaDQ2NlhTTl9MOVR5LU1MaTV1SVBWR2ZDcXYwSllSazhFaW9femZqbw?oc=5",
+        "published": "Wed, 16 Sep 2026 00:19:55 GMT",
+        "publisher": "山形新聞"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期 自己資本比率について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260814520300.pdf",
+        "date": "2026-08-14 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕（連結）（公認会計士又は監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510381.pdf",
+        "date": "2026-08-06 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505851.pdf",
+        "date": "2026-08-03 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      }
+    ]
+  }
+}

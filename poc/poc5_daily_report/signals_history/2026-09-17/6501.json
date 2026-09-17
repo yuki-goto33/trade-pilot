@@ -1,0 +1,228 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-09-17T09:57:38+09:00",
+  "price_as_of": "2026-09-16",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 60,
+    "reasons": [
+      {
+        "reason": "直近の買いシグナル（2026-09-14）が出ているため、現ポジションの継続監視を推奨します。",
+        "evidence": "reference.recent_buy"
+      },
+      {
+        "reason": "ファンダメンタルズはAIやエネルギーインフラ投資、株主還元などで高評価を維持していますが、テクニカルも強気を示しており、株価には材料が相当程度織り込まれていると判断されます。",
+        "evidence": "fundamental_view.stance=bullish (strength=85), technical_view.stance=bullish (strength=70)"
+      },
+      {
+        "reason": "中期的な上昇トレンドは継続しており、製造業PMIの拡大や円安トレンドも事業環境に追い風となります。",
+        "evidence": "technical_view.points[0], fundamental_view.points[3], fundamental_view.points[4]"
+      }
+    ],
+    "risks": [
+      "2026年10月29日に予定されている次回決算発表の内容が市場予想に届かない場合、株価が調整する可能性があります。",
+      "本日（2026年9月17日）から開催される日銀金融政策決定会合の結果次第では、金利動向や市場全体のセンチメントに変化が生じる可能性があります。",
+      "現在のPERやPBRは高水準にあり、市場の成長期待が既に株価に織り込まれているため、期待を下回る情報が出た場合のリスクがあります。",
+      "5日移動平均線と25日移動平均線のデッドクロス継続や、日本市場全体の地合い、米国セクターETFの下落など、短期的な上値の重さや外部環境には注意が必要です。",
+      "地政学的リスクの高まりや世界経済の減速は、グローバルに事業を展開する同社の業績に影響を及ぼす可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 60,\n \"reasons\": [\n  {\n   \"reason\": \"直近の買いシグナル（2026-09-14）が出ているため、現ポジションの継続監視を推奨します。\",\n   \"evidence\": \"reference.recent_buy\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズはAIやエネルギーインフラ投資、株主還元などで高評価を維持していますが、テクニカルも強気を示しており、株価には材料が相当程度織り込まれていると判断されます。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=85), technical_view.stance=bullish (strength=70)\"\n  },\n  {\n   \"reason\": \"中期的な上昇トレンドは継続しており、製造業PMIの拡大や円安トレンドも事業環境に追い風となります。\",\n   \"evidence\": \"technical_view.points[0], fundamental_view.points[3], fundamental_view.points[4]\"\n  }\n ],\n \"risks\": [\n  \"2026年10月29日に予定されている次回決算発表の内容が市場予想に届かない場合、株価が調整する可能性があります。\",\n  \"本日（2026年9月17日）から開催される日銀金融政策決定会合の結果次第では、金利動向や市場全体のセンチメントに変化が生じる可能性があります。\",\n  \"現在のPERやPBRは高水準にあり、市場の成長期待が既に株価に織り込まれているため、期待を下回る情報が出た場合のリスクがあります。\",\n  \"5日移動平均線と25日移動平均線のデッドクロス継続や、日本市場全体の地合い、米国セクターETFの下落など、短期的な上値の重さや外部環境には注意が必要です。\",\n  \"地政学的リスクの高まりや世界経済の減速は、グローバルに事業を展開する同社の業績に影響を及ぼす可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "中期的な上昇トレンドが継続しており、直近の株価は移動平均線を上回って反発し、MACDも好転していることから、短期的な上値追いを期待できます。",
+      "points": [
+        {
+          "point": "過去60営業日における株価は10%以上上昇しており、TOPIXに対しても大幅にアウトパフォームしており、中期的な上昇トレンドが堅調であることを示唆しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=10.44, price_technical.trend_60d.relative_to_topix_60d_pct=12.88"
+        },
+        {
+          "point": "MACDヒストグラムがプラスに転換しており、MACDラインがシグナルラインを上回ったことから、短期的な買いシグナルが点灯しています。",
+          "evidence": "price_technical.macd_histogram=0.55"
+        },
+        {
+          "point": "直近5営業日で大きく反発し、終値は25日移動平均線を上回って推移しており、底堅さが見られます。",
+          "evidence": "price_technical.recent_5_days[-1].change_pct=2.89, price_technical.last_close=5372.0, price_technical.sma25=5366.16"
+        },
+        {
+          "point": "前夜のNY市場でのADRが上昇しており、本日の日本市場での寄り付きにポジティブな影響を与える可能性があります。",
+          "evidence": "us_overnight.adr.change_1d_pct=2.39"
+        }
+      ],
+      "cautions": [
+        "5日移動平均線が25日移動平均線を下回るデッドクロス状態が継続しており、短期的な上値の重さが残る可能性があります。",
+        "日本市場全体の地合いは中立であり、前夜の米国市場では当該銘柄の属するセクターETFが下落しているため、外部環境には注意が必要です。",
+        "前夜のADR上昇は、すでに本日の寄り付き価格に織り込まれる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 5366.16,
+        "resistance": 5830.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 85,
+      "summary": "日立製作所は、AIやエネルギーインフラ分野への積極的な投資、堅調な年間業績成長、そして製造業PMIの拡大といったマクロ環境の追い風により、今後数ヶ月間の投資価値は高いと考えられます。",
+      "points": [
+        {
+          "point": "年間業績は一貫して成長しており、売上高、営業利益、純利益、EPSともに堅調な拡大トレンドを示しています。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "米国での変圧器新工場への大規模投資発表など、エネルギーインフラ分野での供給能力強化と、AI技術への戦略的注力は、今後の成長を牽引する重要なカタリストです。",
+          "evidence": "news.headlines[6].title, news.headlines[8].title, news.headlines[0].title, news.headlines[2].title"
+        },
+        {
+          "point": "直近の適時開示にて自己株式の取得状況が公表されており、株主還元への積極的な姿勢が伺えます。",
+          "evidence": "disclosures.items[0].title, date=\"2026-09-02\""
+        },
+        {
+          "point": "日本の製造業PMIが景気拡大を示す水準で推移し、特にAI関連需要による新規受注の急増が言及されており、日立製作所の事業環境に追い風となっています。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9, macro.japan_pmi.manufacturing.summary_en"
+        },
+        {
+          "point": "大企業の製造業の業況判断DIが改善しており、また円安トレンドが継続していることは、輸出比率の高い製造業である日立製作所にとって収益面で有利に働くと考えられます。",
+          "evidence": "macro.boj.tankan.di.large_manufacturing.current_di=22.0, macro.indices[2].close=155.89, macro.indices[2].change_5d_pct=0.91"
+        }
+      ],
+      "cautions": [
+        "現在のPERやPBRは高水準であり、市場の成長期待が株価に織り込まれているため、今後の業績が期待に届かない場合には株価調整のリスクがあります。",
+        "2026年10月29日に次回決算発表を控えており、その内容によっては株価が大きく変動する可能性があります。",
+        "本日（2026年9月17日）から開催される日銀金融政策決定会合の結果次第では、金利動向や市場全体のセンチメントに変化が生じる可能性があります。",
+        "地政学的リスクの高まりや世界経済の減速は、グローバルに事業を展開する日立製作所の業績に影響を及ぼす可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-14",
+    "days_ago": 3,
+    "confidence": 75,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "【Google Cloud Next Tokyo 2026】 AI活用のフェーズは「検証」から「ビジネス成果の創出」へ。 ：デジタル：日立 - Hitachi Global",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNkJsemF5RGJQQTJoZGcwc3lZOTZybS1MdHctRUl5QjZCUTdlbFBWUDJZNDhuc0VoNzRNdTNrTFRwZnIwOGpWVWt0blRsOUI1N3hyQ1F3VU1hXzgyMDF5bnRabHJfd0szY2YyYmZ3M25ZTWlsdEhLcFdPY1lsaHdrQzlfSENhM01ILWc?oc=5",
+        "published": "Wed, 16 Sep 2026 05:10:20 GMT",
+        "publisher": "Hitachi Global"
+      },
+      {
+        "title": "AIメカ、半導体後工程で強み 接着・はがすで受注拡大 - 日経ヴェリタス - nikkei.com",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE16Z1Z2LUpPT1hacTEyZkIxdFFxVGJteHFsc0g0MUlUb0RWRHN2M3dFNjJIZVNPMUYzZERkMlZoR2dXTzJXazVWTVRUWTROZDdyQ1hoeWZoYUJVSHlESFRBNnI4M1p4UXFlY0FmVkxGVVpPakd1SjZOVTRuZTVXUQ?oc=5",
+        "published": "Wed, 16 Sep 2026 20:00:00 GMT",
+        "publisher": "nikkei.com"
+      },
+      {
+        "title": "フィジカルAI×データセンター×FDE──日立製作所のAI戦略と日本型FDEの現在地 - EnterpriseZine",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9nZmhCa0VVWkxjTlJjd2phemdwX2VzY3pLM3pfV3o0c19mbHdGQ19CRjBPc0phSHZxRjIteXdDNHFZM3JJS29za2E5V2hsb3R4VGFCd3dJb29SUlR6MV9KOGhfanhJUEdjQm84?oc=5",
+        "published": "Wed, 16 Sep 2026 01:39:56 GMT",
+        "publisher": "EnterpriseZine"
+      },
+      {
+        "title": "日立製作所、バイオメタネーション技術の知的所有権などをドイツ企業から取得：製造マネジメントニュース - MONOist",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE92S1hHTlFwQ1lSd256eEE4eHE0aE9Za2ltbkR6WnBHVF9vdkJFd0xMbXJncUprY0RTTUxKU25kQUROV3hRUFpTWkJ1NnQ1YnFXNmZVYjRQSTZGWjFPb3VneEU1TjlFSGNSeHJlMDdsNA?oc=5",
+        "published": "Wed, 16 Sep 2026 01:00:00 GMT",
+        "publisher": "MONOist"
+      },
+      {
+        "title": "【アナリスト評価】日立製作所、レーティングやや強気を据置き、目標株価6,300円に引上げ（日系大手証券）(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNWmF2LXdKaDBMOW0yaWJGMl96VGliWm5paU9YWXlKU2duc0JfX2lsYTFBV3RlMVhpX0lTVF9yRWFkclBFTTBoQkxYdXZtc3ZzZ09pM0kwY094YWdZTXJoSm84WmczV0tpRGdLenJUNUxZT1F0OGlmY0ZuakRDZldUdFV2VVgxeXc?oc=5",
+        "published": "Wed, 16 Sep 2026 09:00:23 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ミライロと日立、鉄道の介助申請一元化で基本合意書を締結 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFA2QjhTenN6aWllX0VtTWhVY3BlTk5NVDkyNlh2QnVBMVpzOEpDTDBFSGNjVEk0QVZORElmZDRzWkhWWmZhTHF1eUFCMGJTTndvdVNsODNsS250em9IMzFTUVgyREJveVh1cmc?oc=5",
+        "published": "Wed, 16 Sep 2026 06:30:01 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "日立製作所傘下の日立エナジー、米変圧器新工場に５億２８００万米ドル - kabu-ir.com",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5qZy1URmVjQzdBbnlsandkWDljM19RYmlyVGxSdG9BbkxJS25vQ2ktdFhFOXRxVzQ3RFk0MEo1NFhjNk5ZenBjTEhXOTdFdTRsV21iSw?oc=5",
+        "published": "Wed, 16 Sep 2026 04:27:46 GMT",
+        "publisher": "kabu-ir.com"
+      },
+      {
+        "title": "日立が反発、米国で変圧器工場の建設を発表 - みんかぶ",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBzTk5tR1RqRHhOclo3UmFjLUNrdGhfanRIVGlCMUZzMnFINGhEdDg5WEhEbnFNaEtyS0RjTEVJeEdIRlZfTWxOR2ZPRHBrWE9Fck96Mw?oc=5",
+        "published": "Wed, 16 Sep 2026 01:42:11 GMT",
+        "publisher": "みんかぶ"
+      },
+      {
+        "title": "日立製作所の株価一時3%高 米国で変圧器新工場、需要増で投資拡大 - nikkei.com",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9rczlPb05OQ1N5SVJPZ2UzMERueGVqVG1VZjY0SHpfVmNueWJQS01Eb2FXbXRQVWdiVlZZODl5VVRKVDh4X3JjMW54ZDNMVjdVSFNyN004MzZDOW5Bbm80QnZpYS1WYS1BcS1ZNA?oc=5",
+        "published": "Wed, 16 Sep 2026 01:41:17 GMT",
+        "publisher": "nikkei.com"
+      },
+      {
+        "title": "日立エナジー、米ミシシッピ州に変圧器新工場 820億円投資で生産2倍 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBwNlc3MUZQVmlaRlFENVRtbjZtaS00VXVnU0k0TDd4TnFWb05oY3VaVHE1YWdJczJreWNwMlBSRnIxN2NrLXRmYTc4b3E4ZDFhdkk4UFROYjc5V1Rsb1RwZHpQdU9STWZXYlJaTFdBanlSX1Q2?oc=5",
+        "published": "Wed, 16 Sep 2026 00:35:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260902530692.pdf",
+        "date": "2026-09-02 15:30:00"
+      },
+      {
+        "title": "個別決算における投資有価証券売却益(特別利益)の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260819523052.pdf",
+        "date": "2026-08-19 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804508474.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "（訂正）2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503298.pdf",
+        "date": "2026-07-30 13:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501771.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501801.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(モビリティ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566288.pdf",
+        "date": "2026-06-09 15:30:00"
+      }
+    ]
+  }
+}

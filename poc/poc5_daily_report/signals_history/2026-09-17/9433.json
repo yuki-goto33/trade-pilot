@@ -1,0 +1,229 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-09-17T09:55:13+09:00",
+  "price_as_of": "2026-09-16",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 90,
+    "reasons": [
+      {
+        "reason": "直近14日以内に同一銘柄へbuyシグナルを発令済みのため、戦略上、新規のbuyシグナルは出さずに継続監視とします。",
+        "evidence": "reference.recent_buy.date=2026-09-10"
+      },
+      {
+        "reason": "ファンダメンタルズは、自己株式取得の進捗、ドローン事業や5G展開といった新規事業、堅調な業績トレンド、サービス業に良好なマクロ環境から強気（strength 75）と評価しています。",
+        "evidence": "fundamental_view.stance=bullish (strength=75), fundamental_view.points"
+      },
+      {
+        "reason": "テクニカルは、中期的な強い上昇トレンド、ゴールデンクロス継続、MACDの拡大、NY市場ADRの上昇などから強気（strength 80）と評価しています。",
+        "evidence": "technical_view.stance=bullish (strength=80), technical_view.points"
+      },
+      {
+        "reason": "両専門家が強気の見解を示しており、材料が株価に既に織り込まれている可能性が高いため、新規エントリーとしては遅いとの判断に基づき、holdを推奨します。",
+        "evidence": "technical_view.stance=bullish, fundamental_view.stance=bullish"
+      }
+    ],
+    "risks": [
+      "RSIが買われすぎ水準（73.4）にあり、短期的な調整や利益確定売りが発生する可能性があります。",
+      "株価が期間高値3099円に迫っており、この水準が上値抵抗線として機能する可能性があります。",
+      "本日より開催される日銀金融政策決定会合の結果次第では、金融政策の変更（特に金利上昇）が通信事業者の資金調達コストに影響を与える可能性があります。",
+      "次回決算発表日（2026年11月12日）に向けて、業績動向に変動が生じる可能性があります。",
+      "提示されているforward PERが異常値を示しており、将来のEPS予測に対する市場の不確実性が残ります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 90,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内に同一銘柄へbuyシグナルを発令済みのため、戦略上、新規のbuyシグナルは出さずに継続監視とします。\",\n   \"evidence\": \"reference.recent_buy.date=2026-09-10\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは、自己株式取得の進捗、ドローン事業や5G展開といった新規事業、堅調な業績トレンド、サービス業に良好なマクロ環境から強気（strength 75）と評価しています。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=75), fundamental_view.points\"\n  },\n  {\n   \"reason\": \"テクニカルは、中期的な強い上昇トレンド、ゴールデンクロス継続、MACDの拡大、NY市場ADRの上昇などから強気（strength 80）と評価しています。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=80), technical_view.points\"\n  },\n  {\n   \"reason\": \"両専門家が強気の見解を示しており、材料が株価に既に織り込まれている可能性が高いため、新規エントリーとしては遅いとの判断に基づき、holdを推奨します。\",\n   \"evidence\": \"technical_view.stance=bullish, fundamental_view.stance=bullish\"\n  }\n ],\n \"risks\": [\n  \"RSIが買われすぎ水準（73.4）にあり、短期的な調整や利益確定売りが発生する可能性があります。\",\n  \"株価が期間高値3099円に迫っており、この水準が上値抵抗線として機能する可能性があります。\",\n  \"本日より開催される日銀金融政策決定会合の結果次第では、金融政策の変更（特に金利上昇）が通信事業者の資金調達コストに影響を与える可能性があります。\",\n  \"次回決算発表日（2026年11月12日）に向けて、業績動向に変動が生じる可能性があります。\",\n  \"提示されているforward PERが異常値を示しており、将来のEPS予測に対する市場の不確実性が残ります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 80,
+      "summary": "KDDI株は、中期的な上昇トレンドを維持し、短期的なモメンタムも強い状態です。ただし、RSIが買われすぎ水準にあり、短期的な調整の可能性には注意が必要です。",
+      "points": [
+        {
+          "point": "過去60営業日で株価が16.83%上昇し、TOPIXに対しても19.27%アウトパフォームしており、中期的な強い上昇トレンドを示しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=16.83, price_technical.trend_60d.relative_to_topix_60d_pct=19.27"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線を上回るゴールデンクロスを継続しており、MACDもプラス圏でシグナルラインを上回って拡大していることから、短期的な上昇モメンタムが強いです。",
+          "evidence": "price_technical.sma5_vs_sma25='golden(5日線が25日線の上)', price_technical.macd_histogram=9.9"
+        },
+        {
+          "point": "直近5営業日の値動きは、一時的な押し目から反発し、期間高値3099円に迫る勢いを見せています。",
+          "evidence": "price_technical.recent_5_days[4].close=3079.0, price_technical.recent_5_days[4].change_pct=1.15, price_technical.period_high=3099.0"
+        },
+        {
+          "point": "前夜のNY市場において、KDDIのADRが1.13%上昇しており、本日の寄り付きに好影響を与える可能性があります。",
+          "evidence": "us_overnight.adr.change_1d_pct=1.13"
+        }
+      ],
+      "cautions": [
+        "RSI14が73.4と買われすぎ水準にあるため、短期的な調整や利益確定売りが発生する可能性があります。",
+        "株価が期間高値3099円に迫っており、この水準が上値抵抗線として機能する可能性があります。",
+        "前夜のNY市場でS&P500が下落しているため、日本市場全体の地合いが悪化するリスクがあります。",
+        "通信サービスセクターの米国のETFが下落しているため、セクター全体としては逆風となる可能性も考慮が必要です。",
+        "ADRの上昇は、既に本日の寄り付き価格に織り込まれる可能性があるため、過度な期待は禁物です。"
+      ],
+      "key_levels": {
+        "support": 3046.4,
+        "resistance": 3099.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "堅調な業績トレンドに加え、株主還元策としての自己株式取得の進捗や、ドローン事業・5Gインフラ展開といった将来の成長戦略に繋がる好材料が見られ、マクロ環境もサービス業には追い風であることから強気と判断します。",
+      "points": [
+        {
+          "point": "自己株式取得が着実に進捗しており、株主還元への積極的な姿勢とEPS向上への寄与が期待されます。",
+          "evidence": "fundamentals.recent_important_disclosures[0].date=2026-09-09, fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "ドローン運航管理サービス提供開始や5Gミリ波エリア拡大に関する協業など、新規事業展開とインフラ効率化に繋がるポジティブなニュースが直近で複数報じられています。",
+          "evidence": "news.headlines[0].title, news.headlines[1].title, news.headlines[4].title"
+        },
+        {
+          "point": "年次および直近四半期において、売上高・純利益・EPSが堅調な増益トレンドを維持しており、安定した企業成長が見られます。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "日本のサービス業PMIや日銀短観の大企業非製造業DIが景気拡大を示しており、KDDIが属するサービス業にとって良好なマクロ経済環境が続いています。",
+          "evidence": "macro.japan_pmi.services.latest_value=52.5, macro.boj.tankan.di.large_nonmanufacturing.current_di=37.0"
+        }
+      ],
+      "cautions": [
+        "本日より開催される日銀金融政策決定会合の結果次第では、金融政策の変更（特に金利上昇）が通信事業者の資金調達コストに影響を与える可能性があります。",
+        "次回決算発表日（2026年11月12日）に向けて、業績動向に変動が生じる可能性があります。",
+        "提示されているforward PERが異常値を示しており、将来のEPS予測に対する市場の不確実性が残ります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-10",
+    "days_ago": 7,
+    "confidence": 75,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "KDDIとKDDIスマートドローン、認定USPとして2026年12月よりUTMサービスを提供開始へ - ドローンジャーナル",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5Ia0tudWRxMVMxR2ZyeElqMFJSd0JiQk5weVg0Mi1TUGp3UGhUWjlodWVGeFVfNUx5ZEVYcmI3d0UxQzN0UVE3OEI3Q242NVplNDRxRjZQWllXSmxXYXRDbWFuRmlHcXprR0E?oc=5",
+        "published": "Wed, 16 Sep 2026 23:00:00 GMT",
+        "publisher": "ドローンジャーナル"
+      },
+      {
+        "title": "国内初、国土交通省航空局の「UTMサービスプロバイダID」を取得 - KDDI ニュースルーム",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1LTnF6R2s3WEdVMWhMT3VIVUJ6TkFCcUxOXzNDQUI0U3lPRjBVNE5jT2U0S0RNU3QxdW5nMTBsSE95S1NQUGVINFJxX3RSVkcxbmFTR3VCcG9RRW52VjZ5dUp4b1Zmb05MSTJreHZQZw?oc=5",
+        "published": "Wed, 16 Sep 2026 15:27:26 GMT",
+        "publisher": "KDDI ニュースルーム"
+      },
+      {
+        "title": "KDDI、日光杉並木街道保護に１０万円 ５年連続寄付 - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBSdkxYYWdUbnZxdng5Q2FIWngwbFZzVVdZcFJiNGpjSHl2QlhFeC1tb3JzcmhxbUtickxEcWdadnJZVkRreEVGRW1hUnlVOFZDYVdFQkRFS24?oc=5",
+        "published": "Wed, 16 Sep 2026 20:00:00 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "「食べログ」運営のカカクコムTOB LINEヤフーがさらに買い付け価格引き上げ 大株主KDDIの動向が焦点に - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFB3bllOZWlhdXE0VzZpMzJ4SVRSZTd5d1h3SThDTmtCWmFyT191SjY2R2liRklEdkwtRG9wMkpIQmZQN21GeVBfWHRNR19sVUROMTZMcjNESQ?oc=5",
+        "published": "Wed, 16 Sep 2026 12:15:39 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "KDDIなど通信4社、高速大容量の「ミリ波」を共同で拡大へ 5G向け - nikkei.com",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1GUXdSX2hoTHBrdHFQSWFRTV9tV21VLWxDZEkwUTdzSjRfMHhqcmFwU3RoVXBRU1lneUMzNVVDMUd1RnVkWjJ1eWxIenNOdm5SYTVDN1FyclAxUXhKNmZja1lHU1ZyZ3FId3FlTg?oc=5",
+        "published": "Wed, 16 Sep 2026 06:40:25 GMT",
+        "publisher": "nikkei.com"
+      },
+      {
+        "title": "KDDIスマートドローン／国内初、国土交通省航空局の「UTMサービスプロバイダID」取得 - 物流ニュースのLNEWS",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9ZVDJaOFM0OHByczRvYzJyVkVNUVFyVDZvUUd5a1lMb3M3S0RZUmdBcm1IeGhwN3c4RE82eWhLS01hUy14bWdXRVlnT3AwcG9lUjllVw?oc=5",
+        "published": "Wed, 16 Sep 2026 06:50:31 GMT",
+        "publisher": "物流ニュースのLNEWS"
+      },
+      {
+        "title": "ＫＤＤＩなど携帯４社、５Ｇミリ波のエリア拡大へ共同検討、基地局・中継器を有効活用 - kabu-ir.com",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE42YjU4emc1czJGckRkRXIzODM5ZnBsMkNZblFVRDRJRUpGTjZnMzR0NnRLSE5OdjR2akZEV29Pb0hyRnFlOGRfMG9vbTZMUXpQalhmMg?oc=5",
+        "published": "Wed, 16 Sep 2026 23:00:56 GMT",
+        "publisher": "kabu-ir.com"
+      },
+      {
+        "title": "NTTデータとKDDI、ドローン運航管理で初認定 - LOGISTICS TODAY",
+        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBRY0d6dkFNem1feDhXWUJMMklpWmdndEhFeVZTd3ZZVlNtM2g3OTZ3NkZILVAwT0JKWW9jUTdVQ1lDcGhSTkI0NjJR?oc=5",
+        "published": "Wed, 16 Sep 2026 10:35:50 GMT",
+        "publisher": "LOGISTICS TODAY"
+      },
+      {
+        "title": "小学生のスマホ性犯罪被害が2割増の167人 KDDIが親子向けに非行防止教室を開催（MRO北陸放送） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5IbnU5c2FJTG5UUkh1bmZWa0xNVVBJT1Bhd1l3dDlGcFJBZC1MTkRoaXpBajgyQUJFR2xKNmR0b3BfczhRd3dxR3VxWDIwWl9FMjlXOHh5Qjl6bTA0Y3AtZUx2VEpYWHNETWdGeDVnN2VmbFVIUVc3R2NkMHZnQjg?oc=5",
+        "published": "Wed, 16 Sep 2026 09:08:14 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "スマホつながりやすくなる？ 通信4社｢真の5G｣エリア拡大で連携 - 朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBNOHk1MkFJQzRaNzlpRThFNmQyZ0NVa29ycmZhOXBHZ2xSbTVjWnBkOHVNNk1uYWJCQUpNNGJNeXpsOXRXY2t3VFd3eUdZQ0lpY0N3UGRXN2w3Wnd4U1g0ajRwVXJHVlE?oc=5",
+        "published": "Wed, 16 Sep 2026 11:36:43 GMT",
+        "publisher": "朝日新聞"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533350.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      }
+    ]
+  }
+}
