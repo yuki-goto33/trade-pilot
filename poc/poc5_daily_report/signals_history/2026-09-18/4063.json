@@ -1,0 +1,171 @@
+{
+  "code": "4063",
+  "name": "信越化学工業",
+  "generated_at": "2026-09-18T09:25:18+09:00",
+  "price_as_of": "2026-09-17",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ面では創立100周年記念配当の実施や配当増額修正（strength=75）という強力な買い材料がありますが、テクニカル面が明確な下落トレンド（bearish）にあり、ルールの「buy」条件（テクニカルがneutral）を満たしません。",
+        "evidence": "fundamental_view.points[0]: 2026-09-15 記念配当の実施発表 / technical_view.stance=bearish (strength=75)"
+      },
+      {
+        "reason": "5日線が25日線を下回るデッドクロス状態が続いており、MACDヒストグラムもマイナス圏にあるため、短期的には「落ちるナイフ」を掴むリスクを避け、底打ち・反転の兆しを待つべき局面です。",
+        "evidence": "technical_view.points[1]: price_technical.sma5_vs_sma25='dead' / technical_view.points[2]: rsi14=34.2"
+      },
+      {
+        "reason": "製造業PMIの拡大やAI需要など外部環境は良好ですが、市場レジームがuptrendであるにもかかわらず個別銘柄の騰落率がTOPIXを大幅に下回っており、需給の悪化が継続しています。",
+        "evidence": "fundamental_view.points[1]: macro.japan_pmi=54.9 / technical_view.points[0]: change_60d_pct=-21.08"
+      }
+    ],
+    "risks": [
+      "主要な移動平均線の下押し圧力が強く、直近安値の5628円を割り込んで下落が加速するリスク",
+      "2026年10月27日の次回決算発表に向けた業績警戒感による買い控え",
+      "10月29日の日銀会合を控えた国内金利（現在2.998%）の上昇に伴うバリュエーション調整"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ面では創立100周年記念配当の実施や配当増額修正（strength=75）という強力な買い材料がありますが、テクニカル面が明確な下落トレンド（bearish）にあり、ルールの「buy」条件（テクニカルがneutral）を満たしません。\",\n      \"evidence\": \"fundamental_view.points[0]: 2026-09-15 記念配当の実施発表 / technical_view.stance=bearish (strength=75)\"\n    },\n    {\n      \"reason\": \"5日線が25日線を下回るデッドクロス状態が続いており、MACDヒストグラムもマイナス圏にあるため、短期的には「落ちるナイフ」を掴むリスクを避け、底打ち・反転の兆しを待つべき局面です。\",\n      \"evidence\": \"technical_view.points[1]: price_technical.sma5_vs_sma25='dead' / technical_view.points[2]: rsi14=34.2\"\n    },\n    {\n      \"reason\": \"製造業PMIの拡大やAI需要など外部環境は良好ですが、市場レジームがuptrendであるにもかかわらず個別銘柄の騰落率がTOPIXを大幅に下回っており、需給の悪化が継続しています。\",\n      \"evidence\": \"fundamental_view.points[1]: macro.japan_pmi=54.9 / technical_view.points[0]: change_60d_pct=-21.08\"\n    }\n  ],\n  \"risks\": [\n    \"主要な移動平均線の下押し圧力が強く、直近安値の5628円を割り込んで下落が加速するリスク\",\n    \"2026年10月27日の次回決算発表に向けた業績警戒感による買い控え\",\n    \"10月29日の日銀会合を控えた国内金利（現在2.998%）の上昇に伴うバリュエーション調整\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "中期的な下落トレンドが継続しており、主要な移動平均線やMACDも弱気シグナルを示しています。前夜の米国半導体株指数の上昇による反発の可能性はあるものの、トレンド転換の兆しは確認できません。",
+      "points": [
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がいずれも大幅なマイナスであり、明確な中期下落トレンドの中にあります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-21.08, relative_to_topix_60d_pct=-22.17"
+        },
+        {
+          "point": "5日線が25日線を下回るデッドクロス状態にあり、MACDヒストグラムも依然としてマイナス圏で推移しています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead\", price_technical.macd_histogram=-0.86"
+        },
+        {
+          "point": "RSIが30台前半と低水準にあり、価格も直近30営業日の安値圏を脱却できておらず、モメンタムが極めて弱いです。",
+          "evidence": "price_technical.rsi14=34.2, price_technical.period_low=5628.0"
+        }
+      ],
+      "cautions": [
+        "前夜のSOX指数が+3.14%と大幅上昇しており、寄り付き直後は半導体関連株として買いが先行する可能性があります。",
+        "RSIが売られすぎ水準に近い34.2まで低下しており、自律反発による一時的な株価の押し上げに注意が必要です。",
+        "TOPIXが25日線の上で推移するuptrendレジームにあるため、市場全体の地合いが下値を支える要因となり得ます。"
+      ],
+      "key_levels": {
+        "support": 5628.0,
+        "resistance": 5943.52
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "創立100周年記念配当の実施発表という直近の明確な株主還元カタリストに加え、AI需要を背景とした国内製造業PMIの拡大が同社の主力事業にとって強力な追い風となっている。",
+      "points": [
+        {
+          "point": "2026年9月15日に創立100周年記念配当の実施と配当予想の増額修正を発表しており、株主還元姿勢の強化が短期的な買い材料となる。",
+          "evidence": "disclosures.items[0].title（2026-09-15 15:30:00 創立100周年記念配当の実施 及び 配当予想の修正に関するお知らせ）"
+        },
+        {
+          "point": "製造業PMIが54.9と拡大傾向にあり、特にAI関連需要の増大が新規受注を牽引している点は、半導体シリコン等の電子材料に強みを持つ同社に好適な環境である。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9"
+        },
+        {
+          "point": "1.6兆円を超える潤沢な手元資金を有しながら、コミットメント型自己株式取得（FCSR）などの仕組みを通じて資本効率改善を継続している点は、中長期的な企業価値向上に寄与する。",
+          "evidence": "news.headlines[0].title, disclosures.items[1].title, fundamentals.valuation.return_on_equity=0.112"
+        }
+      ],
+      "cautions": [
+        "2026年10月27日に次回決算発表を控えており、業績進捗の確認が必要となる。",
+        "2026年10月29日からの日銀金融政策決定会合に向け、国内10年債金利（2.998%）の動向がバリュエーションに与える影響に注視が必要。",
+        "グローバルな景気敏感セクターであるため、マクロ経済の急変が塩ビ樹脂などの汎用化学品需要を抑制するリスクがある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "手元資金1.6兆円超なのに「借入金」が急増…それでも信越化学工業の財務は盤石といえるワケ - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFA1WVNyWGFzRTVLZXAxWkFoeV9YblpnQVYydjJHTGdZNm5BV3BULXdiOTJhMUtYT1NWWDYwUldLeWc5RmRScjRZVnMwUWzSAU9BVV95cUxNaHM1bDUxaVBSbFNNeDlWMmJWLXljWlFnYkFWdi04YnZoUzBpd2RIUHRVbktfUVFfcklzUmZ2OGtSTXlhcldmdkxwejVuWUtj?oc=5",
+        "published": "Thu, 17 Sep 2026 23:00:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "信越化学工業の株価は割安か｜記念増配と半導体・塩ビから考える今後 - 日本投資機構株式会社",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1yT0pLdXEzLUJDcDgwU05LeXRlSldNM2hlckRoZVpzV01sdHQtemFLOUVyb2xkaXB0X0d3QklpRHF0Q2RiMXliSVpfWmo5azlsQ0dTd25tNnBOZw?oc=5",
+        "published": "Thu, 17 Sep 2026 01:00:00 GMT",
+        "publisher": "日本投資機構株式会社"
+      },
+      {
+        "title": "日経平均は小幅続伸、ファーストリテが1銘柄で約56円分押し上げ - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPLWpTRkdpN3V2d3lZc3o5cWJaaWswOEVYck5TYnBsLUZBcldEaFRHVFNQTnFvX0dBWkpFYlA0UmZqcmFTYWxJQzJhcFNiaGpTYUJTNTFndTJXNlk5TE45Nll3LW5mUTlPUXVuajBOZUdaWXNFb1NBYVdGWHpsQTRYako4dWVoanA0dVp5Y9IBjAFBVV95cUxPLWpTRkdpN3V2d3lZc3o5cWJaaWswOEVYck5TYnBsLUZBcldEaFRHVFNQTnFvX0dBWkpFYlA0UmZqcmFTYWxJQzJhcFNiaGpTYUJTNTFndTJXNlk5TE45Nll3LW5mUTlPUXVuajBOZUdaWXNFb1NBYVdGWHpsQTRYako4dWVoanA0dVp5Yw?oc=5",
+        "published": "Thu, 17 Sep 2026 03:21:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "「株式」ADR日本株ランキング〜やや買い優勢、シカゴは大阪日中比680円高の64085円 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQajR6X0FBNUplZzB5bHlRV2IyanJpeWJHTUdlTWZieHYzQmp0WVU3N21ZcTI0Q3NZSksyVHF3N1o1Zy1OaGJkaVhYRzdkeExoSVpMdF9HNms5c3NrR1V6Q1dPWWxna3pLdHlhaEJRcFlrR2JWVzZ4NUZJNUNzdmpJT29uTTFxaXpSWWZKWFhhckPSAYwBQVVfeXFMT2Jhc052OVFFU0tZdzNCd1h1eXk0ZDFqYWk0VlV0dDR6aUFFNzVwcTVJZVF3c0ozc1NEalNMQzlyd1FvSDdFY25ZSlBsa0ptQ3pFblV0QmRrTFQ2bjJjUkdJQWJCUWtmalBoNWZ1bFljNU9LamgzZTR0NFgyQW1LcGE5bWZVLThSd0NvU3g?oc=5",
+        "published": "Thu, 17 Sep 2026 00:54:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "創立100周年記念配当の実施 及び 配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260914536275.pdf",
+        "date": "2026-09-15 15:30:00"
+      },
+      {
+        "title": "コミットメント型自己株式取得（FCSR）における事後調整のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260915536456.pdf",
+        "date": "2026-09-15 15:30:00"
+      },
+      {
+        "title": "ストックオプション（新株予約権）の割当てに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260915536486.pdf",
+        "date": "2026-09-15 15:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による取得結果および自己株式の取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730502910.pdf",
+        "date": "2026-07-30 11:30:00"
+      },
+      {
+        "title": "コミットメント型自己株式取得（FCSR）による自己株式取得のための第三者割当による第27回および第28回新株予約権の発行条件の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503103.pdf",
+        "date": "2026-07-30 11:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による自己株式の買付けに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729502228.pdf",
+        "date": "2026-07-29 16:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598954.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "業績予想および配当予想に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598982.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による自己株式の買付けに関するお知らせ（コミットメント型自己株式取得（FCSR）による自己株式取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598998.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573248.pdf",
+        "date": "2026-06-18 15:30:00"
+      }
+    ]
+  }
+}

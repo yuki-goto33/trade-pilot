@@ -1,0 +1,206 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-09-18T09:12:49+09:00",
+  "price_as_of": "2026-09-17",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家のスタンスがneutral（strength=55）にとどまり、buyの発火条件（bullishかつstrength>=70）を満たさない。自社株買いや四半期利益改善の下支えはあるものの、通期減益トレンドにより株価を押し上げる明確なカタリストが不足している。",
+        "evidence": "fundamental_view.stance=neutral (strength=55), fundamental_view.points[1]: 営業利益が2024年3月期の5兆3,529億円から2期連続減益"
+      },
+      {
+        "reason": "テクニカル専門家もneutral（strength=55）であり、中期的な相対的強度はあるものの、株価が25日移動平均線の下方に位置しMACDも弱気シグナルを示すなど、短期的な調整売り圧力が残存している。",
+        "evidence": "technical_view.stance=neutral (strength=55), technical_view.points[0]: price_technical.sma5_vs_sma25=dead, price_technical.sma25=3062.02"
+      }
+    ],
+    "risks": [
+      "2026年10月29日〜30日の日銀金融政策決定会合や金利動向に伴う急激な為替の円高進行による収益下振れリスク",
+      "戻り売り抵抗線となっている25日移動平均線（3062.02円）を明確に上抜けた場合の上値追随機会の損失",
+      "通期減益傾向が長期化し、低PER・PBRでも株価が反発しないバリュートラップ化のリスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 50,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 21,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家のスタンスがneutral（strength=55）にとどまり、buyの発火条件（bullishかつstrength>=70）を満たさない。自社株買いや四半期利益改善の下支えはあるものの、通期減益トレンドにより株価を押し上げる明確なカタリストが不足している。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=55), fundamental_view.points[1]: 営業利益が2024年3月期の5兆3,529億円から2期連続減益\"\n  },\n  {\n   \"reason\": \"テクニカル専門家もneutral（strength=55）であり、中期的な相対的強度はあるものの、株価が25日移動平均線の下方に位置しMACDも弱気シグナルを示すなど、短期的な調整売り圧力が残存している。\",\n   \"evidence\": \"technical_view.stance=neutral (strength=55), technical_view.points[0]: price_technical.sma5_vs_sma25=dead, price_technical.sma25=3062.02\"\n  }\n ],\n \"risks\": [\n  \"2026年10月29日〜30日の日銀金融政策決定会合や金利動向に伴う急激な為替の円高進行による収益下振れリスク\",\n  \"戻り売り抵抗線となっている25日移動平均線（3062.02円）を明確に上抜けた場合の上値追随機会の損失\",\n  \"通期減益傾向が長期化し、低PER・PBRでも株価が反発しないバリュートラップ化のリスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "中期トレンドは市場平均を大きく上回る強さを維持しているが、足元では25日移動平均線の下抜けやMACDの弱気シグナルが継続しており、短期的な調整圧力と外部環境の好転が拮抗している。",
+      "points": [
+        {
+          "point": "SMA5とSMA25のデッドクロスが発生しており、株価は25日線（3062.02円）の下方に位置している。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.sma25=3062.02"
+        },
+        {
+          "point": "MACDがシグナルを下回り、ヒストグラムもマイナス圏で推移しているため、短期的には調整売りの勢いが残っている。",
+          "evidence": "price_technical.macd=-4.68, price_technical.macd_signal=5.34, price_technical.macd_histogram=-10.02"
+        },
+        {
+          "point": "中期的なトレンドを示す60営業日騰落率は+12.12%、対TOPIX相対比で+11.03%と、市場平均を凌駕する強い基調にある。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=12.12, price_technical.trend_60d.relative_to_topix_60d_pct=11.03"
+        },
+        {
+          "point": "前夜の米国市場でADR（トヨタ自動車）が+0.88%上昇し、セクターETFも堅調であることから、当日寄り付きは買い先行の展開が期待される。",
+          "evidence": "us_overnight.adr.change_1d_pct=0.88, us_overnight.sector_proxy.change_1d_pct=1.1"
+        }
+      ],
+      "cautions": [
+        "ADRの上昇分は寄り付き価格に織り込まれる可能性が高く、寄り付き後の買いが続かない「寄り天」のリスクがある。",
+        "25日移動平均線（3062.02円）付近が戻り売り意識の強い上値抵抗線として機能する可能性がある。",
+        "MACDの弱気な形状が改善されない場合、短期の調整が長引き中期トレンドを損なう恐れがある。"
+      ],
+      "key_levels": {
+        "support": 2918.0,
+        "resistance": 3062.02
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "直近四半期の純利益回復や1兆円枠の自社株買い、円安環境は下支えとなる一方、年次ベースでの減益トレンドが続いており、低バリュエーションからの明確な上昇カタリストには欠ける。",
+      "points": [
+        {
+          "point": "2026年6月期の四半期純利益が1兆4,770億円と直前四半期から大きく改善したほか、上限1兆円の自社株買い枠に対し8月単月で約865億円の買付を進めており、需給面の下支えがある。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].net_income_oku_jpy=14770, fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "年次業績トレンドにおいて、営業利益が2024年3月期の5兆3,529億円から2026年3月期は3兆7,662億円まで2期連続の減益となっており、業績モメンタムの停滞が警戒される。",
+          "evidence": "fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=37662, fundamentals.earnings_trend.annual[2].operating_income_oku_jpy=53529"
+        },
+        {
+          "point": "ドル円が156円台で推移し、製造業PMIも54.9と拡大圏を維持しているマクロ環境やPBR0.96倍・予想PER9.35倍の割安水準はあるが、業績減益傾向下ではバリュートラップとなる懸念がある。",
+          "evidence": "macro.indices[2].close=156.14, macro.japan_pmi.manufacturing.latest_value=54.9, fundamentals.valuation.price_to_book=0.963, fundamentals.valuation.forward_pe=9.358"
+        }
+      ],
+      "cautions": [
+        "2026年11月5日に次回決算発表を控えており、四半期業績の回復持続性が確認されるまでの業績見極めリスクがある。",
+        "2026年10月29日〜30日の日銀金融政策決定会合や国内10年債金利（2.998%）の高止まりに伴う為替反転（円高進行）による収益下振れリスク。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "トヨタ自動車(株)【TM】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBBVUdJM0U0aFlkR0FQN05mMW1YR2VRTlVLdEE1d19aRE9MWndrR1NnWTJZb1VtZmtjSGxRTzZseVZQaVhNU1NNUUJFSU8?oc=5",
+        "published": "Thu, 17 Sep 2026 13:35:03 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "人気ミニバンが2027年にも大進化へ！ トヨタ『ノア／ヴォクシー』次期型は新開発1.5LエンジンHEVか？ 1枚目の写真・画像 - s.response.jp",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxORDItb3dnZXRKa3R1UEtJSFZ5eVIzaDZoSXFBVE1uOFpPaFZwV2ZsMVNZc0x4SENNT01vYTNMUmVXOC1jNFdnRDJFemNwVlUxYUd5Yl85WHlHV05jN1lOa0huelgxbXJ6a0ZIQ0ZnenNNNS0zMGZlYzBvam01c3lET2RTOFM1SjFWLUtCX1MtRTA?oc=5",
+        "published": "Thu, 17 Sep 2026 23:00:03 GMT",
+        "publisher": "s.response.jp"
+      },
+      {
+        "title": "IS - トヨタ自動車株式会社 公式企業サイト",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4yN0ZWUlpiOWcwQ1E0LUR2dUpuT1lPUGxmMUljRmh0WjN1NFR0MmNjWVMzM1VyUkZkcEhkaXFXbnQwWWQyU1NtTFB1LVpRMXBVbWtHd0xtazAzVkE?oc=5",
+        "published": "Thu, 17 Sep 2026 04:32:20 GMT",
+        "publisher": "トヨタ自動車株式会社 公式企業サイト"
+      },
+      {
+        "title": "【選手一覧】野球の代表選手 トヨタ自動車の嘉陽宗一郎・和田佳大・王子製紙の柴﨑聖人ら24人 【アジア大会 愛知･名古屋2026】 | 名古屋・愛知・岐阜・三重のニュース【CBC news】 | CBC web (1ページ) - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBwWm93OGJNQ0otZVQtMjB4ektGYjZCVjhHUkpNQ3pIRzJQLWZGa1ZRZjBBNFFjU3ZJdXdvSS15OEIxLTBId3dDLWdkeVktWnVoWWhPSGdSOE9Od0hYQVhjdWMzZzFCbk0?oc=5",
+        "published": "Thu, 17 Sep 2026 05:11:52 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "トヨタ、毎年1兆円を投資し工場とロボットを更新 40万台をフィジカルAIであるLarge Behavior Models搭載ロボなどに - Car Watch",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE0tdUpzeW1nRGI3YnIzelREUEJXSW8xeVQtNVRXT2pyV2o5VnpBcjRsOU4tNlFNYldpdTluQXRQOTlpaVZqZUtYbGxxWVJwdWRHRFVZdTBlV0hyR295ZUhrcC05MXQ?oc=5",
+        "published": "Thu, 17 Sep 2026 17:00:00 GMT",
+        "publisher": "Car Watch"
+      },
+      {
+        "title": "「一部改良とは思えない！」レクサス新型「NX」に対するSNSの反響は？ 大幅進化を歓迎する一方「現行型の方が好き」との声も - VAGUE(ヴァーグ)",
+        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5qRVQ2SDJpWjVic1FRdWR1YWlFaHlLcGtkVzl5UFNiWEV6Q0lKcW9UTXRQUmhGdWh3VGZURHdiR05BZ3NtcGc?oc=5",
+        "published": "Thu, 17 Sep 2026 22:10:16 GMT",
+        "publisher": "VAGUE(ヴァーグ)"
+      },
+      {
+        "title": "製造業AIのキャディ、177億円調達で企業価値1820億円に トヨタ系も出資 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFA3dm0wTHhuejdNdE5fdFFEWFktSnBSTGxqM1pYR0djbGRsOHdGYl9paE1GTkQ1WlkxR1pJT19jeVBDSFI2UmUxRGFYckxuN1ZrbmRYcV9EbXRDZFNvaEl3ZGR1M1R3Yjl0aHZ4WWlVZmZSUjVG?oc=5",
+        "published": "Thu, 17 Sep 2026 07:05:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "トヨタ、欧州「商用車連合」で水素普及を 燃料電池部品の現地生産構想も：ニュース - 中日BIZナビ",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE55RGhpNVlQS3NuMlBHeUhuekt6QWNHb1A4LUFQTy0wZFBZY1lzWVhOcXdXUG0yV2ZNMHN2ZlZxOWlpRnJqTmdnSkpYa2JpeF9KOTQxYmJsdmJsbDVGYmVn?oc=5",
+        "published": "Thu, 17 Sep 2026 10:02:35 GMT",
+        "publisher": "中日BIZナビ"
+      },
+      {
+        "title": "アジア大会 バスケ女子 香港に大勝 １次リーグ初戦【スライドショー】 - 47NEWS",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBYSFpVYWs2Q0NQOElWYXUyOXRmUU45ODBZSmFtU1dnSnRDSjh3U0NlZEpRSUk0NUJfX0NEbkptUVowSWl0bk9tS1NQNA?oc=5",
+        "published": "Thu, 17 Sep 2026 14:01:44 GMT",
+        "publisher": "47NEWS"
+      },
+      {
+        "title": "ランクルに追加された「ハイブリッド」は980万1000円から！　一部改良で商品力アップのランドクルーザー300はますます売れそうだ - WEB CARTOP",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5zZ1dDZjc0SzRzSl85MjFwWThrZzdJbzdqZWtlU2FOSkktdUlzRFBEcjlsd044b0xJVUNsbzg0aUtTdFJGdmJkNU5QaGY4cjQ1dWxn0gFYQVVfeXFMTXExYWN4b0lXcTNkOXdIaHJ3WnJZVFlkS2NKM3dvX0ZCT1dQcGtEUHhDUmRRU3ZOeXVyTXI4YmZlcVV2VGlHOVVpX2JOOHFpbF9wdVRESENJRQ?oc=5",
+        "published": "Thu, 17 Sep 2026 04:00:04 GMT",
+        "publisher": "WEB CARTOP"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903531084.pdf",
+        "date": "2026-09-03 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度の継続及び従業員に対する新たな株式交付制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507853.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507884.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503849.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "2027年3月期第１四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507860.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507846.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-09-18T09:22:11+09:00",
+  "price_as_of": "2026-09-17",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 45,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家は強度85と極めて強気だが、テクニカル専門家も既に強気（bullish）に転じており、好材料が株価に織り込まれている可能性が高いため。",
+        "evidence": "fundamental_view.strength=85 / technical_view.stance=bullish"
+      },
+      {
+        "reason": "テクニカル面でMACDのデッドクロスが確認されており、強力な上昇トレンドの中での一時的な調整局面（押し目形成）を待つべき状況であるため。",
+        "evidence": "technical_view.cautions[0]: macd_histogram=-4.31"
+      },
+      {
+        "reason": "統合判断ルール（v5）に基づき、両専門家が強気の場合は「織り込み済み」と判断し、高確率なエントリーポイントを確保するために新規買いを控える。",
+        "evidence": "統合判断のルール1（テクニカルも bullish → hold）"
+      }
+    ],
+    "risks": [
+      "金利急騰に伴う保有国債等の評価損拡大リスク（fundamental_view.cautions）",
+      "想定保有期間内に日銀金融政策決定会合（10/29-30）が含まれており、政策変更によるボラティリティ急増の可能性（reference.next_boj_meeting）",
+      "MACDデッドクロスによる短期的な調整がSMA25（3636円）を下抜けて長期化するリスク（technical_view.key_levels.support）"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 45,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家は強度85と極めて強気だが、テクニカル専門家も既に強気（bullish）に転じており、好材料が株価に織り込まれている可能性が高いため。\",\n   \"evidence\": \"fundamental_view.strength=85 / technical_view.stance=bullish\"\n  },\n  {\n   \"reason\": \"テクニカル面でMACDのデッドクロスが確認されており、強力な上昇トレンドの中での一時的な調整局面（押し目形成）を待つべき状況であるため。\",\n   \"evidence\": \"technical_view.cautions[0]: macd_histogram=-4.31\"\n  },\n  {\n   \"reason\": \"統合判断ルール（v5）に基づき、両専門家が強気の場合は「織り込み済み」と判断し、高確率なエントリーポイントを確保するために新規買いを控える。\",\n   \"evidence\": \"統合判断のルール1（テクニカルも bullish → hold）\"\n  }\n ],\n \"risks\": [\n  \"金利急騰に伴う保有国債等の評価損拡大リスク（fundamental_view.cautions）\",\n  \"想定保有期間内に日銀金融政策決定会合（10/29-30）が含まれており、政策変更によるボラティリティ急増の可能性（reference.next_boj_meeting）\",\n  \"MACDデッドクロスによる短期的な調整がSMA25（3636円）を下抜けて長期化するリスク（technical_view.key_levels.support）\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "中期トレンドはTOPIXを大幅にアウトパフォームする強い上昇基調にあり、市場レジームも上昇局面を維持しています。短期的にはMACDのデッドクロスによる調整が見られるものの、25日移動平均線をサポートとした底堅さと前夜ADRの反発から、押し目買い優勢の展開が期待されます。",
+      "points": [
+        {
+          "point": "中期トレンドが極めて強力であり、市場全体と比較しても高い優位性を示している。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=11.78, relative_to_topix_60d_pct=10.7"
+        },
+        {
+          "point": "5日線が25日線を上回るゴールデンクロス状態にあり、株価も25日線（3636.0円）を上回って推移している。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.last_close=3652.0, price_technical.sma25=3636.0"
+        },
+        {
+          "point": "前夜の米国市場でADRが1.38%上昇しており、当日の寄り付きにおけるポジティブなバイアスが期待できる。",
+          "evidence": "us_overnight.adr.change_1d_pct=1.38"
+        }
+      ],
+      "cautions": [
+        "MACDがシグナルを下回るデッドクロス状態にあり、ヒストグラムもマイナス圏で推移しているため、短期的な調整が長引く可能性がある（price_technical.macd_histogram=-4.31）。",
+        "ADRの上昇は寄り付き価格に織り込まれるため、寄り付き後の利益確定売りに注意が必要。",
+        "RSIが50近辺であり、明確な上放れには出来高を伴う反発が待たれる（price_technical.rsi14=49.4）。"
+      ],
+      "key_levels": {
+        "support": 3636.0,
+        "resistance": 3795.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 85,
+      "summary": "米FRBの政策金利4%への引き上げ決定と国内10年金利の3%迫る上昇により、銀行業の収益環境が劇的に改善。直近の業績進捗も極めて良好で、融資基準緩和や富裕層向け新サービス等の新規カタリストも豊富である。",
+      "points": [
+        {
+          "point": "米国の3年ぶり利上げ決定（政策金利4%）および年内追加利上げ示唆を受け、外貨資産の利ざや拡大と国内金利の上昇継続シナリオが強力な追い風となっている。",
+          "evidence": "news, macro.rates.jgb_10y_percent=2.998"
+        },
+        {
+          "point": "2026年3月期の純利益が前期比約30%増の2.4兆円規模と好調な中、直近の2026年6月中間期1Qも純利益8,094億円を計上し、極めて高い収益性を維持している。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "9月17日付で報道されたメガバンク融資基準に関する刺激材料や、富裕層向け新サービス「エムット Excellent Club」の始動発表など、収益基盤の拡大に直結する新規材料が複数確認できる。",
+          "evidence": "news (2026-09-17 published items)"
+        }
+      ],
+      "cautions": [
+        "急速な金利上昇に伴う保有債券（国債等）の評価損拡大リスク",
+        "米国の大幅利上げ継続が招く実体経済の減速および信用コスト増大の可能性",
+        "次回決算発表（2026年11月12日）に向けた業績修正期待のハードル上昇"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "米国株式市場は反発、原油安を好感／海外市場動向(フィスコ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQcW9UOGVUcVA5enNrb09uRXY3ZzRQNWpVYWJpVzJGQ0s4R1B1Z29tVktzU2c0M2hlUGZmdGFIZlMwaTNzc2FEZzlPVV9lRXlIZHBFanR5eVhzNEIzUzBLQjFqcmdBNHN5S2FkczItQU15ZE1pcUtqeFgyb29tdE9LN2ZlNjhyVTA?oc=5",
+        "published": "Thu, 17 Sep 2026 22:54:59 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "米国株式市場は反発、原油安を好感 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPODB1Y3RVc085cXl0M3YwdExja1hIdWZ1aV93dk51UzBiZjNlUm8wNDUyczV5M0VvVVIxdkJpWmF3VWxFVXhUT2pDSU1YdDdiYTB6OERWa0R1a3J6VFZtT0REc2k4dHBnSTRnOXVpaXIwVENROTJZdzBlVEN1X0djNk0zYWJyUGvSAYwBQVVfeXFMT2NzaDliUy1sdWJ4UGZ3S1FsZEtXSGg2OFRVRldYbEhScFNnekJHOWkyWDhReFpkbEx2X2hDeVhPVi1BQ3BUeGZHUjJyS0M3di1MRGJkNmVzV3JQTVNyMjNFN3ZWVU5BQ0x1bTV2Z1d6eVlNR1dpOE9wSEtHU3I2WTNuX3l2ZFlIcFRMS3Q?oc=5",
+        "published": "Thu, 17 Sep 2026 23:16:29 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "三菱重など防衛関連株が軒並み高、メガバンク融資基準に関する報道が刺激材料に - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBhc2VZTC1GSU11eEE2bE9aY21WVmhDa3czSk1BOHFiYVZtcjc0eFdkWm5oVFlqcXBET2hQTHdqMHl0T0xodmIyV1NkOUtRbVdfTDdmWVM3SS1aU1RIOGNEUQ?oc=5",
+        "published": "Thu, 17 Sep 2026 04:43:00 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "三井住友「Olive」と三菱UFJ「エムット」の富裕層向けクレカ比較！ 年会費無料になる条件と向いているのはどんな人？ - news.infoseek.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBsOXR2Ym0zdm1XMjhzbWVsUC1wc3hWRXc0TldfX01zT1Y2LUMwMnFOd2NaZ3JvMFg2bjEzdGFrRnNNMkdvaVFVX2VZYm5oN19Fc3RNWDdjbmZza0Q5Y1QzWVpR?oc=5",
+        "published": "Thu, 17 Sep 2026 22:30:00 GMT",
+        "publisher": "news.infoseek.co.jp"
+      },
+      {
+        "title": "【三菱UFJ銀行】富裕層向け会員組織「エムット Excellent Club」 2027年3月始動 - 沖縄タイムス社",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1WeXNZZkdlMnpCSlNTOEViODlQLWFSU25Zak8teTM1SnNqajFlS05EbXVnQ3M5MzVDU0xjUlg3OXJRRTA4Sm16V1M2WUFRVE0ybV9GY2FLV2NxS1VfVHc?oc=5",
+        "published": "Thu, 17 Sep 2026 04:00:00 GMT",
+        "publisher": "沖縄タイムス社"
+      },
+      {
+        "title": "「ラストノート」最終回、葵（内田有紀）＆澄晴（寺西拓人）それぞれの道歩み2年後に再会 選んだ“愛の形”に「2人らしい」【ネタバレあり】 - モデルプレス",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9MdGNpb2lGTW4wMEtxMUdmR1NKUnY1N3llVnhpNHJKN0VQOTZfczNxZzRFelI5SHRSWWlCVHk5ak5YVXdvUjgxQUlqWjnSAUhBVV95cUxOSXp1cGNhYVRnVlpaM01iZE1IdlI0c01LWmlpdGR4aFRYNXdiRGQ4WWsyX1pab21OZVJBNWxrQ0FuNkZrbkR6S2E?oc=5",
+        "published": "Thu, 17 Sep 2026 13:54:41 GMT",
+        "publisher": "モデルプレス"
+      },
+      {
+        "title": "前場コメント No.2 電算、テーオーシー、三菱ＵＦＪ、ジャストプラ、東電力ＨＤ、ＧＥＮＤＡ | 個別記事 | ニュース - traders.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5lYVA0THAycy1tT1B4Wml4QkNNN0QwLWk4WENNQS1MT3hJWXNQUEVOWWY0d0JpQ2dQTi1fcnlIbF9iLWdNZDRjMWRyQlRuTG9Oa3RGczU3Skt1UHhv?oc=5",
+        "published": "Thu, 17 Sep 2026 02:30:00 GMT",
+        "publisher": "traders.co.jp"
+      },
+      {
+        "title": "みずほＦＧなど銀行株が堅調推移、３年ぶり米利上げ決定で金利上昇継続シナリオ意識◇ - みんかぶ",
+        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFB1UGhHbWxHN2lrS19Zd1BOdTJOYkE0aWlhbkxvcDhvMUF2UGh1TDNxenV0X2oxMG9YdXhQbWxSd1VOWG5lMVE?oc=5",
+        "published": "Thu, 17 Sep 2026 00:32:38 GMT",
+        "publisher": "みんかぶ"
+      },
+      {
+        "title": "東京市場寄り付き：日経平均が続伸 三菱重工がPFNと100億円資本提携 原油反落でINPEX安い レオパレスが特別買い気配 - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOdmU5cDN0Rk1fM1EyUnQyM2VCdFFGeGZMdzBpU1NETWxGeVdxYXZLT3ZjRVlLeXhOTGo0YXFGYU00SkFsWW8wWEdwZDR1QnNSS2MzYTZiSTBjNFc1dHlTWFpCQ3cyNnB1WnRBa3ZjTF9jc1o0a3l5U3hUYUVoQUoxeFQ4RkVmbUQxNnJVSUFDdkU5SWpkazdjZjVhdVYyR3FJWWhjbDRvNy1FYllvZmk5LV81N0liYkpEajJTa01PdTVaeS1xalE?oc=5",
+        "published": "Thu, 17 Sep 2026 00:40:41 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "【ＦＲＢ３年ぶり利上げ】政策金利４％へ、年内追加利上げを示唆――トランプ大統領は「１％以下」要求 - kabu-ir.com",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE41cTVGekRsQ3g3SjU4cmRnUXpId3QwMVF6cjUwb0tuOVgtTGpvemlZelg5Y1p0V2VRbFFIYjd5Z1hHRS1MbW1XbkFkVmxLcVhPZXVJRQ?oc=5",
+        "published": "Thu, 17 Sep 2026 00:18:34 GMT",
+        "publisher": "kabu-ir.com"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期 自己資本比率について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260814520300.pdf",
+        "date": "2026-08-14 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕（連結）（公認会計士又は監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510381.pdf",
+        "date": "2026-08-06 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505851.pdf",
+        "date": "2026-08-03 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      }
+    ]
+  }
+}

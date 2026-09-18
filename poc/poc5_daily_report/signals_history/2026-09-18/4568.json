@@ -1,0 +1,227 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-09-18T09:50:03+09:00",
+  "price_as_of": "2026-09-17",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近14日以内に同一銘柄へのbuyシグナルが出ているため、新規のbuyは見送り、継続監視とする。",
+        "evidence": "reference.recent_buy.days_ago=1"
+      },
+      {
+        "reason": "テクニカル面ではゴールデンクロス形成やMACDの好転など上昇モメンタムが強いものの、RSIが買われすぎ水準にあるため、短期的な調整リスクを考慮する。",
+        "evidence": "technical_view.stance=bullish (strength=85), technical_view.cautions[0] (RSI=71.9)"
+      },
+      {
+        "reason": "ファンダメンタルズ面ではAI創薬の進展や訴訟勝訴といったポジティブ材料があるものの、業績トレンドの鈍化や割高感から、現時点での大幅な株価上昇には懐疑的である。",
+        "evidence": "fundamental_view.stance=neutral (strength=50), fundamental_view.points[0] (AI創薬), fundamental_view.points[1] (訴訟勝訴), fundamental_view.points[2] (業績鈍化), fundamental_view.points[3] (バリュエーション)"
+      }
+    ],
+    "risks": [
+      "テクニカル指標の過熱感から短期的な価格調整が入る可能性。",
+      "ファンダメンタルズ面で業績トレンドの鈍化が続いた場合、株価の上値が重くなる可能性。",
+      "次回決算発表（2026年10月30日）の結果次第で、株価が大きく変動するリスク。",
+      "市場全体のセンチメント悪化により、業績やテクニカル要因とは関係なく株価が下落するリスク。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内に同一銘柄へのbuyシグナルが出ているため、新規のbuyは見送り、継続監視とする。\",\n   \"evidence\": \"reference.recent_buy.days_ago=1\"\n  },\n  {\n   \"reason\": \"テクニカル面ではゴールデンクロス形成やMACDの好転など上昇モメンタムが強いものの、RSIが買われすぎ水準にあるため、短期的な調整リスクを考慮する。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=85), technical_view.cautions[0] (RSI=71.9)\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ面ではAI創薬の進展や訴訟勝訴といったポジティブ材料があるものの、業績トレンドの鈍化や割高感から、現時点での大幅な株価上昇には懐疑的である。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=50), fundamental_view.points[0] (AI創薬), fundamental_view.points[1] (訴訟勝訴), fundamental_view.points[2] (業績鈍化), fundamental_view.points[3] (バリュエーション)\"\n  }\n ],\n \"risks\": [\n  \"テクニカル指標の過熱感から短期的な価格調整が入る可能性。\",\n  \"ファンダメンタルズ面で業績トレンドの鈍化が続いた場合、株価の上値が重くなる可能性。\",\n  \"次回決算発表（2026年10月30日）の結果次第で、株価が大きく変動するリスク。\",\n  \"市場全体のセンチメント悪化により、業績やテクニカル要因とは関係なく株価が下落するリスク。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 85,
+      "summary": "5日線が25日線を上回るゴールデンクロスを形成し、MACDも好転。中期的な上昇トレンドが明確で、直近の株価は大幅高を記録しており、米国ADRも堅調な推移を見せています。",
+      "points": [
+        {
+          "point": "中期トレンドは60日騰落率がTOPIXを大きくアウトパフォームしており、明確な上昇基調にあります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=16.39, price_technical.trend_60d.relative_to_topix_60d_pct=15.3"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線を上回るゴールデンクロスを形成し、株価は両移動平均線の上で推移しています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\", price_technical.last_close=2933.0, price_technical.sma5=2845.2, price_technical.sma25=2811.44"
+        },
+        {
+          "point": "MACDはシグナルラインを上回り、ヒストグラムも陽転していることから、買いモメンタムが強いことを示しています。",
+          "evidence": "price_technical.macd=23.85, price_technical.macd_signal=19.22, price_technical.macd_histogram=4.64"
+        },
+        {
+          "point": "直近5営業日の終値は3.31%の大幅上昇を記録し、期間高値に迫る水準まで堅調に推移しています。",
+          "evidence": "price_technical.recent_5_days[4].change_pct=3.31, price_technical.last_close=2933.0, price_technical.period_high=2958.0"
+        },
+        {
+          "point": "前夜の米国市場では、ADRが3.75%高と大きく上昇し、ヘルスケアセクターETFも上昇していることから、翌日以降の買い材料となる可能性があります。",
+          "evidence": "us_overnight.adr.change_1d_pct=3.75, us_overnight.sector_proxy.change_1d_pct=0.62"
+        }
+      ],
+      "cautions": [
+        "RSIが71.9と買われすぎ水準にあるため、短期的な調整が入る可能性があります。",
+        "直近の強い上昇により、短期間での利益確定売りが出る可能性があります。",
+        "前夜の米国ADRの上昇は、既に寄り付き価格に織り込まれる可能性があります。",
+        "期間高値2958.0円が当面のレジスタンスとして意識される可能性があります。"
+      ],
+      "key_levels": {
+        "support": 2845.2,
+        "resistance": 2958.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "第一三共は、AIを活用した創薬研究の進展や訴訟勝訴といったポジティブなニュースがあるものの、直近の業績トレンドは鈍化傾向であり、バリュエーションも割安とは言えないため、現状では中立的なスタンスが妥当と考えられます。",
+      "points": [
+        {
+          "point": "AIを活用したデータドリブン創薬研究の進展を示唆するニュースが見られます。",
+          "evidence": "news.headlines[0].title"
+        },
+        {
+          "point": "NTKからの損害賠償等請求訴訟における勝訴の開示がありました。",
+          "evidence": "disclosures.items[0].title"
+        },
+        {
+          "point": "直近の年次業績は、2025年3月期に増収増益となった後、2026年3月期は減収減益となっており、業績トレンドに鈍化が見られます。",
+          "evidence": "fundamentals.earnings_trend.annual[0].revenue_oku_jpy, fundamentals.earnings_trend.annual[0].operating_income_oku_jpy, fundamentals.earnings_trend.annual[1].revenue_oku_jpy, fundamentals.earnings_trend.annual[1].operating_income_oku_jpy"
+        },
+        {
+          "point": "PERが20倍を超え、PBRも3倍を超えていることから、バリュエーションは割安とは言えません。",
+          "evidence": "fundamentals.valuation.trailing_pe, fundamentals.valuation.price_to_book"
+        }
+      ],
+      "cautions": [
+        "次回決算発表日（2026年10月30日）が近づいており、結果次第で株価が大きく変動する可能性があります。",
+        "世界経済の動向や製薬業界特有の規制、新薬開発の進捗など、外部要因による影響を受ける可能性があります。",
+        "AI創薬や新薬開発に関する進展が、業績に具体的に貢献するかどうかを注視する必要があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-17",
+    "days_ago": 1,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "第一三共の挑戦、AIエージェントを相棒にしてデータドリブン創薬研究の「次のボトルネック」を解く - EnterpriseZine",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBfWDhaYWhJTnU4NU0zYXBMQjNoQzJRUl9fcGp0bjhrYWJ5UU0teGNySE1xbDZCcWx4TkZnLTNmMnRHdmI5cldhY21wSUROQ3RQM1BnbS1QbE9JZw?oc=5",
+        "published": "Thu, 17 Sep 2026 22:05:40 GMT",
+        "publisher": "EnterpriseZine"
+      },
+      {
+        "title": "ブラックロック・ジャパン株式会社が第一三共株式会社＜4568＞株式の変更報告書を提出 - M＆A Online",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5yQnVEOWoxOWRmMGZfYmhZbkJUbEY2WTlZTE9iYzBDbU04NjJhc3J6Q1h4X2czOHJZUTZYRm1NcnI4b2d5bTd2amhENG42anYzRlE?oc=5",
+        "published": "Thu, 17 Sep 2026 07:22:00 GMT",
+        "publisher": "M＆A Online"
+      },
+      {
+        "title": "＜画像2 / 4＞石塚英彦とANZEN漫才(みやぞん・あらぽん)がメキシカン風ユニットでデビュー!? - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5aOFV4b1drMVhyTTZsSjB1cmVHZG5FWURjX0ZnX0VSR3N2RXhxZDhMX3FGeV9zcFExX0N1bWJkS25VNFJsODhqOWFxQ3lEQ2gwQ3luQ29ocW1mOVBXbG1KUkQzUldEOWhpeEUw?oc=5",
+        "published": "Thu, 17 Sep 2026 06:48:59 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "ブラックロック・ジャパン株式会社が武田薬品工業株式会社＜4502＞株式の変更報告書を提出 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQSFpMY3U0MF9MUVZLMFlLWWJRSnh0dVpONDhWd3dmSktZYlE1NHlaWGxDWWM0MFdvN0xmVndoOHpUSENaZXNKN2ExcXhvQzduYTR6Ymo2UW5YS1l6a3ZNdGtqVHhOYVl5MTVtM2YzWHpXTXNoN1FDdFF3R2o2ZWFOOVNuemRWdHNXTGfSAYoBQVVfeXFMUEhaTGN1NDBfTFFWSzBZS1liUUp4dHVaTjQ4Vnd3ZkpLWWJRNTR5WlhsQ1ljNDBXbzdMZlZ3aDh6VEhDWmVzSjdhMXF4b0M3bmE0emJqNlFuWEtZemt2TXRralR4TmFZeTE1bTNmM1h6V01zaDdRQ3RRd0dqNmVhTjlTbnpkVnRzV0xn?oc=5",
+        "published": "Thu, 17 Sep 2026 07:23:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "日経平均は小幅続伸、ファーストリテが1銘柄で約56円分押し上げ - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPLWpTRkdpN3V2d3lZc3o5cWJaaWswOEVYck5TYnBsLUZBcldEaFRHVFNQTnFvX0dBWkpFYlA0UmZqcmFTYWxJQzJhcFNiaGpTYUJTNTFndTJXNlk5TE45Nll3LW5mUTlPUXVuajBOZUdaWXNFb1NBYVdGWHpsQTRYako4dWVoanA0dVp5Y9IBjAFBVV95cUxPLWpTRkdpN3V2d3lZc3o5cWJaaWswOEVYck5TYnBsLUZBcldEaFRHVFNQTnFvX0dBWkpFYlA0UmZqcmFTYWxJQzJhcFNiaGpTYUJTNTFndTJXNlk5TE45Nll3LW5mUTlPUXVuajBOZUdaWXNFb1NBYVdGWHpsQTRYako4dWVoanA0dVp5Yw?oc=5",
+        "published": "Thu, 17 Sep 2026 03:21:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "シリコンＳ、信用取引での増し担保措置解除 速報 - kabushiki.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE1fRXFwaG1zUElvXzNwaUhkVFdXWXRQZ0hWV3JjTlotZC1JV0lpQkpIU2xiN2pwczZGV0dYMTdMR0ROR2x6WVFB?oc=5",
+        "published": "Thu, 17 Sep 2026 23:42:00 GMT",
+        "publisher": "kabushiki.jp"
+      },
+      {
+        "title": "梅沢富美男「髪の毛が多かったなぁ」40年前の宣材写真公開「カッコいい」「色気を感じる」の声 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1VSWs4R1pjNVZ4TVBoamdfYlpVOWVtZ25rcXlOM2VMYkFJNXNyTHRwamdjZDgyWHlodTNZbTBMTXk3X3BpbUtjYkl2NFJ3R2FPQU1kVmxIQlEyaWU1MTVNWUxLdzdaM3o2LUxqaEdabzZoTk9YQnNlMA?oc=5",
+        "published": "Thu, 17 Sep 2026 09:17:00 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "米国株式市場は反発、原油安を好感 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPODB1Y3RVc085cXl0M3YwdExja1hIdWZ1aV93dk51UzBiZjNlUm8wNDUyczV5M0VvVVIxdkJpWmF3VWxFVXhUT2pDSU1YdDdiYTB6OERWa0R1a3J6VFZtT0REc2k4dHBnSTRnOXVpaXIwVENROTJZdzBlVEN1X0djNk0zYWJyUGvSAYwBQVVfeXFMT2NzaDliUy1sdWJ4UGZ3S1FsZEtXSGg2OFRVRldYbEhScFNnekJHOWkyWDhReFpkbEx2X2hDeVhPVi1BQ3BUeGZHUjJyS0M3di1MRGJkNmVzV3JQTVNyMjNFN3ZWVU5BQ0x1bTV2Z1d6eVlNR1dpOE9wSEtHU3I2WTNuX3l2ZFlIcFRMS3Q?oc=5",
+        "published": "Thu, 17 Sep 2026 23:16:29 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "日経平均は続伸、売り買い交錯で上値の重い展開 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPNWl5cHdLczVqVW96ZHd4UlJTTTFsWVdTNkZVNWl2RWRGSHBDbXRvbnYtdlN2WUJuNjV4dzNMYnJYa1ZSWmxPTEVoRURaZ2hfVHJuRFdTdUpNVWhFaXpfT3lMUWJ1dXJmYVpwQklYb0dSYzcyWk9rWTB1LWxTVE9uXzJFMmVQOFBiUkZ1bdIBjAFBVV95cUxPNWl5cHdLczVqVW96ZHd4UlJTTTFsWVdTNkZVNWl2RWRGSHBDbXRvbnYtdlN2WUJuNjV4dzNMYnJYa1ZSWmxPTEVoRURaZ2hfVHJuRFdTdUpNVWhFaXpfT3lMUWJ1dXJmYVpwQklYb0dSYzcyWk9rWTB1LWxTVE9uXzJFMmVQOFBiUkZ1bQ?oc=5",
+        "published": "Thu, 17 Sep 2026 06:38:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "後場に注目すべき3つのポイント〜上げ幅縮小して上値の重い値動き - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQSENHVFBDNVBkU244ZWpmUEZlTGMtYTY5dUd0LTZadUt2ZzRwdEowNVoyUXluOTBPY1NCNWFvc3BWMkE5bDE0MEZVcjRLSUp5bU05TU5fLTJmbTBNWVoxY3E0WDlUdDJXbjBJVE9obXZ1XzdjX1JvekQ3WUtNS1FMNFVCVzBoU0Z6NWliadIBjAFBVV95cUxQSENHVFBDNVBkU244ZWpmUEZlTGMtYTY5dUd0LTZadUt2ZzRwdEowNVoyUXluOTBPY1NCNWFvc3BWMkE5bDE0MEZVcjRLSUp5bU05TU5fLTJmbTBNWVoxY3E0WDlUdDJXbjBJVE9obXZ1XzdjX1JvekQ3WUtNS1FMNFVCVzBoU0Z6NWliaQ?oc=5",
+        "published": "Thu, 17 Sep 2026 03:50:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "当社に対するNTKからの損害賠償等請求訴訟に関する判決（勝訴）のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260910534407.pdf",
+        "date": "2026-09-10 17:00:00"
+      },
+      {
+        "title": "（開示事項の変更）第一三共ビジネスアソシエの吸収合併（簡易合併・略式合併）の効力発生日変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824525305.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "（再訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514622.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2025年度決算および第6期中期経営計画説明会」資料の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514744.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正・数値データ訂正）「2026年３月期 決算短信〔IFRS基準〕(連結)」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504176.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504099.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算補足資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504168.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504173.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "当社米国子会社役職員に対する信託型株式付与制度の継続のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504240.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587542.pdf",
+        "date": "2026-07-16 15:30:00"
+      }
+    ]
+  }
+}

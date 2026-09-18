@@ -1,0 +1,226 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-09-18T09:39:37+09:00",
+  "price_as_of": "2026-09-17",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 42,
+    "reasons": [
+      {
+        "reason": "統合判断ルールに基づく再エントリー抑制。2026-09-14に buy シグナルを発出しており、直近14日以内の新規買いは避け、継続監視とする。",
+        "evidence": "reference.recent_buy.date=2026-09-14"
+      },
+      {
+        "reason": "テクニカル専門家の見解が bullish（強気）であり、材料が既に株価に織り込まれている可能性が高い。モメンタム追随による高値掴みを避けるため、ルールに従い buy を見送る。",
+        "evidence": "technical_view.stance=bullish (strength=85)"
+      },
+      {
+        "reason": "ファンダメンタルズは依然として非常に強力であり、自己株式取得の継続やAI関連の新規事業提携など、中長期的な成長ストーリーは維持されている。",
+        "evidence": "fundamental_view.strength=80, fundamentals.recent_important_disclosures[0]"
+      }
+    ],
+    "risks": [
+      "2026-10-29の次回決算発表および日銀金融政策決定会合が想定保有期間内に含まれており、ボラティリティ急増の懸念がある。",
+      "PER 30倍超、PBR 3.7倍とバリュエーションに割安感はなく、成長期待が剥落した際の調整リスクが存在する。",
+      "直近の期間高値 5830円付近での利益確定売りによる上値抵抗。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 42,\n  \"reasons\": [\n    {\n      \"reason\": \"統合判断ルールに基づく再エントリー抑制。2026-09-14に buy シグナルを発出しており、直近14日以内の新規買いは避け、継続監視とする。\",\n      \"evidence\": \"reference.recent_buy.date=2026-09-14\"\n    },\n    {\n      \"reason\": \"テクニカル専門家の見解が bullish（強気）であり、材料が既に株価に織り込まれている可能性が高い。モメンタム追随による高値掴みを避けるため、ルールに従い buy を見送る。\",\n      \"evidence\": \"technical_view.stance=bullish (strength=85)\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズは依然として非常に強力であり、自己株式取得の継続やAI関連の新規事業提携など、中長期的な成長ストーリーは維持されている。\",\n      \"evidence\": \"fundamental_view.strength=80, fundamentals.recent_important_disclosures[0]\"\n    }\n  ],\n  \"risks\": [\n    \"2026-10-29の次回決算発表および日銀金融政策決定会合が想定保有期間内に含まれており、ボラティリティ急増の懸念がある。\",\n    \"PER 30倍超、PBR 3.7倍とバリュエーションに割安感はなく、成長期待が剥落した際の調整リスクが存在する。\",\n    \"直近の期間高値 5830円付近での利益確定売りによる上値抵抗。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 85,
+      "summary": "中期的な上昇トレンドが継続しており、直近の株価は移動平均線を上回り、MACDも好転していることから、さらなる上昇が期待されます。",
+      "points": [
+        {
+          "point": "60営業日騰落率が15.26%のプラスであり、TOPIX対比でも14.18%とアウトパフォームしており、中期的な上昇トレンドが継続しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=15.26, price_technical.trend_60d.relative_to_topix_60d_pct=14.18"
+        },
+        {
+          "point": "直近の株価（5475.0円）は5日移動平均線（5318.4円）および25日移動平均線（5357.08円）を上回って推移しており、強い上昇モメンタムが見られます。",
+          "evidence": "price_technical.last_close=5475.0, price_technical.sma5=5318.4, price_technical.sma25=5357.08"
+        },
+        {
+          "point": "MACDヒストグラムが15.38とプラス圏に浮上しており、MACDラインがシグナルラインを上抜ける好転傾向を示しています。",
+          "evidence": "price_technical.macd_histogram=15.38"
+        },
+        {
+          "point": "RSI14は62.5と50を上回る堅調な水準で推移しており、買われすぎ感なく上昇余地があることを示唆しています。",
+          "evidence": "price_technical.rsi14=62.5"
+        },
+        {
+          "point": "市場全体が「uptrend」と判定されており、前夜のNY市場でのADRも1.72%の上昇を示していることから、良好な地合いと海外動向が期待されます。",
+          "evidence": "macro.market_regime.market_regime=\"uptrend\", us_overnight.adr.change_1d_pct=1.72"
+        }
+      ],
+      "cautions": [
+        "5日移動平均線が25日移動平均線の下にある「デッドクロス」状態は継続しており、短期的な下押し圧力となる可能性は残ります。",
+        "直近約30営業日の期間高値である5830.0円に近づくにつれて、上値抵抗が意識される可能性があります。",
+        "前夜のNY市場でのADR上昇は、当日の寄り付き価格にすでに織り込まれる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 5357.08,
+        "resistance": 5830.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 80,
+      "summary": "日立製作所は、堅調な年間業績成長に加え、自己株式取得による株主還元、AI・デジタルソリューション強化、新規事業提携といった直近の好材料が豊富であり、マクロ環境も良好であることから、強気の投資価値があると判断します。",
+      "points": [
+        {
+          "point": "年間業績が堅調に推移しており、売上高、営業利益、純利益、EPS全てにおいて2024年3月期から2026年3月期にかけて一貫した成長トレンドを示しています。",
+          "evidence": "fundamentals.earnings_trend.annual[0].diluted_eps=176.63, fundamentals.earnings_trend.annual[1].diluted_eps=133.72, fundamentals.earnings_trend.annual[2].diluted_eps=126.75"
+        },
+        {
+          "point": "2026年9月2日に発表された自己株式取得の状況によると、引き続き大規模な自己株式の取得が継続されており、株主還元への積極的な姿勢と資本効率改善への貢献が期待されます。",
+          "evidence": "fundamentals.recent_important_disclosures[0].date=2026-09-02, fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "直近のニュースでは、米ミッションクリティカルグループとの提携、障害者手帳アプリ連携、再生材マーケットプレイスの運用開始、フィジカルAIの新サービス追加など、幅広い分野での新規事業展開や戦略的な提携が多数報じられており、成長加速への期待が高まります。",
+          "evidence": "news.headlines[1].title, news.headlines[2].title, news.headlines[6].title, news.headlines[9].title (全て2026-09-17)"
+        },
+        {
+          "point": "日本の製造業およびサービス業PMIが50を超え景気拡大を示しており、日銀短観の大企業業況判断DIも製造業・非製造業ともに改善・高水準を維持していることから、日立製作所の事業にとって良好なマクロ経済環境が継続しています。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9, macro.japan_pmi.services.latest_value=52.5, macro.boj.tankan.di.large_manufacturing.current_di=22.0, macro.boj.tankan.di.large_nonmanufacturing.current_di=37.0"
+        }
+      ],
+      "cautions": [
+        "現在のPERやPBRは比較的高水準にあり（PER 30.395倍、PBR 3.735倍）、今後の業績動向や市場の成長期待に変化があった場合、バリュエーション調整の圧力がかかる可能性があります。",
+        "2026年10月29日に次回決算発表を控えており、その内容が市場予想を下回る場合、株価にネガティブな影響を与えるイベントリスクがあります。",
+        "2026年10月29日から30日に日銀の金融政策決定会合が予定されており、金融政策の変更やその観測が市場全体のトレンドに影響を及ぼす可能性があります。",
+        "日本公庫・中小企業景況調査では、仕入価格DIと販売価格DIの差が依然として大きく、中小企業にはコスト転嫁が進んでいない状況が示されており、サプライチェーン全体でのコスト圧力には留意が必要です。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-14",
+    "days_ago": 4,
+    "confidence": 75,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "【試合予定】令和8年度夏季オープン戦 1試合追加 - 慶應義塾体育会野球部",
+        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBHT21nZlNRSThLMFV3c2k1Q05QTVFTWFJmWjN6TmRsYXVzZVRicmR6ZkVZLTN1eTFDR1A5RFdWU0o0QnI5RDNvbWhfeFJxUQ?oc=5",
+        "published": "Thu, 17 Sep 2026 11:44:46 GMT",
+        "publisher": "慶應義塾体育会野球部"
+      },
+      {
+        "title": "日立製作所、米ミッションクリティカルグループと提携 - m2ri.jp",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBaOGJQSUc1RDNXX2VYakx3MDM3V0xpRVJGWTFudEs2cnBXOFdjcmM5U0Npc3ROSVdsREZxTGtKNldwUWM0a2p2OW9QUTktek1RV29YZC1sajA?oc=5",
+        "published": "Thu, 17 Sep 2026 02:09:25 GMT",
+        "publisher": "m2ri.jp"
+      },
+      {
+        "title": "ミライロが急騰、日立と障害者手帳アプリ連携で基本合意 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5Zd3hOTnlucHZtcHdZSkZRWVB1eG0yLVRwYTNIQUJEdldoTnhBRFJhc3pBbGxHSThObFEtNjA3YkIzVUNOYTF3eEJaLXc3eUd3a3ZwOW1jcU1WVV9XV0N1NlhCdXBGTDh5OGxjZ3gzRDNPZ3Q4?oc=5",
+        "published": "Thu, 17 Sep 2026 05:35:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "ミライロが急騰、日立と鉄道の介助申請一元化で基本合意 速報 - kabushiki.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE1UUk5jeS0xYXpid3pqdHpMUzk2N3NkRUxBUGVvUVYtNmxKRFpXdWY3Q0tCVUtMeUEtSEJkazM5TFEzLTNPZDlB?oc=5",
+        "published": "Thu, 17 Sep 2026 06:56:00 GMT",
+        "publisher": "kabushiki.jp"
+      },
+      {
+        "title": "坂本 実桜｜野球／ソフトボール・ソフトボール｜愛知・名古屋アジア大会｜JOC - 日本オリンピック委員会 - JOC - 日本オリンピック委員会",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPM0Q3SmRQMm1ub1JhRTNidnNSQjZhdENaSHlrWGhhRmhJZ2F5OGM1SEFkZHVVc2ItZUpEN0ZMekNZR3NCMklZWXhLdExjWlQ2UXM2dWpjSEIwSkI1WHc0OHpNY2J4aWNYTGU0LW1KcklJTTU2T3hEbG85VXRhbDB6aQ?oc=5",
+        "published": "Thu, 17 Sep 2026 02:11:15 GMT",
+        "publisher": "JOC - 日本オリンピック委員会"
+      },
+      {
+        "title": "3Dデジタルツイン上の操作ログから実践知を抽出し、保守・点検現場の知見継承を支援する手法を開発 - 時事ドットコム",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE16Xzc1bXNzNVJvSC1uR0ZLMEdtdmFubmhablhjMXhXQWo4LS1MZ001LVZtSHZZcUFzU0xQdHN0YWlGT0tIb1NHVjFXT09XNUdfcnpkbFBVcDg4czZHenc4Z090ZmdEV3JlU3hz?oc=5",
+        "published": "Thu, 17 Sep 2026 16:10:00 GMT",
+        "publisher": "時事ドットコム"
+      },
+      {
+        "title": "日立、「再生材マーケットプレイス」を10月1日から運用開始し、三菱UFJ銀行との金融連携による再生材の活用促進を支援 - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1uMm01WUp3T1JQek05RTdOZjlWRHc0RXpSXzdqaGFVVFZIcDJKMEd5dGM1Rlg0dWJPd1ZpazcxOWJ4Nng5NE1TTTROWUVwV2I4TnpDbzF4OGZadlVfbG1SRmV6eC1GMVR3?oc=5",
+        "published": "Thu, 17 Sep 2026 11:00:29 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "日立、「再生材マーケットプレイス」を10月から運用開始、三菱UFJ銀行との連携により再生材の活用促進を支援 - クラウド Watch",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5DUll4dXJmcnltY1A2Vk1qMm5pV0Z4UkVNN200U2FPTmhzWElaam5DcWxOV1FCRzJtRkZrV0JfbGpHLWUzdW1pU2lZV2d1UWdoQVpyTjAtWEVMX2t1THNNSGxpbWg2eE0?oc=5",
+        "published": "Thu, 17 Sep 2026 05:31:55 GMT",
+        "publisher": "クラウド Watch"
+      },
+      {
+        "title": "日立、三菱UFJ 銀との金融連携による再生材の活用促進を支援 - 電波タイムズ",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1qdm9yS25JaWZoUVd4Y0ZGUWotYkdGcTFIa0pXYTdmOWhZZ1E4dURtVF9WVHdVRTJqR1BWMFkwbXBGR0thYUZxenF0MXNoWkd3R3RtN2VrR3VncWtlTk9OOTJjU21DUQ?oc=5",
+        "published": "Thu, 17 Sep 2026 03:58:47 GMT",
+        "publisher": "電波タイムズ"
+      },
+      {
+        "title": "【日立】フィジカルAIの社会実装を加速。HMAXに4つの新サービスを追加 - NewsTV",
+        "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBxdmVyZE14c3lLS28zRXF3SlpKcmlhODVfNGhlNVlDMUVLRnlidjJYaFlGRk5pSlJIOGFucTdGWVJoV05m?oc=5",
+        "published": "Thu, 17 Sep 2026 04:50:19 GMT",
+        "publisher": "NewsTV"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260902530692.pdf",
+        "date": "2026-09-02 15:30:00"
+      },
+      {
+        "title": "個別決算における投資有価証券売却益(特別利益)の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260819523052.pdf",
+        "date": "2026-08-19 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804508474.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "（訂正）2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503298.pdf",
+        "date": "2026-07-30 13:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501771.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501801.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(モビリティ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566288.pdf",
+        "date": "2026-06-09 15:30:00"
+      }
+    ]
+  }
+}

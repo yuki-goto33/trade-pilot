@@ -1,0 +1,215 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-09-18T09:20:43+09:00",
+  "price_as_of": "2026-09-17",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "直近（2026-09-07）に buy シグナルを発行しており、現在はその継続監視期間内（14日以内）にあるため、統合ルールに基づき新規エントリーは控える。",
+        "evidence": "reference.recent_buy (date: 2026-09-07, days_ago: 11)"
+      },
+      {
+        "reason": "ファンダメンタルズの strength が 60 に留まり、buy 判断の必須条件である 70 を満たしていない。通期純利益の赤字予想が中長期的な懸念材料となっている。",
+        "evidence": "fundamental_view.strength=60, fundamental_view.cautions[0]: net_income_oku_jpy=-3269"
+      },
+      {
+        "reason": "テクニカル面で5日線が25日線を下回るデッドクロスを形成しており、短期的な調整圧力が継続している。",
+        "evidence": "technical_view.points[0]: price_technical.sma5_vs_sma25='dead'"
+      },
+      {
+        "reason": "上値抵抗線として意識される25日移動平均線（3803.92円）を下回って推移しており、戻り売りに押されるリスクがある。",
+        "evidence": "technical_view.cautions[0], reference.last_close=3754.0, reference.sma25=3803.92"
+      }
+    ],
+    "risks": [
+      "2026年3月期の通期純利益赤字予想に伴うファンダメンタルズの悪化懸念",
+      "次回決算発表（2026-11-05）および日銀金融政策決定会合（10月末）を控えたイベントリスク",
+      "25日移動平均線を上抜けられない場合の調整局面の長期化",
+      "為替市場（円安基調）の急激な反転による輸出採算の悪化リスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"直近（2026-09-07）に buy シグナルを発行しており、現在はその継続監視期間内（14日以内）にあるため、統合ルールに基づき新規エントリーは控える。\",\n   \"evidence\": \"reference.recent_buy (date: 2026-09-07, days_ago: 11)\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズの strength が 60 に留まり、buy 判断の必須条件である 70 を満たしていない。通期純利益の赤字予想が中長期的な懸念材料となっている。\",\n   \"evidence\": \"fundamental_view.strength=60, fundamental_view.cautions[0]: net_income_oku_jpy=-3269\"\n  },\n  {\n   \"reason\": \"テクニカル面で5日線が25日線を下回るデッドクロスを形成しており、短期的な調整圧力が継続している。\",\n   \"evidence\": \"technical_view.points[0]: price_technical.sma5_vs_sma25='dead'\"\n  },\n  {\n   \"reason\": \"上値抵抗線として意識される25日移動平均線（3803.92円）を下回って推移しており、戻り売りに押されるリスクがある。\",\n   \"evidence\": \"technical_view.cautions[0], reference.last_close=3754.0, reference.sma25=3803.92\"\n  }\n ],\n \"risks\": [\n  \"2026年3月期の通期純利益赤字予想に伴うファンダメンタルズの悪化懸念\",\n  \"次回決算発表（2026-11-05）および日銀金融政策決定会合（10月末）を控えたイベントリスク\",\n  \"25日移動平均線を上抜けられない場合の調整局面の長期化\",\n  \"為替市場（円安基調）の急激な反転による輸出採算の悪化リスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "中期トレンドや外部環境は良好なものの、日足ベースでは25日移動平均線の下に位置しMACDも弱気シグナルを示すなど、短期的な調整圧力と底堅さが拮抗しています。",
+      "points": [
+        {
+          "point": "短期テクニカル面では5日線が25日線を下回るデッドクロスを形成しており、MACDもマイナス圏（-10.56）でシグナルを下回る調整局面が続いています。",
+          "evidence": "price_technical.sma5_vs_sma25='dead(5日線が25日線の下)', price_technical.macd=-10.56, price_technical.macd_histogram=-16.87"
+        },
+        {
+          "point": "一方で60日騰落率は+18.84%（対TOPIX+17.75%）と中期上昇基調を維持しており、RSI14も58.7と崩れておらず下値での押し目買い需要が確認されます。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=18.84, price_technical.trend_60d.relative_to_topix_60d_pct=17.75, price_technical.rsi14=58.7"
+        },
+        {
+          "point": "TOPIXの市場レジームがuptrendにあることに加え、前夜の米ハイテク株高（XLK +2.25%）やADRの上昇（+0.42%）など外部環境は追い風となっています。",
+          "evidence": "macro.market_regime.market_regime='uptrend', us_overnight.sector_proxy.change_1d_pct=2.25, us_overnight.adr.change_1d_pct=0.42"
+        }
+      ],
+      "cautions": [
+        "上値抵抗線として機能しやすい25日移動平均線（3803.92円）をブレイクできない場合、戻り売りに押されて再度下値を試すリスクがあります。",
+        "前夜の米国市場高やADR上昇は東京市場の寄り付き価格に即座に織り込まれ、寄り天の展開となる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 3582.0,
+        "resistance": 3803.92
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "直近の四半期決算は営業利益ベースで堅調に推移し、TSMCとの合弁契約や継続的な自己株買いといった好材料があるものの、2026年3月期の通期純利益が赤字予想となっている点が中長期的な懸念材料として残ります。",
+      "points": [
+        {
+          "point": "2026年6月中間期の四半期営業利益は4,745億円を計上しており、前四半期の2,713億円から大幅に改善している。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].operating_income_oku_jpy=4745"
+        },
+        {
+          "point": "TSMCとの合弁会社設立に関する確定契約の締結や、マイクロLED分野での技術的優位性が報じられており、半導体・デバイス事業の成長ポテンシャルが維持されている。",
+          "evidence": "disclosures.items[1].title, news.headlines[5].title"
+        },
+        {
+          "point": "継続的な自己株式の取得状況が適時開示されており、株主還元姿勢と資本効率の向上に対するコミットメントが確認できる。",
+          "evidence": "disclosures.items[0].title"
+        },
+        {
+          "point": "日本の製造業PMIが54.9と拡大圏にあり、為替水準も156円台の円安基調であることは、グローバルに展開する同社の収益環境にとってポジティブに働く。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9, macro.indices[2].close=156.14"
+        }
+      ],
+      "cautions": [
+        "2026年3月期の通期純損益が3,269億円の赤字予想となっており、資産計上や構造改革コスト等の詳細を次期決算で精査する必要がある (fundamentals.earnings_trend.annual[0].net_income_oku_jpy=-3269)",
+        "次回決算発表が2026年11月5日に控えており、業績予想の修正や事業セグメント別の進捗確認まで様子見姿勢が強まる可能性がある (fundamentals.next_earnings_date=2026-11-05)",
+        "日銀の金融政策決定会合が10月末に予定されており、国内金利の上昇や為替の変動がバリュエーションに影響を与えるリスクがある (macro.boj.monetary_policy_meeting.next_meeting)"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-07",
+    "days_ago": 11,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "「神風」に乗ったSo-netと、「挑戦」として生まれたNURO 光、両サービスが見据える30年後～ソニーネットワークコミュニケーションズ それぞれの視点から目指す「ソニーグループ企業らしさ」とは - INTERNET Watch",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOeWxObjJXeHlLc1lGMndITVRJcE1ON1hQazRVNy03SkRZNmgzdGVRUDRYLWMxNVhRMTN2UmhlYk1KS09rWEVSdmFHSUZ0MFJEaFRNNE90ZjBfaThzUjBtaWJtcllWeUliSnNFREs5dWpaMTBRemVBa29kelBwdWJwNnNB?oc=5",
+        "published": "Thu, 17 Sep 2026 22:00:00 GMT",
+        "publisher": "INTERNET Watch"
+      },
+      {
+        "title": "ソニーグループ十時社長ＣＥＯ、理工系女子大学生を激励 - 読売新聞",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9sNVhrYXFYdUIzM0ZQNkVTVVNDRTdtWjNNR1VTYWxKRS1MQlVnTXZ1d1FySzFvMWhseUxMemdueWg2T3JGMTIzbXllRFRDbEZZQkl6T2xOTGZrbzQ?oc=5",
+        "published": "Thu, 17 Sep 2026 07:05:39 GMT",
+        "publisher": "読売新聞"
+      },
+      {
+        "title": "PS5用ソフト｢Marvel's Wolverine｣ソニーグループプレゼントキャンペーン 豪華！ - call-t.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5VeHFxUjRZRTAwWXAzWk0yaHM1OVVRTnNXZmxoMjlsZjRiUmt2bkQwUlVDalQ0cDE4UklVcW5XTmt5TUoyay1vSUFTR0g2VlZPT01mT1BoMHM0UkhlRFpkWTFn?oc=5",
+        "published": "Thu, 17 Sep 2026 01:54:34 GMT",
+        "publisher": "call-t.co.jp"
+      },
+      {
+        "title": "「ソニーの本命は『PS6』ではなかった」億り人ゲーム投資家が、絶好調銘柄をスルーして“任天堂とソニー”を仕込む理由 - みんかぶ（マガジン）",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1rRkNuY1d2azA5TXFFN1BrVVRsOW1kUmFxanRHZ04zSmpjU0ZrSVM5UWh4X3dXRFM2d3FtbDZEZGtER2NHaXpUNUJfUQ?oc=5",
+        "published": "Thu, 17 Sep 2026 10:00:00 GMT",
+        "publisher": "みんかぶ（マガジン）"
+      },
+      {
+        "title": "【株式】任天堂やソニーG、カプコン、バンナムHDなどゲーム関連が総じて堅調 本日TGS2026開幕、循環物色の動きも - gamebiz【ゲームビズ】",
+        "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTE1qRG5kMUpaTkNkeXM1NW1PQmxORjJXVU16Z3FUNWttMldSdXg4Y0x1dTVFWHVMWEJpMngxRVF1aUEwRUpt?oc=5",
+        "published": "Thu, 17 Sep 2026 01:32:00 GMT",
+        "publisher": "gamebiz【ゲームビズ】"
+      },
+      {
+        "title": "映像表示にマイクロLEDが台頭、部材は「ソニー王国」に - 日経クロステック",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE02SGlZaEdqdll2cFNVVS04LU5ibndpRFFGb1duNHY4NjFpbGwzNzN0U1NWNkNRMUg4eXJyWm1YVTF5cnUybHlxbkRtZjZTOWlMRFVkVXFzWVNfMEJKQmxqWU5rMlN0NFU?oc=5",
+        "published": "Thu, 17 Sep 2026 20:02:00 GMT",
+        "publisher": "日経クロステック"
+      },
+      {
+        "title": "米国株式市場は反発、原油安を好感 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPODB1Y3RVc085cXl0M3YwdExja1hIdWZ1aV93dk51UzBiZjNlUm8wNDUyczV5M0VvVVIxdkJpWmF3VWxFVXhUT2pDSU1YdDdiYTB6OERWa0R1a3J6VFZtT0REc2k4dHBnSTRnOXVpaXIwVENROTJZdzBlVEN1X0djNk0zYWJyUGvSAYwBQVVfeXFMT2NzaDliUy1sdWJ4UGZ3S1FsZEtXSGg2OFRVRldYbEhScFNnekJHOWkyWDhReFpkbEx2X2hDeVhPVi1BQ3BUeGZHUjJyS0M3di1MRGJkNmVzV3JQTVNyMjNFN3ZWVU5BQ0x1bTV2Z1d6eVlNR1dpOE9wSEtHU3I2WTNuX3l2ZFlIcFRMS3Q?oc=5",
+        "published": "Thu, 17 Sep 2026 23:16:29 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "Boseがカフ型イヤホン製品を拡充、軽量のSport Openを発表 - news.infoseek.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE84ZVNVcXk3Wkp3WDhmbnZ1T3F3NGhaRWJGaVBjWXJYVndBRzZNcEtDVmV3Y09BcEtyQXJOTS1hblR0b0RreUdTa0FGWUJISmtyTHhBQkhBTnJRT1NBNk1lX2U5WUwtSlN30gFoQVVfeXFMTzhlU1VxeTdaSndYOGZudnVPcXc0aFpFYkZpUGNZclhWd0FHNk1wS0NWZXdjT0FwS3JBck5NLWFuVHRvRGt5R1NrQUZZQkhKa3JMeEFCSEFOclFPU0E2TWVfZTlZTC1KU3c?oc=5",
+        "published": "Thu, 17 Sep 2026 16:22:53 GMT",
+        "publisher": "news.infoseek.co.jp"
+      },
+      {
+        "title": "健康経営関連市場は2025年に1兆4,712億円へ - 時事ドットコム",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9heGtzNXNCcXRyTm9wdnpiMVl3elRQRmp2SE1QVWVCR3VKU2xCejlxbkpqOXVQVGZNanRWaWNGNm11dGx6UDYtR3Rmalg2azROdjVaTDYyVHdzVzRoMHhiNDRxUWNpd2drNFhN?oc=5",
+        "published": "Thu, 17 Sep 2026 00:46:00 GMT",
+        "publisher": "時事ドットコム"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903530947.pdf",
+        "date": "2026-09-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260811517496.pdf",
+        "date": "2026-08-11 18:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805509201.pdf",
+        "date": "2026-08-05 11:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504252.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期 連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504254.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の権利確定に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595854.pdf",
+        "date": "2026-07-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587315.pdf",
+        "date": "2026-07-03 11:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584099.pdf",
+        "date": "2026-06-30 15:30:00"
+      },
+      {
+        "title": "米ドル建て無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577032.pdf",
+        "date": "2026-06-24 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260603560934.pdf",
+        "date": "2026-06-03 11:30:00"
+      }
+    ]
+  }
+}
