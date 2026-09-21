@@ -1,0 +1,171 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-09-21T09:05:14+09:00",
+  "price_as_of": "2026-09-18",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 60,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-09-10）に buy シグナルを発出済みであり、現在はその継続監視期間に該当するため、新規のエントリーは行わず現状維持とします。",
+        "evidence": "reference.recent_buy.date=2026-09-10"
+      },
+      {
+        "reason": "ファンダメンタルズは非常に強力（strength=72）ですが、テクニカル面でADRの大幅下落や対TOPIXでの劣後が見られ、短期的には調整局面にあると判断しました。",
+        "evidence": "technical_view.stance=bearish (strength=70) / us_overnight.adr.change_1d_pct=-3.69"
+      },
+      {
+        "reason": "2026年3月期の純利益5兆円規模という極めて高い収益見通しは、中長期的な株価の強力なサポート要因として機能します。",
+        "evidence": "fundamental_view.points[0]: fundamentals.earnings_trend.annual[0].net_income_oku_jpy=50023"
+      }
+    ],
+    "risks": [
+      "米半導体株およびナスダック市場との高い相関性による、米国市場急落時の連れ安リスク",
+      "2026年10月29日〜30日の日銀金融政策決定会合に伴う国内金利上昇と調達コスト増の懸念",
+      "2026年11月11日の次期決算における、投資未実現損益による業績の下振れリスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 60,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内（2026-09-10）に buy シグナルを発出済みであり、現在はその継続監視期間に該当するため、新規のエントリーは行わず現状維持とします。\",\n   \"evidence\": \"reference.recent_buy.date=2026-09-10\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは非常に強力（strength=72）ですが、テクニカル面でADRの大幅下落や対TOPIXでの劣後が見られ、短期的には調整局面にあると判断しました。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=70) / us_overnight.adr.change_1d_pct=-3.69\"\n  },\n  {\n   \"reason\": \"2026年3月期の純利益5兆円規模という極めて高い収益見通しは、中長期的な株価の強力なサポート要因として機能します。\",\n   \"evidence\": \"fundamental_view.points[0]: fundamentals.earnings_trend.annual[0].net_income_oku_jpy=50023\"\n  }\n ],\n \"risks\": [\n  \"米半導体株およびナスダック市場との高い相関性による、米国市場急落時の連れ安リスク\",\n  \"2026年10月29日〜30日の日銀金融政策決定会合に伴う国内金利上昇と調達コスト増の懸念\",\n  \"2026年11月11日の次期決算における、投資未実現損益による業績の下振れリスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "中期トレンドが対TOPIXで劣後する下落基調にある中、前夜NY市場でのADR大幅安が直近の反発勢力に対する重石となる可能性が高い。テクニカル指標の一部に改善は見られるものの、中期的な下押し圧力を警戒すべき局面にある。",
+      "points": [
+        {
+          "point": "60日騰落率がマイナスであり、かつ対TOPIX相対騰落率もマイナスであることから、中期的には明確な下落トレンドが継続している。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-4.27, price_technical.trend_60d.relative_to_topix_60d_pct=-5.8"
+        },
+        {
+          "point": "前夜のNY市場においてADR（SFTBY）が3.69%下落しており、国内寄り付き価格に強いマイナスの影響を与えることが懸念される。",
+          "evidence": "us_overnight.adr.change_1d_pct=-3.69"
+        },
+        {
+          "point": "直近5営業日では4連騰しMACDも好転しているが、中期トレンドが下向きである以上、これらは一時的な自律反発の域を出ていないと判断する。",
+          "evidence": "price_technical.macd_histogram=45.52, price_technical.recent_5_days"
+        }
+      ],
+      "cautions": [
+        "直近4連騰のモメンタムが強く、ADRの下げを限定的な押し目と捉えた買いが入るリスク",
+        "25日移動平均線（5717.76円）を明確に上放れており、ここが支持線として機能し反転が本格化する可能性",
+        "日経平均が1.38%上昇しており、市場全体の良好な地合いが個別株の弱さを相殺するケース"
+      ],
+      "key_levels": {
+        "support": 5717.76,
+        "resistance": 6959.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 72,
+      "summary": "2026年3月期の劇的な増益見通しに加え、足元での債務返済による財務健全化の進展と、AI需要を背景とした外部環境の改善が投資価値を高めています。",
+      "points": [
+        {
+          "point": "利益水準の飛躍的向上：2026年3月期の連結純利益は5兆円規模と、前期（1.15兆円）から大幅な増益を見込んでおり、収益力の回復が顕著です。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=50023"
+        },
+        {
+          "point": "積極的な財務改善と資金管理：2026年9月9日にブリッジローンの期限前返済を発表。金利上昇局面において負債コストの抑制とバランスシートの最適化を迅速に進めています。",
+          "evidence": "disclosures.items[0].title='ブリッジローンの期限前返済に関するお知らせ' (2026-09-09)"
+        },
+        {
+          "point": "マクロ環境とAI関連需要の追い風：米半導体株の上昇や円安（1ドル157円台）が投資持分価値の押し上げ要因となっており、製造業PMIの要約でもAI関連需要の強さが言及されています。",
+          "evidence": "news.headlines[2], macro.indices[2].close=157.11, macro.japan_pmi.manufacturing.summary_en"
+        }
+      ],
+      "cautions": [
+        "2026年11月11日の次期決算発表における、投資未実現損益による業績の振れ幅に注意が必要です。",
+        "10月29日〜30日の日銀金融政策決定会合を控え、国内金利（JGB 10Y=2.993%）の上昇に伴う調達コスト増のリスクがあります。",
+        "米半導体株やナスダック市場との相関が高いため、米国市場の急変が直接的な下落リスクとなります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-10",
+    "days_ago": 11,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソフトバンクグループ(株)【SFTBY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9PS0JwdDRlRjRxb1VMWkhNNTEwcUtyQkN0SVdKbk1ZVEN2VkZYZFhkVktRdVlLNUhBdm45Q1ZxY0xZSUtsTDktcWhXNjFPSU5s?oc=5",
+        "published": "Sun, 20 Sep 2026 15:35:26 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "孫正義氏に「日本に貢献」の意思はあるのか…あの手この手で“超節税” 時価総額トヨタ超えでも「大いに異なります」 - デイリー新潮",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA2cEVKcXJJVDZtZkNJSE1WQmg2UHBqbElsWTRhTFZZRUlwekg4eGRqYlRLRnpzcE82UUd3NG81R0VhMXBsSzlLd19FS2RaS1RzSzN4cXdUcXNoUkRQeHFZ?oc=5",
+        "published": "Sun, 20 Sep 2026 19:59:21 GMT",
+        "publisher": "デイリー新潮"
+      },
+      {
+        "title": "東証、午前終値２２５円高 米半導体株の上昇が追い風 - sanyonews.jp",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xQUN6a0Q5V2hhRHl5cmhXbnJZWHdMa1M5a09tRnFHUmQyOWdOWURLUTFoNDlLV2tyU2VfNzNnb2JOUWdBdmlZaEhCSUtJMUduOGc?oc=5",
+        "published": "Sun, 20 Sep 2026 09:34:26 GMT",
+        "publisher": "sanyonews.jp"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "ブリッジローンの期限前返済に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533573.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260904531576.pdf",
+        "date": "2026-09-04 10:30:00"
+      },
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得の完了時期の変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260828527943.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824524817.pdf",
+        "date": "2026-08-24 09:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510515.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行内容確定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503871.pdf",
+        "date": "2026-07-30 17:00:00"
+      },
+      {
+        "title": "第68回及び第69回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501484.pdf",
+        "date": "2026-07-29 10:30:00"
+      },
+      {
+        "title": "OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260701586249.pdf",
+        "date": "2026-07-01 16:00:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577089.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "2021年発行米ドル建普通社債の期限前償還完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566742.pdf",
+        "date": "2026-06-10 11:30:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-09-21T09:01:40+09:00",
+  "price_as_of": "2026-09-18",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズの評価強度が60にとどまっており、buy判断の必須条件である70に達していません。自社株買いや割安感はあるものの、減益トレンドが重石となっています。",
+        "evidence": "fundamental_view.strength=60, fundamental_view.points[2]: PBR 0.96倍 / PER 8.6倍, fundamental_view.cautions[0]: 利益減少トレンド"
+      },
+      {
+        "reason": "テクニカル面では25日移動平均線を下回り、MACDも陰転するなど短期的な調整局面が継続しており、エントリーには下げ止まりの確認が必要です。",
+        "evidence": "technical_view.stance=neutral, technical_view.points[0]: price_technical.sma5_vs_sma25='dead', price_technical.macd=-5.04"
+      },
+      {
+        "reason": "米国ADRの下落による翌営業日の寄り付き安が懸念される一方、RSIは中立圏にあり、方向感が定まるまで様子見が妥当と判断しました。",
+        "evidence": "technical_view.cautions[0]: 米国ADR -1.23%下落, technical_view.points[1]: price_technical.rsi14=48.0"
+      }
+    ],
+    "risks": [
+      "直近5営業日の保ち合いを下放れた場合、期間安値2927.0円方向への再調整リスクがあります。",
+      "2026年11月5日の次回決算発表に向けた、業績下方修正懸念による上値の重さ。",
+      "2026年10月29-30日の日銀金融政策決定会合に伴う為替および金利変動リスク。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 60,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズの評価強度が60にとどまっており、buy判断の必須条件である70に達していません。自社株買いや割安感はあるものの、減益トレンドが重石となっています。\",\n      \"evidence\": \"fundamental_view.strength=60, fundamental_view.points[2]: PBR 0.96倍 / PER 8.6倍, fundamental_view.cautions[0]: 利益減少トレンド\"\n    },\n    {\n      \"reason\": \"テクニカル面では25日移動平均線を下回り、MACDも陰転するなど短期的な調整局面が継続しており、エントリーには下げ止まりの確認が必要です。\",\n      \"evidence\": \"technical_view.stance=neutral, technical_view.points[0]: price_technical.sma5_vs_sma25='dead', price_technical.macd=-5.04\"\n    },\n    {\n      \"reason\": \"米国ADRの下落による翌営業日の寄り付き安が懸念される一方、RSIは中立圏にあり、方向感が定まるまで様子見が妥当と判断しました。\",\n      \"evidence\": \"technical_view.cautions[0]: 米国ADR -1.23%下落, technical_view.points[1]: price_technical.rsi14=48.0\"\n    }\n  ],\n  \"risks\": [\n    \"直近5営業日の保ち合いを下放れた場合、期間安値2927.0円方向への再調整リスクがあります。\",\n    \"2026年11月5日の次回決算発表に向けた、業績下方修正懸念による上値の重さ。\",\n    \"2026年10月29-30日の日銀金融政策決定会合に伴う為替および金利変動リスク。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "中期的な上昇トレンドは維持されているものの、日足では25日移動平均線を下回りMACDも陰転しており、短期調整局面での保ち合いが続いています。",
+      "points": [
+        {
+          "point": "株価は25日線を下回り、5日線と25日線のデッドクロスおよびMACDのマイナス圏推移など短期シグナルは軟調を示しています。",
+          "evidence": "price_technical.sma5_vs_sma25='dead(5日線が25日線の下)', price_technical.last_close=3025.0, price_technical.sma25=3062.22, price_technical.macd=-5.04, price_technical.macd_signal=3.63"
+        },
+        {
+          "point": "RSIが48.0と中立圏にあり、直近5営業日の終値も3016円〜3034円と極めて小幅な値動きで下値の底堅さを見せています。",
+          "evidence": "price_technical.rsi14=48.0, price_technical.recent_5_days"
+        },
+        {
+          "point": "60営業日騰落率はプラスを維持しTOPIXをアウトパフォームしており、中期トレンドは下落基調に陥っていません。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=12.62, price_technical.trend_60d.relative_to_topix_60d_pct=11.1"
+        }
+      ],
+      "cautions": [
+        "前夜の米国ADRが-1.23%下落しており、翌営業日の寄り付きで下押し圧力がかかる可能性がありますが、寄り付き段階で織り込まれるリスクがあります。",
+        "直近5営業日の保ち合いを下放れ、期間安値2927.0円方向へ調整が深まるリスクには警戒が必要です。"
+      ],
+      "key_levels": {
+        "support": 2927.0,
+        "resistance": 3062.22
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "大規模な自社株買いの執行と円安傾向、製造業PMIの拡大はポジティブな材料ですが、年次ベースでの減益トレンドが重石となっています。",
+      "points": [
+        {
+          "point": "総額1兆円規模の自己株式取得枠の執行が続いており、需給の下支えと資本効率向上が期待されます。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary (2026-09-03)"
+        },
+        {
+          "point": "製造業PMIが54.9と拡大圏を維持しており、大企業製造業DIも改善傾向にあるなど、外部環境は堅調です。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9, macro.boj.tankan.di.large_manufacturing.change_from_prev=5.0"
+        },
+        {
+          "point": "PBRが1倍を割り込み、PERも1桁台と歴史的に見て割安圏にありますが、ROEは12.4%と一定の資本効率を維持しています。",
+          "evidence": "fundamentals.valuation.price_to_book=0.96, fundamentals.valuation.trailing_pe=8.606, fundamentals.valuation.return_on_equity=0.124"
+        }
+      ],
+      "cautions": [
+        "2024年3月期をピークとした年次の営業利益・純利益の減少トレンドが続いており、成長性の鈍化が懸念されます。",
+        "中小企業の仕入価格DIが高止まりしており、サプライチェーン全体でのコスト負担増が利益率を圧迫するリスクがあります。",
+        "次回の決算発表（2026年11月5日）および日銀の金融政策決定会合（10月29-30日）を控えたイベントリスクが存在します。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "【輸送用機器54社】最強「オーナー企業」ランキング！マツダ12位、トヨタ自動車5位、1位は？ - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE00WkZQSkhzZFRUcHlOUG9GQUgyZ0RtWlZPc3hYZHZCWkVfTkM3VVpUUG04eGhXWEV4elhwLWEzUDVsc0F5aS1UcEdOc2rSAU9BVV95cUxQUVc5SXZKdDNwUHlCV0RtZVBISF9qTW5Rc2lvUm1idlpZSnhxd25RVThyZGN2a2hOMklMNXYwN1dRV0psX2VGWEpuMFd1V0tJ?oc=5",
+        "published": "Sun, 20 Sep 2026 19:50:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "トヨタ自動車(株)【TM】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBBVUdJM0U0aFlkR0FQN05mMW1YR2VRTlVLdEE1d19aRE9MWndrR1NnWTJZb1VtZmtjSGxRTzZseVZQaVhNU1NNUUJFSU8?oc=5",
+        "published": "Sun, 20 Sep 2026 15:12:54 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "トヨタ、「匠」の技覚えたロボット導入 28年以降、工場更新で毎年1兆円投資 ：ニュース - 中日BIZナビ",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBKNnB5NUc2Q3A1VVJSeFdmamlNSGZPaTEwZE9BWlUwVlNVdUUtNHNRVW16d0NVeUFWNEN5QTljWGpuMDVoQUhSUzFnMXVWNzBucC1YcWNLNFg3dmtQWlEw?oc=5",
+        "published": "Sun, 20 Sep 2026 14:00:53 GMT",
+        "publisher": "中日BIZナビ"
+      },
+      {
+        "title": "世界60工場・40万台のロボット刷新に、トヨタが2028年以降年1兆円を投資へ - 東京報道新聞",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9RNW1DZTRhZnJuWUtlRHM2aWVQd3AtSDBWMGRtb2hCeTlrbFFRR2d3VG0wX3RObTdBVHYtNGtYNnB0SWlwcXJrN1A0VWVnYjV2UzJV?oc=5",
+        "published": "Sun, 20 Sep 2026 11:07:39 GMT",
+        "publisher": "東京報道新聞"
+      },
+      {
+        "title": "公正取引委員会、徳島トヨタに下請法違反で勧告 6社が車両を2728回無償運送 - netdenjd.com",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9fVm9ZLUFTVzUyYmFtZmI5U0VxQ1ZFaDN5MFFXTEVOb1V4b3RMOEJWZjVYOE9VcEY4WDZzeFN1SXIxaVhWMGlBbnNEMlYxQUt0VVE?oc=5",
+        "published": "Sun, 20 Sep 2026 10:51:22 GMT",
+        "publisher": "netdenjd.com"
+      },
+      {
+        "title": "“黒い「IS」”は何が違う？ レクサスの人気スポーツセダンに特別仕様車「モードブラック」第6弾が登場！ 新開発のBBSホイールを履く“黒を極めた1台”とは - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9QbG1vdzRWWnhJeU1pa3lYSUd3M1VmejBfTlVUYlpyQWIyRktzVDF3SnQxeHIzNnNBdmNBWGpoc0l4SFpRdVFRRzhTYjBUODRFdVJINjZYcDUza3ZGSElCWm1ZWlcwVWdia3hrU2JlZ3RSSm9NWmVr0gF3QVVfeXFMT1BsbW93NFZaeEl5TWlreVhJR3czVWZ6MF9OVVRiWnJBYjJGS3NUMXdKdDF4cjM2c0F2Y0FYamhzSXhIWlF1UVFHOFNiMFQ4NEV1Ukg2NlhwNTNrdkZISUJabVlaVzBVZ2JreGtTYmVndFJKb01aZWs?oc=5",
+        "published": "Sun, 20 Sep 2026 11:40:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "＜画像1 / 10＞自動車の歴史をより分かりやすく！トヨタ博物館が本館常設展示を大幅リニューアル - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA4RkR5akczUkQ4WUpOSVJ5eVJZaWN0cTlib0NCQUlLZlJFczNDc1N6NV93ZUxrb1Y2TWZNUW1zcUxFS0tPYjdsN0drUDdKV2VoQ0tlNWU3SXIyLW5QaXJxZWZiTkZLdHNo?oc=5",
+        "published": "Sun, 20 Sep 2026 04:31:02 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "40万台のヒューマノイドロボットがトヨタの工場労働者と共に働くことになる。 - vietnam.vn",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQTYzem83OGxwS3lmVkE2NGxKYkNmOHkwN1FTX3Jac2tvdFZCd0R5Q1Vldm5nSHgzbFNnNDM0Qi1WT1FKdWZUWjctT2hQZmhsdjk1RmxVaHFZOEhBckRzNENPQUh1d3JLTGRreU1zMTRUNnc3dUpXdWw5Y0FJOGtsRlljclItdUp2MTVZVmstbHRNbDJLNFBZ?oc=5",
+        "published": "Sun, 20 Sep 2026 04:25:31 GMT",
+        "publisher": "vietnam.vn"
+      },
+      {
+        "title": "卓球女子団体の日本、決勝Tへ／アジア大会 - サンスポ",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPbWlsa2dzdmtNd05UUnBnM254NXBiN2plX0pSblA0THAyS2s4eC0ya2tFVTVtUWhWcHRxTHJXdXJuT3daNFp4TlJybXlJQWxNYUVhMGVKRzJiNkpGQ3Z0RldURk9LaWtJM3ZNWWg2Slo3M0FtMjBianA1MExqYWxsLUNPY29BbkZnd3fSAYoBQVVfeXFMT21pbGtnc3ZrTXdOVFJwZzNueDVwYjdqZV9KUm5QNExwMktrOHgtMmtrRVU1bVFoVnB0cUxyV3Vybk93WjRaeE5Scm15SUFsTWFFYTBlSkcyYjZKRkN2dEZXVEZPS2lrSTN2TVloNkpaNzNBbTIwYmpwNTBMamFsbC1DT2NvQW5GZ3d3?oc=5",
+        "published": "Sun, 20 Sep 2026 11:12:07 GMT",
+        "publisher": "サンスポ"
+      },
+      {
+        "title": "水町泰杜/黒澤孝太組のイタリア戦記その3：いくぞ、ローマ広場へ。「いいビーチバレーボール」で上位シードに勝利 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5GRlE3MHBvWHZjblFPX0Z5cFFPcGh3d1ZlQkdkNFBUQ0taSHNvMkQwYXdkSVJQdUVNdUVIRTJqQWxwV0xIVkt0Z0wteG9BWW9KcEVKVVhmVUdIREFIZkRnN2JGYlM1b0N3Vjd1YUh2cC1fVFFRRFVSaA?oc=5",
+        "published": "Sun, 20 Sep 2026 02:43:00 GMT",
+        "publisher": "au Webポータル"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903531084.pdf",
+        "date": "2026-09-03 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度の継続及び従業員に対する新たな株式交付制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507853.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507884.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503849.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "2027年3月期第１四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507860.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507846.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      }
+    ]
+  }
+}

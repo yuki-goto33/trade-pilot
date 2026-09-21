@@ -1,0 +1,181 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-09-21T09:04:27+09:00",
+  "price_as_of": "2026-09-18",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズは日銀の政策変更や好調な業績を背景に極めて強気（strength=75）ですが、テクニカル面で下落圧力が強く、即時のエントリー条件を満たしません。",
+        "evidence": "fundamental_view.points[0]: 金融市場調節方針の変更 / technical_view.stance=bearish (strength=75)"
+      },
+      {
+        "reason": "株価が25日移動平均線を割り込み、MACDもデッドクロスを維持しているため、短期的には下値を模索する「落ちるナイフ」の状態にあります。",
+        "evidence": "technical_view.points[0]: price_technical.last_close=3620.0 < price_technical.sma25=3633.36 / technical_view.points[1]: MACDデッドクロス"
+      },
+      {
+        "reason": "前夜のADRの下落も考慮すると、寄り付きからの売り圧力が想定され、テクニカル的な底打ちが確認されるまで待機するのが妥当と判断しました。",
+        "evidence": "technical_view.points[2]: us_overnight.adr.change_1d_pct=-1.57"
+      }
+    ],
+    "risks": [
+      "短期的には3415円付近のサポートラインまで調整が継続するリスク",
+      "Forward PERが23.8倍と銀行セクターとしては割高圏にあり、利益成長の鈍化懸念による調整",
+      "次回日銀会合（2026/10/29-30）に向けた金利見通しの変動に伴うボラティリティの増大",
+      "次回決算（2026/11/12）での進捗が市場の期待値に届かない場合の材料出尽くし感"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズは日銀の政策変更や好調な業績を背景に極めて強気（strength=75）ですが、テクニカル面で下落圧力が強く、即時のエントリー条件を満たしません。\",\n      \"evidence\": \"fundamental_view.points[0]: 金融市場調節方針の変更 / technical_view.stance=bearish (strength=75)\"\n    },\n    {\n      \"reason\": \"株価が25日移動平均線を割り込み、MACDもデッドクロスを維持しているため、短期的には下値を模索する「落ちるナイフ」の状態にあります。\",\n      \"evidence\": \"technical_view.points[0]: price_technical.last_close=3620.0 < price_technical.sma25=3633.36 / technical_view.points[1]: MACDデッドクロス\"\n    },\n    {\n      \"reason\": \"前夜のADRの下落も考慮すると、寄り付きからの売り圧力が想定され、テクニカル的な底打ちが確認されるまで待機するのが妥当と判断しました。\",\n      \"evidence\": \"technical_view.points[2]: us_overnight.adr.change_1d_pct=-1.57\"\n    }\n  ],\n  \"risks\": [\n    \"短期的には3415円付近のサポートラインまで調整が継続するリスク\",\n    \"Forward PERが23.8倍と銀行セクターとしては割高圏にあり、利益成長の鈍化懸念による調整\",\n    \"次回日銀会合（2026/10/29-30）に向けた金利見通しの変動に伴うボラティリティの増大\",\n    \"次回決算（2026/11/12）での進捗が市場の期待値に届かない場合の材料出尽くし感\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "短期的に25日移動平均線を割り込み、MACDもデッドクロスを維持するなど、調整圧力が強まっています。前夜のADRも下落しており、短期的には下値を模索する展開が想定されます。",
+      "points": [
+        {
+          "point": "直近5営業日で続落が続いており、株価が5日線（3663円）および25日線（3633.36円）の両方を明確に下回っています。",
+          "evidence": "price_technical.recent_5_days, price_technical.last_close=3620.0, price_technical.sma25=3633.36"
+        },
+        {
+          "point": "MACDがシグナル線を下回るデッドクロス状態にあり、ヒストグラムのマイナス幅も拡大しているため、下落の勢いが増しています。",
+          "evidence": "price_technical.macd_histogram=-7.77, price_technical.macd=15.87, price_technical.macd_signal=23.64"
+        },
+        {
+          "point": "前夜の米国市場におけるADR（米国預託証券）が大幅に下落しており、国内市場での寄り付きから売り優勢となる可能性が高いです。",
+          "evidence": "us_overnight.adr.change_1d_pct=-1.57"
+        }
+      ],
+      "cautions": [
+        "直近60日騰落率が+12.95%と中期的には依然として強い上昇トレンドの中にあり、3400円台の直近安値付近では押し目買いが入る可能性があります。",
+        "ADRの下落は寄り付き時点で既に価格に織り込まれる可能性があり、その後の売り一巡後の動きに注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 3415.0,
+        "resistance": 3633.36
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "日銀の金融政策変更を背景とした国内金利の上昇と、2027年3月期第1四半期の極めて好調な業績進捗を背景に、銀行業としての収益拡大期待が一段と高まっています。",
+      "points": [
+        {
+          "point": "直近の日銀金融政策決定会合（2026年9月18日）における金融市場調節方針の変更発表により、追加利上げや金融正常化への期待が継続しており、銀行の利ざや拡大に直結する環境が整っています。",
+          "evidence": "macro.boj.recent_announcements.items[2].title=\"（参考）金融市場調節方針の変更（2026年9月金融政策決定会合）\""
+        },
+        {
+          "point": "国内10年債利回りが2.993%という極めて高い水準で推移しており、銀行業にとって運用益の改善が見込める強力なマクロ環境にあります。",
+          "evidence": "macro.rates.jgb_10y_percent.value=2.993"
+        },
+        {
+          "point": "2026年6月期（第1四半期）の純利益が8094億円に達しており、前年同期のトレンドを上回る非常に強いペースで業績が推移しています。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].net_income_oku_jpy=8094"
+        },
+        {
+          "point": "通期業績も2024年3月期から2026年3月期にかけて連続的な増収・大幅増益を達成しており、利益創出能力の地力が向上しています。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=24272"
+        }
+      ],
+      "cautions": [
+        "次回決算発表（2026年11月12日）に向け、市場の期待値が先行しており、進捗が想定内にとどまった場合の材料出尽くし感。",
+        "次回日銀会合（2026年10月29日〜30日）前後の金利見通しの変化に伴う株価の乱高下。",
+        "Forward PERが23.8倍と、銀行セクターとしては歴史的に高い水準にあり、利益成長の鈍化が意識されると調整圧力となり得ること。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "「香り」で社員の一体感醸成 統一イメージ定着、業務効率向上も - 時事ドットコム",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1CM3dUT0F1dGEwdnA1Y3RpUWphd0hzZE5URzB6M0ZxYnpJUFJyVV9ab3ZhQXBkdGxZTTFyZlBubmt1VlFNNHBuTi1UZXFPNGdTM1ZsNlEtOHVwTEJSenNnRWhhdw?oc=5",
+        "published": "Sun, 20 Sep 2026 22:10:00 GMT",
+        "publisher": "時事ドットコム"
+      },
+      {
+        "title": "「香り」で社員の一体感醸成 統一イメージ定着、業務効率向上も - 時事ドットコム",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQNENVamZvZTVHTEs3Qy1KdEY3ZC1RZWFsbzNXdVZWZzVhU2Q5Z19mOFF3alp3bVo0UnNQZGtyNU9iUjgzYXI1SzlLS2xleGRVUWRNRmlqRnFTMTRQaDhYNUI1Wk5nY21ZbGZ3dXk2d19ROUd0dnBiUmxQZERHeXlFTENR?oc=5",
+        "published": "Sun, 20 Sep 2026 22:10:00 GMT",
+        "publisher": "時事ドットコム"
+      },
+      {
+        "title": "Travis Japan松田元太「いつ死んでもいい」嵐の曲にもある言葉が人生の信念に【「はだかんぼうたち」インタビュー後編】 - モデルプレス",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3SXBRZzZCRnFpSEdtUDdjUXZMek5ZR3pocW52OEZ4UEhyTVlLUGladVN4NzNIbVljc0VTWjNpVjRSTXhlVEdpV0F1RFBxQVNPTFHSAU5BVV95cUxPbm1zTXB2ZzBGSEtvbm1zX0ZqTTB1cWJLRDlUVFRwQm1nVVBTUU5EUi1qZUdmMUZWVGxKbWo3a0xwZHFkYXdBRjB2YXVrdUE?oc=5",
+        "published": "Sun, 20 Sep 2026 22:00:00 GMT",
+        "publisher": "モデルプレス"
+      },
+      {
+        "title": "「香り」で社員の一体感醸成＝統一イメージ定着、業務効率向上も - Excite エキサイト",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBTRDBrMkFCTlF6VWlRaFRUZnJxSGdvci1PaWtDLW5odUdZQ21MZnBHM3MzaTVyb3JITHphandETDdoWk9GMzdKdWMtME16WVRNOUhjR002ZU1KVUFheDE0?oc=5",
+        "published": "Sun, 20 Sep 2026 05:53:00 GMT",
+        "publisher": "Excite エキサイト"
+      },
+      {
+        "title": "株式アナリスト (@hiro_uma_sanspo) on X - t.co",
+        "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE5aLXJiNl9tWldCUURqUGl6SThWZWFBTnZ0NmJhZWEzLWFLQmJlRW5EeFBReXk2dkJVcm8w?oc=5",
+        "published": "Sun, 20 Sep 2026 07:23:38 GMT",
+        "publisher": "t.co"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期 自己資本比率について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260814520300.pdf",
+        "date": "2026-08-14 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕（連結）（公認会計士又は監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510381.pdf",
+        "date": "2026-08-06 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505851.pdf",
+        "date": "2026-08-03 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      }
+    ]
+  }
+}
