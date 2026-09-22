@@ -1,0 +1,206 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-09-22T09:49:43+09:00",
+  "price_as_of": "2026-09-18",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家は業績好調や金利環境を評価しbullishとしているものの、strengthが60にとどまり新規の買いカタリストに欠けるため、buy発火基準（strength≥70）を満たさず様子見とします。",
+        "evidence": "fundamental_view.stance=bullish (strength=60), fundamental_view.points[2]: 直近2週間以内に企業固有の新規材料や上方修正開示は確認できない"
+      },
+      {
+        "reason": "テクニカル面では25日移動平均線を割り込み、MACDのデッドクロスやRSI低下など短期的な調整シグナルが点灯しているため、押し目形成の完了を確認する必要があります。",
+        "evidence": "technical_view.stance=neutral (strength=55), technical_view.points[1]: price_technical.last_close=3620.0, price_technical.sma25=3633.36"
+      }
+    ],
+    "risks": [
+      "2026年10月29日〜30日の日銀金融政策決定会合に向けて金融政策思惑から株価ボラティリティが上昇するリスク",
+      "25日線を早期に奪回できない場合、直近サポート水準である3415.0円近辺まで調整が長期化するリスク",
+      "PBR1.79倍とセクター内では評価が進んでおり、国内金利低下や利益確定売りに伴う下落リスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家は業績好調や金利環境を評価しbullishとしているものの、strengthが60にとどまり新規の買いカタリストに欠けるため、buy発火基準（strength≥70）を満たさず様子見とします。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=60), fundamental_view.points[2]: 直近2週間以内に企業固有の新規材料や上方修正開示は確認できない\"\n  },\n  {\n   \"reason\": \"テクニカル面では25日移動平均線を割り込み、MACDのデッドクロスやRSI低下など短期的な調整シグナルが点灯しているため、押し目形成の完了を確認する必要があります。\",\n   \"evidence\": \"technical_view.stance=neutral (strength=55), technical_view.points[1]: price_technical.last_close=3620.0, price_technical.sma25=3633.36\"\n  }\n ],\n \"risks\": [\n  \"2026年10月29日〜30日の日銀金融政策決定会合に向けて金融政策思惑から株価ボラティリティが上昇するリスク\",\n  \"25日線を早期に奪回できない場合、直近サポート水準である3415.0円近辺まで調整が長期化するリスク\",\n  \"PBR1.79倍とセクター内では評価が進んでおり、国内金利低下や利益確定売りに伴う下落リスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "60営業日騰落率はプラスで中期上昇トレンドを維持しているものの、足元では4日続落して終値が25日移動平均線を割り込み、MACDもデッドクロスを継続しており、短期的な調整局面にあるため中立と判断します。",
+      "points": [
+        {
+          "point": "中期トレンドは60日騰落率+12.95%、対TOPIX相対騰落率+11.42%と良好であり、下落トレンドにはない。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=12.95, price_technical.trend_60d.relative_to_topix_60d_pct=11.42"
+        },
+        {
+          "point": "直近5営業日は4日連続で下落し、9月18日には出来高を伴って終値が25日線を下回った。",
+          "evidence": "price_technical.last_close=3620.0, price_technical.sma25=3633.36, price_technical.recent_5_days[4].volume=51333500"
+        },
+        {
+          "point": "MACDがシグナルを下回りヒストグラムがマイナス圏で推移し、RSI14も40.5まで低下してモメンタムが鈍化している。",
+          "evidence": "price_technical.macd=15.87, price_technical.macd_signal=23.64, price_technical.macd_histogram=-7.77, price_technical.rsi14=40.5"
+        },
+        {
+          "point": "前夜のNY市場でADRが下落しており、短期的には寄り付きからの下押し圧力が警戒される。",
+          "evidence": "us_overnight.adr.change_1d_pct=-1.57"
+        }
+      ],
+      "cautions": [
+        "25日移動平均線（3633.36円）を早期に奪回できずに下落が続いた場合、直近レンジ下限である3415.0円に向けた調整が深まるリスクがある。",
+        "ADRの下落（-1.57%）は当日の寄り付き価格に織り込まれ、寄り底となって反発する可能性がある。"
+      ],
+      "key_levels": {
+        "support": 3415.0,
+        "resistance": 3633.36
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 60,
+      "summary": "連続増益を続ける堅調な業績推移と国内金利の高水準推移が収益環境の強い追い風となっている一方、銀行株としてはバリュエーションの織り込みが進んでおり、直近2週間の個別カタリストが不在のため上値追いの勢いは限定的と判断します。",
+      "points": [
+        {
+          "point": "年次・四半期ともに利益成長が継続しており、直近2026年6月期も純利益8,094億円と高い収益性を維持している。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=24272, fundamentals.earnings_trend.quarterly[0].net_income_oku_jpy=8094"
+        },
+        {
+          "point": "国内10年債利回りが約3%近辺で推移し日銀も金融市場調節方針の変更を発表するなど、利ざや拡大につながる金融環境が継続している。",
+          "evidence": "macro.rates.jgb_10y_percent.value=2.993, macro.boj.recent_announcements.items[2].title=（参考）金融市場調節方針の変更（2026年9月金融政策決定会合）"
+        },
+        {
+          "point": "PBR1.79倍、予想PER23.8倍と従来のメガバンク水準から評価が見直されている反面、直近2週間以内に企業固有の新規材料や上方修正開示は確認できない。",
+          "evidence": "fundamentals.valuation.price_to_book=1.795, fundamentals.valuation.forward_pe=23.866, disclosures.items[0].date=2026-08-14 16:00:00"
+        }
+      ],
+      "cautions": [
+        "2026年10月29日〜30日に日銀金融政策決定会合が控えており、金融政策に関する市場の思惑次第でボラティリティが高まるリスクがある。",
+        "次回決算発表日（2026年11月12日）まで期間があり、業績進捗や追加株主還元などの新規材料待ちとなりやすい。",
+        "PBR1.795倍と銀行セクター内では高水準のバリュエーションにあるため、金利低下や成長鈍化懸念が生じた際の調整リスクに留意が必要。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "日本株式市場の時価総額1位が4社競争に…Toyotaの独走時代が終焉 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE02X0FwREFYby05dVB6dmliRUE5Sjh5TXRGUm45MzUybk1jTjVWTXd5d3hBV0FtVTJHRHl6M0JJWUtzbkRGR0hfTFZ6TDJFbXJCdzNqaDhQN2ZzTHZjWklnbDFCVE9MWGtPX1BIRG0zUG5qblZ1?oc=5",
+        "published": "Mon, 21 Sep 2026 23:25:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "米国株式市場は上昇、原油安やAI期待が支援 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNVlhVc0kxRXYybktVVEJGRVNGNWl2MmVSaWlDYktDVHkyV2hHMmpfQjRZbDB0eWxQTEp2RzltWnpfTVRQTGk5d3VteWktRFE5T2pyN0hQRVpMblNyTnBYR2Iwb0x4bHQ5UFc0cEUyNjRhTFFodmZEanVVdUxZRHRORnRwSHlOZ1JzczdJTVNFODk4TkFVZGdUallFVUlhanNvSTJmb1poVDRtQkNBdWFxRGUySU13SXIzcFM4NW1ZSHRqRUZDbVp5V1BTaHVCSlRSNGptNmhfUW0ya2tU0gGMAUFVX3lxTE1HR0FkSzRjN0FVdWZ1eVFuVHJ5SGRaWEFDc3NWRUcwQmpUZnZoREJSMUlKclNkTW1zdEZpVERxWmJ4MGFKTFZNaWQyRGRhZndraVVKNzFZNHhBbGxYNTZuNFhjVVFNNFhKTllBcUlRUXpOaEtPTFFoQXVwZ1U3bTdLR2hJOWRpOUJzWVdX?oc=5",
+        "published": "Mon, 21 Sep 2026 23:18:10 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "AI・半導体「1.24兆円」の予算、8306億円を支出 国のお金はどこまで動いた？ - 千葉テレビ放送",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE40RDFTNnhadzR0VmgzNDRXM19QbXo0OHdzZF9rRFhBUXprQmpTT2RFV1J5ZDgxRFNfODlJNWl0TXZBa1FqaTR4S1haN0FwSDFib1NwYWxMcEEweHJkQjVJ?oc=5",
+        "published": "Mon, 21 Sep 2026 04:16:00 GMT",
+        "publisher": "千葉テレビ放送"
+      },
+      {
+        "title": "時価総額トップ争いに変化、半導体関連株と銀行株が迫る日本株の勢力図 - EBC Financial Group",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBpaW80UkdJVzVfdWVTSTJxZFJ5ZWVkZTRadkxzeG9vSlduNm9lNTQ4WU8wTVZFV3FFb1pQTmphRUd2SFZLS3k4Y3ZERU5KMXBQcUE?oc=5",
+        "published": "Mon, 21 Sep 2026 06:09:00 GMT",
+        "publisher": "EBC Financial Group"
+      },
+      {
+        "title": "21日のNY市場は上昇 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNUXpwY3ZkZXFzZndKMzFGLUJVN1JnOXBZcXpmMmZyVkdGR2tia3FRSkdMajBEYjIyQmt6dzBkazNzalRPcGJLLTQyMW4wQmpyRW5GVGZ0emk3OHJ6ajNBZi1CejdEMnFKUVhmRkR5WWk1N183d1FPcF81NDRORjJtYmM5cHJRSFFGcTJXRtIBjAFBVV95cUxNUXpwY3ZkZXFzZndKMzFGLUJVN1JnOXBZcXpmMmZyVkdGR2tia3FRSkdMajBEYjIyQmt6dzBkazNzalRPcGJLLTQyMW4wQmpyRW5GVGZ0emk3OHJ6ajNBZi1CejdEMnFKUVhmRkR5WWk1N183d1FPcF81NDRORjJtYmM5cHJRSFFGcTJXRg?oc=5",
+        "published": "Mon, 21 Sep 2026 22:53:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "キンタロー。キスマイ藤ヶ谷太輔のモノマネメイク姿で本人と2ショット「リスペクト精神さすがです」「夢のコラボ」と反響相次ぐ - モデルプレス",
+        "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1hUFpZa0xjUmx1bVpsbmV6RHdJUU1TbGNGYnRmUHJzbXpVNnBLRHBNNXM2TTd2T0hwNXlNeEpGYkhwcjQ?oc=5",
+        "published": "Mon, 21 Sep 2026 05:07:00 GMT",
+        "publisher": "モデルプレス"
+      },
+      {
+        "title": "2025年末に止まるはずだった石炭火力 米政府、運転可能な状態をさらに3カ月維持 - 千葉テレビ放送",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1JdzBYa21DV2poZGo0TTJRSEJPUW53aUM1cjI0RW02SmxCUGNSX2tjdjAyWW4xUUdhWVNqZmRlRTNzZ204dHFLcWhHczFmYjhrQmZKckxKTnFZNTFqOG1tdzVuX1Y?oc=5",
+        "published": "Mon, 21 Sep 2026 06:03:00 GMT",
+        "publisher": "千葉テレビ放送"
+      },
+      {
+        "title": "血液型をO型に変換、ほぼ水を使わない透析も カナダが5案件の開発支援 - 千葉テレビ放送",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBWRTNDZlBJbFhzc0F5QjRuNm9zRXQxODFfVEhzRVpGZFl1bTVsdkhXVUZBX1pHbkJSdGo4Y19IenA0c2RMNFdZeHhDTERFMXRtN3pMWVZJUDk0cXhmWVdJT2ZWQUI?oc=5",
+        "published": "Mon, 21 Sep 2026 04:49:00 GMT",
+        "publisher": "千葉テレビ放送"
+      },
+      {
+        "title": "低価株のばくが (@imrena07) on X - t.co",
+        "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE9kRXJQN2xRRE9aZG0yeGtoZmVybmpCSTJNYzdFYXZfYlZKaEhLQTNKbG55SWEydk1jd1RF?oc=5",
+        "published": "Mon, 21 Sep 2026 07:38:32 GMT",
+        "publisher": "t.co"
+      },
+      {
+        "title": "コツコツ投資家@S株 (@NOZOE_LGM) on X - t.co",
+        "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTFAzUVhsMkx2cGRFZFRrbHFvWF81enZFRDlRRjFmTENON1JzWHBsZFFWTGczZE0xX1VsWTBB?oc=5",
+        "published": "Mon, 21 Sep 2026 06:01:43 GMT",
+        "publisher": "t.co"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期 自己資本比率について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260814520300.pdf",
+        "date": "2026-08-14 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕（連結）（公認会計士又は監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510381.pdf",
+        "date": "2026-08-06 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505851.pdf",
+        "date": "2026-08-03 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      }
+    ]
+  }
+}

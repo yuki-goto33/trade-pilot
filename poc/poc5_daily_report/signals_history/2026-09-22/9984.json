@@ -1,0 +1,225 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-09-22T09:50:43+09:00",
+  "price_as_of": "2026-09-18",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近（2026-09-10）に buy シグナルを発行しており、現在はその継続監視期間中（14日以内）であるため、新規エントリーは控える。",
+        "evidence": "reference.recent_buy.date=2026-09-10"
+      },
+      {
+        "reason": "テクニカル面で既に強気サイン（strength 75）が揃っており、ADRの大幅高を含め好材料が株価に一定程度織り込まれている局面と判断される。",
+        "evidence": "technical_view.stance=bullish, technical_view.strength=75, us_overnight.adr.change_1d_pct=6.43"
+      },
+      {
+        "reason": "ファンダメンタルズは非常に強力（strength 80）だが、テクニカルも強気に揃った状態での buy は、バックテスト上、的中率が低下する傾向がある。",
+        "evidence": "統合判断のルール1（テクニカルも bullish → hold）"
+      },
+      {
+        "reason": "OpenAIへの巨額投資やエヌビディアとの提携、純利益のV字回復など、中長期的な上昇カタリストは極めて強固である。",
+        "evidence": "fundamental_view.points[0]: OpenAI 100億ドル出資 / points[2]: 純利益 5兆円への回復"
+      }
+    ],
+    "risks": [
+      "2026-11-11の次回決算発表および10月末の日銀会合に伴うボラティリティの急拡大。",
+      "フィッチによる社債格付けが投機的水準（BB+）であることによる、金利上昇局面での財務負担増。",
+      "為替（USD/JPY=157.05）や米株市場の動向が、海外投資資産の評価額に与えるネガティブな影響。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近（2026-09-10）に buy シグナルを発行しており、現在はその継続監視期間中（14日以内）であるため、新規エントリーは控える。\",\n   \"evidence\": \"reference.recent_buy.date=2026-09-10\"\n  },\n  {\n   \"reason\": \"テクニカル面で既に強気サイン（strength 75）が揃っており、ADRの大幅高を含め好材料が株価に一定程度織り込まれている局面と判断される。\",\n   \"evidence\": \"technical_view.stance=bullish, technical_view.strength=75, us_overnight.adr.change_1d_pct=6.43\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは非常に強力（strength 80）だが、テクニカルも強気に揃った状態での buy は、バックテスト上、的中率が低下する傾向がある。\",\n   \"evidence\": \"統合判断のルール1（テクニカルも bullish → hold）\"\n  },\n  {\n   \"reason\": \"OpenAIへの巨額投資やエヌビディアとの提携、純利益のV字回復など、中長期的な上昇カタリストは極めて強固である。\",\n   \"evidence\": \"fundamental_view.points[0]: OpenAI 100億ドル出資 / points[2]: 純利益 5兆円への回復\"\n  }\n ],\n \"risks\": [\n  \"2026-11-11の次回決算発表および10月末の日銀会合に伴うボラティリティの急拡大。\",\n  \"フィッチによる社債格付けが投機的水準（BB+）であることによる、金利上昇局面での財務負担増。\",\n  \"為替（USD/JPY=157.05）や米株市場の動向が、海外投資資産の評価額に与えるネガティブな影響。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "短期移動平均線と25日線のゴールデンクロスに加え、MACDの好転、前夜ADRの大幅高とテクニカル面での反転シグナルが揃っています。中期的な下落トレンドの影響は残るものの、主要な節目を回復したことで短期モメンタムは強気に転じています。",
+      "points": [
+        {
+          "point": "5日線が25日線を上抜けるゴールデンクロスが発生し、MACDもシグナル線を上回りヒストグラムが拡大するなど、短期的な反転シグナルが明確です。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.macd=238.53, price_technical.macd_signal=193.01"
+        },
+        {
+          "point": "株価が25日移動平均線を大幅に上回って推移しており、中期的な調整局面からの脱却を示唆する水準まで回復しています。",
+          "evidence": "price_technical.last_close=6315.0, price_technical.sma25=5717.76"
+        },
+        {
+          "point": "前夜の米国市場でADRが6%を超える大幅上昇を見せており、当日の寄り付きから強い買い戻しが期待されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=6.43"
+        },
+        {
+          "point": "直近5営業日のうち4日間で底堅い動きを見せており、特にRSIが50を超え、上昇の勢い（モメンタム）が増しています。",
+          "evidence": "price_technical.recent_5_days, price_technical.rsi14=56.2"
+        }
+      ],
+      "cautions": [
+        "直近60営業日の騰落率が対TOPIX比でもマイナスであり、中期的な下落トレンドを完全に脱したと断定するには、期間高値の更新が必要です。",
+        "ADRの大幅高により寄り付きで窓を開けて上昇した場合、短期的には利益確定売りに押されるリスクがあります。",
+        "市場レジームがneutralであり、TOPIXが25日線を下回っているなど、市場全体の地合いは依然として不安定です。"
+      ],
+      "key_levels": {
+        "support": 5717.76,
+        "resistance": 6959.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 80,
+      "summary": "OpenAIへの100億ドル超の出資に向けた大規模な資金調達と、エヌビディアとの連携強化というAI戦略の具体化が強力なカタリストとなっている。業績面でも純利益のV字回復が顕著であり、AI需要の拡大を背景としたマクロ環境の追い風も受けている。",
+      "points": [
+        {
+          "point": "OpenAIへの追加投資を目的とした100億ドル（約1.7兆円）超の大規模な外債発行を開始しており、AI分野への集中投資が一段と加速している。",
+          "evidence": "news.headlines[0].title, news.headlines[2].title (2026-09-21)"
+        },
+        {
+          "point": "エヌビディアが傘下のSBエナジーに対し30億ドルの出資をコミットするなど、グローバルなテック大手との戦略的提携が深化している。",
+          "evidence": "news.headlines[4].title (2026-09-21)"
+        },
+        {
+          "point": "2026年3月期の通期純利益は5兆円を超える水準まで急回復しており、前々期の赤字から大幅な業績の改善が見られる。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=50023, annual[2].net_income_oku_jpy=-2276"
+        },
+        {
+          "point": "日本の製造業PMIにおいて「AI関連需要の強さ」が景気拡大の主因として指摘されており、同社の投資戦略とマクロ経済のトレンドが合致している。",
+          "evidence": "macro.japan_pmi.manufacturing.summary_en"
+        }
+      ],
+      "cautions": [
+        "フィッチによる新規社債への格付けが「BB+」の投機的水準にとどまっており、金利上昇局面における調達コストや財務負担増が懸念される (news.headlines[5].title)",
+        "次回決算発表（2026年11月11日）および日銀金融政策決定会合（2026年10月29日〜30日）が控えており、ボラティリティが高まる可能性がある",
+        "為替（USD/JPY=157.05）や米株市場（S&P500）の動向に資産価値が大きく左右されるリスクがある"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-10",
+    "days_ago": 12,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソフトバンクグループ、OpenAI投資のための100億ドル超の債券発行を開始、条件書に示される - アラブニュース",
+        "url": "https://news.google.com/rss/articles/CBMijwRBVV95cUxPZm15MFRWanhZMllxQXpuYUtvYlpDUG1UdElYMzhkV05FOHFtaEp1SVd3dXloa2lHTTJrSkhQdWg5UnJKWU1tUU53NldTT25IdXROZFp6RHdUMm4weU1LTG1KckVpZjhaRVFOM1UtQ0NFSUNwb0Vwcmp6RzJWa2lHWkZfMUV2NW9IQ0pNMEsyMUJJQ1B0eXZOM1hfN3M5cGlFNVpFRUtEVy1XcEVwaDk2dzBLenN0ajhzc1RxX0pDa0VVRzd6X25QX3AydG1DYXN5VlIzTUlzTHFwMzA2U2tfR3J3cEhJQlctd2dYTkJQVFVoLXJPQzRvejlfZ2NyQTVHUm5VNTh5bXMwR0p0YXRTOHZjYlE1VVY3OUVQdDZYR2REbkF3dzhMZFd0d2kxNzJXWUNHSHNjR2ptX2xCR2VoQUVNMzFFb0h1RmpJNzNkZFZzd1VJZFBCTm9oRFNPbWdWMlM1TTVVdndkbDhaanBjQVVkNnRxZUZvdV8zS0l4N2pBUGROdDZNbXpCTkVmRndqbmFwVXNEczZ5MW1KV3BrbV9vb3B6SlBueTNoN2ltZEtuM0JPZVVfMHhfYmVwWjhYMkVHc09peDg2TG5wUUl5dmpGSHhkVF9Kb29taEZ0Ymdra2JkcTk3VHFmaERpSFhnR0VtMW9qSndqYjBpT1dIUWh0bFhVclFUY3FSNnlzNA?oc=5",
+        "published": "Mon, 21 Sep 2026 13:27:35 GMT",
+        "publisher": "アラブニュース"
+      },
+      {
+        "title": "ソフトバンクグループ(株)【SFTBY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9PS0JwdDRlRjRxb1VMWkhNNTEwcUtyQkN0SVdKbk1ZVEN2VkZYZFhkVktRdVlLNUhBdm45Q1ZxY0xZSUtsTDktcWhXNjFPSU5s?oc=5",
+        "published": "Mon, 21 Sep 2026 16:05:56 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ソフトバンクグループ、1.7兆円規模の外債発行へ オープンAI出資に活用 - nikkei.com",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1IeDNuY0ZpMmIxdzhDZ1RJVkxlYml6RzhFNG9Iei1DeVF0RG5FdXkwRFZ3aUtyMGo1UktEbTVtNmVMV1JrSTFEWlJDMG81b0gwSktnVjh6Uk8yREpSSi03ajNuS2FweXptendQWQ?oc=5",
+        "published": "Mon, 21 Sep 2026 10:11:25 GMT",
+        "publisher": "nikkei.com"
+      },
+      {
+        "title": "ソフトバンクグループ主要5社が共同で優勝キャンペーンを開始！各社の連携により最大20万円相当のポイント還元や限定セールを幅広く展開 - DXマガジン",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBhb0ZtNF9qS0t1Y0hmV1o2ckJRQnIzT0p6RVdaNG9BNkE5QkRwWmNFY3lLX2NBTXQxRkFOYmV6UElIVTNGZVZSVmJQQWRKLUxRRXFIRA?oc=5",
+        "published": "Mon, 21 Sep 2026 07:59:58 GMT",
+        "publisher": "DXマガジン"
+      },
+      {
+        "title": "エヌビディア、ＳＢエナジーに計３０億ドルを出資をコミット＝米国株個別 - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFB0QXotS2N3UFlpMjc2bm9ZN2lzV283WlgwRXNHVVlVQ3Jrak5EWThJZ2ZhLVM2Vmg4eWFQeDFYWXkweHIwZXhUVVAxZlZWdTRQTlQ5WTE4cHQ0Xzd4VGNkWUFn?oc=5",
+        "published": "Mon, 21 Sep 2026 17:09:00 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "フィッチ・レーティングスは、ソフトバンクグループが発行を計画している米ドル建ておよびユーロ建てノートに対し、「BB+」の格付けを与えました。 - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZXdLOEM1ZUkzQjNyMDBqaWlobUdpZm4wMkVNRk9IajJyMVlHNFBlWjJkb2ttTlFfMDAzTWpGSW9LSC12bnRYVFFCbldaVGlBS25HSTdLSTBsa2h2NHdLemxBN3E2ZTNWOG1yZHRhQkRQSWtQaE9xS09BWEtxaTNCYlNZT1pWN01rLXNvSm5SSFQzdzRUbzFxb0ZXWGxOeGJuX3pLRmNR?oc=5",
+        "published": "Mon, 21 Sep 2026 05:54:59 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "ソフトバンク、OpenAIへの投資のため100億ドルの債券を発行 - idnfinancials.com",
+        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNR01FcWJhMjY3Wmp5ZmxuVldKTWIwWF9HcG1TdFhPTDNWQno2UHJ1aDU5ZVpsRXRzdnZzT1R0dGpxV1hNS0Z2UzQwdXQyaGZZXzR5ZGFSWDI4d3FkdmhDc3hSZkplbnVDMlUtbTVKRGtZZ2xHM2JrRnd5N0twaVNNZ2MxalpJMnR1TDBuSDlSQjdiR29rWmc?oc=5",
+        "published": "Mon, 21 Sep 2026 14:00:00 GMT",
+        "publisher": "idnfinancials.com"
+      },
+      {
+        "title": "【大阪】ベトナム発「Sushi Tiger」が日本初上陸！創作鮨を堪能 - PrettyOnline",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE92X2IwMnVmaERaclhDZmpVN1dMVnpCNTVOaGZWMWZCcDgwZ2Q0Q2xZbmI3TTV5WEdhZU1MNzhoWWdkbTBqYzR6LXlmaVlIYXdO?oc=5",
+        "published": "Mon, 21 Sep 2026 13:00:05 GMT",
+        "publisher": "PrettyOnline"
+      },
+      {
+        "title": "ソフトバンクＧ、100億ドル超の社債発行へ オープンＡＩ投資で - ロイター",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE80dzV5ek1YZjhxMEtheDhsdFUwVFZUNzRNVXBFcXlxb3hhbWZWblhBUzRMc2ExZDBPUHdWd1B4WDl2Y1JEdHVFS2JNS3BaVTdIWGtGUWMzM3liVlZLeU9NUFhGQ2tIenBWRE96c1pCdmdMOXAzY3ZWSWRCVkE?oc=5",
+        "published": "Mon, 21 Sep 2026 02:47:00 GMT",
+        "publisher": "ロイター"
+      },
+      {
+        "title": "ソフトバンクG、OpenAI出資資金調達で110億ドル超の社債発行を開始 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBIVzBuTzVualNud3FpbVFmanotQWhDQ3FIczVaUW1fZFFEcExtMWtuNjd3QXc0aks1U3ZxWGhvLXZHT2IxRmJ6ekVXVkd2Ui1zQmFmMTE4YXJiV2NMQkEtY21fb3JBYklSVWg5dzRkWk5lcHZ2?oc=5",
+        "published": "Mon, 21 Sep 2026 02:55:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "ブリッジローンの期限前返済に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533573.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260904531576.pdf",
+        "date": "2026-09-04 10:30:00"
+      },
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得の完了時期の変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260828527943.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824524817.pdf",
+        "date": "2026-08-24 09:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510515.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行内容確定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503871.pdf",
+        "date": "2026-07-30 17:00:00"
+      },
+      {
+        "title": "第68回及び第69回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501484.pdf",
+        "date": "2026-07-29 10:30:00"
+      },
+      {
+        "title": "OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260701586249.pdf",
+        "date": "2026-07-01 16:00:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577089.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "2021年発行米ドル建普通社債の期限前償還完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566742.pdf",
+        "date": "2026-06-10 11:30:00"
+      }
+    ]
+  }
+}

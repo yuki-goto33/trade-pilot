@@ -1,0 +1,213 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-09-22T09:54:00+09:00",
+  "price_as_of": "2026-09-18",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 45,
+    "reasons": [
+      {
+        "reason": "直近 buy（2026-09-10）の継続監視中であり、同一銘柄への短期連続エントリーを避けるルールに基づきホールドを維持します。",
+        "evidence": "reference.recent_buy.date=2026-09-10"
+      },
+      {
+        "reason": "ファンダメンタルズは強固ですが、テクニカルも強気（bullish）に転じており、好材料が既に株価に織り込まれている可能性があります。",
+        "evidence": "technical_view.stance=bullish (strength=70) / fundamental_view.strength=72"
+      },
+      {
+        "reason": "3,000億円規模の自己株式取得が87%まで進捗しており、強力な下値支持要因として機能していますが、買い余力の減少も意識される局面です。",
+        "evidence": "fundamental_view.points[1]: 累計約2,612億円の取得を完了"
+      }
+    ],
+    "risks": [
+      "日本10年債利回りが2.993%と高水準であり、高配当銘柄としての相対的な魅力低下による価格調整リスクがあります。",
+      "2026-10-29〜30に予定されている次回日銀金融政策決定会合に伴う金利変動および為替リスク。",
+      "2026-11-12の決算発表に向けた、内部統制の不備改善状況や通期見通しに対する警戒感。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 45,\n  \"reasons\": [\n    {\n      \"reason\": \"直近 buy（2026-09-10）の継続監視中であり、同一銘柄への短期連続エントリーを避けるルールに基づきホールドを維持します。\",\n      \"evidence\": \"reference.recent_buy.date=2026-09-10\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズは強固ですが、テクニカルも強気（bullish）に転じており、好材料が既に株価に織り込まれている可能性があります。\",\n      \"evidence\": \"technical_view.stance=bullish (strength=70) / fundamental_view.strength=72\"\n    },\n    {\n      \"reason\": \"3,000億円規模の自己株式取得が87%まで進捗しており、強力な下値支持要因として機能していますが、買い余力の減少も意識される局面です。\",\n      \"evidence\": \"fundamental_view.points[1]: 累計約2,612億円の取得を完了\"\n    }\n  ],\n  \"risks\": [\n    \"日本10年債利回りが2.993%と高水準であり、高配当銘柄としての相対的な魅力低下による価格調整リスクがあります。\",\n    \"2026-10-29〜30に予定されている次回日銀金融政策決定会合に伴う金利変動および為替リスク。\",\n    \"2026-11-12の決算発表に向けた、内部統制の不備改善状況や通期見通しに対する警戒感。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "中期トレンドがTOPIXを大幅にアウトパフォームしており、移動平均線やMACDも上昇シグナルを維持しています。直近の調整でRSIが低下しており、押し目買いの好機を探る局面と判断します。",
+      "points": [
+        {
+          "point": "直近60営業日の騰落率が+14.2%と非常に強く、TOPIXに対しても大幅なプラス乖離を見せており、中長期的な上昇トレンドが強固です。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=14.2, price_technical.trend_60d.relative_to_topix_60d_pct=12.68"
+        },
+        {
+          "point": "5日線が25日線を上回るゴールデンクロスを形成しており、MACDもシグナルを上回ってプラス圏で推移するなど、トレンド追随の買いシグナルが出ています。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.macd=38.75, price_technical.macd_signal=26.42"
+        },
+        {
+          "point": "9月18日の下落（-1.58%）とRSIの36.0への低下により、直近の高値警戒感が和らぎ、テクニカル的な過熱感が解消されつつあります。",
+          "evidence": "price_technical.last_close=3060.0, price_technical.rsi14=36.0"
+        }
+      ],
+      "cautions": [
+        "9月18日の下落時に出来高が15,618,000と急増しており、短期的には直近高値（3111円）付近での戻り売り圧力が意識されます。",
+        "前夜の米通信サービスセクターETF（XLC）が-1.37%と下落しており、業種セクターを通じた連れ安リスクに注意が必要です。",
+        "市場全体のレジームがneutral（TOPIXが25日線を下回る）であり、地合いの悪化が個別銘柄の上値を抑える可能性があります。"
+      ],
+      "key_levels": {
+        "support": 2961.4,
+        "resistance": 3111.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 72,
+      "summary": "収益の拡大基調と第1四半期における前年同期比約19%のEPS成長が確認されており、ファンダメンタルズは堅調。3,000億円規模の自己株式取得も進捗率87%と順調であり、直近の開示でも継続的な買い付けが確認されていることが下値の支えとなる。",
+      "points": [
+        {
+          "point": "四半期利益の伸長による成長性。2027年3月期第1四半期の希薄化後EPSは51.33円に達し、前年同期の43.0円から着実に増加している。",
+          "evidence": "fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "強力な株主還元と需給下支え。2026年5月に決議された3,000億円を上限とする自己株式取得において、2026年8月末時点で累計約2,612億円の取得を完了しており、直近9月9日の開示でも着実な進捗が示された。",
+          "evidence": "fundamentals.recent_important_disclosures[0]"
+        },
+        {
+          "point": "非通信領域の事業拡大。ローソンとの店舗連携やiPhone 18 Proへの早期割引施策など、提携関係の活用と競争力維持に向けた施策がニュースから確認できる。",
+          "evidence": "news.headlines"
+        }
+      ],
+      "cautions": [
+        "日本10年債利回りが2.993%と高水準で推移しており、金利感応度の高い高配当銘柄として、相対的な利回り魅力の低下による価格調整リスクがある（macro.rates.jgb_10y_percent）",
+        "2026年6月に開示された「財務報告に係る内部統制の開示すべき重要な不備」によるガバナンス上の懸念が継続している（disclosures.items）",
+        "次回決算発表（2026-11-12）および日銀金融政策決定会合（2026-10-29〜30）に向けたイベントリスク（fundamentals.next_earnings_date, macro.boj.monetary_policy_meeting）"
+      ],
+      "key_levels": {
+        "support": 2900,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-10",
+    "days_ago": 12,
+    "confidence": 75,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "iPhone 18 Pro 256GBがMNPで実質22,900円に、KDDIが割引額を44,000円に拡大 - AppBank",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBoZ3RfX04xRDR2SWZuMC1FWEdBb1B0UHRVSmExS3NuMERYZ0haRGJNbllWZW1zcVFjaFFIVXZQZHBtNWt2SGpnOUVKTnNRa3FxZkJfSjJCaFhUN0VGSDRtVWZETHh6SzFLUmc?oc=5",
+        "published": "Mon, 21 Sep 2026 10:41:15 GMT",
+        "publisher": "AppBank"
+      },
+      {
+        "title": "「povo」でLUUPクーポン＋データ使い放題、420円～ 10月31日まで - ケータイ Watch",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE50dGJHSzZZTWtwenNEdTgweHZCanZWNDZxdmJ0R0Y5OGs0TE1NU0t2SUJIVW1LcThXN3gxak9KZGdjdjN5R0oxQ2NZcElJbzhFQkRXX3hqZDgtQm55c2RxMjRWOTVUMUk?oc=5",
+        "published": "Mon, 21 Sep 2026 15:00:00 GMT",
+        "publisher": "ケータイ Watch"
+      },
+      {
+        "title": "カカクコムTOB、BCPE Blitzが買付価格を3,597円へ引き上げ KDDI契約時は3,720円 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFAyRFN3dTQ1b0xtZ0pKRnlsczh3TFlQd0lWSXM4M2RhZjM0blRPVEJfVEJFZ2psX3plQ2pnVXJoaDh2YkxmTzdnc3lkR3VaRlA2dWtXUDRfYXV3Zi1tdHBDazhtUFJHaVhuZG5uTVBn?oc=5",
+        "published": "Mon, 21 Sep 2026 04:17:00 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "店を拠点にまちづくり ローソン×KDDI×UR都市機構 | 産業別動向記事 | プレミアム - nikkinonline.com",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1HMDZwNHdsU0FpaXlmcmg2emlydDgzaEtWcFhoMFoxX1Zqa2RKZG83NDBTX2hLVmloVHdYcFJYSE5BbjhiTlhYZ3lTSlRQNGhaSzFsOUZzbmF4c2dkcUl1d0R3MzU?oc=5",
+        "published": "Mon, 21 Sep 2026 00:40:21 GMT",
+        "publisher": "nikkinonline.com"
+      },
+      {
+        "title": "先行試写で100%が\"ゼロ距離\"を実感！VRゴーグルで楽しむ次世代シアター「Immersive Zero」いよいよ劇場公開スタート！ - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9IbFc2T2NTbEV6MW83cktCazNZWHVLSWpGWFYzdXJETVMtb2o0RDVLRkFlZE9mZmZVaGRjbjF0S1hnUkgtVVVfRGc3Vnh2cm9sUjhUYm5YRUJIZFNDZ2N3N3Bqd2FpUVhrS0E?oc=5",
+        "published": "Mon, 21 Sep 2026 04:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "＜画像1 / 5＞au体験イベントで小島よしおが自虐ネタ！会場はシーン… - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9qWXFocUJPNXh1c2RIT0F2ZDlVRzVNTGdtYjZJLWFCcG1iRWJvVjZGZlR0Q0NKMWxrT3dkcHRqd2xvdzFNTzVKNGNwVG16VHNlaU9GYU45SmtPOEhLcXJqXzBwTFFBbExF?oc=5",
+        "published": "Mon, 21 Sep 2026 10:56:14 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "「povo」でLUUPクーポン＋データ使い放題、420円〜　10月31日まで - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQd2FqUzF1WWxNeTdDVTdpY01RdW9hTDVLN05tNUZLRldOaWY0bndTT1k2cjhFZUVaWUNKSTItVWdwZ0c3WVJoRi1KNUtSa01vWXp0N1VFZ1hDeEZGRTdlcFlZakNGY0xMOUlpMmhZZ1JWUzdiQkRZbGx5aWhZT0tCWEpFQkV1QdIBeEFVX3lxTE50S01JbGRqVkpQUWplOTJrbWt4dV9FMHVwcGVoM05OcW9fYjhqSXM2SDJId1duc2JpOUgwRWJFblNnSlBSX0l5MzUwYVFZS0FqR0QyTjZFWEY1OVFGb2dzanV6Mm5mRFlWNERmcEdrZUE1VnByaUtkcw?oc=5",
+        "published": "Mon, 21 Sep 2026 15:50:28 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "映画館でBALLISTIK BOYZと“ゼロ距離”に（中澤真人） - エキスパート - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNN0oyUmZxWklJaldheExBQ19ELW9zUnlKcVpZMkM2bDZuSDR1aG9OZkVwRHQ2VEdEaUZvLTh1SEZwSFIzVElwUkN3YlZYaHpQdnhhdGZWelNBOEpQM0RZZExadnBBckhaYkFjNV95NzhlUjlsbVRrTzl1RXlma09IckRYRGNhb1Na?oc=5",
+        "published": "Mon, 21 Sep 2026 05:01:36 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "HashPort、「AI・オンチェーン金融サミット」当日の登壇者を先行発表 - Excite エキサイト",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE15M1NoWHdHUHVwcHNOQnh3WVd0eTR0V3p1TDd2ZGY0aE5DR182NThDZWZoSHRERGliNVV3QVJyYVJvN1BhSFlfRVJzX0ZHdGNycDBfM0VhZHR5enZNZ1dWajh1SkJBRmYyN0VRTWdpOFFwRkpn?oc=5",
+        "published": "Mon, 21 Sep 2026 20:40:00 GMT",
+        "publisher": "Excite エキサイト"
+      },
+      {
+        "title": "「「ドコモの銀行」本格始動」と題して、株式会社マリブジャパン 代表取締役 事業構想大学院大学 特任教授 高橋 克英氏によるセミナーを2026年9月10日(木)に開催!! - 朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1UUVBUWlJkaVFkRW5KTG04OEFNSHU5NXYtTFpkZGREN1pZNkJUN0NpOVJ5cVZXOFlDQWgzMm1sdDRYbWV0WVRwLUZHUnpBa2NPOHVwRTByaFlIQWs?oc=5",
+        "published": "Mon, 21 Sep 2026 07:38:59 GMT",
+        "publisher": "朝日新聞"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533350.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      }
+    ]
+  }
+}
