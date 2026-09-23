@@ -1,0 +1,217 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-09-23T09:16:57+09:00",
+  "price_as_of": "2026-09-18",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "直近（2026-09-22）に buy シグナルを発行しており、現在はその継続監視期間（14日以内）に該当するため、新規のエントリーは控え現状維持とする。",
+        "evidence": "reference.recent_buy.date='2026-09-22'"
+      },
+      {
+        "reason": "ファンダメンタルズ面ではAIロボティクスへの投資や1兆円規模の自社株買いなど強力な材料が揃っているが、テクニカル面で5日線が25日線を下回るデッドクロスが発生しており、押し目を確認する段階にある。",
+        "evidence": "fundamental_view.strength=75, technical_view.points[0]: price_technical.sma5_vs_sma25='dead'"
+      },
+      {
+        "reason": "PBR 0.96倍という割安感と高いROEを背景に、中長期的には強気の見通しを維持するが、短期的なMACDの軟調さが解消されるのを待機する必要がある。",
+        "evidence": "fundamental_view.points[3]: price_to_book=0.96, technical_view.points[0]: macd=-5.04"
+      }
+    ],
+    "risks": [
+      "25日移動平均線（3062.22円）が強力な抵抗帯となり、戻り売りに押されるリスク（technical_view.cautions[0]）",
+      "2026年11月5日の決算発表において、通期減益計画の進捗が期待を下回るリスク（fundamental_view.cautions[0]）",
+      "2026年10月29日〜30日の日銀金融政策決定会合に伴う為替・金利の乱高下リスク"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"直近（2026-09-22）に buy シグナルを発行しており、現在はその継続監視期間（14日以内）に該当するため、新規のエントリーは控え現状維持とする。\",\n      \"evidence\": \"reference.recent_buy.date='2026-09-22'\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズ面ではAIロボティクスへの投資や1兆円規模の自社株買いなど強力な材料が揃っているが、テクニカル面で5日線が25日線を下回るデッドクロスが発生しており、押し目を確認する段階にある。\",\n      \"evidence\": \"fundamental_view.strength=75, technical_view.points[0]: price_technical.sma5_vs_sma25='dead'\"\n    },\n    {\n      \"reason\": \"PBR 0.96倍という割安感と高いROEを背景に、中長期的には強気の見通しを維持するが、短期的なMACDの軟調さが解消されるのを待機する必要がある。\",\n      \"evidence\": \"fundamental_view.points[3]: price_to_book=0.96, technical_view.points[0]: macd=-5.04\"\n    }\n  ],\n  \"risks\": [\n    \"25日移動平均線（3062.22円）が強力な抵抗帯となり、戻り売りに押されるリスク（technical_view.cautions[0]）\",\n    \"2026年11月5日の決算発表において、通期減益計画の進捗が期待を下回るリスク（fundamental_view.cautions[0]）\",\n    \"2026年10月29日〜30日の日銀金融政策決定会合に伴う為替・金利の乱高下リスク\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "中期トレンドは対TOPIX含めプラスを維持しているものの、日足では5日線が25日線を下回りMACDも軟調で、短期的な方向感は拮抗しています。",
+      "points": [
+        {
+          "point": "短期トレンドは5日移動平均線が25日移動平均線を下回り（デッドクロス）、MACDもシグナルを下回るマイナス圏に位置しており、下押し圧力が残っています。",
+          "evidence": "price_technical.sma5_vs_sma25='dead(5日線が25日線の下)', price_technical.macd=-5.04, price_technical.macd_signal=3.63"
+        },
+        {
+          "point": "一方で60営業日騰落率は+12.62%、対TOPIX相対騰落率も+11.1%と中期的な上昇トレンドは崩れていません。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=12.62, price_technical.trend_60d.relative_to_topix_60d_pct=11.1"
+        },
+        {
+          "point": "RSI14は48.0と中立水準にあり、直近5営業日も3016円から3034円の狭いレンジで保ち合い状態が続いています。",
+          "evidence": "price_technical.rsi14=48.0, price_technical.recent_5_days"
+        }
+      ],
+      "cautions": [
+        "25日移動平均線（3062.22円）を下回った状態が続いており、反発局面で上値抵抗として機能する可能性があります。",
+        "9月18日は出来高が46,568,200株と直近で突出して急増したものの陰線引けとなっており、直近安値3016円を下抜けた場合の下落加速リスクに注意が必要です。",
+        "前夜NYのADR（+0.51%）や米一般消費財セクターETF（+1.08%）の上昇は寄り付き価格に織り込まれる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 2927.0,
+        "resistance": 3062.22
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "1兆円規模の自己株式取得という強力な還元策に加え、AI・ロボティクスへの大規模な設備投資（年1兆円）という新たな成長カタリストが示されました。低PBR環境と好調な製造業景況感を背景に、反転上昇が期待できる局面と判断します。",
+      "points": [
+        {
+          "point": "フィジカルAIロボット導入に向けた新組織「トヨタ ロボティクス」の立ち上げと、年1兆円規模の投資による工場更新計画が発表され、次世代の競争力強化に向けた具体的な成長戦略が示された。",
+          "evidence": "news.headlines: トヨタ、フィジカルAIロボット導入に向け新組織「トヨタ ロボティクス」立ち上げ / 毎年1兆円を投資し工場とロボットを更新 (2026-09-22)"
+        },
+        {
+          "point": "総額1兆円を上限とする大規模な自己株式取得を実施中であり、2026年8月時点で約865億円（2,821万株）の買い付けを完了。強力な需給サポートと資本効率改善への姿勢が明確である。",
+          "evidence": "fundamentals.recent_important_disclosures[0]: 自己株式の取得状況に関するお知らせ (2026-09-03)"
+        },
+        {
+          "point": "マクロ環境は製造業PMIが54.9と拡大圏にあり、日銀短観の大企業製造業DIも前回比+5ポイントの22と改善。輸出企業に有利な為替水準（157円台）も継続しており、事業環境は良好である。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9, macro.boj.tankan.di.large_manufacturing.current_di=22.0, macro.indices[2].close=157.53"
+        },
+        {
+          "point": "PBR 0.96倍と解散価値を割り込む水準にある一方、ROEは12.4%と二桁を維持しており、現在のバリュエーションには強い割安感がある。",
+          "evidence": "fundamentals.valuation.price_to_book=0.96, fundamentals.valuation.return_on_equity=0.124"
+        }
+      ],
+      "cautions": [
+        "2026年3月期の通期業績予想は、前期の営業利益・純利益から減益となる計画であり、成長のモメンタム鈍化が意識されるリスクがある (fundamentals.earnings_trend.annual)",
+        "次回決算発表（2026-11-05）での進捗確認が重要。また、日銀の金融政策決定会合（2026-10-29〜30）を控え、金利・為替の変動リスクに留意が必要",
+        "中国勢との対抗や新型エンジン投入など、競争激化に伴う研究開発費・設備投資の増大が利益を圧迫する可能性 (news.headlines[7])"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-22",
+    "days_ago": 1,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "環境問題と米の生産学ぶ 沖縄トヨタ・沖食 体感型食育イベント - 沖縄タイムス社",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFAxVkJxbkZfOU1lNkE3ZmNWeWdYMmtEVV80WEF4LWxCQmN3VzRQbUU5SDRfX2xHQjdFOHdBdFk5RkUxZ2VLbzFNeDdsN3hwVkxmR2JsRGFLNDN5cVpVMGc?oc=5",
+        "published": "Tue, 22 Sep 2026 18:57:00 GMT",
+        "publisher": "沖縄タイムス社"
+      },
+      {
+        "title": "トヨタ、毎年1兆円を投資し工場とロボットを更新 40万台をフィジカルAIであるLarge Behavior Models搭載ロボなどに - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBXa1V0SkpINlZ0MVFyYm5vNXFqYlVSdnNpRkxYb3kxLWNjYU5ELWY1RExwZzB1N3ducXdNS2tNblc5WVJmM2l6NlRsZVBxM21Zd0F6OE5wSTFTd2F2cU5lZ3lncFNIclBkQ2pVLXR5OGJUTVJQUmZ0UHBWWXdEekU?oc=5",
+        "published": "Tue, 22 Sep 2026 09:15:00 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "部下「A案とB案、どちらがいいですか？」→豊田章男の返事が凄すぎてビビった〈2026年度上期・会員ベスト6〉 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9UTFR2eHcxdExKbFNsbFIwaEt4Wkw4clBWRmlNcTJyaHBjeEluVUxxQXdYZ0I4MDhwOGlGWjExVEpSY2JNM3R1Wng3cS3SAU9BVV95cUxNUmVoOXI0azBrNnlNWWthZVJZNkJNcmpRRl9sc3IzU3Nrc0FCUUZCa2VOVEZCODRFUnF2SWVfbnU1OXk0X1pKRXYwbUIwZWpZ?oc=5",
+        "published": "Tue, 22 Sep 2026 21:00:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "トヨタ、フィジカルAIロボット導入に向け新組織「トヨタ ロボティクス」立ち上げ 志賀武文 モノづくり技術本部長がリーダーに - car.watch.impress.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5NUHhVWE9sSkdwVjVoNm9fN050ZWRlQXBsaXEtVnA5Q25wQldsTFRSVlpOSmFmUUExRkpQSkUyc1JNMXBPZy1ncUVPT0tnYzRvZzNqNTByNUNCMUZpaUkyX3hoenQ?oc=5",
+        "published": "Tue, 22 Sep 2026 08:06:42 GMT",
+        "publisher": "car.watch.impress.co.jp"
+      },
+      {
+        "title": "トヨタ、「匠」の技覚えたロボット導入 28年以降、工場更新で毎年1兆円投資 ：ニュース - 中日BIZナビ",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBKNnB5NUc2Q3A1VVJSeFdmamlNSGZPaTEwZE9BWlUwVlNVdUUtNHNRVW16d0NVeUFWNEN5QTljWGpuMDVoQUhSUzFnMXVWNzBucC1YcWNLNFg3dmtQWlEw?oc=5",
+        "published": "Tue, 22 Sep 2026 16:03:06 GMT",
+        "publisher": "中日BIZナビ"
+      },
+      {
+        "title": "エンジン車の逆襲！ 米国HV販売37%増、「EVだけでいい」は本当に信じていいのか――世界で始まった「まさか」の選択、その先に何があるのか - UQライフ",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPbGRMTXEyYVoxcVd2bmtsaDZfQUp2MUhWU3FhR1QwbUtQT0dCYjhQdktTVEFMNXhJRG1aMERpd0tSMGN6QjllQ0YtcHV3MVFzZjd5Q1EtSEdZZm1ESDktMmlfSmQ4dnh3QVBGZHhhY0NUbXdOZjRscUd0NTZPVWQwWQ?oc=5",
+        "published": "Tue, 22 Sep 2026 22:51:38 GMT",
+        "publisher": "UQライフ"
+      },
+      {
+        "title": "「綺麗になった」紀平梨花、ピタッとミニ丈「美しすぎます」引退した２人の姿も「最高」イメージ激変で話題 - article.auone.jp",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5vSGpRMmpySTdsdm9LUEU2UkpTdHh0SlBScXJOQXNkWUdFTEpIb09DcWNpcTJPcDZoV01VcGVMdXpMbk1zTVJGNEw2a1d2aG1EMDFFVVZPdEZsbklFN2FxVlBXVGhUUlhkVVc1UGpB?oc=5",
+        "published": "Tue, 22 Sep 2026 23:46:01 GMT",
+        "publisher": "article.auone.jp"
+      },
+      {
+        "title": "「全方位」支える新型エンジン 次世代カローラ、台頭中国勢と対決も - asahi.com",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE56bllrR2lURDN0NVc4WTBwSGFiNzBuLVUxeURvbXdIWmZEUGZ5bV9ONmFvbEFQVmZqbEdVZHo5RTR2UnJld3lMeFhDZnk0NDlJeXEyc3NNbjZlcXJsamNxaktOUFFHZHM?oc=5",
+        "published": "Tue, 22 Sep 2026 00:00:00 GMT",
+        "publisher": "asahi.com"
+      },
+      {
+        "title": "なぜ日本人は「新車」を買い替えなくなったのか？ 平均購入価格331万円！ トヨタが「いま乗っているクルマ」に仕掛けることとは？――後付けと更新で広がる新たな市場 - merkmal-biz.jp",
+        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5hekdYZFNiMUoxRlhwVnh5SzlUZC10SzZucEVMQ0IweXhiUm1MYlAteUVrMW81ODlJM0trUzRLVkh6YUxNa3hTZUdB?oc=5",
+        "published": "Tue, 22 Sep 2026 00:04:11 GMT",
+        "publisher": "merkmal-biz.jp"
+      },
+      {
+        "title": "【アジア大会】野球の試合日程・組み合わせ・出場国｜侍ジャパンの対戦相手は？ - Goal.com",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNaGpTYTNzTXB1WHphQTcxT3VUMUIxckRrckItNWszeElVUEVDbmxGUnhVYVJMR3QzcUVhTVFuMDVqbHhIQ29TS1hxRXNLSzlmcEE5TU5QVjdzX21jblVRMEZIZGl3Vko4ZlBuSF81T2FoZ2JHMk5FcXJYdVhheWJQakVybm1UN3VaaVFCR1k3dHhLYzI4TGJjeFRYMkhFNmY2ZWRWZWkxVzNidDFtQW5MNnpKbHlWZjE1WWxPZ0RXRnM?oc=5",
+        "published": "Tue, 22 Sep 2026 11:44:33 GMT",
+        "publisher": "Goal.com"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903531084.pdf",
+        "date": "2026-09-03 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度の継続及び従業員に対する新たな株式交付制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507853.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507884.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503849.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "2027年3月期第１四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507860.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507846.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      }
+    ]
+  }
+}

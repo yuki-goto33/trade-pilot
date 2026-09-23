@@ -1,0 +1,217 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-09-23T09:19:30+09:00",
+  "price_as_of": "2026-09-18",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近（2026-09-10）に buy シグナルを発出しており、現在はその後の推移を継続監視すべきフェーズである。",
+        "evidence": "reference.recent_buy (date: 2026-09-10, 13 days ago)"
+      },
+      {
+        "reason": "ファンダメンタルズ面でAI戦略の進展は評価できるが、主要子会社のIPO延期や国内金利上昇による調達コスト増といった懸念材料が強気判断を抑制している。",
+        "evidence": "fundamental_view.strength=60, fundamental_view.points[1], fundamental_view.points[2]"
+      },
+      {
+        "reason": "テクニカル面では25日線の回復やMACDの好転といった短期的な改善が見られるものの、中期トレンドは依然として市場劣位の下落基調にあり、強弱感が拮抗している。",
+        "evidence": "technical_view.stance=neutral (strength=60), technical_view.points[0], technical_view.points[1]"
+      }
+    ],
+    "risks": [
+      "2026-10-29〜10-30に予定されている日銀金融政策決定会合に伴う国内長期金利のさらなる上昇リスク（reference.next_boj_meeting）",
+      "2026-11-11の次回決算発表における投資利益の大きな変動と市場の反応（reference.next_earnings_date）",
+      "高レバレッジ経営に対する市場の視線が、金利上昇局面において一段と厳しくなる可能性"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近（2026-09-10）に buy シグナルを発出しており、現在はその後の推移を継続監視すべきフェーズである。\",\n   \"evidence\": \"reference.recent_buy (date: 2026-09-10, 13 days ago)\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ面でAI戦略の進展は評価できるが、主要子会社のIPO延期や国内金利上昇による調達コスト増といった懸念材料が強気判断を抑制している。\",\n   \"evidence\": \"fundamental_view.strength=60, fundamental_view.points[1], fundamental_view.points[2]\"\n  },\n  {\n   \"reason\": \"テクニカル面では25日線の回復やMACDの好転といった短期的な改善が見られるものの、中期トレンドは依然として市場劣位の下落基調にあり、強弱感が拮抗している。\",\n   \"evidence\": \"technical_view.stance=neutral (strength=60), technical_view.points[0], technical_view.points[1]\"\n  }\n ],\n \"risks\": [\n  \"2026-10-29〜10-30に予定されている日銀金融政策決定会合に伴う国内長期金利のさらなる上昇リスク（reference.next_boj_meeting）\",\n  \"2026-11-11の次回決算発表における投資利益の大きな変動と市場の反応（reference.next_earnings_date）\",\n  \"高レバレッジ経営に対する市場の視線が、金利上昇局面において一段と厳しくなる可能性\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "中期トレンドは依然として市場劣位の下落基調にあるものの、足元では25日線の明確な回復とMACDの好転といった反転シグナルが複数重なっており、強弱感が拮抗している状態です。",
+      "points": [
+        {
+          "point": "中期的なパフォーマンス（60営業日騰落率-4.27%、対TOPIX相対騰落率-5.8%）が共にマイナスであり、テクニカル上は依然として中期下落トレンドの圏内に位置しています。",
+          "evidence": "price_technical.trend_60d"
+        },
+        {
+          "point": "短期的な反転の証拠として、終値（6315.0）が25日線（5717.76）を大幅に上回って推移しており、MACD（238.53）がシグナルを上回るゴールデンクロスも継続しています。",
+          "evidence": "price_technical.last_close, price_technical.sma25, price_technical.macd"
+        },
+        {
+          "point": "前夜のNY市場でADRが2.08%上昇し、対応セクターのXLKも2.77%と大幅高となっており、目先の需給改善が期待される地合いです。",
+          "evidence": "us_overnight.adr, us_overnight.sector_proxy"
+        }
+      ],
+      "cautions": [
+        "ADRやセクターETFの大幅高により、好材料が寄り付き価格に過度に織り込まれ、寄り付き後が伸び悩むリスクがあります。",
+        "中期トレンドが依然として下向きであるため、直近高値（6959.0）付近で戻り売り圧力が強まる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 5717.76,
+        "resistance": 6959.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "OpenAIへの巨額投資やエヌビディアとの連携によるAI戦略を加速させている一方、主要子会社の米IPO延期や金利上昇局面での多額の債務調達が財務リスクと評価の不透明感を生んでいます。",
+      "points": [
+        {
+          "point": "全方位AI戦略の推進と大手AI企業への巨額投資。OpenAIへの約1.7兆円の追加出資や、傘下SBエナジーへのエヌビディアによる15億ドル出資など、AI領域への集中投資を継続しています。",
+          "evidence": "news.headlines[2], news.headlines[7], disclosures.items[4]"
+        },
+        {
+          "point": "主要子会社のIPO延期による資産現金化の停滞。評価額500億ドルを見込んでいたSBエナジーの米上場が、投資家の価格難色により延期されたことは、保有資産の流動化・再評価の重石となります。",
+          "evidence": "news.headlines[4], news.headlines[5], news.headlines[8]"
+        },
+        {
+          "point": "金利上昇局面における積極的な債務調達。1兆円規模の個人向け債券や無担保普通社債の発行により投資資金を確保していますが、国内長期金利が3%に迫る中で調達コスト増が懸念されます。",
+          "evidence": "news.headlines[0], news.headlines[3], disclosures.items[1], macro.rates.jgb_10y_percent.value=2.993"
+        },
+        {
+          "point": "円安環境による海外資産評価の押し上げ。為替が157円台の円安水準で推移しており、ドル建て資産を多く保有する同社の連結決算上、純資産や利益の拡大に寄与する環境です。",
+          "evidence": "macro.indices[2].close=157.53, fundamentals.valuation.return_on_equity=0.32"
+        }
+      ],
+      "cautions": [
+        "日銀の金融政策変更に伴う国内金利の更なる上昇リスク（10/29-30次回会合）",
+        "SBエナジー等、投資先企業の公正価値評価に対する市場のシビアな視線",
+        "次回決算発表（2026-11-11）における投資利益の振れ幅",
+        "世界的なリスクオフ局面における高レバレッジ経営への警戒感"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-10",
+    "days_ago": 13,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "26年度上期チャット放電塔ランキング 首位は「ソフトバンクグループ、個人向け債で1兆円」 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFAtNS1wTjlFUFZQQi0zLTFWR1BjTVpSamRlZFRnOEVFZ0s3TlBUanE2R0pIQnZSRUc5d2NEUkh2ZE9ReUJValU0aFVFeldkbmFiRWtpOUt1MXE4cm9YblFQdjVHZjI4aXZTU1AwWjZ3WlN5MExscmdpZXMtclBNUQ?oc=5",
+        "published": "Tue, 22 Sep 2026 20:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "ソフトバンクグループ(株)【SFTBY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9PS0JwdDRlRjRxb1VMWkhNNTEwcUtyQkN0SVdKbk1ZVEN2VkZYZFhkVktRdVlLNUhBdm45Q1ZxY0xZSUtsTDktcWhXNjFPSU5s?oc=5",
+        "published": "Tue, 22 Sep 2026 22:49:21 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ソフトバンクグループがまた借金して、オープンAIに約1兆7050億円を注ぐ - Business Insider Japan",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQNHBEcUlPa2hhOU1JS0oxV3Z0T1NiOHZLSUNQNWkxNkhhVnVjWFVxbUNnd190SHU4LThqV1VNeFp5MzFfOVJIR010S2ViNG0wb3MzZUtsV01ueHZVdHRxNzJfRGE4SVV0dFhOaGFVYXhzNk9sczVWc1R6VlRlLTE0S3d5dko4SUFiZGthSXpiQm1palNvVFF4Rw?oc=5",
+        "published": "Tue, 22 Sep 2026 08:00:00 GMT",
+        "publisher": "Business Insider Japan"
+      },
+      {
+        "title": "ソフトバンクGのジャンク債、初期需要200億ドル超集める－関係者 - Bloomberg.com",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE4wNGJ1YzJ0SUxOQ3JtUG5YRFREYVRKMjlhNkN3T1VpZkd0clRFMkF3SUt2bTF1aXI2SVhkMXJiRktMVWhfQXlVaUJya1ZscWpRWmF2ajZFVWF5MUFNNlRlTm9SNUtYakVkeDRiZThucWlnakEwTVlR?oc=5",
+        "published": "Tue, 22 Sep 2026 08:55:00 GMT",
+        "publisher": "Bloomberg.com"
+      },
+      {
+        "title": "ソフトバンクグループが保有する評価額500億ドルのデータセンター事業会社は、IPOプロセスを減速させています。 - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9yMV9TVXdxUTlOb1hQSHVTT3lSd3Z0NjZJVFc2M3V3UUFyVzNUOGp4c0dsUGRVWnhGREZzU09nOUtoZUZOekFFRkJzZkJBMFFjR2taNDJkUQ?oc=5",
+        "published": "Tue, 22 Sep 2026 08:37:06 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "SBエナジー、米IPO延期 500億ドル評価に投資家難色 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBtdTdnSGlPWllsNUo4SVh0WHpSdEZCZzdFWnZ5REZwQ2Z0ZVN5ZHY5V254dnhvcFR4N0xRSkZOZGN3Q3l2SWtrTmc3cmdwN29hdnFaSE5xdHNyZlliS1VmVlRpRDFwci0yTklORl9mMUd0R21K?oc=5",
+        "published": "Tue, 22 Sep 2026 07:25:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "AIロボットから「NVIDIA対抗」半導体まで…ソフトバンク“全方位AI戦略”のヤバい全貌（ビジネス＋IT） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9wRXNDUnJ0SV9OZmVtME9kRHZ2eWdFZnUwZkxZM0RqLVFoWVVha0tXaDlwdWY2aU0xS0pLY1NRRDBxU3dVSnVlX1h5elowNFJtYl9Pd0JIQXZoUUUyRXVnQmVFSFh6TVBQM2NNYjZVemRrdER5c2dhVENfMVZOcHc?oc=5",
+        "published": "Tue, 22 Sep 2026 21:20:06 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "エヌビディア、ソフトバンクG傘下のSBエナジーに15億ドル追加出資 - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBiM0RLcjZia1lZVFc4SG5ORHNLRjBpVUpKOF9rMmhfaThVODZ0QUdLWHZjWF9KWmZjdHBhWkdQaG1wT1RQWnQyb3NxSnJfaDd2SGt4N0N1ZEE5TFFMQzFwaUdQTDktNXNoLW9hOTQ1bXYyODlt?oc=5",
+        "published": "Tue, 22 Sep 2026 02:04:00 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "ＳＢエナジー、米上場延期か＝当初は今月予定―報道 - news.infoseek.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5UOGhHUE1JbEhtV2p5VXRkUEMtZFJ5a0NsR1ZqOHBjVXFOTmRDR1luNXB3NDl6QU9lS0VwOWlXeEpzMER5TjF0ZFZEUEFaT25jck9RaUlnYmd2TEF6VjBnRUNsbGY0RUZmampn0gFrQVVfeXFMTlQ4aEdQTUlsSG1XanlVdGRQQy1kUnlrQ2xHVmo4cGNVcU5OZENHWW41cHc0OXpBT2VLRXA5aVd4SnMwRHlOMXRkVkRQQVpPbmNyT1FpSWdiZ3ZMQXpWMGdFQ2xsZjRFRmZqamc?oc=5",
+        "published": "Tue, 22 Sep 2026 06:26:25 GMT",
+        "publisher": "news.infoseek.co.jp"
+      },
+      {
+        "title": "東証反落、１カ月ぶり安値 終値６万４０１１円、原油高で - sanyonews.jp",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0zSkNlVkRrcHFqSnE4V0dSaHZWSWJrOXJOYkhfdjBvdzhsb2Rpc19LN09DVkYzTHVGWEQ2M2V1aFUtMmtVUE94SERaR0NKU2FUUWc?oc=5",
+        "published": "Tue, 22 Sep 2026 02:35:22 GMT",
+        "publisher": "sanyonews.jp"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "ブリッジローンの期限前返済に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533573.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260904531576.pdf",
+        "date": "2026-09-04 10:30:00"
+      },
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得の完了時期の変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260828527943.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824524817.pdf",
+        "date": "2026-08-24 09:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510515.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行内容確定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503871.pdf",
+        "date": "2026-07-30 17:00:00"
+      },
+      {
+        "title": "第68回及び第69回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501484.pdf",
+        "date": "2026-07-29 10:30:00"
+      },
+      {
+        "title": "OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260701586249.pdf",
+        "date": "2026-07-01 16:00:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577089.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "2021年発行米ドル建普通社債の期限前償還完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566742.pdf",
+        "date": "2026-06-10 11:30:00"
+      }
+    ]
+  }
+}

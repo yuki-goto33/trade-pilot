@@ -1,0 +1,220 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-09-23T09:23:55+09:00",
+  "price_as_of": "2026-09-18",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-09-14）に同一銘柄で buy シグナルを出しており、現在はその継続監視期間中であるため、新規の買い増しは行わない。",
+        "evidence": "reference.recent_buy.date=2026-09-14"
+      },
+      {
+        "reason": "テクニカル指標が強気（bullish）に転じており、好材料が既に株価に織り込まれ始めている。ルールに基づき、テクニカルが好転した後の追随買いは避ける。",
+        "evidence": "technical_view.stance=bullish (strength=75)"
+      },
+      {
+        "reason": "ファンダメンタルズは営業利益23%増の計画や大規模な自己株買いなど非常に強力だが、現在のバリュエーション（予想PER 31倍）には過熱感がある。",
+        "evidence": "fundamental_view.strength=75, fundamentals.valuation.forward_pe=31.011"
+      }
+    ],
+    "risks": [
+      "2026-10-29の第2四半期決算発表に伴う業績進捗への不透明感とボラティリティ増大。",
+      "次回日銀会合（10-29）と決算発表日が重なっており、マクロ要因と個別要因が複合して株価を揺さぶるリスク。",
+      "市場全体のレジームがneutralであり、地合いが悪化した場合に高PER銘柄として利益確定売りの対象になりやすい。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内（2026-09-14）に同一銘柄で buy シグナルを出しており、現在はその継続監視期間中であるため、新規の買い増しは行わない。\",\n   \"evidence\": \"reference.recent_buy.date=2026-09-14\"\n  },\n  {\n   \"reason\": \"テクニカル指標が強気（bullish）に転じており、好材料が既に株価に織り込まれ始めている。ルールに基づき、テクニカルが好転した後の追随買いは避ける。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=75)\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは営業利益23%増の計画や大規模な自己株買いなど非常に強力だが、現在のバリュエーション（予想PER 31倍）には過熱感がある。\",\n   \"evidence\": \"fundamental_view.strength=75, fundamentals.valuation.forward_pe=31.011\"\n  }\n ],\n \"risks\": [\n  \"2026-10-29の第2四半期決算発表に伴う業績進捗への不透明感とボラティリティ増大。\",\n  \"次回日銀会合（10-29）と決算発表日が重なっており、マクロ要因と個別要因が複合して株価を揺さぶるリスク。\",\n  \"市場全体のレジームがneutralであり、地合いが悪化した場合に高PER銘柄として利益確定売りの対象になりやすい。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "中期トレンドが市場を大幅にアウトパフォームする中、直近では出来高を伴う3連騰で25日移動平均線を奪回し、テクニカル指標の好転が鮮明となっている。",
+      "points": [
+        {
+          "point": "中期トレンドが非常に強固であり、対TOPIXでも大幅なプラスを維持している。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=17.76, price_technical.trend_60d.relative_to_topix_60d_pct=16.23"
+        },
+        {
+          "point": "5日線が25日線を上抜けるゴールデンクロスが発生し、株価もSMA25（5347円）の上方で引けている。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.last_close=5524.0, price_technical.sma25=5347.36"
+        },
+        {
+          "point": "直近5営業日で上昇が続いており、特に直近の終値では出来高が1594万株まで急増し、強い買い需要が示されている。",
+          "evidence": "price_technical.recent_5_days (2026-09-18, volume=15940600)"
+        },
+        {
+          "point": "前夜のADRが1%超の上昇を見せており、寄り付きからの堅調な推移が期待できる。",
+          "evidence": "us_overnight.adr.change_1d_pct=1.14"
+        }
+      ],
+      "cautions": [
+        "市場全体のレジームがneutralであり、TOPIXが25日線を下回っているため、地合い悪化に伴う連れ安のリスクがある。",
+        "ADRの上昇は寄り付き価格に織り込まれる可能性が高く、寄り付き後の利益確定売りに注意が必要。"
+      ],
+      "key_levels": {
+        "support": 5347.36,
+        "resistance": 5830.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "堅調な増収増益トレンドに加え、5,000億円規模の自己株買いという強力な株主還元が継続しており、AIを活用した鉄道運行支援などの新材料も株価のカタリストとして機能する局面です。",
+      "points": [
+        {
+          "point": "収益性の向上が顕著な業績トレンド。2026年3月期は前期比で営業利益が約23.4%増となる大幅な増益を見込んでおり、1株利益（EPS）も着実に成長している。",
+          "evidence": "fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=11993, fundamentals.earnings_trend.annual[1].operating_income_oku_jpy=9716"
+        },
+        {
+          "point": "強力な株主還元策による下値支援。上限5,000億円の自己株買い枠に対し、2026年8月末時点で既に2,000億円超（累計4,000万株超）を市場から買い付けており、需給面の好影響が期待される。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "AI関連の新事業展開。2026年9月22日に、AIを活用した鉄道運行支援システムを2027年の受注車両から搭載するとの報道があり、次世代インフラへのAI実装が具体的な収益源となる期待感がある。",
+          "evidence": "news.headlines[0].title"
+        },
+        {
+          "point": "良好な製造業のマクロ環境。日本の製造業PMIが54.9と拡大圏を維持しており、日銀短観でも大企業製造業の業況判断DIが前回比で改善（+5.0）するなど、事業環境は良好である。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9, macro.boj.tankan.di.large_manufacturing.change_from_prev=5.0"
+        }
+      ],
+      "cautions": [
+        "2026年10月29日の第2四半期決算発表が近く、内容次第でボラティリティが高まる可能性がある（fundamentals.next_earnings_date）。",
+        "日銀の金融政策決定会合が10月29日から予定されており、金利上昇や為替変動が事業コストに影響を与えるリスクがある（macro.boj.monetary_policy_meeting.next_meeting）。",
+        "予想PERが31倍台と、バリュエーション面での割安感は乏しく、期待値が先行している側面がある（fundamentals.valuation.forward_pe=31.011）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-14",
+    "days_ago": 9,
+    "confidence": 75,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "日立製作所「AI活用」鉄道運行支援 異常予測し遅れや運休抑制、27年受注車両から搭載 - 産経ニュース",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE91cGNUSU0xWFEyMHZCVzYtM19QeGE5VEw5QWRGdzMydzhwdFZINlpaNk5NOEtWMjdWa0l1LU80QXlCajR4eFdCc2RKSG5icmU4U25IdzVPWFdYZS1Lak5XSTVrblhIRVdCT0VQSGRmTlBWbFhXWXc?oc=5",
+        "published": "Tue, 22 Sep 2026 06:24:10 GMT",
+        "publisher": "産経ニュース"
+      },
+      {
+        "title": "ドイツ・ベルリンで開幕した「イノトランス2026」で日立製作所が展示した高速鉄道車両「ETR1000」＝22日（共同） - 日立、AIで鉄道運行支援 異常予測し遅れや運休抑制 - 写真・画像(1/1) - 西日本新聞me",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE50WS10aFZneE1zLWlpd2Y2WG5mNzMzR3hYaGFEbEFiam5PZFR1X3l1TW5wbWYzQzRwdmw0cXkzSGpNcTlSQ3hxeHphUE84eUpCR09YWmVjYw?oc=5",
+        "published": "Tue, 22 Sep 2026 09:26:26 GMT",
+        "publisher": "西日本新聞me"
+      },
+      {
+        "title": "日立、ＡＩで鉄道運行支援 - 埼玉新聞",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFA4NjhsQUUySlpBbzFnd0RscnVyVnBkZU1uLWF4dWtIck1PZTc3OEFBankzUV9HWW9DSThHU3UxemlIbjAtWTVERzk1UTdFd1RSVEhYbmdkTQ?oc=5",
+        "published": "Tue, 22 Sep 2026 08:58:00 GMT",
+        "publisher": "埼玉新聞"
+      },
+      {
+        "title": "日立、AIで鉄道運行支援 異常予測し遅れや運休抑制 - 北海道新聞デジタル",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQbmhEU0E3VUZ6bUFUaEdET2FKUG9kQTFyYzdzZTNPTkpmVTBnRVpaeHJYeGRkWVR1QVkzbU9CNVFsUVh4NjlGYnBWVFl4cGJlTXBzX1pYQmdzamxsS3g0ZVpCWS1HWmZPRmo5MEl5blllZ0VLdTNWYkN4WTZCakh2ZGtuMGtBdE9Y?oc=5",
+        "published": "Tue, 22 Sep 2026 10:47:52 GMT",
+        "publisher": "北海道新聞デジタル"
+      },
+      {
+        "title": "日立製作所のロゴ - 産経ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPenZSUC03SGlpbmVuekZ5VDYyZ2VNcS1HX0dIOEowMkl1MVRMTFoxTXZyV3FLR1pVVlYxbHRFLUlVRGxJcUFaMTZhbTRNSVJVODJaVXRPRFhvZnNPNnpWU2kwTUhBUUNnSVNQcWc2T1JlYnVwNFpCUlpGd2JwNmZmUU0yd192WWxjZ2F2a3hTbkxPZTB4WEZZdFkwMzA3SlpMUUE?oc=5",
+        "published": "Tue, 22 Sep 2026 06:24:10 GMT",
+        "publisher": "産経ニュース"
+      },
+      {
+        "title": "プレスリリース PRTIMES記事詳細 | さんにちEye 山梨日日新聞デジタル - sannichi.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9xYzBsQWpHd2dDamxNUE8xM1pSSHdNekRuV3pyMVdhNEhibEZSMXJncWE0RHZkRlhSV3RBcjdOYXVVQ3dZZVZBbDNuRVpNdTRjWlRLUnI1cHFWVEo0M3ZUMkg1OA?oc=5",
+        "published": "Tue, 22 Sep 2026 06:12:48 GMT",
+        "publisher": "sannichi.co.jp"
+      },
+      {
+        "title": "JR北海道 739系 山陽本線 上り 甲種輸送 8862レ EF210-5号機 739系3000番台6両 快速エアポート uシート 日立製作所 下松 JR貨物 広島 2026.9.22 155308 - youtu.be",
+        "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTFBJa1gtNWU3d3dEZU1oSzk0bzdHR3RMaHN2Wlg1X1E3ZTVPelZPSFR5RTNCUmJmVFVEaFUwaVhqUTRXdw?oc=5",
+        "published": "Tue, 22 Sep 2026 09:02:40 GMT",
+        "publisher": "youtu.be"
+      },
+      {
+        "title": "739系3000番台6両が甲種輸送（1本目） - 4号車の5号車寄り",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBiNHZlcHdUUFpaSUJBRm44VVU3YVdaSXJxbC1JWWdoYWk2Y0U1d1JWQU9tYWtFSnJsVjFuZU9qX1E3R2J4blY3QmpRVkRkT00?oc=5",
+        "published": "Tue, 22 Sep 2026 02:44:04 GMT",
+        "publisher": "4号車の5号車寄り"
+      },
+      {
+        "title": "日立、鉄道でＭ＆Ａ意欲 新市場開拓へ「厳選」構え｜全国の記事｜京都新聞 ON BUSINESS - 京都新聞デジタル",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9PWU4tWU8zVENyVndhR2JUMXp4ODZJT1M2Ty1FeW5pY21mVlpuT2tsT1hEZWFyVWYySEo3UGJZWXVjTkdkdVdheTI4ZzVzanJNU1pxOThQYWRjVGM?oc=5",
+        "published": "Tue, 22 Sep 2026 20:35:40 GMT",
+        "publisher": "京都新聞デジタル"
+      },
+      {
+        "title": "｢日本の新幹線｣からインドは離れ､台湾は追加購入…10億人を運んだ台湾新幹線が｢高くても日本製｣を選ぶ理由 (3ページ目) - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9BQ3RBQzhQZldVZ0pwZmJxS294eTA4dHZuTXE0TEI2eDRnLUtqYXhrcVozRFZJRi05T0ZwaEViblJkb0J4dnFnVzNXU0Jlc2ludWtBRUFKQ3g?oc=5",
+        "published": "Tue, 22 Sep 2026 09:00:00 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260902530692.pdf",
+        "date": "2026-09-02 15:30:00"
+      },
+      {
+        "title": "個別決算における投資有価証券売却益(特別利益)の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260819523052.pdf",
+        "date": "2026-08-19 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804508474.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "（訂正）2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503298.pdf",
+        "date": "2026-07-30 13:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501771.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501801.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(モビリティ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566288.pdf",
+        "date": "2026-06-09 15:30:00"
+      }
+    ]
+  }
+}
