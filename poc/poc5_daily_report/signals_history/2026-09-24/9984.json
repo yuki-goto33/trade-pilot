@@ -1,0 +1,211 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-09-24T09:36:32+09:00",
+  "price_as_of": "2026-09-18",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近 buy（2026-09-10）の継続監視中であり、統合判断ルール（再エントリー抑制）に基づき、新規の買い判断を控える。",
+        "evidence": "reference.recent_buy.date='2026-09-10'"
+      },
+      {
+        "reason": "AI戦略加速に向けた100億ドル規模の大規模な外貨建社債発行による資金確保は、強力なファンダメンタルズの好材料として評価される。",
+        "evidence": "fundamental_view.points[0]: 最大100億ドル規模の外貨建社債発行"
+      },
+      {
+        "reason": "短期的なゴールデンクロス等の改善は見られるものの、60営業日騰落率がマイナスであり、中期的な下落トレンドを脱却したとは断定できない。",
+        "evidence": "technical_view.points[2]: change_60d_pct=-4.27"
+      }
+    ],
+    "risks": [
+      "調達するドル建て債の最高9.75%という高金利による将来的な金利負担増のリスク（fundamental_view.cautions）",
+      "為替相場（158.25円）が円高に振れた場合の外貨建て投資資産の評価減リスク（fundamental_view.cautions）",
+      "次回決算発表（11/11）および日銀金融政策決定会合（10/29-30）に伴うボラティリティの拡大",
+      "前夜ADRの軟調さ（-2.63%）に伴う寄り付きでの下押し圧力（technical_view.points[3]）"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近 buy（2026-09-10）の継続監視中であり、統合判断ルール（再エントリー抑制）に基づき、新規の買い判断を控える。\",\n   \"evidence\": \"reference.recent_buy.date='2026-09-10'\"\n  },\n  {\n   \"reason\": \"AI戦略加速に向けた100億ドル規模の大規模な外貨建社債発行による資金確保は、強力なファンダメンタルズの好材料として評価される。\",\n   \"evidence\": \"fundamental_view.points[0]: 最大100億ドル規模の外貨建社債発行\"\n  },\n  {\n   \"reason\": \"短期的なゴールデンクロス等の改善は見られるものの、60営業日騰落率がマイナスであり、中期的な下落トレンドを脱却したとは断定できない。\",\n   \"evidence\": \"technical_view.points[2]: change_60d_pct=-4.27\"\n  }\n ],\n \"risks\": [\n  \"調達するドル建て債の最高9.75%という高金利による将来的な金利負担増のリスク（fundamental_view.cautions）\",\n  \"為替相場（158.25円）が円高に振れた場合の外貨建て投資資産の評価減リスク（fundamental_view.cautions）\",\n  \"次回決算発表（11/11）および日銀金融政策決定会合（10/29-30）に伴うボラティリティの拡大\",\n  \"前夜ADRの軟調さ（-2.63%）に伴う寄り付きでの下押し圧力（technical_view.points[3]）\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "短期的なSMAゴールデンクロスやMACDの好転により底打ちの兆しが見えるものの、中期的な下落トレンドを脱却した明確な証拠には乏しく、前夜ADRの軟調さも踏まえると慎重な姿勢が求められる。",
+      "points": [
+        {
+          "point": "5日線が25日線を上抜けるゴールデンクロスが発生しており、株価もSMA25（5717.76）を大きく上回る水準まで回復している。",
+          "evidence": "price_technical.sma5_vs_sma25, price_technical.last_close=6315.0, price_technical.sma25=5717.76"
+        },
+        {
+          "point": "MACDがシグナルを上回る推移を続けており、ヒストグラムも45.52と拡大傾向にあることから、短期的な上昇の勢いは維持されている。",
+          "evidence": "price_technical.macd=238.53, price_technical.macd_histogram=45.52"
+        },
+        {
+          "point": "60営業日騰落率と対TOPIX相対騰落率がいずれもマイナスであり、厳守事項に基づき中期下落トレンド内にあると判断される。短期的な反発のみで強気転換するには根拠が不足している。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-4.27, price_technical.trend_60d.relative_to_topix_60d_pct=-4.6"
+        },
+        {
+          "point": "前夜の米国市場におけるADRが前日比-2.63%と下落しており、直近の株価上昇に対する利確売りや寄り付きでの下押し圧力が懸念される。",
+          "evidence": "us_overnight.adr.change_1d_pct=-2.63"
+        }
+      ],
+      "cautions": [
+        "ADRの下落により寄り付き価格が低くなる可能性があるが、その後SMA5（6172.6）を下回るようだと短期的な反発の勢いが削がれる恐れがある。",
+        "中期トレンドが下向きであるため、期間高値（6959.0）に近づく場面では戻り売りの圧力が強まりやすい。"
+      ],
+      "key_levels": {
+        "support": 5717.76,
+        "resistance": 6959.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "AI戦略加速に向けた大規模な外貨建社債の発行により、OpenAI等への成長投資を具体化させる資金力を確保した点を高く評価。マクロ環境でもAI需要が製造業PMIを牽引しており、投資ポートフォリオの価値向上と成長シナリオが合致している。",
+      "points": [
+        {
+          "point": "AI投資を目的とした最大100億ドル規模の外貨建社債発行による資金調達。9月24日に開示されたこの大規模な調達は、AI分野への攻めの投資姿勢を裏付ける強力なカタリストとなる。",
+          "evidence": "disclosures.items[0], news.headlines[2], news.headlines[3]"
+        },
+        {
+          "point": "日本の製造業PMIが54.9と拡大基調にあり、その背景としてAI関連需要の強さが指摘されている。同社が注力するAI・半導体領域の市場環境は極めて良好である。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9, macro.japan_pmi.manufacturing.summary_en"
+        },
+        {
+          "point": "OpenAIへの追加出資を既に実行しており、世界的な生成AIブームの核心的企業をポートフォリオに組み入れていることが、中長期の成長期待を支えている。",
+          "evidence": "disclosures.items[8]"
+        }
+      ],
+      "cautions": [
+        "調達するドル建て債の利率が最高9.75%と極めて高く、今後の金利負担増が収益を圧迫するリスク。 (news.headlines[0])",
+        "次回決算発表（2026年11月11日）および日銀金融政策決定会合（10月29日〜30日）に伴うボラティリティの高まり。 (fundamentals.next_earnings_date, macro.boj.monetary_policy_meeting)",
+        "為替相場（ドル円158.25円）の変動リスク。急速な円高が進行した場合、外貨建て投資資産の評価額が円ベースで減損する可能性がある。 (macro.indices[2])"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-10",
+    "days_ago": 14,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソフトバンクＧ、ドル建て債の利率は最高9.750％ ユーロ建て8％ - Reuters",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1MZXlLMFg5Z2RMX1FHeUlVd3hhQjdqdU5oSGN2THY4UE5STHNaVlBYNXB4TFJYeHJfcXFhQk8wVEZGeUVCX3BUeW9kd0M4ajFpOGhTSTQyR3pDeVJvYWdnYi1WZERxcTdKV0VoOV9xV1ViNFlQS2JWckQ1VQ?oc=5",
+        "published": "Wed, 23 Sep 2026 23:55:54 GMT",
+        "publisher": "Reuters"
+      },
+      {
+        "title": "ソフトバンクＧ、ドル建て債の利率は最高9.750％ ユーロ建て8％ - newsweekjapan.jp",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE0ybU9JNHdyQU16ckJ5N1F1V0RZU0NOT3ZPX1JPWHJ0NFZJOVZSRHZYVS05Mm1pOGZINXV6TnZZLTFrdnMtYktNcDlTTmhDUTdHYVY3YkkyT0tsZw?oc=5",
+        "published": "Wed, 23 Sep 2026 23:55:00 GMT",
+        "publisher": "newsweekjapan.jp"
+      },
+      {
+        "title": "ソフトバンク、OpenAI投資資金調達のため100億ドルの債券引受を開始、タームシートによると - アラブニュース",
+        "url": "https://news.google.com/rss/articles/CBMijwRBVV95cUxPVnA4QWN1OE1vZ3c2WTVlYkRWdlBsZm1tU1pxeXpVMXZlRlAzUHpJX1RQSnVuVWx1Rm9YMFE4V3ptR0R1TENQLVN0bVVkbHVoVzMwUWNOZDBjNmJVQ2Q0RlM5Yl8yM0N3U0JtMWZpd3FEemhEYlBzSVB1Q3prU3FDb05WQ2VQZGFZUEVUSnRlRzY4VHduNUpUVEk4VndfcFBiMTByeW1tS0NiNXJENGdYSWdxTFppVFBIUTlUT2NFSGdRSkhMQVNlbDQ5dERsVWpIY3lmQmozNjVhWGhrbWRIcUZId1ZKVU96emwyVXVWN1U2M2RjWHJNNEtvNDkxdk1kQUk3dlZPUFFibUdSVFZ6elVXNXN1Uk5Mb3pjOVowZDRSTzU2LXBlTjFLdjEtTkFlZkdNRC0yM1k5RlAwQWJNN0M1cWpvd3luZTNRcWJ1TTRYM2E5Ulo3UlJCcE0tODViMHNCVFdWUXpXYUdaUEFoZk04RFpYcnQtN2tGc250ZWJyWWN1Q1J6eldjRXNWRXg2SWNYU2g5U1pKTXBVOVJVeV9rUmE3STJhaERfUTlSYVJUTkZFUGU1WGw1a2xDT2lXWVJydXV0U1ZPSFQtSmhfOTVmbFRxaGNYODN3ejNac2gybjRJaU1yaWJuOHRiMjB3bWppR0d3bm9wQlg4UjFYVmloRlYwTmhPWkEzN3A4WQ?oc=5",
+        "published": "Wed, 23 Sep 2026 18:24:11 GMT",
+        "publisher": "アラブニュース"
+      },
+      {
+        "title": "ソフトバンクG、大型高利回り債の発行に乗り出す－AI戦略の資金調達 - Bloomberg.com",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE8wUkpnbmVmVkdSeGZLLU96aFgxalpJbnNzYWpvSXNGNlliclZVdm43UU1tTFRabThjZ0VaMnhUNG44Ulp6ZnNobm1zSnBnUGFpYTg5OHVtdkR3dWtPbWYyQ2wzYWlYanpCXzNMRjFJOHFiaDhZZFY0?oc=5",
+        "published": "Wed, 23 Sep 2026 19:50:44 GMT",
+        "publisher": "Bloomberg.com"
+      },
+      {
+        "title": "ソフトバンクグループ、10億ユーロ規模の2本建てユーロ債マーケティングを開始 6年物利回りは最大8.5％ - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE54ejk0aDdobWZJQklPUFBvRS1aYjEySzlheVBST2Q5cHhqUlBKVjlyT3pQbkVDeE1EQWtWVTdrQ3ZEdkN0cnd2NTNySGpvT1hvYnFCaW41N1F3QQ?oc=5",
+        "published": "Wed, 23 Sep 2026 11:43:23 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "ソフトバンクＧ、ドル建て債の利率は最高9.750％ ユーロ建て8％(ロイター) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPelhhUmFjTW5hQUdKRnF3Nzh1OHduYjF2YnZTUkpoYXJjQXdxbGhvUTA4N0xpWUJfY3NMcHdzdFdTM0xQdGFXNWdDT2NqTWpPd3IzVDJidE9sYmthRlFXQXo0MzUtWDlDdmRQTUVuVERNVlhva0pNMmp0YTcxb1NfcGduRk9KTWc?oc=5",
+        "published": "Wed, 23 Sep 2026 23:55:21 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "AI需要がアジアハイテク株高をけん引、原油は中東供給シグナルで反落 - finance.biggo.jp",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1EYWRhNWo5dEwtTjZlcUpEaWtYNjdFaGE2dHprUFZDdEpRT3paMGlUcjYtYTFwUEE1dTlzNmdCZkxPOGxCY1J5TWJ4MHkzMXN0ZjB3NWdFVkl5SFRSakU3WGlyWks2SWNKeW9lT1pLOWctdXp4?oc=5",
+        "published": "Wed, 23 Sep 2026 08:55:00 GMT",
+        "publisher": "finance.biggo.jp"
+      },
+      {
+        "title": "久化10倍株 (@5I7IjqthMGs0py) on X - t.co",
+        "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE5od013ODVMOWVPUWtlaU43NGlkX0t6M2N3c1lmanBVZHRZZkNqMVA0TjU0bDYteU1LREJn?oc=5",
+        "published": "Wed, 23 Sep 2026 09:29:25 GMT",
+        "publisher": "t.co"
+      },
+      {
+        "title": "専業投資家さとう (@Wanderer_3699) on X - t.co",
+        "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE1WWU9WVjFmUWJNcUdmd3JIeGV0SkJoZkJXaExKMHhzeThINlhNM0RnbDdsOXpJQ2o4UnlV?oc=5",
+        "published": "Wed, 23 Sep 2026 01:50:37 GMT",
+        "publisher": "t.co"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "外貨建シニア社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260924539094.pdf",
+        "date": "2026-09-24 08:00:00"
+      },
+      {
+        "title": "ブリッジローンの期限前返済に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533573.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260904531576.pdf",
+        "date": "2026-09-04 10:30:00"
+      },
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得の完了時期の変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260828527943.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824524817.pdf",
+        "date": "2026-08-24 09:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510515.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行内容確定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503871.pdf",
+        "date": "2026-07-30 17:00:00"
+      },
+      {
+        "title": "第68回及び第69回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501484.pdf",
+        "date": "2026-07-29 10:30:00"
+      },
+      {
+        "title": "OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260701586249.pdf",
+        "date": "2026-07-01 16:00:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577089.pdf",
+        "date": "2026-06-24 16:00:00"
+      }
+    ]
+  }
+}

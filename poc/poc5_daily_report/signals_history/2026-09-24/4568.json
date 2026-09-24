@@ -1,0 +1,197 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-09-24T09:42:15+09:00",
+  "price_as_of": "2026-09-18",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 45,
+    "reasons": [
+      {
+        "reason": "直近14日以内に同一銘柄へbuyシグナルを発出済みのため、新規の買付ではなく継続監視とします。",
+        "evidence": "reference.recent_buy"
+      },
+      {
+        "reason": "テクニカル専門家は強い上昇トレンドを示唆していますが、ファンダメンタルズ専門家の強気確信度がbuyシグナルの必須条件（strength≥70）を満たしていません。",
+        "evidence": "technical_view.stance=bullish (strength=90), fundamental_view.stance=neutral (strength=60)"
+      },
+      {
+        "reason": "ファンダメンタルズは直近の訴訟勝訴という好材料があるものの、年次・四半期ともに利益およびEPSの減少トレンドが見られ、中立的な見解となっています。",
+        "evidence": "fundamental_view.points[0]: 当社に対するNTKからの損害賠償等請求訴訟に関する判決（勝訴）のお知らせ, fundamental_view.points[1]: 利益面で減速トレンドが見られます"
+      }
+    ],
+    "risks": [
+      "2026年10月30日に予定されている次回決算発表は、業績内容次第で株価に大きな影響を与える可能性があります。",
+      "2026年10月29日〜30日の日本銀行金融政策決定会合が、金融政策変更により市場全体および個別銘柄の株価に影響を及ぼす可能性があります。",
+      "RSIが69.8と買われすぎの水準に近く、短期的な過熱感からの調整が入る可能性があります。",
+      "株価が期間高値2958.0円に迫っており、達成感からの利食い売りが出る可能性があります。",
+      "米国株式市場における追加利上げ警戒など、外部環境の不透明感が存在します。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 45,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内に同一銘柄へbuyシグナルを発出済みのため、新規の買付ではなく継続監視とします。\",\n   \"evidence\": \"reference.recent_buy\"\n  },\n  {\n   \"reason\": \"テクニカル専門家は強い上昇トレンドを示唆していますが、ファンダメンタルズ専門家の強気確信度がbuyシグナルの必須条件（strength≥70）を満たしていません。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=90), fundamental_view.stance=neutral (strength=60)\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは直近の訴訟勝訴という好材料があるものの、年次・四半期ともに利益およびEPSの減少トレンドが見られ、中立的な見解となっています。\",\n   \"evidence\": \"fundamental_view.points[0]: 当社に対するNTKからの損害賠償等請求訴訟に関する判決（勝訴）のお知らせ, fundamental_view.points[1]: 利益面で減速トレンドが見られます\"\n  }\n ],\n \"risks\": [\n  \"2026年10月30日に予定されている次回決算発表は、業績内容次第で株価に大きな影響を与える可能性があります。\",\n  \"2026年10月29日〜30日の日本銀行金融政策決定会合が、金融政策変更により市場全体および個別銘柄の株価に影響を及ぼす可能性があります。\",\n  \"RSIが69.8と買われすぎの水準に近く、短期的な過熱感からの調整が入る可能性があります。\",\n  \"株価が期間高値2958.0円に迫っており、達成感からの利食い売りが出る可能性があります。\",\n  \"米国株式市場における追加利上げ警戒など、外部環境の不透明感が存在します。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 90,
+      "summary": "中期・短期ともに明確な上昇トレンドが継続しており、主要テクニカル指標も強気を示唆しています。市場環境も好意的であり、さらなる上値追いが期待されます。",
+      "points": [
+        {
+          "point": "過去60営業日で株価は16.9%上昇しており、TOPIXに対しても16.57%とアウトパフォームしており、中期的に強い上昇トレンドにあります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=16.9, price_technical.trend_60d.relative_to_topix_60d_pct=16.57"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線を上回るゴールデンクロスを形成しており、短期的な上昇モメンタムが強いことを示しています。",
+          "evidence": "price_technical.sma5_vs_sma25='golden(5日線が25日線の上)'"
+        },
+        {
+          "point": "MACDはシグナルラインを上回り、ヒストグラムもプラス圏で拡大しており、強い上昇トレンドが示唆されています。",
+          "evidence": "price_technical.macd=23.92, price_technical.macd_signal=10.41, price_technical.macd_histogram=13.5"
+        },
+        {
+          "point": "RSI14は69.8と高水準で推移しており、強い買い圧力が続いていることを示しています。",
+          "evidence": "price_technical.rsi14=69.8"
+        },
+        {
+          "point": "直近5営業日のうち4日間が上昇し、特に期間高値2958.0円に迫る2953.5円で引けており、高値更新への意欲が見られます。",
+          "evidence": "price_technical.last_close=2953.5, price_technical.period_high=2958.0, price_technical.recent_5_days"
+        }
+      ],
+      "cautions": [
+        "RSIが69.8と買われすぎの水準に近く、短期的な過熱感からの調整が入る可能性があります。",
+        "株価が期間高値に迫っているため、達成感からの利食い売りが出る可能性があります。",
+        "前夜の米国市場（ADR、セクターETF）は小幅な上昇でしたが、その動きは当日の寄り付き価格に織り込まれる可能性があり、その後の値動きを保証するものではありません。"
+      ],
+      "key_levels": {
+        "support": 2881.5,
+        "resistance": 2958.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "直近で損害賠償請求訴訟の勝訴という好材料があったものの、年次・四半期ともに利益およびEPSの減少トレンドが見られ、業績面での懸念が拮抗するため、中立的な見解です。",
+      "points": [
+        {
+          "point": "直近で当社に対する損害賠償請求訴訟に関する判決で勝訴しており、これは不透明感の解消につながるポジティブな材料です。",
+          "evidence": "disclosures.items[0].title=\"当社に対するNTKからの損害賠償等請求訴訟に関する判決（勝訴）のお知らせ\", disclosures.items[0].date=\"2026-09-10 17:00:00\""
+        },
+        {
+          "point": "2026年3月期の年次業績では増収を達成したものの、営業利益、純利益、希薄化後EPSは前年比で減少しており、直近四半期（2026年6月）のEPSも前年同期を下回るなど、利益面で減速トレンドが見られます。",
+          "evidence": "fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=2291, fundamentals.earnings_trend.annual[0].net_income_oku_jpy=2599, fundamentals.earnings_trend.annual[0].diluted_eps=140.37 (vs 2025-03), fundamentals.earnings_trend.quarterly[0].diluted_eps=37.7 (vs 2025-06)"
+        },
+        {
+          "point": "日本の製造業PMI、サービス業PMI、複合PMIはいずれも50を超えて景気拡大を示しており、医薬品製造業である当社にとって比較的良好なマクロ経済環境です。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.9, macro.japan_pmi.services.latest_value=52.5, macro.japan_pmi.composite.latest_value=53.5"
+        },
+        {
+          "point": "PERは21倍台、PBRは3倍台と特別割安感はないものの、配当利回りは3.39%、ROEは14.8%と安定的な株主還元と収益性が評価できます。",
+          "evidence": "fundamentals.valuation.trailing_pe=21.053, fundamentals.valuation.price_to_book=3.158, fundamentals.valuation.dividend_yield_percent=3.39, fundamentals.valuation.return_on_equity=0.148"
+        }
+      ],
+      "cautions": [
+        "次回決算発表日が2026年10月30日に予定されており、業績内容次第では株価が大きく変動する可能性があります。",
+        "日本銀行の金融政策決定会合が2026年10月29日〜30日に控えており、金融政策の変更が市場全体に影響を与えるリスクがあります。",
+        "米国株式市場では追加利上げを警戒する動きが見られ、外部環境の不透明感が存在します。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-17",
+    "days_ago": 7,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "日本株ＡＤＲ・円換算終値 - みんかぶ FX/為替",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5IeHBFbDRfQndZcGt2M2xlR3lQN1BkSTczUjRmaHV5UmdnLV9SMWxkTVoxS2hpeExMYlF5Zm1KLU02aU1DY0tBOA?oc=5",
+        "published": "Wed, 23 Sep 2026 22:40:57 GMT",
+        "publisher": "みんかぶ FX/為替"
+      },
+      {
+        "title": "東南アジア オルメサルタン市場の主要10社まとめ - pando.life",
+        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9BNTZlWm1KQmVfUEI4b0IzU1hBc3l0NEpNYzVPa0RpTUpuWWJMaS1BalR6Yk80dFZISFkxOUhLcUh4U2tlaE5wUG1B?oc=5",
+        "published": "Wed, 23 Sep 2026 18:21:41 GMT",
+        "publisher": "pando.life"
+      },
+      {
+        "title": "＜画像1 / 4＞市販化で話題をさらった解熱鎮痛薬「ロキソニン」の現状は？ - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5xeHJYZkFEazUtV1V5MGxPU3dhVlRjS1Z4RW90NHAxTTV1V2xpcVBmb0JKQno5LUNFd0NBTmZhazZORkRiSklOV1F1Q2l1am43VVZmU05uclJ0SU9YaFFkc1dJelV1MXM?oc=5",
+        "published": "Wed, 23 Sep 2026 03:59:50 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "米国株式市場は下落、追加利上げを警戒 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPLTl6MnhuWk0wOWtNZWYybGc5UlJGQS0zdmV0UUxHTVhBcUVNanVUNjVrOXJuVV9ZcTgzOW1OZHhpUW1sS3UxZVRrX1Q0RkN0MGhiRFhpMGZKS0RRbFEwQ3d2c2VjNEwyY1RGNTdTbGljbTZieXVCSTBYR3pPRDdKV2lQdE1VUDTSAYwBQVVfeXFMT0Z0LThNNzlUeWFSSG1VZGVWSHVZQ0JJNzB2WWVVZkE1RGdSS0M4MlJ0eVMxR0xocXVYSHdDRGlmQ0cxbXdwZXdHZndzSmlWQnlXRzRMcFA2TXJEbHg5aVZsSmlET0JXci1DNVV5TmlVMUJkYXB4UmNURjN2ZHQxVXZRRnFia1o4WFZyNDU?oc=5",
+        "published": "Wed, 23 Sep 2026 23:15:24 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "シルバーウィーク最終日 各地の高速道路で渋滞 中央道・関越道上りで午後20km予測 台風25号の通行止めは全て解除 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1mOXNTQmdONG5ILXJtUm5DdklVOUkwNDB2cXExLUxEWlhaMkVCTHpMYjNFcEJpbXRjWHdoTmFCNjY0eVFERHdvYWYzTVhCUERkVnlwb1BzRGlXVDdkaEZNMkNiMVo1dWZmVlpjWGdIcUcwMkdnRm9TTg?oc=5",
+        "published": "Wed, 23 Sep 2026 03:07:00 GMT",
+        "publisher": "au Webポータル"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "当社に対するNTKからの損害賠償等請求訴訟に関する判決（勝訴）のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260910534407.pdf",
+        "date": "2026-09-10 17:00:00"
+      },
+      {
+        "title": "（開示事項の変更）第一三共ビジネスアソシエの吸収合併（簡易合併・略式合併）の効力発生日変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824525305.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "（再訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514622.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2025年度決算および第6期中期経営計画説明会」資料の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514744.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正・数値データ訂正）「2026年３月期 決算短信〔IFRS基準〕(連結)」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504176.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504099.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算補足資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504168.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504173.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "当社米国子会社役職員に対する信託型株式付与制度の継続のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504240.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587542.pdf",
+        "date": "2026-07-16 15:30:00"
+      }
+    ]
+  }
+}
