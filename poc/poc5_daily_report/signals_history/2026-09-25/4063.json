@@ -1,0 +1,189 @@
+{
+  "code": "4063",
+  "name": "信越化学工業",
+  "generated_at": "2026-09-25T09:36:15+09:00",
+  "price_as_of": "2026-09-25",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ面ではフォトレジストの値上げや記念配当など強力な好材料（strength=75）が確認されているが、テクニカル判断が弱気（bearish）であるため、統合ルールに基づき「落ちるナイフ」を避ける様子見判断とした。",
+        "evidence": "fundamental_view.strength=75 / technical_view.stance=bearish"
+      },
+      {
+        "reason": "中期的な下落トレンドが継続しており、5日線と25日線のデッドクロスやRSIの弱気圏推移など、テクニカル指標は下げ止まりを明確に示唆していない。",
+        "evidence": "technical_view.points[0]: change_60d_pct = -13.64 / technical_view.points[1]: sma5_vs_sma25 = 'dead'"
+      },
+      {
+        "reason": "米国市場のSOX指数やADRの軟調さが国内寄り付きの重石となる可能性があり、外部環境の不安定さが継続している。",
+        "evidence": "technical_view.points[2]: us_overnight.sox_index.change_1d_pct = -0.33"
+      }
+    ],
+    "risks": [
+      "2026-10-27の次回決算発表および10-29の日銀金融政策決定会合が想定保有期間内に含まれており、イベントリスクによるボラティリティ急増の可能性がある。",
+      "米国半導体株の軟調さが継続した場合、良好なファンダメンタルズ材料を打ち消す形で下値を模索する展開が続く懸念がある。",
+      "2026年3月期の通期営業利益が前期比で減益計画となっており、価格転嫁の効果が確認されるまで投資家が慎重姿勢を崩さないリスク。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ面ではフォトレジストの値上げや記念配当など強力な好材料（strength=75）が確認されているが、テクニカル判断が弱気（bearish）であるため、統合ルールに基づき「落ちるナイフ」を避ける様子見判断とした。\",\n   \"evidence\": \"fundamental_view.strength=75 / technical_view.stance=bearish\"\n  },\n  {\n   \"reason\": \"中期的な下落トレンドが継続しており、5日線と25日線のデッドクロスやRSIの弱気圏推移など、テクニカル指標は下げ止まりを明確に示唆していない。\",\n   \"evidence\": \"technical_view.points[0]: change_60d_pct = -13.64 / technical_view.points[1]: sma5_vs_sma25 = 'dead'\"\n  },\n  {\n   \"reason\": \"米国市場のSOX指数やADRの軟調さが国内寄り付きの重石となる可能性があり、外部環境の不安定さが継続している。\",\n   \"evidence\": \"technical_view.points[2]: us_overnight.sox_index.change_1d_pct = -0.33\"\n  }\n ],\n \"risks\": [\n  \"2026-10-27の次回決算発表および10-29の日銀金融政策決定会合が想定保有期間内に含まれており、イベントリスクによるボラティリティ急増の可能性がある。\",\n  \"米国半導体株の軟調さが継続した場合、良好なファンダメンタルズ材料を打ち消す形で下値を模索する展開が続く懸念がある。\",\n  \"2026年3月期の通期営業利益が前期比で減益計画となっており、価格転嫁の効果が確認されるまで投資家が慎重姿勢を崩さないリスク。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "中期的な下落トレンドが継続しており、直近数日の下げ止まりは見られるものの、主要な移動平均線のデッドクロスや外部環境の軟調さを踏まえると、依然として下押し圧力が強い状況です。",
+      "points": [
+        {
+          "point": "中期的な下落トレンドが明確であり、TOPIXに対しても大幅に劣後しているため、基調は非常に弱いと判断されます。",
+          "evidence": "price_technical.trend_60d.change_60d_pct = -13.64, price_technical.trend_60d.relative_to_topix_60d_pct = -14.68"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線を下回るデッドクロス状態にあり、RSIも44と弱気圏で推移しています。",
+          "evidence": "price_technical.sma5_vs_sma25 = \"dead\", price_technical.rsi14 = 44.0"
+        },
+        {
+          "point": "前夜の米国市場においてADRおよびSOX指数がともに下落しており、国内市場の寄り付きにおいて重石となる可能性が高いです。",
+          "evidence": "us_overnight.adr.change_1d_pct = -0.43, us_overnight.sox_index.change_1d_pct = -0.33"
+        }
+      ],
+      "cautions": [
+        "MACDヒストグラムが正の値で改善傾向にあり、短期的には売られすぎからの自律反発が強まるリスクがあります（price_technical.macd_histogram = 31.74）。",
+        "ADRの下落分は寄り付き価格に織り込まれるため、寄り付き後の売り一巡による買い戻しには注意が必要です。",
+        "25日移動平均線付近での攻防となっており、ここを明確に下値支持線として固めた場合は見通しの修正が必要となります。"
+      ],
+      "key_levels": {
+        "support": 5628.0,
+        "resistance": 6508.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "フォトレジストの15%以上の値上げ報道という強力な価格転嫁の材料に加え、創立100周年記念配当の実施による株主還元姿勢の強化が確認されており、ファンダメンタルズ面でのポジティブな材料が揃っている。",
+      "points": [
+        {
+          "point": "主力製品である半導体用フォトレジストの10月からの15%以上の値上げが報じられており、収益性の改善が期待される。",
+          "evidence": "news.headlines[1]（日系フォトレジスト大手が10月に15%以上値上げへ）"
+        },
+        {
+          "point": "創立100周年記念配当の実施および配当予想の上方修正を直近で発表しており、株主還元への積極姿勢が評価される。",
+          "evidence": "disclosures.items[0]（2026-09-15 創立100周年記念配当の実施 及び 配当予想の修正に関するお知らせ）"
+        },
+        {
+          "point": "製造業PMIが54.1と拡大圏にあり、1ドル158円台の為替水準も相まって、輸出比率の高い同社にとって事業環境は良好である。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.1, macro.indices[2].close=158.76"
+        }
+      ],
+      "cautions": [
+        "2026年3月期の通期営業利益予想が前期比で減益計画となっており、次回の決算発表での進捗確認が必要。",
+        "次回決算発表（2026-10-27）および日銀金融政策決定会合（2026-10-29〜）が1ヶ月以内に控えており、ボラティリティの高まりに注意が必要。",
+        "ストックオプションの発行に伴う将来的な株式の希薄化リスクが投資家意識に影響を与える可能性がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "信越化学のストックオプション発行に対し、投資家はどのように反応しているか - simplywall.st",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNWWxyOU5GQTBWWWJKeXMxdU5MV0M4LVBpM3Q4dmtGUmFlaGRXOGM0RklNV0RoVTYwdVhsYlhRUDQ5QWR4OUJ4a01aVk9EVFctYUVRdTg0S0U4Y1h0a2tpdndDV0RzYm9EbFoyR3dFdEoyZjhwdXhUV1lYX19pWTdJN2M2QUhMRHVhOTI2Nmt1U2pFaVBDZWxMeEROcENaa0VCUzB30gGoAUFVX3lxTE1oMG9BQUtlYm9JX2dEM0w1M3RaMEVMX3JITWYycEp0REdXREppUElIekZ5dGJoSTd2Ym5qR0JQbzhaQTVTNWVldERidGU3bzlGa28wS1hhNUcya21PVVlTb1FZa2RBck4wQjhnMVNzb003ZzNfWmZhcEpsVTloMG5WSGhJV3BjUk11ZEZBaVpzREpINFJZNTBXcnphLXNxRFlGMWFzWUxGSA?oc=5",
+        "published": "Thu, 24 Sep 2026 07:34:22 GMT",
+        "publisher": "simplywall.st"
+      },
+      {
+        "title": "日系フォトレジスト大手が10月に15%以上値上げへ 台湾のウエハー工場「コスト比率低く影響は限定的」 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1YQzk1cmpCWnZMdS0zaUNrZmhmSVZ1M19zWFdESzJoTlRPekNKd0RkWjh1RUVKUXkxS1RZQ2JnUWFEdWo3VTY0RFJYRDhMMmdubEhCU0JJUnI5NkdoV1BzNHRwS1ZEUFdOZTFCeC1rNkk2RF9N?oc=5",
+        "published": "Thu, 24 Sep 2026 12:55:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "野村證券株式会社が野村マイクロ・サイエンス株式会社＜6254＞株式の変更報告書を提出（保有減少） - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNSWY3R2hXQnJja1ItTGNtUUdEa2lNczFoY2RteU05ZF95eVdldFVCdnBIY1ZuRXZfNVkxUHRjQzFFLTlzemcyREdYTXZLTU9rOEU4d2I5VjNzOGNIVzdNU3R2Y3lDVlBuNWdPd3JjZGZHbzh1dVdDYmprUkhnU216Z2ZSNndwanRnYVHSAYoBQVVfeXFMTUlmN0doV0JyY2tSLUxjbVFHRGtpTXMxaGNkbXlNOWRfeXlXZXRVQnZwSGNWbkV2XzVZMVB0Y0MxRS05c3pnMkRHWE12S01PazhFOHdiOVYzczhjSFc3TVN0dmN5Q1ZQbjVnT3dyY2RmR284dXVXQ2Jqa1JIZ1NtemdmUjZ3cGp0Z2FR?oc=5",
+        "published": "Thu, 24 Sep 2026 04:34:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "東証、午前終値２２５円高 米半導体株の上昇が追い風 - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xQUN6a0Q5V2hhRHl5cmhXbnJZWHdMa1M5a09tRnFHUmQyOWdOWURLUTFoNDlLV2tyU2VfNzNnb2JOUWdBdmlZaEhCSUtJMUduOGc?oc=5",
+        "published": "Thu, 24 Sep 2026 19:39:41 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "イーサリアム、2800ドル突破ならず2670ドルに反落——ロング109億ドル相当が清算 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE44d3hjdmh0WS1wdWJrN0ZYRE9aY1VEMWZDdV9wMDZ6YjViaUxqazFuQ3hJbW1JbUl6SHNpUnY1M3F5T2trdEY1QzZsc0t3emVNMEg4Z2ZvUGFlOGF0Z2NUc1N3NVJmVmtRcU5WLV9PT1czVkZR?oc=5",
+        "published": "Thu, 24 Sep 2026 18:36:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "東京為替、円買い一服でドル158円台に戻す - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBVWmxnUVlkSnk2cHprdG5qcVhMeGhHTTdvdDUzaThidEN5RmFjU3FhUERVbDRVR2NFS2JuN2VYN2xGMjBUaWpSdXRaXzBBTVhQbktWQjZHSFp0ZnZMTlZMTVE0MHFtLUtaMjdmQ2ZZeVZIcjEw?oc=5",
+        "published": "Thu, 24 Sep 2026 05:05:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "日経225先物：25日0時＝140円安、6万5320円 - ライブドアニュース",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBDOUlNQWlTODdjWGE0U0UxV2thcEJQaC1OWXZWSlhnREFUdlMxTVJaM1hsQjQ2dXphbWY3UzJTUnVnLWk5bG14SDRIV1dXS1dORUtYTlNabGV4MDR1NWIw?oc=5",
+        "published": "Thu, 24 Sep 2026 15:00:41 GMT",
+        "publisher": "ライブドアニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "創立100周年記念配当の実施 及び 配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260914536275.pdf",
+        "date": "2026-09-15 15:30:00"
+      },
+      {
+        "title": "コミットメント型自己株式取得（FCSR）における事後調整のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260915536456.pdf",
+        "date": "2026-09-15 15:30:00"
+      },
+      {
+        "title": "ストックオプション（新株予約権）の割当てに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260915536486.pdf",
+        "date": "2026-09-15 15:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による取得結果および自己株式の取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730502910.pdf",
+        "date": "2026-07-30 11:30:00"
+      },
+      {
+        "title": "コミットメント型自己株式取得（FCSR）による自己株式取得のための第三者割当による第27回および第28回新株予約権の発行条件の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503103.pdf",
+        "date": "2026-07-30 11:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による自己株式の買付けに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729502228.pdf",
+        "date": "2026-07-29 16:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598954.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "業績予想および配当予想に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598982.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による自己株式の買付けに関するお知らせ（コミットメント型自己株式取得（FCSR）による自己株式取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260724598998.pdf",
+        "date": "2026-07-24 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573248.pdf",
+        "date": "2026-06-18 15:30:00"
+      }
+    ]
+  }
+}

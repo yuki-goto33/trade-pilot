@@ -1,0 +1,221 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-09-25T09:29:22+09:00",
+  "price_as_of": "2026-09-25",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "2026-09-23に直近のbuy判断が出されており、現在はその継続監視期間中であるため、ルールに基づき新規エントリーは行わず保持とする。",
+        "evidence": "reference.recent_buy.date='2026-09-23'"
+      },
+      {
+        "reason": "ファンダメンタルズの確信度が55に留まり、新規買い推奨基準の70を下回っている。PER23.5倍という銀行株として高い評価水準が上値を抑制している。",
+        "evidence": "fundamental_view.strength=55 / fundamental_view.points[2]: Forward PER23.556倍"
+      },
+      {
+        "reason": "テクニカル面でデッドクロスが発生し、MACDも弱気形状を示すなど短期的な調整圧力が強まっており、押し目を確認すべき局面である。",
+        "evidence": "technical_view.points[0]: sma5_vs_sma25=dead / technical_view.points[1]: macd_histogram=-13.65"
+      }
+    ],
+    "risks": [
+      "2026年10月29日〜30日に予定される日銀金融政策決定会合での追加利上げ観測に伴うボラティリティ増大",
+      "2026年11月12日の第2四半期決算発表における業績進捗と市場期待の乖離",
+      "前夜ADRの2.5%超の下落に伴う、寄り付きからの窓開け下落および25日移動平均線の下放れ"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 55,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"2026-09-23に直近のbuy判断が出されており、現在はその継続監視期間中であるため、ルールに基づき新規エントリーは行わず保持とする。\",\n      \"evidence\": \"reference.recent_buy.date='2026-09-23'\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズの確信度が55に留まり、新規買い推奨基準の70を下回っている。PER23.5倍という銀行株として高い評価水準が上値を抑制している。\",\n      \"evidence\": \"fundamental_view.strength=55 / fundamental_view.points[2]: Forward PER23.556倍\"\n    },\n    {\n      \"reason\": \"テクニカル面でデッドクロスが発生し、MACDも弱気形状を示すなど短期的な調整圧力が強まっており、押し目を確認すべき局面である。\",\n      \"evidence\": \"technical_view.points[0]: sma5_vs_sma25=dead / technical_view.points[1]: macd_histogram=-13.65\"\n    }\n  ],\n  \"risks\": [\n    \"2026年10月29日〜30日に予定される日銀金融政策決定会合での追加利上げ観測に伴うボラティリティ増大\",\n    \"2026年11月12日の第2四半期決算発表における業績進捗と市場期待の乖離\",\n    \"前夜ADRの2.5%超の下落に伴う、寄り付きからの窓開け下落および25日移動平均線の下放れ\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "短期的なデッドクロスやMACDの弱気形状に加え、前夜ADRの大幅下落が重石となる一方で、中期的なトレンドは依然として市場優位性を保っており、下値の堅さと上値の重さが交錯する局面です。",
+      "points": [
+        {
+          "point": "短期的なテクニカル指標の悪化が顕著で、SMA5がSMA25を割り込むデッドクロスが発生しています。",
+          "evidence": "price_technical.sma5_vs_sma25=dead(5日線が25日線の下)"
+        },
+        {
+          "point": "MACDがシグナルを大きく下回り、ヒストグラムもマイナス圏で拡大しており、短期的には調整圧力が強い状態です。",
+          "evidence": "price_technical.macd=-2.55, price_technical.macd_histogram=-13.65"
+        },
+        {
+          "point": "中期的なトレンドは依然として堅調であり、60営業日の騰落率はTOPIXを大幅にアウトパフォームしています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=10.11, price_technical.trend_60d.relative_to_topix_60d_pct=9.06"
+        },
+        {
+          "point": "前夜の米国市場で当該銘柄のADRが大幅に下落しており、寄り付き直後は下押し圧力がかかる可能性が高いです。",
+          "evidence": "us_overnight.adr.change_1d_pct=-2.56"
+        }
+      ],
+      "cautions": [
+        "ADRの2.5%超の下落により、寄り付きから節目の価格を大きく割り込んで始まるリスクがあります。",
+        "RSIは58.1と中立圏にありますが、直近5営業日の高値が切り下がっているため、早期に25日線を回復できない場合は調整が長引く可能性があります。",
+        "MACDヒストグラムがボトムアウトする兆しが見えておらず、反転を確認するには時間を要する可能性があります。"
+      ],
+      "key_levels": {
+        "support": 3415.0,
+        "resistance": 3627.08
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "収益拡大トレンドと国内長期金利の高水準推移は銀行業にとって良好な事業環境を示す一方、予想PER23.5倍・PBR1.77倍と評価が先行しており、強気と慎重姿勢が拮抗します。",
+      "points": [
+        {
+          "point": "直近四半期（2026年6月期）純利益が8,094億円と高水準を維持し、通期純利益も過去3期で連続拡大基調にあるなど収益基盤は極めて堅調です。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].net_income_oku_jpy=8094, fundamentals.earnings_trend.annual[0].net_income_oku_jpy=24272"
+        },
+        {
+          "point": "国内10年金利が2.981%と高水準にあり、日銀の金融市場調節方針変更も公表されるなど、預貸金利ざやの拡大に有利なマクロ環境が継続しています。",
+          "evidence": "macro.rates.jgb_10y_percent.value=2.981, macro.boj.recent_announcements.items[3].title=（参考）金融市場調節方針の変更（2026年9月金融政策決定会合）"
+        },
+        {
+          "point": "PBR1.772倍、Forward PER23.556倍と銀行株としては評価が進んでおり、割安感を背景とした追加の上値余地は限定的です。",
+          "evidence": "fundamentals.valuation.price_to_book=1.772, fundamentals.valuation.forward_pe=23.556"
+        },
+        {
+          "point": "新デジタル銀行「エムットバンク」の免許取得や開業準備の報道が出ているものの、短期的な収益寄与を見極めるには時間を要します。",
+          "evidence": "news.headlines[0].title=三菱UFJの新デジタル銀行は「エムットバンク」来年1～3月開業へ - 朝日新聞, news.headlines[5].title=三菱ＵＦＪデジタル銀に免許＝年度内に開業予定 - Infoseek"
+        }
+      ],
+      "cautions": [
+        "2026年10月29日〜30日に控える日銀金融政策決定会合における追加利上げ観測や政策運営方針の変動リスク",
+        "2026年11月12日に予定される第2四半期決算発表での業績進捗および会社計画に対する市場の反応",
+        "予想PER23倍台と高い評価水準にある中での相場全体（TOPIX）の調整に伴うバリュエーション是正圧力"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-23",
+    "days_ago": 2,
+    "confidence": 75,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "三菱UFJの新デジタル銀行は「エムットバンク」来年1～3月開業へ - 朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB2VlQ1NzNtTDc4WGs0TzUwaXI4WEh2YjZyaWF0dHBCRUJNWVhQLTV5a2RpeHVtWnNLNmk4WnA2cDRxSjhMUzV2RkppY3F3WlYwb24xcWR0SGNrRWlPWExSVHhPOVBWNVlCQmxz?oc=5",
+        "published": "Thu, 24 Sep 2026 08:56:12 GMT",
+        "publisher": "朝日新聞"
+      },
+      {
+        "title": "三菱ＵＦＪ、デジタル銀名称「エムット銀行」 来年１～３月開業 - 時事ドットコム",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1CUkFjOFgtUVFFYUIybHBXWGlUc2J4UEdEeXpnYWpwWE5Na191aW1oWkN1OEdxMzUxemVmVHFkZ2JQdlVtbklCcGRWUmxlUHJQRWt6RmpNRWd0V0xCS3VNaWlkNA?oc=5",
+        "published": "Thu, 24 Sep 2026 08:02:00 GMT",
+        "publisher": "時事ドットコム"
+      },
+      {
+        "title": "名称「エムットバンク」に - saitama-np.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE53eHRTaktQSVhqVmpuU3QwRUdXQVN4QUtfM1luMmdKNWE2amVWTjRoMENDU0NoM0J0YURWaU9LcnlGdFR4d0dhVHhTc194Unl4c24tQzlnbnVDaEJCUDFqTzNQUGRfUQ?oc=5",
+        "published": "Thu, 24 Sep 2026 08:49:00 GMT",
+        "publisher": "saitama-np.co.jp"
+      },
+      {
+        "title": "名称「エムットバンク」に　三菱UFJのデジタル銀行 - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9FU1ZhV2ZpQVl1bldkSXF3YWxFSDNoMEpydmlmRDRkTjh1dUJaUG9idFRhSmZMaDlyY3JoekM0d3JhZWR1M0dlSi1vMkkwZFYwV2VvZUw5NEN6NVZhUmtKSmFmTU50cXk4MUtrTGNpUVFkUjR20gF0QVVfeXFMT0VTVmFXZmlBWXVuV2RJcXdhbEVIM2gwSnJ2aWZENGROOHV1QlpQb2J0VGFKZkxoOXJjcmh6QzR3cmFlZHUzR2VKLW8ySTBkVjBXZW9lTDk0Q3o1VmFSa0pKYWZNTnRxeTgxS2tMY2lRUWRSNHY?oc=5",
+        "published": "Thu, 24 Sep 2026 08:49:11 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "レッド・アイ／陰謀の大使館「狙われた伝書使」 - WEBザテレビジョン",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9qTmNpSHRrYXAtd25RUHZDTHdTNEJMMkxIWTRqWnB0MGQ1Z2ZkWlo2azFtd21yT1JBZlFpS0FuQ2x5bkVqNnJfMXd6bTBGaGs?oc=5",
+        "published": "Thu, 24 Sep 2026 02:00:58 GMT",
+        "publisher": "WEBザテレビジョン"
+      },
+      {
+        "title": "三菱ＵＦＪデジタル銀に免許＝年度内に開業予定 - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE44eUdCY290bnpqVWsxYkNPckVEcHJTdUZ5V1pOQmdNVld4UW00OVdiSUtvWDFiV3dTVGpBM09xemdTVWJwMHdZVDA4VmlVc3Fta3NZdlpjZ0lpQ2xBY1gtaWpxVE9LU29ETnh30gFrQVVfeXFMTjh5R0Jjb3RuempVazFiQ09yRURwclN1RnlXWk5CZ01WV3hRbTQ5V2JJS29YMWJXd1NUakEzT3F6Z1NVYnAwd1lUMDhWaVVzcW1rc1l2WmNnSWlDbEFjWC1panFUT0tTb0ROeHc?oc=5",
+        "published": "Thu, 24 Sep 2026 07:07:03 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "島津について、三菱ＵＦＪは保有割合が減少したと報告 [変更報告書No.50] - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1QeDM0U0lCaUU3ZHk4TFhUYnRrTzZRWF9Tb2JMMHptTmVyamRaSjBMUzlpVk1qeE5HcXRkaHNpSkItR1E0Z1dNY1U3eEhQLW5IWlV3WG9jcUZnZHR3cDhHMw?oc=5",
+        "published": "Thu, 24 Sep 2026 02:13:02 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "MUFGのデジタルバンク「エムットバンク」始動 27年1～3月開始 - Impress Watch",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE11NC1ZZE5DaGJVOUJOOTF5STBFdlBfQ2hHTHF0VjRHU0dpbUk5Z2t3bHNhb2Q0bDNFa3h4WXA3T2o5dDZzYVJvMmVnNU9nUXlBQTRWOVFfcHRvREp3d0dUYUNHc1M?oc=5",
+        "published": "Thu, 24 Sep 2026 07:54:01 GMT",
+        "publisher": "Impress Watch"
+      },
+      {
+        "title": "名称「エムットバンク」に 三菱ＵＦＪのデジタル銀行 - 山形新聞",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPOWUwZnZ0TmY2R0xyUjlmaFJINW5vLVgycC1sOVVBTTB6WHUwekhnVU53WmVuWFdZeldWWWNaUElaZ2Vrdm4wNGpsSUhfTVd5RG4tb2lDVzZPcGFYRVNwaHJkUGNiWFhNWGZYeS1aa0pIWXZIQ0ZoS2hnMnlnc3ViQkk5Sy1yV19KQlJTeQ?oc=5",
+        "published": "Thu, 24 Sep 2026 08:49:00 GMT",
+        "publisher": "山形新聞"
+      },
+      {
+        "title": "名称「エムットバンク」に 三菱UFJのデジタル銀行 - Excite エキサイト",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5wQjBvdks1ZzhpcXhZUzc4cEsxNVRCa1pyVUFXTUZOYVhuTjc5OFVkTWxoUDRqRVhsTGVkNFoxbW95SklNZ0xOLU9vekRuUTV2c2lYbFE3cnY2ZmRDZDU3Sml0MWtobEhhbHhQY1pkamM?oc=5",
+        "published": "Thu, 24 Sep 2026 08:49:00 GMT",
+        "publisher": "Excite エキサイト"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期 自己資本比率について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260814520300.pdf",
+        "date": "2026-08-14 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕（連結）（公認会計士又は監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510381.pdf",
+        "date": "2026-08-06 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505851.pdf",
+        "date": "2026-08-03 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      }
+    ]
+  }
+}

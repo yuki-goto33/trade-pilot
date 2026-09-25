@@ -1,0 +1,207 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-09-25T09:37:54+09:00",
+  "price_as_of": "2026-09-25",
+  "signal": {
+    "signal": "buy",
+    "confidence": 70,
+    "target_price": 3160.0,
+    "stop_loss": 2940.0,
+    "holding_period_days": 28,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家が指摘する大規模な自社株買いの進捗と直近四半期の順調な増益（EPS+19%）により下値サポートが強固です。",
+        "evidence": "fundamental_view.points[0]: 累計2,612億円取得済みの自社株買い枠, fundamental_view.points[1]: 2026-06期EPSが前年同期比約19%増"
+      },
+      {
+        "reason": "テクニカル専門家は短期的な過熱調整でneutralスタンスを示しており、好業績・好需給の材料が織り込み前の押し目水準と判断できます。",
+        "evidence": "technical_view.stance=neutral (strength=60), technical_view.cautions[0]: 25日線（2976円付近）までの押し目形成"
+      },
+      {
+        "reason": "中期トレンドのアウトパフォームが維持されており、25日移動平均線近辺が強力な下値支持帯として機能する見込みです。",
+        "evidence": "price_technical.trend_60d.relative_to_topix_60d_pct=12.01, reference.sma25=2976.38"
+      }
+    ],
+    "risks": [
+      "直近の米国市場軟調やADRの下落により、寄り付き後の短期的な調整が長引くリスク（technical_view.cautions[2]）。",
+      "日本の長期金利上昇（10年債利回り2.98%）に伴うディフェンシブ・高配当株からの資金流出リスク（fundamental_view.cautions[1]）。",
+      "次回日銀金融政策決定会合（2026-10-29〜30）および第2四半期決算発表（2026-11-12）に向けた警戒感による上値の重さ。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"buy\",\n \"confidence\": 70,\n \"target_price\": 3160.0,\n \"stop_loss\": 2940.0,\n \"holding_period_days\": 28,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家が指摘する大規模な自社株買いの進捗と直近四半期の順調な増益（EPS+19%）により下値サポートが強固です。\",\n   \"evidence\": \"fundamental_view.points[0]: 累計2,612億円取得済みの自社株買い枠, fundamental_view.points[1]: 2026-06期EPSが前年同期比約19%増\"\n  },\n  {\n   \"reason\": \"テクニカル専門家は短期的な過熱調整でneutralスタンスを示しており、好業績・好需給の材料が織り込み前の押し目水準と判断できます。\",\n   \"evidence\": \"technical_view.stance=neutral (strength=60), technical_view.cautions[0]: 25日線（2976円付近）までの押し目形成\"\n  },\n  {\n   \"reason\": \"中期トレンドのアウトパフォームが維持されており、25日移動平均線近辺が強力な下値支持帯として機能する見込みです。\",\n   \"evidence\": \"price_technical.trend_60d.relative_to_topix_60d_pct=12.01, reference.sma25=2976.38\"\n  }\n ],\n \"risks\": [\n  \"直近の米国市場軟調やADRの下落により、寄り付き後の短期的な調整が長引くリスク（technical_view.cautions[2]）。\",\n  \"日本の長期金利上昇（10年債利回り2.98%）に伴うディフェンシブ・高配当株からの資金流出リスク（fundamental_view.cautions[1]）。\",\n  \"次回日銀金融政策決定会合（2026-10-29〜30）および第2四半期決算発表（2026-11-12）に向けた警戒感による上値の重さ。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "中期的な上昇トレンドは継続していますが、直近では期間高値からの調整局面に入っており、テクニカル指標の悪化と前夜の米国市場の軟調さから短期的な下押しが懸念されます。",
+      "points": [
+        {
+          "point": "中期トレンドはTOPIXを大幅にアウトパフォームしており非常に強固です。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=13.05, price_technical.trend_60d.relative_to_topix_60d_pct=12.01"
+        },
+        {
+          "point": "直近5営業日で価格が5日線を下回り、MACDヒストグラムがマイナス圏へ転じるなど短期的なモメンタムが低下しています。",
+          "evidence": "price_technical.last_close=3031.0, price_technical.sma5=3062.0, price_technical.macd_histogram=-0.58"
+        },
+        {
+          "point": "前夜の米国市場においてADRおよびセクターETFがともに下落しており、寄り付きからの売り圧力が予想されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=-1.14, us_overnight.sector_proxy.change_1d_pct=-1.91"
+        }
+      ],
+      "cautions": [
+        "期間高値3111円からの調整が続いており、25日移動平均線（2976円付近）までの押し目形成を試す可能性があります。",
+        "MACDがシグナルを下回っており、短期的な調整が長引くリスクがあります。",
+        "前夜のADRの下落が当日の寄り付き価格に既に反映されるため、安寄り後のリバウンドの有無を注視する必要があります。"
+      ],
+      "key_levels": {
+        "support": 2976.38,
+        "resistance": 3111.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "堅調な増益トレンドと大規模な自社株買いの着実な進捗が下値を支える中、不採算事業の整理と次世代技術（AI・自動運転）への注力が評価できる局面です。",
+      "points": [
+        {
+          "point": "総額3,000億円規模の自社株買いが継続的に執行されており、需給面での強いサポートが期待されます。",
+          "evidence": "fundamentals.recent_important_disclosures[0]（2026年8月末時点で累計2,612億円を取得済み、残り枠は約387億円）"
+        },
+        {
+          "point": "直近四半期のEPSが前年同期比で約19%増加しており、通期増益計画に向けた順調な進捗が確認できます。",
+          "evidence": "fundamentals.earnings_trend.quarterly（2025-06期のEPS 43.0円に対し、2026-06期は51.33円）"
+        },
+        {
+          "point": "フードデリバリー事業の終了など不採算部門の整理を進める一方で、自動運転バスの本格運行やフィジカルAIへの投資など、成長分野へのリソースシフトが鮮明です。",
+          "evidence": "news.headlines[4]（フードデリバリーサービス終了）、news.headlines[3]（つくば市での自動運転バス10月運行開始）"
+        }
+      ],
+      "cautions": [
+        "データ上の予想PERが1300倍を超えており、一時的な利益減や特殊要因によるEPSの急減リスク、あるいは市場の過大な期待への警戒が必要です（fundamentals.valuation.forward_pe=1300.858）。",
+        "日本の10年債金利が2.9%台まで上昇しており、高配当・ディフェンシブ株としての相対的な魅力が低下する金利感応リスクがあります（macro.rates.jgb_10y_percent=2.981）。",
+        "次回決算発表（2026-11-12）および日銀金融政策決定会合（2026-10-29〜30）が控えており、政策修正による為替・金利変動の影響に注意が必要です。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "NTTデータ、KDDI、日立、JR東が語る「判断の再設計」メソッド、AIとデータどう活用？ - ビジネス+IT",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9tM3U5Wm1tNDFBLXExYzFYTWczVFB6Sm1sTGMzWE9uRDNEbmpzYWdoQ200Y3IxWnl0S1UtRHZhY2tZdno1LXdVZ2tRd1pUREE?oc=5",
+        "published": "Thu, 24 Sep 2026 22:00:00 GMT",
+        "publisher": "ビジネス+IT"
+      },
+      {
+        "title": "次世代シアター「Immersive Zero」に出演者動作連動型3D音響を導入 - KDDI ニュースルーム",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE02ZmpKdU9lTVRpdTA2U2xEV2NfY2tWeVljcTd0dDBORHQtUG96QmROVERCLTBfcEZKR0ExUXhIMDVCM19CZVlaUWRwd3ZhUzhxUDJXT2ZyWEVWUFBYOENreVdaLUJTc3RTV3RSRQ?oc=5",
+        "published": "Thu, 24 Sep 2026 01:00:00 GMT",
+        "publisher": "KDDI ニュースルーム"
+      },
+      {
+        "title": "コンビニの品出しはロボットに? KDDI×韓国RLWRLDが挑む「フィジカルAI」 - Impress Watch",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE05U1dVRDZPMVBWM2UzU1g5Mm1mcDdrd3VYMy11QjJTbExDZTlvRUpmNWE0QkhtQ1dvOUx5N0R4d0hsdFFadmhtRjNBcEJxUng2MzVJYXpHWTBaaVl0OHVHbEJ5TzA?oc=5",
+        "published": "Fri, 25 Sep 2026 00:00:00 GMT",
+        "publisher": "Impress Watch"
+      },
+      {
+        "title": "KDDIら、つくば市で自動運転バスが本格運行へ 筑波大学循環で10月2日開始 - LIGARE（リガーレ）",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBJT2h6N3otdEtLMFlQcHkxOUJLUGtCSTFzZmNlNDNGU2NWRmFmZ2tfRDNZNjN5akV5aE9IUFVBWm0xSDdLVmdUSUliUXVUaS1I?oc=5",
+        "published": "Thu, 24 Sep 2026 23:34:01 GMT",
+        "publisher": "LIGARE（リガーレ）"
+      },
+      {
+        "title": "フードデリバリー市場で再編加速 KDDIはサービス終了 Woltも日本撤退 - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9CNlRDQzBtOHNrZHdwR04xdThia2Y0X29TRHdlTGhRemNmQm5TajctYlNGcU5RUEpkRTM2X1RWeHBJcWI3VU5lcDJaamtoQ01MWkFJQXZlU1U4Z2l6czEzWWtrbTdIcWs?oc=5",
+        "published": "Thu, 24 Sep 2026 08:00:00 GMT",
+        "publisher": "日経ビジネス電子版"
+      },
+      {
+        "title": "国プロ採択されたKDDIとスタートアップが対談 「フィジカルAIの社会実装はここ数年が勝負」 - ビジネスネットワーク",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1saUwxRlhJNEVVUjBOT0had2x1UUkwNU1ZSElUZHhWNzEyNFAxRko5X3I3TUQ1S1Nha3dDN0ZSNVVQX1pTMm1ISGNna1NGY19uamxv?oc=5",
+        "published": "Thu, 24 Sep 2026 04:37:22 GMT",
+        "publisher": "ビジネスネットワーク"
+      },
+      {
+        "title": "【 9/29 (火) 16:00 】オリックス、KDDI、NTTデータの実例に学ぶ 新規事業「最速立ち上げ」のリアル 無料オンラインセミナーを開催 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBqQVEzaGV3NnV2UUZZdUVuanItQTVYQS1fMEdqQTdiT19McklUbmQ3SnhPN1dvS1VqbnBfQ1dZb0h4ZUlBVkViNEhjSTVidHVPWFg3WGJhUGZ1V1BMb29wT2xfbktxTGR0UVE?oc=5",
+        "published": "Thu, 24 Sep 2026 04:30:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "027年の完全無人化を見据えて！関東鉄道やKDDIらが「筑波大学循環」で自動運転バスを運行 - DXマガジン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1hcXA1aXM2VlZFN1FwWm80QnU3OWJvcGFpV25oM3U3SkstZE5jZGI1c0UyQTJRRVdJcWFadElvTE1tT1duRTNxVDFqM2M?oc=5",
+        "published": "Thu, 24 Sep 2026 10:05:01 GMT",
+        "publisher": "DXマガジン"
+      },
+      {
+        "title": "フードデリバリー市場で再編加速 KDDIはサービス終了 Woltも日本撤退 - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPb2FOZDNxTXJNbTc5b0Q1cUlENkZKUm52VjVnTVlLaDR2Y3BkSVhtNE9JRXNYM25FVlFNZzYzdFBPOVJpYWdCUWZ6R1RRNDVQY3NCenRBb0k4Z0Rnc0NEUXQ1TmQtV0c0el80ZjRlYkRjLWtlcUFUM3RSX2VlZm5SSktDaGFoZl9ZeFdxLQ?oc=5",
+        "published": "Thu, 24 Sep 2026 08:21:04 GMT",
+        "publisher": "日経ビジネス電子版"
+      },
+      {
+        "title": "画像17 / 19＞夏休みの自由研究にも！銀座でカーボンニュートラルについて楽しく無料で学べる「GINZA 456 Created by KDDI」をナビゲート - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBvNzlPQnhmc3NJUHJNZFN2WnRzcm9yMW53TkQxYXh0MzJBVzVrVkRMMjlEakxkYVgtWlJvTDl5aGNzNnVzMThFTFN0bWw5T1hvb05RdGlJeUpnQWpRNGJiTGVSRExSa3F4UFVJb3FB?oc=5",
+        "published": "Thu, 24 Sep 2026 05:08:30 GMT",
+        "publisher": "ウォーカープラス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533350.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-09-25T09:41:04+09:00",
+  "price_as_of": "2026-09-25",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 45,
+    "reasons": [
+      {
+        "reason": "直近14日以内にbuyシグナルを発行済みのため、新規の買いは出さず継続監視とします。",
+        "evidence": "reference.recent_buy"
+      },
+      {
+        "reason": "テクニカル指標は中期的な上昇トレンドが継続していることを示唆していますが、短期的な調整局面に入り上値が重くなる可能性もあります。",
+        "evidence": "technical_view.stance=bullish (strength=70), technical_view.summary, technical_view.cautions[0]"
+      },
+      {
+        "reason": "ファンダメンタルズは業績モメンタムの鈍化と訴訟の不確実性がある一方、欧州での製品承認勧告といったポジティブな材料も存在し、中立的な見解です。",
+        "evidence": "fundamental_view.stance=neutral (strength=50), fundamental_view.summary"
+      }
+    ],
+    "risks": [
+      "2026年10月30日に次回の決算発表が予定されており、その内容が株価に影響を与える可能性があります。",
+      "2026年10月29日～10月30日に日銀金融政策決定会合が開催予定であり、金融政策の変更が市場全体および個別銘柄に影響を与える可能性があります。",
+      "現在係争中の損害賠償請求訴訟の最終的な結果によっては、業績や企業イメージに影響が出る可能性があります。",
+      "前夜の米国ADRが大きく下落している点や短期的な調整局面の継続により、翌日の寄り付き以降に売り圧力がかかる可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 45,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内にbuyシグナルを発行済みのため、新規の買いは出さず継続監視とします。\",\n   \"evidence\": \"reference.recent_buy\"\n  },\n  {\n   \"reason\": \"テクニカル指標は中期的な上昇トレンドが継続していることを示唆していますが、短期的な調整局面に入り上値が重くなる可能性もあります。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=70), technical_view.summary, technical_view.cautions[0]\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは業績モメンタムの鈍化と訴訟の不確実性がある一方、欧州での製品承認勧告といったポジティブな材料も存在し、中立的な見解です。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=50), fundamental_view.summary\"\n  }\n ],\n \"risks\": [\n  \"2026年10月30日に次回の決算発表が予定されており、その内容が株価に影響を与える可能性があります。\",\n  \"2026年10月29日～10月30日に日銀金融政策決定会合が開催予定であり、金融政策の変更が市場全体および個別銘柄に影響を与える可能性があります。\",\n  \"現在係争中の損害賠償請求訴訟の最終的な結果によっては、業績や企業イメージに影響が出る可能性があります。\",\n  \"前夜の米国ADRが大きく下落している点や短期的な調整局面の継続により、翌日の寄り付き以降に売り圧力がかかる可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "中期的な上昇トレンドが継続しており、短期的な調整を経ても主要な移動平均線やMACDは上向きを示しています。ただし、直近は調整局面に入っており、短期的な上値の重さが警戒されます。",
+      "points": [
+        {
+          "point": "過去60営業日で株価は大幅に上昇し、TOPIXに対しても優位なパフォーマンスを見せており、中期的な上昇トレンドが明確です。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=13.59%, price_technical.trend_60d.relative_to_topix_60d_pct=12.54%"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線を上回るゴールデンクロスを形成しており、株価も25日移動平均線を上回って推移しているため、短期的なトレンドは良好です。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\", price_technical.last_close=2880.0, price_technical.sma25=2836.42"
+        },
+        {
+          "point": "MACDはプラス圏で推移し、MACDヒストグラムもプラスであることから、上昇モメンタムが継続していることを示唆しています。",
+          "evidence": "price_technical.macd=20.99, price_technical.macd_histogram=11.4"
+        },
+        {
+          "point": "RSIは中立水準（49.4）であり、株価に過熱感や売られすぎの懸念は見られません。",
+          "evidence": "price_technical.rsi14=49.4"
+        }
+      ],
+      "cautions": [
+        "直近2営業日では株価が下落または横ばいとなっており、一時的な調整局面が続く可能性があります。",
+        "前夜の米国ADRが大きく下落しているため、翌日の寄り付きには売り圧力がかかる可能性があります。",
+        "市場全体がニュートラルなレジームにあるため、個別の銘柄が大きく上昇する際の外部環境には注意が必要です。",
+        "株価は直近で5日移動平均線（2897.1）を下回って推移しており、短期的な上値抵抗となる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 2836.42,
+        "resistance": 2958.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "第一三共は、直近の業績トレンドに減速が見られる一方、欧州での承認勧告といったポジティブな材料と、訴訟に関する不確実性が混在しており、中立的な見解を維持します。",
+      "points": [
+        {
+          "point": "直近の年次および四半期業績において、EPSが前年比で減少傾向にあり、業績モメンタムの鈍化が懸念されます。",
+          "evidence": "fundamentals.earnings_trend.annual[0].diluted_eps=140.37 (2026-03), fundamentals.earnings_trend.annual[1].diluted_eps=155.87 (2025-03), fundamentals.earnings_trend.quarterly[0].diluted_eps=37.7 (2026-06), fundamentals.earnings_trend.quarterly[1].diluted_eps=46.01 (2025-06)"
+        },
+        {
+          "point": "欧州医薬品庁がハーセプチンについてHER2陽性早期乳がん術後薬物療法での承認を勧告したとのニュースは、製品ラインアップにとってポジティブな材料です。",
+          "evidence": "news.headlines[1].title=ハーセプチン HER2陽性早期乳がん術後薬物療法で欧州医薬品庁が承認勧告 第一三共"
+        },
+        {
+          "point": "当社が勝訴した損害賠償請求訴訟に関して、相手方からの控訴が報じられており、以前の勝訴のポジティブな影響が不確実になる可能性があります。",
+          "evidence": "disclosures.items[0].title=当社に対するNTKからの損害賠償等請求訴訟に関する判決（勝訴）のお知らせ, news.headlines[0].title=IHH ヘルスケアの子会社、第一三共に関する東京地裁判決を不服として控訴"
+        },
+        {
+          "point": "PERは20倍前後で特段の割安感はなく、配当利回りは3.47%と比較的魅力的ですが、業績のモメンタムが鈍化している状況では、これだけを主因に強気判断はできません。",
+          "evidence": "fundamentals.valuation.trailing_pe=21.053, fundamentals.valuation.forward_pe=20.061, fundamentals.valuation.dividend_yield_percent=3.47"
+        }
+      ],
+      "cautions": [
+        "2026年10月30日に次回の決算発表が予定されており、その内容が株価に影響を与える可能性があります。",
+        "2026年10月29日～10月30日に日銀金融政策決定会合が開催予定であり、金融政策の変更が市場全体および個別銘柄に影響を与える可能性があります。",
+        "現在係争中の損害賠償請求訴訟の最終的な結果によっては、業績や企業イメージに影響が出る可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-17",
+    "days_ago": 8,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "IHH ヘルスケアの子会社、第一三共に関する東京地裁判決を不服として控訴 執筆 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFA4YUFzajNxaHRacVJveFpqNEtKSzJUNUZieW10anNBYkxOanBBQVB1c3NDQTVHN0pQdVFpNHdkc0JFbzUyUktnSC04Uzl1M0taY2xXYmpxSHBaTTU4NEpRbTgyVUZ0VnlVYld6QnF1XzRlR1Y1OG5N?oc=5",
+        "published": "Thu, 24 Sep 2026 10:28:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      },
+      {
+        "title": "ハーセプチン HER2陽性早期乳がん術後薬物療法で欧州医薬品庁が承認勧告 第一三共 - 医薬通信社",
+        "url": "https://news.google.com/rss/articles/CBMi0wJBVV95cUxNQnh0OF9tcE5pd2NnXzVBaU5QRjNmUHZfaURnZDJxT0hMZUdqekNsSVhtRC1UbWlBM0FBUTJtQk1zQVVIVTREek1kV1JCWmxFZXhsOWZmMm5wcWhmb3g3M2NJckgtODRUTXp6ZGFuQ1VOUDMwYTBBYTlYaUVXcVJuQjZkUy0yaTk4Qi05OEUtWVFyUkwyZXVKamVKUHFpVWdyWHJfdDRBRjN3RmxHdDJVZmF4Ti1IY1ZNS0Vta1BHQ1JZVkVGRUpUSXFKVUFKVTRRQ24ydlJ6Tl9VT1VOUldkTUc5MEZkYVgyTnB5RGV3LTZhMnQ3TEJFZ1YyeDFReGVseEk5QlB6MmZrR05hUEMtUEZwZHAzSlVlNk9IVWs2NjJ1SHdmYXZDZFFMUEV2TDFYTUxnSlp6dnFTWmFSMWJRaW0zU1lWTkhodkdmS0tsZUtNblk?oc=5",
+        "published": "Thu, 24 Sep 2026 08:13:29 GMT",
+        "publisher": "医薬通信社"
+      },
+      {
+        "title": "IHHヘルスケア子会社、11億ドルの損害賠償請求を退けた東京地裁判決を不服として控訴 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5ZTDUtbXUtRzV2TjZKNV9xRlgzZ0puUHZOcTdmM0dsYnBZSGZWWXpFNndWTmUwN2lqRmE4LURrSkhYb2M2T2szbG9fanBLZHIxc0JxOVVpLUpOLXcySkN2aEYycmZ5M2hJN0twSm9RYXVZMTli?oc=5",
+        "published": "Thu, 24 Sep 2026 11:25:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "「ミノン アミノモイスト エッセンス クレンジングオイル」 - アスヤクLABO",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1ERXhwOEFha05KWHV3LVd4SURoTEZrRnpkZGlpbHlUUy1Mcnd5VWVXNFI1UFpENUo0R3BLcFBLSDZLYU5pblZ1NjN6RHM?oc=5",
+        "published": "Thu, 24 Sep 2026 01:59:35 GMT",
+        "publisher": "アスヤクLABO"
+      },
+      {
+        "title": "＜画像1 / 4＞石塚英彦とANZEN漫才(みやぞん・あらぽん)がメキシカン風ユニットでデビュー!? - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9Wdk45aURHZkYydzJOYWZleHVZNmNZNXpUZ0htdjh4bmxnN1JNal9nd1J5UHJjV2VNN29ia2xHbktIVlNzREFTekhsQmxTN2N4QWJ0MnM4cm9GSVROT3N5N2QwM1ptNDdBZWZ3?oc=5",
+        "published": "Thu, 24 Sep 2026 04:46:51 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "日本株ＡＤＲ・円換算終値 - みんかぶ FX/為替",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1GNWstV0pfWDJkaTdWdy1tZWJqRE5aLS1ualBRdGF4SzJJRy1HOGJfb0J2WDl3emFTc0MwY1o2XzhzQk5lUVcxZQ?oc=5",
+        "published": "Thu, 24 Sep 2026 22:40:57 GMT",
+        "publisher": "みんかぶ FX/為替"
+      },
+      {
+        "title": "日経平均は続伸、アドバンテが約316円分押し上げ - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPd2JocnptbkZpU2U1RW51YWlGQjRfek9QWWJPN3V4OTNyT3NmNkhuc1JNc2g1U1U0UFhmWEZMSXBCSjBzZGFDS1Jac0lNS045NTF2VV9ZLXMyUy1jQ3ZDMW9BbExza3NjSlF1TE9GMkpXVUdaazY2dFcyY3kxbHhMblB4VzhnRk9KcjVCd9IBjAFBVV95cUxPd2JocnptbkZpU2U1RW51YWlGQjRfek9QWWJPN3V4OTNyT3NmNkhuc1JNc2g1U1U0UFhmWEZMSXBCSjBzZGFDS1Jac0lNS045NTF2VV9ZLXMyUy1jQ3ZDMW9BbExza3NjSlF1TE9GMkpXVUdaazY2dFcyY3kxbHhMblB4VzhnRk9KcjVCdw?oc=5",
+        "published": "Thu, 24 Sep 2026 03:35:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "日経平均は4日続伸、買い一巡後は上値の重い展開 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPYU11RzZKUHJzcy1sRUxnNDNUVS03Z2RLZERHUE85MXduV1NrcE5EUlcxVDZtQ3drVlFqMlEwTUUwd1pFNFhPWEM1QThabWZYODZXQkU0dTVkTWtfeFQ1Y2tJVXBIaFgtRWNDYVhJS0pIdEFyaDA4NmVFd3JSalJsS25hWFBUQ0s3VTRaZNIBjAFBVV95cUxPYU11RzZKUHJzcy1sRUxnNDNUVS03Z2RLZERHUE85MXduV1NrcE5EUlcxVDZtQ3drVlFqMlEwTUUwd1pFNFhPWEM1QThabWZYODZXQkU0dTVkTWtfeFQ1Y2tJVXBIaFgtRWNDYVhJS0pIdEFyaDA4NmVFd3JSalJsS25hWFBUQ0s3VTRaZA?oc=5",
+        "published": "Thu, 24 Sep 2026 06:43:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "今売れている「シャンプー」おすすめ3選＆ランキング【2026年9月版】 | ヘアケア・スタイリング Fav-Log by ITmedia - ねとらぼ",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9VR1NKTUNscldmR1JkZUhWMjNZcWhFdG9XcG1xTGdxYXp2a2JIR0F1VGxKNXlkeEpCX3BvMUV4aENNb1V0Z1RhN0ZIbTJvdmMxX096M1ROUFh3RFdaOGdHVUl30gFiQVVfeXFMT1VHU0pNQ2xyV2ZHUmRlSFYyM1lxaEV0b1dwbXFMZ3FhenZrYkhHQXVUbEo1eWR4SkJfcG8xRXhoQ01vVXRnVGE3RkhtMm92YzFfT3ozVE5QWHdEV1o4Z0dVSXc?oc=5",
+        "published": "Thu, 24 Sep 2026 02:30:00 GMT",
+        "publisher": "ねとらぼ"
+      },
+      {
+        "title": "後場に注目すべき3つのポイント〜半導体関連主導で上げ幅拡大 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQRXk1dnl5MXZWeGxCVHdqeHVSaDg0RWYtQTJvOE80b0dOOVUzT3k1NFR0Xy1KU0pkam54bExhR2NFU1BGeDhIS1R5WWhqU2VGSmRnejAyWVpiZXZNUVdQWXdlNFZlWU5qWklYa095d3FOMmlUZnFTNmNOSE5kNURKRjVZNnNqbFpILXphM9IBjAFBVV95cUxQRXk1dnl5MXZWeGxCVHdqeHVSaDg0RWYtQTJvOE80b0dOOVUzT3k1NFR0Xy1KU0pkam54bExhR2NFU1BGeDhIS1R5WWhqU2VGSmRnejAyWVpiZXZNUVdQWXdlNFZlWU5qWklYa095d3FOMmlUZnFTNmNOSE5kNURKRjVZNnNqbFpILXphMw?oc=5",
+        "published": "Thu, 24 Sep 2026 03:28:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "当社に対するNTKからの損害賠償等請求訴訟に関する判決（勝訴）のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260910534407.pdf",
+        "date": "2026-09-10 17:00:00"
+      },
+      {
+        "title": "（開示事項の変更）第一三共ビジネスアソシエの吸収合併（簡易合併・略式合併）の効力発生日変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824525305.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "（再訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514622.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2025年度決算および第6期中期経営計画説明会」資料の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514744.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正・数値データ訂正）「2026年３月期 決算短信〔IFRS基準〕(連結)」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504176.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504099.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算補足資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504168.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504173.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "当社米国子会社役職員に対する信託型株式付与制度の継続のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504240.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587542.pdf",
+        "date": "2026-07-16 15:30:00"
+      }
+    ]
+  }
+}

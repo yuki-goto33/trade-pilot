@@ -1,0 +1,206 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-09-25T09:30:12+09:00",
+  "price_as_of": "2026-09-24",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 45,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズはAI投資加速や巨額の利益予想で非常に強力（strength=75）だが、テクニカルがbearish（弱気）であるため、統合判断ルールに従い「押し目確認待ち」のholdとする。",
+        "evidence": "fundamental_view.strength=75 / technical_view.stance=bearish"
+      },
+      {
+        "reason": "米国市場でのADRが7.5%超の急落を見せており、寄り付きからの強い売り圧力が予想されるため、安易なエントリーは避けるべき局面である。",
+        "evidence": "technical_view.points[1]: us_overnight.adr.change_1d_pct=-7.51"
+      },
+      {
+        "reason": "中期的なトレンドが依然として脆弱であり、60日騰落率が市場対比で大幅なマイナスとなっているため、トレンド転換の確認が必要である。",
+        "evidence": "technical_view.points[0]: price_technical.trend_60d.change_60d_pct=-10.76"
+      }
+    ],
+    "risks": [
+      "ADRの急落に引きずられ、サポートラインである25日移動平均線（5736.4円）を割り込むリスク。",
+      "1.7兆円規模の巨額外債発行による有利子負債の増大と、今後の金利上昇局面における利払い負担の増加。",
+      "次回日銀会合（10/29-30）および次回決算発表（11/11）に向けた市場ボラティリティの増大。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 45,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズはAI投資加速や巨額の利益予想で非常に強力（strength=75）だが、テクニカルがbearish（弱気）であるため、統合判断ルールに従い「押し目確認待ち」のholdとする。\",\n      \"evidence\": \"fundamental_view.strength=75 / technical_view.stance=bearish\"\n    },\n    {\n      \"reason\": \"米国市場でのADRが7.5%超の急落を見せており、寄り付きからの強い売り圧力が予想されるため、安易なエントリーは避けるべき局面である。\",\n      \"evidence\": \"technical_view.points[1]: us_overnight.adr.change_1d_pct=-7.51\"\n    },\n    {\n      \"reason\": \"中期的なトレンドが依然として脆弱であり、60日騰落率が市場対比で大幅なマイナスとなっているため、トレンド転換の確認が必要である。\",\n      \"evidence\": \"technical_view.points[0]: price_technical.trend_60d.change_60d_pct=-10.76\"\n    }\n  ],\n  \"risks\": [\n    \"ADRの急落に引きずられ、サポートラインである25日移動平均線（5736.4円）を割り込むリスク。\",\n    \"1.7兆円規模の巨額外債発行による有利子負債の増大と、今後の金利上昇局面における利払い負担の増加。\",\n    \"次回日銀会合（10/29-30）および次回決算発表（11/11）に向けた市場ボラティリティの増大。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "短期的な指標は好転しているものの、60日騰落率が市場対比で大幅なマイナスであり、中期的な下落トレンドを脱していません。前夜ADRの急落も加わり、戻り売り圧力が強まる展開を予想します。",
+      "points": [
+        {
+          "point": "中期トレンドの脆弱性が継続しており、60日騰落率および対TOPIX相対騰落率がともにマイナス圏で推移しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-10.76, price_technical.trend_60d.relative_to_topix_60d_pct=-11.81"
+        },
+        {
+          "point": "前夜の米国市場でADRが7%を超える大幅な下落を見せており、当日の寄り付きからの強い売り圧力が懸念されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=-7.51"
+        },
+        {
+          "point": "直近5営業日は続伸し、MACDもシグナルを上回るゴールデンクロス状態にありますが、中期トレンドの弱さを覆すには至っていません。",
+          "evidence": "price_technical.macd=245.38, price_technical.macd_signal=210.68, price_technical.sma5_vs_sma25=\"golden\""
+        }
+      ],
+      "cautions": [
+        "ADRの急落が寄り付き価格に完全に織り込まれた場合、自律反発を狙った押し目買いが入る可能性があります。",
+        "日経平均株価が強い上昇を示しており（+1.26%）、指数寄与度の高い当該銘柄が市場全体の地合いに引き上げられるリスクがあります。"
+      ],
+      "key_levels": {
+        "support": 5736.4,
+        "resistance": 6959.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "AI分野（OpenAI等）への大規模な再投資に向けた1.7兆円規模の外債発行という強力なカタリストが出現。投資事業特有の利益の振れ幅はあるものの、2026年3月期の巨額な最終利益予想と円安環境が資産価値の押し上げに寄与する見通しです。",
+      "points": [
+        {
+          "point": "1.7兆円規模の外貨建て社債発行によるAI投資の加速。OpenAIへの投資資金確保など、成長戦略が明確化している。",
+          "evidence": "news（2026-09-24: ソフトバンクグループが外貨建て社債1.7兆円発行 AI投資に資金調達加速）"
+        },
+        {
+          "point": "2026年3月期の連結純利益が5兆円を超える大幅な増益予想となっており、投資評価益の拡大が期待される。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=50023"
+        },
+        {
+          "point": "1ドル158円台の円安基調は、海外投資資産の円建て評価額を押し上げる要因としてポジティブに働く。",
+          "evidence": "macro.indices[2].close=158.76"
+        }
+      ],
+      "cautions": [
+        "1.7兆円に及ぶ巨額の外債発行による有利子負債の増大と、それに伴う利払い負担および為替変動リスク。",
+        "営業利益段階では赤字予想となっており、本業のキャッシュフローよりも投資先の時価評価に業績が大きく左右される不安定さ。",
+        "次回決算発表（2026-11-11）および日銀金融政策決定会合（2026-10-29〜30）に伴うボラティリティの上昇。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソフトバンクグループが外貨建て社債1.7兆円発行 AI投資に資金調達加速 - テレ東BIZ",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9sUnpWTkRSNjAyWVl3c2J0TU5QMjR3QWl6T2R2SnV3SFJzc2k0bG1maW1wZjB6VHRkd2FDa0I2MjQ0czg5dEoybFVBdGQtQXNGMkU4Wjl5c2hOdFhCOFE?oc=5",
+        "published": "Thu, 24 Sep 2026 07:54:00 GMT",
+        "publisher": "テレ東BIZ"
+      },
+      {
+        "title": "ソフトバンクグループが外貨建て社債1兆7600億円発行 AI投資に資金調達を加速 - 産経ニュース",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFA3Tk1CN3Fid2JTcDNLRUtNTUY5TE1qenctV2JYNlR5dkFqLTYwUFF5bkFqUlFtYVI5VXlocmk2cjZZWVJzY2FHRjJ4M0hUMGNIS1V6N1kySlBaSUIyTDk2WGljWXpvTUZZeEtxS3dNZm8wMFFteVE?oc=5",
+        "published": "Thu, 24 Sep 2026 02:27:28 GMT",
+        "publisher": "産経ニュース"
+      },
+      {
+        "title": "ソフトバンクグループ、1.7兆円外債発行 - nippon.com",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1ZS1BLdC1UTDlPT3E0ektBS2ZRYktBRjJNUjU2VnlBWThpU19ITXhwdGdyLXFDaFFqUXd1TWh2cWczZVYwXzBOZDVtT0JaelotUk9qQV94OFBqU3hjdlBudUJBZw?oc=5",
+        "published": "Thu, 24 Sep 2026 02:09:02 GMT",
+        "publisher": "nippon.com"
+      },
+      {
+        "title": "ソフトバンクグループ、１・７兆円外債発行 - 沖縄タイムス社",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE4zU2c4bzhLclRKQXFUOWlRM1ZjYnZYUmNDQkNCblMtNkZSdnZmZS1JRTBoeFZVRnV3NGJ3OW1TcUdVcVZRU3F1QmIyd2FxR2tkYnZLYUU1V2QyWUhQQmc?oc=5",
+        "published": "Thu, 24 Sep 2026 02:08:34 GMT",
+        "publisher": "沖縄タイムス社"
+      },
+      {
+        "title": "【速報】ソフトバンクグループ、1.7兆円外債発行 - 47NEWS",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1fQ0d0ZzF4WlRZSjNJRDBZbUtmTU83ZnpGaFhXS1VuY3BVZzd2UHljcWdBMFg0M1lqajhuS1M5OTJCTC1SNXlJTVp2bw?oc=5",
+        "published": "Thu, 24 Sep 2026 02:08:34 GMT",
+        "publisher": "47NEWS"
+      },
+      {
+        "title": "ソフトバンクグループ、１・７兆円外債発行 - 京都新聞デジタル",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1YckN6dlRIaV9yMFRYY2hyeHZjVXNkWE5FNDVYOTJIOUljaVU2T0JyUTBKTHJZbVVHOXU5cjlSNk9ZRERfMTJ0QTBHWFBfenRESC15SjVGbXk?oc=5",
+        "published": "Thu, 24 Sep 2026 02:08:34 GMT",
+        "publisher": "京都新聞デジタル"
+      },
+      {
+        "title": "ソフトバンクグループ、１・７兆円外債発行 - 下野新聞社",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB3SDBPb2J6NU5scXhwNC1rWGVqdTFNSjZINUttZmN0eko1YW1fVnc3SnRHc05ZdlItdHlZZlhsdlh6Y1prSEd4NjBINHJJME9ZazZRV0VSOTl2UThNQ2NES1JLT1pYazdkTHlwc2dnbw?oc=5",
+        "published": "Thu, 24 Sep 2026 02:19:58 GMT",
+        "publisher": "下野新聞社"
+      },
+      {
+        "title": "ソフトバンクグループ、1.7兆円外債発行 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQcVZtaGt1TEl1MGYwNWdjYlVTb3RScWxIRml3Z01KWVNKMWJvLUhaNFpNMFVIbTdmS0tkM18zdEZkSWtMRlVfTUFtYVJrMkhKMVBXeWtsSzJxclJybTgwalNOdnRCWDVJNnkyeGxSZkFPUmV4TWxmY0JRQ2FaZ1lTLTZndXhGb2N2cjJfZlNR0gGTAUFVX3lxTE9scDZvdElDVld6Qkx5SmlRakZPMkdWdFdpSXFCRlVRWmdSMkJ0RWxtSUtGUF9vb3E2MHBXbzV6cWwwVy1DTEdFaWZ1TGU0S3R5UHJmTmRVS09NejFRc0pYcXVQX3Z6OXZZMUNaZzRKZzFqSTAyNS1YV3N0SHN0clN0dnZqYXFEelRSVUdlbHpqWUQ1MA?oc=5",
+        "published": "Thu, 24 Sep 2026 02:08:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "ソフトバンクグループ、OpenAI投資向けに約1.6兆円の社債を発行 執筆 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBUWHRPZjFuaXhmMFNIdzhMNE1QdVlWaUVEM19Xam8xZHJsbWstWkJnX29qT1dnMnJMa2I3UzRyNDdXSE14cW5nQlltQVpqSEs5TTFfUW9wNDBpT3JHdHVhc19JOGswVk1odk5rRmU4UGI3U3VxY3VJ?oc=5",
+        "published": "Thu, 24 Sep 2026 01:44:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      },
+      {
+        "title": "ソフトバンクグループ、１・７兆円外債発行 - 徳島新聞デジタル",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBiZDV2Q2J2TVlUMGdZVVV6cHR1bzF3WDVoVURabGFUOUlyTFB3SU5YOVJkRXNqNUN3OWJWWUl2SUJxVjhjQlhEWkRTSGJ3SjI4NzlYY1lB?oc=5",
+        "published": "Thu, 24 Sep 2026 02:08:34 GMT",
+        "publisher": "徳島新聞デジタル"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "外貨建シニア社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260924539094.pdf",
+        "date": "2026-09-24 08:00:00"
+      },
+      {
+        "title": "ブリッジローンの期限前返済に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533573.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260904531576.pdf",
+        "date": "2026-09-04 10:30:00"
+      },
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得の完了時期の変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260828527943.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824524817.pdf",
+        "date": "2026-08-24 09:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510515.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行内容確定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503871.pdf",
+        "date": "2026-07-30 17:00:00"
+      },
+      {
+        "title": "第68回及び第69回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501484.pdf",
+        "date": "2026-07-29 10:30:00"
+      },
+      {
+        "title": "OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260701586249.pdf",
+        "date": "2026-07-01 16:00:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577089.pdf",
+        "date": "2026-06-24 16:00:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-09-25T09:39:56+09:00",
+  "price_as_of": "2026-09-25",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近14日以内にBuyシグナルを発行済みであり、その継続監視のため新規のエントリーは行わない判断とする。",
+        "evidence": "reference.recent_buy"
+      },
+      {
+        "reason": "ファンダメンタルズ専門家は、2期連続増収増益の達成と来期計画、自己株式取得による株主還元、良好なマクロ経済環境を背景に強気見通しである。",
+        "evidence": "fundamental_view.stance=bullish (strength=75), fundamental_view.points[0], fundamental_view.points[1], fundamental_view.points[2]"
+      },
+      {
+        "reason": "テクニカル専門家も、25日移動平均線を上回る株価、5日線と25日線のゴールデンクロス、MACDの好転から中期的な上昇トレンド継続を示唆しており強気である。",
+        "evidence": "technical_view.stance=bullish (strength=75), technical_view.points[1], technical_view.points[3]"
+      },
+      {
+        "reason": "両専門家が強気姿勢で一致しているため、材料は既に株価に織り込まれている可能性があり、新規のBuyシグナルとしては不適当である。",
+        "evidence": "technical_view.stance=bullish, fundamental_view.stance=bullish (統合判断ルール)"
+      }
+    ],
+    "risks": [
+      "次回決算発表日（2026年10月29日）の内容によっては株価が大きく変動する可能性がある。",
+      "日銀金融政策決定会合（2026年10月29日〜30日）の結果が市場全体に影響を与える可能性がある。",
+      "現在のバリュエーション（PER、PBR）は市場平均と比較してやや高水準であり、業績の進捗が期待を下回る場合、株価にネガティブな影響を与える可能性がある。",
+      "前夜のNY市場ADR下落が、当日の寄り付きに売り圧力をかける可能性がある。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内にBuyシグナルを発行済みであり、その継続監視のため新規のエントリーは行わない判断とする。\",\n   \"evidence\": \"reference.recent_buy\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ専門家は、2期連続増収増益の達成と来期計画、自己株式取得による株主還元、良好なマクロ経済環境を背景に強気見通しである。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=75), fundamental_view.points[0], fundamental_view.points[1], fundamental_view.points[2]\"\n  },\n  {\n   \"reason\": \"テクニカル専門家も、25日移動平均線を上回る株価、5日線と25日線のゴールデンクロス、MACDの好転から中期的な上昇トレンド継続を示唆しており強気である。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=75), technical_view.points[1], technical_view.points[3]\"\n  },\n  {\n   \"reason\": \"両専門家が強気姿勢で一致しているため、材料は既に株価に織り込まれている可能性があり、新規のBuyシグナルとしては不適当である。\",\n   \"evidence\": \"technical_view.stance=bullish, fundamental_view.stance=bullish (統合判断ルール)\"\n  }\n ],\n \"risks\": [\n  \"次回決算発表日（2026年10月29日）の内容によっては株価が大きく変動する可能性がある。\",\n  \"日銀金融政策決定会合（2026年10月29日〜30日）の結果が市場全体に影響を与える可能性がある。\",\n  \"現在のバリュエーション（PER、PBR）は市場平均と比較してやや高水準であり、業績の進捗が期待を下回る場合、株価にネガティブな影響を与える可能性がある。\",\n  \"前夜のNY市場ADR下落が、当日の寄り付きに売り圧力をかける可能性がある。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "株価は25日移動平均線を明確に上回り、5日線も25日線を上抜けるゴールデンクロスを形成しています。MACDも好転し上昇モメンタムを示しており、中期的な上昇トレンドも継続しているため強気の見通しです。",
+      "points": [
+        {
+          "point": "中期トレンドは明確な上昇基調を維持しており、TOPIXに対しても大幅にアウトパフォームしています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=22.76%, price_technical.trend_60d.relative_to_topix_60d_pct=21.71%"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線を上回るゴールデンクロスを形成しており、短期的な上昇トレンドの継続を示唆しています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\""
+        },
+        {
+          "point": "株価は5日移動平均線および25日移動平均線を上回って推移しており、直近5営業日では上昇基調にあります。",
+          "evidence": "price_technical.last_close=5497.0, price_technical.sma5=5473.0, price_technical.sma25=5343.72, price_technical.recent_5_days"
+        },
+        {
+          "point": "MACDヒストグラムがプラス圏にあり、上昇モメンタムが強まっていることを示唆しています。",
+          "evidence": "price_technical.macd_histogram=38.08"
+        },
+        {
+          "point": "RSI14は57.8と買われすぎ水準ではなく、価格上昇の余地があると考えられます。",
+          "evidence": "price_technical.rsi14=57.8"
+        }
+      ],
+      "cautions": [
+        "前夜のNY市場でADRが2.1%下落しており、当日の寄り付きに売り圧力がかかる可能性があります。",
+        "市場全体（TOPIX）はニュートラルレジームであり、25日移動平均線を下回っているため、全体相場からの強い押し上げは期待できないかもしれません。"
+      ],
+      "key_levels": {
+        "support": 5343.72,
+        "resistance": 5524.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "日立製作所は、堅調な業績拡大トレンドに加え、直近の自己株式取得による株主還元強化、そして良好なマクロ経済環境を背景に、投資価値は高いと判断します。",
+      "points": [
+        {
+          "point": "年次業績は2期連続で増収増益を達成し、2026年3月期も増収増益を計画しており、堅調な拡大トレンドが継続しています。",
+          "evidence": "fundamentals.earnings_trend.annual[0].revenue_oku_jpy=105868, fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=11993, fundamentals.earnings_trend.annual[1].revenue_oku_jpy=97834, fundamentals.earnings_trend.annual[1].operating_income_oku_jpy=9716, fundamentals.earnings_trend.annual[2].revenue_oku_jpy=97287, fundamentals.earnings_trend.annual[2].operating_income_oku_jpy=7558"
+        },
+        {
+          "point": "2026年9月2日に自己株式の取得状況が発表され、株主還元への積極的な姿勢が示されており、EPS押し上げ効果が期待できます。",
+          "evidence": "fundamentals.recent_important_disclosures[0].date=2026-09-02, fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "日本の製造業・サービス業PMIはともに50を上回り景気拡大を示しており、日銀短観の大企業業況判断DIも堅調で、同社の事業活動に追い風となるマクロ環境です。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.1, macro.japan_pmi.services.latest_value=51.6, macro.boj.tankan.di.large_manufacturing.current_di=22.0, macro.boj.tankan.di.large_nonmanufacturing.current_di=37.0"
+        },
+        {
+          "point": "直近のニュースではAI活用や鉄道事業における取り組みなど、デジタルソリューションとグローバル展開に関する積極的な戦略が報じられています。",
+          "evidence": "news.headlines[2].title='世界の鉄道でAI活用の波 日立製作所などが売り込み 欧州で展示会 [AIの時代] - 朝日新聞', news.headlines[3].title='日立とBIPROGYがメインフレーム撤退を決断、次代を見据えた一手 - active.nikkeibp.co.jp'"
+        }
+      ],
+      "cautions": [
+        "次回決算発表日が2026年10月29日に予定されており、内容によっては株価変動要因となる可能性があります。",
+        "日銀金融政策決定会合が2026年10月29日〜30日に開催されるため、金融政策の変更が市場全体に影響を与える可能性があります。",
+        "現在のバリュエーション（PER31.251倍、PBR3.75倍）は市場平均と比較してやや高水準であり、業績の進捗が期待を下回る場合、株価にネガティブな影響を与える可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-14",
+    "days_ago": 11,
+    "confidence": 75,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "円滑なコミュニケーションの実現：日立グループにおける社内ITの取り組み：日立 - Hitachi Global",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9IVG1UMkRQV2N6X0NYQlRDRm1EaEs3TjM3eldKNlBkMFNNZmdEd1J0enU5ajF3SHM2MW1NZGpyaW5HNTRnSU15cHd0dmExZFhXVW5oZm4zQXpuTHJSc0p3aVJ3?oc=5",
+        "published": "Thu, 24 Sep 2026 21:24:47 GMT",
+        "publisher": "Hitachi Global"
+      },
+      {
+        "title": "(株)日立製作所【6501】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE55YktlVWgwaFo0cHlWS0xqWDhtN2tQUGd1RVlXVkxFam82U1RnVy01V1hfYzgwcXc5cUE3NTFkMDRPN3p2WkNDWHA4UWZXQTdndmFsNDhMUUw1dGVYVS1r?oc=5",
+        "published": "Thu, 24 Sep 2026 06:53:36 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "世界の鉄道でAI活用の波 日立製作所などが売り込み 欧州で展示会 [AIの時代] - 朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5vZG05VWFGVGpxN0dGcjc2Ri1MXzY0eTk4OWJIQWR1QlQ0Q0tMSUhyOXpUQzFXblA4LTA2Y3JCMmZyT0JGd0hDNm1uUmNmNzN1bGZwSFQ1U2hUb1RoM0t5THh4cVBfVms?oc=5",
+        "published": "Thu, 24 Sep 2026 10:00:00 GMT",
+        "publisher": "朝日新聞"
+      },
+      {
+        "title": "日立とBIPROGYがメインフレーム撤退を決断、次代を見据えた一手 - active.nikkeibp.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOLTU1NWlCUEROdG5PU0xwSUx5Z09xRFItdEVNMWY1eGNUQ2R5NVg1NGdWeDlmZjZUY3JYTEFkeEt1UEtic1Y5VHY1OVVKd3p4YTBHOVhraXlLaGsxb2YtQXRYdzRfWEg3ZEJHc01vZEc0RlIzZTJxQlVFOXNEY1JJMFpxbzhYYzdBS2RySA?oc=5",
+        "published": "Thu, 24 Sep 2026 20:00:00 GMT",
+        "publisher": "active.nikkeibp.co.jp"
+      },
+      {
+        "title": "東北電力ネットワーク「引込線以下設備不良予兆検知システム」導入事例【後編】「IT×OT×AI」で電力保安の現場を変える - Hitachi Global",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQZ3B4U2Z0YXZtQjhjczRfSTZsc0NBWTZmdjEyYnlrS0dOZTFuWmxzMEJaYWplVExWVHMyejdMVGZxaFlXWnVsYW9oRXVmNTcxU2lKdzFHZ3FWS2l0UHlfQzFSdWV2RHYwQmt2R1ZrT2U5SnhnZ2hEZE1IYzhlWWRUWlBfbzJXMGN2WTdZ?oc=5",
+        "published": "Thu, 24 Sep 2026 08:13:36 GMT",
+        "publisher": "Hitachi Global"
+      },
+      {
+        "title": "内閣府「戦略的イノベーション創造プログラム(SIP)第3期課題」の「サーキュラーエコノミーシステムの構築」において、AI技術の研究開発を推進 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9lN1BlQWJ4aXpubmdVOGZOWk1iMTBaVnFkMzVEWnktRTNzUU5ZUDlXdXRURzU4WG92MUZVclplMTBxb0ZLSEpaTC16bkNCcmIweGdtS2JNdXZOYmZRVWVvcm5yOEEwWEVDT3c?oc=5",
+        "published": "Thu, 24 Sep 2026 06:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "英Hitachi Rail、鉄道向け「HMAX」ソリューションに関する新たな取り組み「Enhanced by HMAX」発表 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1sMF9LbFlJMzR6TzNWWE9MSExJR0R0UmJPVWthZGVtTlBjVlYwaDZ3Ui1POXpINHlwbGxWWjRadG5jWl80NkI5RkItUXpLaFVjSU13bWd1Y3ZuTkk5VEt0ZWQySHFMVjhqZGFneXlJRkJsUzBDUVViWFpEMFXSAXxBVV95cUxNbDBfS2xZSTM0ek8zVlhPTEhMSUdEdFJiT1VrYWRlbU5QY1ZWMGg2d1ItTzl6SDR5cGxsVlo0WnRuY1pfNDZCOUZCLVF6S2hVY0lNd21ndWN2bk5JOVRLdGVkMkhxTFY4amRhZ3l5SUZCbFMwQ1FVYlhaRDBV?oc=5",
+        "published": "Thu, 24 Sep 2026 07:35:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "2026年は「フィジカルAI元年」 日立・德永俊昭CEOが語った自律進化するデジタルインフラとしてのフィジカルAI - note",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE8wMGVFQ2h6bTU5c05LU0xJQkNsQkpJWDZzbUF0X195bGRxRTRtN2VpOGdaa19faDRZUU5JU0o4OTktNzlDTHpITGVsQjhhSlE1VEllRA?oc=5",
+        "published": "Thu, 24 Sep 2026 02:14:59 GMT",
+        "publisher": "note"
+      },
+      {
+        "title": "東北電力ネットワーク「引込線以下設備不良予兆検知システム」導入事例【前編】予期せぬ停電は未然に防げるか？ - Hitachi Global",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNOXJ4TjRVN0h2T1p4eXhJTHdNSmZPYmlYc0ItbFRWNlUxZkcyb2VRemdjRFJ5Um00QUhfVWFhOW1Yam8teDlFRGxQVXQ5WEQ3X01ScS1uVldvUzJkRWh1MUFyZVNvOEFkdVhxMmM5RUNKLTlSMnJTMGpwb29YWWtlbnhRbEUyVHhVRDVr?oc=5",
+        "published": "Thu, 24 Sep 2026 08:13:36 GMT",
+        "publisher": "Hitachi Global"
+      },
+      {
+        "title": "世界の鉄道でAI活用の波 日立製作所などが売り込み 欧州で展示会 (朝日新聞) - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOYXRfQ2lFYUFwdVQ1Mk9Ibm5TZy1TYlhMa3V3V2h3T21aQjk2Y2pkUm5IaHF4bWtZaFBmNnhTNWUtYkRkSkxvX2ozdUhLazRuRXJKamhxT0pFcXdDeGRmUnhtd1NNalkxUnIxQUZpUEJGNFhmQUpFVnBMTzFIQWpSckVGaHdaUGQtV01Jenh3?oc=5",
+        "published": "Thu, 24 Sep 2026 10:00:00 GMT",
+        "publisher": "Yahoo!ニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260902530692.pdf",
+        "date": "2026-09-02 15:30:00"
+      },
+      {
+        "title": "個別決算における投資有価証券売却益(特別利益)の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260819523052.pdf",
+        "date": "2026-08-19 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804508474.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "（訂正）2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503298.pdf",
+        "date": "2026-07-30 13:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501771.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501801.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(モビリティ事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566288.pdf",
+        "date": "2026-06-09 15:30:00"
+      }
+    ]
+  }
+}
