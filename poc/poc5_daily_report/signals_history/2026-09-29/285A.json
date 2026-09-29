@@ -1,0 +1,227 @@
+{
+  "code": "285A",
+  "name": "キオクシアホールディングス",
+  "generated_at": "2026-09-29T11:06:15+09:00",
+  "price_as_of": "2026-09-29",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "テクニカル専門家は中期下落トレンド継続かつ弱含み推移を予想しており、 bearish スタンスが優勢です。ファンダメンタルズ専門家は業績回復傾向と市場回復期待があるものの、株価低迷やマクロ環境の不安定さから中立スタンスとしています。両者の見解が一致せず、テクニカルの弱気シグナルが強いため、買付けは見送ります。",
+        "evidence": "technical_view.stance=bearish, fundamental_view.stance=neutral"
+      },
+      {
+        "reason": "直近14日以内に buy シグナルが出ているため、新規 buy は見送り、継続監視とします。",
+        "evidence": "reference.recent_buy"
+      }
+    ],
+    "risks": [
+      "テクニカル専門家が指摘する通り、中期下落トレンドが継続し、さらに下落するリスクがあります。",
+      "ファンダメンタルズ専門家が注意点として挙げている次回決算発表（2026-10-30）や日銀会合（2026-10-29〜2026-10-30）の結果次第では、株価が大きく変動する可能性があります。",
+      "半導体市況の変動リスク、グローバル市場の動向、VIX指数の上昇傾向など、外部環境の悪化リスクがあります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 50,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"テクニカル専門家は中期下落トレンド継続かつ弱含み推移を予想しており、 bearish スタンスが優勢です。ファンダメンタルズ専門家は業績回復傾向と市場回復期待があるものの、株価低迷やマクロ環境の不安定さから中立スタンスとしています。両者の見解が一致せず、テクニカルの弱気シグナルが強いため、買付けは見送ります。\",\n   \"evidence\": \"technical_view.stance=bearish, fundamental_view.stance=neutral\"\n  },\n  {\n   \"reason\": \"直近14日以内に buy シグナルが出ているため、新規 buy は見送り、継続監視とします。\",\n   \"evidence\": \"reference.recent_buy\"\n  }\n ],\n \"risks\": [\n  \"テクニカル専門家が指摘する通り、中期下落トレンドが継続し、さらに下落するリスクがあります。\",\n  \"ファンダメンタルズ専門家が注意点として挙げている次回決算発表（2026-10-30）や日銀会合（2026-10-29〜2026-10-30）の結果次第では、株価が大きく変動する可能性があります。\",\n  \"半導体市況の変動リスク、グローバル市場の動向、VIX指数の上昇傾向など、外部環境の悪化リスクがあります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 85,
+      "summary": "中期下落トレンドが継続しており、短期的な反発も勢いを欠く。25日線を回復できず、弱含みで推移すると予想される。",
+      "points": [
+        {
+          "point": "60営業日騰落率が-42.24%、対TOPIX相対騰落率も-42.6%と、中期的な下落トレンドが継続している。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-42.24, price_technical.trend_60d.relative_to_topix_60d_pct=-42.6"
+        },
+        {
+          "point": "日足のMACDが-15.24、MACDシグナルが6.32とデッドクロスしており、下落モメンタムが優勢である。",
+          "evidence": "price_technical.macd=-15.24, price_technical.macd_signal=6.32"
+        },
+        {
+          "point": "直近5営業日のうち、2営業日で-2.9%および-4.37%と大きく下落しており、売り圧力が優勢である。",
+          "evidence": "price_technical.recent_5_days[3].change_pct=-4.37, price_technical.recent_5_days[4].change_pct=-2.9"
+        },
+        {
+          "point": "TOPIX連動ETFの終値が25日移動平均線を下回っており、市場全体のセンチメントも弱含みである。",
+          "evidence": "macro.market_regime.topix_close_vs_sma25=below"
+        },
+        {
+          "point": "前夜の半導体セクターETF（SMH）が-1.08%、SOX指数が-1.61%と下落しており、外部環境も弱材料となっている。",
+          "evidence": "us_overnight.sector_proxy.change_1d_pct=-1.08, us_overnight.sox_index.change_1d_pct=-1.61"
+        }
+      ],
+      "cautions": [
+        "直近5営業日で一時的に9%超の上昇があった（2026-09-18）ため、短期間での急落は反動を伴う可能性。",
+        "RSI14が64.7と売られすぎ水準ではないため、短期的な調整の余地は残る。",
+        "NY市場ADRのデータがないため、寄り付きの方向性は不確かな要素。",
+        "VIX指数が上昇傾向にあるため、市場全体のリスクオフムードが強まる可能性。"
+      ],
+      "key_levels": {
+        "support": 15326.67,
+        "resistance": 18004.33
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "キオクシアホールディングスは、業績の回復傾向と半導体市場の回復期待があるものの、直近のニュースでは株価の低迷や一部投資家の売り越しが報じられており、マクロ環境も不安定であるため、現時点では中立的なスタンスが妥当と判断されます。",
+      "points": [
+        {
+          "point": "キオクシアHDの業績は2024年3月期に大幅な赤字から、2025年3月期、2026年3月期にかけて大幅な増収増益へと回復傾向にあります。特に2026年3月期は過去2期と比較して大幅な業績改善が見られます。",
+          "evidence": "fundamentals.earnings_trend.annual[2].operating_income_oku_jpy=-2527, fundamentals.earnings_trend.annual[1].operating_income_oku_jpy=4517, fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=8704"
+        },
+        {
+          "point": "足元の四半期EPSは2026年6月期に1525.09円と好調であり、過去の四半期実績を大きく上回っています。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].diluted_eps=1525.09"
+        },
+        {
+          "point": "9月28日のニュースでは、キオクシア株の売買代金が5ヶ月ぶりの低水準となり、株価も安値引けとなったことが報じられています。また、一部投資家による売り越しランキングにも名前が挙がっています。",
+          "evidence": "news.headlines[0].title, news.headlines[1].title, news.headlines[3].title"
+        },
+        {
+          "point": "市場全体としては、日経平均株価が下落トレンドにあり、VIX指数も上昇するなど、不安定な状況が続いています。また、日本の製造業PMIおよびサービス業PMIは50を上回っていますが、低下傾向にあります。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.indices[0].change_1d_pct=-1.17, macro.indices[4].change_1d_pct=8.07, macro.japan_pmi.manufacturing.latest_value=54.1, macro.japan_pmi.services.latest_value=51.6"
+        },
+        {
+          "point": "キオクシアHDは2026年7月31日に株式分割を発表しており、9月29日からは1単元購入額が3分の1になることが報じられています。これは株価の流動性向上を期待させる材料ですが、直近の株価低迷は分割効果への疑問符も示唆しています。",
+          "evidence": "disclosures.items[6].title, news.headlines[7].title"
+        }
+      ],
+      "cautions": [
+        "次回決算発表日（2026-10-30）が近づいており、決算内容によっては株価が大きく変動する可能性があります。",
+        "日銀の金融政策決定会合（次回2026-10-29〜2026-10-30）が控えており、金融政策の動向が市場全体や半導体セクターに影響を与える可能性があります。",
+        "半導体市況は市況産業であり、景気変動や需給バランスの変化によって業績が大きく変動するリスクがあります。",
+        "米国のS&P500指数が下落トレンドにあるなど、グローバル市場の動向が日本市場に影響を及ぼす可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-24",
+    "days_ago": 5,
+    "confidence": 75,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "キオクシア株、売買代金5カ月ぶり低水準 「分割で活性化」に暗雲 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBYRTBSc1Fxd0c2aWMtdlEzZHhfaDRLc2tvUzliVkViOHlzc1U5TVhlYVhJZ2NBSklZOExsY3N1NkFUeE43UTlGS3AzazgyZkc4WElfQ1VGODBNNkgzMV81UExsUHJMR1hYampqMA?oc=5",
+        "published": "Mon, 28 Sep 2026 22:32:46 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "寄前【成行注文】売り越しランキング ＳＢＧ、三菱ＵＦＪ、キオクシア [08:35](株探ニュース) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNcV80WHgtZ3BFMEFDeS1zemxUTE45T0Zod0FKak9HWXFpVGRMZkpUZXBiOVF3RF83cTRhOERqSFVaY3FmQ0F6ZThESkdKZW9NdUNvUGc1djUxY3pwbU9pOTFiTTl0SEdrY2Ytd2Rkalg3V0owOHhSeDhyNXFlQkM0dzB0aHV2NDg?oc=5",
+        "published": "Mon, 28 Sep 2026 23:51:07 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "寄前【成行注文】売り越しランキング ＳＢＧ、三菱ＵＦＪ、キオクシア [08:35] - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5rMy1oYkNPY0hramVUc1ZNQWRKWTdKVy0wQnhBWnhhTU5Od0JYem1rcENWOWJUVUtrY3l4dXVqU0xwZXR6VzFpSFR1N2lZS2YzcFE?oc=5",
+        "published": "Mon, 28 Sep 2026 23:36:01 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "キオクシアHDは▲4.37％で安値引け、アドバンテストやレーザーテックも安値引けなど「半導体・AI関連株7選」28日の終値・騰落まとめ（9月28日） 日経平均は6営業日ぶりに反落、朝方の高値から1,100円あまり値を消す - LIMO | くらしとお金の経済メディア",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5kNmVQVEQ0b2hKRHI3alhXSXRwSXBwS2YwcDlWSGRIbUNwZmFzUUNobmJRYUhWNWFfRFRSaHBBcldkZWFqbEtBTXV3ZVg?oc=5",
+        "published": "Mon, 28 Sep 2026 07:30:00 GMT",
+        "publisher": "LIMO | くらしとお金の経済メディア"
+      },
+      {
+        "title": "後場の日経平均は173円安でスタート、キオクシアHDやイビデンなどが下落 執筆 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBGVmpUUWlDSFhSMGNMVmItQUFSbnUzSEEyNmxWX3pRSWtUQXBWTlZTamc5cG54VE9Uc3NVQndWeXpBaHFzYUxhUkp0ZmtwaXE3WGphOHhBczhVemFYOGdnVThqZkFQWk8tV1o1cjQtOFI?oc=5",
+        "published": "Mon, 28 Sep 2026 12:08:27 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      },
+      {
+        "title": "【2026年8月最新】キオクシアの株価はどこまで上がる？今後の見通しと買い時・下落リスクを徹底解説 - かぶリッジ",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1pNXl1NkEtcjdrbUpleklzS0xxY2tlUjZUVUd3UVFpVUFhRGx4WUEwR0hGb0hJaW9lQm9seGlTbnN0bjFoN0JPSUh0UmdQX2ZBT1RkNmNiNmRzU0U?oc=5",
+        "published": "Mon, 28 Sep 2026 12:06:30 GMT",
+        "publisher": "かぶリッジ"
+      },
+      {
+        "title": "日経平均１６０円安、マイナス寄与上位はイビデン、キオクシア、ファストリテなど＝２８日後場 速報 - kabushiki.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5rOEt1MHhfOGhYYTNLckw4dmpFMlJPbWZQOVo3RnRNeTJWRDZvbmloVnNSaUp3RFAxSUxmazVhWFJsNHBTaTNZ?oc=5",
+        "published": "Mon, 28 Sep 2026 03:52:00 GMT",
+        "publisher": "kabushiki.jp"
+      },
+      {
+        "title": "【分割大型株10選】キオクシア、9月29日から1単元購入額が3分の1に AI・データセンター銘柄など続々、買いやすく - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMigARBVV95cUxQMzNJN0J5T0JiWU5qcHl0cG5aOUNMajVYekhINHlsZXIzZTF4eTdnTm1tS2Q1c21EWThLaUFrRjI0b2pUM3JTMjd3clNvRVI5YkNhcXQ0RnZSMjdsdmlCV0ZhNEJYX3pXakNQQjB2OWtjN2pKRDBhMGtSNEFhZUwyZE9OM1JXa1V4RnVUMkhXRXIya3FkMWlXUC1NUW9PVWhRX1V2d2VYaWI1TEFBSlFJYms1TFdSalh6NjNNSDVpeVk2SHpvaU9RTmF0U2M3RzVWMGJwN01uNUJnaXFyd1FxUjJpTjBnbW10WllVZ2pvbG1BaEprTW15dmI4c1VNZzJKV2s2TmxEaUc2ZGlINWZ4ZTdDUUJfZmI2WFJTX2tadFI1V1lJUE8xcjJROWNHbDh1T25iUlV4U0hhZzJGVEg3YndDN0tQeGQxQUJLd1RwVEJidEhvMndhaC1wTlpZTmswZm5XeU84aEVCa29fNkhUSG5QVnNyNmJHMEdlc0QtcjhuWTBycXFtSTAxeVIxZEZiTTZGczNXYWN6WkkzZ1dNczRtd3BfMXo5alF1Rlg1aXpNM3AzUnpySC1jZG1fcHc4VWpfU0xrcHl6R2NuWHRuR20zN2h3ZWhEaE9kWXd5TkVBcWVFUUJ1WHQ3cGItQURKNDM0NlBoaFJ2ZHBJTW1zbA?oc=5",
+        "published": "Mon, 28 Sep 2026 04:38:52 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "キオクシア・SanDisk 5兆円投資の「需要波及構造分析レポート」を提供開始 半導体設備投資を製造工程・必要機能・発注経路へ分解 - 株式会社Lister - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE84YWlhM0ZidEt4TElpU3l2T0VsOF9JSUU1djBBdWt1RHctS01EZk9aeDd2c0hZbVhXSVc1UWVXWjJSRlUzS2Fnd1BPNGlPNU9yN21XQm1pVWxMVDVQaHZnOE90b3ZoYXlMRlE?oc=5",
+        "published": "Mon, 28 Sep 2026 01:30:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "後場の日経平均は173円安でスタート、キオクシアHDやイビデンなどが下落 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQSUFKTGhvd0N6TTY3MFN6dTRqR1piUndGaFRTQm43UnJGYnFJd19qRkEwR2gwd1AyRXdIVHF1ZGwxN2dJclIzWUVaRFN5WkJPRjhHNXFPVWhXcXhERnFDWGdRd21UNVlyVm5tSmI2eDJKZlFRMVlTOGd0T3VSR1hCNzFNY05ndWZTT19tZ9IBjAFBVV95cUxQSUFKTGhvd0N6TTY3MFN6dTRqR1piUndGaFRTQm43UnJGYnFJd19qRkEwR2gwd1AyRXdIVHF1ZGwxN2dJclIzWUVaRFN5WkJPRjhHNXFPVWhXcXhERnFDWGdRd21UNVlyVm5tSmI2eDJKZlFRMVlTOGd0T3VSR1hCNzFNY05ndWZTT19tZw?oc=5",
+        "published": "Mon, 28 Sep 2026 03:53:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "サンディスクコーポレーションとの投資計画に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260827527338.pdf",
+        "date": "2026-08-27 17:50:00"
+      },
+      {
+        "title": "（訂正）「主要株主である筆頭株主の異動に関するお知らせ」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260817521854.pdf",
+        "date": "2026-08-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況及び取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260810517251.pdf",
+        "date": "2026-08-10 18:15:00"
+      },
+      {
+        "title": "主要株主である筆頭株主の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260810517256.pdf",
+        "date": "2026-08-10 18:15:00"
+      },
+      {
+        "title": "当社子会社に対する訴訟の判決に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260803506332.pdf",
+        "date": "2026-08-03 15:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505265.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "株式分割及び株式分割に伴う定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505272.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "自己株式の取得枠設定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505280.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "勤務継続型株式報酬制度及び業績連動型株式報酬制度のユニット付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505321.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "当社子会社に対する訴訟の陪審評決に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595788.pdf",
+        "date": "2026-07-17 13:00:00"
+      }
+    ]
+  }
+}

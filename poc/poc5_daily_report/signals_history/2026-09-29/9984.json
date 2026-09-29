@@ -1,0 +1,215 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-09-29T10:55:10+09:00",
+  "price_as_of": "2026-09-29",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ面で、国内金利上昇による利払い負担増と市場全体の地合い悪化に伴う投資資産価値（NAV）の下押し圧力が懸念され、様子見が妥当と判断。",
+        "evidence": "fundamental_view.points[0]: macro.market_regime.market_regime=\"downtrend\", fundamental_view.points[1]: macro.rates.jgb_10y_percent.value=3.082"
+      },
+      {
+        "reason": "テクニカル面ではMACDのデッドクロスやADRの大幅下落により短期的調整リスクが高い一方、25日線が下値支持として機能するかを見極める必要がある。",
+        "evidence": "technical_view.points[0]: price_technical.macd=166.92, technical_view.points[2]: us_overnight.adr.change_1d_pct=-2.48"
+      },
+      {
+        "reason": "市場レジームがdowntrendにあり、不透明なマクロ環境下で投資判断を確定させるためのカタリストが不足している。",
+        "evidence": "reference.market_regime=\"downtrend\", fundamental_view.strength=55"
+      }
+    ],
+    "risks": [
+      "25日移動平均線（5815.76円）を終値で割り込んだ場合の中期トレンド崩壊",
+      "10月29-30日の日銀金融政策決定会合における追加利上げ観測に伴う負債コスト増",
+      "VIX指数の上昇（16.07）に伴う世界的な株価指数の下落と、それに伴う投資先の公正価値評価減"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ面で、国内金利上昇による利払い負担増と市場全体の地合い悪化に伴う投資資産価値（NAV）の下押し圧力が懸念され、様子見が妥当と判断。\",\n   \"evidence\": \"fundamental_view.points[0]: macro.market_regime.market_regime=\\\"downtrend\\\", fundamental_view.points[1]: macro.rates.jgb_10y_percent.value=3.082\"\n  },\n  {\n   \"reason\": \"テクニカル面ではMACDのデッドクロスやADRの大幅下落により短期的調整リスクが高い一方、25日線が下値支持として機能するかを見極める必要がある。\",\n   \"evidence\": \"technical_view.points[0]: price_technical.macd=166.92, technical_view.points[2]: us_overnight.adr.change_1d_pct=-2.48\"\n  },\n  {\n   \"reason\": \"市場レジームがdowntrendにあり、不透明なマクロ環境下で投資判断を確定させるためのカタリストが不足している。\",\n   \"evidence\": \"reference.market_regime=\\\"downtrend\\\", fundamental_view.strength=55\"\n  }\n ],\n \"risks\": [\n  \"25日移動平均線（5815.76円）を終値で割り込んだ場合の中期トレンド崩壊\",\n  \"10月29-30日の日銀金融政策決定会合における追加利上げ観測に伴う負債コスト増\",\n  \"VIX指数の上昇（16.07）に伴う世界的な株価指数の下落と、それに伴う投資先の公正価値評価減\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 65,
+      "summary": "25日移動平均線を維持しており中期的なトレンドは崩れていないものの、MACDのデッドクロスやSMA5の割り込み、米国ADRの大幅下落から、短期的には調整圧力が強い局面です。",
+      "points": [
+        {
+          "point": "MACDがシグナルを上から下に突き抜け、デッドクロスを形成しており、短期的な下落モメンタムが強まっています。",
+          "evidence": "price_technical.macd=166.92, price_technical.macd_signal=178.72"
+        },
+        {
+          "point": "直近5営業日で大幅な下落が2度あり、終値が5日移動平均線（6219.0）を明確に下回っています。",
+          "evidence": "price_technical.recent_5_days[4].change_pct=-3.36, price_technical.sma5=6219.0"
+        },
+        {
+          "point": "前夜の米国市場でADRが-2.48%と大幅に下落しており、寄り付きから売り優勢となる可能性が高い状況です。",
+          "evidence": "us_overnight.adr.change_1d_pct=-2.48"
+        },
+        {
+          "point": "市場全体の地合いがdowntrendレジームにあり、リスク回避の動きが強まりやすい環境です。",
+          "evidence": "macro.market_regime.market_regime=downtrend"
+        }
+      ],
+      "cautions": [
+        "25日移動平均線（5815.76）を終値で割り込んだ場合、中期的な上昇トレンドが崩れ、さらなる下落加速の懸念がある",
+        "VIX指数が1日で8.07%上昇（16.07）しており、市場全体のボラティリティ拡大による突発的な売りへの警戒が必要",
+        "ADRの下げが寄り付き価格に反映された後、自律反発が起こるかSMA25で下げ止まるかが焦点となる"
+      ],
+      "key_levels": {
+        "support": 5815.76,
+        "resistance": 6219.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "米欧株安や国内金利の上昇などマクロ環境が不透明な中、外貨建社債の発行など積極的な資金調達が続いており、投資パフォーマンスの変動リスクと金利負担増の両面から慎重な見極めが必要な状況です。",
+      "points": [
+        {
+          "point": "市場環境の悪化と連動リスク。日経平均およびS&P500が下落基調にあり、市場全体がdowntrendと判定される中、投資会社である同社の資産価値（NAV）への下押し圧力が懸念されます。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\", macro.indices[0].change_1d_pct=-1.17, macro.indices[3].change_1d_pct=-0.77"
+        },
+        {
+          "point": "国内金利の上昇によるコスト増。日本の10年債利回りが3.082%と高水準にあり、負債依存度の高い同社にとって、直近で相次ぐ社債発行における利払い負担の増加が利益を圧迫する要因となります。",
+          "evidence": "macro.rates.jgb_10y_percent.value=3.082, news.headlines[2].title=\"ソフトバンクグループ社債は利率が年4.75％\""
+        },
+        {
+          "point": "活発な資金調達活動。直近でも外貨建シニア社債や無担保普通社債の条件決定など、継続的な流動性確保の動きが見られますが、これは投資余力の拡大と同時に財務レバレッジの維持を意味します。",
+          "evidence": "disclosures[0].title=\"外貨建シニア社債の発行に関するお知らせ\", disclosures[2].title=\"第70回無担保普通社債の条件決定に関するお知らせ\""
+        },
+        {
+          "point": "業績の不透明感。2025年3月期は純利益を計上したものの、2026年3月期の通期予想では営業損失が見込まれており、投資損益に依存した不安定な収益構造が継続しています。",
+          "evidence": "fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=-48, fundamentals.earnings_trend.annual[1].net_income_oku_jpy=11533"
+        }
+      ],
+      "cautions": [
+        "日銀金融政策決定会合（10/29-30）を控え、追加利上げ観測が強まった場合、有利子負債の多い同社にはネガティブな影響を及ぼす可能性があります。",
+        "VIX指数の上昇（16.07）に見られるように投資家心理が悪化しており、投資先の公正価値評価が下落するリスクがあります。",
+        "次回決算発表（11/11）まで期間があり、それまでは主要指標（ドル円・米株）の変動に翻弄されるボラティリティの高い展開が予想されます。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "国内初、5G SA接続時に専用ネットワークロゴの表示を開始 - ソフトバンク",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE81dnoyS0RxVDBLd0k4TlUtWjdiYjJkRlphbTIyV25UYmpzSG1PbDJ5U2dMcVJJSl9XNzhkZG9tZzJMZFVyT1o3VUQySk9lZ2twejd3VFdpcVJxek91bTU1eXlvMVRSWU1JMUlzZ1VGSQ?oc=5",
+        "published": "Tue, 29 Sep 2026 01:00:00 GMT",
+        "publisher": "ソフトバンク"
+      },
+      {
+        "title": "日経平均は続落で寄り付く、米株安の流れ引き継ぐ（ロイター） - news.yahoo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAxZTlfX0dCTGtuSjVfZjZxdzFGV01MRnpLWVdwdl9JZ3FWZzBtYmFmM0p0NVBjUGVDRWJHcDMwaVhhNXoyZHFlamJSemc4V0NFU08yX3hxN3NpNVlRM2E5a2pvUEtRNkxNMEYwSXRaTGh3VlFVVm5Zdk50TWtWWWM?oc=5",
+        "published": "Tue, 29 Sep 2026 00:16:11 GMT",
+        "publisher": "news.yahoo.co.jp"
+      },
+      {
+        "title": "ソフトバンクグループ社債は利率が年4.75％！ 100万円買ったら利息はいくら？ [資産運用] All About - All About（オールアバウト）",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9fb0hoUXlRQTdMTG55SE1NVXlSNFhwUlVieWhKcFFreFJSUTd0RGJnWEJqbUUwUkJBQ2dYZDdMandpN3N2RUJFcG1zUTc?oc=5",
+        "published": "Mon, 28 Sep 2026 05:30:05 GMT",
+        "publisher": "All About（オールアバウト）"
+      },
+      {
+        "title": "米ハイイールド債、9月発行385億ドルで今年最高 ゴールドマンが市場の消化不良を警告 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9QWHJ6UU1vUzVYVFRIU0RWb0Y0em5fVExGSjFfWkNvUjMyLWM0bk9ZdC0zZUJHS2dXclFtNTNMR01VdmV2QWY4U1FZcFlCajNWSmFXQy1LOGd6dWxXLUhhRFY5enZlU05fSks1OE5KRUdubjJt?oc=5",
+        "published": "Mon, 28 Sep 2026 17:55:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "日経平均は続落で寄り付く、米株安の流れ引き継ぐ - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxObjJYcWQzWjRuRmZWSUh3RzhVd2RDS3dNODZaQTUxZFlrOUwzUDRsbUhSSFpFSDhQdTdaWVRVSmpLbWZmX2lKTERTWDlNSEFwQ3VsbjNwMVNya01iTTNLaS1yMXBWaG02Z3ozQ0tzR1B5M3hLbVAwYUVEcjlJUmF1MTlnQ3cydUnSAYcBQVVfeXFMTm4yWHFkM1o0bkZmVklId0c4VXdkQ0t3TTg2WkE1MWRZazlMM1A0bG1IUkhaRUg4UHU3WllUVUpqS21mZl9pSkxEU1g5TUhBcEN1bG4zcDFTcmtNYk0zS2ktcjFwVmhtNmd6M0NLc0dQeTN4S21QMGFFRHI5SVJhdTE5Z0N3MnVJ?oc=5",
+        "published": "Tue, 29 Sep 2026 00:16:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "日経平均寄与度ランキング（大引け）～日経平均は6日ぶり反落、イビデンが約69円分押し下げ(ＳＢＧ) 2026年09月28日[フィスコ] - みんかぶ",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBLYUpCa3pkaUZtRVJQMTNFU0xHNUxJRTZuYzZIdWtqMlV6SjlGUGVKYlM1NE1HenRZbmJ1dkVlYlRqa1ZVbDNkeGpWNmJPS0UtU2Vud2tVZUlWc2p2NXo2WmxhQmt6QjlVOEVNRmc4Qkk?oc=5",
+        "published": "Mon, 28 Sep 2026 07:48:51 GMT",
+        "publisher": "みんかぶ"
+      },
+      {
+        "title": "SBI証(前引け)ソフトバンクグループ売り超、キオクシアＨＤ買い超 - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPYkFZN0ZYX0dPN0RPRGpnUmRTWHZvSzNINkJ6VW9PSXlTYW9fZWxDLXpueWowd016QkFoRWlhZTJlVzRYeHRmZHBmOWZDRW1Vb3doRGN1LUk1cHNmUTNHOG02SlVEVTVqX01kaTB2eEo1X0tvYkNIeW1aLWRSU1dSYU80a003XzBCWFlsWkY3b244RXFHajRBWmpJWWlwVmVQbFg0ZFNxX1A1cXcyWUE?oc=5",
+        "published": "Mon, 28 Sep 2026 02:56:58 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "日韓株は軟調、KOSPIは0.7%安で寄り付き；SKハイニックスとサムスンは逆行高 - TradingKey",
+        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOakV3UGx6Z2ItUXJ2bi00ZXc3VW95dnBpc0ctVWU0R05XT1FETFR4S2VGUE5vZHQ4bFk1dkVDYlBMczhPVWxHZW9nLS1lLXZ1SXlwaV9EUHk4ZlVMN1RrUVU4WFFDeWZhcnVERGREUXJaNkRKOXRGS2ZrLWpZZ0RqOEE5blA3ejBVOEdWRHZ5alBrQmY0M1hibWZnb2kwZzJhTjZodFc0TEVpN3lqblI3LU1ZMDhEZ3FLQkhncXJKYlg2QlhXYjdDWWlSSUkyc1UyVGlSdGJnYTh3dw?oc=5",
+        "published": "Mon, 28 Sep 2026 15:33:00 GMT",
+        "publisher": "TradingKey"
+      },
+      {
+        "title": "キオクシア株、売買代金5カ月ぶり低水準 「分割で活性化」に暗雲 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5hVjIxejAxdGxlay1DZ2NCclZYeUdNVWVETUpNTGlLTUhvWW15bkh5LTBoUzZqSGUtQ2tKRk1qaU9lcVFVNDZ6bUNtM1VYSW1Za09DRmpYSlVoekdnd1hiNUdVb2ZXdldld2QtaDQyZ0NRc3dtdy1VczdvRQ?oc=5",
+        "published": "Mon, 28 Sep 2026 22:32:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "写真 | 【中計の営業利益目標はほぼ半分に】エターナルホスピタリティG、稼ぎ頭「鳥貴族」の既存店売上高は106.7%も営業減益 売上高の9割超を占める国内直営店の実力と、10月の価格改定を含まない今期計画を解説 - LIMO | くらしとお金の経済メディア",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB4VUtjYWF5bGZLdTE2aU1XZ1JTYzJFQXlpTFkzbDBmTTh6bThQMUtNd1A0ZGxMSXdDcWpsRUs0dnA4UHkyS3BqZjFlRkFmdGZ0aUE?oc=5",
+        "published": "Mon, 28 Sep 2026 10:30:00 GMT",
+        "publisher": "LIMO | くらしとお金の経済メディア"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "外貨建シニア社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260924539094.pdf",
+        "date": "2026-09-24 08:00:00"
+      },
+      {
+        "title": "ブリッジローンの期限前返済に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533573.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260904531576.pdf",
+        "date": "2026-09-04 10:30:00"
+      },
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得の完了時期の変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260828527943.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824524817.pdf",
+        "date": "2026-08-24 09:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510515.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行内容確定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503871.pdf",
+        "date": "2026-07-30 17:00:00"
+      },
+      {
+        "title": "第68回及び第69回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501484.pdf",
+        "date": "2026-07-29 10:30:00"
+      },
+      {
+        "title": "OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260701586249.pdf",
+        "date": "2026-07-01 16:00:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577089.pdf",
+        "date": "2026-06-24 16:00:00"
+      }
+    ]
+  }
+}

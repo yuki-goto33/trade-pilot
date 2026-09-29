@@ -1,0 +1,231 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-09-29T10:58:54+09:00",
+  "price_as_of": "2026-09-29",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 45,
+    "reasons": [
+      {
+        "reason": "直近で買シグナルを発行済みであり、現在のポジションを継続監視するため、今回はホールドとします。",
+        "evidence": "reference.recent_buy"
+      },
+      {
+        "reason": "KDDIは堅調な増収増益トレンドを維持し、自己株式取得による株主還元も積極的であり、ファンダメンタルズは良好です。",
+        "evidence": "fundamental_view.stance=bullish (strength=60), fundamental_view.points[0], fundamental_view.points[1]"
+      },
+      {
+        "reason": "短期的な株価は主要移動平均線を下回り、MACDデッドクロスなど下降モメンタムが強く、調整局面に入っています。",
+        "evidence": "technical_view.stance=bearish (strength=75), technical_view.points[0], technical_view.points[1]"
+      },
+      {
+        "reason": "市場全体が下降トレンドにあり、個別銘柄の好材料も上値が重くなる可能性があります。",
+        "evidence": "reference.market_regime=\"downtrend\", technical_view.points[3]"
+      }
+    ],
+    "risks": [
+      "2026年11月12日の次回決算発表、および10月29-30日の次回日銀金融政策決定会合が市場に影響を与える可能性があります。",
+      "テクニカル指標が示す下降モメンタムが継続し、下値を探る展開が続くリスクがあります。",
+      "市場全体の下降トレンドが継続した場合、KDDIの株価も連れ安となる可能性があります。",
+      "サービス業PMIの勢い鈍化や楽天モバイルの回線貸し出し縮小ニュースなど、事業環境への潜在的な逆風に注意が必要です。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 45,\n \"reasons\": [\n  {\n   \"reason\": \"直近で買シグナルを発行済みであり、現在のポジションを継続監視するため、今回はホールドとします。\",\n   \"evidence\": \"reference.recent_buy\"\n  },\n  {\n   \"reason\": \"KDDIは堅調な増収増益トレンドを維持し、自己株式取得による株主還元も積極的であり、ファンダメンタルズは良好です。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=60), fundamental_view.points[0], fundamental_view.points[1]\"\n  },\n  {\n   \"reason\": \"短期的な株価は主要移動平均線を下回り、MACDデッドクロスなど下降モメンタムが強く、調整局面に入っています。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=75), technical_view.points[0], technical_view.points[1]\"\n  },\n  {\n   \"reason\": \"市場全体が下降トレンドにあり、個別銘柄の好材料も上値が重くなる可能性があります。\",\n   \"evidence\": \"reference.market_regime=\\\"downtrend\\\", technical_view.points[3]\"\n  }\n ],\n \"risks\": [\n  \"2026年11月12日の次回決算発表、および10月29-30日の次回日銀金融政策決定会合が市場に影響を与える可能性があります。\",\n  \"テクニカル指標が示す下降モメンタムが継続し、下値を探る展開が続くリスクがあります。\",\n  \"市場全体の下降トレンドが継続した場合、KDDIの株価も連れ安となる可能性があります。\",\n  \"サービス業PMIの勢い鈍化や楽天モバイルの回線貸し出し縮小ニュースなど、事業環境への潜在的な逆風に注意が必要です。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "株価は主要な移動平均線を下回り、MACDもデッドクロスを示すなど、短期的な下降モメンタムが強い状況です。市場全体も下降トレンドにある上、前夜の米国市場も軟調だったことから、弱気な見通しです。",
+      "points": [
+        {
+          "point": "株価は5日移動平均線および25日移動平均線を下回っており、短期的な下降トレンドを示唆しています。",
+          "evidence": "price_technical.last_close=2942.0, price_technical.sma5=3010.7, price_technical.sma25=2985.58"
+        },
+        {
+          "point": "MACDヒストグラムがマイナス圏で推移し、MACDラインがシグナルラインを下回るデッドクロス状態であり、下降モメンタムが優勢です。",
+          "evidence": "price_technical.macd_histogram=-10.93, price_technical.macd=25.62, price_technical.macd_signal=36.54"
+        },
+        {
+          "point": "直近5営業日のうち4営業日で株価が下落しており、特に直近2営業日も続落するなど、弱い値動きが続いています。",
+          "evidence": "price_technical.recent_5_days"
+        },
+        {
+          "point": "市場全体もTOPIXが25日移動平均線を下回る「downtrend」レジームにあり、地合いは弱含みです。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\", macro.market_regime.topix_close_vs_sma25=\"below\""
+        },
+        {
+          "point": "前夜のNY市場では、当該銘柄のADRおよび通信サービスセクターETFともに下落しており、当日の日本市場の寄り付きにネガティブな影響を与える可能性があります。",
+          "evidence": "us_overnight.adr.change_1d_pct=-1.82%, us_overnight.sector_proxy.change_1d_pct=-1.58%"
+        }
+      ],
+      "cautions": [
+        "60営業日騰落率および対TOPIX相対騰落率はいずれもプラスであり、中期的なトレンドは堅調であるため、短期的な調整に留まる可能性もあります。",
+        "RSI14が36.9と売られすぎ水準に近づいており、短期的な自律反発の動きには注意が必要です。",
+        "前夜の米国市場の軟調な動きは、当日の寄り付き価格にすでに織り込まれる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 2809.0,
+        "resistance": 2985.58
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 60,
+      "summary": "KDDIは堅調な増収増益トレンドを維持しており、自己株式取得による株主還元も継続していることから、ファンダメンタルズは良好です。新規事業への取り組みも進んでいますが、市場全体の地合いは軟調であり、大幅な上値追いは期待しにくい状況です。",
+      "points": [
+        {
+          "point": "年次および四半期ともに、売上高、純利益、EPSが安定して成長しており、堅調な業績トレンドを維持しています。",
+          "evidence": "fundamentals.earnings_trend.annual[0].diluted_eps=183.55, fundamentals.earnings_trend.annual[2].diluted_eps=141.72, fundamentals.earnings_trend.quarterly[0].diluted_eps=51.33"
+        },
+        {
+          "point": "自己株式の取得を着実に実施しており、株主還元への意欲が高いことが伺えます。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "郵便局をドローン拠点とする実証実験やPontaパスギフトカードの販売開始など、新規事業およびサービス拡大に向けた動きが見られます。",
+          "evidence": "news.headlines[3].title, news.headlines[4].title"
+        },
+        {
+          "point": "日銀短観の大企業非製造業の業況判断DIは高水準を維持しており、KDDIが属する非製造業セクターの事業環境は良好です。",
+          "evidence": "macro.boj.tankan.di.large_nonmanufacturing.current_di=37.0"
+        }
+      ],
+      "cautions": [
+        "2026年10月末に日銀の金融政策決定会合が予定されており、金融政策の変更が市場に影響を与える可能性があります。",
+        "現在の市場全体はdowntrendであり、個別銘柄の好材料があっても上値が重くなる可能性があります。",
+        "サービス業PMIは50を超えて拡大基調を維持しているものの、直近で前月比低下しており、勢いの鈍化には注意が必要です。",
+        "楽天モバイルの回線貸し出し縮小に関するニュースは、KDDIへの具体的な影響がタイトルからは不明瞭です。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-25",
+    "days_ago": 4,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "楽天モバイル、携帯「独り立ち」へ正念場 KDDIの回線貸し出し縮小 基地局整備、ライバルに遅れ（時事通信） - news.yahoo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE8xNE5uX25ReXd6RUVkZ1hPaXhSSW5mVFlWRTV6bDFkRTNLek15OERncHhZXzRkb2JERTdYck5OWFUwUFhNcjJRWTlNNlhaaWRaY21SS2RNOUpsY1FlVmZGdDhLRXE5RjltN2N2Um8wbTFqRDBHdkxsWThTMldMWkk?oc=5",
+        "published": "Mon, 28 Sep 2026 22:09:03 GMT",
+        "publisher": "news.yahoo.co.jp"
+      },
+      {
+        "title": "KDDI、カカクコムと資本提携解消 サービス開発など業務提携は継続 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAybnlmYzZTNGRJU2ZxNDBIeDVPS012LUVBQXdJeTZmWjlSNWZxTV9ULVk0Z3N2QXdtYTVXQTBXOTlGTTNNM2gzZlpZUWNtWFllM1VWNnVxbUhCZVVlRjRITFNka2p2aWtzR0RmNA?oc=5",
+        "published": "Mon, 28 Sep 2026 08:24:03 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "楽天モバイル、携帯「独り立ち」へ正念場 ＫＤＤＩの回線貸し出し縮小―基地局整備、ライバルに遅れ - 時事ドットコム",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNUzZDUXZXSmZnWkJDZDg1bDR2aHJXY2NucFNzMlFHYnA2VnphSm94QXplaGF4eVF4eVVWVjJnaGIyR2tOaW9ncGVRWkRyd2dXeVlwOTVoRFBDN1ZENzgtb0lxNTJUWVVyZ2pTdHQ5VFFBQzdLcUNGbHB5eUE0RzdoZUZn?oc=5",
+        "published": "Mon, 28 Sep 2026 22:36:00 GMT",
+        "publisher": "時事ドットコム"
+      },
+      {
+        "title": "郵便局がドローン基地に、日本郵便とKDDIが実証 - LOGISTICS TODAY",
+        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5WelgzQjBjUzlKaUk5cnhVOTRFcEczbGVQbVpjTC1GRGRIUjVEZms0amNuVWkzUkw2LXVUTGdpUFNXckdjcFR6OXBn?oc=5",
+        "published": "Mon, 28 Sep 2026 19:18:45 GMT",
+        "publisher": "LOGISTICS TODAY"
+      },
+      {
+        "title": "「Pontaパスギフトカード」を全国のローソンで販売開始 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9LVFBZNzI1RXc2TGxFbkJwNk11bHgzZEhWWU0zaXRyUzBCRUlRS2xibGVzelkzMWxYeWV5emdTZU0wdjVSVUtsVTZ4OFVWU3B5VGlVbXg0eXhEQXd3ek52aVp2SkVoM1ZNMFE?oc=5",
+        "published": "Tue, 29 Sep 2026 01:00:03 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "「KDDI MUSEUM」累計来館者数3万人を達成 - newsroom.kddi.com",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1mS2Y5T0NWQVBxNEI2UkVvZlJVc1lwUjBQVjRrTGJhZ1JQaFZmNmYydWVOdVJFZkREeTVTYWJoSnlMUVE1STk1SkdZb0U1aUFZbm1ZdGFSYzJCaXRBT0hhUmV2YUdxdC1jaTZQSQ?oc=5",
+        "published": "Mon, 28 Sep 2026 04:00:00 GMT",
+        "publisher": "newsroom.kddi.com"
+      },
+      {
+        "title": "日本郵便とKDDI、郵便局をドローン拠点に 石川で実証 - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBGMXQ1eVhSb1hpNU5Vbmx1ZmZtUkJuN1dzYTZCbzBITU12UE5sckNFdVQ5R3IyNFJRZ2txOXdsRFR0T1haLUNza0JKaFFQSmFNSlBiRUo2VWk?oc=5",
+        "published": "Mon, 28 Sep 2026 20:00:00 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "買収・争奪戦になっているカカクコム、ＫＤＤＩとの資本提携を解消…業務提携は継続 - yomiuri.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBFQlBXdzB5N3V4NlROcm5LenZBUFYyVDFoVURsVEg2MFJROE9kemRTU18tcUdlYjR5a1ItNWpGeWI1TWQzNWhXTmtvVjdMenJpcjRVd2pmWnFUUEo3TUphblcxUDM?oc=5",
+        "published": "Mon, 28 Sep 2026 13:25:00 GMT",
+        "publisher": "yomiuri.co.jp"
+      },
+      {
+        "title": "郵便局をドローン拠点に KDDIなど石川・珠洲で実験 通学見守り 防災活用 - 毎日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE94UFNJQXhHbHpwZHh2cUZzT1NTcXBIWEpqWmJvR3d6QTllWDNPSnJDUGZVWkZBRktSQzBnLWtfc25mcFRjaXJ3c2JDelJxRER0MWV0RVowa2VpQ0hFOUpJbTM5Z3duN05X?oc=5",
+        "published": "Mon, 28 Sep 2026 17:01:05 GMT",
+        "publisher": "毎日新聞"
+      },
+      {
+        "title": "カカクコム、KDDIとの資本提携を解消 TOBで資本構造が変化 業務提携は継続（1/2 ページ） - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE02djhraUVxRjlab2NIclB6ZnJOcFJlak52MWdiWUpaZFBqU016clFkXzVwWU1NcjNXaFAxR2VFYTlNY0MydmEyZW40aGxDbzU1NWl4djYzak5UZUI4VnBMUHVzUHJTUEx4bWc?oc=5",
+        "published": "Mon, 28 Sep 2026 10:13:03 GMT",
+        "publisher": "ITmedia"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533350.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      }
+    ]
+  }
+}

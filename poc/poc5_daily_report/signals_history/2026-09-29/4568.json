@@ -1,0 +1,226 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-09-29T11:05:52+09:00",
+  "price_as_of": "2026-09-29",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "テクニカル専門家は中期的な下落トレンドと戻り売り圧力の可能性を指摘しており、ファンダメンタルズ専門家も承認申請取り下げというネガティブニュースを理由に弱気な見解を示しているため、新規の買いは推奨できない。",
+        "evidence": "technical_view.stance=bearish, fundamental_view.stance=bearish"
+      },
+      {
+        "reason": "参照データに直近14日以内のbuy履歴があり、ルールに基づき新規のbuyは出さず、継続監視のためholdとする。",
+        "evidence": "reference.recent_buy exists"
+      },
+      {
+        "reason": "ファンダメンタルズのstrengthが70と高く、テクニカルのstrengthも70であるものの、両者のスタンスがbearishであり、さらに市場レジームが downtrend であるため、holdとする。",
+        "evidence": "fundamental_view.strength=70, technical_view.strength=70, reference.market_regime=downtrend"
+      }
+    ],
+    "risks": [
+      "テクニカルのcautionにあるように、前夜のNY市場でのヘルスケアセクターETF上昇や、25日線回復・MACDのゴールデンクロスなど、明確な反転の兆候が見られた場合、株価は上昇に転じる可能性がある。",
+      "ファンダメンタルズのcautionにあるように、医薬品開発における進展や他のパイプラインの承認に関するポジティブなニュースが出た場合、見解は覆る可能性がある。",
+      "日銀の金融政策決定会合（次回会合が約1ヶ月後に迫っている）や、米国の金利動向、市場全体のセンチメント悪化（VIX指数上昇）など、マクロ経済要因の変動により株価が影響を受ける可能性がある。",
+      "参考データにある次回決算発表日（2026-10-30）が保有期間内に含まれており、決算内容によっては株価が大きく変動するリスクがある。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"テクニカル専門家は中期的な下落トレンドと戻り売り圧力の可能性を指摘しており、ファンダメンタルズ専門家も承認申請取り下げというネガティブニュースを理由に弱気な見解を示しているため、新規の買いは推奨できない。\",\n   \"evidence\": \"technical_view.stance=bearish, fundamental_view.stance=bearish\"\n  },\n  {\n   \"reason\": \"参照データに直近14日以内のbuy履歴があり、ルールに基づき新規のbuyは出さず、継続監視のためholdとする。\",\n   \"evidence\": \"reference.recent_buy exists\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズのstrengthが70と高く、テクニカルのstrengthも70であるものの、両者のスタンスがbearishであり、さらに市場レジームが downtrend であるため、holdとする。\",\n   \"evidence\": \"fundamental_view.strength=70, technical_view.strength=70, reference.market_regime=downtrend\"\n  }\n ],\n \"risks\": [\n  \"テクニカルのcautionにあるように、前夜のNY市場でのヘルスケアセクターETF上昇や、25日線回復・MACDのゴールデンクロスなど、明確な反転の兆候が見られた場合、株価は上昇に転じる可能性がある。\",\n  \"ファンダメンタルズのcautionにあるように、医薬品開発における進展や他のパイプラインの承認に関するポジティブなニュースが出た場合、見解は覆る可能性がある。\",\n  \"日銀の金融政策決定会合（次回会合が約1ヶ月後に迫っている）や、米国の金利動向、市場全体のセンチメント悪化（VIX指数上昇）など、マクロ経済要因の変動により株価が影響を受ける可能性がある。\",\n  \"参考データにある次回決算発表日（2026-10-30）が保有期間内に含まれており、決算内容によっては株価が大きく変動するリスクがある。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "中期的に下落トレンドにあり、短期的な反発の兆しは見られないため、弱気の見解とする。25日線も下回っており、戻り売り圧力がかかる可能性が高い。",
+      "points": [
+        {
+          "point": "60営業日騰落率と対TOPIX相対騰落率がともにマイナスであり、中期的な下落トレンドが継続している。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-7.11, price_technical.trend_60d.relative_to_topix_60d_pct=-6.76"
+        },
+        {
+          "point": "TOPIX市場全体が25日線を下回る弱気な市場レジームにあり、個別銘柄にも波及しやすい状況である。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.market_regime.topix_close_vs_sma25=below"
+        },
+        {
+          "point": "RSI14が39.5と売られすぎを示唆する水準には達していないものの、下落モメンタムが優位であることを示唆している。",
+          "evidence": "price_technical.rsi14=39.5"
+        },
+        {
+          "point": "MACDがシグナル線を下回って推移しており、下落トレンドの継続を示唆している。",
+          "evidence": "price_technical.macd=20.75, price_technical.macd_signal=21.89"
+        },
+        {
+          "point": "直近5営業日において、2回の大きな下落（-2.49%、-3.38%、-1.27%）があり、上値の重さを示唆している。",
+          "evidence": "price_technical.recent_5_days[1].change_pct=-2.49, price_technical.recent_5_days[3].change_pct=-3.38, price_technical.recent_5_days[4].change_pct=-1.27"
+        }
+      ],
+      "cautions": [
+        "前夜のNY市場ではヘルスケアセクターETFが上昇しており、これが寄付きでの買い材料となる可能性。",
+        "25日線（2839.48円）を回復し、MACDがシグナル線を上回るなど、明確な反転の兆候が見られた場合は見解の変更が必要。",
+        "VIX指数が上昇傾向にあることから、市場全体のボラティリティ上昇には注意が必要。"
+      ],
+      "key_levels": {
+        "support": 2660.0,
+        "resistance": 2962.5
+      }
+    },
+    "fundamental": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "第一三共は、一部医薬品の米国での承認申請取り下げというネガティブなニュースと、中小企業の景況感DIの悪化、日銀の金融政策決定会合が近づいていることを考慮すると、当面は弱気な展開が予想されます。",
+      "points": [
+        {
+          "point": "第一三共は、メルクとの共同開発品である肺がん治療薬「イフィナタマブ デルクステカン」の米国での迅速承認申請を取り下げました。これは、直近のネガティブニュースとして株価に影響を与える可能性があります。",
+          "evidence": "news.headlines[2].title: 第一三共、米国で肺がん治療薬の迅速承認の申請取り下げ - 日本経済新聞"
+        },
+        {
+          "point": "日本公庫の中小企業景況調査において、販売価格DIと仕入価格DIの差が依然として大きく、中小企業の価格転嫁が困難な状況が続いており、景況感の悪化が懸念されます。これは、医薬品業界全体に間接的な影響を与える可能性があります。",
+          "evidence": "macro.jfc_sme_survey.monthly[2].sales_price_di=22.9, macro.jfc_sme_survey.monthly[2].purchase_price_di=44.1"
+        },
+        {
+          "point": "日銀の金融政策決定会合の次回会合が約1ヶ月後に迫っており、金融政策の不確実性が市場の重しとなる可能性があります。特に、金利動向は製薬業界にも影響を与えうるため、注視が必要です。",
+          "evidence": "macro.boj.monetary_policy_meeting.days_until_next=30"
+        },
+        {
+          "point": "直近の米国株式市場（S&P500）は下落傾向にあり、VIX指数は上昇しており、市場全体のセンチメントが悪化しています。これは、日本市場にも波及する可能性があります。",
+          "evidence": "macro.indices[3].change_1d_pct=-0.77, macro.indices[4].change_1d_pct=8.07"
+        }
+      ],
+      "cautions": [
+        "医薬品開発における進展や、他のパイプラインの承認に関するポジティブなニュースが出た場合、見解は覆る可能性があります。",
+        "市場全体のセンチメントが改善した場合、第一三共の株価も上昇に転じる可能性があります。",
+        "米国での申請取り下げが、他の製品の承認や将来の業績に与える影響は現時点では限定的である可能性もあります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-17",
+    "days_ago": 12,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "第一三共が挑む グローバル創薬企業を支えるセキュリティガバナンスの高度化 - PwC",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQanZXSE8wUzlsSVpzSXNKNGY1bW8tX3hZWDdITUVvdmllc2dTOHRvM0JMeUw2QTloTnlOeUtXc0hYbHV3cURXTDdCeVk2VUNzNjI5NWg4MHhzX0V0OE9BLUhSdnlvSF94SGZvQUdpTTdYdkk3a2pOWkxZa0ROQl9LbUc2VVljT0RCSlE?oc=5",
+        "published": "Mon, 28 Sep 2026 12:56:55 GMT",
+        "publisher": "PwC"
+      },
+      {
+        "title": "話題株ピックアップ【夕刊】（2）：ニデック、ブシロード、第一三共 - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBLVmJSSG1IQ3FNNWxiMDV0eVNLeTBLbmdNd09QYmNPdHJva3kxb0ZTMVZBaG11aWNNa3d2MVJ6b210b2JRX2t6dGxvdjFpNDVNaDJlOXF6SFNXaFY5WHNmTA?oc=5",
+        "published": "Mon, 28 Sep 2026 06:44:08 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "第一三共、米国で肺がん治療薬の迅速承認の申請取り下げ - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1LNE51NFB2eDR1NTd6SGJQMGg2c1hwM2FpOWFmWUwxZ0ZyWFJLV2pMRVB2X3RTdElnSTVOU1J3aEQ1VVVudFJtazdOSlJiRXdyenI2N2t4VTNndW9MU0d6QTVVNTdGeHJMeFU4Wg?oc=5",
+        "published": "Mon, 28 Sep 2026 06:32:23 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "中外「GYM329」肥満症の開発中止、ロシュから権利返還受けSMA開発再開へ／第一三共 イフィナタマブ デルクステカン、米国申請取り下げ など｜製薬業界きょうのニュースまとめ読み（2026年9月28日） - answers.and-pro.jp",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9LZG1aNy1FU05haUkyZzVkb3FoVFFrNDM0SlotdG5oTmJRY3NUd1RTNHVlcy1kNkVuSm9OTVEtSzVGa2YzZFcwWlg1d0NsaEx0UDR3eEVFbw?oc=5",
+        "published": "Mon, 28 Sep 2026 09:45:58 GMT",
+        "publisher": "answers.and-pro.jp"
+      },
+      {
+        "title": "メルク・第一三共、米で肺がん治療薬の迅速承認申請取り下げ - Reuters",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1fTW1za1J3eHVRekg1SUYxTnFxbWtLQXY4endTa3BnS3huLWVKdnJ6TG1xRXJnbnNQSHh4Z3lkby1tYnlrQk10enFLSy1VUU5MZkJBRFlBT0xTcS1rMGhnTVhHbGFIczVtVWJQQ0U1N2MyZGc4Y2xUdEx2MDE1QQ?oc=5",
+        "published": "Mon, 28 Sep 2026 02:12:00 GMT",
+        "publisher": "Reuters"
+      },
+      {
+        "title": "塩野義は60％アップ、大塚・エーザイ・協和キリンも2ケタ増…小野薬品だけマイナスだった理由 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1FNnRlVVdudDlrX2JDSi1DSS04SmlCTVdxX3hINmFmWktacXZZaUlDQ3FtWU5VRERRd2pHQnE3U1YyRW9FblZXMjVPLXVIZmfSAU9BVV95cUxNRTZ0ZVVXbnQ5a19iQ0otQ0ktOEppQk1XcV94SDZhZlpLWnF2WWlJQ0NxbVlOVUREUXdqR0JxN1NWMkVvRW5WVzI1Ty11SGZn?oc=5",
+        "published": "Mon, 28 Sep 2026 21:00:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "メルク・第一三共、米で肺がん治療薬の迅速承認申請取り下げ（ロイター） - news.yahoo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9kSW55OHF6T3VqR3YtZDFrcjZEV01DVGR2R3FfaGVIV0toQkFsellnMjRlc0JXRHE2aVhOVDRYSjFON3JEOTQwMjFjcS0wYzBQYnNTeFZFYU9sdjB3VWpudGtESklrY2Q1SlpveWNaUjVaeDRoZGRfUnVGcEpqYkk?oc=5",
+        "published": "Mon, 28 Sep 2026 02:12:04 GMT",
+        "publisher": "news.yahoo.co.jp"
+      },
+      {
+        "title": "イフィナタマブ デルクステカン 米国での進展型小細胞肺がん対象承認申請自主的取り下げ 第一三共 - 医薬通信社",
+        "url": "https://news.google.com/rss/articles/CBMizwJBVV95cUxNTVBwcU5nazVQeHVqRTBYcUQ1UDZqWmh6QnFzYmVSZTU3TEg1SUNmX1ZPeWNQREZiSzRoSVBRZ1Vvbm5WR1BrSEcwT2Nnb3RNUk92WWFXYWNwaXVYcDhRS1hsR1NGcXdWTzR3RmlGLXNabEttUWRzTDcxNUJOcFI5TFF5cWttdFZHc0t2VlV3MWF0ZkZQb0hLSDdIS2xVTUU5MDQ1X3dTNVBSNVozWTlzUkZ4b0xvSzhzUEt2QUpLRzM0T0pTYnRodG91Tzd4XzJBRGJKWlpqTXltU3dDSHRjcVpyU0g3X1hyN3RlMDJUNHMwSXQ5MFNIS3d2UXY3QTB1bjRtZVJmQmhkSkF1VDk0VUtlMThjdDU0WUphNXVtSWl0bDlOc1lGR0ZXSFZhM1JSZE5LcTl0NTF4bkRKcVNZMVFDX3VEeHBCc254UHNOaw?oc=5",
+        "published": "Mon, 28 Sep 2026 06:56:32 GMT",
+        "publisher": "医薬通信社"
+      },
+      {
+        "title": "第一三共の株価が本日下落した理由とは？ 執筆 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBTcU1jS2l1YWhqb1ppa05LejdIeDNMcW9xRVZRenctN19kRFlrSDdEeXRKOEhwY1pOOThvdDlXdGJzcFh0Y0NYY0x6VVNuYXFuWU9MRHhablJtb3dZSEJFTHgyUjcxNUhHSGZHek5uaEdzY3AxVExr?oc=5",
+        "published": "Mon, 28 Sep 2026 05:01:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      },
+      {
+        "title": "メルク・第一三共、米で肺がん治療薬の迅速承認申請取り下げ - ニューズウィーク日本版",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE54ZkFzV2R5dG5oSHhHcXlQQmdWVjc3dnp3SjRSUElpS0ZnbEpsbGpxcWhNLVBkYS12Zm5kQU9IZFh0cDlTdFFYM3FFVkJsOTJNZHB3ZFR5YTk1QU8tOFkweTNWVy10bEU?oc=5",
+        "published": "Mon, 28 Sep 2026 02:12:00 GMT",
+        "publisher": "ニューズウィーク日本版"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "当社に対するNTKからの損害賠償等請求訴訟における控訴提起のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260925540546.pdf",
+        "date": "2026-09-28 08:45:00"
+      },
+      {
+        "title": "当社に対するNTKからの損害賠償等請求訴訟に関する判決（勝訴）のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260910534407.pdf",
+        "date": "2026-09-10 17:00:00"
+      },
+      {
+        "title": "（開示事項の変更）第一三共ビジネスアソシエの吸収合併（簡易合併・略式合併）の効力発生日変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824525305.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "（再訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514622.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2025年度決算および第6期中期経営計画説明会」資料の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514744.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正・数値データ訂正）「2026年３月期 決算短信〔IFRS基準〕(連結)」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504176.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504099.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算補足資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504168.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504173.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "当社米国子会社役職員に対する信託型株式付与制度の継続のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504240.pdf",
+        "date": "2026-07-31 12:00:00"
+      }
+    ]
+  }
+}
