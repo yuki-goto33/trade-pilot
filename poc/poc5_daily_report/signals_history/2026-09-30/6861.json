@@ -1,0 +1,207 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-09-30T10:23:57+09:00",
+  "price_as_of": "2026-09-30",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 29,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の strength が 60 であり、業績は堅調ながらも PER 42.8 倍という高バリュエーションを正当化する新規材料に欠けるため、規定（strength≥70）に基づき様子見と判断。",
+        "evidence": "fundamental_view.strength=60 / fundamentals.valuation.forward_pe=42.862"
+      },
+      {
+        "reason": "テクニカル面で25日移動平均線の回復やMACDの好転など底打ちの兆しはあるが、中期的な下落トレンドを打破するほどのエネルギーが確認できない。",
+        "evidence": "technical_view.points[0]: sma5_vs_sma25='golden' / technical_view.points[2]: change_60d_pct=-1.95"
+      },
+      {
+        "reason": "約1ヶ月後の決算発表および日銀会合という重要イベントを控え、市場が待機姿勢を強めやすい局面にある。",
+        "evidence": "reference.next_earnings_date=2026-10-29 / fundamental_view.cautions[0]"
+      }
+    ],
+    "risks": [
+      "2026-10-29に予定されている次回決算発表および日銀金融政策決定会合に伴う不透明感とボラティリティ。",
+      "日本10年債利回り3%超えに伴う、高PER銘柄へのバリュエーション修正（株価下落）圧力。",
+      "直近営業日の出来高減少に見られる買い需要の不足と、中期下落トレンドへの回帰リスク。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 29,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の strength が 60 であり、業績は堅調ながらも PER 42.8 倍という高バリュエーションを正当化する新規材料に欠けるため、規定（strength≥70）に基づき様子見と判断。\",\n   \"evidence\": \"fundamental_view.strength=60 / fundamentals.valuation.forward_pe=42.862\"\n  },\n  {\n   \"reason\": \"テクニカル面で25日移動平均線の回復やMACDの好転など底打ちの兆しはあるが、中期的な下落トレンドを打破するほどのエネルギーが確認できない。\",\n   \"evidence\": \"technical_view.points[0]: sma5_vs_sma25='golden' / technical_view.points[2]: change_60d_pct=-1.95\"\n  },\n  {\n   \"reason\": \"約1ヶ月後の決算発表および日銀会合という重要イベントを控え、市場が待機姿勢を強めやすい局面にある。\",\n   \"evidence\": \"reference.next_earnings_date=2026-10-29 / fundamental_view.cautions[0]\"\n  }\n ],\n \"risks\": [\n  \"2026-10-29に予定されている次回決算発表および日銀金融政策決定会合に伴う不透明感とボラティリティ。\",\n  \"日本10年債利回り3%超えに伴う、高PER銘柄へのバリュエーション修正（株価下落）圧力。\",\n  \"直近営業日の出来高減少に見られる買い需要の不足と、中期下落トレンドへの回帰リスク。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "短期的に25日移動平均線の回復やMACDの好転といった反転の兆しが見られるものの、中期的なトレンドは依然として市場平均を大きく下回っており、本格的な上昇局面入りにはさらなる確認が必要です。",
+      "points": [
+        {
+          "point": "短期的な底打ちと25日移動平均線の回復が確認できる。直近5日間で安値から反発し、5日線が25日線を上抜けるゴールデンクロスが発生した。",
+          "evidence": "price_technical.last_close=80040.0, price_technical.sma25=78757.6, price_technical.sma5_vs_sma25=\"golden\""
+        },
+        {
+          "point": "MACDヒストグラムが拡大しており、短期的モメンタムが改善傾向にある。RSIも30台から反転しており、売られすぎ水準からの脱却を示唆している。",
+          "evidence": "price_technical.macd_histogram=662.16, price_technical.rsi14=38.7"
+        },
+        {
+          "point": "中期トレンドは依然として脆弱である。60営業日騰落率および対TOPIX相対騰落率がともにマイナスであり、過去数ヶ月にわたる下落基調が払拭されていない。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-1.95, price_technical.trend_60d.relative_to_topix_60d_pct=-2.35"
+        }
+      ],
+      "cautions": [
+        "直近営業日（9月30日）の出来高が114,300と前日までと比較して大幅に減少しており、買いのエネルギーに欠ける懸念がある。",
+        "ADRはプラス圏で推移しているが、米国の業種対応ETF（XLK）は前夜下落しており、ハイテク株全般への逆風が寄り付き後の重石となる可能性がある。",
+        "中期下落トレンド内での自律反発に留まるリスクがあり、25日線を再び割り込むと下落が加速しやすい。"
+      ],
+      "key_levels": {
+        "support": 78757.6,
+        "resistance": 87630.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "業績は3期連続の増収増益と極めて堅調に推移しているが、PER40倍を超える高水準のバリュエーションを正当化する新規材料が直近では乏しく、1ヶ月後の決算および日銀会合を控えた待機局面と判断する。",
+      "points": [
+        {
+          "point": "2024年3月期から2026年3月期まで3期連続の増収増益を達成しており、高い収益性と成長トレンドを維持している。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "日本の製造業PMIが54.1と拡大圏を維持しており、主力であるFA（ファクトリーオートメーション）機器の需要環境は良好である。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.1"
+        },
+        {
+          "point": "バリュエーションは予想PER 42.8倍、PBR 5.47倍と高水準であり、プレミアムを伴う評価が定着しているものの、割安感による買いを誘発する水準ではない。",
+          "evidence": "fundamentals.valuation.forward_pe=42.862, fundamentals.valuation.price_to_book=5.47"
+        }
+      ],
+      "cautions": [
+        "次回決算発表（2026-10-29）と日銀金融政策決定会合が同日に重なっており、業績確認と金融政策の両面で不透明感がある。",
+        "日本10年債利回りが3%を超えて推移しており、金利上昇に伴う高PER銘柄へのバリュエーション調整圧力が懸念される。",
+        "直近2週間以内に株価のカタリストとなる新たな開示やニュースが確認できず、当面の株価はマクロ環境に左右されやすい。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "“最強の日本株”を「トヨタ・NTT・三菱UFJ・信越化学・キーエンス」から選ぶならどれ？「業績・配当・成長性」から見る強みとは―“賢い分散投資”と選び方（ファイナンシャルフィールド） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9ZalBEekNuamN2YVdDXzRIdHZxdTRUX2o3X1JfdUNWeHAtbzlUbTdhZ18tU1V2ZGRkbUFzX3JGaUNOWlQ0cDN0djlEbnZ5WEZYU2d2MlpXQlpseXdmZloybEhzVXZqMU1SN01vUGtYTXlodDlTWHd0TGwtNW1kbFE?oc=5",
+        "published": "Tue, 29 Sep 2026 05:10:01 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "“最強の日本株”を「トヨタ・NTT・三菱UFJ・信越化学・キーエンス」から選ぶならどれ？「業績・配当・成長性」から見る強みとは―“賢い分散投資”と選び方 (ファイナンシャルフィールド) - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUDhJWHk2WFNRM3ZNVkVndkxyX3Vib0hwbjQ0X1VxOVJlaDJOR01OaEV6NXFLUEw3ZG16aVNqcVUwcXRwMDhpUUJEQXVUcElPM2VEWjZRVmtmcV9rd1JjSXpaOWtGZnZrNUNmSHJNMGhLQjViNWxYcG9ZemlxZDhYa2xZc3YzX0JGakhCY2VR?oc=5",
+        "published": "Tue, 29 Sep 2026 05:10:01 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "【ライブ】日経平均株価続伸/《決算速報》富士通 上方修正 オリエンタルランド キーエンス 武田薬品 など /株式投資/最新情報｜1月29日(木)〈Every Stock NEWS 石渡さくら〉 Coliform Bacteria (slCKBh0DHA) - Unisba Media",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBoVm5XT1ZidGp1VWdxbkJ5aXZxOHNRT3FONTVqZlZacFV5Y1hyNlZfaFk1d1BWWUg2TmRPZUpmSUdSYVZCV1pGc0dvWVZZa3E3VnpneVJDRUNOeG9pN3Ayd3ZFdE51UkRKLW40?oc=5",
+        "published": "Tue, 29 Sep 2026 11:16:36 GMT",
+        "publisher": "Unisba Media"
+      },
+      {
+        "title": "売る力、稼ぐ力、変わる力 ―岡山企業の未来を二人の専門家が読み解く - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBFbGhJREM5dzdHU2NTS0FXVDVKWXhKMVotUGhaei1DRnZhZDF5d1pSd0JjdUZnUExzS2g3M2kzY1NhU2pNWmVZLVZ0Rm5RMU1rQ1E?oc=5",
+        "published": "Tue, 29 Sep 2026 02:48:00 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "共焦点顕微鏡日本企業と海外勢の比較 - pando.life",
+        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFB5MUFVLW5GT2xQdHpOTTVPZERiNk5wRkFHakF3LU9UR205cnUxa1dXX2Z4ekxvWmw3YzR3LVcyUVdrNDFiZGhvdm1n?oc=5",
+        "published": "Tue, 29 Sep 2026 10:56:46 GMT",
+        "publisher": "pando.life"
+      },
+      {
+        "title": "AIで「実行は分散、判断は集約」へ エージェントが増えるほど人間の仕事が重くなる理由 - JBpress",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1CeVlmOGlJWGY4b2JWMVYwZGhrTlhGVWVEcGk2dnlucmxINWw1RlNkcm1oeU9UMHNqTWZkaHNGdVFnSnlXcEdGOHZOUUIzOTNRY2Y5Z2Vn?oc=5",
+        "published": "Tue, 29 Sep 2026 21:00:00 GMT",
+        "publisher": "JBpress"
+      },
+      {
+        "title": "オープン化する産業用ネットワークを追う／元トヨタ生産技術の改善事例4選 - MONOist",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFAxT1RSblduUDhkcXdoNTBOS3AzM252YVpOUEVWSDN3Ym5vMk1zNHl4dTJKVkZtdE53UEpyMHhhbXFSQmd1aXoxOFJ2NjlwSzRFd3hOTWVfaDVrMGpiTHRwbnZQSUd2MkswS3BTZVIybw?oc=5",
+        "published": "Tue, 29 Sep 2026 01:30:00 GMT",
+        "publisher": "MONOist"
+      },
+      {
+        "title": "後場の日経平均は736円安でスタート、ニデックや三井住友などが下落 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQTTM3ZldkbS1STmU0SFBBVVI5ZUdQSXI5Yzg4Q2pxMGgwRExqdVR0enJQSkxLelpWSjlMUnNPeUFNWHU2bERYdER1SmdDakdLNzVtalVfMk5OWlNKb2RUUlBBcm5xTDdoNWtrQnVyLUpPdHJ5T3U3WFpFRW5hbERzSWdEanJ4LS1DOXROTtIBjAFBVV95cUxQTTM3ZldkbS1STmU0SFBBVVI5ZUdQSXI5Yzg4Q2pxMGgwRExqdVR0enJQSkxLelpWSjlMUnNPeUFNWHU2bERYdER1SmdDakdLNzVtalVfMk5OWlNKb2RUUlBBcm5xTDdoNWtrQnVyLUpPdHJ5T3U3WFpFRW5hbERzSWdEanJ4LS1DOXROTg?oc=5",
+        "published": "Tue, 29 Sep 2026 04:03:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "以前は優秀だったのに…心療内科医が見た｢なんでもAI任せにした結果､仕事能力が落ちていった人｣の末路 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5qM3BJTUFMVTFMa3hyZnNIS1ExUDAtSUpSRTJNNUtwX21YaWVMSmJGX1laYTlsWGxScXh3Sm5USmtyUVNrczVka0dodTVwS0U?oc=5",
+        "published": "Tue, 29 Sep 2026 22:04:13 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "日経平均は続落、売り優勢で終日軟調推移 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNR0xwbks2d2laU0t2THNnUk1vdzRLaWRFXzQ4Rzk3RllENnFyTXNNNTNnOTdMRkZScWpiazAyOF9RVzV5ZGpGeTNyM3BZdFVhZldhZFlaT1hmX1NzbjQ2YUJBelVoZU1faGZ5OGJ4RlRNNXViWXYzVHBrWFhWb3UybTBnSHJibGNuUWpmOdIBjAFBVV95cUxNR0xwbks2d2laU0t2THNnUk1vdzRLaWRFXzQ4Rzk3RllENnFyTXNNNTNnOTdMRkZScWpiazAyOF9RVzV5ZGpGeTNyM3BZdFVhZldhZFlaT1hmX1NzbjQ2YUJBelVoZU1faGZ5OGJ4RlRNNXViWXYzVHBrWFhWb3UybTBnSHJibGNuUWpmOQ?oc=5",
+        "published": "Tue, 29 Sep 2026 07:11:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      }
+    ]
+  }
+}

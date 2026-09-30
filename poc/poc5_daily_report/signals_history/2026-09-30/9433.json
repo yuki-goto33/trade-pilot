@@ -1,0 +1,216 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-09-30T10:25:24+09:00",
+  "price_as_of": "2026-09-30",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近（2026-09-25）に buy シグナルを発出しており、現在はその継続監視期間中にあたるため、ルールに基づき新規の買いは行わずホールドを維持する。",
+        "evidence": "reference.recent_buy.date=2026-09-25"
+      },
+      {
+        "reason": "新事業構想『AccelWaves』の発表や着実な自己株買い、良好なEPS成長などファンダメンタルズは極めて強力だが、これらは前回の判断に含まれている。",
+        "evidence": "fundamental_view.points[0], fundamental_view.points[1], fundamental_view.points[2]"
+      },
+      {
+        "reason": "テクニカル面ではSMA5がSMA25を割り込むデッドクロスが発生しており、短期的な調整が進行中。MACDの悪化も続いており、押し目を確認する時間的猶予が必要。",
+        "evidence": "technical_view.points[0], technical_view.points[1]"
+      }
+    ],
+    "risks": [
+      "データ上のForward PERが1256倍と異常値を示しており、将来の急激な業績悪化予想、あるいはデータエラーの不確実性が存在する。",
+      "日本の10年債金利が3.082%まで上昇しており、設備投資負担の大きい通信キャリアにとって利払い負担の増加が利益を圧迫する懸念。",
+      "次回決算（11/12）および日銀金融政策決定会合（10/29-30）が想定保有期間内に含まれており、イベント通過後の急変動リスクがある。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近（2026-09-25）に buy シグナルを発出しており、現在はその継続監視期間中にあたるため、ルールに基づき新規の買いは行わずホールドを維持する。\",\n   \"evidence\": \"reference.recent_buy.date=2026-09-25\"\n  },\n  {\n   \"reason\": \"新事業構想『AccelWaves』の発表や着実な自己株買い、良好なEPS成長などファンダメンタルズは極めて強力だが、これらは前回の判断に含まれている。\",\n   \"evidence\": \"fundamental_view.points[0], fundamental_view.points[1], fundamental_view.points[2]\"\n  },\n  {\n   \"reason\": \"テクニカル面ではSMA5がSMA25を割り込むデッドクロスが発生しており、短期的な調整が進行中。MACDの悪化も続いており、押し目を確認する時間的猶予が必要。\",\n   \"evidence\": \"technical_view.points[0], technical_view.points[1]\"\n  }\n ],\n \"risks\": [\n  \"データ上のForward PERが1256倍と異常値を示しており、将来の急激な業績悪化予想、あるいはデータエラーの不確実性が存在する。\",\n  \"日本の10年債金利が3.082%まで上昇しており、設備投資負担の大きい通信キャリアにとって利払い負担の増加が利益を圧迫する懸念。\",\n  \"次回決算（11/12）および日銀金融政策決定会合（10/29-30）が想定保有期間内に含まれており、イベント通過後の急変動リスクがある。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "短期的な移動平均線のデッドクロスやMACDの悪化により調整局面にあるが、60日騰落率はプラスを維持しており、中期的な上昇トレンドの中での押し目形成を模索する段階と判断する。",
+      "points": [
+        {
+          "point": "SMA5がSMA25を割り込むデッドクロスが発生しており、直近5営業日でも下げが目立つ短期下落トレンドの状態にある。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.recent_5_days"
+        },
+        {
+          "point": "MACDがシグナルを下回り、ヒストグラムもマイナス圏で拡大していることから、モメンタムの悪化が示唆されている。",
+          "evidence": "price_technical.macd_histogram=-17.72, price_technical.macd=19.92, price_technical.macd_signal=37.64"
+        },
+        {
+          "point": "中期（60日）では株価・対TOPIXともに大幅なプラスを維持しており、過去30日間の高値からの自律調整の範囲内にとどまっている。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=10.24, price_technical.trend_60d.relative_to_topix_60d_pct=9.85"
+        }
+      ],
+      "cautions": [
+        "前夜のADRおよび米国通信セクターETFが下落しており、本日の寄り付きは売りが先行し、SMA25等のレジスタンスを上抜けるには時間がかかる可能性がある。",
+        "RSIが47.9と中立圏にあり、売られすぎ水準（30以下）に達していないため、下げ止まりの確認には更なる日数を要するリスクがある。"
+      ],
+      "key_levels": {
+        "support": 2809.0,
+        "resistance": 2985.3
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "堅調な四半期業績と総額3,000億円規模の自己株買いによる下支えに加え、次世代AIネットワーク構想の発表や業界全体の値上げ機運といった複数のポジティブな材料が重なっています。Forward PERの異常値には注意が必要ですが、ファンダメンタルズの勢いは維持されています。",
+      "points": [
+        {
+          "point": "2026年9月29日に発表された新事業構想「AccelWaves」により、AI時代の企業インフラ需要の取り込みが期待される新規材料があります。",
+          "evidence": "news: 「AI時代の企業ネットワーク基盤となる『AccelWaves』構想を始動」 (2026-09-29)"
+        },
+        {
+          "point": "総額3,000億円を上限とする大規模な自己株式取得が着実に進捗しており、2026年8月末時点で約87%の執行を完了、強力な株主還元姿勢が示されています。",
+          "evidence": "fundamentals.recent_important_disclosures: 「自己株式の取得状況に関するお知らせ」 (2026-09-09)"
+        },
+        {
+          "point": "2026年6月期の四半期EPSが前年同期の43.0円から51.33円へと約19.3%増加しており、収益の拡大トレンドが確認できます。",
+          "evidence": "fundamentals.earnings_trend.quarterly: diluted_eps (2026-06=51.33, 2025-06=43.0)"
+        },
+        {
+          "point": "競合他社（ドコモ）の値上げ報道により、通信業界全体の過度な価格競争が回避され、ARPU（契約者平均単価）の維持・向上が見込まれる環境にあります。",
+          "evidence": "news: 「KDDIとSBに続きドコモも値上げ、新たな価値に乏しい料金改定に勝機はあるか」 (2026-09-29)"
+        }
+      ],
+      "cautions": [
+        "データ上のForward PERが1256.438倍と極端に高く、今後の大幅な減益予想または入力データの特異性の可能性があり、精査が必要です。 (fundamentals.valuation.forward_pe)",
+        "次回決算発表（2026-11-12）および日銀金融政策決定会合（10-29〜30）が控えており、イベントリスクが存在します。",
+        "日本の10年債金利が3.082%と上昇傾向にあり、設備投資負担の大きい通信業にとって利払い費用の増加が重石となる可能性があります。 (macro.rates.jgb_10y_percent)"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-25",
+    "days_ago": 5,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ＫＤＤＩ(株)【KDDIY】：株価・株式情報 - finance.yahoo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5UeXNVcVVoNnBzaHVrVDJRR3VqcmJrUDk1T0h1dDRJT0ttelAwWVk0UWZWT0JaQTIxMkRtQUxzLW1FdnNRVXpvUWZRb0p4cVlJ?oc=5",
+        "published": "Tue, 29 Sep 2026 20:32:17 GMT",
+        "publisher": "finance.yahoo.co.jp"
+      },
+      {
+        "title": "AI時代の企業ネットワーク基盤となる「AccelWaves」構想を始動 - newsroom.kddi.com",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFA4NXVDM3ZyalZ4M0hoRVNxaVhjVEIxZGlfaXpNcTdhSC1uME9idHZHN3dIYUlhOUdMMlY4LUtEUENwOW1rTzlvdVdrTC1Ia2RNSFBPZ21BYVdueVUyYTdWemV1NlhpaFVQejdVUw?oc=5",
+        "published": "Tue, 29 Sep 2026 02:00:00 GMT",
+        "publisher": "newsroom.kddi.com"
+      },
+      {
+        "title": "KDDI、AI時代の企業ネットワーク基盤「AccelWaves」構想を発表 SASE一体型サービスや自律型ネットワークを展開 - クラウド Watch",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBSalRFUVVVOHZpV1dZWGc4RnNUbERJRmhkd2NoN3IwbFF6dmp4NXkyZC1OOVZZSV9hRkFMcElVSFVhOFBiTEh4dlRfcTB4ZHR2cHFCaXhNZWVGbGNQY0VkZHVNUndQNDg?oc=5",
+        "published": "Tue, 29 Sep 2026 21:15:00 GMT",
+        "publisher": "クラウド Watch"
+      },
+      {
+        "title": "KDDIとSBに続きドコモも値上げ、新たな価値に乏しい料金改定に勝機はあるか - 日経クロステック",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1WbVVZWEs4azAxWmRieHJrREdHY0pmVDQ1YWttYW5zUU9RTWlsbFhFTnEwT3BMTndRZTd5cEo2emF0R1VZaDFRd3VDMEFhS2t0SmozanNXeHE5TUt2MVFuSUFQNk1FTkE1RFJXMA?oc=5",
+        "published": "Tue, 29 Sep 2026 20:00:00 GMT",
+        "publisher": "日経クロステック"
+      },
+      {
+        "title": "AI時代、公式サイトの価値はどう変わる？ KDDIとStudioが語る、一次情報とWeb運用 - 株式会社マイナビ",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBJc2xiMmFuY1ZMZy1iUUhUNDcyOGZEV2N3MGxKY2lfU3FJRTJ5S1gwMl82MjRQdGRhbWZma3VjRVR6TWdPaHZsWlVHenZzQ1paaWt2bENkVXcwbmtXYXFj?oc=5",
+        "published": "Tue, 29 Sep 2026 22:34:32 GMT",
+        "publisher": "株式会社マイナビ"
+      },
+      {
+        "title": "KDDIが提供する「SASEゲートウェイ」： SP Interconnect がクローズドネットワークのゼロトラスト化をシンプルに実現 - Palo Alto Networks",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBNSlpFUmdEX0RCVHdBbkJVYTUyY2M0bGpqNEZlamt2ZENnVkExaF9GajFYcDJ6S2s5UW43OGQwNEtON3RCdnhBbnN1T0sybm5aVmY0NnlSOTVWVndwbGN3dkptdWZpRXctTGJlRUkweVYzdzRLY3owMGRzTGk?oc=5",
+        "published": "Tue, 29 Sep 2026 10:05:21 GMT",
+        "publisher": "Palo Alto Networks"
+      },
+      {
+        "title": "KDDI、AI時代の企業基盤提供 ネット安全と運用一体 - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5hcktlVE4wWF9leDFEdmJXeGhmeXFDQzhpUFJHRGVmbjQ4M252bzZhNE9TeXZhQzhlQTJ1WWhLTndKbFZ3MkhpYzhDNXptbDNkU2FodEVlSzk?oc=5",
+        "published": "Tue, 29 Sep 2026 20:00:00 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "KDDIが自律型ネットワーク構想を発表、パロアルトと協業しSASE提供 - ZDNET Japan",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1pUFhuQy1BbDRpdTh1bjhINW8tZDA5VmR0eVF4Y2VVa0lRNV9KT2w1QS13Nkc4SDdYS2poVFpheTFmQnZNeUpBVGlSS0ZQQS0zdy00?oc=5",
+        "published": "Tue, 29 Sep 2026 06:25:00 GMT",
+        "publisher": "ZDNET Japan"
+      },
+      {
+        "title": "ダイヤモンド・オンラインで、KDDIの広告運用インハウス化7年の取り組みに関する記事が掲載されました - supership.jp",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBfaWhaTUJTT1VjaEhMMURNSU04bmc3N1ZxYlA3QmRrblZzb0ZUSV9QMkQtN3Itbjk4RFpsUEg0Ni1tM0tpMjNxWEVWZ3dOYVp4S21VNzlR?oc=5",
+        "published": "Tue, 29 Sep 2026 05:54:57 GMT",
+        "publisher": "supership.jp"
+      },
+      {
+        "title": "KDDIの自律型ネットワーク「AccelWaves構想」が始動 パロアルトと協業でSASE提供 - ビジネスネットワーク",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9SQ1hEYUpnSF9XUEhOLWgtUkdZWWgwSUFVTDBvMnR5S3RYUGQ1UnZzQzZjOFNobnFFYUd5bEtENE5nVE9FS2psVWd5Q0Jrcm5aSGhZ?oc=5",
+        "published": "Tue, 29 Sep 2026 08:58:18 GMT",
+        "publisher": "ビジネスネットワーク"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533350.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      }
+    ]
+  }
+}

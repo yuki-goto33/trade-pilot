@@ -1,0 +1,215 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-09-30T10:18:44+09:00",
+  "price_as_of": "2026-09-30",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 35,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の strength が 60 であり、buy の必須条件である 70 に達していない。収益性の再評価には次回の本決算まで時間を要する可能性がある。",
+        "evidence": "fundamental_view.strength=60, fundamental_view.cautions[0]"
+      },
+      {
+        "reason": "テクニカル面で5日線が25日線を下抜けるデッドクロスが発生し、短期的には下落モメンタムが強まっているため、押し目を確認する段階にある。",
+        "evidence": "technical_view.points[0], technical_view.points[1]"
+      },
+      {
+        "reason": "次回決算発表（11/5）および日銀金融政策決定会合（10/29-30）を控え、イベントリスクを前に積極的な買いが入りにくい局面である。",
+        "evidence": "reference.next_earnings_date, reference.next_boj_meeting"
+      }
+    ],
+    "risks": [
+      "2026年11月5日の決算発表における業績回復の持続性への不透明感",
+      "10月末の日銀金融政策決定会合に伴う国内金利上昇とグロース株へのバリュエーション圧力",
+      "直近の期間安値 3582円を割り込んだ場合の中期的な上昇トレンドの崩壊"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 35,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の strength が 60 であり、buy の必須条件である 70 に達していない。収益性の再評価には次回の本決算まで時間を要する可能性がある。\",\n   \"evidence\": \"fundamental_view.strength=60, fundamental_view.cautions[0]\"\n  },\n  {\n   \"reason\": \"テクニカル面で5日線が25日線を下抜けるデッドクロスが発生し、短期的には下落モメンタムが強まっているため、押し目を確認する段階にある。\",\n   \"evidence\": \"technical_view.points[0], technical_view.points[1]\"\n  },\n  {\n   \"reason\": \"次回決算発表（11/5）および日銀金融政策決定会合（10/29-30）を控え、イベントリスクを前に積極的な買いが入りにくい局面である。\",\n   \"evidence\": \"reference.next_earnings_date, reference.next_boj_meeting\"\n  }\n ],\n \"risks\": [\n  \"2026年11月5日の決算発表における業績回復の持続性への不透明感\",\n  \"10月末の日銀金融政策決定会合に伴う国内金利上昇とグロース株へのバリュエーション圧力\",\n  \"直近の期間安値 3582円を割り込んだ場合の中期的な上昇トレンドの崩壊\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "中期トレンドは市場をアウトパフォームしているものの、短期的には25日移動平均線を下回りデッドクロスが発生しています。MACDも悪化傾向にあり、目先は調整局面が続く可能性が高いです。",
+      "points": [
+        {
+          "point": "5日線が25日線を下抜けるデッドクロスが発生し、株価も25日線を下回って推移しています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\", last_close=3719.0, sma25=3785.52"
+        },
+        {
+          "point": "MACDがシグナル線を下回り、ヒストグラムもマイナス圏で拡大しており、下落のモメンタムが強まっています。",
+          "evidence": "price_technical.macd=-28.08, macd_signal=-26.32, macd_histogram=-1.77"
+        },
+        {
+          "point": "中期的なトレンド（60日騰落率）は市場平均を大きく上回る強さを維持しており、長期的な崩れには至っていません。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=14.43, relative_to_topix_60d_pct=14.03"
+        },
+        {
+          "point": "市場全体は上昇トレンドのレジームにあるものの、前夜のADRと米テクノロジーセクターETFが下落しており、短期的には下押し圧力となります。",
+          "evidence": "macro.market_regime.market_regime=\"uptrend\", us_overnight.adr.change_1d_pct=-0.93, sector_proxy.change_1d_pct=-0.89"
+        }
+      ],
+      "cautions": [
+        "前夜NY市場のADR下落を受け、寄り付きからの売り注文による下振れリスクがあります。",
+        "RSIが40.0と売られすぎ水準（30以下）に達しておらず、値幅調整がさらに進む余地が残されています。",
+        "直近の期間安値である3582円を割り込んだ場合、中期的な上昇トレンドの維持が危うくなる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 3582.0,
+        "resistance": 3785.52
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "直近四半期で純利益の黒字回復が確認されているものの、前期の通期最終赤字の影響と11月の決算発表を控えた不透明感から、現在は材料の消化と業績回復の持続性を見極める局面にあると判断します。",
+      "points": [
+        {
+          "point": "2026年6月中間期の第1四半期において、純利益3,422億円を計上し、前四半期の低迷から黒字転換を果たしている。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].net_income_oku_jpy=3422"
+        },
+        {
+          "point": "継続的な自己株式の取得による株主還元姿勢の維持が、需給面での一定の下支えとして機能している。",
+          "evidence": "disclosures[0].title='自己株式の取得状況に関するお知らせ（2026-09-03）'"
+        },
+        {
+          "point": "TSMCとの合弁会社設立確定など、イメージセンサーを中心とした半導体セグメントの長期的競争力強化が進展している。",
+          "evidence": "disclosures[1].title='ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ（2026-08-11）'"
+        },
+        {
+          "point": "製造業PMIの拡大継続（54.1）および為替の円安傾向（157.01円）は、グローバル展開する同社にとって良好なマクロ環境である。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.1, macro.indices[2].close=157.01"
+        }
+      ],
+      "cautions": [
+        "2026年3月期の通期純利益が赤字（-3,269億円）となっており、構造的な収益性の再評価には次回の本決算まで時間を要する可能性がある。",
+        "次回決算発表が2026年11月5日に予定されており、それまでの期間は積極的な買いが入りにくいイベントリスクがある。",
+        "2026年10月末の日銀金融政策決定会合を控え、国内金利（JGB10年 3.082%）の上昇に伴うグロース株へのバリュエーション圧力が懸念される。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソニー、米の技術見本市に不参加 音楽などエンタメに軸足移る - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBUNnJkUlJ1ckwybTRVSnNhZVFsOTNlTk1XSUxLZExISThIT3pyb2h5LXJZcF9hbXZOS3ctc055WWx0ZGRUNDNGcmRHSG01ZE9MbWc?oc=5",
+        "published": "Tue, 29 Sep 2026 20:34:46 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "テクニカルで選ぶ注目銘柄：ソニーＧ、日足で２５日線に接近、週足でも５２週線を上回る 速報 - kabushiki.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFBhV3FZQ2ZBNi1yY2syX3F1b210OGFGYThpX01GNTRZSG5lY1ZGT0JLdDlidGt0b1JqWl9vZ3MtU0I2U2h6cGRN?oc=5",
+        "published": "Wed, 30 Sep 2026 00:45:00 GMT",
+        "publisher": "kabushiki.jp"
+      },
+      {
+        "title": "ソニーG、27年米IT見本市への参加見送り（時事通信） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5RdmU0UmFPeHhWQWdZdUZZcnhsOTJ0bk94VnhGUW1ReFE5QlVPRnlkTVJReHdDLUxUNFdxdjU0VXNHVWJ4VTZJaU13Q0dBZXdGMEZ4LWozVUJ6emE1UGwzYmxxRjNQdkQ2ZzRKc0xnSUoxbEJ1UnB3VkJJVjRKQzQ?oc=5",
+        "published": "Tue, 29 Sep 2026 11:00:47 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "米国株式市場は続落、低調な経済指標や金利高を嫌気 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQNTNnOWh6aTdpRk91M2NNNngxcUM0eXA1NUtLbnJXRWM2Ny10VW11RWxSbE81ZWlNTk5RX2VjU0Zfazh6SFQ1Q1ZZLXg1NzlLWGFSME5UTWtNXzVadHdaSE9jWXhxdTB1QjJIN0dTZmUwTTBsa0VnY3EtMlNLOW9iNDJwYWJwVGFBYmdSd9IBjAFBVV95cUxQNTNnOWh6aTdpRk91M2NNNngxcUM0eXA1NUtLbnJXRWM2Ny10VW11RWxSbE81ZWlNTk5RX2VjU0Zfazh6SFQ1Q1ZZLXg1NzlLWGFSME5UTWtNXzVadHdaSE9jWXhxdTB1QjJIN0dTZmUwTTBsa0VnY3EtMlNLOW9iNDJwYWJwVGFBYmdSdw?oc=5",
+        "published": "Tue, 29 Sep 2026 22:49:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "【動画】2026年10月号「センスメイキング＆世界標準の経営理論［最終回］」入山章栄氏（早稲田大学ビジネススクール教授） - DIAMOND ハーバード・ビジネス・レビュー",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9vQUp2X3BDa1J1SENMa3Z6dE8zLWhUUXNiY1Jua0t3aWlwejZCSDNZcnBqRGhXMDJDWm4yaTlKa0c2eTM3SGRoM1p2Sm5VUkh4X3c?oc=5",
+        "published": "Tue, 29 Sep 2026 09:00:00 GMT",
+        "publisher": "DIAMOND ハーバード・ビジネス・レビュー"
+      },
+      {
+        "title": "ウルヴァリン発売記念 ソニーグループプレゼントキャンペーン - Koubo",
+        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5qbmxEZmxiX0M1V2VWTHM2enZSTm05dFZHYkk4SnZlSWZWX0wyeW1qdkxFelBEZDMtNVVHTnVmZHVrcjdISUE?oc=5",
+        "published": "Tue, 29 Sep 2026 01:35:31 GMT",
+        "publisher": "Koubo"
+      },
+      {
+        "title": "日経平均は反発で寄り付く、原油価格下落を好感 ＳＯＸ堅調も追い風に - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5NY1RPUXRpVTkyZU5MekZLNmtEVjdFejlXR2hGa1JpSGVmbGNzT1RwdFM5cFAwcHVsNVJ2M3lURmhzb3pZQnZNYmtTRkhNNmRqQ1o3c0E5ako5NWtRSzFzcnJBOHd4eWlyZHNmVEtB?oc=5",
+        "published": "Wed, 30 Sep 2026 00:19:35 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "DayOneDream、Sony Blockchainと提携しK-POP IPのトークン化を推進 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1wNldvdVFpcEdoVWRUYXpQdGNvaEhIZHFZc0pxNU9odXVSSkNpNFJ1RDNjdXdfeXlHdlVwcDB6a3AwME42dFFsNVoxTnNoMkhPWVpMSm81dkw4eWtuYlFBcklvOVFiY0ZGT2FqSXpBYXBfUXE1?oc=5",
+        "published": "Tue, 29 Sep 2026 03:55:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "ニデック、岸田社長が辞任 不正会計、品質問題で引責 - 沖縄タイムス社",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5lM1g5cG54QTlUa0JqZzBRdVBkX1VGdEVtNHAybVo2aDNzUE1mSEx6ZlRWQUVJSmlLcE41bDU1S0hKcWxwcTlnejRtMHBueVpabzE2a3FBQUUyTnh5OXc?oc=5",
+        "published": "Tue, 29 Sep 2026 11:30:33 GMT",
+        "publisher": "沖縄タイムス社"
+      },
+      {
+        "title": "ソニーG、27年米IT見本市への参加見送り＝「軸足はエンタメに」(時事通信) - finance.yahoo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQajhWbXhRTGdzSFNsOUZKM1RlZW56NWM4aTlQVlkxSFFxSDhtLVRHTmRWQVNzajI1ZWFnaFpRWkRTMGs3aTM2eGNFTy04a3JxWTVrNURQaWlTNFp1TjdCdUdGUFFiVkhvdFpyVmZKY1Q5OUVSMXYzWURHdFBvaVFaaEsxQ1R1U2M?oc=5",
+        "published": "Tue, 29 Sep 2026 07:46:06 GMT",
+        "publisher": "finance.yahoo.co.jp"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903530947.pdf",
+        "date": "2026-09-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260811517496.pdf",
+        "date": "2026-08-11 18:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805509201.pdf",
+        "date": "2026-08-05 11:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504252.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期 連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504254.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の権利確定に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595854.pdf",
+        "date": "2026-07-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587315.pdf",
+        "date": "2026-07-03 11:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584099.pdf",
+        "date": "2026-06-30 15:30:00"
+      },
+      {
+        "title": "米ドル建て無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577032.pdf",
+        "date": "2026-06-24 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260603560934.pdf",
+        "date": "2026-06-03 11:30:00"
+      }
+    ]
+  }
+}
