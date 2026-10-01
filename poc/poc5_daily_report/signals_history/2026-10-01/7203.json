@@ -1,0 +1,217 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-10-01T10:13:17+09:00",
+  "price_as_of": "2026-10-01",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 35,
+    "reasons": [
+      {
+        "reason": "直近 buy（2026-09-22）の継続監視中であり、同一銘柄への短期連続 buy を抑制するルールに基づきホールドを維持する。",
+        "evidence": "reference.recent_buy.date=2026-09-22"
+      },
+      {
+        "reason": "ファンダメンタルズは自社株買いの下支えがあるものの、通期の減益傾向やタイ工場の生産停止リスクによりカタリスト不足で中立判断となっている。",
+        "evidence": "fundamental_view.stance=neutral (strength=55)"
+      },
+      {
+        "reason": "テクニカル面では25日移動平均線を下回り、MACDヒストグラムのマイナス拡大など下落トレンドが継続しており、押し目完了の確認が取れていない。",
+        "evidence": "technical_view.stance=bearish (strength=75)"
+      }
+    ],
+    "risks": [
+      "2026年10月29日〜30日の日銀金融政策決定会合に伴う為替変動（円高進行による業績圧迫リスク）",
+      "2026年11月5日の次期決算発表において、タイ洪水影響等による通期業績見通しの下方修正リスク",
+      "下値支持線（2878.0円）を割り込んだ場合のテクニカル的な下落加速リスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 50,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 35,\n \"reasons\": [\n  {\n   \"reason\": \"直近 buy（2026-09-22）の継続監視中であり、同一銘柄への短期連続 buy を抑制するルールに基づきホールドを維持する。\",\n   \"evidence\": \"reference.recent_buy.date=2026-09-22\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは自社株買いの下支えがあるものの、通期の減益傾向やタイ工場の生産停止リスクによりカタリスト不足で中立判断となっている。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=55)\"\n  },\n  {\n   \"reason\": \"テクニカル面では25日移動平均線を下回り、MACDヒストグラムのマイナス拡大など下落トレンドが継続しており、押し目完了の確認が取れていない。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=75)\"\n  }\n ],\n \"risks\": [\n  \"2026年10月29日〜30日の日銀金融政策決定会合に伴う為替変動（円高進行による業績圧迫リスク）\",\n  \"2026年11月5日の次期決算発表において、タイ洪水影響等による通期業績見通しの下方修正リスク\",\n  \"下値支持線（2878.0円）を割り込んだ場合のテクニカル的な下落加速リスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "主要な移動平均線の下抜けに加え、MACDのマイナス乖離が拡大しており、短期的な下落トレンドが継続している。RSIは売られすぎ圏内にあるが、下げ止まりを示す反転シグナルは現時点で確認できない。",
+      "points": [
+        {
+          "point": "5日線が25日線を下回るデッドクロス状態にあり、株価も両ラインを大きく下回って推移している。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.last_close=2914.5, price_technical.sma25=3036.7"
+        },
+        {
+          "point": "MACDがシグナルを大きく下回り、ヒストグラムのマイナス幅も拡大しており、下落の勢いが強い。",
+          "evidence": "price_technical.macd=-34.45, price_technical.macd_signal=-20.32, price_technical.macd_histogram=-14.13"
+        },
+        {
+          "point": "米国市場のADRが下落しており、国内市場での寄り付きも軟調となる可能性が高い。",
+          "evidence": "us_overnight.adr.change_1d_pct=-0.84"
+        }
+      ],
+      "cautions": [
+        "RSIが28.9と「売られすぎ」の目安とされる30を下回っており、テクニカル的な自律反発が急激に入るリスクがある。",
+        "市場全体の地合い（TOPIX）は上昇トレンド（uptrend）を維持しており、市場全体に連れ高する可能性がある。",
+        "前夜の米国セクターETF（一般消費財）はわずかながらプラス圏で引けており、業種全体への資金流入が下支えとなる可能性がある。"
+      ],
+      "key_levels": {
+        "support": 2878.0,
+        "resistance": 3036.7
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "通期での減益トレンドが継続する中、タイの洪水による生産停止という短期的ネガティブ材料が発生しています。巨額の自社株買いが下値を支えるものの、マクロ環境の不透明感もあり、上値を追う決定的なカタリストに欠ける状況です。",
+      "points": [
+        {
+          "point": "利益成長の鈍化傾向：2026年3月期の純利益予想は3兆8,481億円となっており、2024年3月期の4兆9,449億円から段階的な減少トレンドにあります。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "タイでの生産停止リスク：2026年9月30日に、洪水の影響でタイ国内の3工場が生産を一部停止したことが報じられており、供給網への影響が懸念されます。",
+          "evidence": "news.headlines[5]"
+        },
+        {
+          "point": "強力な株主還元策：総額1兆円の自己株式取得枠を設定し、2026年8月だけで約865億円（28,211,700株）の実績を上げるなど、需給面での強い下支えが存在します。",
+          "evidence": "fundamentals.recent_important_disclosures[0]"
+        },
+        {
+          "point": "製造業景況感の減速：9月の製造業PMIは54.1と拡大圏を維持しているものの、前月の54.9から低下しており、外部環境の勢いがやや鈍化しています。",
+          "evidence": "macro.japan_pmi.manufacturing.monthly"
+        }
+      ],
+      "cautions": [
+        "タイにおける洪水被害の長期化による生産・販売計画への悪影響",
+        "2026年10月29日〜30日の日銀金融政策決定会合に伴う為替（円高）リスク",
+        "2026年11月5日に予定されている次期決算発表での業績見通し下方修正リスク"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-22",
+    "days_ago": 9,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "広角／日本自動車工業会会長（トヨタ自動車副会長）・佐藤恒治（中）プロジェクト始動 - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE00MFRKYWlrZHRtNDQ2UXpqVEZfbTVOZmFoeFctekoycVFJaEttRmIzbWlHTjZBRS02RmkwdmpfemppVXoxeHVYWU9fX2g1b0RFWVVzZC01TFg?oc=5",
+        "published": "Wed, 30 Sep 2026 20:00:00 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "トヨタ自動車の近健太社長（新潟市東区出身）就任半年…CFO出身トップが断行する「稼ぐ力」の向上 - 新潟日報",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFB3Z0t1OUdZV1dJMW1UaG92TTFFejBzWjZDVGJxNXJidDdaNXBrOUNCS1RLbjNDXzZOZWRXZnlLNTJmRXNqVGc0ZjZIc3BTS2t1YjZFVGpsTVMwSm82Qnc?oc=5",
+        "published": "Wed, 30 Sep 2026 08:30:00 GMT",
+        "publisher": "新潟日報"
+      },
+      {
+        "title": "トヨタ自動車の近健太社長（新潟市東区出身）就任半年…CFO出身トップが断行する「稼ぐ力」の向上 - 47NEWS",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE0yUjRzMWJVWGlnSW1XODJzTm1MeXZ6dWhuclF1a0tvREFPU29QRkV2T0txNkdRV1ZKamhuamVlNXVuMjUxTE52NEZybw?oc=5",
+        "published": "Wed, 30 Sep 2026 08:40:00 GMT",
+        "publisher": "47NEWS"
+      },
+      {
+        "title": "【一瞬一瞬を“GACHI(本気)”で共に！】フィットイージー×トヨタ自動車 「アンテロープス」5年ぶり王座奪還に向けたパートナーシップ契約を更新 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5aLTQ4UkFfaW01MndRWERHdE5pWC01QWZYcHZ3RmhCNHZOR05OeWVleEV4bEFRc21RY3R5RERRRWZwUWNGUWVMLVdrclNnT25TWUxzbUd0SGptR0RmazZuMDdwZXp4bzczUHc?oc=5",
+        "published": "Wed, 30 Sep 2026 06:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "交通事故遺児の就学に役立てて 岡山トヨタ自動車が１００万円寄付 - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9MUnM5NDhBWjR1ZjUydG0yMnFfUHFwZ1Zna2tPNnJfN3lPOWxsQlZFUmtkbWw2Z0FRVlRrV0ZlZVhIdWdpMXFENmRUSFFIY0g4X0E?oc=5",
+        "published": "Wed, 30 Sep 2026 09:36:50 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "洪水の影響でトヨタ自動車の3工場が生産を一部停止 タイ 「可能な限り早期に再開できるよう最善を尽くす」 - FNNプライムオンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE03Qk5SNDVBcVNOamJJUExaS1ZJSlJZOEgyNTRMazk5YWlLdWdLY1dkQ1lUUHpCLXhpaHlGYnM0OVBSSEw4d0puLXF2VHNwUQ?oc=5",
+        "published": "Wed, 30 Sep 2026 08:31:00 GMT",
+        "publisher": "FNNプライムオンライン"
+      },
+      {
+        "title": "洪水の影響でトヨタ自動車の3工場が生産を一部停止 タイ 「可能な限り早期に再開できるよう最善を尽くす」 - news.yahoo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQVDdBWFl3YW9WYmx4Z29LMXc4clQxb2FEdkNpUGV2WlhtRmJTUF9CS1BFbE9sd0xCU2FGMjczQWt3UzB6X25qblp6WFlGT2xiN29yYUNoaGRKNEI2b21CNmxwVWZhZTNMakU0Rm9JbDk1VFhSUlZZODVtdDRCNElHZEZpV1BodzE0bG8xSDl3?oc=5",
+        "published": "Wed, 30 Sep 2026 08:32:20 GMT",
+        "publisher": "news.yahoo.co.jp"
+      },
+      {
+        "title": "RX - トヨタ自動車株式会社 公式企業サイト",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1zYlUwdk40Y0xOMlA3Tm51NjdFbEZ2SmpuZk1RWFc0ejRqSjMyQ1lmQ3ljMm83MG5ja2NrUlh3aDRGcjBRc3ZZU0FST3I5bXZobUdhOHdiZ2p2UDQ?oc=5",
+        "published": "Wed, 30 Sep 2026 05:12:49 GMT",
+        "publisher": "トヨタ自動車株式会社 公式企業サイト"
+      },
+      {
+        "title": "市場動向：トヨタ自動車、タイの4工場で洪水により操業を一時停止 - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQclVQZnNkY3ptdWVraUpBRU42SmhHMk9DTnhPZWpyNnZ6eDdUZlB5eUVnYW1mRjlrbUpDS0lyZzZvNVJXbWI1bEhXUEV5RGhMZzJtQl9pdWJqVmtKVEtPZmVqak5NTDZIVkVzNmhENjdCeXRMNW9jcEZfeEMxaW5hSWhWOVFXNWdjOHRGQ2lYSzlzY0pFNXgtemJLc3dNWTNTVl9TWGZ1d0tpNGFEQkxadjRHTE9fcGk2cElQUXBB?oc=5",
+        "published": "Wed, 30 Sep 2026 12:07:17 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "トヨタの新型スーパースポーツカー『GR GT』は2027年量産化 WECのGT3参戦と表裏一体で市販車デビュー目指す - AUTOCAR JAPAN",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9UM19BeUlMTkhKcTN6QWJmelhxMTI4TEI4aThWdTRCME9aeW1oWWthYm9KR29Kdmk5TzRNbWxjVVFoUkdQdElERzJSQnA?oc=5",
+        "published": "Wed, 30 Sep 2026 02:45:00 GMT",
+        "publisher": "AUTOCAR JAPAN"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903531084.pdf",
+        "date": "2026-09-03 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度の継続及び従業員に対する新たな株式交付制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507853.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507884.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503849.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "2027年3月期第１四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507860.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507846.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      }
+    ]
+  }
+}

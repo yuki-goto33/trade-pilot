@@ -1,0 +1,214 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-10-01T10:26:13+09:00",
+  "price_as_of": "2026-10-01",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近 2026-09-25 に buy シグナルが出されており、統合判断ルールに基づき現在は継続監視期間（14日以内）に該当するため新規のエントリーは避けるべき局面です。",
+        "evidence": "reference.recent_buy.date=2026-09-25"
+      },
+      {
+        "reason": "5日移動平均線が25日線を下抜けるデッドクロスが発生しており、短期的には調整圧力が強く「落ちるナイフ」を掴むリスクがあるため静観が妥当です。",
+        "evidence": "technical_view.points[0]: price_technical.sma5_vs_sma25=dead"
+      },
+      {
+        "reason": "ファンダメンタルズの確信度が基準（strength 70以上）に達しておらず、楽天向けローミング縮小の影響やPERの異常値といった不透明要素が残ります。",
+        "evidence": "fundamental_view.strength=60, fundamental_view.points[2]"
+      }
+    ],
+    "risks": [
+      "2026年11月12日の次回決算発表におけるローミング収入減少の影響と通期見通しの不確実性（イベントリスク）。",
+      "10月29-30日の日銀金融政策決定会合に伴う金利上昇懸念と、高PER（異常値）状態にある株価への調整圧力。",
+      "MACDヒストグラムがマイナス圏で推移しており、下落のモメンタムが収束するまで時間を要する可能性。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近 2026-09-25 に buy シグナルが出されており、統合判断ルールに基づき現在は継続監視期間（14日以内）に該当するため新規のエントリーは避けるべき局面です。\",\n   \"evidence\": \"reference.recent_buy.date=2026-09-25\"\n  },\n  {\n   \"reason\": \"5日移動平均線が25日線を下抜けるデッドクロスが発生しており、短期的には調整圧力が強く「落ちるナイフ」を掴むリスクがあるため静観が妥当です。\",\n   \"evidence\": \"technical_view.points[0]: price_technical.sma5_vs_sma25=dead\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズの確信度が基準（strength 70以上）に達しておらず、楽天向けローミング縮小の影響やPERの異常値といった不透明要素が残ります。\",\n   \"evidence\": \"fundamental_view.strength=60, fundamental_view.points[2]\"\n  }\n ],\n \"risks\": [\n  \"2026年11月12日の次回決算発表におけるローミング収入減少の影響と通期見通しの不確実性（イベントリスク）。\",\n  \"10月29-30日の日銀金融政策決定会合に伴う金利上昇懸念と、高PER（異常値）状態にある株価への調整圧力。\",\n  \"MACDヒストグラムがマイナス圏で推移しており、下落のモメンタムが収束するまで時間を要する可能性。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "5日移動平均線が25日線を下抜けるデッドクロスが発生し、MACDも弱気シグナルを継続しています。ADRの下落も加わり、短期的には調整圧力が強い局面です。",
+      "points": [
+        {
+          "point": "短期トレンドの悪化を示すデッドクロスが発生しており、株価は5日・25日の両移動平均線を下回る軟調な推移となっています。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.last_close=2913.0, price_technical.sma5=2957.0"
+        },
+        {
+          "point": "MACDヒストグラムが大幅なマイナス圏で推移しており、下落のモメンタムが依然として強い状態にあります。",
+          "evidence": "price_technical.macd_histogram=-19.95, price_technical.macd=10.0"
+        },
+        {
+          "point": "前夜のNY市場でADRが-1.64%と下落しており、国内市場の寄り付きから売りが先行する可能性が高い状況です。",
+          "evidence": "us_overnight.adr.change_1d_pct=-1.64"
+        }
+      ],
+      "cautions": [
+        "RSIが38.6まで低下しており、売られすぎとされる30近辺に近づくにつれて自律反発が意識される可能性があります。",
+        "TOPIXのレジームはuptrend（終値 > 25日線）であり、市場全体の地合いの強さに連れ高するリスクがあります。",
+        "ADRの下落分は寄り付きで既に織り込まれることが多いため、寄り底の形になる可能性に注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 2809.0,
+        "resistance": 2986.78
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "業績は堅調な拡大基調にあり大規模な自社株買いも継続しているが、楽天向けローミング縮小に伴う収益構造の変化や、提供データにおける予想PERの異常値が判断の不確実性を高めている。",
+      "points": [
+        {
+          "point": "業績は増益トレンドを維持しており、2026年3月期のEPSは前期比13.4%増、直近第1四半期（4-6月）も前年同期比で19.3%の伸長を見せている。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "株主還元に積極的であり、2026年5月決議の3,000億円を上限とする自社株買いが8月末時点で約2,612億円（進捗率約87%）まで進捗している。",
+          "evidence": "fundamentals.recent_important_disclosures[0]"
+        },
+        {
+          "point": "2026年10月より楽天モバイル向けローミング提供が都市部を中心に大幅に縮小される。ネットワーク混雑の緩和につながる一方、ローミング収入の減少という側面もあり、業績への短期的影響を注視する必要がある。",
+          "evidence": "news.headlines[2], news.headlines[3]"
+        }
+      ],
+      "cautions": [
+        "データ上の予想PERが1251.502倍と異常値を示しており、純利益予想の急減や一時的要因が含まれている可能性があり、バリュエーションの再評価が必要。",
+        "2026年11月12日に次回決算発表を控えており、ローミング縮小の影響や通期見通しの修正に関するイベントリスクがある。",
+        "日本10年債金利が3.057%と高水準にあり、配当利回り2.87%の魅力が相対的に低下するリスクがある。",
+        "10月29-30日に日銀金融政策決定会合が控えており、金融政策の変化による市場全体のボラティリティ波及に注意。"
+      ],
+      "key_levels": {
+        "support": 2919.0,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-25",
+    "days_ago": 6,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "「Xperia 10 VIII」をauから10月8日に発売 - KDDI ニュースルーム",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9neFZXNm5NWUtmS2QwcmcwazAzbndONE5yTWRxbDZ3T2plZi1tNFJWTUZaamFyRWY0eC1HWGl6T09ZQWZCbU1BcndfQ3hYMkNlS094NFI5RXd5WXBwQTVfc3hKNTZKeDd5eDVYdw?oc=5",
+        "published": "Thu, 01 Oct 2026 00:00:00 GMT",
+        "publisher": "KDDI ニュースルーム"
+      },
+      {
+        "title": "ＫＤＤＩ(株)【KDDIY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5UeXNVcVVoNnBzaHVrVDJRR3VqcmJrUDk1T0h1dDRJT0ttelAwWVk0UWZWT0JaQTIxMkRtQUxzLW1FdnNRVXpvUWZRb0p4cVlJ?oc=5",
+        "published": "Wed, 30 Sep 2026 12:31:57 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "KDDI 楽天へローミング提供10月から大幅縮小 - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBiYWNraDBRdU5mMlVPblFvcWVOTnU0WVNxRjF5M3VqclQtM1ZqLTBGME9ubkpKT0gwQzlCYktiYVBWX0Z6QmZGQWtJYW15VGlQS0ZVNnUzMA?oc=5",
+        "published": "Wed, 30 Sep 2026 09:43:19 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "KDDI、10月から楽天へ回線貸し縮小 横浜・神戸など18政令市の市街地 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1CRDNDSG42TEJyeFBoaW50dWFGeDl4eUJiaFZocUhQd0NSNTZnTUJ3VkVtVENVSlR0Z25OTFVmVUpPOWptTEl4Umg2ZVVEUXQzUm8xNV9WaFZMdGNxakhhRGl1OGRNV2dmZzRzYw?oc=5",
+        "published": "Wed, 30 Sep 2026 01:32:26 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "[石川温の「スマホ業界 Watch」] 楽天へのauローミングがいよいよ終了、都市部は約4割減か。マップで探る通信品質への影響 - ケータイ Watch",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFB3LTFVSVBsMDF1X29mQjFwMzlpUkRkdGV2M3J6cVpXbEJBa0ZKUjZWNlUyVlpBRWFVNG1kZ0pKeVkzUVI4SGZYMFNVY0pEUXJ2RXFfUXM4R3ZSYzFETkhGVWVFTnd0U1QyUkVVVTBQMFBRal8tRXc?oc=5",
+        "published": "Wed, 30 Sep 2026 09:19:48 GMT",
+        "publisher": "ケータイ Watch"
+      },
+      {
+        "title": "auの回線貸し出し10月から縮小…楽天のつながりやすさどうなる？ - asahi.com",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE42M2J5bEVtSmdncmd2eEpHTzRpdl82emtkZ3dTLUdxVzU4WUdmTzRIR3Vvb04yWXh4U19qNUtUNThEaVhtOG1zYmg0ZGZDdUZKVzZoeHVNMWtYMUhEU2VOUERFWDRxZEU?oc=5",
+        "published": "Wed, 30 Sep 2026 01:52:22 GMT",
+        "publisher": "asahi.com"
+      },
+      {
+        "title": "KDDIの楽天モバイル向けローミングが10月から大幅縮小 都市部終了で新局面へ - 東京報道新聞",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFAtS3RGelowS2dXMnpPZ3p5bG13Sk80YTR6ZFRKNUVZMklxRThVVTRsekpTaTZkM2NBUF9SR3FsOUxIMWRNX0tReDFHcFJ3STVKVFhV?oc=5",
+        "published": "Wed, 30 Sep 2026 22:00:58 GMT",
+        "publisher": "東京報道新聞"
+      },
+      {
+        "title": "10月以降、楽天モバイルの「au回線エリア」はどう縮小する？ KDDIが最新マップ公開 - japan.cnet.com",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1RMWZGS3VhVzhVbWU0ZEs4SDZqTFQ1MmpuVHVCT0tiWDBpandmRU52Y0dXZHhsWGd2OS1kX1gzVkJaWkpHM1pmZHhvQVFVYU5rOUE?oc=5",
+        "published": "Wed, 30 Sep 2026 02:59:00 GMT",
+        "publisher": "japan.cnet.com"
+      },
+      {
+        "title": "回線貸し出し ＫＤＤＩが縮小 楽天へ、都市部対象 - 琉球新報デジタル",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1ZaE1NV2RHQWh3T05MZW5IZXJYVlUzTkNpYVV0VnVuTUJkRmJnblY1djhwTlhQTTQ1YnNHN0FhMTlaSHF2SE8tT09hLUU1Yk1jRXpsU2NWT3oxVnlNWU1PTTl3?oc=5",
+        "published": "Wed, 30 Sep 2026 20:00:00 GMT",
+        "publisher": "琉球新報デジタル"
+      },
+      {
+        "title": "回線貸し出し 今月から縮小 KDDI、楽天へ - 沖縄タイムス社",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFB5LUtiRm9SalNEVWtKUGFVbmlZZEF1eW1DTk9DRWZRNTdwUnJVekZFZmFfTnprTmtObzJNYVoxOWVSblRmME1TWXpqUGtwN29DTFg4MHBrdXlDaUFnQ3c?oc=5",
+        "published": "Wed, 30 Sep 2026 18:57:00 GMT",
+        "publisher": "沖縄タイムス社"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533350.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "code": "285A",
+  "name": "キオクシアホールディングス",
+  "generated_at": "2026-10-01T10:32:52+09:00",
+  "price_as_of": "2026-10-01",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 45,
+    "reasons": [
+      {
+        "reason": "直近14日以内に買付シグナルを発行済みのため、今回は新規エントリーは行わず、既存ポジションの継続監視とします。",
+        "evidence": "reference.recent_buy"
+      },
+      {
+        "reason": "ファンダメンタルズ専門家は、米マイクロンの好決算を受けたメモリ市況改善期待、AMATとのAIメモリ共同開発参画、2026年3月期以降の業績V字回復予想を根拠に極めて強気です。",
+        "evidence": "fundamental_view.stance=bullish (strength=85), fundamental_view.points[0-3]"
+      },
+      {
+        "reason": "テクニカル面では、中期的な下落トレンドが継続しているものの、短期的な5日線と25日線のゴールデンクロスやMACDの好転など、モメンタム改善の兆候が見られます。",
+        "evidence": "technical_view.stance=bearish (strength=65), technical_view.points[0-2]"
+      },
+      {
+        "reason": "ただし、直近の反発は出来高が減少しており、RSIも低位であることから、中期的なトレンド転換と判断するにはまだ持続性に懸念が残ります。",
+        "evidence": "technical_view.cautions[0], technical_view.cautions[1]"
+      }
+    ],
+    "risks": [
+      "次回決算発表（2026年10月30日）での実績値や見通し修正による株価のボラティリティ増大リスクがあります。",
+      "日銀金融政策決定会合（10月29〜30日）での金融政策変更や為替変動が、半導体セクターに影響を与える可能性があります。",
+      "日本の10年債利回りの高水準が、グロース株的な側面を持つ半導体銘柄のバリュエーション調整圧力となる可能性があります。",
+      "現在の反発が中期的な下落トレンドの中での一時的なものに終わり、再度下落に転じるリスクがあります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 45,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内に買付シグナルを発行済みのため、今回は新規エントリーは行わず、既存ポジションの継続監視とします。\",\n   \"evidence\": \"reference.recent_buy\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ専門家は、米マイクロンの好決算を受けたメモリ市況改善期待、AMATとのAIメモリ共同開発参画、2026年3月期以降の業績V字回復予想を根拠に極めて強気です。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=85), fundamental_view.points[0-3]\"\n  },\n  {\n   \"reason\": \"テクニカル面では、中期的な下落トレンドが継続しているものの、短期的な5日線と25日線のゴールデンクロスやMACDの好転など、モメンタム改善の兆候が見られます。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=65), technical_view.points[0-2]\"\n  },\n  {\n   \"reason\": \"ただし、直近の反発は出来高が減少しており、RSIも低位であることから、中期的なトレンド転換と判断するにはまだ持続性に懸念が残ります。\",\n   \"evidence\": \"technical_view.cautions[0], technical_view.cautions[1]\"\n  }\n ],\n \"risks\": [\n  \"次回決算発表（2026年10月30日）での実績値や見通し修正による株価のボラティリティ増大リスクがあります。\",\n  \"日銀金融政策決定会合（10月29〜30日）での金融政策変更や為替変動が、半導体セクターに影響を与える可能性があります。\",\n  \"日本の10年債利回りの高水準が、グロース株的な側面を持つ半導体銘柄のバリュエーション調整圧力となる可能性があります。\",\n  \"現在の反発が中期的な下落トレンドの中での一時的なものに終わり、再度下落に転じるリスクがあります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 65,
+      "summary": "中期的に市場平均を大きく下回る深刻な下落トレンドが継続しており、直近3日間の自律反発のみではトレンド転換と判断するには不十分です。短期的に25日移動平均線の奪還とMACDの好転が見られるものの、上値の重さが意識されやすい局面です。",
+      "points": [
+        {
+          "point": "60営業日騰落率が-26.3%、対TOPIX相対騰落率が-27.03%と、極めて強い中期下落トレンドを示しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-26.3, price_technical.trend_60d.relative_to_topix_60d_pct=-27.03"
+        },
+        {
+          "point": "短期的には5日線が25日線を上抜けるゴールデンクロスが発生し、株価も25日線を回復するなど改善の兆しが見られます。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.last_close=18735.0, price_technical.sma25=17749.87"
+        },
+        {
+          "point": "MACDヒストグラムがプラス圏に浮上し、MACDラインがシグナルを上回るなどモメンタムの好転が確認できます。",
+          "evidence": "price_technical.macd_histogram=103.61, price_technical.macd=23.17, price_technical.macd_signal=-80.44"
+        }
+      ],
+      "cautions": [
+        "直近10月1日の出来高が13,751,400と、9月25日の65,273,400と比較して大幅に減少しており、反発の持続性に懸念が残ります。",
+        "RSI14が36.1と依然として低位にあり、長期的な売られすぎ状態からの自律反発の域を出ていない可能性があります。",
+        "前夜のSOX指数が0.0%と横ばいであり、半導体セクター全体としての強力な追い風は限定的です。"
+      ],
+      "key_levels": {
+        "support": 17749.87,
+        "resistance": 21116.67
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 85,
+      "summary": "米同業マイクロンの好決算を背景としたメモリ市況の改善期待に加え、AMATとのAIメモリ共同開発参画という強力な新規材料が浮上している。2026年3月期の業績V字回復が鮮明であり、製造業PMIの拡大という良好なマクロ環境も追い風となっている。",
+      "points": [
+        {
+          "point": "米マイクロン・テクノロジーの好決算と強気な売上見通しを受け、同業のキオクシアにもメモリ市況の回復期待が強く波及している。",
+          "evidence": "news.headlines[4, 5]"
+        },
+        {
+          "point": "Applied Materials（AMAT）の次世代AIメモリ開発拠点「EPICセンター」への参画が発表され、中長期的な技術競争力の強化が期待される。",
+          "evidence": "news.headlines[2, 6, 8]"
+        },
+        {
+          "point": "業績は2024年3月期の赤字から2026年3月期にかけて急激な回復基調にあり、特に2026年6月期の四半期EPSは通期予想を上回る強いモメンタムを示している。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "製造業PMIが54.1と拡大圏にあり、特に新輸出ビジネスの伸びが指摘される中、157円台の円安水準も輸出比率の高い半導体業種にはプラスに働く。",
+          "evidence": "macro.japan_pmi.manufacturing, macro.indices[2]"
+        }
+      ],
+      "cautions": [
+        "次回決算発表が2026年10月30日に予定されており、実績値や見通しの修正によるボラティリティリスクがある。",
+        "日銀金融政策決定会合（10月29〜30日）が次回決算と同日程であり、金利上昇や為替の急変動が株価に影響を与える可能性がある。",
+        "日本の10年債利回りが3.057%と高水準にあり、グロース株的な側面を持つ半導体銘柄にはバリュエーション調整の圧力となり得る。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-24",
+    "days_ago": 7,
+    "confidence": 75,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "キオクシア株を拾う投資家 本源的価値との「乖離」に勝機 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1FRUVKWkx6R2lBZjdGOThnd0prMk1yY2dPVDhEY3RjQjJKLUotWkNLUmVyOWJLSExuMEZvM2Y0OHNscTJtWTllTmZaVDNNRGxheENveDlSRklyYXNSUlhWSzVkYkRJREM0Rlc0Wg?oc=5",
+        "published": "Wed, 30 Sep 2026 07:01:51 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "話題株先取り【特別気配】速報 ＜買いトップ キオクシア、売りトップ ニデック＞ - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE00VGhxdnZGVGZWS3FDVUkxNGR3QXV1aHBvaVZDcDhZN2VIbmp6dGFHRDR2ODVQSGc1M3lidXUxMlBDUVN4MzZLM2d4WDM2Qng3Yi01a243aEpxcnhRQVI0bQ?oc=5",
+        "published": "Thu, 01 Oct 2026 00:03:23 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "アプライド・キオクシア、次世代AIメモリで共同開発へ…「EPIC」エコシステムを拡大 - 亜州日報",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1McGxNUUhsOWloQ0dQMlhjZkY5MXJ0bE1IMV95TkJXVFdMc0FjdUVLY3RPM0cwYmd4cUFDdmlyQU1pa1ZNUjFKc0dLUDNMLWhuRERyZFdRMnNWWHUw?oc=5",
+        "published": "Wed, 30 Sep 2026 06:42:47 GMT",
+        "publisher": "亜州日報"
+      },
+      {
+        "title": "キオクシアホールディングス(株)【KXIAY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9pbVFlSFVNYzQ3S19xRzJBS2ppUEJDaUZXNlgxTjl0Zmx1Z2xNR0ZZVE9qMXVFdlkyUEFjdnV5d29vX2NQRWNCaHhOaGZXbjBG?oc=5",
+        "published": "Wed, 30 Sep 2026 20:35:27 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "キオクシア－買い気配 マイクロンの9-11月売上高見通しが市場予想上回る - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5Mcl9Pelk0dW1fRG1iUnlPLWV0QUg5dHE0Z2RPWWE0Q2xkU1NLWHFnWnBZOUVVNDl2ZjluNUx3XzY3M2UyYXJQMkpsUFloQjZhRzlSZ245QWRLQQ?oc=5",
+        "published": "Thu, 01 Oct 2026 00:50:11 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "キオクシアなど半導体関連が堅調推移、米マイクロン好決算が追い風に◇ - みんかぶ",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlallQVE9WbndKUTRYaHhSbmJHMmRUOEgyVl93MUR3ZXJfVUREY05YTlFOcmk4R3dnRDJLUk9RZHFuYWJDdERKUQ?oc=5",
+        "published": "Thu, 01 Oct 2026 00:28:58 GMT",
+        "publisher": "みんかぶ"
+      },
+      {
+        "title": "AIメモリの技術革新を加速、キオクシアがAMATの研究拠点「EPICセンター」に参画 - マイナビニュース",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE8zck91dk1nUm5PVVQ3NjRZaW80ZjUyR3lGQXRDajA1VEl6bHhKRXhZaUhnNUpSMjZ6YXlzZjF5WTRackRlamhzWEQwWTg3WUxoNFRyVURWWVZTaEFIMTV4SVBjV01aUTQ0?oc=5",
+        "published": "Wed, 30 Sep 2026 21:30:40 GMT",
+        "publisher": "マイナビニュース"
+      },
+      {
+        "title": "寄前【成行注文】買い越しランキング スバル、キオクシア、ＰＨＣＨＤ [08:36] - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE0xYTZwaWhxS2JQMldnOHl3XzRtR2p1WEViREZzTW9GbGIyMFAyZE1fRUpXWUQxVVM1dFNLY2VqM2tEN0F1aV9WMFI3bHJkU2RkTVRBR011bEd0MWlxX3FhZQ?oc=5",
+        "published": "Wed, 30 Sep 2026 23:36:38 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "キオクシア、Applied MaterialsのEPICセンターに参画…グローバルメモリ4強のR&D連合が完成 - finance.biggo.jp",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBKZGxWS2VDWG9yQm13Uncyblp0a21HLXBjd3VxRFdsem9Obzh6cVpsOVJfSUh1dXMyR2xfVnFJS3VDR0RHbE1kQmFVNDdYSENJZ19QenRhX1A4RVdudThpd3BPWmY0SmNjTnlTUVZmQzE4c1hD?oc=5",
+        "published": "Wed, 30 Sep 2026 07:26:00 GMT",
+        "publisher": "finance.biggo.jp"
+      },
+      {
+        "title": "日経平均は１３２０円程度高、売買代金はキオクシア、ソフバンＧ、アドバンテスが上位 速報 - kabushiki.jp",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFB6dHNOaDVWZV9sckpFQ3RRYlNSMEFVSWtzREFiSmUtOUkwWFFlVkh3eWZ3ZE51QnFCRXJOb01mRjFqaHAwZ1Mw?oc=5",
+        "published": "Wed, 30 Sep 2026 05:04:00 GMT",
+        "publisher": "kabushiki.jp"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "サンディスクコーポレーションとの投資計画に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260827527338.pdf",
+        "date": "2026-08-27 17:50:00"
+      },
+      {
+        "title": "（訂正）「主要株主である筆頭株主の異動に関するお知らせ」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260817521854.pdf",
+        "date": "2026-08-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況及び取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260810517251.pdf",
+        "date": "2026-08-10 18:15:00"
+      },
+      {
+        "title": "主要株主である筆頭株主の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260810517256.pdf",
+        "date": "2026-08-10 18:15:00"
+      },
+      {
+        "title": "当社子会社に対する訴訟の判決に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260803506332.pdf",
+        "date": "2026-08-03 15:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505265.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "株式分割及び株式分割に伴う定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505272.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "自己株式の取得枠設定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505280.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "勤務継続型株式報酬制度及び業績連動型株式報酬制度のユニット付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505321.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "当社子会社に対する訴訟の陪審評決に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595788.pdf",
+        "date": "2026-07-17 13:00:00"
+      }
+    ]
+  }
+}

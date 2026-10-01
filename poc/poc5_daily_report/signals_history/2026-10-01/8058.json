@@ -1,0 +1,213 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-10-01T10:28:33+09:00",
+  "price_as_of": "2026-10-01",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "2026-09-23に出された直近のbuyシグナルから14日以内であり、現在は継続監視中として新規エントリーを抑制するフェーズである。",
+        "evidence": "reference.recent_buy (date: 2026-09-23)"
+      },
+      {
+        "reason": "ファンダメンタルズはEPSの大幅増や巨額投資など極めて強気（Strength 75）だが、テクニカルが弱気転換しており、統合判断ルールに基づきbuyを見送る。",
+        "evidence": "fundamental_view.strength=75 / technical_view.stance=bearish"
+      },
+      {
+        "reason": "5日線と25日線のデッドクロスやMACDの悪化により、短期的には下値支持線までの調整を待つべき局面である。",
+        "evidence": "technical_view.points[0]: price_technical.sma5_vs_sma25 = dead / technical_view.key_levels.support=4620.0"
+      }
+    ],
+    "risks": [
+      "2026年11月3日の第2四半期決算発表における進捗確認とボラティリティ増大",
+      "2026年10月29日からの日銀金融政策決定会合による金利・為替の変動リスク",
+      "サポートラインである4620円を明確に割り込んだ場合の下落トレンド継続"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"2026-09-23に出された直近のbuyシグナルから14日以内であり、現在は継続監視中として新規エントリーを抑制するフェーズである。\",\n      \"evidence\": \"reference.recent_buy (date: 2026-09-23)\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズはEPSの大幅増や巨額投資など極めて強気（Strength 75）だが、テクニカルが弱気転換しており、統合判断ルールに基づきbuyを見送る。\",\n      \"evidence\": \"fundamental_view.strength=75 / technical_view.stance=bearish\"\n    },\n    {\n      \"reason\": \"5日線と25日線のデッドクロスやMACDの悪化により、短期的には下値支持線までの調整を待つべき局面である。\",\n      \"evidence\": \"technical_view.points[0]: price_technical.sma5_vs_sma25 = dead / technical_view.key_levels.support=4620.0\"\n    }\n  ],\n  \"risks\": [\n    \"2026年11月3日の第2四半期決算発表における進捗確認とボラティリティ増大\",\n    \"2026年10月29日からの日銀金融政策決定会合による金利・為替の変動リスク\",\n    \"サポートラインである4620円を明確に割り込んだ場合の下落トレンド継続\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "短期移動平均線のデッドクロスに加え、MACDの悪化が継続しており、短期的な下落トレンドが鮮明な状況です。",
+      "points": [
+        {
+          "point": "5日線が25日線を下回るデッドクロスが発生しており、短期的なトレンドが下向きに転じています。",
+          "evidence": "price_technical.sma5_vs_sma25 = dead"
+        },
+        {
+          "point": "MACDがシグナルを大きく下回り、ヒストグラムのマイナス幅も拡大しており、下落の勢いが強まっています。",
+          "evidence": "price_technical.macd = -23.5, price_technical.macd_histogram = -34.64"
+        },
+        {
+          "point": "RSIが34.4と低水準にあり、直近5営業日中4日で株価が下落、または反発を打ち消す動きを見せており、モメンタムが弱いです。",
+          "evidence": "price_technical.rsi14 = 34.4, price_technical.recent_5_days"
+        }
+      ],
+      "cautions": [
+        "前夜のADRが0.54%のプラスで引けており、寄り付きで一時的な買い戻しが入る可能性があります。",
+        "TOPIX市場全体がuptrend判定にあるため、地合いの好転による底堅さが意識されるリスクがあります。",
+        "RSIが30に接近しており、テクニカル的な売られすぎによる自律反発が発生しやすい水準です。"
+      ],
+      "key_levels": {
+        "support": 4620.0,
+        "resistance": 4875.92
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "直近のカナダLNGへの巨額投資発表に加え、第1四半期のEPSが前年同期比で大幅に伸長しており、業績モメンタムが非常に強い。日本の製造業PMIの拡大や金利上昇環境も、資源・エネルギーおよび多角的な事業を持つ総合商社にとって追い風となる。",
+      "points": [
+        {
+          "point": "カナダLNG事業への約5000億円規模の増産投資を発表しており、2030年代に向けた長期的な収益基盤の強化が期待される。",
+          "evidence": "news.headlines[2].title=\"三菱商事、カナダLNG増産へ約5000億円投資 30年代初頭に生産能力倍増\""
+        },
+        {
+          "point": "2026年6月期（第1四半期）の1株当たり利益（EPS）が81.08円と、前年同期の51.34円から大幅に増加しており、足元の業績は極めて好調である。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].diluted_eps=81.08"
+        },
+        {
+          "point": "日本の製造業PMIが54.1と拡大圏にあり、新規輸出ビジネスの増加も観測されている。グローバルに事業を展開する商社セクターにとってポジティブな外部環境である。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.1"
+        }
+      ],
+      "cautions": [
+        "2026年11月3日の第2四半期決算発表が近く、進捗状況の確認に伴うボラティリティが予想される。",
+        "2026年10月29日からの日銀金融政策決定会合による金利・為替の変動リスクが想定される。",
+        "PERが22倍を超えており、商社セクターの中では将来の成長性を織り込んだ水準にあるため、期待を下回る開示があった場合の反動が大きい。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-23",
+    "days_ago": 8,
+    "confidence": 72,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "7大商社の役員報酬ランキング【1億円超の全37人・25年度版】驚異の「10億円超え」の3人とは？報酬総額では伊藤忠が他社を圧倒《再配信》 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBPS2szelIzNEdxT1ExMXp4ZXpFcGFUQ3A4eHZQb3hwMEdwWThrVkhzN0NLaFZuR1dWQWFyNkRqZFRoMDhhY0NhNFd0WG1zYUnSAU9BVV95cUxQT0trM3pSMzRHcU9RMTF6eGV6RXBhVENwOHh2UG94cDBHcFk4a1ZIczdDS2hWbkdXVkFhcjZEamRUaDA4YWNDYTRXdFhtc2FJ?oc=5",
+        "published": "Wed, 30 Sep 2026 19:10:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "なぜ都市型スーパー「ライフ」が北陸の地場スーパーを買ったのか？ 15兆円市場を揺るがす「脱・レールサイド」の動き - news.yahoo.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9LSEV2TEE1dC01TzdERko5MWNMUGQtR2tKbV84aVhVbEZOcEhMd2NaM0NZRGxRM0xJRGVfN1M0M2NwNmVzc0VmUDk4bFA5T2QyOUVjRW82S2FjTTNLaGZjR3lpQ3pGTnhSSnA3M2p6em5ySG5wT1FLYkpCNzEwRXM?oc=5",
+        "published": "Wed, 30 Sep 2026 23:12:54 GMT",
+        "publisher": "news.yahoo.co.jp"
+      },
+      {
+        "title": "三菱商事、カナダLNG増産へ約5000億円投資 30年代初頭に生産能力倍増 - 東京報道新聞",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1MSF9WcXZtWUJ0di1mVUVqcXA0cVo1SlNRZnh1eldia3hFS3dESkFZSlJwYjI1RVo4NG5aNkc5WWNZM2xkSy1oWnhwcGhKMElBNkNN?oc=5",
+        "published": "Wed, 30 Sep 2026 14:00:23 GMT",
+        "publisher": "東京報道新聞"
+      },
+      {
+        "title": "三菱商事、カナダＬＮＧに５千億円 - nna.jp",
+        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE43MDVjUXZqbXhLRExic1p1b2NhZ0VxTHV6clAyUV9NYWZCRHRGZlMtOGJLZ1ZHcEFSRnJMSEdHZnFlNzFSRXc?oc=5",
+        "published": "Wed, 30 Sep 2026 15:00:00 GMT",
+        "publisher": "nna.jp"
+      },
+      {
+        "title": "三菱商事がマルイチ産商(長野市)の全保有株を売却 筆頭株主から外れる - 信濃毎日新聞デジタル",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9OMjBsS3B4dEVISk9XazRTWkNNdHVrTC1wdXdIRWNRVWcxWGM4aWZwbUxfZ2piamlwZmJoWlZOVVJGMWRFSEpRc01LTGJVU0hJeGZmcWZ2UVpzdTlZd09lbzhJcE8yZVhDUzRqMi1Rc3M?oc=5",
+        "published": "Wed, 30 Sep 2026 08:32:00 GMT",
+        "publisher": "信濃毎日新聞デジタル"
+      },
+      {
+        "title": "上越市に山小屋のコーヒーショップ「i.coffee.net 8058」オープン 自然を眺めながらこだわりの一杯を - Komachi Web",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1GLVFoYWdMRjNHbVljOFVxZHB4VUhhZGJsMkl2S08yVm1ScVJFM3gzUGpoZUxoSEU3cVFrcXVqZ1dnYXFvUkhSZF85a09jT2FF?oc=5",
+        "published": "Wed, 30 Sep 2026 06:10:57 GMT",
+        "publisher": "Komachi Web"
+      },
+      {
+        "title": "ライフ初の食品スーパーM＆Aで早くも気になるアルビスの次 - 激流オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9lWWl2bFoyUTI2UUFjTy1hYW1xMFpIS1BYdFo2UDMwTVc3djh0SG1MWnRNc2VGdkxzX1FvZ3hNRUpYQVNYQ09oN28xcmU1Z0xIaWc?oc=5",
+        "published": "Wed, 30 Sep 2026 20:50:19 GMT",
+        "publisher": "激流オンライン"
+      },
+      {
+        "title": "ライフサイエンス分野の研究情報を発信する学術サイト「LIFE SCIENCES Research Lab」にてシステインペプチドに関する学術情報を掲載 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1FNHNJcjdXanNVa3ZSd1dxV0NCZDY4UFBsVEVrWkIzdDBMWldiclFUODVKY0t4MDM1MDhoRDdHZjI5em1BcENwYzh6QTN6clRIa1dESzZTSzZybjRLVm1kRkVXVEc3WEdQX3c?oc=5",
+        "published": "Wed, 30 Sep 2026 04:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "JERAが上場を熱望する「2つの思惑」、実現に暗い影を落とす親会社・東電HDの提携交渉の成否 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBEUjl6Rlo5QmVYLWZsSVhKMVhBc2JmOTlKbHdlbkR1TmF5V3Y2MGcyY3JfdThYem9KNy0yY1RwSHFybjBxZUV4a0VINGNxSGPSAU9BVV95cUxQRFI5ekZaOUJlWC1mbElYSjFYQXNiZjk5Smx3ZW5EdU5heVd2NjBnMmNyX3U4WHpvSjctMmNUcEhxcm4wcWVFeGtFSDRjcUhj?oc=5",
+        "published": "Wed, 30 Sep 2026 19:50:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "【買い場到来】続落が止まらない大手優良銘柄を5銘柄で厳選しました。 Darwin Nunez (yRwc6aa6uQ) - media.unisba.ac.id",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBOQlc2UjUzQ19ST3AyRGxOZEpOLW1VVlJKRVBDVnh0Q0hJbUU5UmFhczV1d200c0hnWnU4NnB6VHNEOW5IWVdld0tUVl9RLW5HLWgzd05EejRsWkVrOUNXbk1lLWFuVWRnVmI3Vw?oc=5",
+        "published": "Wed, 30 Sep 2026 20:43:16 GMT",
+        "publisher": "media.unisba.ac.id"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期第1四半期決算短信〔IFRS〕(連結）（監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510489.pdf",
+        "date": "2026-08-06 15:25:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505791.pdf",
+        "date": "2026-08-03 14:00:00"
+      },
+      {
+        "title": "特定子会社の異動（子会社の特定子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260714593288.pdf",
+        "date": "2026-07-15 10:00:00"
+      },
+      {
+        "title": "子会社間の合併及び特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552595.pdf",
+        "date": "2026-05-29 09:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C2プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539898.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C3プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539905.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C4プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539910.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C5プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539918.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C6プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539939.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515679.pdf",
+        "date": "2026-05-01 14:00:00"
+      }
+    ]
+  }
+}
