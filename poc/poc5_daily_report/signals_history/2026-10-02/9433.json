@@ -1,0 +1,219 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-10-02T10:45:03+09:00",
+  "price_as_of": "2026-10-02",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近（2026-09-25）に buy 判断を出しており、現在はその継続監視期間（14日以内）に該当するため、ルールに基づき新規エントリーを抑制します。",
+        "evidence": "reference.recent_buy.date=2026-09-25"
+      },
+      {
+        "reason": "ファンダメンタルズは1QのEPS約19%増益や、進捗率87%に達する3,000億円規模の自己株買いなど極めて堅調な状態を維持しています。",
+        "evidence": "fundamental_view.points[0]: 1Q EPS 51.33, fundamental_view.points[1]: buyback progress 87%"
+      },
+      {
+        "reason": "テクニカル面ではSMA5とSMA25のデッドクロスが成立し、MACDも強い下落モメンタムを示しており、短期的には調整が続く可能性が高いです。",
+        "evidence": "technical_view.points[0]: sma5_vs_sma25=dead, technical_view.points[1]: macd_histogram=-20.78"
+      },
+      {
+        "reason": "ファンダメンタルズが強気（strength 75）である一方、テクニカルが弱気（strength 70）に転じており、押し目を確認するまで待機が必要です。",
+        "evidence": "fundamental_view.strength=75, technical_view.stance=bearish"
+      }
+    ],
+    "risks": [
+      "テクニカル的な下落トレンドが継続し、サポートラインである2809円を割り込むリスク",
+      "2026年10月末の日銀金融政策決定会合に伴う、金利変動と市場全体のセンチメント悪化",
+      "2026年11月12日に予定されている決算発表での業績進捗確認",
+      "楽天モバイルの自前整備加速に伴うローミング収入減少の影響"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"直近（2026-09-25）に buy 判断を出しており、現在はその継続監視期間（14日以内）に該当するため、ルールに基づき新規エントリーを抑制します。\",\n      \"evidence\": \"reference.recent_buy.date=2026-09-25\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズは1QのEPS約19%増益や、進捗率87%に達する3,000億円規模の自己株買いなど極めて堅調な状態を維持しています。\",\n      \"evidence\": \"fundamental_view.points[0]: 1Q EPS 51.33, fundamental_view.points[1]: buyback progress 87%\"\n    },\n    {\n      \"reason\": \"テクニカル面ではSMA5とSMA25のデッドクロスが成立し、MACDも強い下落モメンタムを示しており、短期的には調整が続く可能性が高いです。\",\n      \"evidence\": \"technical_view.points[0]: sma5_vs_sma25=dead, technical_view.points[1]: macd_histogram=-20.78\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズが強気（strength 75）である一方、テクニカルが弱気（strength 70）に転じており、押し目を確認するまで待機が必要です。\",\n      \"evidence\": \"fundamental_view.strength=75, technical_view.stance=bearish\"\n    }\n  ],\n  \"risks\": [\n    \"テクニカル的な下落トレンドが継続し、サポートラインである2809円を割り込むリスク\",\n    \"2026年10月末の日銀金融政策決定会合に伴う、金利変動と市場全体のセンチメント悪化\",\n    \"2026年11月12日に予定されている決算発表での業績進捗確認\",\n    \"楽天モバイルの自前整備加速に伴うローミング収入減少の影響\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "短期移動平均線のデッドクロスに加え、MACDの強い売りシグナルが継続しており、短期的には下値を模索する展開が予想されます。",
+      "points": [
+        {
+          "point": "SMA5がSMA25を下回るデッドクロスが成立しており、株価も移動平均線の下方に位置する弱い形状です。",
+          "evidence": "price_technical.sma5_vs_sma25=dead"
+        },
+        {
+          "point": "MACDがシグナルラインを大幅に下回って推移しており、ヒストグラムも-20.78と強い下落モメンタムを示しています。",
+          "evidence": "price_technical.macd_histogram=-20.78, price_technical.macd=6.05"
+        },
+        {
+          "point": "前夜の米国市場におけるADR（米国預託証券）が下落しており、国内市場での寄り付きも軟調となる可能性が高いです。",
+          "evidence": "us_overnight.adr.change_1d_pct=-0.92"
+        }
+      ],
+      "cautions": [
+        "RSIが46.6と中立圏にあり、テクニカル的な「売られすぎ」水準には至っていないため、さらなる調整の余地があります。",
+        "TOPIXは25日線上方の「uptrend」レジームにあるため、市場全体の底堅さが下値を支える可能性があります。",
+        "ADRの下落は寄り付きで織り込まれる可能性があり、その後の自律反発の有無を注視する必要があります。"
+      ],
+      "key_levels": {
+        "support": 2809.0,
+        "resistance": 2987.66
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "通信事業の安定的な成長に加え、第1四半期の好調な利益進捗と継続的な大規模自己株買いが強力な支援材料。自動運転やスマートモビリティなどの新領域での具体策も評価でき、ファンダメンタルズは堅固である。",
+      "points": [
+        {
+          "point": "第1四半期の利益成長。2026年6月期の四半期EPSは51.33円と、前年同期の43.0円から約19%の増益を達成しており、利益創出能力の向上が確認できる。",
+          "evidence": "fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "大規模な株主還元。3,000億円を上限とする自己株買いにおいて、2026年8月末時点で累計約2,612億円（進捗率約87%）を消化しており、需給の下支えが極めて強い。",
+          "evidence": "fundamentals.recent_important_disclosures"
+        },
+        {
+          "point": "非通信領域での事業具体化。自動運転バスの本格運行や公共ライドシェア、地域開発プロジェクトなど、通信インフラを基盤とした新規成長分野のニュースが相次いでいる。",
+          "evidence": "news"
+        }
+      ],
+      "cautions": [
+        "2026年11月12日に予定されている次期決算発表における業績進捗の確認が必要。",
+        "入力データ上の予想PER（forward_pe=1250.215）が著しく高く、特殊要因による利益減少の見通しが含まれている可能性に留意。",
+        "2026年10月末の日銀金融政策決定会合に伴う金利変動および市場全体のリスクセンチメントの変化。",
+        "楽天モバイルのローミング縮小に伴う回線収入への影響（news「楽天モバイル自前整備急ぐ」参照）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-25",
+    "days_ago": 7,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ＫＤＤＩ(株)【KDDIY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5UeXNVcVVoNnBzaHVrVDJRR3VqcmJrUDk1T0h1dDRJT0ttelAwWVk0UWZWT0JaQTIxMkRtQUxzLW1FdnNRVXpvUWZRb0p4cVlJ?oc=5",
+        "published": "Thu, 01 Oct 2026 11:41:14 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "KDDIスマートモビリティ、公共ライドシェアを徳島県那賀町で運行開始 フルデマンドとセミデマンドを併用 - ligare.news",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9PUHVVaExmcGRRS1kzTXZFVHJCcFIzeHpRZXVxQktnMUd6d08wSnhDMEg0M2k3R2tGdDFrcVJjX1VESkNiLUUxc2JmazY?oc=5",
+        "published": "Thu, 01 Oct 2026 23:34:33 GMT",
+        "publisher": "ligare.news"
+      },
+      {
+        "title": "暗号資産ウォレットサービス「αU wallet」提供（KDDI/au Coincheck Digital Assets/HashPort） - ペイメントナビ",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5DUEdERlhWRTc1RjlFZEp2eHA1Zm54M1FKUVVoNzR4T0xwQ09UY2tyV0d5LV9JUERjSDY5WHFyTGhuWk5PcnRybUFubU82TzhleE1SdnFsMkV6cW8?oc=5",
+        "published": "Thu, 01 Oct 2026 23:40:00 GMT",
+        "publisher": "ペイメントナビ"
+      },
+      {
+        "title": "富山グラウジーズとKDDI、YKK AP ARENAを起点とした街づくりプロジェクトを開始 - KDDI ニュースルーム",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBadXMwUTJUcTJDakhWM0o2djFsclFVcmV6aG9rOWpFbFI2a1JPZkg1b2RuNWpjVWMxNEE4cEMyM3JlYmJHbGtCYWQwWV9Ta1pPQlhDdzdVbGJjMWR3dEU2UjJTTmo4TFN0dlB1Yw?oc=5",
+        "published": "Thu, 01 Oct 2026 02:00:00 GMT",
+        "publisher": "KDDI ニュースルーム"
+      },
+      {
+        "title": "KDDI 自動運転バスをつくばで本格運行へ ついにレベル4実現か - 自動運転ラボ",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1fVVJUdWJfeExIbkVnN2VGNW50bTV4TEJiQ0VCXzJoWWR3Ui05ck9rNU4zSGNtdjRyT0pMNFB2YWdkOHE2WFhPaA?oc=5",
+        "published": "Thu, 01 Oct 2026 22:04:52 GMT",
+        "publisher": "自動運転ラボ"
+      },
+      {
+        "title": "KDDI、つくば市で自動運転バスの遠隔監視を本格運用へ - businessnetwork.jp",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBJbVJEX0NBVDJNSkQ4T3gxZlgyUmw0QlRNTHZnZ01QNmttZkNGUjBDQ0hXWjdvRUZuWGJHTlZkOHpkbVUyZF81OWpSYVpDRE5ZWTRV?oc=5",
+        "published": "Thu, 01 Oct 2026 13:07:07 GMT",
+        "publisher": "businessnetwork.jp"
+      },
+      {
+        "title": "KDDI、全国基地局の現地保守支援システムに「テックタッチ」採用 データ入力の誤りを10分の1に削減 - EnterpriseZine",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5qU0dSSTZtUVYxV3BIS0VyS2ZaMWJKelNWdk5BT1BKRnBla2lmdFBPWW5YTVBfNkVuN29MZWFBNmk2Y2lrZ0dzeTlsU3hHXzJpbUJ0bXlB?oc=5",
+        "published": "Thu, 01 Oct 2026 07:27:54 GMT",
+        "publisher": "EnterpriseZine"
+      },
+      {
+        "title": "ドローン拠点、実証実験 ＫＤＤＩと日本郵便、珠洲で公開｜社会｜石川のニュース - 北國新聞",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9MMFEtNjBhSzVKaVRGV2NLbXplbUJ4SjlYZXVQZ0F5REZ5cmNiZFkwRDNYWnBQSjZyVDRRSWtCcW9vZnpsR0xGXzROMS0yUXhkdlhIX2xYbw?oc=5",
+        "published": "Thu, 01 Oct 2026 20:00:00 GMT",
+        "publisher": "北國新聞"
+      },
+      {
+        "title": "楽天モバイル自前整備急ぐ…KDDIがローミング縮小、求められる難しい舵取り（ニュースイッチ） - topics.smt.docomo.ne.jp",
+        "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQWTJqcW1jV3lPWWNmRGt5WjlzZ0RFcnh1dmVZZmRub1dVZ3BERXZBMWpacE9paFZRaFZRRGtjaUlmdVA5UUhxYk9tUmU4cmtJeVdoY2M4NGZtWUt1QWV4UUVJTmtzTldVY2Z1b2x4aC1kclVrN0FUZ0NmWmxiUEhqbDhGZXNUeWNXYU8xblM1WExicHlFcHJ1NmJEcFJ5M0s2cVRZNzNwczJMYUVvTU5VTV8zdGxnOHZvVjdPN19yVTZZM0ZkVXR5UDBCdVc0TC1LQzBEZw?oc=5",
+        "published": "Thu, 01 Oct 2026 22:05:29 GMT",
+        "publisher": "topics.smt.docomo.ne.jp"
+      },
+      {
+        "title": "楽天モバイル利用者「乗り換え検討」 KDDI支援縮小で通信に不安 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9hSEdackpGMTZGXzFtbXBOTWZsTkJSejhMRmxackZqcHVuU3Y5MUxjc3VvYXVXMks0bFFzc3NhOXpodGNQNVhmZUs3OG1QZ1FHRWE5NER0QVozRF9iNF9rT0Q0dHJPMDMxZEYyUA?oc=5",
+        "published": "Thu, 01 Oct 2026 08:30:00 GMT",
+        "publisher": "日本経済新聞"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533350.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      }
+    ]
+  }
+}

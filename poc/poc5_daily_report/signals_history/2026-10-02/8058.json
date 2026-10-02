@@ -1,0 +1,231 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-10-02T10:45:58+09:00",
+  "price_as_of": "2026-10-02",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-09-23）にbuyシグナルを発行済みのため、ルールに従い新規の買いは出さず継続監視のホールドとします。",
+        "evidence": "reference.recent_buy"
+      },
+      {
+        "reason": "ファンダメンタルズは、好調な直近四半期業績、カナダLNGやフィリピン企業への大型投資、良好なマクロ経済環境（円安、日銀短観改善）を背景に強気の見解を維持しており、中長期的な成長期待は高いと評価されます。",
+        "evidence": "fundamental_view.stance='bullish' (strength=75), fundamental_view.points[0-3]"
+      },
+      {
+        "reason": "テクニカル面では、5日移動平均線が25日移動平均線をデッドクロスし、MACDもマイナス圏で推移・拡大するなど、短期的な下降モメンタムが鮮明です。",
+        "evidence": "technical_view.stance='neutral' (strength=40), technical_view.points[0-2]"
+      },
+      {
+        "reason": "中期的な上昇トレンドは継続しており、市場全体の地合いも良好であるため、現在の短期的な下落が限定的で、押し目買いの機会となる可能性も考慮されます。",
+        "evidence": "technical_view.points[3-4], technical_view.cautions[1-2]"
+      }
+    ],
+    "risks": [
+      "次回決算発表（2026年11月3日）の内容次第で株価が大きく変動する可能性があります。",
+      "日本銀行の金融政策決定会合（2026年10月29日〜30日）での金融政策変更が市場全体の動向に影響を及ぼすリスクがあります。",
+      "年間業績トレンドでは純利益とEPSが減少傾向にあり、今後の回復が持続するか注視が必要です。",
+      "前夜の米国ADRの下落が翌日の日本市場の寄り付きで下押し圧力となる可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内（2026-09-23）にbuyシグナルを発行済みのため、ルールに従い新規の買いは出さず継続監視のホールドとします。\",\n   \"evidence\": \"reference.recent_buy\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは、好調な直近四半期業績、カナダLNGやフィリピン企業への大型投資、良好なマクロ経済環境（円安、日銀短観改善）を背景に強気の見解を維持しており、中長期的な成長期待は高いと評価されます。\",\n   \"evidence\": \"fundamental_view.stance='bullish' (strength=75), fundamental_view.points[0-3]\"\n  },\n  {\n   \"reason\": \"テクニカル面では、5日移動平均線が25日移動平均線をデッドクロスし、MACDもマイナス圏で推移・拡大するなど、短期的な下降モメンタムが鮮明です。\",\n   \"evidence\": \"technical_view.stance='neutral' (strength=40), technical_view.points[0-2]\"\n  },\n  {\n   \"reason\": \"中期的な上昇トレンドは継続しており、市場全体の地合いも良好であるため、現在の短期的な下落が限定的で、押し目買いの機会となる可能性も考慮されます。\",\n   \"evidence\": \"technical_view.points[3-4], technical_view.cautions[1-2]\"\n  }\n ],\n \"risks\": [\n  \"次回決算発表（2026年11月3日）の内容次第で株価が大きく変動する可能性があります。\",\n  \"日本銀行の金融政策決定会合（2026年10月29日〜30日）での金融政策変更が市場全体の動向に影響を及ぼすリスクがあります。\",\n  \"年間業績トレンドでは純利益とEPSが減少傾向にあり、今後の回復が持続するか注視が必要です。\",\n  \"前夜の米国ADRの下落が翌日の日本市場の寄り付きで下押し圧力となる可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 40,
+      "summary": "中期的な上昇トレンドは継続しているものの、短期的な下降トレンドが鮮明で、移動平均線のデッドクロスやMACDの悪化が見られます。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日移動平均線をデッドクロスしており、短期的な下降トレンドを示唆しています。",
+          "evidence": "price_technical.sma5_vs_sma25='dead(5日線が25日線の下)'"
+        },
+        {
+          "point": "株価は直近終値で5日移動平均線および25日移動平均線の両方を下回っており、上値の重さが意識されます。",
+          "evidence": "price_technical.last_close=4708.0, price_technical.sma5=4730.8, price_technical.sma25=4874.56"
+        },
+        {
+          "point": "MACDはマイナス圏で推移し、MACDヒストグラムもマイナスが拡大しており、下降モメンタムの強まりを示しています。",
+          "evidence": "price_technical.macd=-17.42, price_technical.macd_histogram=-36.91"
+        },
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともにプラスであるため、中期的なトレンドは依然として良好です。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=5.63, price_technical.trend_60d.relative_to_topix_60d_pct=5.54"
+        },
+        {
+          "point": "市場全体は「uptrend」と判定されており、良好な地合いが個別銘柄の下支えとなる可能性があります。",
+          "evidence": "macro.market_regime.market_regime='uptrend'"
+        }
+      ],
+      "cautions": [
+        "前夜の米国ADRが下落しており、翌日の日本市場の寄り付きで下押し圧力がかかる可能性があります。",
+        "中期トレンドは引き続き上昇を示唆しているため、現在の短期的な下落が限定的で、押し目買いの機会となる可能性も考慮されます。",
+        "市場全体の地合いは良好であるため、この銘柄の短期的な弱気が市場全体の動きに反して改善する可能性もあります。"
+      ],
+      "key_levels": {
+        "support": 4620.0,
+        "resistance": 4730.8
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "直近四半期の好調な業績に加え、カナダLNG事業やフィリピン企業への大型投資が報じられ、今後の成長期待が高まっています。マクロ経済環境も企業活動の拡大を支持しており、中長期的な投資価値は高いと判断します。",
+      "points": [
+        {
+          "point": "直近の四半期業績は、前年同期比で大幅なEPS増加を記録しており、事業のモメンタムが良好であることを示唆しています。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].diluted_eps=81.08, fundamentals.earnings_trend.quarterly[1].diluted_eps=51.34"
+        },
+        {
+          "point": "カナダLNG事業への5000億円投資やフィリピン財閥への1200億円追加投資など、将来の収益拡大に繋がる大型の戦略的投資が直近のニュースで報じられており、成長期待が高まります。",
+          "evidence": "news.headlines[3].title='三菱商事 生産能力倍増へ カナダLNGに5000億円', news.headlines[4].title='三菱商事がフィリピン財閥 アヤラ・コーポレーションに1200億円を追加投資'"
+        },
+        {
+          "point": "日銀短観における大企業の業況判断DI（全産業）は改善しており、日本の製造業およびサービス業PMIも50を超える拡大基調を維持していることから、全般的な事業環境は良好です。",
+          "evidence": "macro.boj.tankan.di.large_all_industries.current_di=30.0, macro.japan_pmi.manufacturing.latest_value=54.1, macro.japan_pmi.services.latest_value=51.6"
+        },
+        {
+          "point": "ドル円が158円台と円安水準で推移しており、海外での事業展開が多い総合商事にとっては収益面で追い風となります。",
+          "evidence": "macro.indices[2].close=158.18"
+        }
+      ],
+      "cautions": [
+        "次回決算発表日が2026年11月3日に予定されており、その内容次第で株価が変動する可能性があります。",
+        "日本銀行の金融政策決定会合が10月29日〜30日に控えており、金融政策変更の可能性は市場全体の動向に影響を及ぼすリスクがあります。",
+        "年間業績トレンドでは、2025年3月期をピークに2026年3月期の純利益とEPSは減少しており、今後の回復が持続するか注視が必要です。",
+        "日本公庫の中小企業景況調査では、販売価格DIと仕入価格DIの差が大きく、中小企業の価格転嫁が進んでいない点がサプライチェーン全体への潜在的リスクとなりえます。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-23",
+    "days_ago": 9,
+    "confidence": 72,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "三菱商事(株)【8058】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5mUjNEVUFFMjhWQTIteEZoSTlfVWpCNzM3S21DR2MzYXBnUDhDYkNyYTJQWEd1THI5TV91SXBpYWh6THc0OFR3ZW5DVXJ3aW1mc0N0TXVTOG1LRDdRMjYw?oc=5",
+        "published": "Thu, 01 Oct 2026 02:53:17 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "三菱商事、AI活用と「考える力」を両立 誤情報と格闘させる新人向け法務研修 - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5BWGpYdUVwVUJGWGtBM2lWOElmTEt5UzlHUzluWjlzZzViN21YU3dvZGNCblA4VXRNRnNTQjdMVU5rOEhkS2FyY0dvN2d5TG5lMkc1RVh5OHBQVS11OTlLZU9vRWJ2UGM?oc=5",
+        "published": "Thu, 01 Oct 2026 08:00:00 GMT",
+        "publisher": "日経ビジネス電子版"
+      },
+      {
+        "title": "三菱商事 | 8058.T 株価動向とリアルタイム相場 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE4zN1dBMUlQV3h2cGhYMXVoTDlZeE1oaUlETzU1c0huaUhueE9BMlpHRlhBdGpDTkhMLWVQNXVGQUFpR1hQSXBpOVJvVm5zZw?oc=5",
+        "published": "Thu, 01 Oct 2026 17:26:08 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "三菱商事 生産能力倍増へ カナダLNGに5000億円 - テレ東BIZ",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE8xbnBFTTVuV1oyV1pYOFQ5UVVnZ29vTS1xNlctVmVtR090bU8tc3gxcGUxcGRGQXpfLWluYk43OGN4UXRkY3padGtoRFh2Nko1cFBtOUpZMFZjWmtCX2c?oc=5",
+        "published": "Thu, 01 Oct 2026 13:17:39 GMT",
+        "publisher": "テレ東BIZ"
+      },
+      {
+        "title": "三菱商事がフィリピン財閥 アヤラ・コーポレーションに1200億円を追加投資 - 激流オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9yNnB6UHpGQ2Y5c1J1MVp0WGhfczNhN0hLYTRvSDRjR3lvN21zdUVPdl9uVTVvMzYwSzlNLU5xNE5ENGs2WFh5MlpVSG93QTk3U2c?oc=5",
+        "published": "Thu, 01 Oct 2026 04:36:51 GMT",
+        "publisher": "激流オンライン"
+      },
+      {
+        "title": "東大・早慶…トップ11大学×15社「IT・SIer就職者数」大公開！【2026年版】200人以上激減した名門企業とは？NTTデータは400人超えを維持 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFA0a0xUeTZiV0NEcEJLMXh4LU1INGNRSnRLQmJ2aU9lVjFveXFCdkFCWXFabGpJX3R0NDJXX0FEZVp2SElBX3ZicmRld0lGMUXSAU9BVV95cUxQNGtMVHk2YldDRHBCSzF4eC1NSDRjUUp0S0JidmlPZVYxb3lxQnZBQllxWmxqSV90dDQyV19BRGVadkhJQV92YnJkZXdJRjFF?oc=5",
+        "published": "Thu, 01 Oct 2026 19:50:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "米国株式市場は小幅上昇、早期の追加利上げ懸念が後退 - topics.smt.docomo.ne.jp",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQRno1RXRJUEFrTGpUUlpXbFVSVEdhOXhaUjlVREEzX25GYkhFblJrb01sTnpyUzY1dlVIVkVPcEdpTU5fdTc0cWdUVEgyZWVRaGZsbkVvUUNrb3J1NWJIektxdEo2VUpNc2VhamlPanRyTTdUVFZ0d3pBREk1akRhaVVGYkRyV0V1d3dfd9IBjAFBVV95cUxQRno1RXRJUEFrTGpUUlpXbFVSVEdhOXhaUjlVREEzX25GYkhFblJrb01sTnpyUzY1dlVIVkVPcEdpTU5fdTc0cWdUVEgyZWVRaGZsbkVvUUNrb3J1NWJIektxdEo2VUpNc2VhamlPanRyTTdUVFZ0d3pBREk1akRhaVVGYkRyV0V1d3dfdw?oc=5",
+        "published": "Thu, 01 Oct 2026 23:04:00 GMT",
+        "publisher": "topics.smt.docomo.ne.jp"
+      },
+      {
+        "title": "買収額は2,000億円超か…「TOB」思惑で株価17%上昇の〈注目銘柄〉【10月1日の国内株式市場概況】 - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4zeExmM2ZPekdQVjQ3eUlOU3FUcmswSVhma3R1bFh1bzNFVmk0eVRmSklETHVUc0xPOUNHY0pIUzRyQWdRSjBIa0I1alRRcFFwVjNmSmpNSWNWeGxmN3FQNjJVWHhVNTRzX3Q5bGFRQ3g4U0NzSnQ0c1BHNA?oc=5",
+        "published": "Thu, 01 Oct 2026 20:00:29 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "【3大商社の違い】三菱・三井・伊藤忠は何で稼ぐ？過去・現在・未来を徹底比較 - YouTube",
+        "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE5iUmdwR3E0NnB4QWpEQXJTRHlINThzQThPUGxzZkdNZkxZR0lmYmVZSjNqUWdpc2lfakVFbFhHem1WUQ?oc=5",
+        "published": "Thu, 01 Oct 2026 08:00:31 GMT",
+        "publisher": "YouTube"
+      },
+      {
+        "title": "ライフサイエンス分野の研究情報を発信する学術サイト「LIFE SCIENCES Research Lab」にてシステインペプチドに関する学術情報を掲載 - フーズチャネル",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5KN1M0RVpkWUxWZng3ZC1LWWg2UFQxLXBuOV9RSGc0eHppRkVkTmtoSnhJY1E0NVhiOXhMT3FaU29QaDhOOXFnbUNVZUtvaGExWURBNE13?oc=5",
+        "published": "Thu, 01 Oct 2026 02:06:49 GMT",
+        "publisher": "フーズチャネル"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期第1四半期決算短信〔IFRS〕(連結）（監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510489.pdf",
+        "date": "2026-08-06 15:25:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505791.pdf",
+        "date": "2026-08-03 14:00:00"
+      },
+      {
+        "title": "特定子会社の異動（子会社の特定子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260714593288.pdf",
+        "date": "2026-07-15 10:00:00"
+      },
+      {
+        "title": "子会社間の合併及び特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552595.pdf",
+        "date": "2026-05-29 09:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C2プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539898.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C3プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539905.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C4プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539910.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C5プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539918.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C6プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539939.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515679.pdf",
+        "date": "2026-05-01 14:00:00"
+      }
+    ]
+  }
+}

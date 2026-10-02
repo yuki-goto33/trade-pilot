@@ -1,0 +1,207 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-10-02T10:38:30+09:00",
+  "price_as_of": "2026-10-02",
+  "signal": {
+    "signal": "buy",
+    "confidence": 75,
+    "target_price": 6880,
+    "stop_loss": 5980,
+    "holding_period_days": 25,
+    "reasons": [
+      {
+        "reason": "OpenAIへの巨額出資完了という強力なカタリストに加え、通期純利益5兆円規模への急拡大という極めて強気な業績トレンドを評価。",
+        "evidence": "fundamental_view.points[0]: OpenAI追加出資完了, fundamental_view.points[1]: net_income_oku_jpy=50023"
+      },
+      {
+        "reason": "テクニカルが中立（MACDデッドクロスによる短期調整中）かつ25日移動平均線近辺に位置しており、材料の完全な織り込み前としてのエントリー機会と判断。",
+        "evidence": "technical_view.stance=\"neutral\", price_technical.sma25=5983.04"
+      },
+      {
+        "reason": "米国ADRが4.05%上昇しており、直近の大幅下落（-4.98%）に対する自律反発と地合いの改善が期待される。",
+        "evidence": "us_overnight.adr.change_1d_pct=4.05, reference.market_regime=\"uptrend\""
+      }
+    ],
+    "risks": [
+      "2026-10-29開催の日銀金融政策決定会合に伴う為替および国内金利の乱高下リスク",
+      "日本10年債利回りが3.092%と高水準にあることによる、有利子負債の利払い負担増や財務健全性への懸念",
+      "2026-11-11の決算発表における投資先未上場企業の公正価値評価が市場予想を下回る可能性"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"buy\",\n  \"confidence\": 75,\n  \"target_price\": 6880,\n  \"stop_loss\": 5980,\n  \"holding_period_days\": 25,\n  \"reasons\": [\n    {\n      \"reason\": \"OpenAIへの巨額出資完了という強力なカタリストに加え、通期純利益5兆円規模への急拡大という極めて強気な業績トレンドを評価。\",\n      \"evidence\": \"fundamental_view.points[0]: OpenAI追加出資完了, fundamental_view.points[1]: net_income_oku_jpy=50023\"\n    },\n    {\n      \"reason\": \"テクニカルが中立（MACDデッドクロスによる短期調整中）かつ25日移動平均線近辺に位置しており、材料の完全な織り込み前としてのエントリー機会と判断。\",\n      \"evidence\": \"technical_view.stance=\\\"neutral\\\", price_technical.sma25=5983.04\"\n    },\n    {\n      \"reason\": \"米国ADRが4.05%上昇しており、直近の大幅下落（-4.98%）に対する自律反発と地合いの改善が期待される。\",\n      \"evidence\": \"us_overnight.adr.change_1d_pct=4.05, reference.market_regime=\\\"uptrend\\\"\"\n    }\n  ],\n  \"risks\": [\n    \"2026-10-29開催の日銀金融政策決定会合に伴う為替および国内金利の乱高下リスク\",\n    \"日本10年債利回りが3.092%と高水準にあることによる、有利子負債の利払い負担増や財務健全性への懸念\",\n    \"2026-11-11の決算発表における投資先未上場企業の公正価値評価が市場予想を下回る可能性\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "中長期トレンドは25日線の上位で推移し良好だが、直近の大幅反落とMACDのデッドクロスにより、短期的には方向感を探る局面にある。",
+      "points": [
+        {
+          "point": "25日移動平均線が上向きで、株価はその上位を維持しており、中期的な上昇トレンドは崩れていない。",
+          "evidence": "price_technical.sma25=5983.04, price_technical.sma5_vs_sma25=\"golden\""
+        },
+        {
+          "point": "MACDがシグナルをデッドクロスし、ヒストグラムがマイナスに転じたため、短期的なモメンタムは弱化している。",
+          "evidence": "price_technical.macd_histogram=-6.05"
+        },
+        {
+          "point": "前夜の米国市場でADRが4.05%上昇しており、寄り付きでの買い戻しが期待される地合いとなっている。",
+          "evidence": "us_overnight.adr.change_1d_pct=4.05"
+        }
+      ],
+      "cautions": [
+        "直近10/02に-4.98%の大幅下落を記録しており、出来高を伴う売り圧力が継続するリスクがある。",
+        "ADRの上昇分は寄り付き価格に織り込まれる可能性が高く、その後の戻り売りに注意が必要。",
+        "RSIが60と中立圏にある一方でボラティリティが激しく、テクニカル指標のダマシが発生しやすい。"
+      ],
+      "key_levels": {
+        "support": 5983.04,
+        "resistance": 6959.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "OpenAIへの巨額追加出資（サードトランシェ）完了という直近の強力なカタリストに加え、2026年3月期の純利益が5兆円規模へ急拡大する業績トレンドを評価します。",
+      "points": [
+        {
+          "point": "OpenAIへの追加出資完了によるAI投資戦略の具体化。累計出資額10兆円超、持分約13%に達し、将来の評価益や事業シナジーへの期待が極めて強い。",
+          "evidence": "disclosures.items[0].title (2026-10-01), news.headlines[5].title"
+        },
+        {
+          "point": "2026年3月期の通期純利益が5兆23億円と、前期（1兆1,533億円）比で大幅な増益を見込む強気な業績トレンドにある。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=50023"
+        },
+        {
+          "point": "マクロ環境の追い風。日経平均が一時6万8000円を回復する強い地合いに加え、ドル円が158円台と円安水準を維持しており、外貨建て投資資産の円建て評価額を押し上げる要因となる。",
+          "evidence": "macro.indices[0].close=68354.22, macro.indices[2].close=158.18"
+        }
+      ],
+      "cautions": [
+        "2026-11-11の決算発表において、投資先の公正価値評価（特に未上場株）が市場予想を下回るリスク。",
+        "日本10年金利（JGB）が3.092%と高水準にあり、有利子負債の利払い負担増および財務健全性への懸念が強まる可能性（macro.rates.jgb_10y_percent=3.092）。",
+        "2026-10-29からの日銀金融政策決定会合に伴う為替・金利の変動リスク（macro.boj.monetary_policy_meeting.next_meeting）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソフトバンクグループ(株)【9984】：株価・株式情報（夜間PTS含む） - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE55YWlQaEwwWXc5TW9lVHVuTGxCY2hKTnRLZjZTZFRoNVJZenhZUERYZWdxaDJreVdfa3p4Sk9zTHNaRkhHb3FHWUp3MVhmLVJGVEE?oc=5",
+        "published": "Thu, 01 Oct 2026 19:34:56 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ソフトバンクグループ、OpenAIへの追加出資（サードトランシェ）を実行 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1SbmRXYmFqUWwtZUVPWm5xSHo2XzVGSUY0ckp2bWVHQXpvamMyUUdjZ01QLUpsNFRpVHFRcFoxUWZPa21CalFEbWVMT21NRks2cnE2M1Y1VGZHVGkzSHZYdWlvRF85aDlwdFlveQ?oc=5",
+        "published": "Thu, 01 Oct 2026 08:22:56 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "ソフトバンクグループ(株)【SFTBY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9PS0JwdDRlRjRxb1VMWkhNNTEwcUtyQkN0SVdKbk1ZVEN2VkZYZFhkVktRdVlLNUhBdm45Q1ZxY0xZSUtsTDktcWhXNjFPSU5s?oc=5",
+        "published": "Thu, 01 Oct 2026 19:36:56 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ZOZOの大株主は51.9%を持つ親会社、株価は昨秋から2割近く下落。独立系に見える通販を動かすのは誰か？ LINEヤフーを経てソフトバンクグループへ連なる資本関係と、小売業の枠に収まらない稼ぐ力を読み解く - LIMO | くらしとお金の経済メディア",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1FQTZGQUlzVS02MzF3eWRJZHhUY2FVNGRkRjhzeUlkOGJWV1RYNFM0V3ptal9NQkw5WmFJTEw3dFRYT1ljamdfb2Z2c0E?oc=5",
+        "published": "Thu, 01 Oct 2026 20:15:00 GMT",
+        "publisher": "LIMO | くらしとお金の経済メディア"
+      },
+      {
+        "title": "ソフトバンクG、OpenAIへの100億ドルの追加出資実行 - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8tQ09wZGtsZzFTTUNVUXlrZlQzSmpYZnVlR0tSNnBCbGt2VE1XVHpnaEtSVWo3Q2RMRjF1RldXamo3QTZ0OU5qZVdpOVAwQ0RzZ1hycHdNMlpsZEdoZWN2Z3YwR2k4Sm8?oc=5",
+        "published": "Thu, 01 Oct 2026 07:18:00 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "ソフトバンクG、OpenAIへの追加出資が完了 累計10兆円超 持分約13％に - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBvSVNRSk9oRXZhUkFIRWwtSUdVeHduTWlnczBIREZ0cllYUXh4Zk1WTS1weWYteW5GVkRkYV9EWkRtcFlwRkdXWFM1UF9FX1M5bHY3QVdEY2dHYldROFJ4ci1VOEVhLWl6S3c?oc=5",
+        "published": "Thu, 01 Oct 2026 10:45:57 GMT",
+        "publisher": "ITmedia"
+      },
+      {
+        "title": "◎ソフトバンクＧ、４．７兆円追加出資を完了 - 時事通信ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBWcXhsaUx1YV9SdEFkNU1MdWJYWi1IMEdWdXVMV0xscTAyaElGZHEzdWgtNS1DVm9kTk1veV9HWmxXcldxSXAzMUdjMDJ3VFJSNXNtSw?oc=5",
+        "published": "Thu, 01 Oct 2026 08:18:00 GMT",
+        "publisher": "時事通信ニュース"
+      },
+      {
+        "title": "ソフトバンクグループ[9984]：OpenAIへの追加出資（サードトランシェ）の実行に関するお知らせ 2026年10月1日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE50S3J4TmpUdDJKRXdKVVk5am9tY0UwX2JrZzBfNzJTV0FPMXZyVVREa1RCNW9ydl9zNTI2UmJzWmdlODFhai1mWmw4dEM1d19WRTk4UldNZGluTUNFWUFxNmdpLWg5eXY4SVE?oc=5",
+        "published": "Thu, 01 Oct 2026 07:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "買収額は2,000億円超か…「TOB」思惑で株価17%上昇の〈注目銘柄〉【10月1日の国内株式市場概況】 - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4zeExmM2ZPekdQVjQ3eUlOU3FUcmswSVhma3R1bFh1bzNFVmk0eVRmSklETHVUc0xPOUNHY0pIUzRyQWdRSjBIa0I1alRRcFFwVjNmSmpNSWNWeGxmN3FQNjJVWHhVNTRzX3Q5bGFRQ3g4U0NzSnQ0c1BHNA?oc=5",
+        "published": "Thu, 01 Oct 2026 20:00:29 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "日経平均続伸、一時6万8000円回復 半導体株に買い集中 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5pRzdOb2x0MU1HNW10WVdCT0VXTlh3TVhTekhfVGVzN00wUS1Del95d3dDX0VoZVZScE5DenE0YmZUUjNmQktWVDhtVGtlN0NvMWtqcGF6bXgybjlWZ3pmOFdib0dwUTJXQkhUTVd6Z1Y4X0pK?oc=5",
+        "published": "Thu, 01 Oct 2026 02:05:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "OpenAIへの追加出資（サードトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260930543674.pdf",
+        "date": "2026-10-01 16:00:00"
+      },
+      {
+        "title": "外貨建シニア社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260924539094.pdf",
+        "date": "2026-09-24 08:00:00"
+      },
+      {
+        "title": "ブリッジローンの期限前返済に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533573.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260904531576.pdf",
+        "date": "2026-09-04 10:30:00"
+      },
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得の完了時期の変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260828527943.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824524817.pdf",
+        "date": "2026-08-24 09:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510515.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行内容確定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503871.pdf",
+        "date": "2026-07-30 17:00:00"
+      },
+      {
+        "title": "第68回及び第69回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501484.pdf",
+        "date": "2026-07-29 10:30:00"
+      },
+      {
+        "title": "OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260701586249.pdf",
+        "date": "2026-07-01 16:00:00"
+      }
+    ]
+  }
+}

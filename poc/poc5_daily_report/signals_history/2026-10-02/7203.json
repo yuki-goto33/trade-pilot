@@ -1,0 +1,213 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-10-02T10:25:56+09:00",
+  "price_as_of": "2026-10-02",
+  "signal": {
+    "signal": "hold",
+    "confidence": 62,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の strength が 60 であり、1兆円規模の自社株買いや割安感はあるものの、通期減益計画が重石となり buy 基準（70以上）に達していません。",
+        "evidence": "fundamental_view.strength=60, fundamental_view.summary"
+      },
+      {
+        "reason": "直近14日以内（2026-09-22）に buy シグナルを発出しており、現在はその継続監視期間に該当するため、新規のエントリーは行いません。",
+        "evidence": "reference.recent_buy.date=\"2026-09-22\""
+      },
+      {
+        "reason": "テクニカル面で移動平均線のデッドクロスやMACDのマイナス圏拡大が続いており、期間安値付近での下値固めを確認する必要があるフェーズです。",
+        "evidence": "technical_view.points[0]: price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\", technical_view.key_levels.support=2862.0"
+      }
+    ],
+    "risks": [
+      "2026年11月5日の第2四半期決算発表における進捗率や為替前提の修正リスク",
+      "10月29日〜30日の日銀会合に伴う円高進行による業績下振れ懸念",
+      "直近安値の2862.0円を下抜けた場合の短期的な下値模索の加速"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 62,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ専門家の strength が 60 であり、1兆円規模の自社株買いや割安感はあるものの、通期減益計画が重石となり buy 基準（70以上）に達していません。\",\n      \"evidence\": \"fundamental_view.strength=60, fundamental_view.summary\"\n    },\n    {\n      \"reason\": \"直近14日以内（2026-09-22）に buy シグナルを発出しており、現在はその継続監視期間に該当するため、新規のエントリーは行いません。\",\n      \"evidence\": \"reference.recent_buy.date=\\\"2026-09-22\\\"\"\n    },\n    {\n      \"reason\": \"テクニカル面で移動平均線のデッドクロスやMACDのマイナス圏拡大が続いており、期間安値付近での下値固めを確認する必要があるフェーズです。\",\n      \"evidence\": \"technical_view.points[0]: price_technical.sma5_vs_sma25=\\\"dead(5日線が25日線の下)\\\", technical_view.key_levels.support=2862.0\"\n    }\n  ],\n  \"risks\": [\n    \"2026年11月5日の第2四半期決算発表における進捗率や為替前提の修正リスク\",\n    \"10月29日〜30日の日銀会合に伴う円高進行による業績下振れ懸念\",\n    \"直近安値の2862.0円を下抜けた場合の短期的な下値模索の加速\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "短期テクニカルは移動平均線のデッドクロスやMACDのマイナス拡大により軟調で期間安値に接近していますが、60営業日騰落率は対TOPIXともにプラスを維持しており、全体地合いとの乖離も含めて方向感が拮抗しています。",
+      "points": [
+        {
+          "point": "株価は5日移動平均線および25日移動平均線を下回りデッドクロスが継続しているほか、MACDもシグナルを下回ってマイナス圏を拡大しており、短期トレンドは下向きです。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\", price_technical.last_close=2871.5, price_technical.sma5=2916.9, price_technical.sma25=3028.7, price_technical.macd=-31.8, price_technical.macd_signal=-13.9"
+        },
+        {
+          "point": "一方で、60営業日騰落率および対TOPIX相対騰落率はともにプラスを維持しており、中期下落トレンドには該当しない底堅さがあります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=1.54, price_technical.trend_60d.relative_to_topix_60d_pct=1.45"
+        },
+        {
+          "point": "株価は直近の期間安値である2862.0円に接近しており、市場レジームがuptrendにある中で逆行安となっているため、下値サポートでの攻防を見極める必要があります。",
+          "evidence": "price_technical.last_close=2871.5, price_technical.period_low=2862.0, macro.market_regime.market_regime=\"uptrend\", macro.indices[0].change_1d_pct=2.4"
+        }
+      ],
+      "cautions": [
+        "期間安値の2862.0円を下抜けた場合、短期的な下値模索が加速するリスクがあります。",
+        "前夜NY市場でのADRが-1.93%と軟調であり、当日の寄り付き価格に下押し圧力が織り込まれる可能性があります。",
+        "市場レジームはuptrendであり、日経平均などの全体地合いの強さに牽引されて自律反発へ向かう可能性があります。"
+      ],
+      "key_levels": {
+        "support": 2862.0,
+        "resistance": 3028.7
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "PBR1倍割れの割安感と1兆円規模の自社株買いが下支え要因となる一方、2026年3月期の通期減益計画が重石となっており、次回の決算発表を前に強弱材料が拮抗しています。",
+      "points": [
+        {
+          "point": "2026年3月期の通期業績予想は、営業利益が前期比21.5%減、純利益が19.2%減と大幅な減益を見込む慎重な計画となっている。",
+          "evidence": "fundamentals.earnings_trend.annual[0]"
+        },
+        {
+          "point": "取得価額総額1兆円を上限とする大規模な自己株式取得が進行中であり、2026年8月単月でも約865億円の買付実績があるなど、需給面での強い下支えが期待される。",
+          "evidence": "fundamentals.recent_important_disclosures[0]"
+        },
+        {
+          "point": "日銀短観の大企業製造業DIが前回比で改善し、製造業PMIも54.1と拡大圏を維持。また158円台の円安水準は、輸出セクターにとって良好な外部環境を示唆している。",
+          "evidence": "macro.boj.tankan.di.large_manufacturing.current_di=24.0, macro.japan_pmi.manufacturing.latest_value=54.1, macro.indices[2].close=158.18"
+        }
+      ],
+      "cautions": [
+        "2026年11月5日に予定されている第2四半期決算発表において、通期減益計画に対する進捗率や為替前提の変更が焦点となる。",
+        "10月29日から30日に開催される日銀金融政策決定会合の結果次第では、為替の円高進行が業績下振れリスクとなる。",
+        "国内10年債金利が3.092%と高水準にあり、金利上昇によるグローバルな株式バリュエーションへのプレッシャーに注意が必要。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-22",
+    "days_ago": 10,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "トヨタ自動車(株)【7203】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5HN0FfRUkwaDBoM1BTTk1QZFM2QzVvTHJyTDMyVWI3eEFyUXpQY3EwNUdmZ1RmOWNDUC01UkQ5OE9CZ1ZaY0lJMWtneWlUbWtyeGluSTEzbDA2WndkNkdN?oc=5",
+        "published": "Thu, 01 Oct 2026 02:52:33 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "宮城県多くの企業で内定式 アイリスグループ・トヨタ自動車東日本 - khb東日本放送",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5iMHEzbEtUSmFSd3FEME1ieHpaVjB2M0t3aEw3bW9jNjN1T2NKOTVUV3ljUEl4cTQ5eVVSc25rcDJiTXEyeWw3NUVTRE9Ud0E?oc=5",
+        "published": "Thu, 01 Oct 2026 09:15:00 GMT",
+        "publisher": "khb東日本放送"
+      },
+      {
+        "title": "広角／日本自動車工業会会長（トヨタ自動車副会長）・佐藤恒治（下）水素社会の実現 - nikkan.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE84UlNKWDVQUkxGOW1INVR1OXh6aWVuU2owdDlkbkJKS2pSMFZ1TlNaZXg0YXJ3WUhrcDQwTFBWZHU4QWx1d0JIZGUxTXVnSFlSVlgwQm0wZDY?oc=5",
+        "published": "Thu, 01 Oct 2026 20:00:00 GMT",
+        "publisher": "nikkan.co.jp"
+      },
+      {
+        "title": "８０周年 新たな価値創造 宇都宮 栃木トヨタ自動車が式典｜朝刊・夕刊ニュース｜下野新聞デジタル - 下野新聞社",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5Db2V0eXhuOENsZEc2bWJ0R19KLXhfWUdHNUF0WXRtT0VYMEZ5RHBUX3J0YnYxcWRQVVRHV0kwY1pZWjNEbFlSQXRZODVoc0ZiejRlam52czRDUG8?oc=5",
+        "published": "Thu, 01 Oct 2026 20:47:31 GMT",
+        "publisher": "下野新聞社"
+      },
+      {
+        "title": "豊田博子さん死去 豊田章男トヨタ自動車会長の母 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE02N2Fpc3RwX094NkU4U25FUUdwMy14cnRGVThBaFNTcXA4dUFhY2ZZcGtqeThVc1pSWE5IUUUzWld5aE9DYkdhQ2dSWUh4QmdUeFJNYWUwWC1aQ2JwU2NUUmR1WUxlUXdDVUN4ag?oc=5",
+        "published": "Thu, 01 Oct 2026 13:55:17 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "トヨタ自動車の豊田章男会長は一人について「私の教科書」と述べた。 長野県伊那市で寒天をつくる伊那食品工業の塚越宏創業家だ。 斜陽産業と言ったこの会社は創業以後48期連続で売上と利益が共に増え、経営の目.. - 매일경제",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9tVjBoLUkyVnN2My03VVpzT0M5elVaTEZ5dU9STFYxMlZISVJMWk1LRVVmQldkc1hRZkY0anZxb2RRUVVtVWNlMlVxTDNIM1E?oc=5",
+        "published": "Fri, 02 Oct 2026 01:01:00 GMT",
+        "publisher": "매일경제"
+      },
+      {
+        "title": "トヨタ自動車、ミシガン州にバッテリー開発センターを開設 執筆 - Investing.com 日本",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9UWnhKNGZ4TzZ4S2tmbXNQcHVvbzVmMEdyZXJnRFlNbUtodHA5eEpsM093eENGSmt1bU9PdkJUdk82aV9TZ2xIdVc5RWdBVlBsMURBcGJWZXdWZUp2bnQwLWRUb0RaM251TWc0cWZIU1J2ZnIwRzhn?oc=5",
+        "published": "Thu, 01 Oct 2026 17:09:00 GMT",
+        "publisher": "Investing.com 日本"
+      },
+      {
+        "title": "豊田章男・トヨタ自動車会長の母、豊田博子さん死去…故豊田章一郎・名誉会長の妻 - 読売新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9OYmRKYTVld0NIQXB3MENCeTFRSWtkUGlsUWFJcE1YWWtnb2J2SlIxeG5sWVkwZzVlcU1TbnhZRmMwLXVBYUM0eUZwV3pBZjUwWHhnRjZRazhQZHpMMmg2TG0xSm4?oc=5",
+        "published": "Thu, 01 Oct 2026 15:33:00 GMT",
+        "publisher": "読売新聞"
+      },
+      {
+        "title": "トヨタ自動車と欧州企業7社、水素モビリティ普及に向けた取り組みを推進：脱炭素 - MONOist",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9OeWxQTW54dURWaGJBNUdxY2JPaHVWZUhPclpnRE5USHk3bWNBTmpOM1pVbkRmMjVuNG5aVWp1a0NEdjl0UnI2cS1ZSUwzdEh1WWtpajkzR3lXZFJjRjRmbXlVbFJYM0MxTF81cFdwNA?oc=5",
+        "published": "Thu, 01 Oct 2026 07:00:00 GMT",
+        "publisher": "MONOist"
+      },
+      {
+        "title": "【開催直前】10月9日「UpdataNOW26 名古屋」｜トヨタ自動車、豊田自動織機、大野ナイフ製作所、ヤンマー建機、ヤマハ、テレビマンユニオン、IHIらが登壇 - 千葉テレビ放送株式会社",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1sZ2pBRmxfMXdTS2l6WTNfWWI1ZGNjdU9KRmtyVk1ueHhzOHBlbUczM3NLMjJvZ3dtX2c0U3B1bU04d0dTUk9EellMcDZDZFluelZ6Zmw3Y21JTUNxZ2lB?oc=5",
+        "published": "Fri, 02 Oct 2026 00:00:11 GMT",
+        "publisher": "千葉テレビ放送株式会社"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903531084.pdf",
+        "date": "2026-09-03 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度の継続及び従業員に対する新たな株式交付制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507853.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507884.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503849.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "2027年3月期第１四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507860.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507846.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "（開示事項の変更）従業員に対する株式交付制度の一部変更について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260618573427.pdf",
+        "date": "2026-06-18 15:30:00"
+      }
+    ]
+  }
+}
