@@ -1,0 +1,211 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-10-05T09:43:06+09:00",
+  "price_as_of": "2026-10-05",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 25,
+    "reasons": [
+      {
+        "reason": "直近（2026-10-02）に buy シグナルを出しており、現在はその後の推移を継続監視するフェーズであるため。",
+        "evidence": "reference.recent_buy.date=2026-10-02"
+      },
+      {
+        "reason": "ファンダメンタルズは極めて強気だが、テクニカル面でも既に強気サインが揃っており、好材料が株価に一定程度織り込まれている可能性がある。",
+        "evidence": "fundamental_view.strength=75 / technical_view.stance='bullish' (strength=70)"
+      },
+      {
+        "reason": "OpenAIへの出資やPayPayの上場観測など強力なカタリストが存在する一方、足元の反発局面で出来高が急減しており、上昇の持続性に不透明感が残る。",
+        "evidence": "fundamental_view.points[1]: PayPay上場観測 / technical_view.cautions: 出来高の急減"
+      }
+    ],
+    "risks": [
+      "2026年10月29日〜30日の日銀金融政策決定会合による円高・金利上昇リスク（fundamental_view.cautions）",
+      "2026年11月10日の次回決算発表における投資損益のボラティリティリスク（reference.next_earnings_date）",
+      "MACDがシグナルを下回っており、短期的には上値追いのモメンタムが鈍化する懸念（technical_view.cautions）"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 25,\n \"reasons\": [\n  {\n   \"reason\": \"直近（2026-10-02）に buy シグナルを出しており、現在はその後の推移を継続監視するフェーズであるため。\",\n   \"evidence\": \"reference.recent_buy.date=2026-10-02\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは極めて強気だが、テクニカル面でも既に強気サインが揃っており、好材料が株価に一定程度織り込まれている可能性がある。\",\n   \"evidence\": \"fundamental_view.strength=75 / technical_view.stance='bullish' (strength=70)\"\n  },\n  {\n   \"reason\": \"OpenAIへの出資やPayPayの上場観測など強力なカタリストが存在する一方、足元の反発局面で出来高が急減しており、上昇の持続性に不透明感が残る。\",\n   \"evidence\": \"fundamental_view.points[1]: PayPay上場観測 / technical_view.cautions: 出来高の急減\"\n  }\n ],\n \"risks\": [\n  \"2026年10月29日〜30日の日銀金融政策決定会合による円高・金利上昇リスク（fundamental_view.cautions）\",\n  \"2026年11月10日の次回決算発表における投資損益のボラティリティリスク（reference.next_earnings_date）\",\n  \"MACDがシグナルを下回っており、短期的には上値追いのモメンタムが鈍化する懸念（technical_view.cautions）\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "株価は5日線・25日線の上位に位置し中期トレンドも堅調を維持しており、良好な市場地合いを背景に上値を試す展開が期待されます。",
+      "points": [
+        {
+          "point": "株価が5日移動平均線および25日移動平均線を上回っており、ゴールデンクロスを維持した上昇トレンドにある。",
+          "evidence": "price_technical.last_close=6522.0, price_technical.sma5=6399.6, price_technical.sma25=6035.12, price_technical.sma5_vs_sma25='golden(5日線が25日線の上)'"
+        },
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともにプラスを維持しており、中期的な優位性が保たれている。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=9.08, price_technical.trend_60d.relative_to_topix_60d_pct=9.2"
+        },
+        {
+          "point": "市場レジームがuptrendと判定されており、日経平均や米主要指数も堅調で良好な地合いが支えとなっている。",
+          "evidence": "macro.market_regime.market_regime='uptrend', macro.indices[0].change_1d_pct=2.16, macro.indices[2].change_1d_pct=0.73"
+        }
+      ],
+      "cautions": [
+        "MACDヒストグラムが-1.15とシグナルをわずかに下回っており、短期的には上値追いのモメンタムが鈍化する懸念がある。",
+        "2026-10-05の出来高（7,362,500株）が直近4営業日の6,000万株台から大幅に急減した中での反発となっている点に注意が必要。",
+        "直近5営業日で-5.83%や+6.55%など荒い値動きが続いており、ボラティリティの上昇に伴う下振れリスクがある。"
+      ],
+      "key_levels": {
+        "support": 6035.12,
+        "resistance": 6959.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "OpenAIへの追加出資や子会社PayPayの米上場観測など、保有資産の価値向上に資する具体的な材料が相次いでいる。世界的な株高とAIセクターへの資金流入がNAV（純資産価値）の増大に寄与する環境にある。",
+      "points": [
+        {
+          "point": "OpenAIへの追加出資（サードトランシェ）を実行し、AI戦略の核心部分への関与を強めている点は、将来の投資成果に対する期待値を高める材料となる。",
+          "evidence": "disclosures.2026-10-01"
+        },
+        {
+          "point": "連結子会社PayPayのナスダック上場観測（時価総額2兆円規模）が報じられており、保有資産の流動化および含み益の顕在化が強く意識される状況にある。",
+          "evidence": "news.PayPay時価総額2兆円 ナスダックに上場 日本企業で最大"
+        },
+        {
+          "point": "出資先のWayveがメルセデス・ベンツと正式提携するなど、AI・自動運転分野のエコシステム拡大が着実に進展している。",
+          "evidence": "news.Wayve 自動運転技術でメルセデス・ベンツと正式提携へ"
+        },
+        {
+          "point": "マクロ環境において米国S&P500が堅調かつ国内市場もアップトレンドにあり、投資会社である同社にとって資産価値が膨らみやすい局面である。",
+          "evidence": "macro.market_regime.market_regime=uptrend, macro.indices.S&P500.change_5d_pct=0.51"
+        }
+      ],
+      "cautions": [
+        "2026年10月29日〜30日の日銀金融政策決定会合を控えており、日本の長期金利上昇や円高進行は、有利子負債の多い財務構造や海外資産評価にマイナス影響を与える可能性がある。",
+        "次回決算発表（2026年11月10日）において、投資未実現損益の変動によるボラティリティリスクが存在する。",
+        "直近で外貨建シニア社債の発行やブリッジローンの返済など財務活動が活発化しており、金利コストの上昇が収益を圧迫する懸念がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-10-02",
+    "days_ago": 3,
+    "confidence": 75,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソフトバンクGの孫氏、AI進化で「人間同士が戦うぜいたくはない」 [AIの時代] - 朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5aNTBjcnRTbU1Id2o0Z1MyeGk0LXpxM0puczRaYjVEdE95UVRDMF80VXpRR1E3QktnQ2ttMDhTSHptdlJSRGVPdXR3bkc1Qzc1V3lETVVrejhJbFlWSjBXamt6ZDA3bnc?oc=5",
+        "published": "Sun, 04 Oct 2026 08:52:38 GMT",
+        "publisher": "朝日新聞"
+      },
+      {
+        "title": "【今朝の5本】仕事を始める前に読んでおきたい厳選ニュース - Bloomberg.com",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1rU1RXOVJ6RjVlY0lFT3ZhRmw1MFotd2RkTlhqa1JPYXI1cGlFUDdBMGJNM0lKOGVETzN0WHZWa2tMcGJNa0hWVzVzOFFWQVVqeFdlMFY1NzgzM2laSUNWVXNkQlFTSHpiZlV6UmRVaXQ5cUx0bmhN?oc=5",
+        "published": "Sun, 04 Oct 2026 20:59:47 GMT",
+        "publisher": "Bloomberg.com"
+      },
+      {
+        "title": "孫正義氏、異例のスーパーインテリジェンス警鐘——AIが悪しき手に渡れば「極めて危険」 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5LaExuTXdjMUY1SEtWc2w3UXpyNzYxRlQ5ZWJrSlA4aHk0TXFWQ3F4NUJjMWdlWUNhelktM1NlLXdGUVlwSnloX183bUNGZWFYOE80Q1ZVaThYb3RzTlpuM3ZlWHhVdW5zZ1BvMzVrUE00aTBE?oc=5",
+        "published": "Sun, 04 Oct 2026 12:25:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "PayPay時価総額2兆円 ナスダックに上場 日本企業で最大【モーサテ】 Matt Damon (zXlTOLsiG2) - media.unisba.ac.id",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9yUkwzX09qc3A2Tm9XOTVmU3lKYlBXbmtBdVVFR0FQMDc1MHN0TGpYbjJkTk1BUWtSVTVqQTRNOE5faWFjd2M4el9YWDZpNER6VTBXT01BYU91MmxMa2RQQVpaR3gtTVlnZUVz?oc=5",
+        "published": "Sun, 04 Oct 2026 19:02:42 GMT",
+        "publisher": "media.unisba.ac.id"
+      },
+      {
+        "title": "ソフトバンクGの孫氏､AIの安全性に異例の懸念表明－超知能は危険伴う - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5ZcjE2dFpWMFh3b0x4WnJsYmdGdFJqaFBXMFFfYWpjUmo1RXhUQ0RVbnRuOFFsdXJ5WEFoNUJsc1NCSC1iQ0pqVTRwQTZpWU1wZk1PS19zNzg1MlZhbEZKcU1WWGk1TVU?oc=5",
+        "published": "Sun, 04 Oct 2026 10:15:47 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "日経平均は反発で寄り付く、米株高を好感 6万9000円回復 - Reuters",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOQXJpd0I4bERrbTg5aXpuZkpfeEdzSDJjbDhaU2R5YmdVMjcxT1JJS29BYUR1cjdnNGFxUXhwdERIVWJiTzlGRmc3LXR6MHJSS3lZdTNiX3VmMW45d3VRQnYwWlhSMlVfWmtSZ3JjVXFfandGNUFHUFVUSU53Y3FDNXBwTjdNQQ?oc=5",
+        "published": "Mon, 05 Oct 2026 00:16:00 GMT",
+        "publisher": "Reuters"
+      },
+      {
+        "title": "ソフトバンクGの孫氏、AI進化で「人間同士が戦うぜいたくはない」 (朝日新聞) - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNDIyMUdadWRDa1RteWgtQ0RabzVJd0c3d2libmZ1bXNEdFVDUnRQUm5aaGEwRnRyYlRfR1dVZVdFeWEtcjRLOWs0OV96N1NsdHF1NmZFcjNnaDM3Yl9VVldlU2tTT2VLSnBqZXo2S0o5M1MwU3dRdTRjUW5NdGxwMGNWdF9IR1V4OUtjVzZR?oc=5",
+        "published": "Sun, 04 Oct 2026 08:52:38 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "ソフトバンクG孫正義会長が出資するWayve 自動運転技術でメルセデス・ベンツと正式提携へ - 自動運転ラボ",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9rVm95eXIwUE9pcHN3VEdMakRad3pBbVFpVVhOZDBpUUxrU1ZIeUFqcDBVSWItc094Z1d1RjJmb2Q4V2ducngwNA?oc=5",
+        "published": "Sun, 04 Oct 2026 07:00:51 GMT",
+        "publisher": "自動運転ラボ"
+      },
+      {
+        "title": "田中浩二 (@yukap040926) on X - t.co",
+        "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE1OZXJVX1Nuam9TMHo4ZFdCbG5FWE1IMkx1VzZHMVV1eW8zY1NITklsMEhlQ1VtZTlMeUJZ?oc=5",
+        "published": "Sun, 04 Oct 2026 04:37:37 GMT",
+        "publisher": "t.co"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "OpenAIへの追加出資（サードトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260930543674.pdf",
+        "date": "2026-10-01 16:00:00"
+      },
+      {
+        "title": "外貨建シニア社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260924539094.pdf",
+        "date": "2026-09-24 08:00:00"
+      },
+      {
+        "title": "ブリッジローンの期限前返済に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533573.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260904531576.pdf",
+        "date": "2026-09-04 10:30:00"
+      },
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得の完了時期の変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260828527943.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824524817.pdf",
+        "date": "2026-08-24 09:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510515.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行内容確定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503871.pdf",
+        "date": "2026-07-30 17:00:00"
+      },
+      {
+        "title": "第68回及び第69回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501484.pdf",
+        "date": "2026-07-29 10:30:00"
+      },
+      {
+        "title": "OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260701586249.pdf",
+        "date": "2026-07-01 16:00:00"
+      }
+    ]
+  }
+}

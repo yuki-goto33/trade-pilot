@@ -1,0 +1,230 @@
+{
+  "code": "285A",
+  "name": "キオクシアホールディングス",
+  "generated_at": "2026-10-05T09:50:05+09:00",
+  "price_as_of": "2026-10-05",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 60,
+    "reasons": [
+      {
+        "reason": "直近の買シグナル（2026-09-24）が出されたばかりであり、継続して監視するためホールドとします。",
+        "evidence": "reference.recent_buy"
+      },
+      {
+        "reason": "ファンダメンタルズは、力強い業績回復と成長計画、株主還元策、良好なマクロ経済環境を背景に強気見通しを維持しています。",
+        "evidence": "fundamental_view.stance=bullish (strength=80), fundamental_view.points[0,1,2]"
+      },
+      {
+        "reason": "テクニカル的には短期的な強い上昇モメンタムが見られるものの、中期的な下落トレンドが継続しているため、慎重な監視が必要です。",
+        "evidence": "technical_view.stance=neutral, technical_view.points[1,2], technical_view.cautions[0]"
+      }
+    ],
+    "risks": [
+      "次回決算発表（2026-10-30）の内容が市場予想を下回る場合、株価が変動する可能性があります。",
+      "日銀金融政策決定会合（2026-10-29〜10-30）で金融政策に変更があった場合、市場全体に影響が及ぶ可能性があります。",
+      "PBRが高水準（4.464倍）であり、今後の業績成長が期待を下回った場合、バリュエーション調整のリスクがあります。",
+      "テクニカル的には中期的な下落トレンドが継続しており、短期的な反発が持続せずに再度下落トレンドに転じるリスクがあります。",
+      "RSIが買われすぎ水準に近づいており、短期的には調整が入る可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 60,\n \"reasons\": [\n  {\n   \"reason\": \"直近の買シグナル（2026-09-24）が出されたばかりであり、継続して監視するためホールドとします。\",\n   \"evidence\": \"reference.recent_buy\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは、力強い業績回復と成長計画、株主還元策、良好なマクロ経済環境を背景に強気見通しを維持しています。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=80), fundamental_view.points[0,1,2]\"\n  },\n  {\n   \"reason\": \"テクニカル的には短期的な強い上昇モメンタムが見られるものの、中期的な下落トレンドが継続しているため、慎重な監視が必要です。\",\n   \"evidence\": \"technical_view.stance=neutral, technical_view.points[1,2], technical_view.cautions[0]\"\n  }\n ],\n \"risks\": [\n  \"次回決算発表（2026-10-30）の内容が市場予想を下回る場合、株価が変動する可能性があります。\",\n  \"日銀金融政策決定会合（2026-10-29〜10-30）で金融政策に変更があった場合、市場全体に影響が及ぶ可能性があります。\",\n  \"PBRが高水準（4.464倍）であり、今後の業績成長が期待を下回った場合、バリュエーション調整のリスクがあります。\",\n  \"テクニカル的には中期的な下落トレンドが継続しており、短期的な反発が持続せずに再度下落トレンドに転じるリスクがあります。\",\n  \"RSIが買われすぎ水準に近づいており、短期的には調整が入る可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "本銘柄は中期的な下落トレンドにありますが、直近は強い上昇モメンタムと良好な市場地合いに支えられ、短期的な反発が続いています。",
+      "points": [
+        {
+          "point": "過去60営業日で株価が大幅に下落しており、TOPIXに対しても大きくアンダーパフォームしているため、中期的な下落トレンドにあると判断されます。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-28.01%, price_technical.trend_60d.relative_to_topix_60d_pct=-27.89%"
+        },
+        {
+          "point": "短期移動平均線は長期移動平均線を上回りゴールデンクロスを形成しており、直近終値は5日移動平均線と25日移動平均線を大きく上回っています。",
+          "evidence": "price_technical.sma5_vs_sma25='golden(5日線が25日線の上)', price_technical.last_close=19580.0, price_technical.sma5=18791.0, price_technical.sma25=17969.53"
+        },
+        {
+          "point": "MACDはシグナルラインを上回り、ヒストグラムもプラス圏で拡大しており、強い上昇モメンタムを示しています。RSIも買われすぎ手前の水準で上昇基調です。",
+          "evidence": "price_technical.macd=352.05, price_technical.macd_signal=178.81, price_technical.macd_histogram=173.24, price_technical.rsi14=65.4"
+        },
+        {
+          "point": "直近5営業日連続で株価が上昇しており、特に10月1日には出来高を伴う大幅な上昇を見せました。",
+          "evidence": "price_technical.recent_5_days"
+        },
+        {
+          "point": "市場全体はTOPIXが上昇トレンドにあり、前夜の米国市場では半導体セクター（SOX指数含む）が大幅に上昇しており、良好な外部環境が期待されます。",
+          "evidence": "macro.market_regime.market_regime='uptrend', us_overnight.sector_proxy.change_1d_pct=2.07%, us_overnight.sox_index.change_1d_pct=2.4%"
+        }
+      ],
+      "cautions": [
+        "中期的な下落トレンドが継続しているため、短期的な反発が持続せずに再度下落トレンドに転じるリスクがあります。",
+        "RSIが買われすぎ水準に近づいており、短期的には調整が入る可能性があります。",
+        "前夜の米国半導体セクターの好調は、寄り付き価格に既に織り込まれている可能性があります。",
+        "直近の急騰により、株価と移動平均線との乖離が拡大しており、一時的な調整の可能性も考慮する必要があります。"
+      ],
+      "key_levels": {
+        "support": 18791.0,
+        "resistance": 20346.67
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 80,
+      "summary": "キオクシアは、直近の四半期決算でEPSが急伸し、年間業績も黒字転換から力強い成長計画を示しています。最近の株式分割や自己株式取得といった株主還元策、および製造業に追い風となるマクロ経済環境も好材料となり、投資価値は高いと判断されます。",
+      "points": [
+        {
+          "point": "業績が力強く回復し、大幅な成長を遂げている。特に2024年3月期の赤字から2026年3月期には大きく増益する計画であり、直近の2026年6月期EPSも前四半期比で急伸している。",
+          "evidence": "fundamentals.earnings_trend.annual[2].net_income_oku_jpy=-2437, fundamentals.earnings_trend.annual[0].net_income_oku_jpy=5545, fundamentals.earnings_trend.quarterly[2].diluted_eps=1525.09, fundamentals.earnings_trend.quarterly[1].diluted_eps=271.67"
+        },
+        {
+          "point": "直近で株式分割、自己株式取得、および重要な投資計画といった株主還元策と成長戦略が実行されており、企業の積極的な姿勢が見られる。",
+          "evidence": "disclosures.items[6].title=株式分割及び株式分割に伴う定款の一部変更に関するお知らせ, disclosures.items[7].title=自己株式の取得枠設定に関するお知らせ, disclosures.items[2].title=自己株式の取得状況及び取得終了に関するお知らせ, disclosures.items[0].title=サンディスクコーポレーションとの投資計画に関するお知らせ"
+        },
+        {
+          "point": "日本の製造業は景気拡大期にあり、キオクシアの事業環境はマクロ面からも追い風となっている。製造業PMIは50を大きく超え、日銀短観の大企業製造業業況判断DIも改善している。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.1, macro.boj.tankan.di.large_manufacturing.current_di=24.0"
+        },
+        {
+          "point": "直近のニュースでは、買い越しのランキングに名を連ねるなど、市場からの強い買い意欲が示されており、株式分割も市場で注目されている。",
+          "evidence": "news.headlines[1].title=寄前【成行注文】買い越しランキング アドテスト、キオクシア、日立 [08:36], news.headlines[3].title=【今週の半導体】キオクシアが株式分割"
+        }
+      ],
+      "cautions": [
+        "次回決算発表日が2026年10月30日に控えており、その内容によっては株価が変動する可能性がある。",
+        "日銀の金融政策決定会合が2026年10月29日～10月30日に予定されており、金融政策の変更が市場全体に影響を与える可能性がある。",
+        "PBRが4.464と高水準であり、業績の成長が期待を下回った場合、バリュエーション調整のリスクがある。",
+        "一部報道では「AI減速論者」の登場により、今後のAI関連銘柄の動向に警戒感を示す見方もある。",
+        "ROEが0.871と極めて低く、資本効率の改善は依然として課題である可能性がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-24",
+    "days_ago": 11,
+    "confidence": 75,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "「AI減速論者」の登場で、大暴騰した「キオクシア」どうなる（デイリー新潮） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQNHdRMUhDV1pBU0VKX2FDb2lKM3RLYVlQWmgzSVEyQTlSTHpDOVJqem90VVFtUXpzR3AzdTRweGtwRjFwZlBKcWE5bmc4RklBQU1WTGJLTjFpRkJhdHpvaXJLclBHZXhtbFhzR29EQlF5NG4xVVYtajNlWENBcUNHMVdEemR5RkJBY25adWJR?oc=5",
+        "published": "Sun, 04 Oct 2026 21:34:12 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "寄前【成行注文】買い越しランキング アドテスト、キオクシア、日立 [08:36] - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1wdnFjdW9saWFmQzFpNENZQ1RGcnRIcGxQYUEwMmFDV3dOWTNDcVhfNmg3Wmh0dW5VS2NwdmNXWkVkZ09Kdk45UFpTd2FRSEg1MFNBbFVCX05RTjVTLVJwbA?oc=5",
+        "published": "Sun, 04 Oct 2026 23:36:44 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "「AI減速論者」の登場で、大暴騰した「キオクシア」どうなる - デイリー新潮",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBHOFJMbXdSVGFQNUFpUl9BNkMtbGdKVVNNUWM3YnJENXhNSC1GQkxTRWhMZUhLX1Fxdm11ZFVlNVRNUnAtcDZaajR5RHh6Z1EwaVEwNzB5ZWZVQ1BldDNv?oc=5",
+        "published": "Sun, 04 Oct 2026 20:00:51 GMT",
+        "publisher": "デイリー新潮"
+      },
+      {
+        "title": "【今週の半導体】キオクシアが株式分割。旧パナソニック工場が光半導体の拠点へ - crypto-times.jp",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBXODl5Z2RsRnZobWZaa191eHZLUFJfcGplMkxXNGhxakxNc0IwRktMMGoySlRtTnV1WDIxZHNUZVZNY29zMmhBSmZESHlnbkNQUU1DWW9ReEJ5OHVpcmJsc3ltY0djX0trQ3U5Tw?oc=5",
+        "published": "Sun, 04 Oct 2026 15:40:46 GMT",
+        "publisher": "crypto-times.jp"
+      },
+      {
+        "title": "元キオクシア研究者「今のAI株は割安」と指摘…次の狙いは「電力＆冷却」か - 現代ビジネス",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBnRHhBTEs5aTdlTDAxcmN4bXF4aDhJdTA5aldWbEtVWkJzUDhDVy15M01zR2xwc3dJX3l2THpocHFURjZBdHdjMHZZNUVzVXc?oc=5",
+        "published": "Sun, 04 Oct 2026 20:01:49 GMT",
+        "publisher": "現代ビジネス"
+      },
+      {
+        "title": "キオクシアホールディングス(株)【KXIAY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9pbVFlSFVNYzQ3S19xRzJBS2ppUEJDaUZXNlgxTjl0Zmx1Z2xNR0ZZVE9qMXVFdlkyUEFjdnV5d29vX2NQRWNCaHhOaGZXbjBG?oc=5",
+        "published": "Sun, 04 Oct 2026 21:29:05 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "もうブームは去った？ キオクシアどうなる？ 投資歴10年超の兼業投資家が教える「決算前の売り」判断 - みんかぶ（マガジン）",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1NeU9HMnBzMThHZXh3WEppaWJ3Mm4zZkxkVVJZQTJPNThvQTlncGhRR2ZfMU9XYkYzMkZzUnI2Yi1DUWM5LXlLSzVLcw?oc=5",
+        "published": "Sun, 04 Oct 2026 03:00:00 GMT",
+        "publisher": "みんかぶ（マガジン）"
+      },
+      {
+        "title": "株価上昇 一時6万7000円台 キオクシアHD 時価総額首位に(2026年6月12日) Pk Subban (qHoWGbR56y) - media.unisba.ac.id",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5YYzZqR0llei1LMVVIWGR0MEJIT1doRkpia01IRUFjaWdQblhtSE40c1lVa0ZVZW1ndVlfRTRNSnp3dnZ1NzdTam5mWURjaUpFTFlHeVhPWnhSNXFVQTZPXzlYOUJ6TmpuU3pj?oc=5",
+        "published": "Sun, 04 Oct 2026 09:08:54 GMT",
+        "publisher": "media.unisba.ac.id"
+      },
+      {
+        "title": "【9/18 速報】キオクシア株急騰！今は絶好の「買い場」か、それとも「高値掴み」の罠か？冷静に徹底分析 Uecl (4vps9cQRa4) - media.unisba.ac.id",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBIbjd5aS01OW9XS201OXV1clhzcFZ2SUdfbjRqa2xzZE1nQTNkRGd0cjRIdC0tQUZjU3d1c3A3TGtSWEljN1lGOHlRbnNyQ0czOGtLaEEzTlM3MlJsX2Rkd1dmNmhqTXlWbjRtRg?oc=5",
+        "published": "Sun, 04 Oct 2026 04:18:45 GMT",
+        "publisher": "media.unisba.ac.id"
+      },
+      {
+        "title": "【元キオクシア解説】ADR上場とは何か？キオクシアの懸念が払拭され株価上昇へ期待！ Gold (8md3QBH8RJ) - media.unisba.ac.id",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPaWVrR0l3cm15TVIzMG15WGw1Z3VCQnlGb1RLbXo1NElTbDBvN3BKNGJyZU4xY2RfM3N2aXpVTUlhVXdObG5WN1QxVEpYWVJ0d3FJUmlVUm16S01laWktNk14YjZRc2FZN1ZFdTN5Rmw5M1ZpcEVCNDVhZGxRdklhR3o2MURXZw?oc=5",
+        "published": "Sun, 04 Oct 2026 01:06:45 GMT",
+        "publisher": "media.unisba.ac.id"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "サンディスクコーポレーションとの投資計画に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260827527338.pdf",
+        "date": "2026-08-27 17:50:00"
+      },
+      {
+        "title": "（訂正）「主要株主である筆頭株主の異動に関するお知らせ」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260817521854.pdf",
+        "date": "2026-08-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況及び取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260810517251.pdf",
+        "date": "2026-08-10 18:15:00"
+      },
+      {
+        "title": "主要株主である筆頭株主の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260810517256.pdf",
+        "date": "2026-08-10 18:15:00"
+      },
+      {
+        "title": "当社子会社に対する訴訟の判決に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260803506332.pdf",
+        "date": "2026-08-03 15:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505265.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "株式分割及び株式分割に伴う定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505272.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "自己株式の取得枠設定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505280.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "勤務継続型株式報酬制度及び業績連動型株式報酬制度のユニット付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505321.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "当社子会社に対する訴訟の陪審評決に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595788.pdf",
+        "date": "2026-07-17 13:00:00"
+      }
+    ]
+  }
+}

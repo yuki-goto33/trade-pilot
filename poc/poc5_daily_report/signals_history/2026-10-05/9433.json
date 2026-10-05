@@ -1,0 +1,217 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-10-05T09:45:38+09:00",
+  "price_as_of": "2026-10-05",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "SMA5とSMA25のデッドクロスおよびMACDのマイナス圏推移が示唆する通り、短期的な下落モメンタムが強く、底打ちを確認すべき局面であるため。",
+        "evidence": "technical_view.points[0]: price_technical.sma5_vs_sma25='dead' / technical_view.points[1]: macd_histogram=-22.27"
+      },
+      {
+        "reason": "10年債利回りが配当利回りを上回る「利回り逆転」に加え、自社株買いの枠が終盤であることやローミング収入減少懸念など、ファンダメンタルズ上の向かい風が強まっているため。",
+        "evidence": "fundamental_view.points[2]: jgb_10y_percent=3.097, dividend_yield_percent=2.9 / fundamental_view.points[1]: buyback_progress=87%"
+      },
+      {
+        "reason": "直近14日以内（2026-09-25）に同一銘柄に対して buy 判断を出しており、現在は新規エントリーではなく継続監視を行うべきフェーズであるため。",
+        "evidence": "reference.recent_buy.date='2026-09-25'"
+      }
+    ],
+    "risks": [
+      "2026-11-06の決算発表におけるローミング収入減少に伴う通期予想の下方修正リスク。",
+      "2026-10-29からの日銀会合でさらなる利上げが示唆された場合、高配当銘柄としての売り圧力が増幅するリスク。",
+      "直近安値の2848.5円を明確に割り込んだ場合、売りが加速し調整期間が長期化するリスク。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"SMA5とSMA25のデッドクロスおよびMACDのマイナス圏推移が示唆する通り、短期的な下落モメンタムが強く、底打ちを確認すべき局面であるため。\",\n   \"evidence\": \"technical_view.points[0]: price_technical.sma5_vs_sma25='dead' / technical_view.points[1]: macd_histogram=-22.27\"\n  },\n  {\n   \"reason\": \"10年債利回りが配当利回りを上回る「利回り逆転」に加え、自社株買いの枠が終盤であることやローミング収入減少懸念など、ファンダメンタルズ上の向かい風が強まっているため。\",\n   \"evidence\": \"fundamental_view.points[2]: jgb_10y_percent=3.097, dividend_yield_percent=2.9 / fundamental_view.points[1]: buyback_progress=87%\"\n  },\n  {\n   \"reason\": \"直近14日以内（2026-09-25）に同一銘柄に対して buy 判断を出しており、現在は新規エントリーではなく継続監視を行うべきフェーズであるため。\",\n   \"evidence\": \"reference.recent_buy.date='2026-09-25'\"\n  }\n ],\n \"risks\": [\n  \"2026-11-06の決算発表におけるローミング収入減少に伴う通期予想の下方修正リスク。\",\n  \"2026-10-29からの日銀会合でさらなる利上げが示唆された場合、高配当銘柄としての売り圧力が増幅するリスク。\",\n  \"直近安値の2848.5円を明確に割り込んだ場合、売りが加速し調整期間が長期化するリスク。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "5日線と25日線のデッドクロスに加え、MACDもマイナス圏で推移しており、短期的な下落基調が鮮明です。市場全体が上昇基調（uptrend）にある中で逆行安の形となっており、目先は期間安値に向けた下押し圧力が懸念される局面です。",
+      "points": [
+        {
+          "point": "SMA5がSMA25を上から下に突き抜けるデッドクロスが発生しており、直近の株価も両移動平均線を下回っています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead\", price_technical.last_close=2891.5, price_technical.sma25=2986.74"
+        },
+        {
+          "point": "MACDがシグナルを大きく下回りマイナス圏で推移しており、ヒストグラムも-22.27と強い下落モメンタムを示しています。",
+          "evidence": "price_technical.macd=-3.99, price_technical.macd_histogram=-22.27"
+        },
+        {
+          "point": "日経平均が2.16%上昇するなど市場全体が強い地合いにある中、直近5営業日で下落が続いており、相対的な弱さが目立ちます。",
+          "evidence": "price_technical.recent_5_days, macro.indices[0].change_1d_pct=2.16, macro.market_regime.market_regime=\"uptrend\""
+        }
+      ],
+      "cautions": [
+        "RSI14が51.4と中立圏に留まっており、テクニカル的な売られすぎ感（30以下）が出ていないため、値幅調整が長引く可能性があります。",
+        "市場全体はuptrend判定であり、外部環境の改善が続けば地合いに引きずられる形で下げ止まる可能性があります。",
+        "前夜のADR（-0.16%）は軟調ですが、米国の通信サービスセクターETF（+0.35%）は反発しており、寄り付き後の反応が分かれる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 2848.5,
+        "resistance": 2986.74
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "Q1業績は前年同期比で大幅な増益を達成しており、ROE14.6%と高い資本効率を維持しているものの、3%を超える長期金利の上昇により配当利回りの相対的な魅力が低下している。約3,000億円規模の自社株買いが8月末時点で約87%まで進捗しており買い支え効果の減衰が予想されるほか、楽天モバイル向けローミング収入の縮小報道も懸念材料となる。",
+      "points": [
+        {
+          "point": "2027年3月期第1四半期の1株利益（EPS）が51.33円と、前年同期の43.0円から約19.4%増加しており、通期業績の拡大に向けた順調なスタートを切っている。",
+          "evidence": "fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "総額3,000億円を上限とする大規模な自社株買いが進行中。2026年8月末時点で累計取得額が約2,612億円に達しており、株主還元姿勢は強いものの、枠の消化率は約87%と最終盤にある。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "日本10年債利回りが3.097%まで上昇しており、当該銘柄の配当利回り2.9%を上回る「利回り逆転」が生じている。インカムゲイン狙いの資金にとって相対的な魅力が低下しやすいマクロ環境である。",
+          "evidence": "macro.rates.jgb_10y_percent.value=3.097, fundamentals.valuation.dividend_yield_percent=2.9"
+        },
+        {
+          "point": "10月から楽天モバイルによるauローミング利用が大幅に縮小されるとの報道があり、これまで収益に寄与してきたローミング収入の減少が今後の業績に下押し圧力をかける可能性がある。",
+          "evidence": "news.headlines[8].title"
+        }
+      ],
+      "cautions": [
+        "2026年11月6日の次回決算発表において、ローミング収入減少の影響や通期予想の修正有無を確認する必要がある。",
+        "2026年10月29日からの日銀金融政策決定会合。さらなる金利上昇観測が強まった場合、高配当銘柄としての売り圧力が増すリスクがある。",
+        "2026年6月に開示された「財務報告に係る内部統制の開示すべき重要な不備」の改善状況によるガバナンス評価への影響。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-25",
+    "days_ago": 10,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "「フィジカルAI」でどう社会を変えるのか――KDDIとRLWRLDが挑む共創の舞台裏：製造ITニュース（1/2 ページ） - MONOist",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1XSl9xeTFEVU1NWl9lWmVjNnR0N2tIemVPaFJKRDlIbUYyNXdEWTRRdTk4WWZZcEp4S3VCMmpUb00zeEpTUnJxVDl6cmxycDBZZkV3UnkyVjlBMjZpOWNMd2NQSGNReFBySzE3RThRaw?oc=5",
+        "published": "Sun, 04 Oct 2026 21:30:00 GMT",
+        "publisher": "MONOist"
+      },
+      {
+        "title": "アプリで記事活用のＡＩサービス 提供開始、ＫＤＤＩと報道・出版 - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9lc1dGbzNwWGVvZXEySlk3Y3RFSkxVQmJGSk82VlVSbWJyZWVHdkpWbHY3bS1MS3ZBVklLMmtNUFhheDZldjFfaE5tQWV0QjZWQi1BMDNnQ3ZEQW1pZlBNazlWb2VaM0pSb0REUDY4dw?oc=5",
+        "published": "Sun, 04 Oct 2026 08:02:19 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "10/4(日)いわき戦：2026/27 ビクトリーマッチオークション開催のお知らせ - consadole-sapporo.jp",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBfMDBLNEdyLWsxRE9PM1Nsby1jOV9wVzdxNlNSTlNlRV9YTlRQWjdKUzExRVhyZUphc28xUzZYT0Y4UzQybmlqakdBTDVRVFFvdU84Zl9qdG1UbmtqVGpNRA?oc=5",
+        "published": "Sun, 04 Oct 2026 10:34:28 GMT",
+        "publisher": "consadole-sapporo.jp"
+      },
+      {
+        "title": "12カ月分で実質2カ月分お得！KDDIがローソン店頭で買える「Pontaパスギフトカード」を展開 - dxmagazine.jp",
+        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5mYUIzWjZXUzFzZG9YMzV5Z0tGckx2RlZRMlhWQTdWa3RsM2FBakdQNTNXbkw0NUNEVkZCYnlMZVNtV1hsSnZwMVZXWnBKdw?oc=5",
+        "published": "Sun, 04 Oct 2026 09:46:24 GMT",
+        "publisher": "dxmagazine.jp"
+      },
+      {
+        "title": "生データを隠してデータ連携 KDDIが4000万人の顧客情報を安全に分析できた理由：従来の暗号化技術に潜む弱点 - TechTargetジャパン",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9HYVBBWi1YVGJIMXdKeWdCR3lFQUhHc2FfcXJZV25LeHAwN0wxTGFpRVZPRXRybW9VQThIeXpxZWdFb0VQOWtOVkRaWWw3UnpKNVdXQng4YVNnWFREVjgzd2RERUFYUmJWMkdvX3NSSGY?oc=5",
+        "published": "Sun, 04 Oct 2026 20:00:00 GMT",
+        "publisher": "TechTargetジャパン"
+      },
+      {
+        "title": "日本株ＡＤＲ・円換算終値 - みんかぶ FX/為替",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5zd0l1LU5ZTHY3T1NJUmRCbWxWMnZWTkVtb2h2SmlhSVFFRC0wQ1NuaWpqOTloLV9ya2VNQm5wR3FMdGRUSVhZSA?oc=5",
+        "published": "Sun, 04 Oct 2026 22:40:29 GMT",
+        "publisher": "みんかぶ FX/為替"
+      },
+      {
+        "title": "「AIによるAI開発」へ加速　ELYZAがRSI(再帰的自己改善)に向け新体制 - topics.smt.docomo.ne.jp",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPX2NtOUZOWklTQl84ZW04azMxa0hSZVVWT1I0OF96NmdMaVlLU09tR2ZYRHpwSXV3ZWVXUXdhM3d4WFd3OHFsNHlHUGJrOGdxOXIzNm5MZEtHd0VLRkMxeGwxbVhBMGd1eWtKNDhmTHIyRTNjWmtkTjVLWVNFaDYzWmluZ1NiSzYyQlVCdGQ0WVfSAYMBQVVfeXFMT194N2FwZVN1eXVyNWJXeHRqT0MwSE40NkoyaVdQbVVpVnlZOFlCRDlJNDhKVHBIQzI5Z3RmVWEyVjkzLXZFazRaclBTLV8yWmIwRHdjbnNEeGl0U2I5UjFSWm5fVzBaU1NIVTJMNnRncFlPSmpJcl9qRVQ2WWRNeUxkalk?oc=5",
+        "published": "Mon, 05 Oct 2026 00:00:00 GMT",
+        "publisher": "topics.smt.docomo.ne.jp"
+      },
+      {
+        "title": "画像2 / 19＞夏休みの自由研究にも！銀座でカーボンニュートラルについて楽しく無料で学べる「GINZA 456 Created by KDDI」をナビゲート - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1MWWttZUN5a3ZrUFJ3LWVKNmY1OHViclpTSTFoOERFSjRlZlVhaUJrT0wxeHpmY3VETkhEcHczN0hGa1A4SnFnLWhPam5OQlJrZXlKdUFleHFPVjJyUnZOWkpvZ0JWamx3R2xBMURB?oc=5",
+        "published": "Sun, 04 Oct 2026 01:14:02 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "10月から楽天モバイルのauローミングが大幅縮小 マップで見ると都市部で一部残るもかなり厳しい!? - ASCII.jp",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5XVDAyTVZvMUdyejJvUmVHNzRTd0NneE92czdJOXh4VkpBZVhPdFpoeGdlRUFjTkdIRDdJZjVOR1ZwQ29rb3hlYTV3LVA2SVpaWHBpNQ?oc=5",
+        "published": "Sun, 04 Oct 2026 06:00:00 GMT",
+        "publisher": "ASCII.jp"
+      },
+      {
+        "title": "続・課長インタビュー 100通りのリーダーシップ - woman.nikkei.com",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1tYVY2SHVrYnhPS1hqQ0lrdjFXMEhOMGdIUll5OEJxXzBSRVkzb2NjQ08xQlJEdldkb3oxcDlIMktkaEVOVVIzVV9ueDhOaGFuQklEdXlMQ3NTSEI3QTRn?oc=5",
+        "published": "Sun, 04 Oct 2026 08:26:42 GMT",
+        "publisher": "woman.nikkei.com"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533350.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      },
+      {
+        "title": "自己株式の公開買付けの結果に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260610567001.pdf",
+        "date": "2026-06-10 13:30:00"
+      }
+    ]
+  }
+}
