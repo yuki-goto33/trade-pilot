@@ -1,0 +1,217 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-10-06T11:11:06+09:00",
+  "price_as_of": "2026-10-06",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "2026-09-22に直近のbuyシグナルを発行してから14日以内であり、現在はその後の推移を継続監視すべき期間に該当するため。",
+        "evidence": "reference.recent_buy.date=2026-09-22"
+      },
+      {
+        "reason": "ファンダメンタルズは大規模な自社株買いやPBR0.92倍の割安感から強気ですが、テクニカル面で25日線の下方乖離やデッドクロスが継続しており、エントリーに適した反転の兆しが見られません。",
+        "evidence": "fundamental_view.strength=70, technical_view.points[1]: price_technical.sma5_vs_sma25=dead"
+      },
+      {
+        "reason": "MACDの下降モメンタムが継続しており、直近の反発局面でも出来高が伴っておらず、下落トレンドの継続リスクが解消されていないため。",
+        "evidence": "technical_view.points[2]: price_technical.macd_histogram=-7.24"
+      }
+    ],
+    "risks": [
+      "2026-10-29〜30の日銀金融政策決定会合に伴う追加利上げ観測や急激な円高の進行",
+      "2026-11-05に予定されている次回決算発表における業績予想の修正や為替前提の変更",
+      "テクニカル的なサポートラインである期間安値2853.0円を下抜けた場合の下値模索の加速"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"2026-09-22に直近のbuyシグナルを発行してから14日以内であり、現在はその後の推移を継続監視すべき期間に該当するため。\",\n   \"evidence\": \"reference.recent_buy.date=2026-09-22\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは大規模な自社株買いやPBR0.92倍の割安感から強気ですが、テクニカル面で25日線の下方乖離やデッドクロスが継続しており、エントリーに適した反転の兆しが見られません。\",\n   \"evidence\": \"fundamental_view.strength=70, technical_view.points[1]: price_technical.sma5_vs_sma25=dead\"\n  },\n  {\n   \"reason\": \"MACDの下降モメンタムが継続しており、直近の反発局面でも出来高が伴っておらず、下落トレンドの継続リスクが解消されていないため。\",\n   \"evidence\": \"technical_view.points[2]: price_technical.macd_histogram=-7.24\"\n  }\n ],\n \"risks\": [\n  \"2026-10-29〜30の日銀金融政策決定会合に伴う追加利上げ観測や急激な円高の進行\",\n  \"2026-11-05に予定されている次回決算発表における業績予想の修正や為替前提の変更\",\n  \"テクニカル的なサポートラインである期間安値2853.0円を下抜けた場合の下値模索の加速\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "60営業日騰落率および対TOPIX相対騰落率がともにマイナスで中期下落トレンドにあり、25日移動平均線の下回りやMACDの弱気形状が続いていることから下落リスクが優勢です。",
+      "points": [
+        {
+          "point": "60営業日騰落率が-0.83%、対TOPIX相対騰落率が-2.22%と揃ってマイナス圏に沈んでおり、中期的な下落トレンドおよび市場対比でのアンダーパフォームが継続しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-0.83, price_technical.trend_60d.relative_to_topix_60d_pct=-2.22"
+        },
+        {
+          "point": "株価は25日移動平均線（3014.82円）を大きく下回っており、5日移動平均線と25日移動平均線はデッドクロスを形成したまま上値抵抗として意識されています。",
+          "evidence": "price_technical.last_close=2921.5, price_technical.sma25=3014.82, price_technical.sma5_vs_sma25=dead(5日線が25日線の下)"
+        },
+        {
+          "point": "MACDがシグナルを下回りヒストグラムもマイナス（-7.24）で下降モメンタムが続いています。直近2営業日は小幅反発しているものの、直近日の出来高（7,557,400株）は直前の下げ局面から急減しており、トレンド反転を示す強い買いは見られません。",
+          "evidence": "price_technical.macd=-51.75, price_technical.macd_signal=-44.51, price_technical.macd_histogram=-7.24, price_technical.recent_5_days[4].volume=7557400"
+        }
+      ],
+      "cautions": [
+        "市場レジームはuptrend判定であり、TOPIXや日経平均など全体地合いの堅調さに引っ張られて買い戻しが入る可能性があります。",
+        "前夜NYのADRが+1.45%上昇していますが、寄り付き価格に織り込まれて寄り天となるリスクや、逆にショートカバーを誘発するリスクに注意が必要です。",
+        "期間安値である2853.0円水準が意識されて底堅さを見せた場合、25日移動平均線に向けた自律反発が一時的に長引く可能性があります。"
+      ],
+      "key_levels": {
+        "support": 2853.0,
+        "resistance": 3014.82
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "直近四半期の高水準な収益力に加え、大規模な自己株式取得の着実な進捗が需給を下支えしています。157円台後半の円安基調や堅調な製造業PMIなどマクロ環境も良好であり、割安な水準からの見直しが期待されます。",
+      "points": [
+        {
+          "point": "2026年10月5日開示の自己株式取得実績において、9月単月で約1,085億円（35,554,800株）の積極的な市場買付を実施しており、1兆円の取得枠に向けた着実な還元姿勢が需給面の下支えとなっています。",
+          "evidence": "fundamentals.recent_important_disclosures[0]"
+        },
+        {
+          "point": "直近の2026年6月期（四半期）業績は営業利益1兆635億円、純利益1兆4,770億円と高い収益力を示しており、通期減益懸念に対して足元の収益性は堅調です。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].operating_income_oku_jpy=10635, net_income_oku_jpy=14770"
+        },
+        {
+          "point": "ドル円が157.90円と円安水準にあるほか、日本の製造業PMIが54.1で拡大圏を維持し、日銀短観の大企業製造業DIも24.0へ改善するなど、輸出製造業を取り巻くマクロ事業環境が追い風です。",
+          "evidence": "macro.indices[2].close=157.9, macro.japan_pmi.manufacturing.latest_value=54.1, macro.boj.tankan.di.large_manufacturing.current_di=24.0"
+        },
+        {
+          "point": "予想PER 9.01倍、実績PBR 0.927倍、配当利回り 3.5%と解散価値を下回る水準にあり、資本効率（ROE 12.4%）に比して株価は割安に評価されています。",
+          "evidence": "fundamentals.valuation.forward_pe=9.012, fundamentals.valuation.price_to_book=0.927, fundamentals.valuation.dividend_yield_percent=3.5, fundamentals.valuation.return_on_equity=0.124"
+        }
+      ],
+      "cautions": [
+        "2026年11月5日に次回決算発表が控えており、通期業績予想に対する進捗や為替前提の修正等に伴うボラティリティリスクがあります。",
+        "2026年10月29日〜30日の日銀金融政策決定会合を控え、追加利上げ観測等に伴う急激な為替（円高）変動リスクに注意が必要です。",
+        "年次ベースでは2024年3月期をピークに営業利益・純利益ともに減益傾向が続いており、中長期的な成長鈍化懸念が残ります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-22",
+    "days_ago": 14,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "トヨタ、新型燃料電池路線バス「SORA」を発売 | トヨタ | グローバルニュースルーム - トヨタ自動車株式会社 公式企業サイト",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1wZm5PN1hHb202TzN5Yzh1XzJmMVdEcm4wTWVXb0JhajU1a093NFhmU2dzdmgyNGY4bVk1T21rRlFSZWI0Qk5xV0RSOW94NHd2bXR5YlpvQTBaTUYxVURvbGxvcWc?oc=5",
+        "published": "Mon, 05 Oct 2026 20:31:22 GMT",
+        "publisher": "トヨタ自動車株式会社 公式企業サイト"
+      },
+      {
+        "title": "トヨタ自動車[7203]：自己株式の取得状況に関するお知らせ 2026年10月5日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOaV9YWWVpbElLTDJBbWN2QUh3cmstbHR0VUF2WmdUc2NiZkNpemI3ZXFHLVRKLTZ4VlczMFd1VjFpSWdONGFEbUVhLTAyYkhuYmtnQ1RpZzFfdjBxMXFmNjlkYmZ4aHdfWTk5Q3Vib0JsNGkzdkNsa3Q4SlhaUzhoYmxJbFJDMnB0akpuNTE5T19jaUlINTVOSlB1cExyZHFsVkY1dU4zRmpfdWN4TXFZV3FlNXEyMlpkdm1QYV81TVV1ZzBESy1NVXVlWGk?oc=5",
+        "published": "Mon, 05 Oct 2026 06:30:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "原価などの営業秘密を漏らした疑い トヨタ自動車子会社の元社員2人を逮捕 （メ〜テレ（名古屋テレビ）） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA4YW5zNGlOUlFWM2sxS2x0a0JIN2xOZVVSRUwycm00eWNvZm52cUlGSkduU2Zld1FZbHQxdk5yVnVlaHE1LWpZdVNCWktXUjVoYWR5ZWFXTDVXR2V2N2R6WDc2RGxESEZaYkNrbFFISzZWTGpTUlU0ZTFtWjRfVjQ?oc=5",
+        "published": "Mon, 05 Oct 2026 08:15:01 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "トヨタが新型FC路線バス「SORA」を発売、いすゞのBEVプラットフォームと融合：脱炭素 - MONOist",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE82am43MEw2emFRRkE3Rl92OENCWlgwVmI5Z3Q5RHZkcDFCNHRrRUpMRUliMnhwRkVrVnB2RmdybEFmNml6R25xX3A2QXE3aG9ZNWNJaXdwQjRDMWRUSTRiTEg0TE9mQk8tTGthYUtnWQ?oc=5",
+        "published": "Mon, 05 Oct 2026 07:00:00 GMT",
+        "publisher": "MONOist"
+      },
+      {
+        "title": "トヨタのミッドシップスポーツ『MR2』、2028年復活へ…400ps超＋AWDか - startyourengines.net",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBKZ1Z3RUN5aElLMVE0R1VzUklneEt4TjFqM0xqblNzbkpGdlR2WUJKSXlzbGVNUEFuTmpQdk90aFBQeEJLU0luaXNuSVZyUWhpc2hjNW9sZHZDMV9OMVR2ZkUyWQ?oc=5",
+        "published": "Tue, 06 Oct 2026 00:02:51 GMT",
+        "publisher": "startyourengines.net"
+      },
+      {
+        "title": "トヨタ自動車の燃料電池バス「SORA（ソラ）」の新型車 - トヨタ、新型燃料電池バス 航続距離100キロ長く - 写真・画像(1/1) - 西日本新聞me",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE02RlNabFN5dS1IaTFUMVo4T3BfbVVhbWI4aGdFdFlvOTdEbEF5NW85eUVoWUtMMVFFcTk5Y3Biekt6eGEweFh6MVZxS0RjNWE5cUZha0ZVZw?oc=5",
+        "published": "Mon, 05 Oct 2026 08:00:00 GMT",
+        "publisher": "西日本新聞me"
+      },
+      {
+        "title": "トヨタ、新型燃料電池バス - カナロコ",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE51bjlGSHF6SGhXY0hwNEtWbjNnZFhlSW5kbGhhWVNiRmdJNXBveUVLV3hZbGNzUkVrY09nOF9QdktaQkltRE9ZTVpJRGVJS3ZnSmcyLUpiRHR6UnRETWtJMmdrOERYYzht?oc=5",
+        "published": "Mon, 05 Oct 2026 08:03:28 GMT",
+        "publisher": "カナロコ"
+      },
+      {
+        "title": "【トヨタ自動車】売上54兆円モンスターの逆襲！EV減速で爆売れするHEV世界制覇と全固体電池の衝撃【新NISA投資判断】 - YouTube",
+        "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE5rckt5YWR4SUFic2xVbTlQZ2lhU2ZrR0NpSXFMeVc3T3BaQWxkZ1Q1MXR6aThWMGl1dDdMMVB3Znk4dw?oc=5",
+        "published": "Mon, 05 Oct 2026 12:52:22 GMT",
+        "publisher": "YouTube"
+      },
+      {
+        "title": "トヨタ、新型燃料電池バス - 埼玉新聞",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9pa1VpRG9vMWJ4SHdqTWlPelpHUGp2dEhpTzNIUDhzZ2JPN2RwZHJ2SmdVM2JBTU5ENVgybTJVWkg1VDMzVWtYbHV6TDBqS1NrNF8tVEpIOA?oc=5",
+        "published": "Mon, 05 Oct 2026 08:03:00 GMT",
+        "publisher": "埼玉新聞"
+      },
+      {
+        "title": "原価などの営業秘密を漏らした疑い　トヨタ自動車子会社の元社員2人を逮捕　 - nagoyatv.com",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9IVko4ZFYyN0otLW9kYWNkQk5qZ2tkcHljYlBMZ1JxUTBMdWlTNzV1SWFIRFl5SG5USnZzTFcwdTBZM1pHR0lSZDBvOXNpZEg2UEHSAWRBVV95cUxOZk1iSXRlZURCTEZEZEFveUFhSjNZcC1DWTRxNnR6Nk5TaDJqY3R0WWduUTlheVhVb09vTUlkUnNCM2ZNMTlZZkdVNU4tb0w0UkJqVmNyZzVBQnlJZGVISmpsamdY?oc=5",
+        "published": "Mon, 05 Oct 2026 08:18:00 GMT",
+        "publisher": "nagoyatv.com"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261005545791.pdf",
+        "date": "2026-10-05 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903531084.pdf",
+        "date": "2026-09-03 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度の継続及び従業員に対する新たな株式交付制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507853.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507884.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503849.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "2027年3月期第１四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507860.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507846.pdf",
+        "date": "2026-08-04 14:00:00"
+      }
+    ]
+  }
+}
