@@ -1,0 +1,217 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-10-07T10:41:39+09:00",
+  "price_as_of": "2026-10-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 75,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-10-02）に buy シグナルを発出しており、再エントリー抑制ルールに基づき継続監視（hold）とする。",
+        "evidence": "reference.recent_buy.date=2026-10-02"
+      },
+      {
+        "reason": "ファンダメンタルズは極めて強固。OpenAIへの追加出資や出資先のIPO準備など、AI投資戦略の具体化が加速している。",
+        "evidence": "fundamental_view.points[0]: OpenAIへの追加出資, fundamental_view.points[1]: デイワンの米IPO申請"
+      },
+      {
+        "reason": "テクニカル面ではMACDがデッドクロスしており、短期的には調整局面にある。ADRの大幅下落も重なり、押し目を確認するフェーズである。",
+        "evidence": "technical_view.points[2]: macd_histogram=-35.74, technical_view.cautions[0]: 前夜ADRが-3.45%の下落"
+      }
+    ],
+    "risks": [
+      "2026年11月10日の決算発表における投資損益の振れ幅によるボラティリティ上昇",
+      "2026年10月29日からの日銀金融政策決定会合に伴う為替および国内金利の変動リスク",
+      "ADRの下落を受けた寄り付き後の窓開け下落、およびSMA25（6125円付近）までの調整の可能性"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 75,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"直近14日以内（2026-10-02）に buy シグナルを発出しており、再エントリー抑制ルールに基づき継続監視（hold）とする。\",\n      \"evidence\": \"reference.recent_buy.date=2026-10-02\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズは極めて強固。OpenAIへの追加出資や出資先のIPO準備など、AI投資戦略の具体化が加速している。\",\n      \"evidence\": \"fundamental_view.points[0]: OpenAIへの追加出資, fundamental_view.points[1]: デイワンの米IPO申請\"\n    },\n    {\n      \"reason\": \"テクニカル面ではMACDがデッドクロスしており、短期的には調整局面にある。ADRの大幅下落も重なり、押し目を確認するフェーズである。\",\n      \"evidence\": \"technical_view.points[2]: macd_histogram=-35.74, technical_view.cautions[0]: 前夜ADRが-3.45%の下落\"\n    }\n  ],\n  \"risks\": [\n    \"2026年11月10日の決算発表における投資損益の振れ幅によるボラティリティ上昇\",\n    \"2026年10月29日からの日銀金融政策決定会合に伴う為替および国内金利の変動リスク\",\n    \"ADRの下落を受けた寄り付き後の窓開け下落、およびSMA25（6125円付近）までの調整の可能性\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "中期的な上昇トレンドは維持されているものの、短期的にはMACDの調整シグナルや前夜ADRの大幅な下落が重しとなり、強弱感が拮抗する展開が予想されます。",
+      "points": [
+        {
+          "point": "中期トレンドはTOPIXをアウトパフォームしており、上昇基調が継続している。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=10.19, price_technical.trend_60d.relative_to_topix_60d_pct=7.09"
+        },
+        {
+          "point": "株価は25日移動平均線の上方に位置し、SMA5と25のゴールデンクロスも維持されている。",
+          "evidence": "price_technical.last_close=6350.0, price_technical.sma25=6125.48, price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\""
+        },
+        {
+          "point": "一方でMACDはデッドクロス状態にあり、ヒストグラムもマイナス圏で短期的な調整圧力を示している。",
+          "evidence": "price_technical.macd=233.55, price_technical.macd_signal=269.29, price_technical.macd_histogram=-35.74"
+        }
+      ],
+      "cautions": [
+        "前夜のADR（米国預託証券）が-3.45%と大幅に下落しており、当日の寄り付き価格が大きく下押しされるリスクがある。",
+        "直近5営業日の騰落率が+4.21%から-5.83%など激しく、ボラティリティが非常に高まっている。",
+        "RSI14が58.6と過熱感はないものの、MACDの調整が長引いた場合にSMA25付近までの押し目形成が懸念される。"
+      ],
+      "key_levels": {
+        "support": 6125.48,
+        "resistance": 6959.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "OpenAIへの継続的な追加出資や出資先の米国IPO準備など、AI投資ポートフォリオの拡大と出口戦略の具体化が加速している。S&P500の堅調な推移と円安水準の維持は、海外投資資産の評価額増大に寄与し、ファンダメンタルズを強化する要因となる。",
+      "points": [
+        {
+          "point": "AI投資戦略の深化とプレゼンス強化。OpenAIへのサードトランシェとなる追加出資を10月1日に実行しており、生成AI分野における戦略的地位を固めている。",
+          "evidence": "disclosures.date=2026-10-01, title=OpenAIへの追加出資（サードトランシェ）の実行に関するお知らせ"
+        },
+        {
+          "point": "投資ポートフォリオの流動化・利益確定期待。ソフトバンクGが出資するデータセンター関連企業「デイワン」が米国でのIPOを申請し、最大50億ドルの調達を目指すとの報道は、投資回収の具体化として好感される。",
+          "evidence": "news.headlines[4].title=ソフトバンクG出資デイワン､米IPO申請-データセンター株式公開相次ぐ"
+        },
+        {
+          "point": "グローバルなマクロ環境の追い風。S&P500が5日間で2.19%上昇し、ドル円も158.35円と円安水準にあることは、外貨建て投資資産を多く保有する同社のNAV（純資産価値）の増大要因となる。",
+          "evidence": "macro.indices[3].change_5d_pct=2.19, macro.indices[2].close=158.35"
+        },
+        {
+          "point": "機動的な資金調達と財務基律の維持。外貨建シニア社債の発行やブリッジローンの期限前返済を進めており、攻めの投資と財務健全性のバランスを継続している。",
+          "evidence": "disclosures.items[1].title=外貨建シニア社債の発行に関するお知らせ, disclosures.items[2].title=ブリッジローンの期限前返済に関するお知らせ"
+        }
+      ],
+      "cautions": [
+        "2026年11月10日に次回の決算発表を控えており、投資評価益の変動に伴う利益の振れ幅に注意が必要（fundamentals.next_earnings_date）。",
+        "国内10年債金利が3.103%と高水準で推移しており、金利上昇に伴う利払いコスト増や国内株市場全体の調整リスクが懸念される（macro.rates.jgb_10y_percent=3.103）。",
+        "約22日後には日銀金融政策決定会合が控えており、政策修正の観測による為替のボラティリティが評価額に影響する可能性がある（macro.boj.monetary_policy_meeting.next_meeting）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-10-02",
+    "days_ago": 5,
+    "confidence": 75,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "父が2年前「ソフトバンクグループ株」を“退職金1000万円”で買ったら「株価2000円」から3倍に！ 売却益で社債を買ったら「毎月5万円を7年間もらえる」そうですが、こんな“おいしい話”ありますか？（ファイナンシャルフィールド） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNMFh0NTdJYllMZ2hUR3Q0aGxrY3ZXajZ3U01jel9YY0xUTFNmaERNa09vLWxCQWJUZjZwQ3BUZ193ZGpPTmlkY3c1VXV1NHIxcF9KVEppVzNFN2dHN29paE5hZE5sMUtFckFJM2dqWGlXR0lVVmg4a2FtZDNDNkxRMDBsbXpKWU1v?oc=5",
+        "published": "Tue, 06 Oct 2026 05:10:17 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "ニデックの株価はなぜ急騰？出来高2.4倍！今後の2シナリオ【9/7】 Asbestos In Dunelm Products (aIVY63YkwB) - Unisba Media",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1zVmpVUVBlMG1nMGFsMmxhOTBlNGlhU2YtdkZ3VEpKb0NYT2dyQ0t1ZzJkc3J2ekswNVZsaEwwcTIycXowMEtySlhZV2tQN3dXc0xwa2hxeEJEVG1odkkwSDdlUFlXempWVUo0?oc=5",
+        "published": "Tue, 06 Oct 2026 18:27:40 GMT",
+        "publisher": "Unisba Media"
+      },
+      {
+        "title": "日経平均７万円台を維持、ＡＩ・半導体株がけん引――物色の裾野拡大が焦点 - https://kabu-ir.com/",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBYS200TFk5ZkxJRGN4dFIwMjZMMUFkZElnVXNxeVYwTmJNU2lUVExPRWRTS2FCMTg0REtmMVIzNlJLVF9SVVVpNGl2NnRENVpjbzVwcQ?oc=5",
+        "published": "Tue, 06 Oct 2026 10:36:59 GMT",
+        "publisher": "https://kabu-ir.com/"
+      },
+      {
+        "title": "ソフトバンク出資のデイワン、米IPOで最大50億ドル調達へ - クーリエ・ジャポン",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNRDZfQVR4MUFjeXNXamxMbV9pOGJiUzAwb3U4R1c4Wm5MSEdFX0pFcUh4MllDNVBidFJJaGxHaDcyRGEzcEpjMHlmb0tqOHIwV25KVFVicGRHbkZCM2FENlhuLUtxOUY0ZW9Zemlhc0hGRTFnN2Jlbm44SG1COXV5S29iVHZ1QzlfbmNOdGxJRDl1R3c2SE9Wc3ZjTTdDLXZndXFjWEZMQ1cyQQ?oc=5",
+        "published": "Tue, 06 Oct 2026 06:22:00 GMT",
+        "publisher": "クーリエ・ジャポン"
+      },
+      {
+        "title": "ソフトバンクG出資デイワン､米IPO申請-データセンター株式公開相次ぐ - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5jMHBMOFdaT1h4c3VxXzMzWnVLQUtjVlBfQ2tCMmdyYWlnb2d4UVMyTVlYd0FESzBjZWZFN3JmM3J0SXg3QlJvNGNMZzM1NmF0QVZfdGNqN1BxRU83Q2NvTmJpT2Rud1BuM1E3bVJFS0V1MWJJ?oc=5",
+        "published": "Tue, 06 Oct 2026 02:14:37 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "タイムズカーなど情報漏えい事件頻発でテーマ再燃…「サイバー防衛」見直し買いで急伸した〈注目株〉の正体【10月6日の国内株式市場概況】 - ゴールドオンライン",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1pT08xUGNPM1RJR2lpY1BqNnlaRkNyM2szU2lFYk14aU51VWNhRzFSR0REbmJGa25vU2lOMkN1VDBEWEx0cE5HQjB2U2FheHlQRXc?oc=5",
+        "published": "Tue, 06 Oct 2026 10:00:00 GMT",
+        "publisher": "ゴールドオンライン"
+      },
+      {
+        "title": "東京市場サマリー：日経平均は大幅続伸 日銀、10月会合で基調的な物価上昇率が2％に到達したと判断へ＝関係者筋 TDKは後場上げ幅拡大、HDD磁気ヘッド事業買収を東芝と米シーゲートが競うと報道 - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOWm9pRjZ1QW4zT1Z1cTB4cmRjZm5DLUoyV1phQldUanFLNzNsOVpLekV4NXFQbVE5NWY1enBnUEtZN29nb0loQldBZUZFUkwyR08zekZUdFkwS2RiV3VqWDR5X3V4QTY5X0xLenBtMlBiTi1veGRxYmVvcWJVaVQ4OWJsSTN1Q3E4S2tKODlHZGJmVldZclV4MllRa1d0T0lHU0JOSlFFalZJLU5LbUZEaXVyNjVGZw?oc=5",
+        "published": "Tue, 06 Oct 2026 06:58:45 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "読売３３３終値、４３９円高の５万３２６０円…２日連続で上昇 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBITkZ4LUp4WnIyeWpsUkJMRWJxN1ZzOS10R2Zkdl9jMTRpUnZRWEc4cURkNlctSG5LZzVyb201UFk2TnpMOU84SkRqQmtWNzQ1NFlHZUtBN2EzcnNLWFJjNDBXSjMxZTNLODM2dXZn?oc=5",
+        "published": "Tue, 06 Oct 2026 09:46:00 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "ソフトバンクG孫正義、「超知能」の悪用に警鐘。AI制御へ国際協調訴え＝報道（あたらしい経済） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBUNWtvS3h5bWFaSmNhczUyQ3FvVWlfSDZ5cVhDUDhZN0RMY3BsNDVwTVFDLTRfU2ZUY1NYUzJQRG5XQmxuMWo0TDJnQmdrMTlaVGxwUkpzanREOExwVU5qX05Sb0p1SjVPUXJuRzlCbXU0THlBMUl6LWZvYTFkSWs?oc=5",
+        "published": "Tue, 06 Oct 2026 07:26:00 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "信越化学工業(株)【4063】：株つぶやき - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBjUHRGUFFSN3phUWF5YmNrX2dQRFdqQ0l4UkRDcGFCem9aZFJWdVdSaE5LODhTZm9aQVdPejdJWVhEV1lMbDRzY3hTSEZqVHNPbHZRYjU4R2M?oc=5",
+        "published": "Tue, 06 Oct 2026 09:43:25 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "OpenAIへの追加出資（サードトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260930543674.pdf",
+        "date": "2026-10-01 16:00:00"
+      },
+      {
+        "title": "外貨建シニア社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260924539094.pdf",
+        "date": "2026-09-24 08:00:00"
+      },
+      {
+        "title": "ブリッジローンの期限前返済に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533573.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260904531576.pdf",
+        "date": "2026-09-04 10:30:00"
+      },
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得の完了時期の変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260828527943.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824524817.pdf",
+        "date": "2026-08-24 09:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510515.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行内容確定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503871.pdf",
+        "date": "2026-07-30 17:00:00"
+      },
+      {
+        "title": "第68回及び第69回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501484.pdf",
+        "date": "2026-07-29 10:30:00"
+      },
+      {
+        "title": "OpenAIへの追加出資（セカンドトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260701586249.pdf",
+        "date": "2026-07-01 16:00:00"
+      }
+    ]
+  }
+}

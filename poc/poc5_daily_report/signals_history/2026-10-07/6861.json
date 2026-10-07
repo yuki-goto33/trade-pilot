@@ -1,0 +1,206 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-10-07T10:42:41+09:00",
+  "price_as_of": "2026-10-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 22,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズが strength 70 と強力だが、テクニカルも既に bullish（strength 80）となっており、材料が株価に織り込まれモメンタム追随の遅いエントリーになる可能性が高いため、ルールに基づき hold とする。",
+        "evidence": "fundamental_view.strength=70, technical_view.stance=bullish"
+      },
+      {
+        "reason": "テクニカル面ではゴールデンクロスやMACDの好転が確認できるものの、RSIが68.0と過熱目安の70に接近しており、短期的には利益確定売りに押されるリスクがある。",
+        "evidence": "technical_view.cautions[0]: RSI14=68.0"
+      },
+      {
+        "reason": "ADRが前夜に下落（-1.04%）しており、当日の寄り付きからの調整が想定されるため、押し目を確認すべき局面である。",
+        "evidence": "technical_view.cautions[1]: ADR -1.04%"
+      }
+    ],
+    "risks": [
+      "2026年10月29日に予定されている次回決算発表による業績修正およびボラティリティの拡大",
+      "決算と同日程（10/29〜30）で開催される日銀金融政策決定会合による金利・為替の変動リスク",
+      "Forward PE 43.6倍という高いバリュエーション水準に起因する、地合い悪化時の下落耐性の低さ"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 22,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズが strength 70 と強力だが、テクニカルも既に bullish（strength 80）となっており、材料が株価に織り込まれモメンタム追随の遅いエントリーになる可能性が高いため、ルールに基づき hold とする。\",\n   \"evidence\": \"fundamental_view.strength=70, technical_view.stance=bullish\"\n  },\n  {\n   \"reason\": \"テクニカル面ではゴールデンクロスやMACDの好転が確認できるものの、RSIが68.0と過熱目安の70に接近しており、短期的には利益確定売りに押されるリスクがある。\",\n   \"evidence\": \"technical_view.cautions[0]: RSI14=68.0\"\n  },\n  {\n   \"reason\": \"ADRが前夜に下落（-1.04%）しており、当日の寄り付きからの調整が想定されるため、押し目を確認すべき局面である。\",\n   \"evidence\": \"technical_view.cautions[1]: ADR -1.04%\"\n  }\n ],\n \"risks\": [\n  \"2026年10月29日に予定されている次回決算発表による業績修正およびボラティリティの拡大\",\n  \"決算と同日程（10/29〜30）で開催される日銀金融政策決定会合による金利・為替の変動リスク\",\n  \"Forward PE 43.6倍という高いバリュエーション水準に起因する、地合い悪化時の下落耐性の低さ\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 80,
+      "summary": "中期・短期のトレンドがいずれも上向きで、MACDの好転も継続している。直近は高値圏での保ち合いとなっているが、良好な市場地合いを背景に期間高値を目指す展開が期待される。",
+      "points": [
+        {
+          "point": "中期上昇トレンドの維持。60日騰落率が+9.05%、対TOPIX相対騰落率も+5.95%と、市場をアウトパフォームしながらの上昇トレンドを形成している。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=9.05, price_technical.trend_60d.relative_to_topix_60d_pct=5.95"
+        },
+        {
+          "point": "短期テクニカル指標の好転。SMA5がSMA25を上回るゴールデンクロス状態にあり、MACDもシグナルを上抜けヒストグラムが拡大（587.63）しているため、上昇の勢いが強い。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.macd_histogram=587.63"
+        },
+        {
+          "point": "市場全体の地合いが支援。TOPIXが25日線を上回り、市場レジームが「uptrend」と判定されていることが、当該銘柄の上値追いを支える要因となる。",
+          "evidence": "macro.market_regime.market_regime=uptrend"
+        }
+      ],
+      "cautions": [
+        "RSI14が68.0と買われすぎの目安である70に肉薄しており、短期的には利益確定売りに押されるリスクがある。",
+        "前夜のADRが-1.04%と下落して引けているため、当日の寄り付き価格が前日終値を下回る可能性がある。"
+      ],
+      "key_levels": {
+        "support": 78628.8,
+        "resistance": 84170.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "持続的な増収増益トレンドに加え、製造業PMIの拡大と日銀短観の改善が示す良好な事業環境が追い風。直近の子会社による新製品投入も成長期待を支える。",
+      "points": [
+        {
+          "point": "2024年3月期から2026年3月期にかけて売上高・営業利益・EPSが安定して右肩上がりの成長を続けており、極めて堅調な業績トレンドにある。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "製造業PMIが54.1と8ヶ月連続の拡大圏を維持し、日銀短観の大企業製造業DIも前回比+2.0と改善しており、同社の主戦場である工場自動化需要の底堅さが裏付けられている。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.1, macro.boj.tankan.di.large_manufacturing.current_di=24.0"
+        },
+        {
+          "point": "2026年10月6日に、子会社メイカーズによる新製品（工業用内視鏡や高出力充電器）の発売が相次いで報じられており、新規領域への展開を通じた成長加速が期待される。",
+          "evidence": "news.headlines[0, 6]"
+        }
+      ],
+      "cautions": [
+        "2026年10月29日に予定されている次回決算発表に伴う短期的なボラティリティの上昇。",
+        "決算と同日程（10/29〜30）で開催される日銀金融政策決定会合による金利・為替の変動リスク。",
+        "Forward PE 43.6倍という高いバリュエーション水準は、成長鈍化が示唆された場合に下落幅を広げる要因となる。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "キーエンスの新事業会社 メイカーズ 今度は高出力のUSB充電器を発売 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQRFNaMXM2d2J5ZUsyWXlXOFlyTWpqZHVvMHFrWGJPdmtvWHlrM3lucE9na05KWWRmSzQ2a0F3ZEs2VjVmNDRPbmdhN1pYQXBxTzdQdXlFNVdwUmsyQ2NzRnpkMTVfbWIyQjh5cWZTdExzUmFjMlZXZ1ZUakx4YzltY1d30gGCAUFVX3lxTFBEU1oxczZ3YnllSzJZeVc4WXJNampkdW8wcWtYYk92a29YeWszeW5wT2drTkpZZGZLNDZrQXdkSzZWNWY0NE9uZ2E3WlhBcHFPN1B1eUU1V3BSazJDY3NGemQxNV9tYjJCOHlxZlN0THNSYWMyVldnVlRqTHhjOW1jV3c?oc=5",
+        "published": "Tue, 06 Oct 2026 21:30:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "キーエンスの新事業会社 メイカーズ 今度は高出力のUSB充電器を発売 - BCN Retail",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1VTDdQXzFsQTZMQndKMC1KRjcyQTg1eVcybTN2WkFMbkJ1RGhZeVRTcUFtaXZUWV8wdnRtOGhMU2FKaXUtbWdvNWRxMW5vQ0w4akdybzlFLTBOZ19oeU5xbTA2TVNIeWtqMFE?oc=5",
+        "published": "Tue, 06 Oct 2026 21:30:00 GMT",
+        "publisher": "BCN Retail"
+      },
+      {
+        "title": "手軽にホットチャージ！ ご自愛スープを新習慣に スターバックス「パンプキン スープチーノ®」 - anan",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE05clo3T3RWaWxPSklPODRQR3JIWFJHVUNrRHIxNGtnZVBkZ2FnZ2FDZ2hGSC1adXZZcHpjZUdwc1NwOTg1Y0dEVHl1N1poelRWdllz?oc=5",
+        "published": "Wed, 07 Oct 2026 01:00:23 GMT",
+        "publisher": "anan"
+      },
+      {
+        "title": "キーエンスの新事業会社 メイカーズ 今度は高出力のUSB充電器を発売 - 千葉テレビ放送株式会社",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFB1MldKQWlOZnlHM1hmQ1RYX3hDdUcydUp0UG42bHcwUUszZkFOcFhTYXhrUDNiNENjTkZoS1pfdl9QdEhpZHhkME1XeXM4VzVZZ2ZpZTY2UjBzRWlpQVMw?oc=5",
+        "published": "Tue, 06 Oct 2026 21:35:28 GMT",
+        "publisher": "千葉テレビ放送株式会社"
+      },
+      {
+        "title": "仕事の速さでも､鋭い分析でも､論理的思考でもない…一流のコンサルなら必ず持っている\"たった1つのスキル\" - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBOYV9nbzM1S190d0laMko3SG1wcExac0xrTmdjRWU5X0JLcFE4aU5SWHRtamQ1ZHdHX2pXQi1xb3R2dHJKLXpTbTBhTDhZSFk?oc=5",
+        "published": "Tue, 06 Oct 2026 23:03:25 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "成績が上がるだけでなく体調もよくなる…脳科学の研究で判明｢頭にも体にも効く1日15分間の\"手書き\"の内容｣ - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9HRUFlUUdSYUpnNTIxQTFiZ1JZb3dfX3VTZlpYTVFpM3ViYkpUcUprMFBnRWJfSnJqeWNadkJkSzNuWl92dXhYWm5FeWlNUG8?oc=5",
+        "published": "Tue, 06 Oct 2026 23:03:44 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "【入り込む Φ4の目】見えなかった異常を、簡単に可視化する工業用内視鏡『メタルフレックスファインダー』販売開始｜株式会社メイカーズ - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9vR0NfRHIxeU1IT1NyaXJsYjQ1bDVwcHdQNUt4SnloM0VwTXBGTUNsb2VXeWRab0M3Z2hGd0ExMUJ0N0ZBUGhWYU9PallyTVIwZUl0NjdoemdaTC0xQ2JldTFQc2NVa1pQNTBXTERDRDNyQjlUY1FvZVFnbw?oc=5",
+        "published": "Tue, 06 Oct 2026 07:51:27 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "後場の日経平均は283円高でスタート、メイコーや日東紡などが上昇 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQbWdXVjRJOXI3emx2YjI5VEs2UUR5VmdBMnZCdmZ2cGM0eW5UdWp3TmlWNkpMWWpQdk5PNXZMdEF2TS1VWXZhblE0dTNRWDNST3RvUWtuejhLaEYxMkR2WkFKUHZ5VTRta2h3dTJVTTNYTVhkVTk0SmNBbUkwQ09YbGlwOWQ1cDRVZ052StIBjAFBVV95cUxQbWdXVjRJOXI3emx2YjI5VEs2UUR5VmdBMnZCdmZ2cGM0eW5UdWp3TmlWNkpMWWpQdk5PNXZMdEF2TS1VWXZhblE0dTNRWDNST3RvUWtuejhLaEYxMkR2WkFKUHZ5VTRta2h3dTJVTTNYTVhkVTk0SmNBbUkwQ09YbGlwOWQ1cDRVZ052Sg?oc=5",
+        "published": "Tue, 06 Oct 2026 04:21:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "時速500kmのリニアは｢明日にも走らせられる｣…JR東海が11兆円の大金と社運を賭けた｢技術の結晶｣の到達点 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9VQzJzdU5WNjBhWFZWb293TFE2QXRfdl9PN2V1MDBuY2JOUXBQOVA4SHlyajlpLVlvS2l4U25rV2hmNjBLajFMYVdWYWJPQjA?oc=5",
+        "published": "Tue, 06 Oct 2026 09:02:50 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "キーエンスの新事業会社 メイカーズ 今度は高出力のUSB充電器を発売 - ライブドアニュース",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE13R2s0aG9TMm5UR2FoQ0FqNEM5Z3dhSzVsQ0hNUE5kVk1tbnl2bmUtME1TLUEyZGFnNTk3U09JdHA2NHY4b1lQeDFBc1BYWlZ2TDhtZkFfNE04ZW1IVFFN?oc=5",
+        "published": "Tue, 06 Oct 2026 21:30:00 GMT",
+        "publisher": "ライブドアニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      }
+    ]
+  }
+}

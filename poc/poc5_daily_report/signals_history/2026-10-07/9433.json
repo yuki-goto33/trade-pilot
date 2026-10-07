@@ -1,0 +1,222 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-10-07T10:48:52+09:00",
+  "price_as_of": "2026-10-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近で当銘柄へ買シグナル（2026-09-25）を発行済みのため、再エントリーを抑制し、継続監視としてホールドとします。",
+        "evidence": "reference.recent_buy.date=2026-09-25"
+      },
+      {
+        "reason": "ファンダメンタルズは、安定した業績成長、積極的な株主還元策、および良好な事業環境から強気判断を維持しています。",
+        "evidence": "fundamental_view.stance=bullish (strength=75), fundamental_view.points[0], fundamental_view.points[1], fundamental_view.points[2]"
+      },
+      {
+        "reason": "一方で、テクニカル分析では移動平均線のデッドクロスやMACDの下降モメンタムが見られ、短期的な軟調な動きが続く可能性が示唆されています。",
+        "evidence": "technical_view.stance=bearish (strength=70), technical_view.points[0], technical_view.points[1]"
+      },
+      {
+        "reason": "市場全体が上昇トレンドにあるため、全体地合いは銘柄を下支えする可能性があります。",
+        "evidence": "reference.market_regime='uptrend', fundamental_view.points[2]"
+      }
+    ],
+    "risks": [
+      "次回決算発表（2026年11月6日）が約1ヶ月後に控えており、その内容が市場の期待と異なった場合に株価が変動する可能性があります。",
+      "日本銀行の金融政策決定会合（2026年10月29日〜10月30日）が予定されており、金利動向が通信事業者の資金調達コストに影響を与える可能性があります。",
+      "テクニカル指標が示す下降トレンドがさらに加速し、予想以上に株価の調整が進む可能性があります。",
+      "日本公庫・中小企業景況調査に見られる個人消費の動向が、KDDIの事業に間接的に影響を与える可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近で当銘柄へ買シグナル（2026-09-25）を発行済みのため、再エントリーを抑制し、継続監視としてホールドとします。\",\n   \"evidence\": \"reference.recent_buy.date=2026-09-25\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは、安定した業績成長、積極的な株主還元策、および良好な事業環境から強気判断を維持しています。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=75), fundamental_view.points[0], fundamental_view.points[1], fundamental_view.points[2]\"\n  },\n  {\n   \"reason\": \"一方で、テクニカル分析では移動平均線のデッドクロスやMACDの下降モメンタムが見られ、短期的な軟調な動きが続く可能性が示唆されています。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=70), technical_view.points[0], technical_view.points[1]\"\n  },\n  {\n   \"reason\": \"市場全体が上昇トレンドにあるため、全体地合いは銘柄を下支えする可能性があります。\",\n   \"evidence\": \"reference.market_regime='uptrend', fundamental_view.points[2]\"\n  }\n ],\n \"risks\": [\n  \"次回決算発表（2026年11月6日）が約1ヶ月後に控えており、その内容が市場の期待と異なった場合に株価が変動する可能性があります。\",\n  \"日本銀行の金融政策決定会合（2026年10月29日〜10月30日）が予定されており、金利動向が通信事業者の資金調達コストに影響を与える可能性があります。\",\n  \"テクニカル指標が示す下降トレンドがさらに加速し、予想以上に株価の調整が進む可能性があります。\",\n  \"日本公庫・中小企業景況調査に見られる個人消費の動向が、KDDIの事業に間接的に影響を与える可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "株価は移動平均線を下回り、短期的な下降トレンドが示唆されています。MACDも下降モメンタムを示しており、軟調な展開が続く可能性があります。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日移動平均線を下回るデッドクロスが発生しており、短期的な下降トレンドを示唆しています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\", price_technical.last_close=2891.5, price_technical.sma5=2899.0, price_technical.sma25=2985.68"
+        },
+        {
+          "point": "MACDがシグナルラインを下回り、ヒストグラムもマイナス圏で拡大していることから、下降モメンタムが強まっていると判断されます。",
+          "evidence": "price_technical.macd=-14.68, price_technical.macd_signal=5.87, price_technical.macd_histogram=-20.56"
+        },
+        {
+          "point": "直近5営業日のうち3日間が下落しており、軟調な値動きが継続しています。",
+          "evidence": "price_technical.recent_5_days"
+        },
+        {
+          "point": "前夜のNY市場では、当該銘柄のADRが下落しました。",
+          "evidence": "us_overnight.adr.change_1d_pct=-0.38"
+        }
+      ],
+      "cautions": [
+        "TOPIXが上昇トレンドにある（macro.market_regime=\"uptrend\"）ため、市場全体の地合いは良好です。",
+        "RSI14が47.9と中立圏にあり、売られすぎの水準ではない点に注意が必要です。",
+        "前夜のNY市場で通信サービスセクターETFが上昇しており、寄り付きに影響を与える可能性があります。"
+      ],
+      "key_levels": {
+        "support": 2848.5,
+        "resistance": 2899.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "KDDIは堅調な業績成長と積極的な株主還元策、そして良好なマクロ環境に支えられており、強気の見方が妥当です。",
+      "points": [
+        {
+          "point": "年次および直近四半期において、売上高、純利益、EPSの安定的な成長トレンドが確認できます。",
+          "evidence": "fundamentals.earnings_trend.annual[0].revenue_oku_jpy=60719, fundamentals.earnings_trend.annual[0].net_income_oku_jpy=7071, fundamentals.earnings_trend.annual[0].diluted_eps=183.55, fundamentals.earnings_trend.quarterly[0].diluted_eps=51.33 (対前年同期比+19.4%)"
+        },
+        {
+          "point": "直近で自己株式の取得状況が発表されており、継続的な株主還元への積極的な姿勢は株価にとって好材料です。",
+          "evidence": "news.headlines[1].title=\"自己株式の取得状況に関するお知らせ\", disclosures.items[0].title=\"自己株式の取得状況に関するお知らせ\", disclosures.items[0].date=\"2026-10-06 15:30:00\""
+        },
+        {
+          "point": "日本のサービス業PMIが50を上回って景気拡大を示唆し、日銀短観の大企業・中小企業非製造業DIもプラス圏を維持しており、KDDIの事業環境は概ね良好です。また、市場全体も上昇トレンドにあります。",
+          "evidence": "macro.japan_pmi.services.latest_value=51.3, macro.boj.tankan.di.large_nonmanufacturing.current_di=35.0, macro.boj.tankan.di.small_nonmanufacturing.current_di=15.0, macro.market_regime.market_regime=\"uptrend\""
+        }
+      ],
+      "cautions": [
+        "次回決算発表（2026年11月6日）が約1ヶ月後に控えており、その内容が市場に影響を与える可能性があります。",
+        "日本銀行の金融政策決定会合が2026年10月29日〜10月30日に予定されており、金利動向が通信事業者の資金調達コストに影響を与える可能性があります。",
+        "日本公庫・中小企業景況調査によると、中小企業は仕入価格を販売価格に十分に転嫁できておらず、今後の個人消費の動向が注視されます。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-25",
+    "days_ago": 12,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "KDDI、元プロ野球選手 斎藤佑樹氏とともに「野球列島プロジェクト」を推進 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE05bElFZHNieTVtdS14amFubjZDajZjYmhwMzhVZW9WVUNqN0tUc3lJcXktZWh0WEMtV21IM2h5SnRjV1A3Y0VBcUNlVG9IT29GWFRPbWo1bjdqNmtRTzZLNHR4anBkazR1SXc?oc=5",
+        "published": "Wed, 07 Oct 2026 01:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ - KDDI ニュースルーム",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE90TFl2M3Z3VzZPcUVYeFF5dEJFc3BrQnNaY25LX3NnT0E2X3VoLVVFdkhYNjh3WGdsc19LWU9ieElZUFd2djM2VGZtdEFnZHoxc2VJY1dyc004RlJpTFp6ZWZYOFZsYXM0ZWJ2XzBXVUI?oc=5",
+        "published": "Tue, 06 Oct 2026 06:30:00 GMT",
+        "publisher": "KDDI ニュースルーム"
+      },
+      {
+        "title": "ＫＤＤＩ[9433]：自己株式の取得状況に関するお知らせ 2026年10月6日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOaUhjRnlXWENYNFlwQzd5Zk5HMkFhYVdvM2lLQlltTVAtWG5rZ1F4RThMSjV6WFBTcmYtbHZfaWkyNi1MQ2ljNHRRZ3M5M0dvNGJTYlVJUmlvSGNLVURJN2RtZUIzcF9MTTZrMk00NzhxUW5nVmc3UTYxWVVxR1RaaDVXNXJDeDN3b1l0eWs1c0tMdm1YaVVLSzVneWZYVk45NVJxTG1rUmhpZ1lpamt3UmZKVU1reVdCdUtwMmZzRFVHXzRmNmd3R2tYZU8?oc=5",
+        "published": "Tue, 06 Oct 2026 06:30:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "KDDIら、沖縄県南大東村で公共ライドシェア「しま結mobi」実証運行 離島交通の課題解消へ - LIGARE（リガーレ）",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBlSjR3dU5XMGVSMG9UdERETllGUTBGNENjdUZ6UXlvYkh6eGwxa1NOdDBXbmc1R2ZHempjNVJ6RHlMS0Y5NmNzWE5sQVM?oc=5",
+        "published": "Tue, 06 Oct 2026 23:33:37 GMT",
+        "publisher": "LIGARE（リガーレ）"
+      },
+      {
+        "title": "カカクコム、KDDIとの資本提携の解消を発表 業務提携は継続 2026年9月28日付 - www.startrise.jp",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFA1ZzRMLUlOUGhLQTczOEFSUkd0eDNBbTRMRXNJOThFSE1zXzNYOFZfMl8tcFh3b1pnclBWeTRpZkZCZHRZS1JtYVNXZDZkcTdvcnhF?oc=5",
+        "published": "Tue, 06 Oct 2026 23:30:44 GMT",
+        "publisher": "www.startrise.jp"
+      },
+      {
+        "title": "Amazonプライム感謝祭に合わせて開催！KDDIが「ギフトカード1,000円分」が当たる限定キャンペーンをスタート - DXマガジン",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBKNVZ2aHdSSGEyZWpUTzFNVENZdC1QMUhPT3lBU29rLU56ODBmYU96d2dlRVFEeGJNYzZsMEwxcWYyRFNudjNNM2lZbE5IVF9WN2ZzbUVn?oc=5",
+        "published": "Tue, 06 Oct 2026 12:38:58 GMT",
+        "publisher": "DXマガジン"
+      },
+      {
+        "title": "KDDIスマートモビリティ、宮城県利府町でAIオンデマンド交通の本格運行開始 - LIGARE（リガーレ）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1xeWVMVXZrT1lYRVJkTDlraUoyZ3k3b2p6a3gwbHZ1b0tmUXJ1dDBtd1k3R0IyZVBxOGlONHdKTEtxWGsyMVZsUHRkNE5SUzA?oc=5",
+        "published": "Tue, 06 Oct 2026 23:33:37 GMT",
+        "publisher": "LIGARE（リガーレ）"
+      },
+      {
+        "title": "KDDI株式会社がリテールメディアサミット2026のプラチナスポンサーに決定した理由 - ニュースメディアVOIX",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE00NzZCNk1CTmpIcjBzWHdibVVMZWNlVVVhYmxlcGM0QjJNNFZQbjhxTUQ2M2pSUnp6UDVLTkFXVVBfbzQ1ZnQ0ZWtIRnFGQUlyNjJaTUN0NExfUEZidFM2WTdGTlhSOG8?oc=5",
+        "published": "Tue, 06 Oct 2026 06:55:07 GMT",
+        "publisher": "ニュースメディアVOIX"
+      },
+      {
+        "title": "AIがAIを開発する時代へ、KDDI傘下ELYZAが研究組織を新設 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE14eldRcWNKQ0dRTXdnNXd1Z0kzM1AzYnE4dDdUVUhyNGhrbml4dEhWVTBtWmFzWllnTzFSR0ZPLU1YVC1ycklkOXBNNUxNSENXSDMtM1Q1djdWM200T0M4ZTRQNWhOYVBxbzBZc1N6Ym9lZ216?oc=5",
+        "published": "Tue, 06 Oct 2026 07:05:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "2027年3月期第2四半期決算説明会の模様をインターネットでライブ中継いたします。 - KDDI ニュースルーム",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9NeHBTaWVtWl9DLUdNaFlWZ2lWZUVqUkE0a004cEdCb2h6ekd4ZnhIVnZvbjRaQlh4cWlmVHc2NzhYYjdiNXdiMmg1Y3l5d2dCTE53QVNKc0NJQ25SamxVTXRGUUN2aDFxVXJaYmpEVEc?oc=5",
+        "published": "Tue, 06 Oct 2026 05:00:01 GMT",
+        "publisher": "KDDI ニュースルーム"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261002545526.pdf",
+        "date": "2026-10-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533350.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      }
+    ]
+  }
+}

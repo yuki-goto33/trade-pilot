@@ -1,0 +1,182 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-10-07T10:54:22+09:00",
+  "price_as_of": "2026-10-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 60,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家は、今期の減益見通しと直近四半期のEPS減少を指摘しており、明確な買い材料に乏しく中立的な見解です。",
+        "evidence": "fundamental_view.summary, fundamental_view.points[0,1]"
+      },
+      {
+        "reason": "テクニカル専門家は、5日線と25日線のデッドクロスやMACDの売りシグナルなど、短期的な下降トレンドを示唆しています。",
+        "evidence": "technical_view.summary, technical_view.points[0,1]"
+      },
+      {
+        "reason": "両専門家の見解を総合すると、現時点では積極的に買いを進める根拠が弱く、株価の弱さが継続しているため、様子見が適切と判断しました。",
+        "evidence": "fundamental_view.stance=neutral, fundamental_view.strength=50, technical_view.stance=bearish, technical_view.strength=70"
+      }
+    ],
+    "risks": [
+      "2026年10月30日に予定されている次回決算発表の内容によっては、株価が大きく変動する可能性があります。",
+      "2026年10月29日〜30日の日銀金融政策決定会合の結果が市場全体のトレンドに影響を及ぼし、個別銘柄にも波及する可能性があります。",
+      "NTKとの損害賠償等請求訴訟の控訴審の行方に不確実性が存在し、今後の展開次第で業績や評価に影響を与える可能性があります。",
+      "業績の減益トレンドが継続し、株価の本格的な回復が遅れる可能性があります。",
+      "テクニカル指標が示す下降トレンドがさらに進行し、株価が下値を模索する展開になるリスクがあります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 60,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家は、今期の減益見通しと直近四半期のEPS減少を指摘しており、明確な買い材料に乏しく中立的な見解です。\",\n   \"evidence\": \"fundamental_view.summary, fundamental_view.points[0,1]\"\n  },\n  {\n   \"reason\": \"テクニカル専門家は、5日線と25日線のデッドクロスやMACDの売りシグナルなど、短期的な下降トレンドを示唆しています。\",\n   \"evidence\": \"technical_view.summary, technical_view.points[0,1]\"\n  },\n  {\n   \"reason\": \"両専門家の見解を総合すると、現時点では積極的に買いを進める根拠が弱く、株価の弱さが継続しているため、様子見が適切と判断しました。\",\n   \"evidence\": \"fundamental_view.stance=neutral, fundamental_view.strength=50, technical_view.stance=bearish, technical_view.strength=70\"\n  }\n ],\n \"risks\": [\n  \"2026年10月30日に予定されている次回決算発表の内容によっては、株価が大きく変動する可能性があります。\",\n  \"2026年10月29日〜30日の日銀金融政策決定会合の結果が市場全体のトレンドに影響を及ぼし、個別銘柄にも波及する可能性があります。\",\n  \"NTKとの損害賠償等請求訴訟の控訴審の行方に不確実性が存在し、今後の展開次第で業績や評価に影響を与える可能性があります。\",\n  \"業績の減益トレンドが継続し、株価の本格的な回復が遅れる可能性があります。\",\n  \"テクニカル指標が示す下降トレンドがさらに進行し、株価が下値を模索する展開になるリスクがあります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "5日移動平均線が25日移動平均線を下抜けデッドクロスを形成し、MACDも売りシグナルを示唆しており、短期的な下降トレンドが継続しています。中期でもTOPIXに対し劣後しており、上値の重い展開が予想されます。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日移動平均線を下回るデッドクロスを形成しており、短期的な下降トレンドが示唆されています。",
+          "evidence": "price_technical.sma5_vs_sma25='dead(5日線が25日線の下)'"
+        },
+        {
+          "point": "MACDヒストグラムがマイナス圏で拡大しており、売りの勢いが強まっていることを示しています。",
+          "evidence": "price_technical.macd_histogram=-12.77"
+        },
+        {
+          "point": "RSI(14)が50を下回る水準で推移しており、株価のモメンタムが弱いことを示しています。",
+          "evidence": "price_technical.rsi14=37.8"
+        },
+        {
+          "point": "過去60営業日において、TOPIXに対してパフォーマンスが劣後しており、中期的な相対的弱さが確認されます。",
+          "evidence": "price_technical.trend_60d.relative_to_topix_60d_pct=-2.71"
+        }
+      ],
+      "cautions": [
+        "市場全体は上昇トレンド（uptrend）にあり、地合いが好転した場合、個別銘柄にも買いが入る可能性があります。",
+        "株価は直近の期間安値（2679.0円）に近く、売られすぎからの短期的な反発が起こる可能性も考慮する必要があります。",
+        "前夜のNY市場でのADRやセクターETFの変動は限定的であったため、本日寄り付きに大きな影響は出にくい可能性があります。"
+      ],
+      "key_levels": {
+        "support": 2679.0,
+        "resistance": 2807.36
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "第一三共は、2026年3月期の業績が減益に転じる見込みであり、直近四半期もEPSが減少傾向にあります。明確な好材料や強い割安感が不足しているため、中立的な見解とします。",
+      "points": [
+        {
+          "point": "2026年3月期は増収となるものの、営業利益、純利益、EPSが前年比で減少する見込みです。特に営業利益は大幅な減少トレンドを示しています。",
+          "evidence": "fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=2291, fundamentals.earnings_trend.annual[1].operating_income_oku_jpy=3319, fundamentals.earnings_trend.annual[0].net_income_oku_jpy=2599, fundamentals.earnings_trend.annual[1].net_income_oku_jpy=2958, fundamentals.earnings_trend.annual[0].diluted_eps=140.37, fundamentals.earnings_trend.annual[1].diluted_eps=155.87"
+        },
+        {
+          "point": "直近発表された2026年6月期の四半期EPSも、前年同期と比較して減少しており、年間の減益トレンドと整合的です。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].diluted_eps=37.7, fundamentals.earnings_trend.quarterly[1].diluted_eps=46.01"
+        },
+        {
+          "point": "NTKからの損害賠償等請求訴訟において、一度は勝訴判決が出たものの、直後に控訴が提起されており、訴訟に関する不確実性が継続しています。",
+          "evidence": "disclosures.items[0].title='当社に対するNTKからの損害賠償等請求訴訟における控訴提起のお知らせ', disclosures.items[1].title='当社に対するNTKからの損害賠償等請求訴訟に関する判決（勝訴）のお知らせ'"
+        },
+        {
+          "point": "PERは19倍台、PBRは2.9倍台であり、業績の減益トレンドを考慮すると特段の割安感は認められません。",
+          "evidence": "fundamentals.valuation.trailing_pe=19.434, fundamentals.valuation.price_to_book=2.917"
+        }
+      ],
+      "cautions": [
+        "2026年10月30日に次回決算発表を控えており、内容によっては株価が変動する可能性があります。",
+        "2026年10月29日〜30日には日銀の金融政策決定会合が予定されており、政策金利の変動が市場全体に影響を及ぼす可能性があります。",
+        "NTKとの損害賠償等請求訴訟の控訴審の行方には引き続き不確実性が存在し、今後の展開次第で業績や評価に影響を与える可能性があります。",
+        "直近の年間および四半期業績に見られる営業利益・純利益・EPSの減少トレンドが継続するリスクがあります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "第一三共(株)【DSNKY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1LdkZxbEN5Vm9Scm5nSFgzTDZJZlNtcVFXR0dkU1J3c2RfRFBuNmNiOGFibVNVTE1zT2lad2dyNnA0TFRoT3RVZktKcGRiMVVV?oc=5",
+        "published": "Tue, 06 Oct 2026 23:29:51 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "顔写真1枚でストレスや炎症が判明!? 第一三共ヘルスケアが顔画像AI解析で検証：医療技術ニュース - MONOist",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9zdVBMMDFRcTJ4cFJ5dXlWZWxHbUdhTVJDQVJ4UGdSTE5XWmZzQWhVOTZ1SjJHTXFNR2tvY3U3d244REVxMlYyTDZwWWstN1JPUnNkdE1BQ0FJdlNGNDBWRm1GSzkyanhRWE9LZDY2cw?oc=5",
+        "published": "Tue, 06 Oct 2026 06:00:00 GMT",
+        "publisher": "MONOist"
+      },
+      {
+        "title": "日本株ＡＤＲ・円換算終値 - みんかぶ FX/為替",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE16amFaUEpaQVhXbmItNWw4WDFTMVdLZHJpVkY4TTdrZGlfUVBuRmFQZkpoMklfVjRvaXpVMVJRc0psd3ltM0pScg?oc=5",
+        "published": "Tue, 06 Oct 2026 22:40:29 GMT",
+        "publisher": "みんかぶ FX/為替"
+      },
+      {
+        "title": "10倍株より“誰もが知る銘柄”が勝つ時代？資産10億円投資家が「社名のローマ字化」に注目する理由（みんかぶマガジン） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBVVjRmajdlUmVVblNsV3ItLVNmUHFlOGxlQ1BXVlRJSnY4V0ZRSjl0UnRsblFkeVJDOUdfNWY4dk5CQUdyOFlUV1cyR0E2ME4zQXBTYVBmWEVKVWhKbFJnNTZYSEpkVnRQMFhDYk9BQi1jeThYVXVSY3VtQ1FGUW8?oc=5",
+        "published": "Tue, 06 Oct 2026 10:10:46 GMT",
+        "publisher": "Yahoo!ニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "当社に対するNTKからの損害賠償等請求訴訟における控訴提起のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260925540546.pdf",
+        "date": "2026-09-28 08:45:00"
+      },
+      {
+        "title": "当社に対するNTKからの損害賠償等請求訴訟に関する判決（勝訴）のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260910534407.pdf",
+        "date": "2026-09-10 17:00:00"
+      },
+      {
+        "title": "（開示事項の変更）第一三共ビジネスアソシエの吸収合併（簡易合併・略式合併）の効力発生日変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824525305.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "（再訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514622.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2025年度決算および第6期中期経営計画説明会」資料の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514744.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正・数値データ訂正）「2026年３月期 決算短信〔IFRS基準〕(連結)」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504176.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504099.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算補足資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504168.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504173.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "当社米国子会社役職員に対する信託型株式付与制度の継続のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504240.pdf",
+        "date": "2026-07-31 12:00:00"
+      }
+    ]
+  }
+}

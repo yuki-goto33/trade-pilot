@@ -1,0 +1,207 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-10-07T10:30:56+09:00",
+  "price_as_of": "2026-10-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近（2026-10-06）に buy 判断を出しており、ルールに基づき新規エントリーではなく継続監視フェーズとして hold を維持する。",
+        "evidence": "reference.recent_buy.date=2026-10-06"
+      },
+      {
+        "reason": "ファンダメンタルズは strength 70 と強気であり、特に自己株式取得による需給の下支えと営業利益の回復基調が評価できる。",
+        "evidence": "fundamental_view.points[0]: 10月5日の自己株式取得開示 / fundamental_view.points[2]: 営業利益の四半期ベース改善"
+      },
+      {
+        "reason": "テクニカル面では25日移動平均線（3764.32円）が目先の抵抗線となっており、この水準を明確に上抜けるかを確認する局面である。",
+        "evidence": "technical_view.key_levels.resistance=3764.32 / technical_view.cautions[0]"
+      }
+    ],
+    "risks": [
+      "2026年11月5日の決算発表を控えており、短期的な思惑によるボラティリティ上昇のリスクがある。",
+      "10月29日〜30日の日銀金融政策決定会合に伴う、金利および為替（円安水準の変動）のリスク。",
+      "5日線と25日線のデッドクロスが継続しており、25日線を上放れできない場合の戻り売り圧力。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近（2026-10-06）に buy 判断を出しており、ルールに基づき新規エントリーではなく継続監視フェーズとして hold を維持する。\",\n   \"evidence\": \"reference.recent_buy.date=2026-10-06\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは strength 70 と強気であり、特に自己株式取得による需給の下支えと営業利益の回復基調が評価できる。\",\n   \"evidence\": \"fundamental_view.points[0]: 10月5日の自己株式取得開示 / fundamental_view.points[2]: 営業利益の四半期ベース改善\"\n  },\n  {\n   \"reason\": \"テクニカル面では25日移動平均線（3764.32円）が目先の抵抗線となっており、この水準を明確に上抜けるかを確認する局面である。\",\n   \"evidence\": \"technical_view.key_levels.resistance=3764.32 / technical_view.cautions[0]\"\n  }\n ],\n \"risks\": [\n  \"2026年11月5日の決算発表を控えており、短期的な思惑によるボラティリティ上昇のリスクがある。\",\n  \"10月29日〜30日の日銀金融政策決定会合に伴う、金利および為替（円安水準の変動）のリスク。\",\n  \"5日線と25日線のデッドクロスが継続しており、25日線を上放れできない場合の戻り売り圧力。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "中期トレンドは市場を上回る強さを維持しているものの、短期的には25日移動平均線付近での攻防が続いており、明確な方向感を欠いています。MACDの改善や前夜ADRの上昇はポジティブですが、SMA25の明確な上抜けを確認するまでは中立的なスタンスを維持します。",
+      "points": [
+        {
+          "point": "MACDがシグナルを上回りヒストグラムも拡大傾向にあり、モメンタムの改善が示唆されています。",
+          "evidence": "price_technical.macd=-17.36, price_technical.macd_signal=-27.24, price_technical.macd_histogram=9.88"
+        },
+        {
+          "point": "直近60営業日の騰落率および対TOPIX相対騰落率がともにプラスであり、中期的なトレンドは依然として堅調です。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=8.33, price_technical.trend_60d.relative_to_topix_60d_pct=5.24"
+        },
+        {
+          "point": "前夜のNY市場でADRが大幅に上昇しており、国内市場の寄り付きにおいてプラスの寄与が期待されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=1.32"
+        }
+      ],
+      "cautions": [
+        "5日線と25日線がデッドクロスしており、現在の株価が25日線（3764.32円）を下回っているため、これが上値抵抗として機能するリスクがあります。",
+        "RSIが50を下回っており、短期的には強い買いの勢いには至っていません（price_technical.rsi14=46.6）。",
+        "前夜ADRのプラス分は寄り付き価格に織り込まれる可能性が高く、その後の持続性が課題となります。"
+      ],
+      "key_levels": {
+        "support": 3582.0,
+        "resistance": 3764.32
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "継続的な自己株式取得による需給の下支えと、製造業PMIや日銀短観に示される良好な事業環境が追い風。アニメ事業の成長期待と直近四半期の営業利益回復を評価しつつ、11月の決算発表を控えたイベントリスクを注視する局面。",
+      "points": [
+        {
+          "point": "10月5日に自己株式取得状況が開示されており、継続的な株主還元姿勢が示されていることは株価の需給面でのサポート要因となる。",
+          "evidence": "disclosures.items[0].date=2026-10-05"
+        },
+        {
+          "point": "マクロ環境において製造業PMIが54.1、大企業製造業DIが24.0と景気拡大圏にあり、158円台の円安水準もグローバル展開する同社にとってポジティブな環境である。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.1, macro.boj.tankan.di.large_manufacturing.current_di=24.0, macro.indices[2].close=158.35"
+        },
+        {
+          "point": "直近の四半期（2026年6月期）において、営業利益が4,745億円と前四半期の2,713億円から大幅に改善しており、業績の回復基調が確認できる。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].operating_income_oku_jpy=4745, fundamentals.earnings_trend.quarterly[1].operating_income_oku_jpy=2713"
+        }
+      ],
+      "cautions": [
+        "2026年3月期の通期決算で3,269億円の純損失を計上しており、通期ベースでの収益安定性には依然として懸念が残る。",
+        "2026年11月5日に次回の決算発表を控えており、短期的な業績への思惑でボラティリティが高まる可能性がある。",
+        "10月29日から30日にかけての日銀金融政策決定会合による金利・為替の変動リスクが、金利感応度の高い事業に影響を与える可能性がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-10-06",
+    "days_ago": 1,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソニーグループのアニメビジネスをハイライト！ アニプレックスとクランチロールの強み - Sony",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFA3Mlhsa2IwSFJ0R3pBRWctd0pCYTd6WVRxcnJYRjFuaVh4SVFuRUh2aDV5NWZxbzVsOUMwTEpOT3M2eFd0NGtsaFRGLTA5TXpCTkFpcVlHWDF3WmlNX2c?oc=5",
+        "published": "Tue, 06 Oct 2026 08:52:29 GMT",
+        "publisher": "Sony"
+      },
+      {
+        "title": "ソニー(株)【6758】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9BQlVRa0U3WXp0ZG1yTzhsVk1OWkItckZaUV8wRkcxNkV4eVdoNWVlT2xWS25IbXR5em1xcThhQXhFWWJxWk1VbmMtZEpPUV9hMHBreXNYNVV2bkFiT1pB?oc=5",
+        "published": "Tue, 06 Oct 2026 06:53:19 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "「ソニーコーポレートブログ」更新のご案内 ソニーグループのアニメビジネスをハイライト！アニプレックスとクランチロールの強み - Sony",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9tQjVqQlBWeGQzMExMUm1vWTZIRG1oUlVRNjhKQ3J5dmUyVWFaYjYyak5pMHByTnliQXJPa2hYSkV3QkpfQThJR1RELTlWR25hTUk5Um5pMlRrQlJ2LVFKS3VwMXBFcU1aY0xEVHBweDJwdw?oc=5",
+        "published": "Tue, 06 Oct 2026 09:58:03 GMT",
+        "publisher": "Sony"
+      },
+      {
+        "title": "アニメ経済圏をけん引 「世界最大規模のアニメファンダム」クランチロールの実力 - 日経クロストレンド",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQR0o2Q1RmR3NVQ0s3TTRfaWFfNDh4b3pvbnE1UTNOemE2MWhiOTZmMncwMlpTeGVScFV5Z3RwS2l2YVVONmc4VXdkd3laMWp4S0VnYk16V195WVVVcl91UkpEclJmMnBsZVl1bURRYTJGc2VPbWtndGtmNnZGcVJxdG5VTmZmUUJMNGdn?oc=5",
+        "published": "Tue, 06 Oct 2026 15:00:00 GMT",
+        "publisher": "日経クロストレンド"
+      },
+      {
+        "title": "VicOneのIDPS「xCarbon」、ソニーのIoTボード「SPRESENSE」でCANメッセージ異常検知を確認 1枚目の写真・画像 - レスポンス（Response.jp）",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQWVZXR0dFb21IdFEteWJQZkFMd0ZOaDZhZVNwRXRaQVRuYllKcGFBcEN3YTU0YzFXYnJNM2c1TVFXYUxRc3cwRkZ3dm5CY09ESUxMMHlCN2pPXzZnQUk5aktJUHN3bDZVUEVmcm5lZURHakZWcEFjb0F6OXgzaHowenMtSTRseVl1NWtTOElvTmQ?oc=5",
+        "published": "Tue, 06 Oct 2026 05:15:02 GMT",
+        "publisher": "レスポンス（Response.jp）"
+      },
+      {
+        "title": "次世代ゲーム機、わずかな性能アップだけで1,000ドルも消費者は払うのか―元PS幹部ショーン・レイデン氏がPS6や新XBOXの価格に疑問を呈す 1枚目の写真・画像 - Game*Spark",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE54Y0JYYmp3QW9lYXJfemlsb1ZYb1ItN1k5SVZNb005UEs4d0NnVnRacFB2dUk1ZE93MGw2VUpBN21Kcl9Zbk1FTDBUdmg2MWtiTDJ4V3NuUnFhLTNpaVAwaWtUV25CSTJuQWt0WC0yUC00LTBQUlE?oc=5",
+        "published": "Tue, 06 Oct 2026 09:10:03 GMT",
+        "publisher": "Game*Spark"
+      },
+      {
+        "title": "10倍株より“誰もが知る銘柄”が勝つ時代？資産10億円投資家が「社名のローマ字化」に注目する理由（みんかぶマガジン） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBVVjRmajdlUmVVblNsV3ItLVNmUHFlOGxlQ1BXVlRJSnY4V0ZRSjl0UnRsblFkeVJDOUdfNWY4dk5CQUdyOFlUV1cyR0E2ME4zQXBTYVBmWEVKVWhKbFJnNTZYSEpkVnRQMFhDYk9BQi1jeThYVXVSY3VtQ1FGUW8?oc=5",
+        "published": "Tue, 06 Oct 2026 10:10:46 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "次世代ゲーム機、わずかな性能アップだけで1,000ドルも消費者は払うのか―元PS幹部ショーン・レイデン氏がPS6や新XBOXの価格に疑問を呈す 2枚目の写真・画像 - Game*Spark",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1RamJQWnZUeU91VFRNb0xQOUhDRUFQcEtkOUFOU1NneDhLZWpCendodnVfQUQxSGlJUVozQWxHQ29FZl9sWTdablZPOVpVb3lDYnNLTXJaNWlfZUt2NFZKT0Yya0MxWVhPUV95N2J1WUVOTkJsUXc?oc=5",
+        "published": "Tue, 06 Oct 2026 09:10:03 GMT",
+        "publisher": "Game*Spark"
+      },
+      {
+        "title": "マネーフォワード クラウドERP (@mfcloud_erp) on X - Howl.link",
+        "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE9LZ2lBNGl5SzZoWHJTeDUzTHc2SE5pOTByYlJFMmFEcWdSNkktUzJXZnU3R2dENGNwczBR?oc=5",
+        "published": "Tue, 06 Oct 2026 22:00:04 GMT",
+        "publisher": "Howl.link"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261005545702.pdf",
+        "date": "2026-10-05 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903530947.pdf",
+        "date": "2026-09-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260811517496.pdf",
+        "date": "2026-08-11 18:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805509201.pdf",
+        "date": "2026-08-05 11:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504252.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期 連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504254.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の権利確定に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595854.pdf",
+        "date": "2026-07-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587315.pdf",
+        "date": "2026-07-03 11:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584099.pdf",
+        "date": "2026-06-30 15:30:00"
+      },
+      {
+        "title": "米ドル建て無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577032.pdf",
+        "date": "2026-06-24 11:30:00"
+      }
+    ]
+  }
+}

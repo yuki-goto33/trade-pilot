@@ -1,0 +1,232 @@
+{
+  "code": "285A",
+  "name": "キオクシアホールディングス",
+  "generated_at": "2026-10-07T10:56:02+09:00",
+  "price_as_of": "2026-10-07",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 45,
+    "reasons": [
+      {
+        "reason": "直近14日以内に買いシグナルを発出しているため、新規の買いシグナルは出さず、継続監視の「ホールド」とします。",
+        "evidence": "reference.recent_buy.date = 2026-09-24"
+      },
+      {
+        "reason": "ファンダメンタルズはV字回復を背景に強気見通し（strength=70）ですが、テクニカルは中期的な下落トレンド継続と直近の急落から弱気（strength=75）と判断しており、両者の見解が対立しています。",
+        "evidence": "fundamental_view.stance=bullish (strength=70), technical_view.stance=bearish (strength=75)"
+      },
+      {
+        "reason": "ファンダメンタルズは、日銀短観の製造業DI改善や日本製造業PMIの拡大、企業価値向上に繋がるIR開示など、事業環境への追い風となるポジティブな材料を評価しています。",
+        "evidence": "fundamental_view.points[1], fundamental_view.points[2]"
+      },
+      {
+        "reason": "テクニカルは、過去60営業日での株価大幅下落と市場全体への劣後、直近3日間の連続下落による25日移動平均線割れを懸念しています。",
+        "evidence": "technical_view.points[0], technical_view.points[1]"
+      },
+      {
+        "reason": "PBRが非常に高く、一部では「異常値」「危険水域」と指摘されており、バリュエーションの過熱感には注意が必要です。",
+        "evidence": "fundamental_view.cautions[0]"
+      }
+    ],
+    "risks": [
+      "2026年10月30日に次回決算発表が予定されており、業績変動リスクがあります。",
+      "2026年10月29日〜30日に日銀金融政策決定会合が予定されており、金融政策の変更が市場に影響を与える可能性があります。",
+      "PBRの異常な高水準が指摘されており、バリュエーション調整による株価下落リスクが残ります。",
+      "中期的な下落トレンドが継続し、直近も25日移動平均線を割り込んでいるため、さらなる下降圧力が強まる可能性があります。",
+      "MACDヒストグラムがプラス圏にあるなど、短期的な反発要因も存在しますが、全体の下落基調を覆すには至っていません。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 45,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内に買いシグナルを発出しているため、新規の買いシグナルは出さず、継続監視の「ホールド」とします。\",\n   \"evidence\": \"reference.recent_buy.date = 2026-09-24\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズはV字回復を背景に強気見通し（strength=70）ですが、テクニカルは中期的な下落トレンド継続と直近の急落から弱気（strength=75）と判断しており、両者の見解が対立しています。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=70), technical_view.stance=bearish (strength=75)\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは、日銀短観の製造業DI改善や日本製造業PMIの拡大、企業価値向上に繋がるIR開示など、事業環境への追い風となるポジティブな材料を評価しています。\",\n   \"evidence\": \"fundamental_view.points[1], fundamental_view.points[2]\"\n  },\n  {\n   \"reason\": \"テクニカルは、過去60営業日での株価大幅下落と市場全体への劣後、直近3日間の連続下落による25日移動平均線割れを懸念しています。\",\n   \"evidence\": \"technical_view.points[0], technical_view.points[1]\"\n  },\n  {\n   \"reason\": \"PBRが非常に高く、一部では「異常値」「危険水域」と指摘されており、バリュエーションの過熱感には注意が必要です。\",\n   \"evidence\": \"fundamental_view.cautions[0]\"\n  }\n ],\n \"risks\": [\n  \"2026年10月30日に次回決算発表が予定されており、業績変動リスクがあります。\",\n  \"2026年10月29日〜30日に日銀金融政策決定会合が予定されており、金融政策の変更が市場に影響を与える可能性があります。\",\n  \"PBRの異常な高水準が指摘されており、バリュエーション調整による株価下落リスクが残ります。\",\n  \"中期的な下落トレンドが継続し、直近も25日移動平均線を割り込んでいるため、さらなる下降圧力が強まる可能性があります。\",\n  \"MACDヒストグラムがプラス圏にあるなど、短期的な反発要因も存在しますが、全体の下落基調を覆すには至っていません。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "中期的な下落トレンドが継続していることに加え、直近3日間で大きく下落し、25日移動平均線を割り込んだため、弱気な見通しです。",
+      "points": [
+        {
+          "point": "過去60営業日で株価は大きく下落しており、市場全体に対しても劣後しているため、中期的な下落トレンドが継続しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct = -24.7%, price_technical.trend_60d.relative_to_topix_60d_pct = -27.79%"
+        },
+        {
+          "point": "直近3営業日で連続して下落し、特に最終日は-3.71%と大きく値を下げました。これにより、株価は25日移動平均線を下回っています。",
+          "evidence": "price_technical.recent_5_days[2-4].change_pct = -0.93%, -2.01%, -3.71%; price_technical.last_close = 18040.0 vs price_technical.sma25 = 18083.47"
+        },
+        {
+          "point": "5日移動平均線は25日移動平均線の上に位置するものの、現在の株価は両移動平均線を下回っており、短期的な下降圧力が強まっています。",
+          "evidence": "price_technical.sma5_vs_sma25 = 'golden(5日線が25日線の上)'; price_technical.last_close = 18040.0 vs price_technical.sma5 = 18859.0"
+        },
+        {
+          "point": "RSI14は51.3と中立圏にあり、売られすぎや買われすぎの状況ではありませんが、株価の急落と合わせて下降余地がある可能性を示唆しています。",
+          "evidence": "price_technical.rsi14 = 51.3"
+        }
+      ],
+      "cautions": [
+        "MACDヒストグラムはまだプラス圏にあり、売買シグナルが買いを示している点は、短期的な反発要因となる可能性があります。",
+        "市場全体（TOPIX）は上昇トレンドにあり、地合いが好転すれば個別銘柄にも追い風となる可能性があります。",
+        "前夜の米国市場では、半導体セクターのSOX指数が上昇しており、本日の寄り付きに影響を与える可能性があります。"
+      ],
+      "key_levels": {
+        "support": 15326.67,
+        "resistance": 18083.47
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "キオクシアホールディングスは、前期の赤字から大幅な業績回復と成長を遂げ、良好な製造業マクロ環境と一部ポジティブな材料が見られることから、中長期的な投資価値は高いと評価できます。",
+      "points": [
+        {
+          "point": "2024年3月期の赤字から2025年、2026年3月期にかけて売上高・利益ともにV字回復し、大幅な成長計画を示しているほか、四半期EPSも急激な改善傾向にあります。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "日銀短観の大企業・中小企業製造業の業況判断DIが改善しており、日本製造業PMIも50超の拡大局面を維持していることから、キオクシアの事業環境には追い風となっています。",
+          "evidence": "macro.boj.tankan.di.large_manufacturing.current_di=24.0, macro.boj.tankan.di.small_manufacturing.current_di=14.0, macro.japan_pmi.manufacturing.latest_value=54.1"
+        },
+        {
+          "point": "直近の開示には、サンディスクコーポレーションとの投資計画や自己株式の取得、株式分割など、企業価値向上に繋がるポジティブな内容が含まれています。",
+          "evidence": "disclosures.items[0].title='サンディスクコーポレーションとの投資計画に関するお知らせ', disclosures.items[2].title='自己株式の取得状況及び取得終了に関するお知らせ', disclosures.items[6].title='株式分割及び株式分割に伴う定款の一部変更に関するお知らせ'"
+        },
+        {
+          "point": "直近のニュース見出しでTOPIX構成比率見直しによる巨額マネー流入見込みが報じられており、短期的にもポジティブな材料となり得ます。",
+          "evidence": "news.headlines[1].title='TOPIX構成比率見直しで巨額マネー流入見込みの｢あの銘柄｣ - 四季報オンライン'"
+        }
+      ],
+      "cautions": [
+        "PBRが12.329倍と非常に高く、一部ニュースでは「異常値」「危険水域」と指摘されており、バリュエーションの過熱感には注意が必要です。",
+        "2026年10月30日に次回決算発表が予定されており、業績変動リスクがあります。",
+        "2026年10月29日〜30日に日銀金融政策決定会合が予定されており、金融政策の変更が市場に影響を与える可能性があります。",
+        "直近のニュースには「株価-12%急落」「下落寄与上位」といった懸念材料も含まれており、株価の調整リスクがあります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-09-24",
+    "days_ago": 13,
+    "confidence": 75,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "寄前【成行注文】売り越しランキング キオクシア、三菱ＵＦＪ、ランド [08:35] - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE15ZjFzbmY5UEE2TTYwUGcyc09rRmJhTmxqbHVEMmRBdWp5aDR2dHlzeFVFd003a3BuMjhxX2J6d1lXcEhmUlc5cHJuYUdGRXloQ3c?oc=5",
+        "published": "Tue, 06 Oct 2026 23:36:07 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "TOPIX構成比率見直しで巨額マネー流入見込みの｢あの銘柄｣ - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBUWjhKY0NzQ2FNQlUwUXBpUEFEZV9iLVBHdXhVMTgzVm5uVjF6ZF9qVWpWUE55RWdRMHNSdEs4aEVDU0JLOF8zZzFNWGNJOWpwalpyOFVLaw?oc=5",
+        "published": "Tue, 06 Oct 2026 03:11:28 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "成田悠輔が解説！急成長するキオクシア＆AIバブルはいつまで続く！？ - TVer",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBWdzE2Q1lPdHNIOU45U05GamZuU2RvMVJmQ2pSdDMtVWdtaC1yTWRqU2xFOHdoS3hXSnIwSmN0SEhwV3ZPWC16R2Fkaw?oc=5",
+        "published": "Tue, 06 Oct 2026 12:17:06 GMT",
+        "publisher": "TVer"
+      },
+      {
+        "title": "日経平均は５３０円程度高、売買代金はアドバンテス、キオクシア、太陽誘電が上位(ウエルスアドバイザー) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOTzZJRng0MTlac3ZnV2tRSlZCNUg4cHZIX3VhZ214dHkybmF2ODFwYjNSemVCSXVxTkNOc1JxUG5lbUVpWGNPZ0pETDA4anp6UmtMUl9ldWNwSDJqLU5wTnNsOFJMaTJjSlZSZzdUOVZGT1FablUya05vNDJlT2lkOTRHZTg2aEE?oc=5",
+        "published": "Tue, 06 Oct 2026 05:03:49 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "キオクシア株が本日下落した理由 執筆 - Investing.com 日本",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9ycjhLelVldGVBUmJ4XzNfLWs3TWdUM0ZxS2dyeklLdUczQTFzeGY3OXVGQXd4QWNZZkFURlZYWkQ0ZE9RYl94a2ZiRWdPS3lBVnZtM08tZ1JRa1p5UGhtR2lyczhRdDZ1RGE5NVRTSUdjWW1BQ2p3?oc=5",
+        "published": "Tue, 06 Oct 2026 03:33:00 GMT",
+        "publisher": "Investing.com 日本"
+      },
+      {
+        "title": "【危険水域？】キオクシア株価-12%急落！PBR26倍という異常値から読み解く「シリコンサイクル」の天井 Edinburgh Weather (7jYIaOueVp) - Unisba Media",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNWV9MSHFuTHdFTFdNamVwcjg0UHV0UTd4Q1dCNUkyZWNYM21OblBGV2hkcDhxSGFSdDZNTzEzRjdlMi1yaG1uMkZabm9hRjhWLWc5Wk9wZFVNZl96NFZCcXVhNGQ4d0xHbGlYempMTWVjVndGendYWHhvOUF2Rk9xdjFCSzlUaFE?oc=5",
+        "published": "Tue, 06 Oct 2026 11:25:32 GMT",
+        "publisher": "Unisba Media"
+      },
+      {
+        "title": "【明日のテンバガー株】TSMC！エヌビティア！アドバンテスト！オンコリスバイオファーマ！高値更新！ キオクシア！下落寄与上位！カウリス！ZenmuTech！S高！【20261006】 - YouTube",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9UVTlLZjBtNFRrTVRYQU9VNDNZdk1qQ3ozRDJVTzBvejNncXJCRTZnLTBuOUplc3lMdGhyWk9vOXpaRHBLekswYkozTnRnc09uU3h0c0JveUc1VVot?oc=5",
+        "published": "Tue, 06 Oct 2026 10:33:17 GMT",
+        "publisher": "YouTube"
+      },
+      {
+        "title": "キオクシア重大イベント勃発！10/6デイトレポイント！レーザーテック、アドバン、イビデンも強い！どうなるか分析！ Iceman Release Date (A5109kFfnk) - Unisba Media",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOS2p3c2RrVENRZVpBOFBsT3hhM0hvYm5iZXk4YWZVR3luRkI2VjVUYUYyeG9RWWFiUkp0V0h5dkRNeU5CWTRqbTNLclY1NjY3b0RLYmEtZU1kbWNUV2NMOFZxN1lxd25BVURSLVQ0ZTBnZFBXMEJ1YzYtWXphR1R1bUhR?oc=5",
+        "published": "Tue, 06 Oct 2026 15:40:26 GMT",
+        "publisher": "Unisba Media"
+      },
+      {
+        "title": "要警戒：キオクシア(285A)は低PERの罠に注意！ Bianca Guaccero (UIWLuSUYON) - Unisba Media",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPTVNObWs4Tjk0LUxlcEtTelhJR2Q2Y0ZYRWdMbmdoeElZc2I4VHpJY3Bwb1g0aUNuZXBlTVdMMHY1Q3pZbVRUMUprQTFPb2QzNjQwa1pqZDhldUVFV3ctY3EtRUNKa2ZHVlZzVFhsdzhLUE8ybldwVWE0SS1rYVBzVHRn?oc=5",
+        "published": "Tue, 06 Oct 2026 08:34:03 GMT",
+        "publisher": "Unisba Media"
+      },
+      {
+        "title": "【2ch有益スレ】キオクシア時間外で爆上げキタ、連休明けはストップ高ありえる？【2chお金スレ】 Alex Batty (qUX06L6jWM) - Unisba Media",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA0QjBwZXJJWTZQMl9JQTNpR01DcC0yYU83VmIwdzQ4RVVyM3lKc1R5QTEtSmNuVFNUbUpzc2JYWklkM2VKbi1ISGJYRlJmdWgyQ2hFanRlMjdkS2dERHE3Q2lUTG1kZ05GeHBZdHlpenpaczQxM01JM1lJb3ZGLU0?oc=5",
+        "published": "Tue, 06 Oct 2026 02:25:27 GMT",
+        "publisher": "Unisba Media"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "サンディスクコーポレーションとの投資計画に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260827527338.pdf",
+        "date": "2026-08-27 17:50:00"
+      },
+      {
+        "title": "（訂正）「主要株主である筆頭株主の異動に関するお知らせ」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260817521854.pdf",
+        "date": "2026-08-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況及び取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260810517251.pdf",
+        "date": "2026-08-10 18:15:00"
+      },
+      {
+        "title": "主要株主である筆頭株主の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260810517256.pdf",
+        "date": "2026-08-10 18:15:00"
+      },
+      {
+        "title": "当社子会社に対する訴訟の判決に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260803506332.pdf",
+        "date": "2026-08-03 15:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505265.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "株式分割及び株式分割に伴う定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505272.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "自己株式の取得枠設定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505280.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "勤務継続型株式報酬制度及び業績連動型株式報酬制度のユニット付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505321.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "当社子会社に対する訴訟の陪審評決に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595788.pdf",
+        "date": "2026-07-17 13:00:00"
+      }
+    ]
+  }
+}
