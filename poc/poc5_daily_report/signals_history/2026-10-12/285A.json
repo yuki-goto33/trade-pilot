@@ -1,0 +1,216 @@
+{
+  "code": "285A",
+  "name": "キオクシアホールディングス",
+  "generated_at": "2026-10-12T10:09:51+09:00",
+  "price_as_of": "2026-10-09",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家は業績成長を評価するものの、重要イベント前の不透明感から強気判断（strength 70以上）に至っていない。",
+        "evidence": "fundamental_view.strength=60"
+      },
+      {
+        "reason": "テクニカル面では25日移動平均線を割り込み、MACDも弱気シグナルを拡大させており、中期的な下落トレンドが継続している。",
+        "evidence": "technical_view.points[1], technical_view.points[2]"
+      },
+      {
+        "reason": "10月下旬に次回決算発表と日銀金融政策決定会合という重要イベントが重なっており、ボラティリティが急増するリスクがある。",
+        "evidence": "fundamental_view.cautions[0], reference.next_earnings_date='2026-10-30'"
+      },
+      {
+        "reason": "信用買い残の含み損による戻り売り圧力や、PBR 11.97倍という割高な水準が上値を抑える要因として指摘されている。",
+        "evidence": "fundamental_view.cautions[1], fundamental_view.cautions[2]"
+      }
+    ],
+    "risks": [
+      "2026-10-30の次回決算発表および日銀会合による株価の乱高下",
+      "信用買い残の整理が進まず、戻り売りが断続的に発生する需給悪化のリスク",
+      "高PBR水準（11.97倍）を背景とした成長期待の剥落による大幅な価格調整",
+      "米国半導体株（SOX指数）の軟調継続による外部環境の悪化"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 21,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家は業績成長を評価するものの、重要イベント前の不透明感から強気判断（strength 70以上）に至っていない。\",\n   \"evidence\": \"fundamental_view.strength=60\"\n  },\n  {\n   \"reason\": \"テクニカル面では25日移動平均線を割り込み、MACDも弱気シグナルを拡大させており、中期的な下落トレンドが継続している。\",\n   \"evidence\": \"technical_view.points[1], technical_view.points[2]\"\n  },\n  {\n   \"reason\": \"10月下旬に次回決算発表と日銀金融政策決定会合という重要イベントが重なっており、ボラティリティが急増するリスクがある。\",\n   \"evidence\": \"fundamental_view.cautions[0], reference.next_earnings_date='2026-10-30'\"\n  },\n  {\n   \"reason\": \"信用買い残の含み損による戻り売り圧力や、PBR 11.97倍という割高な水準が上値を抑える要因として指摘されている。\",\n   \"evidence\": \"fundamental_view.cautions[1], fundamental_view.cautions[2]\"\n  }\n ],\n \"risks\": [\n  \"2026-10-30の次回決算発表および日銀会合による株価の乱高下\",\n  \"信用買い残の整理が進まず、戻り売りが断続的に発生する需給悪化のリスク\",\n  \"高PBR水準（11.97倍）を背景とした成長期待の剥落による大幅な価格調整\",\n  \"米国半導体株（SOX指数）の軟調継続による外部環境の悪化\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 80,
+      "summary": "中期的な大幅下落トレンドが継続する中、直近でも25日移動平均線を下抜け、MACDの弱気シグナルが拡大しており、下値模索が続く可能性が高い。",
+      "points": [
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともに大幅なマイナスであり、中期的な下落トレンドから脱却できていない。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-31.8, relative_to_topix_60d_pct=-34.26"
+        },
+        {
+          "point": "直近5営業日で大幅に値を下げ、終値ベースで25日移動平均線を明確に割り込んでいる。",
+          "evidence": "price_technical.last_close=17505.0, sma25=18147.53"
+        },
+        {
+          "point": "MACDがシグナルを大きく下回り、ヒストグラムのマイナス幅が拡大しており、下落の勢いが増している。",
+          "evidence": "price_technical.macd_histogram=-102.57, macd=203.29, macd_signal=305.87"
+        },
+        {
+          "point": "前夜の米国市場において半導体セクター指数（SOX）が下落しており、外部環境からの追い風が期待しにくい。",
+          "evidence": "us_overnight.sox_index.change_1d_pct=-0.41"
+        }
+      ],
+      "cautions": [
+        "TOPIX市場全体はuptrend判定にあり、地合いに伴う連れ高が発生するリスクがある",
+        "RSI14が55.8と過熱感はなく、15326.67付近の期間安値を意識した短期的な自律反発に注意が必要",
+        "前夜NYの半導体セクター安が寄り付きで織り込まれた後の買い戻し"
+      ],
+      "key_levels": {
+        "support": 15326.67,
+        "resistance": 18147.53
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "業績は急速な回復・拡大基調にありマクロ環境も良好だが、需給面の懸念と月末の重要イベントを控えた不透明感から中立判断とする。",
+      "points": [
+        {
+          "point": "四半期ベースでの利益成長が極めて顕著であり、直近のEPSは前々年同期比で大幅に改善している。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].diluted_eps=1525.09 vs fundamentals.earnings_trend.quarterly[2].diluted_eps=33.75"
+        },
+        {
+          "point": "製造業PMIが50を超え拡大を示唆しており、円安水準の維持と合わせてメモリ市況および輸出環境に追い風が吹いている。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.1, macro.indices[2].close=158.11"
+        },
+        {
+          "point": "TOPIX浮動株比率の変更に伴う大規模なパッシブ買い需要の発生が報じられており、需給の下支え要因として意識される。",
+          "evidence": "news.headlines[3].title=\"キオクシアHDに2兆円のパッシブ勢買いも、TOPIX浮動株比率50%へ\""
+        }
+      ],
+      "cautions": [
+        "次回決算発表（10/30）と日銀金融政策決定会合（10/29-30）が重なっており、ボラティリティ急増の懸念がある。",
+        "信用買い残の含み損を抱えた投資家が多いことが報じられており、戻り売り圧力など需給悪化のリスクがある。",
+        "PBRが11.97倍と極めて高い水準にあり、既に将来の成長期待が相当程度価格に織り込まれている可能性がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "キオクシアも4位､信用買いの｢含み損｣に投資家が苦しむ20銘柄 - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFA5MlA5ZWdOSS1oZXBvXzZQcExDR0czTlVBQ2s1R1FQRXhBOGtGWWZ1X2kya3htWk5XU0RuMzhRWGI3dktoRzBENzdiRDcxZkNid3pIMkNPMA?oc=5",
+        "published": "Sun, 11 Oct 2026 22:00:00 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "「キオクシアに手を出すのは大谷翔平と戦うようなもの」──10年以上負けなしの専業トレーダーが選ぶ“二軍銘柄”の実名 - SmartNews",
+        "url": "https://news.google.com/rss/articles/CBMiggZBVV95cUxPejdRTnhjR0ZrUjlsQk0zZDdESFZ3cC1hb2ctLS1hQjRBbENFdExTQjVnclo2UEpBRC1Xa2JndG9aQzAtdEhUMzdVVnA2NGhzNjhKWWRpRlZtX283czJqNHhmZXRTa2FvblZUdThaLVRfUUFnRUR6aWtvOXh2a3FsQnZQeThYbTRzc2ZYczhld1QwQXVjQlhZUXNjU0J5b2p3UWJibTZsMl9vVWI5UUxkOGZHbFg2RnctdF9QcER5TVByLXVyT082UEo3enp0M3o0NFBkZVpKekd5ZHBoUTRybnBMUnN2dUxtX3NENDZORnFhRWcwSU0yR3NVeF9odEdERTRFcGI2S0RlMHNxeFhvd3NEZUx2SmM0QnR5Nm5Xb3UwdjQ5c1lHeFJXLXlqTTdzcHhDUFNmaG5pUXdLMVpvVWhEUllGczNRT2EwRVVsc1Iwa21MdWFjVWxvaHBKb0tKQWkyNGZ1Nk5McFZVcW9SQmtBN0FKOURtejc2bndmbmxMUDEzdi12Vm1GQ1NwcjlKRjZnUjZPc0J4QlFSM2Y3Sk9YeDMwaVhfd3FTQXNBcmlaQm0tUWpjeEdFZTRtaFBvcW13YlFWc3dhejdULU1mOFRsemJJamhPVVFoNTFsNkJBZG9WVVg2Z1JpZW9xN2paUUxOMG0xekR3b2xuRGVrNGNnWmwzWW40RmJNZTl6dkcxS1hjdXZ2U04xMVJ1V1J1YmR2Q1A5bDhFVXRzMTFzMnlOVTNNbVBIZm80eG1QZVQ2eGgwSDlfMEpPQWRkNEFVRDRMZ0VzTlVLSllXMGcxdkt3dGpNbkVvdnN1clpCZ3duNkVjZ2w5TENZaUhJTW5xZGQ0NUR5YVJ3MWY4TVJwR1RtMG9PRmNPMEdpa0pEMkxPemV2eWFfLWpoSTB5SE5qY2pvODhVTVE3MkVsWll4RVVhT2pvdFRYREh6TUEzeHRkWFRvODQ3eFhqam12cmgyUDMwNncwbV8takdnM1V4a3d4cm5iVEZqek9FZ3hkZ1Qydw?oc=5",
+        "published": "Sun, 11 Oct 2026 23:10:26 GMT",
+        "publisher": "SmartNews"
+      },
+      {
+        "title": "キオクシアホールディングス(株)【KXIAY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9pbVFlSFVNYzQ3S19xRzJBS2ppUEJDaUZXNlgxTjl0Zmx1Z2xNR0ZZVE9qMXVFdlkyUEFjdnV5d29vX2NQRWNCaHhOaGZXbjBG?oc=5",
+        "published": "Sun, 11 Oct 2026 14:17:16 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "キオクシアHDに2兆円のパッシブ勢買いも、TOPIX浮動株比率50%へ フォトギャラリー | TBS CROSS DIG with Bloomberg - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxORUxkWTY2YURBVHNqdU1zM2Etb0VkRHBQajB3RG9HSFk4bm5GOVZmeXd0RFlsTFJHZW9OQjdlQ2NiRFBwUnVfc3YxeWI0bXd1VDBaeDJXQk4yWlh4ZHk1N1d0bmtFZUc1WnkxMzJ2YVdyVzRMVi16alpLZHlOckdla3k5UjlZdUk?oc=5",
+        "published": "Sun, 11 Oct 2026 07:14:30 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "投資歴19年、フルレバ歴17年のキオクシアホルダーが20バガー達成…「大衆と逆を行く」投資思考 - SmartNews",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9FUHNNbkIyb1pmclJNVV9NUHd0clJOUTMxN3ExcFdLVlQ2VHlhaHhGX2lsS0VWQjhXMS00LXdkSFZ4YnB4VjZoODk5T21ZdFlGZ2dENHhOa1M3cUxoNm1fY3VsanJIYnlienc?oc=5",
+        "published": "Sun, 11 Oct 2026 09:06:20 GMT",
+        "publisher": "SmartNews"
+      },
+      {
+        "title": "【必見🎁】新シリーズ始動🧠｜人気18銘柄チャート💹総点検の投稿リンク集🐣 - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMmdFWUFmcjNULW1VNmNGOW5Qc2dGLTh0SExEdENnMzNJbl9kWU1XeklBRkYwUy1McXpiMGp2bWdHeUFUMENfMGIzVkdGQ0xtLW1hQjRKYnQ3TWtsSnhUZjZsSTFMZEtsNl8tSHltY0R4QWgtd1ZxNTFNbmhVeHU2NFFCUXVRbkN1SHF5ZnVhV0w3X2lHTkVPaUMxR003aFhLU1ZnQW50TW5MZ1V0V3FqSnlfQkE?oc=5",
+        "published": "Sun, 11 Oct 2026 13:46:29 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "市況概況・株式ランキング - QUICK Money World",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5NTGFEcmdma19BcjUtYnNCNk9iOERWRnhnbk9QS2xQSmxlZ1RyQzFZZ3o0YldraDd4cFAwVHF1QW1tQU45NDZjV3BUS093SlptOUE?oc=5",
+        "published": "Sun, 11 Oct 2026 05:16:47 GMT",
+        "publisher": "QUICK Money World"
+      },
+      {
+        "title": "eMAXIS 日経半導体株インデックス【03311247】：基準価格・投資信託情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1WcnBkNXkzRS1PdnNIWkxieGVIMWw3YjRKMXZON1NIZlpIQjd1Z09ETlVHUWdXUmthamQ3LWdyakFSd1hMU0Z5cWVuSkF3Z0tGY0Q1Vg?oc=5",
+        "published": "Sun, 11 Oct 2026 23:37:15 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "Myeajknk (@Mye20933726) on X - Howl.link",
+        "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE1yRjZUMnY5QUJlTGNqN0gyZXZwUEhzY3R1QWRKbTREakpwVE1GS3ZzemJSS1QxZU1mQnln?oc=5",
+        "published": "Sun, 11 Oct 2026 20:40:05 GMT",
+        "publisher": "Howl.link"
+      },
+      {
+        "title": "勝郎 茂手木 (@111111123lkkk) on X - Howl.link",
+        "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTFBMNUVjUU9BUWpndnlIWHFkTEctM0sxZGw2M1hoMWd6QkpLYVhoalJKVTRLSnBKWEdHWlNJ?oc=5",
+        "published": "Sun, 11 Oct 2026 08:24:41 GMT",
+        "publisher": "Howl.link"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "サンディスクコーポレーションとの投資計画に関するお知らせ",
+        "url": "https://www.release.tdnet.info/inbs/140120260827527338.pdf",
+        "date": "2026-08-27 17:50:00"
+      },
+      {
+        "title": "（訂正）「主要株主である筆頭株主の異動に関するお知らせ」の一部訂正について",
+        "url": "https://www.release.tdnet.info/inbs/140120260817521854.pdf",
+        "date": "2026-08-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況及び取得終了に関するお知らせ",
+        "url": "https://www.release.tdnet.info/inbs/140120260810517251.pdf",
+        "date": "2026-08-10 18:15:00"
+      },
+      {
+        "title": "主要株主である筆頭株主の異動に関するお知らせ",
+        "url": "https://www.release.tdnet.info/inbs/140120260810517256.pdf",
+        "date": "2026-08-10 18:15:00"
+      },
+      {
+        "title": "当社子会社に対する訴訟の判決に関するお知らせ",
+        "url": "https://www.release.tdnet.info/inbs/140120260803506332.pdf",
+        "date": "2026-08-03 15:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://www.release.tdnet.info/inbs/140120260731505265.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "株式分割及び株式分割に伴う定款の一部変更に関するお知らせ",
+        "url": "https://www.release.tdnet.info/inbs/140120260731505272.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "自己株式の取得枠設定に関するお知らせ",
+        "url": "https://www.release.tdnet.info/inbs/140120260731505280.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "勤務継続型株式報酬制度及び業績連動型株式報酬制度のユニット付与に関するお知らせ",
+        "url": "https://www.release.tdnet.info/inbs/140120260731505321.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "当社子会社に対する訴訟の陪審評決に関するお知らせ",
+        "url": "https://www.release.tdnet.info/inbs/140120260717595788.pdf",
+        "date": "2026-07-17 13:00:00"
+      }
+    ]
+  }
+}

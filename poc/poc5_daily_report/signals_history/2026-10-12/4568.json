@@ -1,0 +1,170 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-10-12T10:09:12+09:00",
+  "price_as_of": "2026-10-09",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家により1Qの減益（EPS-18%）と継続中の訴訟リスクが指摘されており、上値の重い展開が予想される一方、3.77%の配当利回りが下値を支える要因となっている。",
+        "evidence": "fundamental_view.points[0,1,3]"
+      },
+      {
+        "reason": "テクニカル面では25日線の下向き推移、5日線とのデッドクロス、MACDのマイナス幅拡大など強い下落トレンドを示唆しており、現時点での買いエントリーは推奨されない。",
+        "evidence": "technical_view.points[1,2,3]"
+      },
+      {
+        "reason": "10月30日に予定されている決算発表および日銀金融政策決定会合という重要なカタリストを控えており、材料出尽くしや方向性の確認を待つべき局面である。",
+        "evidence": "reference.next_earnings_date=2026-10-30, reference.next_boj_meeting=2026-10-29〜2026-10-30"
+      }
+    ],
+    "risks": [
+      "10月30日の決算発表における通期業績の下方修正リスク",
+      "日銀会合を受けた為替の円高進行によるグローバル収益の目減りリスク",
+      "テクニカル上の節目である期間安値（2615円）を割り込んだ場合の下落加速",
+      "係争中のNTKとの訴訟における予期せぬ不利益な進展"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 21,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家により1Qの減益（EPS-18%）と継続中の訴訟リスクが指摘されており、上値の重い展開が予想される一方、3.77%の配当利回りが下値を支える要因となっている。\",\n   \"evidence\": \"fundamental_view.points[0,1,3]\"\n  },\n  {\n   \"reason\": \"テクニカル面では25日線の下向き推移、5日線とのデッドクロス、MACDのマイナス幅拡大など強い下落トレンドを示唆しており、現時点での買いエントリーは推奨されない。\",\n   \"evidence\": \"technical_view.points[1,2,3]\"\n  },\n  {\n   \"reason\": \"10月30日に予定されている決算発表および日銀金融政策決定会合という重要なカタリストを控えており、材料出尽くしや方向性の確認を待つべき局面である。\",\n   \"evidence\": \"reference.next_earnings_date=2026-10-30, reference.next_boj_meeting=2026-10-29〜2026-10-30\"\n  }\n ],\n \"risks\": [\n  \"10月30日の決算発表における通期業績の下方修正リスク\",\n  \"日銀会合を受けた為替の円高進行によるグローバル収益の目減りリスク\",\n  \"テクニカル上の節目である期間安値（2615円）を割り込んだ場合の下落加速\",\n  \"係争中のNTKとの訴訟における予期せぬ不利益な進展\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 85,
+      "summary": "中期・短期ともに明確な下落トレンドが継続しており、直近3営業日連続の下落やMACDの弱気形状、ADRの軟調さから、一段の安値模索が警戒される局面です。",
+      "points": [
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともにマイナスであり、中期的な下落トレンドの中にあります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-3.94, relative_to_topix_60d_pct=-6.4"
+        },
+        {
+          "point": "5日線が25日線を下回るデッドクロス状態に加え、直近3営業日連続で下落しており、短期的な下げ圧力が強いです。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.recent_5_days[2-4].change_pct=(-1.8, -1.81, -1.15)"
+        },
+        {
+          "point": "MACDがシグナルを大きく下回り、ヒストグラムのマイナス幅も拡大していることから、下落の加速を示唆しています。",
+          "evidence": "price_technical.macd=-48.88, price_technical.macd_signal=-30.07, price_technical.macd_histogram=-18.81"
+        },
+        {
+          "point": "前夜の米国市場でADRが下落しており、翌営業日の寄り付きを押し下げる要因となります。",
+          "evidence": "us_overnight.adr.change_1d_pct=-1.3"
+        }
+      ],
+      "cautions": [
+        "RSI14が31.4と売られすぎ水準に接近しており、短期的には期間安値（2615.0円）付近での自律反発が起きる可能性があります。",
+        "米国のヘルスケアセクターETF（XLV）は上昇（+1.58%）しており、セクター全体への資金流入が波及した場合には下げ渋るリスクがあります。",
+        "市場全体（TOPIX）は25日線の上にあるuptrend判定であり、全体地合いの強さが個別株の下値を支える可能性があります。"
+      ],
+      "key_levels": {
+        "support": 2615.0,
+        "resistance": 2689.4
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "通期および直近四半期での減益トレンドに加え、継続中の訴訟リスクが上値を抑える要因となっている。一方で、3.7%台の配当利回りが下値の支えとなっており、10月末の決算発表と日銀会合を前に様子見姿勢が妥当と判断する。",
+      "points": [
+        {
+          "point": "2027年3月期第1四半期（2026年6月期）の1株当たり利益（EPS）が前年同期比で約18%減少しており、通期での減益計画を裏付ける軟調な出だしとなっている。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].diluted_eps=37.7 vs 46.01"
+        },
+        {
+          "point": "2026年9月28日付の開示により、NTKからの損害賠償請求訴訟における控訴提起が判明。一審勝訴したものの、法的リスクの長期化による不透明感が懸念材料である。",
+          "evidence": "disclosures.items[0].date=\"2026-09-28 08:45:00\""
+        },
+        {
+          "point": "配当利回りが3.77%と、国内大型株の中でも比較的高水準にあり、業績懸念がある中での株価のバッファーとして機能している。",
+          "evidence": "fundamentals.valuation.dividend_yield_percent=3.77"
+        }
+      ],
+      "cautions": [
+        "2026年10月30日に予定されている次回の決算発表に伴う業績修正リスク",
+        "決算と同日程（10/29-30）で開催される日銀金融政策決定会合による為替・金利変動の影響",
+        "係争中の訴訟における追加の引当金計上や予期せぬリーガルリスクの浮上"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ウェブメディアの記事を企画！第一三共ヘルスケアとコラボした授業〈キャリア実践演習〉で学生企画の発表が行われました。 - 社会連携プログラム",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE40SzNwQ3BuWHgyaGdaQk1ob2Z2eDB1MUJEN1p5QkNWbTJlVm8tYjItcjBzZ0pjX2YxaGNZVjNZRVNPWjZ3dUNqS0loNVRSbUQyakdDd1czQkJXX3hyUHNXbnBB?oc=5",
+        "published": "Sun, 11 Oct 2026 19:57:23 GMT",
+        "publisher": "社会連携プログラム"
+      },
+      {
+        "title": "＜画像2 / 4＞石塚英彦とANZEN漫才(みやぞん・あらぽん)がメキシカン風ユニットでデビュー!? - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5aOFV4b1drMVhyTTZsSjB1cmVHZG5FWURjX0ZnX0VSR3N2RXhxZDhMX3FGeV9zcFExX0N1bWJkS25VNFJsODhqOWFxQ3lEQ2gwQ3luQ29ocW1mOVBXbG1KUkQzUldEOWhpeEUw?oc=5",
+        "published": "Sun, 11 Oct 2026 21:09:16 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "【DeNA】初戦で決勝弾の度会隆輝が“2打席連続”の先制ソロ「気持ちで打ちました！」 竹丸和幸をとらえる - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA1NUpCUGE1d09FY0tjWnVUM0tnYW1xSU8waU5KVXVwb3VjR2Y1OExENzhDQjlhTTkzYkpXUFRiYllGZGNsUEZ0SWpuNUMyMHA4YTN6N1hrekw4TDNkc18zbWhEMm5LT0l1SE9xd2Jn?oc=5",
+        "published": "Sun, 11 Oct 2026 05:07:00 GMT",
+        "publisher": "au Webポータル"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "当社に対するNTKからの損害賠償等請求訴訟における控訴提起のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260925540546.pdf",
+        "date": "2026-09-28 08:45:00"
+      },
+      {
+        "title": "当社に対するNTKからの損害賠償等請求訴訟に関する判決（勝訴）のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260910534407.pdf",
+        "date": "2026-09-10 17:00:00"
+      },
+      {
+        "title": "（開示事項の変更）第一三共ビジネスアソシエの吸収合併（簡易合併・略式合併）の効力発生日変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824525305.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "（再訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514622.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2025年度決算および第6期中期経営計画説明会」資料の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514744.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正・数値データ訂正）「2026年３月期 決算短信〔IFRS基準〕(連結)」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504176.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504099.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算補足資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504168.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504173.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "当社米国子会社役職員に対する信託型株式付与制度の継続のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504240.pdf",
+        "date": "2026-07-31 12:00:00"
+      }
+    ]
+  }
+}

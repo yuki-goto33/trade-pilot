@@ -1,0 +1,170 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-10-12T10:08:28+09:00",
+  "price_as_of": "2026-10-09",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズは極めて強力（大幅増益・5000億円の自社株買い）だが、テクニカル指標も既に強い上昇を示しており、好材料が株価に織り込まれた「追随遅れ」のエントリーになるリスクが高い。",
+        "evidence": "fundamental_view.strength=75, technical_view.stance=bullish (strength=80)"
+      },
+      {
+        "reason": "RSI14が73.1と買われすぎ水準に達しており、目先は利益確定売りによる押し目形成を待つのが妥当な局面である。",
+        "evidence": "technical_view.cautions[0]: RSI14=73.1"
+      },
+      {
+        "reason": "20営業日以内に次回決算発表（10/28）および日銀会合（10/29-30）という重大イベントを控えており、不透明感が強まる時期に差し掛かっている。",
+        "evidence": "reference.next_earnings_date=2026-10-28, reference.next_boj_meeting=2026-10-29"
+      }
+    ],
+    "risks": [
+      "5000億円規模の自社株買いによる強力な需給下支えにより、押し目を作らずに抵抗線（5835円）を突破し続伸するリスク",
+      "予想PER31.8倍という割高な水準に対し、長期金利の上昇がバリュエーション抑制圧力として働く可能性",
+      "決算発表直前のポジション調整により、ボラティリティが急激に高まるリスク"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズは極めて強力（大幅増益・5000億円の自社株買い）だが、テクニカル指標も既に強い上昇を示しており、好材料が株価に織り込まれた「追随遅れ」のエントリーになるリスクが高い。\",\n      \"evidence\": \"fundamental_view.strength=75, technical_view.stance=bullish (strength=80)\"\n    },\n    {\n      \"reason\": \"RSI14が73.1と買われすぎ水準に達しており、目先は利益確定売りによる押し目形成を待つのが妥当な局面である。\",\n      \"evidence\": \"technical_view.cautions[0]: RSI14=73.1\"\n    },\n    {\n      \"reason\": \"20営業日以内に次回決算発表（10/28）および日銀会合（10/29-30）という重大イベントを控えており、不透明感が強まる時期に差し掛かっている。\",\n      \"evidence\": \"reference.next_earnings_date=2026-10-28, reference.next_boj_meeting=2026-10-29\"\n    }\n  ],\n  \"risks\": [\n    \"5000億円規模の自社株買いによる強力な需給下支えにより、押し目を作らずに抵抗線（5835円）を突破し続伸するリスク\",\n    \"予想PER31.8倍という割高な水準に対し、長期金利の上昇がバリュエーション抑制圧力として働く可能性\",\n    \"決算発表直前のポジション調整により、ボラティリティが急激に高まるリスク\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 80,
+      "summary": "中期的な強い上昇トレンドに加え、MACDの拡大と前夜ADRの好反応から上値追いの展開が期待されますが、RSIが過熱圏にあるため目先の押し目には警戒が必要です。",
+      "points": [
+        {
+          "point": "対TOPIX相対騰落率が+18%を超え、SMA5とSMA25のゴールデンクロスも維持されるなど、極めて強い中期上昇トレンドの中にあります。",
+          "evidence": "price_technical.trend_60d.relative_to_topix_60d_pct=18.15, price_technical.sma5_vs_sma25=golden"
+        },
+        {
+          "point": "MACDがシグナルを上回り、ヒストグラムも18.47まで拡大しており、上昇の勢い（モメンタム）が強まっています。",
+          "evidence": "price_technical.macd=80.34, price_technical.macd_signal=61.87, price_technical.macd_histogram=18.47"
+        },
+        {
+          "point": "前夜のNY市場でADRが2.5%以上上昇し、セクターETFも堅調であることから、国内市場においても寄り付きからの買い需要が期待されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=2.51, us_overnight.sector_proxy.change_1d_pct=0.5"
+        }
+      ],
+      "cautions": [
+        "RSI14が73.1と買われすぎ水準の70を超えており、利益確定売りによる短期的な調整（押し目）が発生しやすい局面です。",
+        "ADRの上昇により寄り付き価格が大幅に切り上がる場合、その後の買いが続かず「寄り天」となるリスクに注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 5433.36,
+        "resistance": 5835.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "大幅な増益計画を背景に、5,000億円規模の強力な自己株買いを継続しており、需給・業績両面でポジティブ。製造業PMIや短観も堅調な事業環境を示唆しているが、PER30倍超のバリュエーションは決算期待を織り込み済みである点に注意が必要。",
+      "points": [
+        {
+          "point": "2026年3月期は売上高8%増、純利益30%増と大幅な成長を計画しており、1株利益（EPS）も着実な拡大傾向にある。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "上限5,000億円の大規模な自己株式取得枠に基づき、直近2週間以内（10/2）の開示でも9月中に約395億円の買付を完了するなど、着実な株主還元と需給下支えが確認できる。",
+          "evidence": "fundamentals.recent_important_disclosures[0]"
+        },
+        {
+          "point": "製造業PMI（54.1）が8ヶ月連続の拡大を示し、日銀短観の大企業製造業DIも改善（+2.0）するなど、インフラ・IT・エネルギーを主軸とする同社の事業環境は良好。",
+          "evidence": "macro.japan_pmi.manufacturing, macro.boj.tankan"
+        }
+      ],
+      "cautions": [
+        "予想PERが31.8倍と電機セクター内でも高く、成長期待が剥落した場合の価格調整リスクがある（fundamentals.valuation）",
+        "次回決算発表（10/28）および日銀金融政策決定会合（10/29-30）が近接しており、短期的なボラティリティの高まりが予想される（fundamentals.next_earnings_date, macro.boj.monetary_policy_meeting）",
+        "10年債金利が3%台で推移しており、高PER株にとっての割引率上昇によるバリュエーション抑制圧力が懸念される（macro.rates）"
+      ],
+      "key_levels": {
+        "support": 5323.0,
+        "resistance": 6000.0
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "サイバー防御、問い合わせ急増 電機大手は体制強化―不正アクセス - 時事ドットコム",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPNUFQVjNHUC1ZLWc2M20zUGxWZzZ5d2EzX1JTOGVlcmQxaWxpdmFvOG80S01VaEM5SVg2ckdUU1l6Z0Z4QXNTRUxKQjFoNGNNQWZYRkhjMEVtZGI0enFVQzAwS1pVOTRSdXotNUFIdXdSdGFfbjM3Y1FUMUViT3hzeA?oc=5",
+        "published": "Sun, 11 Oct 2026 09:48:00 GMT",
+        "publisher": "時事ドットコム"
+      },
+      {
+        "title": "日立笠戸の片野さん技能五輪国際大会で銀 「ＣＮＣ旋盤」想定外にも対応 力を出し切った - 山口新聞 電子版",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE94TmJIanBnci0yYVRHZGtsWEJNcV93cDEyNDE3c2I4akR0cXNNaWZjbm9xQVN6Nkl6N2FHUjdINTJ0bDhHVHFvTGxWbHhHVFowNkdLNjQtbWJxNi1heG1LLWxoM2VBNi1rNmc?oc=5",
+        "published": "Sun, 11 Oct 2026 21:00:00 GMT",
+        "publisher": "山口新聞 電子版"
+      },
+      {
+        "title": "サイバー防御、問い合わせ急増 電機大手は体制強化―不正アクセス：時事ドットコム - 時事ドットコム",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9tMFNKRVlDYXNBcUxhSFFTLU9CRFRwdVZJS21NTTFSeEZsc0VEQzJFcWI0by1wcEM1RXphcU1lMFVEeXE5NmVKTmZfemxDaFNxU1NZampMby1raUNrdGpMb2R3VQ?oc=5",
+        "published": "Sun, 11 Oct 2026 09:48:00 GMT",
+        "publisher": "時事ドットコム"
+      },
+      {
+        "title": "石井 湊｜日本株データ調査 (@sora563) on X - Howl.link",
+        "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE0wZmttMG8yNEJWQTRKcXNUQ3piSm15Ymt3RzNwaUY5eVlqMEttekg2Ry1jWmUxSUNCUndz?oc=5",
+        "published": "Sun, 11 Oct 2026 03:16:26 GMT",
+        "publisher": "Howl.link"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261002545344.pdf",
+        "date": "2026-10-02 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260902530692.pdf",
+        "date": "2026-09-02 15:30:00"
+      },
+      {
+        "title": "個別決算における投資有価証券売却益(特別利益)の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260819523052.pdf",
+        "date": "2026-08-19 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804508474.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "（訂正）2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503298.pdf",
+        "date": "2026-07-30 13:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501771.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501801.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      }
+    ]
+  }
+}
