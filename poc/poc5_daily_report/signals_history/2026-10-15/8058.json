@@ -1,0 +1,200 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-10-15T09:31:47+09:00",
+  "price_as_of": "2026-10-15",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズの strength が 55 と低く、予想PER 22.4倍に割安感が乏しいため、現時点での買いエントリー基準（strength 70以上）を満たさない。",
+        "evidence": "fundamental_view.strength=55, fundamentals.valuation.forward_pe=22.463"
+      },
+      {
+        "reason": "テクニカル面では5日線が25日線を下回るデッドクロス状態にあり、MACDもマイナス圏で推移しているため、短期的な調整が続いている。",
+        "evidence": "technical_view.points[0]: sma5_vs_sma25=\"dead\", price_technical.macd=-47.16"
+      },
+      {
+        "reason": "市場全体が下落トレンドにあり、かつ日銀会合や決算発表といった重要イベントを控えた警戒局面である。",
+        "evidence": "reference.market_regime=\"downtrend\", reference.next_earnings_date=\"2026-11-04\""
+      }
+    ],
+    "risks": [
+      "2026年10月29日からの日銀金融政策決定会合に伴う為替の円高進行リスク",
+      "11月4日の第2四半期決算発表における通期見通しの下方修正および還元不足",
+      "VIX指数急騰に伴う市場全体のボラティリティ拡大によるリスク回避売り",
+      "中東情勢や世界景気動向に起因する資源価格のボラティリティ"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズの strength が 55 と低く、予想PER 22.4倍に割安感が乏しいため、現時点での買いエントリー基準（strength 70以上）を満たさない。\",\n   \"evidence\": \"fundamental_view.strength=55, fundamentals.valuation.forward_pe=22.463\"\n  },\n  {\n   \"reason\": \"テクニカル面では5日線が25日線を下回るデッドクロス状態にあり、MACDもマイナス圏で推移しているため、短期的な調整が続いている。\",\n   \"evidence\": \"technical_view.points[0]: sma5_vs_sma25=\\\"dead\\\", price_technical.macd=-47.16\"\n  },\n  {\n   \"reason\": \"市場全体が下落トレンドにあり、かつ日銀会合や決算発表といった重要イベントを控えた警戒局面である。\",\n   \"evidence\": \"reference.market_regime=\\\"downtrend\\\", reference.next_earnings_date=\\\"2026-11-04\\\"\"\n  }\n ],\n \"risks\": [\n  \"2026年10月29日からの日銀金融政策決定会合に伴う為替の円高進行リスク\",\n  \"11月4日の第2四半期決算発表における通期見通しの下方修正および還元不足\",\n  \"VIX指数急騰に伴う市場全体のボラティリティ拡大によるリスク回避売り\",\n  \"中東情勢や世界景気動向に起因する資源価格のボラティリティ\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "25日移動平均線の下方で推移しテクニカル的な弱さが残るものの、中期トレンドの堅調さと直近の下げ止まりが拮抗しています。",
+      "points": [
+        {
+          "point": "5日線が25日線を下回るデッドクロス状態にあり、短期的な調整局面が継続しています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\""
+        },
+        {
+          "point": "MACDおよびヒストグラムが依然としてマイナス圏で推移しており、本格的な反転シグナルは確認できません。",
+          "evidence": "price_technical.macd=-47.16, price_technical.macd_histogram=-0.97"
+        },
+        {
+          "point": "中期的な騰落率はプラスを維持しており、市場全体（TOPIX）に対しても相対的に強い動きを見せています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=3.88, price_technical.trend_60d.relative_to_topix_60d_pct=4.28"
+        },
+        {
+          "point": "市場全体が下落トレンドにあることが、個別銘柄の上値を抑える要因となっています。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\""
+        }
+      ],
+      "cautions": [
+        "前夜のADRがマイナスとなっており、寄り付きでの下押し圧力に注意が必要です (us_overnight.adr.change_1d_pct=-0.88)",
+        "VIX指数が急騰しており、市場全体のボラティリティ拡大によるリスク回避売りのリスクがあります (macro.indices[3].change_1d_pct=10.48)",
+        "25日移動平均線が抵抗線として機能しており、ここを明確に突破できない限り下落リスクが払拭されません"
+      ],
+      "key_levels": {
+        "support": 4513.0,
+        "resistance": 4821.52
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "2027年3月期第1四半期の四半期利益は前年同期比で大幅な伸びを示しているものの、通期計画では減益を見込んでおり、バリュエーション面でもPER20倍超と過去のレンジと比較して割安感が薄れています。直近2週間に株価を動かす新たな材料が欠如しており、市場全体のダウントレンドと日銀会合前の警戒感から、現在は様子見が妥当と判断します。",
+      "points": [
+        {
+          "point": "直近の第1四半期（4-6月期）実績は、1株当たり利益（EPS）が81.08円と前年同期の51.34円から大きく伸長しており、足元の業績は堅調に推移しています。",
+          "evidence": "fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "通期ベースでは純利益およびEPSが前期比で減少する計画となっており、予想PERも22.4倍と、利益成長期待に対して割安とは言い難い水準にあります。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.valuation.forward_pe=22.463"
+        },
+        {
+          "point": "日本の製造業PMIは54.1と拡大圏を維持しており事業環境は悪くないものの、市場全体がダウントレンドにあり、大型株である同社には下押し圧力がかかりやすい状況です。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.1, macro.market_regime.market_regime=downtrend"
+        }
+      ],
+      "cautions": [
+        "2026年11月4日に予定されている第2四半期決算発表での通期見通し修正および株主還元の追加公表の有無",
+        "10月29日からの日銀金融政策決定会合に伴う金利上昇および為替の円高進行リスク",
+        "中東情勢や世界景気動向に左右される資源価格のボラティリティ"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "三井物産の30代前半、課長補佐級の年収は？【1万件の口コミ情報データ】 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFB5aldCQmRaM25lcFp4UmtUQkhqcjZZamdsdG5YOTdELUhjWjhNMkZnM0dQNEVPR28zdDM4RzRtWF8wajlaN1FZd0JKeHFRSkXSAU9BVV95cUxQeWpXQkJkWjNuZXBaeFJrVEJIanI2WWpnbHRuWDk3RC1IY1o4TTJGZzNHUDRFT0dvM3QzOEc0bVhfMGo5WjdRWXdCSnhxUUpF?oc=5",
+        "published": "Wed, 14 Oct 2026 20:30:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "【ライズ・コンサルティング・グループ FY2027 Q2 決算説明会】営業利益64.8%減の3.5億円も計画上回る 採用費5.5億円増で利益率8.1%に急低下 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5JOGFEUHZ2RlNsM2tHdS1ZU210dXRWWkdlUjlpT1RUQW1FV0QzeWpIb2Q4a053bThsMTVKc0M1ejJWX3RCY0ZGU0RBSjMzTjNncDEzSTdqVUJiRlZjZG9J?oc=5",
+        "published": "Wed, 14 Oct 2026 20:04:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "ホンダとのピックアップトラック契約を契機に、三菱自動車株の強気見通しが変化する可能性がある理由とは - Simply Wall Street",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOSzhad1dwT3J3WlFPT1B3UHQ2Y0ctT3pSVW5FMUVSM05iMkdPdldkVG5DaDRJbW16QVc4bEJfRVV5SVc5MTZJR1h0b3NfS0s0eTVYclZzM1VKdWIzMjR6cGx1X203RmRWbTM1MDBMYkFpcVp1OTk2ckhOeWpBM3pGNXdrbF9razRqdTVUc0gwZXJKbnpjTEg3d2hpRWxTUdIBowFBVV95cUxPbmItOE9SX3V0aXVuMDlSc1lyZXN0QkFRbENYRDlDUWdVZWVKMmhSZDl5YkZOVjV4QlhBNHVxbFJFdElNX05pdVBOWDQwQlAtenlwMTFkVGJNckV0N25qdmNIOVRCcWt4WFc5ZFF6VzBOMUdHYTdxb0w2bkQ4TFljN2IxbjFONkpqM1NvZTdZSmZmenI1Qy1NSVNrZlBkQ1owa3lv?oc=5",
+        "published": "Wed, 14 Oct 2026 05:45:35 GMT",
+        "publisher": "Simply Wall Street"
+      },
+      {
+        "title": "2027年春開業予定の新NSC「マチノマ平野」にライフ、ヤマダデンキが核テナントとして出店 - BCN Retail",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9nVHRZVTVKNVFKbmJXOE5kQlE0ZkNDZTFPR2xVb09kdFA1UDNOR2NaUlFKQ2VDaVpPX3JZMFl2akZGVk92UWZXUVV4Y1ROWEx4YWZGNDZWOWpoeDA5eklUT0xGRGJrcTdnY0lwVQ?oc=5",
+        "published": "Wed, 14 Oct 2026 05:30:00 GMT",
+        "publisher": "BCN Retail"
+      },
+      {
+        "title": "JOGMEC、パンパシフィックエネルギーの保有全株をJERAに売却 - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBRZHhQdFNDSVBnVnI2Zi1kWlBhaE5oRUNjQUwtcmU3WTQ5enRYazhWRE5jS3ZQaWprSk1pZFhBcHVMem5ZVzJXLWdfNlFTWnBSYXNsWWZzMEg?oc=5",
+        "published": "Wed, 14 Oct 2026 08:00:00 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "豪州ウィートストーンLNGプロジェクト関連会社株式の株式会社JERAへの譲渡について｜Infoseekニュース - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5CQnFtcnFKMWVOTU5qcjQxWWJqWFdHamVqdHRLdE9fN0xXUG1fZDR1eUtJVmlsREJHWThLb29ZTHlfLWZ4cU1aaXllRG5ubWUtOEJjWXFQZjhqU1F2cFF0UGltRldqWTAwRTJ5TjIzTFYzUQ?oc=5",
+        "published": "Wed, 14 Oct 2026 02:03:27 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "｢まるでテレビドラマ｣怪文書が飛び交う激しい派閥争い…2000年代の大学病院で本当にあった\"トホホな教授選\" - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1sUVJZY0JiWnpvZjFTYzhTVHhHYmJWT0pibkRYdlVUY3lmNE5aZ0p3em9ORks5eUxKT08zdnBvbExDUTdIVlRYNHl5TUx3Qmc?oc=5",
+        "published": "Wed, 14 Oct 2026 10:05:13 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "米国株式市場は下落、ハイテクが重し - まぐまぐ",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4zbXJja2NxWkpKMzRYUVNua3EybXI0RENvdzFPOHVPdUhuZEJ4NGM3NzB6YlBJa0NuREt3Znl5d0dVNHdKdGM5dlg5WndSamEtV3fSAVJBVV95cUxOM21yY2tjcVpKSjM0WFFTbmtxMm1yNERDb3cxTzh1T3VIbmRCeDRjNzcwemJQSWtDbkRLd2Z5eXdHVTR3SnRjOXZYOVp3UmphLVd3?oc=5",
+        "published": "Wed, 14 Oct 2026 02:15:39 GMT",
+        "publisher": "まぐまぐ"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期第1四半期決算短信〔IFRS〕(連結）（監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510489.pdf",
+        "date": "2026-08-06 15:25:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505791.pdf",
+        "date": "2026-08-03 14:00:00"
+      },
+      {
+        "title": "特定子会社の異動（子会社の特定子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260714593288.pdf",
+        "date": "2026-07-15 10:00:00"
+      },
+      {
+        "title": "子会社間の合併及び特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552595.pdf",
+        "date": "2026-05-29 09:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C2プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539898.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C3プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539905.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C4プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539910.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C5プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539918.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C6プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539939.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515679.pdf",
+        "date": "2026-05-01 14:00:00"
+      }
+    ]
+  }
+}

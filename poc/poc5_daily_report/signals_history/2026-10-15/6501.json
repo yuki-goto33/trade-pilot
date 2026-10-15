@@ -1,0 +1,213 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-10-15T09:32:28+09:00",
+  "price_as_of": "2026-10-14",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズは極めて強力（strength 75）だが、テクニカルも既に強気（bullish）に転じており、材料が株価に織り込まれた「遅いエントリー」になるリスクが高い。",
+        "evidence": "fundamental_view.strength=75 / technical_view.stance=bullish"
+      },
+      {
+        "reason": "市場全体の地合い（market_regime）がdowntrendであり、個別銘柄の強さに関わらず全体相場の下落に巻き込まれる懸念がある。",
+        "evidence": "reference.market_regime='downtrend'"
+      },
+      {
+        "reason": "次回決算発表（10/28）および日銀会合（10/29-30）という重大なイベントが間近に控えており、ボラティリティが急拡大するリスクがある。",
+        "evidence": "reference.next_earnings_date='2026-10-28' / reference.next_boj_meeting='2026-10-29〜2026-10-30'"
+      }
+    ],
+    "risks": [
+      "市場全体の地合い悪化（downtrend判定）による引きずられ",
+      "決算発表および日銀会合に伴うボラティリティの急拡大",
+      "前夜ADRの下落（-0.74%）に伴う寄り付き後の売り圧力",
+      "高PER/PBR水準（PER 32倍超）による成長鈍化懸念時の大幅調整"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズは極めて強力（strength 75）だが、テクニカルも既に強気（bullish）に転じており、材料が株価に織り込まれた「遅いエントリー」になるリスクが高い。\",\n   \"evidence\": \"fundamental_view.strength=75 / technical_view.stance=bullish\"\n  },\n  {\n   \"reason\": \"市場全体の地合い（market_regime）がdowntrendであり、個別銘柄の強さに関わらず全体相場の下落に巻き込まれる懸念がある。\",\n   \"evidence\": \"reference.market_regime='downtrend'\"\n  },\n  {\n   \"reason\": \"次回決算発表（10/28）および日銀会合（10/29-30）という重大なイベントが間近に控えており、ボラティリティが急拡大するリスクがある。\",\n   \"evidence\": \"reference.next_earnings_date='2026-10-28' / reference.next_boj_meeting='2026-10-29〜2026-10-30'\"\n  }\n ],\n \"risks\": [\n  \"市場全体の地合い悪化（downtrend判定）による引きずられ\",\n  \"決算発表および日銀会合に伴うボラティリティの急拡大\",\n  \"前夜ADRの下落（-0.74%）に伴う寄り付き後の売り圧力\",\n  \"高PER/PBR水準（PER 32倍超）による成長鈍化懸念時の大幅調整\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "個別銘柄のテクニカルは中期・短期ともに強い上昇トレンドを示唆していますが、市場全体の地合い悪化と前夜ADRの下落による押し目形成のリスクに注意が必要です。",
+      "points": [
+        {
+          "point": "短期・中期移動平均線がゴールデンクロス状態にあり、終値がそれらを上回って推移する強いトレンドを維持しています。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.last_close=5809.0, price_technical.sma5=5697.6"
+        },
+        {
+          "point": "MACDおよびヒストグラムがプラス圏で拡大しており、上昇モメンタムが加速しています。",
+          "evidence": "price_technical.macd=79.15, price_technical.macd_histogram=34.18"
+        },
+        {
+          "point": "60日騰落率および対TOPIX相対騰落率が大幅なプラスであり、中長期的な買い意欲が極めて強いことが示されています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=20.97, price_technical.trend_60d.relative_to_topix_60d_pct=21.37"
+        }
+      ],
+      "cautions": [
+        "TOPIXが25日線を下回り、市場全体がdowntrend判定（macro.market_regime）にあるため、相場全体の地合いに引きずられるリスクがあります。",
+        "前夜のADRが下落しており、寄り付き直後は売り優勢となる可能性があります（us_overnight.adr.change_1d_pct=-0.74）。",
+        "VIX指数が急上昇しており、市場のボラティリティ拡大による一時的な急落に警戒が必要です（macro.indices.VIX.change_1d_pct=10.48）。"
+      ],
+      "key_levels": {
+        "support": 5697.6,
+        "resistance": 5870.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "強力な業績拡大トレンドと大規模な自己株式取得による下値支えを背景に、成長期待が継続しています。特にAIデータセンター等の成長分野での具体的な進展がカタリストとなっており、高めのバリュエーションを許容できる構造改革の成果が確認できます。",
+      "points": [
+        {
+          "point": "収益性の飛躍的向上を伴う増益トレンド。2026年3月期の営業利益は前期比約23%増の1兆1,993億円を見込んでおり、3期連続の増収増益とEPS成長が継続しています。",
+          "evidence": "fundamentals.earnings_trend.annual[0], [1]"
+        },
+        {
+          "point": "総額5,000億円規模の強力な株主還元策の実行。2026年10月2日開示の進捗報告では、9月のみで約396億円を取得しており、需給面での強いサポートが期待されます。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "AIデータセンターや工場自動化など、マクロ環境の追い風を享受する事業ポートフォリオ。直近のニュースでもAIデータセンターの電力問題解決に向けた実証実験など、成長分野での具体策が報じられています。",
+          "evidence": "news.headlines[3], news.headlines[8]"
+        },
+        {
+          "point": "製造業PMIが54.1と拡大圏にあり、日銀短観の大企業製造業DIも改善（24.0）を示すなど、同社の主力事業を取り巻く国内製造業の景況感は良好です。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value, macro.boj.tankan.di.large_manufacturing.current_di"
+        }
+      ],
+      "cautions": [
+        "2026年10月28日に決算発表を控えており、直近の期待値に対する進捗確認によるボラティリティの上昇が予想されます。",
+        "日銀の金融政策決定会合（10月29〜30日）が間近に迫っており、為替や金利の変動によるマクロ的な下押しリスクが存在します。",
+        "PERが32倍超、PBRが3.96倍と、同業種内でもバリュエーションが高水準にあり、業績の成長鈍化が確認された場合の反落リスクには注意が必要です。",
+        "市場全体が短期的な下落トレンド（downtrend判定）にあり、地合いに引きずられる可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)日立製作所【6501】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9PT2tzbkE0cWdmQXVvRmcyem9HV0p6SFB5ZUV6WkZOWVh6U2N6Qi01eE1BX2ctYXBsRGZxRmxIa0VtVE5JTmhkSDhEVGU1SUNqWXh2elRTd0NnN1NoODFr?oc=5",
+        "published": "Wed, 14 Oct 2026 06:54:26 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "日立製作所、暗号資産のAML共同化 27年度中に拠点設立めざす 第1弾は監視BPO - ニッキンONLINE",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9fQjVlaWRCYnNQVWVBWGZjQkNEUHNJcGl0TFY5YnZzcUpNZ09zSVU5a25ZN21sOTVGcXlyWmZmaWttWlpwcVMwTU90ZzBYSVZrRnV1RTZn?oc=5",
+        "published": "Wed, 14 Oct 2026 05:00:00 GMT",
+        "publisher": "ニッキンONLINE"
+      },
+      {
+        "title": "空調世界王者ダイキンのグローバル戦略を支える「2大施策」とは？最高益を連続更新も“一本足打法”に漂う不安《再配信》 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBpalpfemNDcHV5bUhZdGM1S3Z6b3NFUkppLTg1YXVDcFlSc0JHSkRYVGhoNTNNR0lvX1hvX01sS1JkLUw5Q0dGc05GdjbSAU9BVV95cUxQNmljS0lJbnB6VlU0Vm5oekVDa0JtQ1J1YVduQ1V2OC1BY21iM01ETHF0bnpBUzJZX3B5Tkw2NVJsVkMtMTJfQXBTWDdKUjBv?oc=5",
+        "published": "Wed, 14 Oct 2026 19:10:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "AIデータセンターの電力問題、答えは「計算処理の引っ越し」か？ 日立など5社、横浜と北九州をつないで実証 - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5sbENNTlk2dndzZTFVdlpBN04wd1dRZFBTMHFBYjZ0NzNhMTdCbS1ybFp3VGNKejh4SkozX1BwYk0ySmJRakY5LU5uT3dRUTM1RG5qdFNVSmd6UldzcTluM3RUN3luZjk4am5MSGplMjF5T0xr?oc=5",
+        "published": "Wed, 14 Oct 2026 23:00:00 GMT",
+        "publisher": "ITmedia"
+      },
+      {
+        "title": "東京電機大学ほか大学・企業が結集！サイバーセキュリティの研究コミュニティ「MWS Cup チーム人海戦術」を発足 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBVQTlRNk9TV2dEX3I5TTg3YzNEb3FOd2hRY0MycXlITFR3M3ZZTExhbUlFTy1NRDZiRGoxYjM1VXcyOGpsbmVfd1ZyeTRNeklkSkp0WmVMbUc0R1FCQXE0dXVKa1IyMzUteEE?oc=5",
+        "published": "Wed, 14 Oct 2026 02:10:01 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "CT スキャナーの日本メーカー2026年版 - pando.life",
+        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE54XzVRd3ZPLWo5QnJfSVRGTm83cU1GdDhqQXRiOTh6aFdRUGdPTmQ2TzctaG9OcndMWFlMOHRVLUV5alhWRlI5RW5B?oc=5",
+        "published": "Wed, 14 Oct 2026 21:02:39 GMT",
+        "publisher": "pando.life"
+      },
+      {
+        "title": "需要が消え、設備が老い、人が減る――西武鉄道、144両更新の裏側 「大手なのに恥ずかしい」を受け入れたワケは - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBGMTIwSFd6Vy1IZEZFZXBDSVhseGEwRUltM3J4X3pfcWxueFdsRENLY0xodWdTc1Buc3FNRFpCZXdGdmtybXZMbzRsb3NIN3dBQVVyczVLTUwzQTh1Z0R4UWM2ZDhXNnhNRjBibl9icTN1WlRz?oc=5",
+        "published": "Wed, 14 Oct 2026 22:00:00 GMT",
+        "publisher": "ITmedia"
+      },
+      {
+        "title": "山口県勢15年ぶりの快挙　技能五輪国際大会で銀メダル獲得 - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE8tZVpvZDlSODExREMxckNYdkY4MHdDNS1GMjJUeWVhcUJFR2lHSDZSREp4TzlwS3RfckdpS1JhaUFrQ09TeXNzQl80Z0ZSMGtxS0c2dkJFOUtVVG1qcEVJY1hMai1NUERFQ1FJYkRR0gFuQVVfeXFMTy1lWm9kOVI4MTFEQzFyQ1h2Rjgwd0M1LUYyMlR5ZWFxQkVHaUdINlJESnhPOXBLdF9yR2lLUmFpQWtDT1N5c3NCXzRnRlIwa3FLRzZ2QkU5S1VUbWpwRUljWExqLU1QREVDUUliRFE?oc=5",
+        "published": "Wed, 14 Oct 2026 03:00:01 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "日本工場自動化・産業用制御市場：オムロンのフィジカルAI事業拡大、日立製作所とファナックの提携、工作機械受注の過去最高 - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1keWZObXNGQTBXcFROZHV5azVEeF9DNTRtOWhXbnh3SGF5TW1tVVJ4UC1CY1NZNEt0QldFd2lBTjhWV1c2dEhOUzNnVnpSZ2dWdEd5Ng?oc=5",
+        "published": "Wed, 14 Oct 2026 08:03:37 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "日立が「木造データセンター」展開 “鉄とコンクリ”から木材へ、“見た目がオシャレ”以外の価値は？ - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9MU0RSS09qNFlJNlJtdm5PLW5KcXVxcDVqV040TWNmSjJTamI4NHNRQzlnX1J3ZHgyalF4eGNQMWlzc0xGX1NWQkxRVXpfZVY0a1F0bEsxZUhxcXBaOEtRbGhvWDd1RzdFZndmeDd4X3U5dw?oc=5",
+        "published": "Wed, 14 Oct 2026 08:45:00 GMT",
+        "publisher": "ITmedia"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261002545344.pdf",
+        "date": "2026-10-02 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260902530692.pdf",
+        "date": "2026-09-02 15:30:00"
+      },
+      {
+        "title": "個別決算における投資有価証券売却益(特別利益)の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260819523052.pdf",
+        "date": "2026-08-19 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804508474.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "（訂正）2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503298.pdf",
+        "date": "2026-07-30 13:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501771.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501801.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      }
+    ]
+  }
+}

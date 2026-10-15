@@ -1,0 +1,211 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-10-15T09:25:57+09:00",
+  "price_as_of": "2026-10-15",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "直近 buy（2026-10-06）の発火から9日しか経過しておらず、再エントリー抑制ルールに従い新規買いは見送り継続監視中とします。",
+        "evidence": "reference.recent_buy.date='2026-10-06' (days_ago=9)"
+      },
+      {
+        "reason": "ファンダメンタルズ専門家のスタンスがneutral（strength=50）にとどまり、buy発火の必須条件（bullishかつstrength>=70）を満たしていません。",
+        "evidence": "fundamental_view.stance='neutral' (strength=50), fundamental_view.points[1]: 予想PER21.06倍で割安感・強力なカタリスト不足"
+      },
+      {
+        "reason": "テクニカル専門家はゴールデンクロス等から強気（bullish、strength=70）を示しているものの、ファンダメンタルズの裏付けが伴っておらず追随買いはリスクが高いと判断しました。",
+        "evidence": "technical_view.stance='bullish' (strength=70), technical_view.points[0]: sma5>sma25"
+      }
+    ],
+    "risks": [
+      "2026年10月29日〜30日の日銀金融政策決定会合に伴う為替および市場ボラティリティの急変動リスク",
+      "2026年11月5日に予定されている次回決算発表における業績進捗の下振れリスク",
+      "市場全体のレジームがdowntrendにあり、地合い悪化に伴う連れ安リスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 50,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 21,\n \"reasons\": [\n  {\n   \"reason\": \"直近 buy（2026-10-06）の発火から9日しか経過しておらず、再エントリー抑制ルールに従い新規買いは見送り継続監視中とします。\",\n   \"evidence\": \"reference.recent_buy.date='2026-10-06' (days_ago=9)\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ専門家のスタンスがneutral（strength=50）にとどまり、buy発火の必須条件（bullishかつstrength>=70）を満たしていません。\",\n   \"evidence\": \"fundamental_view.stance='neutral' (strength=50), fundamental_view.points[1]: 予想PER21.06倍で割安感・強力なカタリスト不足\"\n  },\n  {\n   \"reason\": \"テクニカル専門家はゴールデンクロス等から強気（bullish、strength=70）を示しているものの、ファンダメンタルズの裏付けが伴っておらず追随買いはリスクが高いと判断しました。\",\n   \"evidence\": \"technical_view.stance='bullish' (strength=70), technical_view.points[0]: sma5>sma25\"\n  }\n ],\n \"risks\": [\n  \"2026年10月29日〜30日の日銀金融政策決定会合に伴う為替および市場ボラティリティの急変動リスク\",\n  \"2026年11月5日に予定されている次回決算発表における業績進捗の下振れリスク\",\n  \"市場全体のレジームがdowntrendにあり、地合い悪化に伴う連れ安リスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "株価は5日線・25日線の上方に位置しゴールデンクロスを形成、MACDヒストグラムも好転しており短期・中期のテクニカルは堅調です。全体地合いの下落基調には注意が必要なものの、相対的な強さを保っています。",
+      "points": [
+        {
+          "point": "株価が5日移動平均線（3810.4円）および25日移動平均線（3735.36円）の上方にあり、5日線が25日線を上回るゴールデンクロスを形成している。",
+          "evidence": "price_technical.last_close=3859.0, price_technical.sma5=3810.4, price_technical.sma25=3735.36, price_technical.sma5_vs_sma25='golden(5日線が25日線の上)'"
+        },
+        {
+          "point": "MACDヒストグラムがプラスに拡大し（24.53）、RSI14も60.8と過熱感なく上向きのモメンタムを示している。",
+          "evidence": "price_technical.macd_histogram=24.53, price_technical.rsi14=60.8"
+        },
+        {
+          "point": "60営業日騰落率が+13.87%、対TOPIX相対騰落率が+14.27%と中期的な上昇トレンドおよび市場アウトパフォームが継続している。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=13.87, price_technical.trend_60d.relative_to_topix_60d_pct=14.27"
+        },
+        {
+          "point": "市場レジームが下落トレンドで日経平均が前日比-2.16%と大幅安となる中、当銘柄は前日比0.0%と高値圏を維持し相対的な底堅さを見せている。",
+          "evidence": "price_technical.recent_5_days[4].change_pct=0.0, macro.indices[0].change_1d_pct=-2.16, macro.market_regime.market_regime='downtrend'"
+        }
+      ],
+      "cautions": [
+        "TOPIXや日経平均が軟調なdowntrendレジームにあり、地合い悪化の波及による連れ安リスクがある。",
+        "直近30日の期間高値4070.0円に向けた上昇局面では、戻り売りによる上値の重さが意識される可能性がある。",
+        "ADRのデータ日付が10月13日時点となっており、直近の米国市場軟調が寄り付きに織り込まれるリスクに留意が必要。"
+      ],
+      "key_levels": {
+        "support": 3735.36,
+        "resistance": 4070.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "直近四半期の収益改善と自社株買いが下値を支える一方、バリュエーション面の割安感は乏しく、市場全体の軟調傾向や間近に控える決算・日銀イベントを前に方向感に欠ける状況です。",
+      "points": [
+        {
+          "point": "2026年3月期の最終赤字から直近四半期（2026年6月期）は純利益3,422億円へ黒字回復し、自社株買いも継続的に実施されています。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].net_income_oku_jpy=3422, disclosures[0].date=2026-10-05"
+        },
+        {
+          "point": "予想PER21.06倍、PBR2.71倍と過度な割安感はなく、上値を追うための強力な新規カタリストは見当たりません。",
+          "evidence": "fundamentals.valuation.forward_pe=21.064, fundamentals.valuation.price_to_book=2.708"
+        },
+        {
+          "point": "TOPIXレジームがdowntrendと判定され、日経平均など主要指数が調整色を強める中、外部環境からの逆風を受けやすい地合いです。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.indices[0].change_5d_pct=-5.32"
+        }
+      ],
+      "cautions": [
+        "2026年11月5日に次回決算発表を控えており、業績進捗によるボラティリティ上昇リスクがあります。",
+        "14日後（2026年10月29日〜30日）に日銀金融政策決定会合が控えており、金利・為替の急変動が業績見通しに影響を与える可能性があります。",
+        "国内株式市場全体が下落トレンドにあるため、市場環境の悪化に伴う連れ安リスクが存在します。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-10-06",
+    "days_ago": 9,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソニーグループ(株)【6758】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1MMXVSSGZKbTVWLVg1Wjc5MWxGQ1RzVVNrN25OcndmRklVOE5ueWZrLVdkMXlRcWxpUk5qbTJYTDVkRnluSWtyOENaOGMtSXJhTUVCMFZKVUJHSkItNWVF?oc=5",
+        "published": "Wed, 14 Oct 2026 06:53:41 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "エンタテインメントロボット\"aibo\"（アイボ）との物語を紡ぎ続ける取り組み 第4期「aiboの里親」募集を開始 - Sony",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5WNVlpTGdydm1LdDR3TU42NXBLQ3RMSlRlQkROVUMwVkltT1V1cTJfWjVKUElSQjl0ci04N2ZiYWEwaXZYNE9lUm9hV0FrX1I1TG9OUVhoSGl2djJjTUstWVk1S0tDVkVKOHdqZ01CS1c2QQ?oc=5",
+        "published": "Wed, 14 Oct 2026 07:35:11 GMT",
+        "publisher": "Sony"
+      },
+      {
+        "title": "ソニー、スタートアップ7社の自動運転・AI半導体など多彩な技術を披露…CEATEC 2026 - ロボスタ",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBROWZNTVpRRjJsNjFja2l6cko4UXBseHpCZnlfVzBhNk93MV9RM2lEZEx2UUVQd040OEFVTnFpS3ZhMFc4NzRiMTVqdWREMTB5R25pbkNUUWpxQnZoOE1vblBTWk0?oc=5",
+        "published": "Wed, 14 Oct 2026 01:00:03 GMT",
+        "publisher": "ロボスタ"
+      },
+      {
+        "title": "安田秀樹【大盛況！ 東京ゲームショウに映る日本アニメ黄金時代】 - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1vOHNqamJOTUtuOVMwSmZKSzBwT0RJSUIxYW1LVEt2UHd1MVBrZ2swT2d6X3E4V293MnNscGI3ZEJzZ0EzZlNuVUlfN2FsOFN0bm9vYVNqazFkWEZrazNveg?oc=5",
+        "published": "Wed, 14 Oct 2026 01:15:00 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "日経平均は5日ぶり反発、自律反発狙いの買いが先行 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQalRpbjNoZE1KaE9YUEs1MEQzeGtLOHVMSFNNWTJnLUpMNFlITDdvbFRVbDREb2prTEhXeV9CRHJSTEUzLW9MdEFJZ2d4d3FiWE5Za0pMazgyMFBWei1TZ3ZRNnM1NnpsU2FMU2ZfU3BCMEFzb0xFNmNnb3FUWDNyU3p1blpzNVJFTWdwWdIBjAFBVV95cUxQalRpbjNoZE1KaE9YUEs1MEQzeGtLOHVMSFNNWTJnLUpMNFlITDdvbFRVbDREb2prTEhXeV9CRHJSTEUzLW9MdEFJZ2d4d3FiWE5Za0pMazgyMFBWei1TZ3ZRNnM1NnpsU2FMU2ZfU3BCMEFzb0xFNmNnb3FUWDNyU3p1blpzNVJFTWdwWQ?oc=5",
+        "published": "Wed, 14 Oct 2026 03:15:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "日経平均は反発で寄り付く、ＡＩ・半導体関連株に押し目買い｜Infoseekニュース - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA4ZDNYMWxKWUs3eWVLaVdpdDlQbTdiQm44RDAyOExiTU43MUhjeWhaS19DZmZVNGZVTnhTRkgzR1p0NVBpeGlLbU5fQ0xDeGdzWGtLR0x4aDFhdHJFd3NOTFh5N29kRVRQV0did0hn?oc=5",
+        "published": "Wed, 14 Oct 2026 00:20:46 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "➕6,590 win 💰 Learned from yesterday's mistake and made +9,800 yen with F&LC (3563) ✨ Day trading ... - YouTube",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1tZm5pV3k4TEpFNnBUR0hWZmFnNHpmM3Z1ZV92RFUwM2xFMHJJMEM5ZFUyWEM3X19DTW9mY1lmZTltWVZOcVpzQ25SYVV5cHE5b2hfNzNFV1ZPT1JB?oc=5",
+        "published": "Wed, 14 Oct 2026 07:28:48 GMT",
+        "publisher": "YouTube"
+      },
+      {
+        "title": "後場に注目すべき3つのポイント〜自律反発狙いの買いが先行 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOWmRZbkZpZlg1cENNbDRzX0hfTzYzY1VKbDlHeTk1ZG5mblpHUWVIQ3lEbGt1T00zVHBkVWMxbUlSbHVwWUlQWGlRLUJQS3dTNzk5T3BIcTdrSjdyRUVwMENIYTVKYVRJMHNyUDZuMndlREhtT3RWVHA0czFyaHozako5WXNzNGVUQ3NEbtIBjAFBVV95cUxOWmRZbkZpZlg1cENNbDRzX0hfTzYzY1VKbDlHeTk1ZG5mblpHUWVIQ3lEbGt1T00zVHBkVWMxbUlSbHVwWUlQWGlRLUJQS3dTNzk5T3BIcTdrSjdyRUVwMENIYTVKYVRJMHNyUDZuMndlREhtT3RWVHA0czFyaHozako5WXNzNGVUQ3NEbg?oc=5",
+        "published": "Wed, 14 Oct 2026 03:28:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "後場に注目すべき3つのポイント〜自律反発狙いの買いが先行 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOWnFFcjVjaHFIVk9CaVZFczBQNHRvdnN0QzdlVldpNnNuZFptN3lTR1FXRVZPdDZWa1hSdlFKQ0pTVHZ4cGxZTXE0R0tmd243cUdETEM0T0lJZndDRUdfR0JRV0JTRE0xSjE2bkRvRzIwSkctYm5McHU1a2Z5cERMMGhldHhPc3U2ZmtrR19ieW3SAYwBQVVfeXFMTlpkWW5GaWZYNXBDTWw0c19IX082M2NVSmw5R3k5NWRuZm5aR1FlSEN5RGxrdU9NM1RwZFVjMW1JUmx1cFlJUFhpUS1CUEt3Uzc5OU9wSHE3a0o3ckVFcDBDSGE1SmFUSTBzclA2bjJ3ZURIbU90VlRwNHMxcmh6M2pKOVlzczRlVENzRG4?oc=5",
+        "published": "Wed, 14 Oct 2026 03:28:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261005545702.pdf",
+        "date": "2026-10-05 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903530947.pdf",
+        "date": "2026-09-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260811517496.pdf",
+        "date": "2026-08-11 18:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805509201.pdf",
+        "date": "2026-08-05 11:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504252.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期 連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504254.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の権利確定に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595854.pdf",
+        "date": "2026-07-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587315.pdf",
+        "date": "2026-07-03 11:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584099.pdf",
+        "date": "2026-06-30 15:30:00"
+      },
+      {
+        "title": "米ドル建て無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577032.pdf",
+        "date": "2026-06-24 11:30:00"
+      }
+    ]
+  }
+}

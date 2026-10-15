@@ -1,0 +1,219 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-10-15T09:33:30+09:00",
+  "price_as_of": "2026-10-15",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "株価は5日・25日移動平均線を下回り、デッドクロスを形成しており、MACDも下落モメンタムを示すなど、テクニカル的には明確な下降トレンドが継続しています。",
+        "evidence": "technical_view.points[0], technical_view.points[1]"
+      },
+      {
+        "reason": "市場全体も下落トレンドにあり、VIX指数も上昇するなど、投資家の不安心理が高まる外部環境も弱気判断を補強しています。",
+        "evidence": "technical_view.points[3], fundamental_view.points[3], reference.market_regime=\"downtrend\""
+      },
+      {
+        "reason": "ファンダメンタルズ面では、2026年3月期の減益予想や直近四半期EPSの前年同期比減少など、業績トレンドに減速が見られます。",
+        "evidence": "fundamental_view.points[0]"
+      },
+      {
+        "reason": "NTKとの損害賠償等請求訴訟で控訴が提起されており、不確定要素が残る上、株価を積極的に押し上げる新規のポジティブ材料も確認できないため、積極的な買いの根拠に乏しい状況です。",
+        "evidence": "fundamental_view.points[1], fundamental_view.points[2]"
+      }
+    ],
+    "risks": [
+      "2026年10月30日に予定されている次回決算発表の内容によっては、業績見通しが大きく変動する可能性があります。",
+      "2026年10月29日〜30日の日銀金融政策決定会合の結果が、市場全体のセンチメントに影響を与える可能性があります。",
+      "NTKとの損害賠償等請求訴訟の控訴審の展開次第では、業績や企業イメージに悪影響を及ぼすリスクがあります。",
+      "RSIが売られすぎ水準に近いものの、現在のところ明確な反転兆候が見られず、さらなる株価下落が続く可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"株価は5日・25日移動平均線を下回り、デッドクロスを形成しており、MACDも下落モメンタムを示すなど、テクニカル的には明確な下降トレンドが継続しています。\",\n   \"evidence\": \"technical_view.points[0], technical_view.points[1]\"\n  },\n  {\n   \"reason\": \"市場全体も下落トレンドにあり、VIX指数も上昇するなど、投資家の不安心理が高まる外部環境も弱気判断を補強しています。\",\n   \"evidence\": \"technical_view.points[3], fundamental_view.points[3], reference.market_regime=\\\"downtrend\\\"\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ面では、2026年3月期の減益予想や直近四半期EPSの前年同期比減少など、業績トレンドに減速が見られます。\",\n   \"evidence\": \"fundamental_view.points[0]\"\n  },\n  {\n   \"reason\": \"NTKとの損害賠償等請求訴訟で控訴が提起されており、不確定要素が残る上、株価を積極的に押し上げる新規のポジティブ材料も確認できないため、積極的な買いの根拠に乏しい状況です。\",\n   \"evidence\": \"fundamental_view.points[1], fundamental_view.points[2]\"\n  }\n ],\n \"risks\": [\n  \"2026年10月30日に予定されている次回決算発表の内容によっては、業績見通しが大きく変動する可能性があります。\",\n  \"2026年10月29日〜30日の日銀金融政策決定会合の結果が、市場全体のセンチメントに影響を与える可能性があります。\",\n  \"NTKとの損害賠償等請求訴訟の控訴審の展開次第では、業績や企業イメージに悪影響を及ぼすリスクがあります。\",\n  \"RSIが売られすぎ水準に近いものの、現在のところ明確な反転兆候が見られず、さらなる株価下落が続く可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 80,
+      "summary": "短期・中期的な下落トレンドが継続しており、主要テクニカル指標や市場地合いも弱気を示唆しています。当面は軟調な値動きが続く可能性が高いでしょう。",
+      "points": [
+        {
+          "point": "株価は5日移動平均線および25日移動平均線を大きく下回り、5日線が25日線を下抜けるデッドクロスを形成しており、明確な下降トレンドを示しています。",
+          "evidence": "price_technical.last_close=2601.0, price_technical.sma5=2622.9, price_technical.sma25=2761.74, price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\""
+        },
+        {
+          "point": "MACDはシグナルを下回り、MACDヒストグラムもマイナス圏で拡大しており、下落モメンタムが継続していることを示唆しています。",
+          "evidence": "price_technical.macd=-57.46, price_technical.macd_signal=-37.47, price_technical.macd_histogram=-20.0"
+        },
+        {
+          "point": "直近60営業日の騰落率（-2.84%）および対TOPIX相対騰落率（-2.44%）がともにマイナスであり、中期的な下落トレンドにあると判断されます。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-2.84, price_technical.trend_60d.relative_to_topix_60d_pct=-2.44"
+        },
+        {
+          "point": "日経平均・TOPIXがともに直近で下落しているほか、VIX指数も大幅に上昇しており、市場全体として不安心理が高まる下落トレンドの地合いです。",
+          "evidence": "macro.indices[0].change_1d_pct=-2.16, macro.indices[1].change_1d_pct=-1.72, macro.indices[3].change_1d_pct=10.48, macro.market_regime.market_regime=\"downtrend\""
+        }
+      ],
+      "cautions": [
+        "RSIは売られすぎ水準（32.8）に近いものの、現在のところ明確な反転の兆候（MACD好転や25日線回復など）は見られないため、売られすぎからの自律反発を期待するには追加の買い材料が必要です。",
+        "前夜のADRと米国ヘルスケアセクターETFがともに下落しており、本日の寄り付きは軟調に推移する可能性がありますが、その後の値動きを保証するものではありません。"
+      ],
+      "key_levels": {
+        "support": 2538.0,
+        "resistance": 2622.9
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "第一三共は2026年3月期に減益予想となっており、直近四半期のEPSも前年同期比で減少するなど、業績トレンドに減速が見られます。また、訴訟の控訴提起があり、明確な株価上昇のカタリストとなる新規材料も確認できないため、中立的なスタンスが適切です。",
+      "points": [
+        {
+          "point": "2026年3月期の年次業績予想は減益であり、直近の2026年6月期四半期EPSも前年同期を下回っており、業績の減速傾向が見られます。",
+          "evidence": "fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=2291, fundamentals.earnings_trend.annual[0].net_income_oku_jpy=2599, fundamentals.earnings_trend.annual[0].diluted_eps=140.37 (vs 2025-03), fundamentals.earnings_trend.quarterly[0].diluted_eps=37.7 (vs 2025-06 diluted_eps=46.01)"
+        },
+        {
+          "point": "NTKからの損害賠償等請求訴訟で一度は勝訴したものの、相手方から控訴が提起されており、今後の展開に不確定要素が残っています。",
+          "evidence": "disclosures.items[0].title=当社に対するNTKからの損害賠償等請求訴訟における控訴提起のお知らせ, disclosures.items[1].title=当社に対するNTKからの損害賠償等請求訴訟に関する判決（勝訴）のお知らせ"
+        },
+        {
+          "point": "直近のニュースや開示からは、株価を積極的に押し上げるような新たなポジティブ材料は見当たりません。一部ニュースでは、過去の株価下落と復活の条件について言及されています。",
+          "evidence": "news.headlines[0].title=〈反転はいつ？〉第一三共｢2年で株価6割下落｣の正念場…焦点は次のエンハーツ､トップアナリストが斬る\"復活の条件\" - 東洋経済オンライン, disclosures.items"
+        },
+        {
+          "point": "日本株式市場全体が直近で下落トレンドにあり、個別銘柄にとって追い風となる外部環境ではありません。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.indices[0].change_1d_pct=-2.16, macro.indices[0].change_5d_pct=-5.32"
+        }
+      ],
+      "cautions": [
+        "2026年10月30日に次回決算発表を控えており、その内容によっては業績見通しが大きく変動する可能性があります。",
+        "2026年10月29日〜30日には日銀の金融政策決定会合が予定されており、金融政策の変更があれば市場全体のセンチメントに影響を与える可能性があります。",
+        "NTKとの損害賠償等請求訴訟の控訴審の行方によっては、業績や企業イメージに影響を与えるリスクがあります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "〈反転はいつ？〉第一三共｢2年で株価6割下落｣の正念場…焦点は次のエンハーツ､トップアナリストが斬る\"復活の条件\" - 東洋経済オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5fN3FacHlPdFZBQWFvMTFUSXFTSFIyQl9LRFg2NHN5WlljLUpfUDJDSjJQQTROaGVtMEx6UksySENHcUl6MzdPTERTZWZZRTV0VUhCMkdNZDJJQmNKWjA4?oc=5",
+        "published": "Wed, 14 Oct 2026 20:50:00 GMT",
+        "publisher": "東洋経済オンライン"
+      },
+      {
+        "title": "日本株ＡＤＲ・円換算終値 - みんかぶ FX/為替",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Pcm1RRThISmpNUllYUGQ0OS1FYmZjVzlqeHgtTDVRQzBWMEt2YmZ6UmxrNzVmV3Q0bThwdk5FNmh1N0pMUURRaQ?oc=5",
+        "published": "Wed, 14 Oct 2026 22:40:29 GMT",
+        "publisher": "みんかぶ FX/為替"
+      },
+      {
+        "title": "日経平均は5日ぶり反発、自律反発狙いの買いが先行 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQalRpbjNoZE1KaE9YUEs1MEQzeGtLOHVMSFNNWTJnLUpMNFlITDdvbFRVbDREb2prTEhXeV9CRHJSTEUzLW9MdEFJZ2d4d3FiWE5Za0pMazgyMFBWei1TZ3ZRNnM1NnpsU2FMU2ZfU3BCMEFzb0xFNmNnb3FUWDNyU3p1blpzNVJFTWdwWdIBjAFBVV95cUxQalRpbjNoZE1KaE9YUEs1MEQzeGtLOHVMSFNNWTJnLUpMNFlITDdvbFRVbDREb2prTEhXeV9CRHJSTEUzLW9MdEFJZ2d4d3FiWE5Za0pMazgyMFBWei1TZ3ZRNnM1NnpsU2FMU2ZfU3BCMEFzb0xFNmNnb3FUWDNyU3p1blpzNVJFTWdwWQ?oc=5",
+        "published": "Wed, 14 Oct 2026 03:15:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "＜画像1 / 4＞市販化で話題をさらった解熱鎮痛薬「ロキソニン」の現状は？ - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5xeHJYZkFEazUtV1V5MGxPU3dhVlRjS1Z4RW90NHAxTTV1V2xpcVBmb0JKQno5LUNFd0NBTmZhazZORkRiSklOV1F1Q2l1am43VVZmU05uclJ0SU9YaFFkc1dJelV1MXM?oc=5",
+        "published": "Wed, 14 Oct 2026 05:40:36 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "日経平均は5日ぶり反発、自律反発狙いの買いが先行 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOc1VjZ01aWUxsQWpOcFVUZGd1UHhkTTNDbTgxTENIWGlqeWdKbXN1cUM5MExwNkE2azFvdzU5d1FuY2FRWWJVUlVfcm1wcklSUWNmZGs5LVc5WndLRnlBZG9UejB3cndsd3IyUW1OQXNNZEFrLXRzak1WYkFJNFRrZHowN1lKZko2ampjRDFhMDHSAYwBQVVfeXFMUGpUaW4zaGRNSmhPWFBLNTBEM3hrSzh1TEhTTVkyZy1KTDRZSEw3b2xUVWw0RG9qa0xIV3lfQkRyUkxFMy1vTHRBSWdneHdxYlhOWWtKTGs4MjBQVnotU2d2UTZzNTZ6bFNhTFNmX1NwQjBBc29MRTZjZ29xVFgzclN6dW5aczVSRU1ncFk?oc=5",
+        "published": "Wed, 14 Oct 2026 03:15:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "日本橋に地上52階「東京ミッドタウン日本橋」が誕生！ 約100店舗の商業施設や高級ホテル、2027年開業へ - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE40RE1ENlJfMXNEVnJwYV8xZ1U5NVFXc3k4ODN0NXMyeVdrdWNSY0JvaEw1TURtQ1pXVmZDSmM3RklyZnJ0MEJkbFRtbl9ZOVVFQUp4bQ?oc=5",
+        "published": "Wed, 14 Oct 2026 00:27:05 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "後場に注目すべき3つのポイント〜自律反発狙いの買いが先行 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOWmRZbkZpZlg1cENNbDRzX0hfTzYzY1VKbDlHeTk1ZG5mblpHUWVIQ3lEbGt1T00zVHBkVWMxbUlSbHVwWUlQWGlRLUJQS3dTNzk5T3BIcTdrSjdyRUVwMENIYTVKYVRJMHNyUDZuMndlREhtT3RWVHA0czFyaHozako5WXNzNGVUQ3NEbtIBjAFBVV95cUxOWmRZbkZpZlg1cENNbDRzX0hfTzYzY1VKbDlHeTk1ZG5mblpHUWVIQ3lEbGt1T00zVHBkVWMxbUlSbHVwWUlQWGlRLUJQS3dTNzk5T3BIcTdrSjdyRUVwMENIYTVKYVRJMHNyUDZuMndlREhtT3RWVHA0czFyaHozako5WXNzNGVUQ3NEbg?oc=5",
+        "published": "Wed, 14 Oct 2026 03:28:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "「株式」ADR日本株ランキング〜やや買い優勢、シカゴは大阪日中比250円安の68205円 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNemlIbkdOUklyVHNCZllQbWtqb0Q1MHNyTmhPZy03anRaQVh0NENiNlVNT2JKTE9rTlVHZHhON2FaaEJkcUJ3cDN4aXc0dHJYUWFLR0xTZFlfaDc0Z05Ha3dkSFdsb2xMLU1rd2VHZVF4WlhndnJQWVRHWk5HamRNSVlSUjk0Q2Y5Q1UxMjVFSkTSAYwBQVVfeXFMTllmTU41bEFITWlrTWtMT25KOEVDRV95LUF2bFZqR3czU0tUVnNXcWJkQTE3dmFJcnRHci1uWjBfY2l1bEdCN2ljUnUwZlhfcmo3dDFmc3B3VTNsaDhQemhkQjFBVmt4Si1SR1ZWeTZCaEpKR3ZWaDFVTVc1TThWWk1VTFpDQldUWUNJWEQ?oc=5",
+        "published": "Wed, 14 Oct 2026 00:39:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "ジュラ紀の空ではなく地上を選んだ新種の鳥類化石を発見…鳥類進化の「多重経路」の実体が明らかに - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1talVuNmxKQkJyNm5fNWg5ekRrU0Q4ZzljWWxJMFNPX3d3elp1N0R3a0FRQnlKYnlBZXpBSkFTbjdoWGZNZnJHSXdXNFRRcGVQaloyVFhjQTNtQjJJLTJUbm9RMkh2aVpsV1R0S3lyWFVndTZx?oc=5",
+        "published": "Wed, 14 Oct 2026 22:25:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "書類送検の我が家・杉山裕之に謹慎処分 所属事務所が謝罪「自らの行った行為の重大さを深く反省しております」 スーパーで万引きの疑い - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9QbWVMOTdZMTRJQ05qdzUyR2E1NlFEM0I3aEdfMHZtajFwLXlJeGVQdGNwWW1SUUVYdGNkOWVjVmJzYXpZMF9qM2pQakpFdTA2UzA0UDZCbWI1cjVINVV3cFhHN2NvVHMwYXZOcllB?oc=5",
+        "published": "Wed, 14 Oct 2026 10:13:00 GMT",
+        "publisher": "au Webポータル"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "当社に対するNTKからの損害賠償等請求訴訟における控訴提起のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260925540546.pdf",
+        "date": "2026-09-28 08:45:00"
+      },
+      {
+        "title": "当社に対するNTKからの損害賠償等請求訴訟に関する判決（勝訴）のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260910534407.pdf",
+        "date": "2026-09-10 17:00:00"
+      },
+      {
+        "title": "（開示事項の変更）第一三共ビジネスアソシエの吸収合併（簡易合併・略式合併）の効力発生日変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824525305.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "（再訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514622.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2025年度決算および第6期中期経営計画説明会」資料の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514744.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正・数値データ訂正）「2026年３月期 決算短信〔IFRS基準〕(連結)」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504176.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504099.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算補足資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504168.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504173.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "当社米国子会社役職員に対する信託型株式付与制度の継続のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504240.pdf",
+        "date": "2026-07-31 12:00:00"
+      }
+    ]
+  }
+}
