@@ -1,0 +1,217 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-10-16T09:29:01+09:00",
+  "price_as_of": "2026-10-15",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズの確信度（strength 60）がbuy基準（地合いdowntrend時は75以上）を満たしておらず、注目に値するがエントリーにはカタリスト不足の状態である。",
+        "evidence": "fundamental_view.strength=60 / reference.market_regime=\"downtrend\""
+      },
+      {
+        "reason": "テクニカル面で5日移動平均線を下抜ける急落が発生しており、SMA25（5477.52）付近までの押し目を探る調整局面にある。",
+        "evidence": "technical_view.points[2]: change_pct=-3.68, sma5=5686.8 / last_close=5595.0"
+      },
+      {
+        "reason": "第2四半期決算発表（10/28）および日銀会合（10/29-30）という重要イベントを2週間以内に控えており、ボラティリティ急増への警戒が必要な時期である。",
+        "evidence": "fundamental_view.cautions[0, 1] / reference.next_earnings_date=\"2026-10-28\""
+      },
+      {
+        "reason": "予想PERが31.41倍と成長期待を織り込んだ高水準にあり、市場全体の地合い悪化による連れ安や、決算時の失望売りリスクが懸念される。",
+        "evidence": "fundamental_view.cautions[2, 3]"
+      }
+    ],
+    "risks": [
+      "市場レジームがdowntrendにあり、地合い悪化によるSMA25（5477.52）を割り込む下落リスク",
+      "10/28の決算発表における進捗率やガイダンスが市場予想に届かない場合の失望売り",
+      "10/29-30の日銀会合に伴う為替・金利の急変動が製造業セグメントの収益見通しに与える影響",
+      "ADRの下落（-1.24%）に象徴される短期的な売り圧力の継続"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 60,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 21,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズの確信度（strength 60）がbuy基準（地合いdowntrend時は75以上）を満たしておらず、注目に値するがエントリーにはカタリスト不足の状態である。\",\n      \"evidence\": \"fundamental_view.strength=60 / reference.market_regime=\\\"downtrend\\\"\"\n    },\n    {\n      \"reason\": \"テクニカル面で5日移動平均線を下抜ける急落が発生しており、SMA25（5477.52）付近までの押し目を探る調整局面にある。\",\n      \"evidence\": \"technical_view.points[2]: change_pct=-3.68, sma5=5686.8 / last_close=5595.0\"\n    },\n    {\n      \"reason\": \"第2四半期決算発表（10/28）および日銀会合（10/29-30）という重要イベントを2週間以内に控えており、ボラティリティ急増への警戒が必要な時期である。\",\n      \"evidence\": \"fundamental_view.cautions[0, 1] / reference.next_earnings_date=\\\"2026-10-28\\\"\"\n    },\n    {\n      \"reason\": \"予想PERが31.41倍と成長期待を織り込んだ高水準にあり、市場全体の地合い悪化による連れ安や、決算時の失望売りリスクが懸念される。\",\n      \"evidence\": \"fundamental_view.cautions[2, 3]\"\n    }\n  ],\n  \"risks\": [\n    \"市場レジームがdowntrendにあり、地合い悪化によるSMA25（5477.52）を割り込む下落リスク\",\n    \"10/28の決算発表における進捗率やガイダンスが市場予想に届かない場合の失望売り\",\n    \"10/29-30の日銀会合に伴う為替・金利の急変動が製造業セグメントの収益見通しに与える影響\",\n    \"ADRの下落（-1.24%）に象徴される短期的な売り圧力の継続\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "中期トレンドはTOPIXを大幅にアウトパフォームする強力な上昇を維持しているが、直近の大幅反落と市場全体の地合い悪化により、短期的には調整局面入りのリスクが高まっている。",
+      "points": [
+        {
+          "point": "中期的なトレンドは非常に強く、60日騰落率および対TOPIX相対騰落率ともに大幅なプラスを維持している。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=16.66, relative_to_topix_60d_pct=17.74"
+        },
+        {
+          "point": "MACDはシグナルを上回る推移を続けており、ヒストグラムもプラス圏を維持していることから、上昇の基調自体は崩れていない。",
+          "evidence": "price_technical.macd=80.99, macd_signal=64.03, macd_histogram=16.96"
+        },
+        {
+          "point": "直近10/15に出来高を伴う-3.68%の急落が発生し、5日移動平均線を下抜けたため、目先は押し目を探る動きになりやすい。",
+          "evidence": "price_technical.recent_5_days[4].change_pct=-3.68, last_close=5595.0, sma5=5686.8"
+        }
+      ],
+      "cautions": [
+        "市場全体のレジームがdowntrend（TOPIX終値が25日線の下）に転換しており、外部環境からの下押し圧力が懸念される。",
+        "前夜のADRが-1.24%と下落しており、当日の寄り付きから軟調な展開となる可能性がある。",
+        "RSI14が61.3と依然として中立以上の水準にあるため、SMA25（5477.52）付近までの調整余地が残されている。"
+      ],
+      "key_levels": {
+        "support": 5477.52,
+        "resistance": 5809.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "業績は極めて堅調で大規模な自社株買いも継続中だが、PER30倍超と期待値が高い中で決算発表と日銀会合を目前に控えており、目先は様子見が妥当と判断する。",
+      "points": [
+        {
+          "point": "2026年3月期は大幅な増収増益を見込んでおり、EPSも前年度の133.72円から176.63円へ大きく拡大する計画である。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "上限5,000億円規模の自己株式取得が着実に進行しており、直近1ヶ月でも約396億円を買い付けるなど、下支え効果と資本効率向上への意識が高い。",
+          "evidence": "fundamentals.recent_important_disclosures[0], disclosures[0]"
+        },
+        {
+          "point": "製造業PMIが54.1と拡大圏にあり、大企業製造業の業況判断DIも改善傾向にあるなど、主力の製造業セグメントにとって良好なマクロ環境が続いている。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.1, macro.boj.tankan.di.large_manufacturing.current_di=24.0"
+        },
+        {
+          "point": "フィジカルAIや脱炭素技術（DOC）、サイバー対策といった先端分野での提携・実証ニュースが相次ぎ、中長期の成長カタリストが豊富である。",
+          "evidence": "news.headlines[1,2,3,7]"
+        }
+      ],
+      "cautions": [
+        "2026年10月28日に第2四半期決算発表を控えており、進捗率やガイダンス修正の有無によるボラティリティへの警戒が必要。",
+        "決算発表翌日の10月29日から日銀金融政策決定会合が開催されるため、為替や金利の急変動が株価に影響を与えるリスクがある。",
+        "市場全体が25日移動平均線を下回る「downtrend」局面にあり、地合い悪化に伴う連れ安のリスクが懸念される。",
+        "予想PERが31.41倍と、成長期待を相当程度織り込んだ水準にあるため、決算内容が期待に届かない場合の失望売りに注意。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)日立製作所【6501】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9PT2tzbkE0cWdmQXVvRmcyem9HV0p6SFB5ZUV6WkZOWVh6U2N6Qi01eE1BX2ctYXBsRGZxRmxIa0VtVE5JTmhkSDhEVGU1SUNqWXh2elRTd0NnN1NoODFr?oc=5",
+        "published": "Thu, 15 Oct 2026 02:53:52 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "大規模視覚言語モデル（LVLM）で図面の接続関係を正確に読み、技術継承とフィジカルAIへつなげる／グエン・コング・カー、阿部田将史（日立製作所・研究開発グループ Digital Innovation R&D ビジョンインテリジェンス研究部） - WirelessWire News",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE10NGttV2lkaTRfaFlscHA4TjBlZTJjNnhrN3c3cGo3VnpBemtCdGhXZUo1R1JORk1UMTduY0dJdXZ5X0U4c2lNeXNJSjd3UnM?oc=5",
+        "published": "Thu, 15 Oct 2026 21:05:02 GMT",
+        "publisher": "WirelessWire News"
+      },
+      {
+        "title": "日立、サイバー対策に参加 米アンソロピック創設 - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE94aERGd3VpT2xScXVOZGEtaHFkQnZkZ0UtUHpwN1pwVGNNNWVMUEE0V2MzQTJaNGZMNmJnRmZlaHZESkRNMDF3N0c5Qm14VEtLd3ZURG9ZbkhTOXZFM21IbXhlZG9ST1BIU0ZV?oc=5",
+        "published": "Thu, 15 Oct 2026 21:32:36 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "海のCO2回収｢DOC｣ 日立やJAL、クレジット創出へ実証 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE0xd3VtMTlnajlObEJiWmJaNW9xcU10bGhxN2RxOHhCUW9rYU1MVV80TVUwWXh4ODJkbnc3cFdxWWlVeFI1Qzl1Q0dtT29aajVkM2VsaF9tSGMtZWxkbnhVMTBGczVMbjZ1SDc1VVE1R1JhWjdCcVRz?oc=5",
+        "published": "Thu, 15 Oct 2026 20:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "米国株式市場は反発、長期金利の低下を好感 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQYVlCbVc5aTVPSTJGaHNJcTdVN1JGTzR3ZEd2SkV6ZENJTTd3OFZtQ0RJR2ZGOFAtUlJ1UDYwWFlESU41eWc5aHpOMVRiZ3lCeEZGUHBPUTF1U3JMMlNEUTdvbEx6OFFMLUI4NlFuX3RITVdyekxuX3JuZzRlYl9wV1ZRLUNkdmNmeFlSadIBjAFBVV95cUxQYVlCbVc5aTVPSTJGaHNJcTdVN1JGTzR3ZEd2SkV6ZENJTTd3OFZtQ0RJR2ZGOFAtUlJ1UDYwWFlESU41eWc5aHpOMVRiZ3lCeEZGUHBPUTF1U3JMMlNEUTdvbEx6OFFMLUI4NlFuX3RITVdyekxuX3JuZzRlYl9wV1ZRLUNkdmNmeFlSaQ?oc=5",
+        "published": "Thu, 15 Oct 2026 23:00:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "官民共創で実現した7万人分の健康データ活用、日立市が進めるまちづくりの新モデル - LIGARE（リガーレ）",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5rZjFVVDZ4NW5FWUwwSWs1SGhyQkJualFiUEw1R2xmZDdBSHNpcUVaWGZqdUU3bW0wMjYyeTNFZGFfQ1lYUU9FU0ZoTkh2bERmd3VOMXVBSFdKVFE?oc=5",
+        "published": "Thu, 15 Oct 2026 02:33:00 GMT",
+        "publisher": "LIGARE（リガーレ）"
+      },
+      {
+        "title": "プレスリリース記事詳細 | さんにちEye 山梨日日新聞デジタル - sannichi.co.jp",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1HVFF1emRVQjZGQU1hNjhNRTlXQTN4TnpjbDBRV3phcjdTSC0wX0haMDhJejlLU3RSY2gxckd0bnBKaFRZZkNGaDYwMm95TWtFUzJMUnptakF1WmRzQ01BR1JRT2I?oc=5",
+        "published": "Thu, 15 Oct 2026 07:59:00 GMT",
+        "publisher": "sannichi.co.jp"
+      },
+      {
+        "title": "Web上にない「現場の暗黙知」をAIの武器に変えるには？ 日立「フィジカルAI」時代の挑戦（ITmedia ビジネスオンライン） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5HTk5WQVJVbzBQOXAwQ05wTVdhTUlCWnRsRWk0blBNNUZrR1IxZXAzOGwxNWZBTXk5dFpZZllna1lSaUhad0lBSjgxWUI4QmRabGxxbXNVbXd5Qk9OQ2d1dkhqb0JFUmZSMUNzM0JpNWEwSFotY2pNZXJXZXVlVkE?oc=5",
+        "published": "Fri, 16 Oct 2026 00:00:15 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "エレクトロニクス実装学会春季講演大会で優秀賞を受賞 - Hitachi Global",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNeERoNnpjdTM2Y1JicHlqTGZMYkl6Smg4ODBOMmNlMFNQaUhRLVRYSXJfN21pbnc1U2xUTFJ6U2lMandHOEtZYVFCQTI3SkEtNzFjbE8xSFVsa0xmc3VIemxIa1BWMlh5NXFsT2Vnb1ViM0VOUllrLU5WbE9zVWp5cXFoaXhoVUp2M0lvTUpJUzgzUQ?oc=5",
+        "published": "Thu, 15 Oct 2026 04:39:36 GMT",
+        "publisher": "Hitachi Global"
+      },
+      {
+        "title": "日立、木材を活用したコンテナー型データセンターを提供--地域材の活用と環境負荷の低減に貢献 - ZDNET Japan",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFB1SmlvRDZLTG5fd0J2Uk91ZVF4MjhWUFFON25HSS1aMElLSGJYaUJGWUdjUGU0Q3RueS00d25PZ3JUWlhwdjJVVU5lOTlTdXNuc3dn?oc=5",
+        "published": "Thu, 15 Oct 2026 05:57:00 GMT",
+        "publisher": "ZDNET Japan"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261002545344.pdf",
+        "date": "2026-10-02 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260902530692.pdf",
+        "date": "2026-09-02 15:30:00"
+      },
+      {
+        "title": "個別決算における投資有価証券売却益(特別利益)の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260819523052.pdf",
+        "date": "2026-08-19 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804508474.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "（訂正）2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503298.pdf",
+        "date": "2026-07-30 13:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501771.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501801.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      }
+    ]
+  }
+}

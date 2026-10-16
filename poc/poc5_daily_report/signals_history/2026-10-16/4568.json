@@ -1,0 +1,219 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-10-16T09:29:43+09:00",
+  "price_as_of": "2026-10-15",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の確信度が60にとどまり、強気シグナルの必須条件（70以上）を満たしていないため様子見とします。",
+        "evidence": "fundamental_view.strength=60"
+      },
+      {
+        "reason": "テクニカル面で5日線と25日線のデッドクロスが発生しており、短期・中期的に強い下落トレンドにあるため、押し目買いには時期尚早と判断します。",
+        "evidence": "technical_view.points[0]: price_technical.sma5_vs_sma25=\"dead\""
+      },
+      {
+        "reason": "市場レジームがダウントレンドにあり、全体相場の地合いが不安定な局面では、より厳格なエントリー基準が求められます。",
+        "evidence": "reference.market_regime=\"downtrend\""
+      },
+      {
+        "reason": "10月末に次期決算発表と日銀金融政策決定会合という重大イベントを控えており、その結果を確認するまでリスクは取れません。",
+        "evidence": "fundamental_view.cautions[0,1]: 2026-10-30 決算発表 / 10-29〜30 日銀会合"
+      }
+    ],
+    "risks": [
+      "10月30日の決算発表において通期計画の下方修正や、進捗の遅れが表面化するリスク",
+      "日銀会合を受けた長期金利の上昇による、高配当・バリュー株としてのバリュエーション調整リスク",
+      "NTK社との損害賠償請求訴訟における控訴審の不透明感（法務リスク）",
+      "テクニカル上のサポートラインである直近期間安値 2538.0円を下抜けることによる一段安"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の確信度が60にとどまり、強気シグナルの必須条件（70以上）を満たしていないため様子見とします。\",\n   \"evidence\": \"fundamental_view.strength=60\"\n  },\n  {\n   \"reason\": \"テクニカル面で5日線と25日線のデッドクロスが発生しており、短期・中期的に強い下落トレンドにあるため、押し目買いには時期尚早と判断します。\",\n   \"evidence\": \"technical_view.points[0]: price_technical.sma5_vs_sma25=\\\"dead\\\"\"\n  },\n  {\n   \"reason\": \"市場レジームがダウントレンドにあり、全体相場の地合いが不安定な局面では、より厳格なエントリー基準が求められます。\",\n   \"evidence\": \"reference.market_regime=\\\"downtrend\\\"\"\n  },\n  {\n   \"reason\": \"10月末に次期決算発表と日銀金融政策決定会合という重大イベントを控えており、その結果を確認するまでリスクは取れません。\",\n   \"evidence\": \"fundamental_view.cautions[0,1]: 2026-10-30 決算発表 / 10-29〜30 日銀会合\"\n  }\n ],\n \"risks\": [\n  \"10月30日の決算発表において通期計画の下方修正や、進捗の遅れが表面化するリスク\",\n  \"日銀会合を受けた長期金利の上昇による、高配当・バリュー株としてのバリュエーション調整リスク\",\n  \"NTK社との損害賠償請求訴訟における控訴審の不透明感（法務リスク）\",\n  \"テクニカル上のサポートラインである直近期間安値 2538.0円を下抜けることによる一段安\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "移動平均線のデッドクロスやMACDのマイナス圏推移から下落トレンドが継続しており、主要な節目である25日線を大きく下回る弱気な推移です。直近の反発や米国市場の追い風はあるものの、戻り売りの圧力が強いと考えられます。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日線を下回るデッドクロス状態にあり、短期・中期ともに下落基調が鮮明となっている。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\", price_technical.last_close=2651.0, price_technical.sma25=2763.74"
+        },
+        {
+          "point": "MACDおよびシグナルがマイナス圏で推移しており、ヒストグラムのマイナス幅も拡大傾向にあることから、下落の勢いが衰えていない。",
+          "evidence": "price_technical.macd=-53.47, price_technical.macd_signal=-36.67, price_technical.macd_histogram=-16.8"
+        },
+        {
+          "point": "TOPIXが25日線を下回り、かつ直近5日間の騰落率がマイナスであることから、市場全体が弱気局面（downtrend）にある。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\", macro.market_regime.topix_close_vs_sma25=\"below\""
+        }
+      ],
+      "cautions": [
+        "前夜のADRが+1.81%（DSNKY）、米ヘルスケアセクターETFが+2.53%（XLV）と上昇しており、寄り付きは強含み、一時的な買い戻しが入る可能性がある。",
+        "RSIが39.6と30付近の売られすぎ水準に接近しており、直近期間安値の2538.0円付近では下げ止まりが意識されやすい。"
+      ],
+      "key_levels": {
+        "support": 2538.0,
+        "resistance": 2763.74
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "配当利回りが3.84%と高水準で円安メリットも享受できる環境だが、直近四半期の減益や通期営業減益計画、さらに10月末の決算発表と日銀会合という重要イベントを控えており、強気には転じにくい。",
+      "points": [
+        {
+          "point": "2026年3月期の通期計画において、売上高は成長を見込むものの営業利益は前期比で約30%の減益を見込んでおり、収益性の低下が懸念される。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "2026年6月期の四半期EPSが37.7円と前年同期の46.01円から減少しており、足元の業績モメンタムは停滞している。",
+          "evidence": "fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "配当利回りが3.84%に達しており、ROE 14.8%と資本効率も高いことから、株価の下値支持力は相応に強いと考えられる。",
+          "evidence": "fundamentals.valuation.dividend_yield_percent=3.84, fundamentals.valuation.return_on_equity=0.148"
+        },
+        {
+          "point": "NTK社による損害賠償請求訴訟において、一審勝訴したものの相手方が控訴しており、法務リスクが依然として継続している。",
+          "evidence": "disclosures.items[0].title（2026-09-28）"
+        },
+        {
+          "point": "ドル円が158円台と円安水準にあり、海外売上比率の高い製薬大手として業績へのプラス寄与が期待されるが、市場全体はダウントレンドにある。",
+          "evidence": "macro.indices[2].close=158.15, macro.market_regime.market_regime=downtrend"
+        }
+      ],
+      "cautions": [
+        "2026年10月30日に予定されている次期決算発表での業績修正および進捗確認が最大の焦点となる。",
+        "日銀の金融政策決定会合が10月29日〜30日に開催され、長期金利（JGB 10Y）が3%台に達する中で金利上昇によるバリュエーション調整リスクがある。",
+        "欧州系大手証券がレーティングを強気継続とする一方で目標株価を引き下げており、期待値の調整が進んでいる可能性がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": 3600.0
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "【FISCO銘柄コメント】第一三共---大手製薬会社(フィスコ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxORHB3UDZvWWdSaWg0X3JoV2hBY0VDU1UzMkswMkxKcTVzbHFKRkRweVBCbWhwdlJ3ZTlyYVhoYU50RG8xd1dKZXEwckZ3bnRldUNmdWFlMVFFZDQ4NEhfUXpGV2g1Vk5UaUhQdzEwd1lVX2RvbVJIVnlRUmlTeXhsSXNRWnJaTmM?oc=5",
+        "published": "Thu, 15 Oct 2026 09:02:52 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "第一三共(株)【4568】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4zLVI2U0Z5bnhzaGQ3cUtWbHVocDh6RVl6VzBvSUV0YkgxZWZRSUhiWDJ3aS1HQUNiWmQzdmtIUkZQdFFiTG5aNmF5OGxray1kR1Fya1lEWDNDNWhiRGJ3?oc=5",
+        "published": "Thu, 15 Oct 2026 06:54:34 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "発売75周年を迎えた総合かぜ薬「ルル」の新製品『ルルＡプレミアム』新TV-CM「ルルさん登場」篇2026年10月15日（木）より全国で放映開始 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5GLVowSzZiRzdFbTJsQlJTcWdNX1RwOG85dzg4TnpELXNJaGs0eGtjbkFuUWJJbFpWNmwzRFZrTHJwMFRSam9xcFY0OEZjUmNXVWdLYWdrUkRCVDBJeXo3RDg3QTdBMUI3Q3c?oc=5",
+        "published": "Thu, 15 Oct 2026 04:44:52 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "武田薬品工業の50代前半、営業所長級の年収は？【1万件の口コミ情報データ】 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE4wc3RGMEo1YUlGVW5fLW5mb2N1NmVuNFNTRmY5UkJoMWMxYVhoZXRnRnV6alhXWW4wenhiX0puam1tLVVNajBYUE5qWGhVV1HSAU9BVV95cUxOMHN0RjBKNWFJRlVuXy1uZm9jdTZlbjRTU0ZmOVJCaDFjMWFYaGV0Z0Z1empYV1luMHp4Yl9KbmptbS1VTWowWFBOalhoVVdR?oc=5",
+        "published": "Thu, 15 Oct 2026 10:00:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "＜画像2 / 4＞石塚英彦とANZEN漫才(みやぞん・あらぽん)がメキシカン風ユニットでデビュー!? - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5aOFV4b1drMVhyTTZsSjB1cmVHZG5FWURjX0ZnX0VSR3N2RXhxZDhMX3FGeV9zcFExX0N1bWJkS25VNFJsODhqOWFxQ3lEQ2gwQ3luQ29ocW1mOVBXbG1KUkQzUldEOWhpeEUw?oc=5",
+        "published": "Thu, 15 Oct 2026 13:34:47 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "75周年を迎えた総合かぜ薬「ルル」、新CMに石原さとみを起用 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5KNDdWeS1YaHRsTzlzTThzYnMwZjMybXk4VFBKOVVTQWVPVW9UWWNkN2dUSHZwZTFLT0lZV3pJQlB6bFRuSDlRTGRLN01RXy1YY2J4S2FpekRaRUhBc200MDdLUl84RTFSZTk0d21n?oc=5",
+        "published": "Thu, 15 Oct 2026 08:02:00 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "【アナリスト評価】第一三共、レーティング強気を継続、目標株価3,600円に引下げ（欧州系大手証券）(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNMDVkSnQ1dU4tUS1UNVBzajFscWwyZTlPV1llVlZKb1otNVpsb0N2Qy1XOVdKbmR2cldjaENXRHpXbzhDVlpPWFdFVzVXRUxGeWw3Q0kwOXdqb3ZrOGZSV2tPTk5LVGNxQkl0Z1F6OWNaRzh3OHFsOVBFckRKV2FQWl82QUZKcTg?oc=5",
+        "published": "Thu, 15 Oct 2026 07:22:11 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "＜画像1 / 4＞市販化で話題をさらった解熱鎮痛薬「ロキソニン」の現状は？ - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5xeHJYZkFEazUtV1V5MGxPU3dhVlRjS1Z4RW90NHAxTTV1V2xpcVBmb0JKQno5LUNFd0NBTmZhazZORkRiSklOV1F1Q2l1am43VVZmU05uclJ0SU9YaFFkc1dJelV1MXM?oc=5",
+        "published": "Thu, 15 Oct 2026 08:47:35 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "日本株ＡＤＲ・円換算終値 - みんかぶ FX/為替",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5YdEZMWWozeURuN1dVUlpQOTVVMG5MRmJMb0ZJU3NIcThWS2dfX3VKWkszOERsMnpDZG1pc0JvYllKTV9TVGJuVg?oc=5",
+        "published": "Thu, 15 Oct 2026 22:40:28 GMT",
+        "publisher": "みんかぶ FX/為替"
+      },
+      {
+        "title": "後期高齢者医療、金融所得反映は29年8月 - PHARMACY NEWSBREAK",
+        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE4wOENpRW8yakhqX0JqRGd1ZDJfZHc0M3k0ZkxJUGU4eUhTcU1iVldUb0tCVWFoRjdLUlN1aXphVnVEWk1lbTdsQ1R30gFPQVVfeXFMTW1uRG5ZX0ExdC1wT3FrVTBmMHFUT2pVWHdBX05hVm5yXzhXVV9vRk1oVVAwRFFkQ1dadF9FWjZWbjF3c1ZRSWRJYlZyWElFWQ?oc=5",
+        "published": "Thu, 15 Oct 2026 00:50:00 GMT",
+        "publisher": "PHARMACY NEWSBREAK"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "当社に対するNTKからの損害賠償等請求訴訟における控訴提起のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260925540546.pdf",
+        "date": "2026-09-28 08:45:00"
+      },
+      {
+        "title": "当社に対するNTKからの損害賠償等請求訴訟に関する判決（勝訴）のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260910534407.pdf",
+        "date": "2026-09-10 17:00:00"
+      },
+      {
+        "title": "（開示事項の変更）第一三共ビジネスアソシエの吸収合併（簡易合併・略式合併）の効力発生日変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824525305.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "（再訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514622.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2025年度決算および第6期中期経営計画説明会」資料の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514744.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正・数値データ訂正）「2026年３月期 決算短信〔IFRS基準〕(連結)」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504176.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504099.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算補足資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504168.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504173.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "当社米国子会社役職員に対する信託型株式付与制度の継続のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504240.pdf",
+        "date": "2026-07-31 12:00:00"
+      }
+    ]
+  }
+}
