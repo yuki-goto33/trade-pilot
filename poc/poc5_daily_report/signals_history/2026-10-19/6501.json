@@ -1,0 +1,200 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-10-19T09:08:54+09:00",
+  "price_as_of": "2026-10-16",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズは極めて強力だが、テクニカル面でも既に強気（bullish）が明確化しており、材料が株価に織り込まれたモメンタム追随の局面であるため、v5ルールに基づき新規エントリーを避ける。",
+        "evidence": "fundamental_view.strength=75, technical_view.stance=bullish (strength=75)"
+      },
+      {
+        "reason": "株価が直近期間高値（5870円）に接近しており、テクニカル専門家も指摘する通り、寄り付き後の利益確定売りに押されるリスクがある。",
+        "evidence": "reference.last_close=5770.0, reference.period_high=5870.0, technical_view.cautions[1]"
+      },
+      {
+        "reason": "12日後の決算発表および13日後の日銀金融政策決定会合という重要イベントを控えており、現状の割高なバリュエーションでは不確実性が高い。",
+        "evidence": "fundamental_view.cautions[0][1], reference.next_earnings_date=2026-10-28"
+      }
+    ],
+    "risks": [
+      "2026年10月28日の第2四半期決算発表における期待値剥落リスク",
+      "2026年10月29日〜30日の日銀会合に伴う円高・金利上昇による市場全体への波及",
+      "予想PER 32.39倍という製造業としては高いバリュエーションによる下方硬直性の弱さ",
+      "VIX指数の急上昇（+21.45%）に伴う外部環境のボラティリティ拡大"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 21,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズは極めて強力だが、テクニカル面でも既に強気（bullish）が明確化しており、材料が株価に織り込まれたモメンタム追随の局面であるため、v5ルールに基づき新規エントリーを避ける。\",\n   \"evidence\": \"fundamental_view.strength=75, technical_view.stance=bullish (strength=75)\"\n  },\n  {\n   \"reason\": \"株価が直近期間高値（5870円）に接近しており、テクニカル専門家も指摘する通り、寄り付き後の利益確定売りに押されるリスクがある。\",\n   \"evidence\": \"reference.last_close=5770.0, reference.period_high=5870.0, technical_view.cautions[1]\"\n  },\n  {\n   \"reason\": \"12日後の決算発表および13日後の日銀金融政策決定会合という重要イベントを控えており、現状の割高なバリュエーションでは不確実性が高い。\",\n   \"evidence\": \"fundamental_view.cautions[0][1], reference.next_earnings_date=2026-10-28\"\n  }\n ],\n \"risks\": [\n  \"2026年10月28日の第2四半期決算発表における期待値剥落リスク\",\n  \"2026年10月29日〜30日の日銀会合に伴う円高・金利上昇による市場全体への波及\",\n  \"予想PER 32.39倍という製造業としては高いバリュエーションによる下方硬直性の弱さ\",\n  \"VIX指数の急上昇（+21.45%）に伴う外部環境のボラティリティ拡大\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "中期的な強い上昇トレンドを維持する中、MACDの好転と5日・25日移動平均線のゴールデンクロスが継続しており、直近の急落を即座に埋める強い買い戻しが確認されます。",
+      "points": [
+        {
+          "point": "中期トレンドが非常に強力であり、対TOPIXでも大幅なアウトパフォームを継続している。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=19.51, relative_to_topix_60d_pct=17.44"
+        },
+        {
+          "point": "MACDがシグナルを上回りヒストグラムも拡大傾向にあり、上昇モメンタムが維持されている。",
+          "evidence": "price_technical.macd=77.2, macd_signal=55.76, macd_histogram=21.44"
+        },
+        {
+          "point": "5日線が25日線を上回るゴールデンクロス状態にあり、株価がいずれの移動平均線よりも上で推移している。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, last_close=5770.0, sma5=5721.4, sma25=5494.0"
+        },
+        {
+          "point": "前日の大幅な下落(-3.68%)を、翌日の陽線(+3.13%)でほぼ解消する強いリバウンドを見せている。",
+          "evidence": "price_technical.recent_5_days[3].change_pct=-3.68, recent_5_days[4].change_pct=3.13"
+        }
+      ],
+      "cautions": [
+        "VIX指数が急上昇（+21.45%）しており、市場全体のボラティリティ高まりによるリスクオフの波及に注意が必要。",
+        "前夜のADRが+1.4%と上昇しているため、寄り付きが直近高値圏（5870円付近）に接近した場合の利益確定売りに警戒。",
+        "S&P500の下落など外部環境の悪化が重しとなる可能性がある。"
+      ],
+      "key_levels": {
+        "support": 5494.0,
+        "resistance": 5870.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "持続的な増収増益トレンドと大規模な自社株買いによる株主還元が強力な下支えとなっており、インフラ・エネルギー分野での新規案件も追い風。ただし、PERが32倍台と高く、直近に決算と日銀会合を控えているためボラティリティへの警戒が必要。",
+      "points": [
+        {
+          "point": "2024年3月期から2026年3月期にかけて売上高・営業利益・純利益のすべてが拡大しており、特に営業利益率は11.3%に達するなど収益性が向上している。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "総額5,000億円（発行済株式総数の3.56%）を上限とする大規模な自社株買いを継続しており、2026年9月時点で進捗率約48%と需給面でのカタリストが機能している。",
+          "evidence": "fundamentals.recent_important_disclosures[0]"
+        },
+        {
+          "point": "製造業PMIが54.1と拡大圏にある中、米社とのエナジー事業における協業やデータセンター関連の新製品投入など、成長分野での具体施策が継続的に発表されている。",
+          "evidence": "macro.japan_pmi.manufacturing, news.headlines[2], news.headlines[5]"
+        }
+      ],
+      "cautions": [
+        "2026年10月28日に第2四半期決算発表を控えており、短期的な期待値の剥落リスクがある。",
+        "決算直後の10月29日〜30日に日銀金融政策決定会合が予定されており、円高や金利上昇に伴う市場全体の影響を受けやすい。",
+        "予想PER 32.39倍、PBR 3.93倍と、過去の推移や製造業平均と比較してバリュエーションに割安感はなく、業績目標の未達には脆弱である。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "日立製作所の30代前半、主任級の年収は？【1万件の口コミ情報データ】 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1UUERBTTNvbHI2NlRDYXRONDdDRXA2Q05KZUk4RUNKNk44NmVwVGk1NURLM1l2Y2x0Z1pkUFBUQkppdkFHbGpRQUQ3VEbSAU9BVV95cUxNV0VyY3FFMGtvcDFyZllENnQyOHhzcjJBSXhKSi1MbDFNLVdDUVNLYjluYWJiamdoNjhuVEhFQUFRei10ZzdEUTJIbzQweTAw?oc=5",
+        "published": "Sun, 18 Oct 2026 20:30:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "(株)日立製作所【HTHIY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1sbW5DNlQwVHN5dlZ4RkdjaXVnbjJ4TGtWVWstLVdjcWtGcjdSdmlXSXRKVmdIdl9Fa0lIZ0YyUm5WU1lLZ1hFSWhmU2Q1eHhy?oc=5",
+        "published": "Sun, 18 Oct 2026 15:34:58 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "日立製作所、「木造型」コンテナデータセンターを販売開始 周辺環境に配慮した外観、耐久性能も確保 - EnterpriseZine",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9hUkpqRGdNYUZTbzNpSGdDeWJOakxBZE1adVZPVjRJeFkwVURXc3RWTEY2TkRpNXpxOXBMN3J6QUR5cjdLZFBuZU1HWVlKMUg1YVFqLWV1SktWdw?oc=5",
+        "published": "Sun, 18 Oct 2026 08:00:00 GMT",
+        "publisher": "EnterpriseZine"
+      },
+      {
+        "title": "阪神に激震！島田海吏、豊田寛の外野手2人が戦力外　ともに今季1軍で結果残せず - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1fV0lWN3h6MWRaQTJMREVYTUFsR0hFUnNOVzU3Y290Qnc3NEpwaThvSXdFNVZnd2JrVWNrNU1rcVRlYmFxdFR0bHBuVFpJMXJIM1IwdmJhTTBmb3V3TEUta1NMUHFGbTlOSUZ5UjRldC0yd9IBckFVX3lxTE1fV0lWN3h6MWRaQTJMREVYTUFsR0hFUnNOVzU3Y290Qnc3NEpwaThvSXdFNVZnd2JrVWNrNU1rcVRlYmFxdFR0bHBuVFpJMXJIM1IwdmJhTTBmb3V3TEUta1NMUHFGbTlOSUZ5UjRldC0ydw?oc=5",
+        "published": "Sun, 18 Oct 2026 16:32:35 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "【無料公開】住友商事の建機ビジネスの鍵握る「アフリカ投資」、コマツなどの代理店業務で狙う一攫千金！中国メーカーとの勝負の行方は？ - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE11MTNGOXlsdUJ4MUZiNUdLaVdsRV9jVEctbkdsVUl1WGxSb2hwcUZNTzhHTUtwV1JfUFdOY1NuOHdqZDBBMU1uM1RSeEhSZzDSAU9BVV95cUxNdTEzRjl5bHVCeDFGYjVHS2lXbEVfY1RHLW5HbFVJdVhsUm9ocHFGTU84R01LcFdSX1BXTmNTbjh3amQwQTFNbjNUUnhIUmcw?oc=5",
+        "published": "Sun, 18 Oct 2026 20:30:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "日立エナジー、電力と生産を統合支援 米社と協業 - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE8zWjBuUENFZ3FhQmo3dTJlMnlVakRWTU9PMlE1bFNob294akNCWGdOWjI0SE53Rk1ac3ZJZEF1OEItSmo0X0M2a0dOcVNCMWtQRjAzbjJjUkJwUGRHaDliR1BsTHFsbWpLMnJ1dkp1MXpOWnNGcmNZVEFBOA?oc=5",
+        "published": "Sun, 18 Oct 2026 20:00:00 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "阪神・豊田　来季構想外　本人は現役続行希望　５年目今季は１軍で４打席 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1VZVVGbUZKeTZ4ZGxBWTN3cUlOdUYzOE5CMW1qT1ZCQjVDZHJYaWs0SWlFLVZtbEVfZk1MaEVCRURPVVNPbGFvNlRONnR5V1EtQWtHZEE3ZjZ0UEQ0OHNLTWlPV2JkYlRhNlJ5R0Z3UGZvaTVXVmVjOTVn0gF_QVVfeXFMUGdIYkx1b2F4ZzYyRHhlcjV5RzgxeGNCZHBYMEFkN3NScnNhY0JtM1dUZGJ3ZGs4VzhmLUlGTW12YndLd09fb3g1VDctd0d2SGY0T1UwN2NlekVWbms3RzUtLVR1SkRsck55bm9FdEVYam9NR1I0czNZUGNibUNJVQ?oc=5",
+        "published": "Sun, 18 Oct 2026 16:15:04 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "コクヨ、最新鋭の物流拠点「東北IDC」開所式を開催｜Infoseekニュース - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE55M0l0cGFSVUlOU1VORE1aZERyTHd4VzBBdVpaS1loWm1lZ1NqU3duY1pUcHdXVU9kaXlPTERvUFRvTVBacmtMUVVyS24tYkczWkhrRzlJNXdKX19naWVwRFFpeGRmT3piWTBnOGNMRFo2dw?oc=5",
+        "published": "Sun, 18 Oct 2026 20:40:00 GMT",
+        "publisher": "Infoseek"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261002545344.pdf",
+        "date": "2026-10-02 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260902530692.pdf",
+        "date": "2026-09-02 15:30:00"
+      },
+      {
+        "title": "個別決算における投資有価証券売却益(特別利益)の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260819523052.pdf",
+        "date": "2026-08-19 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804508474.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "（訂正）2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503298.pdf",
+        "date": "2026-07-30 13:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501771.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501801.pdf",
+        "date": "2026-07-29 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260702586854.pdf",
+        "date": "2026-07-02 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(CEO Remarks)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566271.pdf",
+        "date": "2026-06-09 15:30:00"
+      },
+      {
+        "title": "Hitachi Investor Day 2026資料公開に関するお知らせ(エナジー事業戦略)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260609566278.pdf",
+        "date": "2026-06-09 15:30:00"
+      }
+    ]
+  }
+}

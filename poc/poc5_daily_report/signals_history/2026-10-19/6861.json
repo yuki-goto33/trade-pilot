@@ -1,0 +1,181 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-10-19T09:05:46+09:00",
+  "price_as_of": "2026-10-16",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の評価がstrength 60（注目に値するがカタリスト不足）に留まり、buy基準の70を下回っている。",
+        "evidence": "fundamental_view.strength=60"
+      },
+      {
+        "reason": "テクニカルがbullish（70）であり、ファンダの裏付けより先に株価が動いている「織り込み済み」の局面であるため、追随エントリーを避ける。",
+        "evidence": "technical_view.stance=bullish (strength=70), rule_v5: technical_bullish_is_hold"
+      },
+      {
+        "reason": "10月29日に第2四半期決算発表と日銀金融政策決定会合という重大な不確実性イベントが重なっている。",
+        "evidence": "reference.next_earnings_date=2026-10-29, reference.next_boj_meeting=2026-10-29〜2026-10-30"
+      },
+      {
+        "reason": "PER 43倍超と成長期待が強く織り込まれたバリュエーションであり、マクロ環境悪化時の下方弾力が懸念される。",
+        "evidence": "fundamental_view.points[2]: forward_pe=43.248"
+      }
+    ],
+    "risks": [
+      "2026年10月29日の決算発表および日銀金融政策決定会合に伴うボラティリティの急増",
+      "米国ハイテク株安の継続およびVIX指数20超によるリスクオフムードの波及",
+      "市場コンセンサスが高いことによる、決算後の材料出尽くし売り"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 21,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の評価がstrength 60（注目に値するがカタリスト不足）に留まり、buy基準の70を下回っている。\",\n   \"evidence\": \"fundamental_view.strength=60\"\n  },\n  {\n   \"reason\": \"テクニカルがbullish（70）であり、ファンダの裏付けより先に株価が動いている「織り込み済み」の局面であるため、追随エントリーを避ける。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=70), rule_v5: technical_bullish_is_hold\"\n  },\n  {\n   \"reason\": \"10月29日に第2四半期決算発表と日銀金融政策決定会合という重大な不確実性イベントが重なっている。\",\n   \"evidence\": \"reference.next_earnings_date=2026-10-29, reference.next_boj_meeting=2026-10-29〜2026-10-30\"\n  },\n  {\n   \"reason\": \"PER 43倍超と成長期待が強く織り込まれたバリュエーションであり、マクロ環境悪化時の下方弾力が懸念される。\",\n   \"evidence\": \"fundamental_view.points[2]: forward_pe=43.248\"\n  }\n ],\n \"risks\": [\n  \"2026年10月29日の決算発表および日銀金融政策決定会合に伴うボラティリティの急増\",\n  \"米国ハイテク株安の継続およびVIX指数20超によるリスクオフムードの波及\",\n  \"市場コンセンサスが高いことによる、決算後の材料出尽くし売り\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "中期トレンドが堅調な中でSMA25をサポートとした反発が見られ、MACDも改善傾向にあることからテクニカル面では強気です。ただし、米ハイテク株安とVIX急騰による地合いの悪化が短期的な重石となる可能性があります。",
+      "points": [
+        {
+          "point": "MACDがシグナルを上回り、ヒストグラムもプラス圏で拡大しており、上昇モメンタムの好転が示唆されています。",
+          "evidence": "price_technical.macd_histogram=110.79, macd_signal=154.33"
+        },
+        {
+          "point": "5日線が25日線を上回るゴールデンクロスを維持しており、直近の終値もSMA25を上回って推移しています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden\", price_technical.last_close=80760.0, sma25=78705.6"
+        },
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともにプラスであり、中期的な上昇トレンドが維持されています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=9.06, relative_to_topix_60d_pct=6.99"
+        }
+      ],
+      "cautions": [
+        "前夜の米国市場でテクノロジーセクターETF(XLK)が-3.02%と大幅下落しており、国内ハイテク株への波及が懸念されます。",
+        "VIX指数が21.45%急騰しており、マクロ環境の不透明感によるリスク回避の売りが出やすい状況です。",
+        "RSIが33.9と依然として低位にあり、反発後の継続的な買い勢力を確認する必要があります。"
+      ],
+      "key_levels": {
+        "support": 78705.6,
+        "resistance": 83490.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "製造業景況感の拡大を背景に業績は増収増益基調を維持しているが、PER43倍超の高バリュエーションに加え、10月29日に決算発表と日銀会合という重要な不確実性イベントが重なるため、短期的には様子見が妥当と判断する。",
+      "points": [
+        {
+          "point": "業績は着実な増収増益トレンドにあり、2026年3月期も増益を継続する見通し。高い収益性を維持している。",
+          "evidence": "fundamentals.earnings_trend.annual[0] (revenue_oku_jpy: 11693, operating_income_oku_jpy: 5958)"
+        },
+        {
+          "point": "外部環境として、日本の製造業PMIが54.1と拡大圏にあり、日銀短観の大企業製造業DIも改善。FA需要の堅調さが示唆される。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.1, macro.boj.tankan.di.large_manufacturing.current_di=24.0"
+        },
+        {
+          "point": "バリュエーションは予想PER43.2倍、PBR5.5倍と市場平均に対して高く、成長期待が織り込まれた水準にある。",
+          "evidence": "fundamentals.valuation.forward_pe=43.248, fundamentals.valuation.price_to_book=5.519"
+        }
+      ],
+      "cautions": [
+        "2026年10月29日の第2四半期決算発表に伴うボラティリティ（fundamentals.next_earnings_date）",
+        "同日に重なる日銀金融政策決定会合による為替・金利変動リスク（macro.boj.monetary_policy_meeting）",
+        "VIX指数の急上昇に見られる市場センチメントの悪化（macro.indices[4].change_1d_pct=21.45）"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "キオクシアがストップ安。キーエンス増益。カプコン増益。SCREEN上方修正でも内容が。日東電工上方。シマノ上方。 - Unisba Media",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOY3IxVVUzXzhQS2RWbUxySHRGVnpwRDZjenY2dDc0LUFEb09mZ25maEsyZkVRVUZCd0FURXN4ZkVkODJCaHF1Zm9OeThRVldFU0JCaEZLYjJfd25wRVNHbHVSVzJHMzJvX0RYTE5vMndiRkt2WjhlQWZPdFlEeFlVcQ?oc=5",
+        "published": "Sun, 18 Oct 2026 05:16:50 GMT",
+        "publisher": "Unisba Media"
+      },
+      {
+        "title": "｢潰れない会社｣には必ずいる…｢1000年企業11社｣の日本を支える創業家でもカリスマでもない｢有能人材｣の正体 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1YM1pWNVlJMmo2eF9JSjBCWjRzckJ1cVZVX3ZST0VUakx3Nzc2ZER3TVVQb01SdGJFN2M5ZFNuaWtLSlNNRHpsUHpTdVRfNW8?oc=5",
+        "published": "Sun, 18 Oct 2026 22:05:35 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "得票1位でも過半数でもない候補が東大総長に…東大教員が危惧する｢選考の有名無実化｣以上に恐ろしい事態 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE00TldlYzhRMVltQjcyck54R0FoZnJJamxuMkVqVmN6V3A2X1lhMW1jSkxpdFlwU29IZ0tXLXM0VnZBeWJvbE5RSmYyVXI0Wjg?oc=5",
+        "published": "Sun, 18 Oct 2026 22:05:28 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "｢AI=質問に答える｣はもう古い…自律的に動く｢最新AI｣で知的生産性を高める組織と落とす組織の決定的な違い - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE51MkQzYlVyOVl3bmNlekJ0LVE5SWwyUnRNNXQ5ak9TT0FJTkw3cHdzYTJzUm1zRTFmdEJ4YjhLenhRdUF5bXRiel9VWWlLc2s?oc=5",
+        "published": "Sun, 18 Oct 2026 01:04:45 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "キーエンス財団、大学院進学者向け給付型奨学金の募集を開始 総額288万円 - Dellows News",
+        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5DVGNlSnBJWS1GdVlsdmlkSExBcHgxa3B1TEZ3UEJIT2Ftb3p0b0pETElweGFLd1VlY2htVWRWQlVMNE9URnc?oc=5",
+        "published": "Sun, 18 Oct 2026 04:21:04 GMT",
+        "publisher": "Dellows News"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      }
+    ]
+  }
+}

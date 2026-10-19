@@ -1,0 +1,215 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-10-19T09:07:12+09:00",
+  "price_as_of": "2026-10-16",
+  "signal": {
+    "signal": "buy",
+    "confidence": 70,
+    "target_price": 3050.0,
+    "stop_loss": 2840.0,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズが強気（strength 70）かつテクニカルが中立であり、材料が株価に織り込まれ切る前のエントリー好機と判断した。",
+        "evidence": "fundamental_view.strength=70, technical_view.stance=neutral"
+      },
+      {
+        "reason": "3,000億円規模の自己株買いの進捗率が約89%に達しており、期間安値圏（2850.5円）付近での強力な需給下支えが期待できる。",
+        "evidence": "fundamental_view.points[1], reference.period_low=2850.5"
+      },
+      {
+        "reason": "RSIが38.6と低水準にあり、短期的には売られすぎ領域に近い。直近2営業日の下げ止まりは反転の兆しを示唆している。",
+        "evidence": "technical_view.points[2], technical_view.summary"
+      }
+    ],
+    "risks": [
+      "2026年10月29-30日の日銀会合に伴う金利上昇が、高配当株への資金流入を抑制するリスク。",
+      "2026年11月6日の決算発表を控え、進捗率の不透明感から利益確定売りが先行する可能性。",
+      "VIX指数の急騰（21%超）に伴う外部環境の不安定化が、国内通信セクターへ波及するリスク。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"buy\",\n  \"confidence\": 70,\n  \"target_price\": 3050.0,\n  \"stop_loss\": 2840.0,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズが強気（strength 70）かつテクニカルが中立であり、材料が株価に織り込まれ切る前のエントリー好機と判断した。\",\n      \"evidence\": \"fundamental_view.strength=70, technical_view.stance=neutral\"\n    },\n    {\n      \"reason\": \"3,000億円規模の自己株買いの進捗率が約89%に達しており、期間安値圏（2850.5円）付近での強力な需給下支えが期待できる。\",\n      \"evidence\": \"fundamental_view.points[1], reference.period_low=2850.5\"\n    },\n    {\n      \"reason\": \"RSIが38.6と低水準にあり、短期的には売られすぎ領域に近い。直近2営業日の下げ止まりは反転の兆しを示唆している。\",\n      \"evidence\": \"technical_view.points[2], technical_view.summary\"\n    }\n  ],\n  \"risks\": [\n    \"2026年10月29-30日の日銀会合に伴う金利上昇が、高配当株への資金流入を抑制するリスク。\",\n    \"2026年11月6日の決算発表を控え、進捗率の不透明感から利益確定売りが先行する可能性。\",\n    \"VIX指数の急騰（21%超）に伴う外部環境の不安定化が、国内通信セクターへ波及するリスク。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "短期的なデッドクロスやMACDのマイナス圏推移など弱気シグナルが目立つものの、直近2営業日で下げ止まりの兆しを見せており、現在は底値固めの局面と判断します。",
+      "points": [
+        {
+          "point": "5日線が25日線を下回るデッドクロス状態にあり、短期的には下落トレンドが継続しています。",
+          "evidence": "price_technical.sma5_vs_sma25=dead"
+        },
+        {
+          "point": "MACDおよびシグナルがマイナス圏で推移しており、ヒストグラムもマイナス幅を維持しているため、下落の勢いは依然として残っています。",
+          "evidence": "price_technical.macd=-32.77, price_technical.macd_histogram=-3.28"
+        },
+        {
+          "point": "RSIが38.6と低水準にあり、売られすぎの領域に近いものの、明確な反転シグナルが出るには至っていません。",
+          "evidence": "price_technical.rsi14=38.6"
+        },
+        {
+          "point": "中期（60日）ではTOPIXをアウトパフォームしており、直近5営業日中2日間はプラス圏で引けるなど、期間安値圏での押し目買いも観測されます。",
+          "evidence": "price_technical.trend_60d.relative_to_topix_60d_pct=0.25, price_technical.recent_5_days"
+        }
+      ],
+      "cautions": [
+        "VIX指数が前夜の米国市場で21%超の急騰を見せており、市場全体のボラティリティ拡大が国内通信株へ波及するリスクがあります。",
+        "前夜のADRは上昇しているものの、米国市場の通信セクターETF(XLC)が-1.89%と大きく下落しており、寄り付き後のセクター全体への連れ安に注意が必要です。",
+        "25日移動平均線（2963.98円）が上値抵抗線として意識されており、ここを明確に上抜けない限り調整局面は終わらない可能性があります。"
+      ],
+      "key_levels": {
+        "support": 2850.5,
+        "resistance": 2963.98
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "業績の拡大傾向が続く中、固定通信サービスの料金改定という直接的な収益改善材料に加え、大規模な自己株買いの着実な進捗が下値を支える構図。サービス業PMIの拡大圏維持も非製造業の同社には追い風。",
+      "points": [
+        {
+          "point": "第1四半期における大幅なEPS成長と、通期での増収増益トレンドの継続が確認できる。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=7071, fundamentals.earnings_trend.quarterly[0].diluted_eps=51.33"
+        },
+        {
+          "point": "3,000億円規模の自己株買い枠に対し、9月末時点で約2,666億円（進捗率約89%）を消化しており、強力な需給下支えが機能している。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "「auひかり」の料金改定（2027年1月より月額330円値上げ）が発表されており、中長期的なARPU上昇と利益率向上に寄与する見通し。",
+          "evidence": "news.headlines[4].title"
+        },
+        {
+          "point": "マクロ環境において、日本のサービス業PMIが51.3と拡大圏を維持しており、国内非製造業の事業環境は良好である。",
+          "evidence": "macro.japan_pmi.services.latest_value=51.3"
+        }
+      ],
+      "cautions": [
+        "2026年11月6日の第2四半期決算発表が近く、進捗率や修正の有無によるボラティリティリスクがある。",
+        "10月29日〜30日の日銀金融政策決定会合を控え、長期金利（JGB 10Y=2.948%）の上昇が続いた場合、高配当銘柄への資金シフトが鈍る可能性がある。",
+        "2026年6月25日に開示された「内部統制の不備」に関する改善状況が注視される。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "GoogleのAI新興ファンド共同創設者「KDDIと協調投資で日本強化」 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9scVRxYWdJS3FodFZJYmVfOWtIbE5NcjltdGs4MFRaSW9MRzhnZk16SWpBUldxdFFlMGdrUHJpNVJNMTJFd2h6dE5xZjdaMnBiRUFLUzlVamV0TVpINmp2bXFlTFN1ODFEMFN3dQ?oc=5",
+        "published": "Sun, 18 Oct 2026 20:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "交通空白地区解消に向けた公共ライドシェア 住民受容性・財政負担など地域課題と解決策の整理 - LIGARE（リガーレ）",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE91NDU1c0NxdzZDQUZuMG1jNC1obmZobU1uSk9rczVvb1VZek9RTUtTdklPVmFzQ1pjR0N6VUtQVG5mamMySWxyU0RHSFlwZFg5cHpF?oc=5",
+        "published": "Sun, 18 Oct 2026 23:33:00 GMT",
+        "publisher": "LIGARE（リガーレ）"
+      },
+      {
+        "title": "日立製作所の30代前半、主任級の年収は？【1万件の口コミ情報データ】 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1XRXJjcUUwa29wMXJmWUQ2dDI4eHNyMkFJeEpKLUxsMU0tV0NRU0tiOW5hYmJqZ2g2OG5USEVBQVF6LXRnN0RRMkhvNDB5MDDSAU9BVV95cUxNV0VyY3FFMGtvcDFyZllENnQyOHhzcjJBSXhKSi1MbDFNLVdDUVNLYjluYWJiamdoNjhuVEhFQUFRei10ZzdEUTJIbzQweTAw?oc=5",
+        "published": "Sun, 18 Oct 2026 20:30:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "AI-Native 6Gをめぐり、ソフトバンク・ドコモ・KDDI・楽天・エヌビディアが示した現在地…CEATEC 2026 16枚目の写真・画像 - レスポンス（Response.jp）",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBZMi1qaUdSS04tcmFfelpkc2I2UFNpaGl0UTFrd1NwNUhhdDV3cmZSalhrUWdZVVVKZFh3LVItYUg3R1lGNnBaM21OYlpfYS1MakNsR0g3TUtBMURXd0M3dl94Z1RFenNldzJHdnE1OVJxQQ?oc=5",
+        "published": "Sun, 18 Oct 2026 04:00:03 GMT",
+        "publisher": "レスポンス（Response.jp）"
+      },
+      {
+        "title": "「auひかり」料金改定で2027年1月ご利用分から月額330円アップ！ 「でんきセット割」も提供開始 - AppBank",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBhSFJ3ZjlLNENpZmZDM2x2WnlQYkJXdjBqRFhGV3dJaFFqSWZSNXZZT2JxRDJaVkYxYmNmM18yRm1Ya0RCZ29Zc05ETnk0N2JoOTMwX01ncnJCTjF3c2V4eExfaVQtR3RiWHc?oc=5",
+        "published": "Sun, 18 Oct 2026 21:03:48 GMT",
+        "publisher": "AppBank"
+      },
+      {
+        "title": "日本株ＡＤＲ・円換算終値 - みんかぶ FX/為替",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE91MG9aZWE2anJaOTlLaW5PZVE2SkplZmR0MFltNFlyWnBOQV9JT3VWRDl5a1ZRZENoRVRQaldRU2JwVjNDUHdBSQ?oc=5",
+        "published": "Sun, 18 Oct 2026 22:40:29 GMT",
+        "publisher": "みんかぶ FX/為替"
+      },
+      {
+        "title": "＜画像5 / 5＞au体験イベントで小島よしおが自虐ネタ！会場はシーン… - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE8tY2ZGN2RMMTgyVlN3emZObWdNeXpwZXJJU3Nna2JlV1ZPSllsOEdJMmdwaUlWN2EtSmZWb2QzZDNkY21haGlrNnFuU0NfR1QzZngyc1lDZE5uWFBDNXpUWFN6U1M2WE5C?oc=5",
+        "published": "Sun, 18 Oct 2026 07:38:25 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "「仕事ができない人はクビになる」米国企業でかけられた衝撃の一言 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFB2bS1iZjRPMzZnU1pLRWRxdGZjeDk3bTgtLUJGWDNJUGFBYVVjVUQ0TkM3TXpBUU1oYk15Vm5LMVJNdEtEXzlEY1RORC1PMDjSAU9BVV95cUxQdm0tYmY0TzM2Z1NaS0VkcXRmY3g5N204LS1CRlgzSVBhQWFVY1VENE5DN016QVFNaGJNeVZuSzFSTXRLRF85RGNUTkQtTzA4?oc=5",
+        "published": "Sun, 18 Oct 2026 22:00:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "【楽天グループ】黒字化でも株価は下落！これは買い時なのか？ - つばめ投資顧問",
+        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFAzM2ZIendia1hqUHBPbjVFWTZsT01wZWJ4blZkeW1zaWZVWE5wQXZ3UG9xNl9xOHRVd3BwOGk3UXNrclluX0ltVGxZaTl5QQ?oc=5",
+        "published": "Sun, 18 Oct 2026 09:20:20 GMT",
+        "publisher": "つばめ投資顧問"
+      },
+      {
+        "title": "ソフトバンク、顧客のAI導入の加速を目的にDatadogの活用を拡大｜Infoseekニュース - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBBNC0wby1RQ2QzczdRcUE0RTBEd0xFLWxZcjVySnpNYWI5UGZrVVZTM04zdGpJWkF0TU5SUEJmNVB5TkFMMWs5QzBGWWhERlBCcG1nSzhSWlNVLVFFM3RvckZlU1Rna05udjNTQU8tM3k5dw?oc=5",
+        "published": "Sun, 18 Oct 2026 18:10:00 GMT",
+        "publisher": "Infoseek"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261002545526.pdf",
+        "date": "2026-10-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533350.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-10-19T09:09:44+09:00",
+  "price_as_of": "2026-10-16",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 45,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズは減益基調と知的財産権訴訟の不確実性を抱えており、積極的な買いを推奨するほどのカタリストが見当たらないため、様子見と判断します。",
+        "evidence": "fundamental_view.stance=neutral (strength=58), fundamental_view.points[0], fundamental_view.points[1]"
+      },
+      {
+        "reason": "テクニカルは中期的な下落トレンド（MACDマイナス、デッドクロス）から脱却できておらず、方向感が定まらない状況です。",
+        "evidence": "technical_view.stance=bearish (strength=70), technical_view.points[0], technical_view.points[1], technical_view.points[2]"
+      },
+      {
+        "reason": "直近で次回決算発表と日銀金融政策決定会合という重要なイベントを控えており、これらの結果を待つべきと判断します。",
+        "evidence": "reference.next_earnings_date='2026-10-30', reference.next_boj_meeting='2026-10-29〜2026-10-30'"
+      }
+    ],
+    "risks": [
+      "次回決算発表（2026-10-30）で市場予想と異なる結果が出た場合、株価が急変動する可能性があります。",
+      "日銀金融政策決定会合（2026-10-29〜30）での政策変更が市場全体のボラティリティを高め、個別銘柄にも影響を及ぼすリスクがあります。",
+      "知的財産権訴訟の進展や結果次第で、業績見通しに影響を与える不確実性が残ります。",
+      "米国市場VIX指数の高騰など、市場全体のボラティリティ拡大が個別銘柄のトレンドを損なう可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 45,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズは減益基調と知的財産権訴訟の不確実性を抱えており、積極的な買いを推奨するほどのカタリストが見当たらないため、様子見と判断します。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=58), fundamental_view.points[0], fundamental_view.points[1]\"\n  },\n  {\n   \"reason\": \"テクニカルは中期的な下落トレンド（MACDマイナス、デッドクロス）から脱却できておらず、方向感が定まらない状況です。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=70), technical_view.points[0], technical_view.points[1], technical_view.points[2]\"\n  },\n  {\n   \"reason\": \"直近で次回決算発表と日銀金融政策決定会合という重要なイベントを控えており、これらの結果を待つべきと判断します。\",\n   \"evidence\": \"reference.next_earnings_date='2026-10-30', reference.next_boj_meeting='2026-10-29〜2026-10-30'\"\n  }\n ],\n \"risks\": [\n  \"次回決算発表（2026-10-30）で市場予想と異なる結果が出た場合、株価が急変動する可能性があります。\",\n  \"日銀金融政策決定会合（2026-10-29〜30）での政策変更が市場全体のボラティリティを高め、個別銘柄にも影響を及ぼすリスクがあります。\",\n  \"知的財産権訴訟の進展や結果次第で、業績見通しに影響を与える不確実性が残ります。\",\n  \"米国市場VIX指数の高騰など、市場全体のボラティリティ拡大が個別銘柄のトレンドを損なう可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "直近2営業日で急反発しているものの、中期トレンドおよび対TOPIX相対騰落率が依然としてマイナス圏にあり、テクニカル的な強気反転の証拠が不足しています。",
+      "points": [
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともにマイナスであり、中期的な下落トレンドから脱却できていない。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-0.22, relative_to_topix_60d_pct=-2.29"
+        },
+        {
+          "point": "MACDがシグナルを下回る推移を続けており、ヒストグラムも依然としてマイナス圏で推移しているため、下落の勢いが完全に収まったとは言えない。",
+          "evidence": "price_technical.macd=-46.0, macd_signal=-38.8, macd_histogram=-7.2"
+        },
+        {
+          "point": "移動平均線がデッドクロス状態にあり、株価も25日移動平均線を下回って推移している。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, last_close=2740.5, sma25=2763.94"
+        }
+      ],
+      "cautions": [
+        "前夜のADRが+2.2%と大幅に上昇しており、寄り付きで25日移動平均線を上放れる可能性がある。",
+        "直近2日間の出来高を伴った反発（10/16は993万株）により、RSIが53.7まで回復しており、短期的には売り枯れ感が出始めている。",
+        "米国市場のVIX指数が21%超と急騰しており、市場全体のボラティリティ拡大が個別銘柄のトレンドを損なうリスクがある。"
+      ],
+      "key_levels": {
+        "support": 2538.0,
+        "resistance": 2763.94
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 58,
+      "summary": "直近の業績が減益トレンドにある中、知的財産権訴訟の控訴提起による不透明感と、10月末に控える決算発表および日銀会合という二大イベントを前に、積極的な買い材料に欠ける状況です。",
+      "points": [
+        {
+          "point": "業績が減益基調に転じている。2026年3月期の通期実績において、売上高は伸長したものの営業利益・純利益・EPSが前期比で減少しており、直近の第1四半期（2026年6月中間）EPSも前年同期を下回っている。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "知的財産権を巡る訴訟リスクの継続。NTK社との損害賠償請求訴訟において、一審判決（勝訴）に対し控訴が提起されており、係争の長期化による不確実性が残っている。",
+          "evidence": "disclosures (2026-09-28: 当社に対するNTKからの損害賠償等請求訴訟における控訴提起のお知らせ)"
+        },
+        {
+          "point": "配当利回りが3.65%と比較的高い水準にあり、下値の一定の支えとして機能しているが、成長性の鈍化を補うほどの新規のポジティブなカタリストは直近2週間以内に確認できない。",
+          "evidence": "fundamentals.valuation.dividend_yield_percent=3.65, news.headlines"
+        }
+      ],
+      "cautions": [
+        "次回決算発表（2026-10-30）と日銀金融政策決定会合の日程が重なっており、急激なボラティリティの上昇リスクがある。",
+        "ドル円相場（157.81円）の円高方向への急変動による、輸出比率の高い製薬業としての収益押し下げリスク。",
+        "製造業PMIは拡大圏にあるが、JFC中小企業景況調査における仕入価格DIと販売価格DIの乖離（価格転嫁の重荷）が続いており、コスト構造への注視が必要。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "花王、資生堂、ユニ・チャームがそろって増収…それでも「苦戦しているエリア」は？ - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9DcURfLXU1TVZkeWFETHpoeXBJU2MxUHM4Sk1IVW9Eb004NzBVZjdfbjVVQVZ2cU92RllTbk1KdDZSWFE1Q3ZtWjRKOWJJM0HSAU9BVV95cUxPQ3FEXy11NU1WZHlhREx6aHlwSVNjMVBzOEpNSFVvRG9NODcwVWY3X241VUFWdnFPdkZZU25NSnQ2UlhRNUN2bVo0SjliSTNB?oc=5",
+        "published": "Sun, 18 Oct 2026 21:00:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "＜画像1 / 4＞市販化で話題をさらった解熱鎮痛薬「ロキソニン」の現状は？ - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5xeHJYZkFEazUtV1V5MGxPU3dhVlRjS1Z4RW90NHAxTTV1V2xpcVBmb0JKQno5LUNFd0NBTmZhazZORkRiSklOV1F1Q2l1am43VVZmU05uclJ0SU9YaFFkc1dJelV1MXM?oc=5",
+        "published": "Sun, 18 Oct 2026 12:33:04 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "日本株ＡＤＲ・円換算終値 - みんかぶ FX/為替",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE91MG9aZWE2anJaOTlLaW5PZVE2SkplZmR0MFltNFlyWnBOQV9JT3VWRDl5a1ZRZENoRVRQaldRU2JwVjNDUHdBSQ?oc=5",
+        "published": "Sun, 18 Oct 2026 22:40:29 GMT",
+        "publisher": "みんかぶ FX/為替"
+      },
+      {
+        "title": "大塚製薬の50代前半、課長級の年収は？【1万件の口コミ情報データ】 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBmMklkYkF2ZUxtX2psMU9qZzZNQUhZTHVTOWFxcGFyMUwwUlIybmNrSVYxa1RDb0RZcjg0d2MtNlV0YklhWktUWERVS0LSAU9BVV95cUxPSmhRcFdnYV9Mb2pZaDV6dnhHY25Bb0RHdXdUOVdGakRFWkdReW1FOGlhSTFDd1VPVERVdWd2M1FxLU8xM29GZjB5R2dQU3g0?oc=5",
+        "published": "Sun, 18 Oct 2026 20:20:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "ブランド好き／楽天・三木谷会長の「悪癖」／武田ウェバー前社長の招聘は期待薄 - 月刊FACTA",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1IRlFnWGFYalhrQTJPQUZPU1NzNldSbUY5eGRRajJ1MGxSTDhqM3pZYmpQSDZseUFkYnk2TTdDVW1UVDc3RDBTOG5VNkRMcG4ySnFDLQ?oc=5",
+        "published": "Sun, 18 Oct 2026 09:26:57 GMT",
+        "publisher": "月刊FACTA"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "当社に対するNTKからの損害賠償等請求訴訟における控訴提起のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260925540546.pdf",
+        "date": "2026-09-28 08:45:00"
+      },
+      {
+        "title": "当社に対するNTKからの損害賠償等請求訴訟に関する判決（勝訴）のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260910534407.pdf",
+        "date": "2026-09-10 17:00:00"
+      },
+      {
+        "title": "（開示事項の変更）第一三共ビジネスアソシエの吸収合併（簡易合併・略式合併）の効力発生日変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824525305.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "（再訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514622.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2025年度決算および第6期中期経営計画説明会」資料の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514744.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正・数値データ訂正）「2026年３月期 決算短信〔IFRS基準〕(連結)」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504176.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504099.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算補足資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504168.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504173.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "当社米国子会社役職員に対する信託型株式付与制度の継続のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504240.pdf",
+        "date": "2026-07-31 12:00:00"
+      }
+    ]
+  }
+}
