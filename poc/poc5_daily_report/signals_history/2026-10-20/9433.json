@@ -1,0 +1,226 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-10-20T10:15:14+09:00",
+  "price_as_of": "2026-10-20",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近 2026-10-19 に buy 判断を出したばかりであり、現在はその継続監視期間中であるため、ルールに基づき新規のエントリーは抑制する。",
+        "evidence": "reference.recent_buy.date=2026-10-19"
+      },
+      {
+        "reason": "ファンダメンタルズ専門家の確信度が 60 に留まり、buy 発火基準である 70 に達していない。自己株買い等の支えはあるが、決定的なカタリストに欠ける。",
+        "evidence": "fundamental_view.strength=60"
+      },
+      {
+        "reason": "テクニカル面では 5 日線が 25 日線を下回るデッドクロスを形成しており、株価も SMA25 を下回るなど、短期的には上値の重い局面にある。",
+        "evidence": "technical_view.points[2]: sma5_vs_sma25=\"dead(5日線が25日線の下)\""
+      },
+      {
+        "reason": "市場全体のレジームが downtrend であり、地合いの影響で個別銘柄の上昇が阻害されやすい環境にある。",
+        "evidence": "reference.market_regime=\"downtrend\""
+      }
+    ],
+    "risks": [
+      "2026年11月6日の決算発表において、進捗が期待を下回る場合の業績再評価リスク。",
+      "2026年10月29日〜30日の日銀金融政策決定会合に伴う、金利上昇や政策変更による市場心理の悪化。",
+      "市場全体のレジームが downtrend であるため、外部環境のさらなる悪化による連れ安。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近 2026-10-19 に buy 判断を出したばかりであり、現在はその継続監視期間中であるため、ルールに基づき新規のエントリーは抑制する。\",\n   \"evidence\": \"reference.recent_buy.date=2026-10-19\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ専門家の確信度が 60 に留まり、buy 発火基準である 70 に達していない。自己株買い等の支えはあるが、決定的なカタリストに欠ける。\",\n   \"evidence\": \"fundamental_view.strength=60\"\n  },\n  {\n   \"reason\": \"テクニカル面では 5 日線が 25 日線を下回るデッドクロスを形成しており、株価も SMA25 を下回るなど、短期的には上値の重い局面にある。\",\n   \"evidence\": \"technical_view.points[2]: sma5_vs_sma25=\\\"dead(5日線が25日線の下)\\\"\"\n  },\n  {\n   \"reason\": \"市場全体のレジームが downtrend であり、地合いの影響で個別銘柄の上昇が阻害されやすい環境にある。\",\n   \"evidence\": \"reference.market_regime=\\\"downtrend\\\"\"\n  }\n ],\n \"risks\": [\n  \"2026年11月6日の決算発表において、進捗が期待を下回る場合の業績再評価リスク。\",\n  \"2026年10月29日〜30日の日銀金融政策決定会合に伴う、金利上昇や政策変更による市場心理の悪化。\",\n  \"市場全体のレジームが downtrend であるため、外部環境のさらなる悪化による連れ安。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "株価は25日移動平均線を下回り、短期的なデッドクロスが発生していますが、MACDは好転の兆しを見せており、中期トレンドは堅調です。市場地合いは下落トレンドにありますが、直近は安値から反発しています。",
+      "points": [
+        {
+          "point": "MACDがシグナルを上回り、短期的なモメンタム改善の兆しが見られます。",
+          "evidence": "price_technical.macd_histogram=2.99"
+        },
+        {
+          "point": "直近60営業日の騰落率および対TOPIX相対騰落率がともにプラスであり、中期的なトレンドはまだ維持されています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=1.65, price_technical.trend_60d.relative_to_topix_60d_pct=0.41"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線を下回るデッドクロスを形成しており、株価も25日移動平均線を下回るなど、短期的な下落圧力が示唆されます。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\", price_technical.last_close=2929.0, price_technical.sma25=2960.22"
+        },
+        {
+          "point": "市場全体が「downtrend」にあり、日経平均も大幅に下落しているため、個別銘柄の上値が重くなる可能性があります。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\", macro.indices[0].change_1d_pct=-1.73"
+        },
+        {
+          "point": "直近5営業日では一時安値から反発しましたが、最終日は小幅下落で終えました。",
+          "evidence": "price_technical.recent_5_days[0].close=2855.0, price_technical.recent_5_days[3].close=2944.0, price_technical.recent_5_days[4].change_pct=-0.51"
+        }
+      ],
+      "cautions": [
+        "市場全体の地合いが下落トレンドであるため、個別銘柄の上昇は限定的となる可能性があります。",
+        "MACDの好転はまだマイナス圏での動きであり、本格的なトレンド転換を示すものではない可能性があります。",
+        "前夜の米国ADRの堅調さは、日本市場の寄り付き価格に織り込まれる可能性があります。",
+        "株価が主要移動平均線（25日線）を下回っている状態は、引き続き上値抵抗となり得る点に注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 2850.5,
+        "resistance": 2960.22
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "1株当たり利益（EPS）の堅調な成長と大規模な自己株買いによる下支えが期待される一方、市場全体の調整局面および日銀会合・決算発表を目前に控えたイベントリスクが意識されるため中立の見極めが必要。",
+      "points": [
+        {
+          "point": "自己株買いの着実な進捗による需給への寄与。10月6日の開示時点で累計取得額が約2,666億円に達し、上限3,000億円に対して約89%まで進捗している。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "四半期ベースでのEPSの伸長。2026年6月期の希薄化後EPSは51.33円と、前年同期の43.0円から大幅に増加しており、収益性が向上している。",
+          "evidence": "fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "AI・DXの積極的な社会実装と事業活用。KDDI SUMMIT 2026の開催やネットワーク監視へのAI活用など、非製造業大企業の高い景況感（DI: 35）を背景とした事業展開が継続している。",
+          "evidence": "news.headlines[0], news.headlines[7], macro.boj.tankan.di.large_nonmanufacturing.current_di"
+        }
+      ],
+      "cautions": [
+        "2026年11月6日に予定されている決算発表に伴う業績進捗の再評価リスク（fundamentals.next_earnings_date）",
+        "2026年10月29日〜30日の日銀金融政策決定会合に向けた金利上昇・政策変更リスク（macro.boj.monetary_policy_meeting.next_meeting）",
+        "市場全体のレジームがdowntrend（TOPIXが25日線を下回り、5日騰落率もマイナス）であり、外部環境による売り圧力（macro.market_regime）"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-10-19",
+    "days_ago": 1,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "AI社会実装の最新事例を紹介「KDDI SUMMIT 2026」が開催 - 電通報",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5rVnFsYzNLMXo0cElkTHdnWUltZVVwd0dNVm9XZFQxSVJsM3FEbWo4RzM5c0R2VFNzSWlQVDI1V2x5eWVoNy1GX2xVMA?oc=5",
+        "published": "Mon, 19 Oct 2026 21:02:16 GMT",
+        "publisher": "電通報"
+      },
+      {
+        "title": "KDDI総合研究所、Linuxシステム向けにランサムウェア攻撃で暗号化したファイルを復元するツールをOSSとして公開 - ScanNetSecurity",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9fWTA2bjJKNU44bElQOWxkSGZBelBBTGtBVktMWHJqSVU0WG1icld0ckMwcmg1SFk2SVZCR2FnMDNOMUxYS1lMdFpXYmVVVGFDTlQ3ZG1CYUM4eGRTazh4Wl9ubTc4c3dvNUlkSw?oc=5",
+        "published": "Mon, 19 Oct 2026 23:00:14 GMT",
+        "publisher": "ScanNetSecurity"
+      },
+      {
+        "title": "小・中学生がプログラミングでドローンを動かしてレースに挑戦！ 東京と大阪をつなぐ「遠隔ドローンプログラミング教室」を開催 - KDDI",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBfRXBibmVMWWE2UV9WNlNBdGZkT1U0YUc5RUhSMHVtbHViaFVWM292b2NWNnJsajV1VlR2b0ZzSjdoZ3pVcW9wZmVMWlVDSUV4WF9MRVliMk41VEtT?oc=5",
+        "published": "Mon, 19 Oct 2026 02:58:06 GMT",
+        "publisher": "KDDI"
+      },
+      {
+        "title": "入力エラー頻発の申請業務 KDDIが“改修ゼロ”で誤り率を10分の1にした手法：「Excel」「マクロ」運用の限界 - TechTargetジャパン",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1xdi1nUlFCZU4wRWpYbDM1blNYbXhDVUNwSUk4S0VsLXRxdXFVaFhpcWZ3ZXpTUUZTM1FiYXdQZ0ZmZnBWOHpDQllrOTlBSTI4c2Q1enZXZ1dtb0xXMHl6OGxaS3ZJY2hybFNzRkxFWUo?oc=5",
+        "published": "Mon, 19 Oct 2026 20:00:00 GMT",
+        "publisher": "TechTargetジャパン"
+      },
+      {
+        "title": "京セラの法人向け「DIGNO SX5 KYG07」をKDDIから発売 5年のセキュリティ更新、8GB＋仮想メモリ搭載（ITmedia Mobile） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1FYnRLWjRKdzVhX0J3amhfVlJlUEhSWGJOY3JicHAzMDRUbERTX05ySlNCNzNRQVpFdkNZV014R19wVE5vRl9Rc2xFWU9tT2ZiOGYwc1FvUGIwSlZubDU0VEJTWjlTYmZvTnY1Q2JZb1FxYWFiRkVySHo1UzlQUUk?oc=5",
+        "published": "Mon, 19 Oct 2026 09:35:40 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "KDDIの法人向け5Gスマホ「DIGNO SX5 KYG07」発売 - ケータイ Watch",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE4wcTkzR3MyVmdONUZpWEd2RWk5MFg4b3N2c2tvMTZ1TTNjNmd4aV9qV3hBa25ZaVM4dUdtUE1hYm5YODRLRlhkbXdRTEk4M3llOEo0XzEyS0xxa0M5YlU5NlRZVW10UzA?oc=5",
+        "published": "Mon, 19 Oct 2026 08:42:30 GMT",
+        "publisher": "ケータイ Watch"
+      },
+      {
+        "title": "京セラ、法人向けスマホ「DIGNO SX5 KYG07」をKDDIで販売開始 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5DWWNaNzg4VlZTR1QyT0F5clNaVUs0YUFJM3NqMWliZWplQzJfMFhoUUlMeFV0eGRtU1lqSEhieVlGUlNWcVlDTWZuaFVQWFpnRE5zLWROalhZWG1SbUY1TEF3X2J2bENjNWR2bA?oc=5",
+        "published": "Mon, 19 Oct 2026 06:39:09 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "KDDIネットワークセンターを見学、24時間監視や障害対応にはAI活用も進む - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOdm9Ta2FrdVR6VkppQWRGUDRjRVN2LVZFUGtzMXUwMktmVUE1Z3VjeE13MjJOQlJkS3BVNUIxLURJZ3N2UzVVSHBtTUJjTTZPTVlNZVF1QmlGVzBETnJJMktrdVJ5aDVRMUUtbmxqOEJGaDc5ZDdheXdjQnI2eDVFVNIBfEFVX3lxTE1rZmNrTEdZZ3VrTUQ1RHo2QWRtREM2d2x6eG02SzBIVjZhc2lyYTl6MjF3UWRlU2NXV1pLRlZFR2hMVm5LUlBZM3VTTFRYaExwZmp3d0N4eEVrTkdSTThGVWVJTjIyZUhEcXlxNGZBS3ROZTRKZkZXUm9TTWs?oc=5",
+        "published": "Mon, 19 Oct 2026 10:12:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "東電、KDDI、ソフトバンクなど12者が結集！国内初の「広域ワークロードシフト」共同実証を開始 - DXマガジン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBWNGMzekh1NnAwVDVYWGV1elNXQlNSN2J1bVJRZEFfeTQxMkQ2MklyYkdfeGtvNlNMMnhsODdtcFUyLVlRLUZraXRkZl8?oc=5",
+        "published": "Mon, 19 Oct 2026 09:13:15 GMT",
+        "publisher": "DXマガジン"
+      },
+      {
+        "title": "KDDI 後篇 - BS朝日",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5CbWJCM0xwejZiU1lnQWNJRnM2NGRITVE4SXZ3bmFVWnVoRWtRUGFRb3JvYWtCMXRDZGgxdmF6SGdMOFBBcWgwa2dUYk9EWnZMVmhZOWFMc1lGYmZORW5ZSGNZdUdCRW5vOEQ0Z3dLTGY?oc=5",
+        "published": "Mon, 19 Oct 2026 02:38:50 GMT",
+        "publisher": "BS朝日"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261002545526.pdf",
+        "date": "2026-10-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533350.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      }
+    ]
+  }
+}

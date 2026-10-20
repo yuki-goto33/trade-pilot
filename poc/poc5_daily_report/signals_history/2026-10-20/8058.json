@@ -1,0 +1,208 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-10-20T10:17:49+09:00",
+  "price_as_of": "2026-10-20",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "テクニカル面では5日線が25日線を下回るデッドクロスが発生し、前夜ADRも-3.28%と大幅下落していることから、短期的には下値模索の強い売り圧力が予想される。",
+        "evidence": "technical_view.points[0]: price_technical.sma5_vs_sma25=dead / technical_view.points[2]: us_overnight.adr.change_1d_pct=-3.28"
+      },
+      {
+        "reason": "ファンダメンタルズ面では1Qの進捗は良好（EPS 81.08円）であるが、通期では減益計画であり、現在は様子見すべき局面と判断される。",
+        "evidence": "fundamental_view.points[0]: fundamentals.earnings_trend.quarterly / fundamental_view.summary"
+      },
+      {
+        "reason": "市場全体が下落レジーム（downtrend）にあり、地合いの悪化が個別銘柄の上値を抑える要因となっている。",
+        "evidence": "reference.market_regime=downtrend / fundamental_view.cautions[2]"
+      }
+    ],
+    "risks": [
+      "2026年11月4日の次回決算発表における通期業績予想や株主還元方針の不透明感",
+      "2026年10月29日〜30日の日銀金融政策決定会合に伴う金利・為替市場の急変動",
+      "ADRの大幅下落を受けた寄り付き後の投げ売りおよびサポートライン（4513.0円）の割り込み",
+      "市場全体のdowntrend継続によるリスクオフ姿勢の強まり"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 50,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"テクニカル面では5日線が25日線を下回るデッドクロスが発生し、前夜ADRも-3.28%と大幅下落していることから、短期的には下値模索の強い売り圧力が予想される。\",\n      \"evidence\": \"technical_view.points[0]: price_technical.sma5_vs_sma25=dead / technical_view.points[2]: us_overnight.adr.change_1d_pct=-3.28\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズ面では1Qの進捗は良好（EPS 81.08円）であるが、通期では減益計画であり、現在は様子見すべき局面と判断される。\",\n      \"evidence\": \"fundamental_view.points[0]: fundamentals.earnings_trend.quarterly / fundamental_view.summary\"\n    },\n    {\n      \"reason\": \"市場全体が下落レジーム（downtrend）にあり、地合いの悪化が個別銘柄の上値を抑える要因となっている。\",\n      \"evidence\": \"reference.market_regime=downtrend / fundamental_view.cautions[2]\"\n    }\n  ],\n  \"risks\": [\n    \"2026年11月4日の次回決算発表における通期業績予想や株主還元方針の不透明感\",\n    \"2026年10月29日〜30日の日銀金融政策決定会合に伴う金利・為替市場の急変動\",\n    \"ADRの大幅下落を受けた寄り付き後の投げ売りおよびサポートライン（4513.0円）の割り込み\",\n    \"市場全体のdowntrend継続によるリスクオフ姿勢の強まり\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "短期移動平均線のデッドクロスに加え、市場レジームの悪化と前夜ADRの大幅下落が重なり、下値模索の展開が予想されます。",
+      "points": [
+        {
+          "point": "5日線が25日線を下回るデッドクロスが発生しており、株価も25日線の下位で推移する短期下落トレンドの状態にあります。",
+          "evidence": "price_technical.sma5_vs_sma25=dead(5日線が25日線の下), price_technical.last_close=4734.0 < sma25=4788.6"
+        },
+        {
+          "point": "TOPIXが25日線を下回り直近5日間も続落していることから、市場全体が「downtrend（下落レジーム）」にあり、個別銘柄にも売り圧力が波及しやすい地合いです。",
+          "evidence": "macro.market_regime.market_regime=downtrend"
+        },
+        {
+          "point": "前夜のNY市場でADRが-3.28%と大幅に下落しており、当日の寄り付きから売りが先行する可能性が極めて高い状況です。",
+          "evidence": "us_overnight.adr.change_1d_pct=-3.28"
+        }
+      ],
+      "cautions": [
+        "RSI14が33.5と売られすぎ水準の30に接近しており、目先の自律反発が起こりやすい価格帯であること",
+        "MACDヒストグラムが14.87とプラス圏で推移しており、下落の勢い自体は数値上わずかに縮小傾向にあること",
+        "ADRの下落が寄り付き価格に過度に織り込まれた場合、寄り底の形になるリスク"
+      ],
+      "key_levels": {
+        "support": 4513.0,
+        "resistance": 4788.6
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "第1四半期のEPSが前年同期比で大幅に伸長している点は評価できるものの、通期では減益計画であり、かつ次回決算発表や日銀会合といった重要イベントを目前に控えていることから、現在は静観すべき局面と判断する。",
+      "points": [
+        {
+          "point": "2027年3月期第1四半期（2026年6月）の1株当たり利益（EPS）が81.08円と、前年同期の51.34円から大幅に増加しており、期初からの進捗は良好である。",
+          "evidence": "fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "子会社を通じたリネットジャパンとの資本業務提携（3.5億円）など、資源循環領域等での事業拡大に向けた動きが見られる。",
+          "evidence": "news.headlines[0]"
+        },
+        {
+          "point": "日本の製造業PMIが54.1、サービス業PMIが51.3と、いずれも景気拡大の閾値である50を上回っており、事業環境そのものは堅調に推移している。",
+          "evidence": "macro.japan_pmi"
+        }
+      ],
+      "cautions": [
+        "2026年11月4日に次回決算発表を控えており、通期業績予想の修正や株主還元策の有無が不透明な段階である。",
+        "2026年10月29日〜30日の日銀金融政策決定会合が近く、金利および為替市場の変動が業績に影響を与えるリスクがある。",
+        "市場全体が「downtrend」レジームにあり、TOPIXが25日移動平均線を下回るなど、地合いの悪化が個別銘柄の上値を抑える可能性がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "JX金属と三菱商事の子会社、リネットジャパンと資本業務提携＝3．5億円出資(時事通信) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQU2tGNnlQekt0a2p4Sl9kYkFSZGZvTTZ3MmhtNlk2NktHbGdYNzQzZGVuQzg4TFFscElLMTF5Wk9ZbElaeEc5aTE3SFdQeWMyWVBSQWh6VWtFZFl1bnhPZnpYT0E5WHRsTk9nWkNVSVphcTVOdm5oVXhHbnFJOUJHR1NkMm8weGs?oc=5",
+        "published": "Mon, 19 Oct 2026 10:54:34 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "三菱商事ロジスティクス、体験型物流研修「シゴト体験ラボ」のプログラムを拡充｜Infoseekニュース - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE91THp0XzQ4OW9PNmg0dktfQ1lXNEQzVS10ZEZ6WEk2d2w4VnQ4WVdOM0lIVTZmMmlRSTd5UlBEVnRlV2plOGpvaVNqSWRDbWpsTUhGTkw0a2ZfRXpWRUJVNQ?oc=5",
+        "published": "Tue, 20 Oct 2026 00:30:00 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "【東京2部3B／動画ハイライト】三菱商事 1－0 ALL ROUNDER - tokyofootball.com",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9rYVQtSjZobGNTeFBTQnMyQlJaTWxhWmM5M0o0X2lRRDF6U3djcHdhbS1YQ2JFeEx0MUdzZVU4RldqVHMwakV0c0JKT3FYNFdJVHlvVndZWXJLWWJfSEMw?oc=5",
+        "published": "Mon, 19 Oct 2026 10:34:06 GMT",
+        "publisher": "tokyofootball.com"
+      },
+      {
+        "title": "ＪＸ金属と三菱商事の子会社、リネットジャパンと資本業務提携 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5JUVBNb2ZZTElRWm4zRWVyQ1RsLUhvdmNWd3AzcURsbFlFdHY0RGVPWVEyRGNoa19YQ290cTZlN1BEY0kwYmt1ZGRsSlhGeTIzM1dxZENvbUxwV1hCTDljQWZNMVhXQWdJaUxUMjlZcGFPX0h3WlVSal9FMNIBgAFBVV95cUxNTnlPRFdZMTA5OGlqTTdrNnRxTm84M3hhWDR1cDZnMTBBeGsxMGdoQWNqZG5aaU1iZkVmVmloV2k2UEFlTXVLU0RnN1d0eVRWNXFlWGpmcFF4MUEzRnA2VGhNM3gxWWUzei1qOW5ZTGF4dHlDeTd2WHZCVFJ5b2hrQg?oc=5",
+        "published": "Mon, 19 Oct 2026 08:54:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "JX金属と三菱商事の子会社、リネットジャパンと資本業務提携（時事通信） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBuRkFTbFpNdTItYV9GOHQ0Q2FGU05sRnpjZ3RrQTM2ZnJHMmdNVXVHUUE3eVFvazdOWGQ4MDY0aUlhWkVZWGhaczJmRkQtX20tQ1p2S2xkQ1k4cXdvYkpkQlktR1IwTkQ3Nm0ybzZmWGs0Q3NaOTF3amcyaGJKbmM?oc=5",
+        "published": "Mon, 19 Oct 2026 11:00:44 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "三菱商事が首位へ 持ち前の堅守前面に 東京2部3B - 東京サッカー [TOKYO FOOTBALL]",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9TeDJqMVNDblJPdURpX3BQZVRDSXNsSHo1Y3lEaUFUaVljYzgyeWplM05fOUVEbERMaUcwN0FvSXg5QXh2cC1KOV9JMU5ldkNuNk9oSWJoblhQT0wycWtB?oc=5",
+        "published": "Mon, 19 Oct 2026 04:49:37 GMT",
+        "publisher": "東京サッカー [TOKYO FOOTBALL]"
+      },
+      {
+        "title": "三菱商事(株)【8058】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5yRy11RmJPVy1YSThKaUZZR1Z6M0l2ZEVHVXU1M0RVSVNEY3JRT3pjdlQ0cUgtNU5zaS03SmJaZDhhcktsWE9MbFg5RDRVMUNrTmxsZloxcHRTTVZHSWJB?oc=5",
+        "published": "Mon, 19 Oct 2026 02:53:08 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "柔道半谷、競泳鈴木ら金メダル 愛知・名古屋アジアパラ大会 - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1KeWVEUFZzZ254ZkV1NTJoUkdXd3pIcnIzQmJZT0F4dzd3TjZsMWtOM0RfMVlfLWszOWIxUThoNDJNVjRDZ01kYzhkODZOckw1Z2c?oc=5",
+        "published": "Mon, 19 Oct 2026 12:31:00 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "三菱UFJ信託が発行を担い2026年度中の実取引へ！みずほ・三菱UFJ・三井住友による最新オンチェーン金融 - DXマガジン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE4wSk1MTWdpdTVuYW82cmJnaUhmcFltZ1dseG1ZVmNRQU9veTZ3Nng2czg1dlZDenZWcUZTVW9ONkRZNnYya1ptUWpJQXg?oc=5",
+        "published": "Mon, 19 Oct 2026 09:23:22 GMT",
+        "publisher": "DXマガジン"
+      },
+      {
+        "title": "柔道・半谷静香が金メダル　愛知・名古屋アジアパラ大会 - サンスポ",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5rb1I3VktycjNzcUlkVm4xYWNvNDFDVndRbmVmZnlWYVpOM3J2MG5FMGhxcl9ZQURFRmtvYmxuS3dheC1LV3prVzNZbkN2TElRZXhYTUd1YldXMy1oeVpOeGRJT0pKa1hfbnROZVhaZEdLTl9rcXfSAYoBQVVfeXFMTmVKak1qT3Y5U1cxMlh0Q0tWQkYzc0pvb0pRZkU1dzM4ZGd5My1GV3lOb29kcHBIaFNFSnd2YklkNXhJaWd5T05ldnJXQjIzLUpmRUYyYXlfUklhS180T2tWTV9YdjNqNFQ3ZzI2V3hOSkJvTXpQZ0htd1JuUjFKUVNQUUdRWjR6N1BR?oc=5",
+        "published": "Mon, 19 Oct 2026 10:03:34 GMT",
+        "publisher": "サンスポ"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期第1四半期決算短信〔IFRS〕(連結）（監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510489.pdf",
+        "date": "2026-08-06 15:25:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505791.pdf",
+        "date": "2026-08-03 14:00:00"
+      },
+      {
+        "title": "特定子会社の異動（子会社の特定子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260714593288.pdf",
+        "date": "2026-07-15 10:00:00"
+      },
+      {
+        "title": "子会社間の合併及び特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552595.pdf",
+        "date": "2026-05-29 09:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C2プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539898.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C3プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539905.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C4プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539910.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C5プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539918.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C6プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539939.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515679.pdf",
+        "date": "2026-05-01 14:00:00"
+      }
+    ]
+  }
+}

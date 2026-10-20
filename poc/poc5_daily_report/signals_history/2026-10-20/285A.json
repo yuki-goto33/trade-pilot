@@ -1,0 +1,221 @@
+{
+  "code": "285A",
+  "name": "キオクシアホールディングス",
+  "generated_at": "2026-10-20T10:26:48+09:00",
+  "price_as_of": "2026-10-20",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家はV字回復を遂げ、将来的な増益やAI関連需要に期待し強気（strength=75）だが、テクニカル専門家は中期的な下落トレンド継続、デッドクロス形成などで明確な弱気（strength=85）を示しており、意見が大きく割れています。",
+        "evidence": "fundamental_view.stance=bullish (strength=75), technical_view.stance=bearish (strength=85)"
+      },
+      {
+        "reason": "統合判断ルールに従い、ファンダメンタルズが強気であってもテクニカルがニュートラルでない場合は買いシグナルを発行できないため、今回は様子見（hold）とします。",
+        "evidence": "technical_view.stance != 'neutral' (rule_1_buy_condition)"
+      },
+      {
+        "reason": "市場全体がダウントレンドにある中、個別の好材料も相殺される可能性があり、慎重な姿勢を維持することが適切です。",
+        "evidence": "reference.market_regime='downtrend', fundamental_view.cautions[1]"
+      }
+    ],
+    "risks": [
+      "次回決算発表日（2026/10/30）および次回日銀金融政策決定会合（2026/10/29〜2026/10/30）が間近に控えており、これらのイベントが市場および個別銘柄に予期せぬ変動をもたらす可能性があります。",
+      "テクニカル指標が示唆する下落トレンドが継続し、直近の期間安値（12675.0円）を下回る可能性があり、保有銘柄の評価損が拡大するリスクがあります。",
+      "中国企業の台頭による競争激化や、中小企業のコスト転嫁の難しさといった、ファンダメンタルズ専門家が指摘する懸念が顕在化し、業績見通しに影響を及ぼす可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家はV字回復を遂げ、将来的な増益やAI関連需要に期待し強気（strength=75）だが、テクニカル専門家は中期的な下落トレンド継続、デッドクロス形成などで明確な弱気（strength=85）を示しており、意見が大きく割れています。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=75), technical_view.stance=bearish (strength=85)\"\n  },\n  {\n   \"reason\": \"統合判断ルールに従い、ファンダメンタルズが強気であってもテクニカルがニュートラルでない場合は買いシグナルを発行できないため、今回は様子見（hold）とします。\",\n   \"evidence\": \"technical_view.stance != 'neutral' (rule_1_buy_condition)\"\n  },\n  {\n   \"reason\": \"市場全体がダウントレンドにある中、個別の好材料も相殺される可能性があり、慎重な姿勢を維持することが適切です。\",\n   \"evidence\": \"reference.market_regime='downtrend', fundamental_view.cautions[1]\"\n  }\n ],\n \"risks\": [\n  \"次回決算発表日（2026/10/30）および次回日銀金融政策決定会合（2026/10/29〜2026/10/30）が間近に控えており、これらのイベントが市場および個別銘柄に予期せぬ変動をもたらす可能性があります。\",\n  \"テクニカル指標が示唆する下落トレンドが継続し、直近の期間安値（12675.0円）を下回る可能性があり、保有銘柄の評価損が拡大するリスクがあります。\",\n  \"中国企業の台頭による競争激化や、中小企業のコスト転嫁の難しさといった、ファンダメンタルズ専門家が指摘する懸念が顕在化し、業績見通しに影響を及ぼす可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 85,
+      "summary": "キオクシアホールディングスの株価は中期的な下落トレンドが継続しており、短期的なテクニカル指標や市場全体の地合いも弱気を示唆しています。",
+      "points": [
+        {
+          "point": "過去60営業日で株価は大幅に下落し、TOPIXに対しても大きくアンダーパフォームしており、中期的な下落トレンドが明確です。",
+          "evidence": "price_technical.trend_60d.change_60d_pct = -34.58%, price_technical.trend_60d.relative_to_topix_60d_pct = -35.82%"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線を下回るデッドクロスを形成しており、短期的な下降トレンドが継続しています。",
+          "evidence": "price_technical.sma5_vs_sma25 = \"dead(5日線が25日線の下)\""
+        },
+        {
+          "point": "MACDヒストグラムがマイナス圏で拡大しており、売り圧力が強い状態が続いています。",
+          "evidence": "price_technical.macd_histogram = -578.52"
+        },
+        {
+          "point": "日本市場全体がダウントレンドにあるため、個別銘柄の上昇は抑制されやすい地合いです。",
+          "evidence": "macro.market_regime.market_regime = \"downtrend\""
+        },
+        {
+          "point": "直近の株価は期間安値圏で推移しており、前日も下落していることから、明確な反転の兆候は見られません。",
+          "evidence": "price_technical.last_close = 13315.0, price_technical.period_low = 12675.0, price_technical.recent_5_days[4].change_pct = -2.1%"
+        }
+      ],
+      "cautions": [
+        "RSIが39.9とやや売られすぎ水準に近づいているため、短期的な自律反発の可能性は残ります。",
+        "前夜の米国SOX指数は上昇しましたが、これは当日の寄り付きで既に織り込まれる可能性があります。",
+        "期間安値（12675.0円）付近では買い支えが入る可能性があります。"
+      ],
+      "key_levels": {
+        "support": 12675.0,
+        "resistance": 13572.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "2024年3月期の赤字からV字回復を遂げ、将来的に大幅な増益を見込む業績トレンドは非常に力強く、新製品開発やAI関連需要への期待が高まっていることから、投資魅力度は高いと判断します。",
+      "points": [
+        {
+          "point": "業績がV字回復し、年次・四半期ともに力強い成長トレンドを示しています。特に2026年3月期には大幅な増収増益を見込み、直近の四半期EPSも加速的に伸びており、事業環境の好転が明確です。",
+          "evidence": "fundamentals.earnings_trend.annual[2].net_income_oku_jpy=-2437, fundamentals.earnings_trend.annual[1].net_income_oku_jpy=2723, fundamentals.earnings_trend.annual[0].net_income_oku_jpy=5545, fundamentals.earnings_trend.quarterly[0].diluted_eps=1525.09"
+        },
+        {
+          "point": "AI関連需要への恩恵が期待されており、1Uサーバ向けQLCフラッシュメモリ搭載SSDや直接液冷対応エンタープライズSSDなど、データセンター向け新製品の発表が続いており、将来的な収益ドライバーとなる可能性が高いです。",
+          "evidence": "news.headlines[4].title, news.headlines[2].title, news.headlines[9].title"
+        },
+        {
+          "point": "自己株式取得枠の設定と実行、株式分割の実施は、株主還元への積極的な姿勢と、株式の流動性向上、投資家層拡大を通じた企業価値向上への意欲を示すポジティブな材料です。",
+          "evidence": "disclosures.items[2].title, disclosures.items[6].title, disclosures.items[7].title"
+        },
+        {
+          "point": "日本の製造業PMIは50を上回る拡大基調を維持し、日銀短観の大企業・中小企業製造業DIも改善しており、半導体関連企業にとって良好なマクロ環境が示されています。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.1, macro.boj.tankan.di.large_manufacturing.current_di=24.0, macro.boj.tankan.di.small_manufacturing.current_di=14.0"
+        }
+      ],
+      "cautions": [
+        "PERやPBRなどの重要なバリュエーション指標がデータ欠損のため、現在の株価水準が割安かどうかの判断ができません。",
+        "日経平均およびTOPIXが直近で下落し、市場全体が「downtrend」と判断されており、個別銘柄の好材料が相殺される可能性があります。",
+        "次回の日銀金融政策決定会合が9日後に控えており（2026-10-29〜2026-10-30）、金融政策変更の可能性による市場の変動リスクがあります。",
+        "中国企業の台頭による競争激化のニュースや、直近の寄前成行注文での売り越しが報じられており、株価への短期的な下押し圧力となる可能性があります。",
+        "中小企業の販売価格DIと仕入価格DIの差がマイナスであり、サプライチェーン全体でのコスト転嫁の難しさから、キオクシアもコスト面で圧迫を受ける可能性が残ります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "変わる潮目2026 企業のトップに聞く（20）キオクシアHD社長・太田裕雄氏 - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5FZ01tdjBCQmgwQlA2bG01TWlseHpKUV9jQTNnMjk5Z3FYOVJOdncyQk5VREwzZjFNcXNOSHNKQ3BidEVNSWVZdzhnS2psR0IwQkJaTjF4Z2I?oc=5",
+        "published": "Mon, 19 Oct 2026 20:00:00 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "寄前【成行注文】売り越しランキング ランド、ソニーＧ、キオクシア [08:35](株探ニュース) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPRmVpeWxXbzVtZXhDNmFVSVYwSUFvY1pIS0ZacEprVWlBLWZTWDZjSWJFeDBsSlAzcFNUZ25ZYV9Nd0dIajlHemwwLW5BQVVqbmE4cS1OcVNFaGtyNWI1UG9mcVR1aGZteTlhZnVpczZmNHlYSHRJVnUtcFYtUDlIYkpYNlZja0k?oc=5",
+        "published": "Mon, 19 Oct 2026 23:51:06 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "1Uサーバ向けのQLCフラッシュメモリ搭載SSD、キオクシア：最大122.88TBの大容量化 - EDN Japan",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE55aF9wU0xlT0Zib3p5czk0Wk44Tk5LTm5CRG9hUDh6emF4R0F2YnpWOEVtVjFka3JiVkFUOFRyN1ZrYnhwRWVYRjRLU2VIUHJ0UGE4Y3FUd29GYm54QTk2SHA0Wml3dXNxeHl3?oc=5",
+        "published": "Tue, 20 Oct 2026 00:00:00 GMT",
+        "publisher": "EDN Japan"
+      },
+      {
+        "title": "寄前【成行注文】売り越しランキング ランド、ソニーＧ、キオクシア [08:35] - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE16c1ZoOXliWHR3bnZ4RVZwamZ5Wk4xZXdkVXBYQlB2UmNVaTBxMFplSTBFR1JfTmUtVUtmZ1pEbkF4OUZjU0dSaG01anNubVRlNjdBVE1TOW13dzBhVXFOc2hR?oc=5",
+        "published": "Mon, 19 Oct 2026 23:35:54 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "エヌビディアからも期待...株価急騰「キオクシア」は\"AI特需\"の恩恵を受けられるのか！？【橋本幸治の理系通信】 - テレ東BIZ",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9CLXB6V1VJTFlsOGFvQ2M3Y1YzLXVnc2ZGVENZNXBkWF9DOUw3d2dReGQxcWp6NjVxR3diMF8yT0xIUFIzd1dHZTh2WjFlSEdjelJxZkpSMWpObW5HQUxR?oc=5",
+        "published": "Mon, 19 Oct 2026 10:15:36 GMT",
+        "publisher": "テレ東BIZ"
+      },
+      {
+        "title": "予想PER4.3倍のキオクシア株は今が買いか…株主還元はどこまで？プロ注目の「巨額利益の使い道」 - 現代ビジネス",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1WVUJqdDhuSXNoTmZOYzRNaUdkLXFKVDhKVUo3ZU94Ui16WjFjS2Z2QnItUVJDTXVnMi02NTBTYURUb1FCekZsM2xOcGlOWEU?oc=5",
+        "published": "Mon, 19 Oct 2026 01:51:37 GMT",
+        "publisher": "現代ビジネス"
+      },
+      {
+        "title": "キオクシア製の内蔵M.2 SSDが安い！ Amazonプライム感謝祭 - INTERNET Watch",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9maXRjc0hGbThDUldYZ3QteDBKMDBjNm5iLWpoRzFrbGtQR2EzYVoyQmNPMHJrNDFneWZPVUh1azJRV21Qa2VoZVVsRVYzTk45Q3ZJMVJsdzRLYm11R09aa29zMW4yOHg0SGxmc0pwckU?oc=5",
+        "published": "Mon, 19 Oct 2026 02:00:00 GMT",
+        "publisher": "INTERNET Watch"
+      },
+      {
+        "title": "【徹底解剖】日本の半導体はなぜ負けたのか？キオクシアとラピダスから読み解く「令和の逆転戦略」 - ブルーモ証券",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE05OHdfM0FaUVFyb3J1TjlxaVpMLVFhUjhfdlhGWmFabjNnZk5fU0lLd09PU1JVVEtNb3pGaVRkcmIzMVRidlhxSElneDlvTExhTTY5cm9jdTEyZlhjeWd6d29IUkhMTDRjY00wYQ?oc=5",
+        "published": "Mon, 19 Oct 2026 09:38:36 GMT",
+        "publisher": "ブルーモ証券"
+      },
+      {
+        "title": "中国企業が世界2位に浮上、日本唯一のメモリー大手キオクシア株は大幅下落―中国メディア - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOdWhLVWlzM0hTZmlMakU5VS1FQncyVTRGZTRrQTZkZUZJR2Nvb0Q1T21EQl9FZ1hwckNwcXlveTFXT2ZZdTVaeEdrUUc4Yy01VjVmelFBMlB1T1pWemdMUUtiamp1VmZJZFl5U3JSVjFXY0c1ZnRKZnFuNDh3LTJHZWxiYzhPNVk2WkNF0gGLAUFVX3lxTE51aEtVaXMzSFNmaUxqRTlVLUVCdzJVNEZlNGtBNmRlRklHY29vRDVPbURCX0VnWHByQ3BxeW95MVdPZll1NVp4R2tRRzhjLTVWNWZ6UUEyUHVPWlZ6Z0xRS2JqanVWZklkWXlTclJWMVdjRzVmdEpmcW40OHctMkdlbGJjOE81WTZaQ0U?oc=5",
+        "published": "Mon, 19 Oct 2026 08:00:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "キオクシア：エンタープライズSSD「KIOXIA CM9シリーズ」に直接液冷対応モデルを追加 - 千葉日報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBCRlUzNU02NWE0SjVoZzR0ZWx4MVVfRHl4T1oxa0pEbm9YNTlwM2Y3b0JaXzQwY1ZKUXY4cVBkakp2bE1DNXhiOXBmTXI4N1d5QTU3d2h3?oc=5",
+        "published": "Mon, 19 Oct 2026 10:45:10 GMT",
+        "publisher": "千葉日報オンライン"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "サンディスクコーポレーションとの投資計画に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260827527338.pdf",
+        "date": "2026-08-27 17:50:00"
+      },
+      {
+        "title": "（訂正）「主要株主である筆頭株主の異動に関するお知らせ」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260817521854.pdf",
+        "date": "2026-08-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況及び取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260810517251.pdf",
+        "date": "2026-08-10 18:15:00"
+      },
+      {
+        "title": "主要株主である筆頭株主の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260810517256.pdf",
+        "date": "2026-08-10 18:15:00"
+      },
+      {
+        "title": "当社子会社に対する訴訟の判決に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260803506332.pdf",
+        "date": "2026-08-03 15:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505265.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "株式分割及び株式分割に伴う定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505272.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "自己株式の取得枠設定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505280.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "勤務継続型株式報酬制度及び業績連動型株式報酬制度のユニット付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505321.pdf",
+        "date": "2026-07-31 15:30:00"
+      },
+      {
+        "title": "当社子会社に対する訴訟の陪審評決に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595788.pdf",
+        "date": "2026-07-17 13:00:00"
+      }
+    ]
+  }
+}
