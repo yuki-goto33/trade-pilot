@@ -1,0 +1,214 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-10-21T09:38:35+09:00",
+  "price_as_of": "2026-10-21",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 25,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家は stance=neutral (strength=55) であり、好業績の一方で長期金利のピークアウト懸念や重要イベントを前に様子見姿勢を示しており、buy 発火基準（bullish かつ strength≥70）を満たさない。",
+        "evidence": "fundamental_view.stance=neutral (strength=55)"
+      },
+      {
+        "reason": "テクニカル専門家は stance=bearish (strength=75) であり、5日線と25日線のデッドクロスや出来高を伴わない自律反発など中期下落トレンドが優勢で、安易な押し目買いはリスクが高い。",
+        "evidence": "technical_view.stance=bearish (strength=75)"
+      },
+      {
+        "reason": "市場レジームが downtrend と判定されており、相場全体の地合いの悪化が個別銘柄の上値を抑える要因となっている。",
+        "evidence": "reference.market_regime='downtrend'"
+      }
+    ],
+    "risks": [
+      "想定保有期間内に2026年10月29日〜30日の日銀金融政策決定会合が控えており、政策修正やタカ派的な発言があった場合に金利急上昇に伴って株価が急反発するリスクがある。",
+      "2026年11月13日の次回決算発表において、高水準の進捗率や追加の自社株買い・増配などの株主還元が発表された場合、下落基調から急反騰するリスクがある。",
+      "長期金利の上昇一服・ピークアウト懸念がさらに強まった場合、サポートラインである直近安値3,340円を下回り下落が一段と加速するリスクがある。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 50,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 25,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家は stance=neutral (strength=55) であり、好業績の一方で長期金利のピークアウト懸念や重要イベントを前に様子見姿勢を示しており、buy 発火基準（bullish かつ strength≥70）を満たさない。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=55)\"\n  },\n  {\n   \"reason\": \"テクニカル専門家は stance=bearish (strength=75) であり、5日線と25日線のデッドクロスや出来高を伴わない自律反発など中期下落トレンドが優勢で、安易な押し目買いはリスクが高い。\",\n   \"evidence\": \"technical_view.stance=bearish (strength=75)\"\n  },\n  {\n   \"reason\": \"市場レジームが downtrend と判定されており、相場全体の地合いの悪化が個別銘柄の上値を抑える要因となっている。\",\n   \"evidence\": \"reference.market_regime='downtrend'\"\n  }\n ],\n \"risks\": [\n  \"想定保有期間内に2026年10月29日〜30日の日銀金融政策決定会合が控えており、政策修正やタカ派的な発言があった場合に金利急上昇に伴って株価が急反発するリスクがある。\",\n  \"2026年11月13日の次回決算発表において、高水準の進捗率や追加の自社株買い・増配などの株主還元が発表された場合、下落基調から急反騰するリスクがある。\",\n  \"長期金利の上昇一服・ピークアウト懸念がさらに強まった場合、サポートラインである直近安値3,340円を下回り下落が一段と加速するリスクがある。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "60営業日騰落率・対TOPIX相対騰落率ともにマイナスで中期下落トレンドが継続しており、移動平均線やMACDも下落シグナルを示しています。直近の反発は出来高を伴っておらず、自律反発の域を出ていません。",
+      "points": [
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともにマイナスとなっており、中期的なアンダーパフォームと下落トレンドが明確です。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-7.12, price_technical.trend_60d.relative_to_topix_60d_pct=-8.54"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線を下回るデッドクロス状態にあり、株価も両移動平均線の下で推移しています。",
+          "evidence": "price_technical.last_close=3407.0, price_technical.sma5=3424.8, price_technical.sma25=3577.48, price_technical.sma5_vs_sma25=dead(5日線が25日線の下)"
+        },
+        {
+          "point": "MACDおよびシグナルがマイナス圏で推移し、ヒストグラムもマイナス拡大中で下落モメンタムが依然として優勢です。",
+          "evidence": "price_technical.macd=-75.32, price_technical.macd_signal=-60.94, price_technical.macd_histogram=-14.38"
+        },
+        {
+          "point": "直近営業日に+1.67%の反発を見せたものの、出来高が約513万株と前日の約3,211万株から急減しており、買いの勢いは限定的です。",
+          "evidence": "price_technical.recent_5_days[4].volume=5131000, price_technical.recent_5_days[3].volume=32113900"
+        },
+        {
+          "point": "市場全体のレジームも下降トレンドと判定されており、地合いの逆風も存在します。",
+          "evidence": "macro.market_regime.market_regime=downtrend"
+        }
+      ],
+      "cautions": [
+        "RSI14が34.5と売られすぎ水準に接近しており、自律反発が一時的に継続するリスクがあります。",
+        "米国市場におけるADRや金融セクターETFの動向は寄り付きで消化されやすく、寄付き後の実需の動向に注視が必要です。"
+      ],
+      "key_levels": {
+        "support": 3340.0,
+        "resistance": 3577.48
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "業績トレンドは増収増益基調で高水準を維持しているものの、直近ニュースで国内長期金利のピークアウト懸念による銀行株売りが報じられている。8日後の日銀金融政策決定会合や11月の決算発表を前に、様子見姿勢が強まりやすい局面。",
+      "points": [
+        {
+          "point": "業績は順調に拡大しており、2026年3月期の純利益2兆4,272億円に続き、2026年6月期（第1四半期）も純利益8,094億円と高い収益力を示している。",
+          "evidence": "fundamentals.earnings_trend.annual[0].net_income_oku_jpy=24272, fundamentals.earnings_trend.quarterly[0].net_income_oku_jpy=8094"
+        },
+        {
+          "point": "20年債入札の結果を受けて国内長期金利の上昇一服・ピークアウト懸念が意識され、銀行株全般に売りが出ていることが直近ニュースで報じられている。",
+          "evidence": "news.headlines[2].title='銀行株が下げ幅拡大、20年債入札好調で長期金利ピークアウトとの見方', news.headlines[8].title='みずほＦＧなど銀行株が後場一段安、２０年債入札結果を受け国内長期金利の上昇一服シナリオ意識'"
+        },
+        {
+          "point": "TOPIX連動ETFが25日移動平均線を下回り、市場レジームがdowntrendと判定されるなど、株式市場全体の地合いが軟調となっている。",
+          "evidence": "macro.market_regime.market_regime='downtrend', macro.market_regime.topix_close_vs_sma25='below'"
+        }
+      ],
+      "cautions": [
+        "2026年10月29日〜30日に日銀金融政策決定会合が控えており（残り8日）、金融政策の見通し次第で金利感応度の高い銀行株のボラティリティが急激に高まるリスクがある。",
+        "2026年11月13日に次回決算発表が予定されており、業績進捗や株主還元策の発表内容による価格変動リスクに注意が必要。",
+        "日本10年債金利は2.935%と高水準にあるが、金利低下シナリオが現実化した場合、銀行の利ざや拡大期待が剥落する可能性がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "【ログミー IR Movie】三菱ＵＦＪフィナンシャル・グループ（8306）成長を生み出すMUFGのチカラ《1.MUFGの“いま”と”これから”》 - YouTube",
+        "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE40al96VUNGQUtKcllzTkd5ZC1iMHloS2lXY0dRdHRZel9JbjlpeG1qUnhZanJnTkNac05VXzhfNHpUQQ?oc=5",
+        "published": "Tue, 20 Oct 2026 08:00:35 GMT",
+        "publisher": "YouTube"
+      },
+      {
+        "title": "コアウィーブ急落、銀行の信用リスクは限定的－JPモルガンが試算 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1YdmNGRHJVRVNBa3BkZjdWVmwzY3czeFRlMF91V2lCekFzdDRqdzZBZWVqX0VoYTNDcUV5RjJ2ZkpjelZCNHpScjdVMnM5ZjVzbVNBUXRJcmlDZHlORGEyVWtKdlppZEtxZGppaEtfVDlPN2I5?oc=5",
+        "published": "Tue, 20 Oct 2026 10:35:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "銀行株が下げ幅拡大、20年債入札好調で長期金利ピークアウトとの見方 - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBUelU5U1VVNXVDT0pIU1JjV043SFR6U1hWMmRqNmZQakdab0Nqa2Vkb0RBb0Nhc3d2aGZRZUhXbzc0OHM3UFpjbFRvZmpsWVdneGI0eHpqS3M4dUNndFNoMDFmWjVHLTJFanBVS0hnY0JqNGNG?oc=5",
+        "published": "Tue, 20 Oct 2026 04:44:00 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "（まとめ）広範な銘柄に売りが出た日経平均は841円安の64,075円で続落 - マネクリ",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1xeG5KWEtBVXAtbDNRRjhvQkM0LWdVcEV5WVFpNk12Q2NlSml0YnR6YUgtS25SSGVKTTBtTHp6MEpBZTNqMmVYWDZsdnY2S1hDX1VSU9IBV0FVX3lxTE1aQ05iUzBCdVI5aTIxdm9QeGc1RFRoaFYtOU9KYjdlUW5kV3JzTEk4cnNvVjUwQURZMkJWTzFwS1NjUWd1VUZzTGoxbWVWdnQyREJVa1JETQ?oc=5",
+        "published": "Tue, 20 Oct 2026 07:14:00 GMT",
+        "publisher": "マネクリ"
+      },
+      {
+        "title": "コアウィーブ売り、グローバル銀行のリスク限定的＝ＪＰモルガン - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOOVZ3MHc2UnZlZk9MVWJKNnZPS1U5bTlwMFItcHNMYWtYS2NKdHBHN3d4RDVlWGF6ZGhMT3o4aDRsejlqYzAzRHVMQnpyMXM2Zkg0QmJEMll3UG1wQ01mVFMtTklURTlkdnE1blA1TkhnbkdsQXB1TTRzSnJLT0YyTUFueE11cEXSAYcBQVVfeXFMTjlWdzB3NlJ2ZWZPTFViSjZ2T0tVOW05cDBSLXBzTGFrWEtjSnRwRzd3eEQ1ZVhhemRoTE96OGg0bHo5amMwM0R1TEJ6cjFzNmZINEJiRDJZd1BtcENNZlRTLU5JVEU5ZHZxNW5QNU5IZ25HbEFwdU00c0pyS09GMk1BbnhNdXBF?oc=5",
+        "published": "Tue, 20 Oct 2026 09:18:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "コアウィーブ売り、グローバル銀行のリスク限定的＝ＪＰモルガン｜Infoseekニュース - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA2dkx1NEZMQkd6c3U3eFY0MndIaVFkNm1pRnBCSGpzLWZnQkxwUFhPTzcyelhrLWNNRVBQQmx5c3NVcEpORjBua2Vfc2oweV91Z1NkcTlNWFhOd21qSG9HU2VFV3BMamFfMDBDTy13?oc=5",
+        "published": "Tue, 20 Oct 2026 09:18:54 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "日経平均、後場は482円安で寄り付き AI関連株に売り続く - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5yYkprRll2X0RzN2pFaXNic00wcFR6VnoxRnpRRV9rUGRPTzhlV3NUbFllaWJZZDNmbWVBTXB2N1hlUkhUcWRNUFpuUG5IaUhJUUFSZlVLNGgwZXFOczFYQUl6b1k3V1lENktQMTJDTzJ4SVVv?oc=5",
+        "published": "Tue, 20 Oct 2026 05:55:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "40代・50代 三菱UFJ株 今から買っても遅くない？｜FP Ti｜40代50代の家計・資産形成 - Howl.link",
+        "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE84TWczeWVGNXYwS2xuUnkwY3p0UThxU09XdlduOC1rV3VhZXJTT1UxSzlGcDJNc1poU0J3?oc=5",
+        "published": "Wed, 21 Oct 2026 00:04:59 GMT",
+        "publisher": "Howl.link"
+      },
+      {
+        "title": "みずほＦＧなど銀行株が後場一段安、２０年債入札結果を受け国内長期金利の上昇一服シナリオ意識 - ライブドアニュース",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE04VzBNd3ZDZ0Q0ZDZ3Wmw0M1c1THQzNFVFMUViWmdpZXgwYVlmZ083LUtoWXZTak54MGlvamZ0ejdraGFvWV9HRkNPcnRyUHk4cHBrREFHZ09pWE56anEw?oc=5",
+        "published": "Tue, 20 Oct 2026 04:08:57 GMT",
+        "publisher": "ライブドアニュース"
+      },
+      {
+        "title": "ひつじさん投資アカ on X: \"購入したもの 三菱ＵＦＪフィナンシャルグループ 9株 東京エレクトロン 1株\" - Howl.link",
+        "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE1JTU1TbXc0YTdZbk1rTzk4NGhBUGJSMEo4enhWRmNqUWoteERhM0ZGdG4zaXZtX2pZc2F3?oc=5",
+        "published": "Tue, 20 Oct 2026 06:46:20 GMT",
+        "publisher": "Howl.link"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期 自己資本比率について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260814520300.pdf",
+        "date": "2026-08-14 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕（連結）（公認会計士又は監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510381.pdf",
+        "date": "2026-08-06 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505851.pdf",
+        "date": "2026-08-03 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      }
+    ]
+  }
+}

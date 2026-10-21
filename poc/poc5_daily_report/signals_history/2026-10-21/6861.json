@@ -1,0 +1,172 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-10-21T09:42:16+09:00",
+  "price_as_of": "2026-10-21",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の確信度が strength=60 であり、buy の必須条件である strength≥70 を満たさないため、様子見が妥当である。",
+        "evidence": "fundamental_view.strength=60"
+      },
+      {
+        "reason": "テクニカル専門家は強気だが、統合ルールに基づき両者が強気に揃う局面は材料織り込み済みと判断し、新規エントリーは見送る。",
+        "evidence": "technical_view.stance=bullish (strength=80)"
+      },
+      {
+        "reason": "8営業日後の10月29日に決算発表と日銀金融政策決定会合が重なっており、高バリュエーション銘柄にとって極めて重要なイベントリスクが存在する。",
+        "evidence": "reference.next_earnings_date=2026-10-29 / reference.next_boj_meeting=2026-10-29〜2026-10-30"
+      }
+    ],
+    "risks": [
+      "2026年10月29日の決算発表において、現在の高いPER（40倍超）を正当化する十分な成長性が示されないリスク",
+      "日銀会合による金利上昇観測が強まった場合、グロース株としての性質を持つ同社株への下落圧力",
+      "市場全体が25日線を下回るdowntrendレジームにあり、外部環境悪化による連れ安のリスク",
+      "RSIが66.5と買われすぎ水準の70に接近しており、目先の利益確定売りが出やすい水準にある"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の確信度が strength=60 であり、buy の必須条件である strength≥70 を満たさないため、様子見が妥当である。\",\n   \"evidence\": \"fundamental_view.strength=60\"\n  },\n  {\n   \"reason\": \"テクニカル専門家は強気だが、統合ルールに基づき両者が強気に揃う局面は材料織り込み済みと判断し、新規エントリーは見送る。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=80)\"\n  },\n  {\n   \"reason\": \"8営業日後の10月29日に決算発表と日銀金融政策決定会合が重なっており、高バリュエーション銘柄にとって極めて重要なイベントリスクが存在する。\",\n   \"evidence\": \"reference.next_earnings_date=2026-10-29 / reference.next_boj_meeting=2026-10-29〜2026-10-30\"\n  }\n ],\n \"risks\": [\n  \"2026年10月29日の決算発表において、現在の高いPER（40倍超）を正当化する十分な成長性が示されないリスク\",\n  \"日銀会合による金利上昇観測が強まった場合、グロース株としての性質を持つ同社株への下落圧力\",\n  \"市場全体が25日線を下回るdowntrendレジームにあり、外部環境悪化による連れ安のリスク\",\n  \"RSIが66.5と買われすぎ水準の70に接近しており、目先の利益確定売りが出やすい水準にある\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 80,
+      "summary": "中期的な上昇トレンドを維持する中、短期でも5日線が25日線を上抜けるゴールデンクロスを形成。市場全体が軟調な中で、MACDの陽転や対TOPIXでの優位性が際立っている。",
+      "points": [
+        {
+          "point": "中期トレンドが非常に強固。60営業日騰落率が+13.27%、対TOPIX相対騰落率でも+11.84%と市場を大幅にアウトパフォームしている。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=13.27, price_technical.trend_60d.relative_to_topix_60d_pct=11.84"
+        },
+        {
+          "point": "短期的な買いシグナルの点灯。5日線が25日線を上抜けるゴールデンクロスが発生しており、MACDもプラス圏でシグナルを上回る陽転状態にある。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.macd=828.11, price_technical.macd_histogram=47.57"
+        },
+        {
+          "point": "外部環境の追い風。前夜のNY市場でADRが+1.33%、対応するテクノロジーセクターETFも+1.36%と上昇し、良好な地合いを示唆している。",
+          "evidence": "us_overnight.adr.change_1d_pct=1.33, us_overnight.sector_proxy.change_1d_pct=1.36"
+        }
+      ],
+      "cautions": [
+        "市場全体のレジームがdowntrend（TOPIXが25日線の下）であり、マクロ要因による急落が個別銘柄のテクニカルを損なうリスクがある",
+        "RSI14が66.5と買われすぎ水準の70に接近しており、期間高値（82940円）付近では利益確定売りが強まる可能性がある",
+        "前夜ADRの上昇は寄り付き価格に織り込まれるため、寄り天（寄り付きが当日の高値）となるリスクに注意が必要"
+      ],
+      "key_levels": {
+        "support": 79284.0,
+        "resistance": 82940.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "業績は3期連続の増収増益基調にありファンダメンタルズは極めて強固だが、PER40倍超とバリュエーションが高く、次回決算と日銀会合を8日後に控えたイベントリスクが意識される局面である。",
+      "points": [
+        {
+          "point": "業績は着実な拡大基調を維持しており、2026年3月期も増収・営業増益を見込んでいる。",
+          "evidence": "fundamentals.earnings_trend.annual (revenue_oku_jpy: 9673 -> 10591 -> 11693)"
+        },
+        {
+          "point": "主要顧客層である製造業の景況感は拡大圏（PMI 50超）を維持しており、FA（工場自動化）需要の底堅さが示唆される。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.1"
+        },
+        {
+          "point": "年初来42%高と堅調なパフォーマンスを見せてきたが、直近では寄り付き前の売り越しランキングに掲載されるなど需給の陰りが見られる。",
+          "evidence": "news.headlines[0].title, news.headlines[1].title"
+        }
+      ],
+      "cautions": [
+        "2026年10月29日に予定されている次回の決算発表において、高バリュエーションを正当化する成長性が示されるかが焦点となる（fundamentals.next_earnings_date）。",
+        "決算発表と同日に日銀金融政策決定会合が重なっており、金利上昇観測が強まった場合、高PER銘柄である同社株には下落圧力がかかるリスクがある（macro.boj.monetary_policy_meeting.next_meeting）。",
+        "市場全体が25日移動平均線を下回る「downtrend」レジームにあり、個別株の好材料が打ち消されやすい環境である（macro.market_regime.market_regime）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "寄前【成行注文】売り越しランキング キーエンス、ランド、住友鉱 [08:35](株探ニュース) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPT0FXNmNpdW5IX2JtZExXWm8zYnZXRDFmRm5zdHhnZ29TblBPb3RvTnNfU09ucVFubF9rUGpjX3FfNnd1Z0IxRGJvS0VvUWVjaXR6SW1ONnpWSXBjbTREZ0VnUk9jZktGVWJzMnhzWk11d2ZRUWxXVVR6c0hETWhIcVgyenFyaFk?oc=5",
+        "published": "Tue, 20 Oct 2026 23:51:02 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "年初来42%高のキーエンス、7%安のファナック、「100万円」投資するならどっち？ 執筆 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA2cFAtSWRRdFdDMmFiNE5idDhqZFhNd3ZMRmdTN0Vyam5hRmJZeTlaWEkwNlJ3Y055WmpuSEhGS1F4Y29hYk1ocHFmVVIyZVZQNFVWQkVfYTE5T2t6RWgwXzhYclhWdVBrZjJhaG4zRWc?oc=5",
+        "published": "Tue, 20 Oct 2026 03:27:00 GMT",
+        "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース"
+      },
+      {
+        "title": "もうお金を払うだけでは｢最強のAI｣を使えない…アンソロピックが導入した｢会員制AI｣に日本企業が入る方法 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1KUVA2bjJRbldHT3lsTVlmcG9ZR2dyeVZZYmRoWElCa1M5TE9SY2Q5XzFMV3B6R3BEWTd0U0FyeFI2d1VRT25LaXVYb1VkdlE?oc=5",
+        "published": "Tue, 20 Oct 2026 22:02:48 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "アニメの一休さんとは大違い…飲酒も肉食も恋愛も大好きで破天荒な禅僧が最期に残した\"人間臭すぎる一言\" - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE56NHdwU0ZlWFZSdG5FSG94N01MUFpGcFJjcnNSZ3U5LVR5RnZQSUw4c1ZQdzdKdU9fa0NWbjh0NGpkTGdFcnptbldld3A4T3M?oc=5",
+        "published": "Tue, 20 Oct 2026 14:12:19 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      }
+    ]
+  }
+}

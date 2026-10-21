@@ -1,0 +1,219 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-10-21T09:44:24+09:00",
+  "price_as_of": "2026-10-21",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "2026年10月19日の直近buyシグナルから日が浅く、現在はその後の推移を継続監視すべき局面であるため、再エントリーを抑制する。",
+        "evidence": "reference.recent_buy (date: 2026-10-19, 2 days ago)"
+      },
+      {
+        "reason": "ファンダメンタルズ専門家の強気度が55に留まり、重要イベント（日銀会合・決算）を控えて「静観が妥当」との判断を採用する。",
+        "evidence": "fundamental_view.stance=neutral (strength=55), fundamental_view.summary"
+      },
+      {
+        "reason": "テクニカル面で5日線と25日線のデッドクロスが継続しており、株価が移動平均線の下位で推移する上値の重い展開となっている。",
+        "evidence": "technical_view.points[0]: price_technical.sma5_vs_sma25=\"dead\""
+      }
+    ],
+    "risks": [
+      "2026年10月29-30日の日銀金融政策決定会合による金利・為替変動および市場全体のセンチメント悪化。",
+      "2026年11月6日の決算発表における進捗確認、および追加の株主還元策に対する期待と失望の交錯。",
+      "市場レジームがdowntrendにあり、個別材料に関わらず外部環境に連動して安値を更新するリスク。",
+      "モンゴルの大規模火災に関する日本企業の関与報道。事実関係次第でESG観点からの売り圧力となる懸念。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 60,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"2026年10月19日の直近buyシグナルから日が浅く、現在はその後の推移を継続監視すべき局面であるため、再エントリーを抑制する。\",\n      \"evidence\": \"reference.recent_buy (date: 2026-10-19, 2 days ago)\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズ専門家の強気度が55に留まり、重要イベント（日銀会合・決算）を控えて「静観が妥当」との判断を採用する。\",\n      \"evidence\": \"fundamental_view.stance=neutral (strength=55), fundamental_view.summary\"\n    },\n    {\n      \"reason\": \"テクニカル面で5日線と25日線のデッドクロスが継続しており、株価が移動平均線の下位で推移する上値の重い展開となっている。\",\n      \"evidence\": \"technical_view.points[0]: price_technical.sma5_vs_sma25=\\\"dead\\\"\"\n    }\n  ],\n  \"risks\": [\n    \"2026年10月29-30日の日銀金融政策決定会合による金利・為替変動および市場全体のセンチメント悪化。\",\n    \"2026年11月6日の決算発表における進捗確認、および追加の株主還元策に対する期待と失望の交錯。\",\n    \"市場レジームがdowntrendにあり、個別材料に関わらず外部環境に連動して安値を更新するリスク。\",\n    \"モンゴルの大規模火災に関する日本企業の関与報道。事実関係次第でESG観点からの売り圧力となる懸念。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "短期・中期移動平均線の下位で推移する上値の重い形状だが、MACDの改善により下げ止まりを模索する局面。市場全体の地合いが弱気レジームにあることが反発を抑制している。",
+      "points": [
+        {
+          "point": "5日線が25日線を下回るデッドクロス状態にあり、株価も両移動平均線の下で推移しているため、短期的なトレンドは弱気を示唆している。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead\", price_technical.last_close=2916.0"
+        },
+        {
+          "point": "MACDがシグナルを上回り、ヒストグラムがプラス圏で推移していることから、モメンタムの悪化には歯止めがかかりつつある。",
+          "evidence": "price_technical.macd_histogram=4.1, price_technical.macd=-19.75, price_technical.macd_signal=-23.85"
+        },
+        {
+          "point": "中期的な騰落率はプラスを維持しているが、対TOPIXでは相対的に劣後しており、買いの勢いが限定的である。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=1.41, price_technical.trend_60d.relative_to_topix_60d_pct=-0.02"
+        },
+        {
+          "point": "TOPIXが25日線を下回る「downtrend」レジームにあり、市場全体のリスク回避姿勢が個別株の重石となっている。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\""
+        }
+      ],
+      "cautions": [
+        "前夜のADRおよび米国通信セクターETFがともに下落しており、当日の寄り付きが軟調になるリスクがある (us_overnight.adr.change_1d_pct=-0.05, us_overnight.sector_proxy.change_1d_pct=-0.21)。",
+        "直近30営業日の安値である2850.5円を明確に割り込むと、下値模索が一段と進む可能性がある。",
+        "RSIが40.7と中立圏にあり、売られすぎ水準による値ごろ感からの反発を期待するには早い水準である。"
+      ],
+      "key_levels": {
+        "support": 2850.5,
+        "resistance": 2957.04
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "業績は増収増益基調にあり、大規模な自社株買いによる需給の下支えも期待できるが、1200倍を超える異常な予想PER（データ上の制約の可能性あり）や直近の海外火災関連ニュース、日銀会合・決算発表という重要イベントを控えており、現在は静観が妥当と判断する。",
+      "points": [
+        {
+          "point": "業績は年次・四半期ともに着実な成長トレンドを維持しており、2026年3月期のEPSは前期比13.4%増の183.55円を達成している。",
+          "evidence": "fundamentals.earnings_trend.annual[0].diluted_eps=183.55, fundamentals.earnings_trend.quarterly (EPS 43.0 -> 51.33)"
+        },
+        {
+          "point": "上限3,000億円に及ぶ大規模な自社株買いが継続中であり、9月末時点で進捗率約89%（2,666億円）に達している。需給面での強いサポートが期待されるが、枠の消化が進んでいる点には留意が必要。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary (累計取得価額総額266,679,422,525円)"
+        },
+        {
+          "point": "競合他社（ドコモ）とのミリ波共用中継器の共同開発など、インフラコストの効率化や次世代通信技術への投資を継続している点は、中長期的な競争力維持に寄与する。",
+          "evidence": "news.headlines[5].title (山手線でミリ波が使える日も現実に？ KDDIとドコモがタッグで挑む「ミリ波共用中継器」)"
+        }
+      ],
+      "cautions": [
+        "2026年11月6日の第2四半期決算発表が迫っており、業績進捗や追加還元への期待と失望の双方向のリスクがある（fundamentals.next_earnings_date）。",
+        "2026年10月29-30日の日銀金融政策決定会合が控えており、為替や金利変動を通じて市場全体および通信セクターのバリュエーションに影響を与える可能性がある（macro.boj.monetary_policy_meeting）。",
+        "モンゴルでの大規模火災の原因が日系企業であるとの報道があり、万が一関与が判明した場合にはESG観点からのネガティブインパクトが懸念される（news.headlines[1]）。",
+        "市場全体が25日移動平均線を下回るダウントレンドにあり、外部環境の悪化による連れ安リスクが存在する（macro.market_regime.market_regime=downtrend）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-10-19",
+    "days_ago": 2,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ＫＤＤＩ(株)【KDDIY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5UeXNVcVVoNnBzaHVrVDJRR3VqcmJrUDk1T0h1dDRJT0ttelAwWVk0UWZWT0JaQTIxMkRtQUxzLW1FdnNRVXpvUWZRb0p4cVlJ?oc=5",
+        "published": "Tue, 20 Oct 2026 15:13:43 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "モンゴルの自然保護区で大規模火災、出火原因は日系企業 - オルタナ",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5tTWVjc2NnNVk2X2VlcjFwTC1aOWxZb21vNUkteFZ2eEppQWx3Y3h3MWNra1lmMEhURlhwMkNyRGJCQ0JFTXFMVQ?oc=5",
+        "published": "Tue, 20 Oct 2026 23:09:21 GMT",
+        "publisher": "オルタナ"
+      },
+      {
+        "title": "KDDI財団、京大大学院理学研究科主催小学生向けイベント共催 科学の面白さ伝える - 電波新聞デジタル",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5NLXZlWWYyZXpFT253SDR6WmlMU2o3enRCZHlfUlVkUC16WWRtUzB4SFN1RFJLNGdZbFlVbTl6TksxUkNvaFc1cmx3YlVEUWlQT0E?oc=5",
+        "published": "Tue, 20 Oct 2026 20:00:10 GMT",
+        "publisher": "電波新聞デジタル"
+      },
+      {
+        "title": "モンゴルで大規模草原火災 日系企業の車が原因か - スポニチ Sponichi Annex",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQNjVrNS15YlpORXFtWlU2TjR5WG5HOF9oNWppelhKY0gwSFJfQjhXemdyNF9BQkw5Q1VsWWdzeEF0TGZYZTM5ZFlITjhtbXFPTWpPOENkSDZaZUxxN1JvNnFBRnpyRTlqY2pUdmhzLW1lcnBFV2RST05ybEt0bnZHMENnUFhQclRIaU9NUTZB?oc=5",
+        "published": "Tue, 20 Oct 2026 20:30:00 GMT",
+        "publisher": "スポニチ Sponichi Annex"
+      },
+      {
+        "title": "KDDI MUSEUMを訪問、モールス信号からスマートフォンまで通信の進化をたどる - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE02ZTZTVzFNdDdsekR5OENfbV9qeHE0QW1FWnp1VVRuektrcTc0UXFjdlhLRmduQXhrX2pOVXlsZFBMTXZhMUxEdVlsY3RfM3dodTdqWXF3cmhabk9reV94QzFITm96UVNKNDVaNkRSMVlWXzg3YThQTFpFcETSAXxBVV95cUxNNmU2U1cxTXQ3bHpEeThDX21fanhxNEFtRVp6dVVUbnpLa3E3NFFxY3ZYS0ZnbkF4a19qTlV5bGRQTE12YTFMRHVZbGN0XzN3aHU3allxd3JoWm5Pa3lfeEMxSE5velFTSjQ1WjZEUjFZVl84N2E4UExaRXBE?oc=5",
+        "published": "Tue, 20 Oct 2026 10:01:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "山手線でミリ波が使える日も現実に？ KDDIとドコモがタッグで挑む「ミリ波共用中継器」の実力 - ビジネスネットワーク",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE10SlNLb1lWQ203VUx2Mlh3MlR0eDhGWE0zZDJYRDdwQ2lSSE1SWDhmNURYVnVOUVFjbzI1MUJZN050aGtWSkUyVG5LZWFJTHgzWFVV?oc=5",
+        "published": "Tue, 20 Oct 2026 01:51:29 GMT",
+        "publisher": "ビジネスネットワーク"
+      },
+      {
+        "title": "“KDDI SUMMIT 2026” Held to Showcase the Latest Examples of AI Implementation in Society - 電通報",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBYeXF2MkUwVC13eGlSZ1NPVjlHdDVRemozRFl3YWQzZnkyNEhLMUNFNjBSYXBLUFVqbG9DVENtZWRlWmY0aGZ2SEVNWm1mU1E?oc=5",
+        "published": "Tue, 20 Oct 2026 00:58:42 GMT",
+        "publisher": "電通報"
+      },
+      {
+        "title": "KDDI 後篇 - BS朝日",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5CbWJCM0xwejZiU1lnQWNJRnM2NGRITVE4SXZ3bmFVWnVoRWtRUGFRb3JvYWtCMXRDZGgxdmF6SGdMOFBBcWgwa2dUYk9EWnZMVmhZOWFMc1lGYmZORW5ZSGNZdUdCRW5vOEQ0Z3dLTGY?oc=5",
+        "published": "Tue, 20 Oct 2026 03:12:20 GMT",
+        "publisher": "BS朝日"
+      },
+      {
+        "title": "Pontaパスで「ポイントプレミアム交換」開始　1ポイント1円以上の交換が可能に - ITmedia Mobile - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5QQU1VZkQ1RzFOSlFwcFVXZ2Z6RVlBdjBKMTNra2M5UHAwUTVHcXlHTmlGTXZYT3REY2dyWFAwbnV2SUJWMmZSc0NWazc5N1VTQWxfN1ZrQmdMU1ZRSlZxdk54LUpVU3lw0gFoQVVfeXFMTlBBTVVmRDVHMU5KUXBwVVdnZnpFWUF2MEoxM2trYzlQcDBRNUdxeUdOaUZNdlhPdERjZ3JYUDBudXZJQlYyZlJzQ1ZrNzk3VVNBbF83VmtCZ0xTVlFKVnF2TngtSlVTeXA?oc=5",
+        "published": "Tue, 20 Oct 2026 07:44:00 GMT",
+        "publisher": "ITmedia"
+      },
+      {
+        "title": "KDDIが提供するPontaパスの新サービスで特典交換がもっとお得に進化 - ニュースメディアVOIX",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5uTzJBOWFMVk9JUFVFZkN5V1V3VFRxXzdSWjRGbFdWZ0tYTkdCeW5UT3VMZVdHWklvYlpsTmJvbklvYVkzTjlyektYWXFNczZncmZ1VU9CSTdsazVBbW1FN2JkTnRsQklk?oc=5",
+        "published": "Tue, 20 Oct 2026 08:53:23 GMT",
+        "publisher": "ニュースメディアVOIX"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261002545526.pdf",
+        "date": "2026-10-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533350.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      }
+    ]
+  }
+}
