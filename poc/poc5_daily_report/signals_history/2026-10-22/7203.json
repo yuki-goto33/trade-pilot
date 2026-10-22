@@ -1,0 +1,212 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-10-22T09:36:16+09:00",
+  "price_as_of": "2026-10-22",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズの確信度が55と規定の買付基準（70以上）に達しておらず、減益トレンドやイベント前の不透明感が勝る状況である。",
+        "evidence": "fundamental_view.strength=55 / fundamental_view.points[2]: 純利益の減少傾向"
+      },
+      {
+        "reason": "テクニカル指標が既に強気（bullish）に転じており、好材料が一定程度株価に織り込まれた「遅いエントリー」になるリスクがあるため、統合判断ルールに基づき見送る。",
+        "evidence": "technical_view.stance=bullish (strength=75) / technical_view.points[0]: ゴールデンクロスの発生"
+      },
+      {
+        "reason": "10月末の日銀会合および11月初旬の決算発表を控え、為替のボラティリティ高騰や業績進捗への警戒が必要なタイミングである。",
+        "evidence": "reference.next_boj_meeting: 2026-10-29 / reference.next_earnings_date: 2026-11-05"
+      }
+    ],
+    "risks": [
+      "日銀金融政策決定会合による金利・為替変動が輸出採算に与えるネガティブな影響",
+      "2026年11月5日の決算発表における通期業績見通しの下方修正リスク",
+      "ランドクルーザーのリコール報道に端を発する品質信頼性懸念と対応コストの増大",
+      "市場レジームがneutralであり、指数（TOPIX）の軟化に連動した下落リスク"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズの確信度が55と規定の買付基準（70以上）に達しておらず、減益トレンドやイベント前の不透明感が勝る状況である。\",\n   \"evidence\": \"fundamental_view.strength=55 / fundamental_view.points[2]: 純利益の減少傾向\"\n  },\n  {\n   \"reason\": \"テクニカル指標が既に強気（bullish）に転じており、好材料が一定程度株価に織り込まれた「遅いエントリー」になるリスクがあるため、統合判断ルールに基づき見送る。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=75) / technical_view.points[0]: ゴールデンクロスの発生\"\n  },\n  {\n   \"reason\": \"10月末の日銀会合および11月初旬の決算発表を控え、為替のボラティリティ高騰や業績進捗への警戒が必要なタイミングである。\",\n   \"evidence\": \"reference.next_boj_meeting: 2026-10-29 / reference.next_earnings_date: 2026-11-05\"\n  }\n ],\n \"risks\": [\n  \"日銀金融政策決定会合による金利・為替変動が輸出採算に与えるネガティブな影響\",\n  \"2026年11月5日の決算発表における通期業績見通しの下方修正リスク\",\n  \"ランドクルーザーのリコール報道に端を発する品質信頼性懸念と対応コストの増大\",\n  \"市場レジームがneutralであり、指数（TOPIX）の軟化に連動した下落リスク\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "移動平均線のゴールデンクロスに加え、MACDの好転や中期的な相対的強さが確認でき、テクニカル面では上値を試す態勢が整っている。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日線を上回るゴールデンクロスが発生しており、株価は両線の上方で底堅く推移している。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.last_close=3103.0"
+        },
+        {
+          "point": "MACDがシグナルを上回り、ヒストグラムも24.27と大きくプラス圏へ浮上しており、上昇モメンタムの強化を示唆している。",
+          "evidence": "price_technical.macd=21.72, price_technical.macd_histogram=24.27"
+        },
+        {
+          "point": "60営業日の騰落率が+5.19%かつ対TOPIX相対騰落率も+3.95%と、中期的にも市場平均をアウトパフォームする堅調なトレンドを維持している。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=5.19, price_technical.trend_60d.relative_to_topix_60d_pct=3.95"
+        },
+        {
+          "point": "前夜の米国市場でADRが1.27%上昇しており、国内市場の寄り付きにおいて買いが先行しやすい地合いとなっている。",
+          "evidence": "us_overnight.adr.change_1d_pct=1.27"
+        }
+      ],
+      "cautions": [
+        "TOPIXの市場レジームが中立（neutral）であり、指数自体は25日線を下回っているため、全体相場の軟化による連れ安のリスクがある。",
+        "直近30営業日の高値である3149円が目先の抵抗線として意識されやすく、利益確定売りに押される可能性がある。",
+        "ADRの上昇分は寄り付き価格に織り込まれるため、寄り付き直後の材料出尽くし感による失速に注意が必要。"
+      ],
+      "key_levels": {
+        "support": 2988.2,
+        "resistance": 3149.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "1兆円規模の自社株買い継続や円安水準（158円台）が下値の支持要因となる一方、2024年3月期をピークとした減益トレンドに加え、直近のリコール報道や目前の日銀会合・決算発表を控えた不透明感が強い状況です。",
+      "points": [
+        {
+          "point": "大規模な株主還元の着実な執行。2024年8月に決議された1兆円を上限とする自社株買いに対し、2026年9月末時点で累計約1,950億円の取得が進捗している。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "円安環境による収益へのプラス寄与。ドル円相場が158.22円と前日比でも安定的に推移しており、輸出比率の高い同社にとって採算改善要因となる。",
+          "evidence": "macro.indices[2]"
+        },
+        {
+          "point": "中長期的な業績の減益トレンド。純利益は2024年3月期の4.9兆円をピークに、2025年3月期（4.7兆円）、2026年3月期計画（3.8兆円）と減少傾向にある。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        }
+      ],
+      "cautions": [
+        "2026年11月5日に予定されている次期決算発表。減益トレンドの中での進捗確認が焦点となる。",
+        "2026年10月29〜30日の日銀金融政策決定会合。金利上昇観測に伴う為替変動やセンチメント悪化のリスク。",
+        "ランドクルーザーのリコール（火災発生の潜在的リスク）報道。品質信頼性への懸念やリコール費用の発生リスク。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "トヨタ自動車(株)【7203】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ZZGdsaERPWFJGS2hIekZwall6QzFzWndlMk5uc3J5ci1MX0tyUmRLYVlVTFJ4QTFLSGQxQ1M2TXgtS0RRb2RTX1pHMW9FWEw4T2hJS1lSdENuNUhlT0U0?oc=5",
+        "published": "Wed, 21 Oct 2026 06:52:53 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "後藤凌寿 ごとうりょうじゅ（トヨタ自動車）｜プロ注目ドラフト候補選手査定2026 最速155キロ右腕の評価・特徴・プロフィール - ベースボールチャンネル",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9jYUg3SWQyODU4Q1ZQSVFhZzRidVpQUWRiZXBDUGhzVTZOWVB4bGJINEo0VzFhZHllUjdhdzBNaFV4SFV5bVdaMGVFOWFrMTRyUTExTw?oc=5",
+        "published": "Wed, 21 Oct 2026 17:30:35 GMT",
+        "publisher": "ベースボールチャンネル"
+      },
+      {
+        "title": "SUBARU運動部 ｜ 【日本選手権】初戦は10月31日、強豪・トヨタ自動車と対戦！ - 株式会社SUBARU",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE90RWtUVnV5WVpTeVFvVWZURzc3UEdLM2dfRmFnaFNpX3MxSkxzd0xuVW5DOFRnclQtUFhBTEdFbVNtX2JEWjN6V3VQMDdseEZNSXRMTFhlUXRpUUUzVUMwbFU3c0dlbTVoTnZFaGVKQmF1dw?oc=5",
+        "published": "Wed, 21 Oct 2026 09:22:30 GMT",
+        "publisher": "株式会社SUBARU"
+      },
+      {
+        "title": "【全車種を大転換】トヨタ副社長CTO・中嶋裕樹氏が語る〈SDV改革〉の勝算「ナノ1桁台で超微細加工した半導体が必要」 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE10Mm1xczNael90eWFtUW5mdWNrYXJwZk1ISk4wdG02TmlUcmtqdURSRGhYUU8yZjRoQlZ4WFVzN29XaWxhQlY5NWQ1d05Ha2VoQS16b2VCdXRJcXA1ODdKSkpPaHJpQ0FjdHQ3LURR?oc=5",
+        "published": "Wed, 21 Oct 2026 21:10:00 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "トヨタ・ランドクルーザー『300』に国内初のハイブリッドモデル登場 オフロードでも強みを発揮 『250』は国内導入未定？ - AUTOCAR JAPAN",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE83SllNNDZqcnJFQk85ZjRMOEZQWmFtS2ZfVlpFWnQwZXB1dTNOZ2c2bEpoYWJkU3FxRkhZakY2MW5NVlNKWkZoR2h6M1o?oc=5",
+        "published": "Wed, 21 Oct 2026 08:25:00 GMT",
+        "publisher": "AUTOCAR JAPAN"
+      },
+      {
+        "title": "NHTSAによると、トヨタ自動車は火災発生の潜在的リスクを理由にランドクルーザーハイブリッド車をリコール - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOb1ZiNkdLOExrMm93WEptRkpOaW0tbFE5MjlTT2xDZ2NhQkxRSzFEMDdRN2Npek5jYWFrdHJfZ2ZYNl8wTHU2alVIVzJLZGQ5cHQ4Y3lJOEtnTUxTSXhoQkRZLXVwZDBDMzVBbXVNTEpodnlNeVZBNDVfWWtyZ3k2X3RXV1JxcG93X08tU0Z1YTZWZ3A3cmc3cDhFZXkxNHZ4MHJic1FSbDNaaXpDaGxqZGFxOA?oc=5",
+        "published": "Wed, 21 Oct 2026 08:40:31 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "元テレ朝アナ・富川悠太氏、97歳＆95歳の叔母と“顔出し”3ショット 「今も夜中にアメリカ株をチェックし続けている投資家」と紹介 - 山陽新聞デジタル｜さんデジ",
+        "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9UeVpvVTc3UVhiT1Q1Q05XV1h0SlNnd044bFhJem9Gd2JVOUNsOE5xcVM1dTBMdVg4MGhHWGREbW4wcEpjMWwzOG5sbzJMNnowZ2Y4XzJIdlhLeEpsVnZKUnpxUkhwaXJJb0VHN3E5X1BETWM?oc=5",
+        "published": "Wed, 21 Oct 2026 15:47:24 GMT",
+        "publisher": "山陽新聞デジタル｜さんデジ"
+      },
+      {
+        "title": "池村健太郎（トヨタ自動車）｜ドラフト候補2026選手名鑑。最速150キロ左腕の評価・特徴・プロフィール - ベースボールチャンネル",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE8wQklULV82NWR4NFVRMERjYlhzaDBwYVZ2eXotVndLTlp5QW50SHZ5MnRtcTJmX1RZMGZ2bldzdGZ5Rm55SVE0QkI2Z2Z5eDlvRHVSbw?oc=5",
+        "published": "Wed, 21 Oct 2026 17:29:30 GMT",
+        "publisher": "ベースボールチャンネル"
+      },
+      {
+        "title": "オリエンタルランドは11連騰､上値を追う日経225の13銘柄 - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5rS29mQ0VCc29laDFaNFctYkVwTGhTNVltTDVTTHZzaXh6VFlJemZvRDNPSE83cFZxZnBpQjBRZU1XS0UwaW9GbUxFbk4wSHJGSUo5V2pBcw?oc=5",
+        "published": "Wed, 21 Oct 2026 03:30:00 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "トヨタのE2E自動運転機能搭載車は、SDVとして「Arene（アリーン）」上の構築に 「アリーンが非常に効率のよい開発につながっていく」 - Car Watch",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB2UExlLXhNTW1fTE02aDRtWXBSS3d6TkhnNEFySWRla1RTcFAxVGdrQ0kzVjZHTFRQQVUwdnlfQ1JLTVBWT1VmS1lsT2xrU2VtREJuSkZOZmhyMDNiV2h1TmZVbk8?oc=5",
+        "published": "Wed, 21 Oct 2026 04:59:59 GMT",
+        "publisher": "Car Watch"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261005545791.pdf",
+        "date": "2026-10-05 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903531084.pdf",
+        "date": "2026-09-03 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度の継続及び従業員に対する新たな株式交付制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507853.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507884.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503849.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "2027年3月期第１四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507860.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507846.pdf",
+        "date": "2026-08-04 14:00:00"
+      }
+    ]
+  }
+}

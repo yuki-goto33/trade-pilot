@@ -1,0 +1,146 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-10-22T09:36:58+09:00",
+  "price_as_of": "2026-10-22",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家が neutral (strength=60) であり、強気のエントリー基準（strength 70以上）を満たしていない。",
+        "evidence": "fundamental_view.stance=neutral, fundamental_view.strength=60"
+      },
+      {
+        "reason": "テクニカル面では非常に強い上昇トレンドにあるが、両専門家が揃って強気となる局面は材料の織り込み済みを示唆するため、ルールにより buy を見送る。",
+        "evidence": "technical_view.stance=bullish (strength=85), technical_view.points[0]"
+      },
+      {
+        "reason": "1週間以内に日銀会合、2週間以内に決算発表という極めて重要なイベントを控えており、ボラティリティの上昇が懸念される。",
+        "evidence": "reference.next_boj_meeting=2026-10-29, reference.next_earnings_date=2026-11-05"
+      }
+    ],
+    "risks": [
+      "2026年11月5日の決算発表における、2026年3月期の純損失からの回復度合いと通期見通しへの失望リスク。",
+      "10月29日〜30日の日銀金融政策決定会合に伴う、金利上昇および円安トレンドの急転換。",
+      "期間高値（4089.0円）付近での戻り売り圧力と、MACDの急角度な上昇に伴う短期的な反動調整。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家が neutral (strength=60) であり、強気のエントリー基準（strength 70以上）を満たしていない。\",\n   \"evidence\": \"fundamental_view.stance=neutral, fundamental_view.strength=60\"\n  },\n  {\n   \"reason\": \"テクニカル面では非常に強い上昇トレンドにあるが、両専門家が揃って強気となる局面は材料の織り込み済みを示唆するため、ルールにより buy を見送る。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=85), technical_view.points[0]\"\n  },\n  {\n   \"reason\": \"1週間以内に日銀会合、2週間以内に決算発表という極めて重要なイベントを控えており、ボラティリティの上昇が懸念される。\",\n   \"evidence\": \"reference.next_boj_meeting=2026-10-29, reference.next_earnings_date=2026-11-05\"\n  }\n ],\n \"risks\": [\n  \"2026年11月5日の決算発表における、2026年3月期の純損失からの回復度合いと通期見通しへの失望リスク。\",\n  \"10月29日〜30日の日銀金融政策決定会合に伴う、金利上昇および円安トレンドの急転換。\",\n  \"期間高値（4089.0円）付近での戻り売り圧力と、MACDの急角度な上昇に伴う短期的な反動調整。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 85,
+      "summary": "中期トレンドが市場平均を大きくアウトパフォームしており、MACDの乖離拡大と併せて強い上昇モメンタムが確認されます。期間高値の更新を目前に控えた良好な需給状況にあります。",
+      "points": [
+        {
+          "point": "中期トレンドが極めて強力であり、対TOPIX相対騰落率でも大幅なプラスを維持しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=18.64, relative_to_topix_60d_pct=17.4"
+        },
+        {
+          "point": "短期的な上昇加速により、MACDとシグナルの乖離（ヒストグラム）が拡大し、強い買いシグナルを示しています。",
+          "evidence": "price_technical.macd=72.05, macd_signal=40.29, macd_histogram=31.76"
+        },
+        {
+          "point": "株価は5日・25日移動平均線の上方に位置し、ゴールデンクロス形成後の上昇トレンドが継続しています。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, last_close=4087.0, sma5=3995.6, sma25=3802.24"
+        }
+      ],
+      "cautions": [
+        "直近の終値が期間高値（4089.0円）に極めて接近しており、心理的な節目での戻り売りや達成感による一時的な調整リスクがあります。",
+        "RSIは54.4と過熱感はありませんが、MACDの急角度な上昇は短期間での反動を招きやすい水準です。",
+        "市場レジームがneutralであり、TOPIXが25日線を下回っているため、相場全体の地合い悪化に伴う連れ安には注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 3802.24,
+        "resistance": 4089.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "営業利益の拡大傾向と継続的な自社株買いは評価できるが、2026年3月期の最終赤字計上の影響や、直近に控える日銀会合および決算発表という2大イベントを前に、現在は様子見が妥当な局面。製造業PMIの拡大や円安水準は事業環境として追い風だが、マクロ・個別両面の不透明感が強い。",
+      "points": [
+        {
+          "point": "本業の収益性は堅調に推移しており、営業利益ベースでは成長トレンドにある。2026年3月期は最終赤字となったものの、営業利益は1.5兆円を超え、直近の第1四半期も4,745億円の営業利益を確保している。",
+          "evidence": "fundamentals.earnings_trend.annual[0], fundamentals.earnings_trend.quarterly[0]"
+        },
+        {
+          "point": "株主還元姿勢が明確であり、直近2週間以内にも自己株式の取得状況を開示するなど、断続的な自社株買いの実施が下値を支える要因となっている。",
+          "evidence": "disclosures.items[0].date=2026-10-05"
+        },
+        {
+          "point": "製造業PMIが54.1と8ヶ月連続で拡大圏にあり、さらに158円台の円安水準が継続していることは、グローバルに展開する同社の製造業セグメントにおいてプラスの外部環境といえる。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.1, macro.indices[2].close=158.22"
+        }
+      ],
+      "cautions": [
+        "2026年11月5日の決算発表が迫っており、2026年3月期の純損失（-3,269億円）からの一時的な要因の剥落や、通期見通しに対する進捗が厳しく問われる。",
+        "日銀金融政策決定会合（10月29日〜30日）が7日後に控えており、国内金利（10年金利2.9%超）や為替相場の急変動によるボラティリティ上昇リスクがある。",
+        "日銀短観において大企業製造業の先行きDIが21.0と現状（24.0）から悪化が見込まれており、外需環境の減速懸念がリスクとなる。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261005545702.pdf",
+        "date": "2026-10-05 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903530947.pdf",
+        "date": "2026-09-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260811517496.pdf",
+        "date": "2026-08-11 18:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805509201.pdf",
+        "date": "2026-08-05 11:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504252.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期 連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504254.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の権利確定に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595854.pdf",
+        "date": "2026-07-17 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第４５９条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260703587315.pdf",
+        "date": "2026-07-03 11:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260630584099.pdf",
+        "date": "2026-06-30 15:30:00"
+      },
+      {
+        "title": "米ドル建て無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260623577032.pdf",
+        "date": "2026-06-24 11:30:00"
+      }
+    ]
+  }
+}
