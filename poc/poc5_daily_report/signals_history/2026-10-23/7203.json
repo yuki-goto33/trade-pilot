@@ -1,0 +1,213 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-10-23T09:32:53+09:00",
+  "price_as_of": "2026-10-23",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の確信度が60にとどまり、buyシグナルの発火基準（70以上）を満たしていないため、様子見と判断します。",
+        "evidence": "fundamental_view.strength=60"
+      },
+      {
+        "reason": "テクニカル面ですでに上昇トレンド（bullish）が確認されており、好材料が一定程度株価に織り込まれている可能性があります。",
+        "evidence": "technical_view.stance=bullish"
+      },
+      {
+        "reason": "市場全体がdowntrend（下落レジーム）にあり、個別銘柄の底堅さはあるものの、全体相場の急落に巻き込まれるリスクが払拭できません。",
+        "evidence": "reference.market_regime=downtrend"
+      },
+      {
+        "reason": "日銀会合（10/29-30）および決算発表（11/5）という重大なイベントを目前に控えており、ボラティリティ急増への警戒が必要です。",
+        "evidence": "reference.next_boj_meeting, reference.next_earnings_date"
+      }
+    ],
+    "risks": [
+      "市場レジームがdowntrend判定であり、外部環境のさらなる悪化による連れ安リスクがある",
+      "日銀金融政策決定会合による為替相場の急変（円高進行）が業績見通しを悪化させるリスク",
+      "RSI14が66.9と過熱圏に接近しており、目先は利益確定売りに押されやすい",
+      "11月5日の決算発表において、下方修正や期待を下回るガイダンスが出る可能性"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の確信度が60にとどまり、buyシグナルの発火基準（70以上）を満たしていないため、様子見と判断します。\",\n   \"evidence\": \"fundamental_view.strength=60\"\n  },\n  {\n   \"reason\": \"テクニカル面ですでに上昇トレンド（bullish）が確認されており、好材料が一定程度株価に織り込まれている可能性があります。\",\n   \"evidence\": \"technical_view.stance=bullish\"\n  },\n  {\n   \"reason\": \"市場全体がdowntrend（下落レジーム）にあり、個別銘柄の底堅さはあるものの、全体相場の急落に巻き込まれるリスクが払拭できません。\",\n   \"evidence\": \"reference.market_regime=downtrend\"\n  },\n  {\n   \"reason\": \"日銀会合（10/29-30）および決算発表（11/5）という重大なイベントを目前に控えており、ボラティリティ急増への警戒が必要です。\",\n   \"evidence\": \"reference.next_boj_meeting, reference.next_earnings_date\"\n  }\n ],\n \"risks\": [\n  \"市場レジームがdowntrend判定であり、外部環境のさらなる悪化による連れ安リスクがある\",\n  \"日銀金融政策決定会合による為替相場の急変（円高進行）が業績見通しを悪化させるリスク\",\n  \"RSI14が66.9と過熱圏に接近しており、目先は利益確定売りに押されやすい\",\n  \"11月5日の決算発表において、下方修正や期待を下回るガイダンスが出る可能性\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 65,
+      "summary": "個別銘柄のテクニカル指標は中期・短期ともに強い上昇トレンドを示しており、市場全体が急落する中で逆行高を見せるなど底堅さが目立ちます。ただし、市場レジームが下落トレンドにあるため、地合いに引きずられるリスクには警戒が必要です。",
+      "points": [
+        {
+          "point": "短期・中期の移動平均線がゴールデンクロスを形成し、MACDもシグナルを上回って拡大中で上昇トレンドが明確です。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.macd=35.7, price_technical.macd_histogram=17.33"
+        },
+        {
+          "point": "直近60営業日の騰落率がTOPIXを大幅に上回っており、中期的な買い優勢のトレンドが継続しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=7.04, price_technical.trend_60d.relative_to_topix_60d_pct=7.52"
+        },
+        {
+          "point": "日経平均が前日比-4.31%と急落する極めて不安定な地合いにおいて、本日は+0.55%と逆行高を見せており、相対的な強さが確認できます。",
+          "evidence": "macro.indices[0].change_1d_pct=-4.31, price_technical.recent_5_days[4].change_pct=0.55"
+        }
+      ],
+      "cautions": [
+        "TOPIXが25日線を下回り、市場レジームがdowntrend判定となっているため、全体相場の下落による連れ安リスクがあります。",
+        "前夜のADRが下落しており、寄り付きにかけての下押し圧力となる可能性があります。",
+        "RSI14が66.9と70付近まで上昇しており、短期的には過熱感による利確売りに押されやすい水準です。"
+      ],
+      "key_levels": {
+        "support": 2990.48,
+        "resistance": 3149.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "PBR1倍割れの割安感と継続的な大規模自己株買いが下値を支える一方、年次ベースの減益トレンドが懸念材料です。目前に日銀会合と決算発表という2大イベントを控えており、現時点では明確な方向性を見出しにくい局面と判断します。",
+      "points": [
+        {
+          "point": "1兆円規模の自己株式取得が着実に進行しており、需給面での強力な下支えが期待できる。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary（2026年9月に約1085億円を取得し累計約1950億円に到達）"
+        },
+        {
+          "point": "PBR 0.984倍と解散価値を下回る水準に加え、配当利回り3.23%とバリュエーション面の割安感は強い。",
+          "evidence": "fundamentals.valuation.price_to_book=0.984, fundamentals.valuation.dividend_yield_percent=3.23"
+        },
+        {
+          "point": "日本の製造業PMIが54.1と拡大圏を維持しており、欧州の9月新車登録も前年比9.3%増となるなど、主力市場の需要は堅調さが伺える。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.1, news.headlines[3].title"
+        }
+      ],
+      "cautions": [
+        "2024年3月期をピークに営業利益・純利益ともに減少傾向にあり、業績トレンドが軟化している（fundamentals.earnings_trend.annual）",
+        "6日後に日銀金融政策決定会合を控えており、政策変更に伴う為替・金利の乱高下リスクがある（macro.boj.monetary_policy_meeting）",
+        "11月5日の決算発表が迫っており、内容次第でボラティリティが急増する可能性がある（fundamentals.next_earnings_date）",
+        "TOPIXが25日線を割り込むdowntrendにあり、市場全体の地合い悪化による連れ安に注意が必要（macro.market_regime.market_regime）"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "トヨタ自動車(株)【7203】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ZZGdsaERPWFJGS2hIekZwall6QzFzWndlMk5uc3J5ci1MX0tyUmRLYVlVTFJ4QTFLSGQxQ1M2TXgtS0RRb2RTX1pHMW9FWEw4T2hJS1lSdENuNUhlT0U0?oc=5",
+        "published": "Thu, 22 Oct 2026 06:53:06 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "LEXUS、「LBX」を一部改良 | レクサス | グローバルニュースルーム - トヨタ自動車株式会社 公式企業サイト",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5tM0FWX1M3dlJ4Y0xLc3d0bThsd3pvQnRhY0pESEl0VXZOalpwZXNXcThiM3o4c0dwVlNJMy1mUUtiemg5QUxVRTVnQ0ZHdnFCX056N3FjR2hlLVlvWU1LeGM5WQ?oc=5",
+        "published": "Thu, 22 Oct 2026 04:32:24 GMT",
+        "publisher": "トヨタ自動車株式会社 公式企業サイト"
+      },
+      {
+        "title": "世界に先駆け｢プリウス｣の開発を指揮 トヨタ自動車元社長･奥田碩さん(93)死去 海外展開に注力 経団連の初代会長も務める - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5NQXliVHF6b0xLaXFqYXNNS0ZDbDVBcDdxTTU2blhCTld0V3FjWlFvUW5aYWR6YWJnT0JfdVZ1MXZhR0REN1gtZkctMTh3NjNBR3VReHBLaHI5d1F2NjZR?oc=5",
+        "published": "Thu, 22 Oct 2026 08:59:00 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "９月の欧州新車登録、９・３％増 ＥＶ好調維持、中国勢が販売拡大 - 山陽新聞デジタル｜さんデジ",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1DUXlaTmRaLXlkbXlrX3BPTTJPOVBucHMtWmE2akd2ekxNbmV1XzFNZy1kbTRWWGRfcFJfaUVkMVJVX241TGlSc1pYdXpuV3dLaHlYZXN4Vi1tdFFmdzJydWMta0w?oc=5",
+        "published": "Thu, 22 Oct 2026 21:17:30 GMT",
+        "publisher": "山陽新聞デジタル｜さんデジ"
+      },
+      {
+        "title": "サステナ経営塾2026:［資源循環と新事業］トヨタ自動車・中村慶至氏講義 - オルタナ",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBaZ0c1LTRYVWtYUHhaUkFmaXJXUzYtaV9iTWlBbFRXOXI0bDdzeVVPaE54cDhIejYzUGcxOWJXVGtqUHRNSk0wbw?oc=5",
+        "published": "Thu, 22 Oct 2026 02:11:48 GMT",
+        "publisher": "オルタナ"
+      },
+      {
+        "title": "トヨタがギガキャストに向け型締力9000トンのダイカストマシンの導入を完了：FAニュース - MONOist",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBBRllKSkNRdXVlOFU4ZHhDTXFhb3RhblhCY0RISXpqa3RGNGNncWFWbGlkOTVGcHdHZ01vQ1h0T2hnc2JobmRTdTlnbW9yTkJvOExMSlRoYmVTWWRjYWRwUjJTZllsMzhTVzN3bUlCNA?oc=5",
+        "published": "Thu, 22 Oct 2026 07:00:00 GMT",
+        "publisher": "MONOist"
+      },
+      {
+        "title": "飼料処理装置市場規模の成長推移2026：2032年7203百万米ドル到達を予測 - Newscast.jp",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9xSk51djVYVVN2cnh2MU1sNkhpOE9RMTlhdlFScHFuMWVERVlRVlp6RlAwYVpzaWtZY1NEYkxJeW1xQTRLUFUtR0J1NjV3enM?oc=5",
+        "published": "Thu, 22 Oct 2026 01:54:00 GMT",
+        "publisher": "Newscast.jp"
+      },
+      {
+        "title": "９月の欧州新車登録、９・３％増 - 埼玉新聞",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBxT2pCOXR5MTlwdmV2MkdsX2tzOW4yeUxoTDdqaXQ5YWhHNkxmOXV1amRKN2hDbEREV0hQUER6MlQ2cEtHV21MaW40allQN1BrX1ZzbVVHRQ?oc=5",
+        "published": "Thu, 22 Oct 2026 04:00:00 GMT",
+        "publisher": "埼玉新聞"
+      },
+      {
+        "title": "LBX - トヨタ自動車株式会社 公式企業サイト",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9NQnhfVy0tSFhMSWlJVnFsNGdudVdGWnpDMXFIaUVEZjRTRzgwdXJYdWszbklUQk5pNm5qQmswbS16THd0ZXZ4ZXBvbzBCLUg1LVhVQWd6OWljQkk?oc=5",
+        "published": "Thu, 22 Oct 2026 04:32:33 GMT",
+        "publisher": "トヨタ自動車株式会社 公式企業サイト"
+      },
+      {
+        "title": "LEXUSが描く、陸・海・空のモビリティの未来を10月22日（木）より展示。 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBrSzVhdnFkeFpicElDbTFMclNDVEd3bkNqZFhYb3N4T004andSb0l5NXZ4S2o1VVFDbE80bHRLcnV4TXpSTGhxSkEzWm1ncGdCOU1ZRWdIZFFBTEdndDN2ZEY3a2g4WWo3THc?oc=5",
+        "published": "Thu, 22 Oct 2026 08:00:01 GMT",
+        "publisher": "PR TIMES"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261005545791.pdf",
+        "date": "2026-10-05 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903531084.pdf",
+        "date": "2026-09-03 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度の継続及び従業員に対する新たな株式交付制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507853.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507884.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503849.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "2027年3月期第１四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507860.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507846.pdf",
+        "date": "2026-08-04 14:00:00"
+      }
+    ]
+  }
+}

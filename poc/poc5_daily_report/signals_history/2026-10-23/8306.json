@@ -1,0 +1,193 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-10-23T09:38:34+09:00",
+  "price_as_of": "2026-10-23",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の strength が 60 であり、強気（buy）の基準である 70 に達しておらず、確実なカタリスト不足と判断されるため。",
+        "evidence": "fundamental_view.strength=60, fundamental_view.summary: 直近の新規材料に乏しく中立判断"
+      },
+      {
+        "reason": "テクニカル面で強い下落トレンド（strength 90）が継続しており、短期的な下げ止まりが確認できない「落ちるナイフ」の状態にあるため。",
+        "evidence": "technical_view.stance=bearish, technical_view.points[2]: 5日線が25日線を下回るデッドクロス状態"
+      },
+      {
+        "reason": "市場全体がダウントレンドにあり、ファンダメンタルズの評価が高くともリスクオフの圧力が強く、安易なエントリーは控えるべき局面であるため。",
+        "evidence": "reference.market_regime=downtrend, fundamental_view.cautions: VIX指数急騰によるリスクオフの懸念"
+      }
+    ],
+    "risks": [
+      "2026年10月29日〜30日の日銀金融政策決定会合における政策金利変更や総裁発言による急激なボラティリティの拡大。",
+      "RSIが30.1と売られすぎ水準にあり、テクニカル的な自律反発が発生し、短期的な踏み上げが起こる可能性。",
+      "2026年11月13日の次回決算発表に向けた、業績進捗や株主還元策に対する過度な期待感とその剥落。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の strength が 60 であり、強気（buy）の基準である 70 に達しておらず、確実なカタリスト不足と判断されるため。\",\n   \"evidence\": \"fundamental_view.strength=60, fundamental_view.summary: 直近の新規材料に乏しく中立判断\"\n  },\n  {\n   \"reason\": \"テクニカル面で強い下落トレンド（strength 90）が継続しており、短期的な下げ止まりが確認できない「落ちるナイフ」の状態にあるため。\",\n   \"evidence\": \"technical_view.stance=bearish, technical_view.points[2]: 5日線が25日線を下回るデッドクロス状態\"\n  },\n  {\n   \"reason\": \"市場全体がダウントレンドにあり、ファンダメンタルズの評価が高くともリスクオフの圧力が強く、安易なエントリーは控えるべき局面であるため。\",\n   \"evidence\": \"reference.market_regime=downtrend, fundamental_view.cautions: VIX指数急騰によるリスクオフの懸念\"\n  }\n ],\n \"risks\": [\n  \"2026年10月29日〜30日の日銀金融政策決定会合における政策金利変更や総裁発言による急激なボラティリティの拡大。\",\n  \"RSIが30.1と売られすぎ水準にあり、テクニカル的な自律反発が発生し、短期的な踏み上げが起こる可能性。\",\n  \"2026年11月13日の次回決算発表に向けた、業績進捗や株主還元策に対する過度な期待感とその剥落。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 90,
+      "summary": "中期下落トレンドが鮮明な中、25日線からのデッドクロスとMACDの弱気シグナルが重なり、強い下落圧力が継続しています。市場全体のダウントレンドも重石となり、下値を模索する展開が予想されます。",
+      "points": [
+        {
+          "point": "明確な中期下落トレンドの継続。60営業日の騰落率および対TOPIX相対騰落率がともに大幅なマイナスを記録しており、構造的な弱含みが続いています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-13.93, relative_to_topix_60d_pct=-13.45"
+        },
+        {
+          "point": "短期的な売り圧力の加速。直近5営業日で複数回の大きな下落を見せ、終値が期間安値水準まで押し下げられています。",
+          "evidence": "price_technical.last_close=3231.0, price_technical.period_low=3228.0, price_technical.recent_5_days[4].change_pct=-4.21"
+        },
+        {
+          "point": "テクニカル指標の悪化。5日線が25日線を下回るデッドクロス状態にあり、MACDもシグナルを下回りながらマイナス圏で拡大しています。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.macd=-79.2, price_technical.macd_histogram=-25.44"
+        },
+        {
+          "point": "市場全体の地合い悪化。TOPIXが25日線を下回りダウントレンドと判定されているほか、日経平均も直近で急落しており、外部環境からの支援が期待できません。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.indices[0].change_1d_pct=-4.31"
+        }
+      ],
+      "cautions": [
+        "RSI14が30.1と売られすぎ水準に接近しており、テクニカル的な自律反発が一時的に発生するリスクがあります。",
+        "前夜のADRがプラス圏（+1.44%）で推移しているため、寄り付きでの反発や下げ渋りの可能性がありますが、国内市場のセンチメントを逆転させるには至らない可能性があります。",
+        "VIX指数が14%以上上昇しており、市場全体のボラティリティ拡大による乱高下に注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 3228.0,
+        "resistance": 3372.8
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "業績は過去最高益を更新する勢いで推移し、国内金利の上昇も収益環境に追い風だが、直近の新規材料に乏しく、日銀会合を目前に控えた不透明感から中立判断とする。",
+      "points": [
+        {
+          "point": "業績は強い増益基調にあり、直近の2027年3月期第1四半期（2026-06期）でも純利益8,094億円と高水準を維持している。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "日本の10年債金利が2.923%と高い水準にあり、銀行業にとって利ざや改善を期待しやすいマクロ環境が続いている。",
+          "evidence": "macro.rates.jgb_10y_percent.value=2.923"
+        },
+        {
+          "point": "ROE 9.5%と効率的な経営がなされており、PBR 1.6倍、配当利回り2.8%とバリュエーションは妥当な範囲内にある。",
+          "evidence": "fundamentals.valuation.return_on_equity=0.095, fundamentals.valuation.price_to_book=1.602, fundamentals.valuation.dividend_yield_percent=2.8"
+        }
+      ],
+      "cautions": [
+        "2026年10月29日〜30日の日銀金融政策決定会合が6日後に迫っており、政策金利の変更や総裁発言によるボラティリティのリスクが極めて高い (macro.boj.monetary_policy_meeting.days_until_next=6)",
+        "市場全体が下降トレンド（downtrend）にあり、VIX指数も急騰（+14.09%）するなど、リスクオフの地合いが株価の重石となる可能性がある (macro.market_regime.market_regime, macro.indices.VIX)",
+        "2026年11月13日に予定されている次回決算発表において、中間期の進捗や株主還元策の追加公表の有無が注目される (fundamentals.next_earnings_date)"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)三菱ＵＦＪフィナンシャル・グループ【8306】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1oNVRyU21seTRreG9UUWh2VU9PUkRfbHNWdWxFMHFIZnZ5dnNPTnR2dU8taVdGb0xkZEc5MkdnZ2tmY1VHc0dkODdqZXpnS01xZGtMMGhoYkg3OUUzamRF?oc=5",
+        "published": "Thu, 22 Oct 2026 06:52:43 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "人工衛星でイルカ調査 三菱UFJと天草市 生態に配慮し船運航 - 沖縄タイムス社",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9XNWRDSGtfaWx1SUI0cVItSGFTM0JRbGJZVDNPYU5vTUhpY0llcHJCZVdTVzB0MEVjNmtTYkRBaEctbERoQUUyYkhjOTVHVjZmcDAzbDExV2s5eHJhX1E?oc=5",
+        "published": "Thu, 22 Oct 2026 18:58:00 GMT",
+        "publisher": "沖縄タイムス社"
+      },
+      {
+        "title": "“PHPに重大な脆弱性” 「緊急メンテナンス」身近なサービスなど次々停止 脅威となるAIの進化“攻撃リスク”も - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5rNWdYMGxOT3RsLUlQOF9PcGw1M09fTDRqUl93NTdDWHBPYTRXRll3dzYwVVQwWExuWjRraU9iSkZPaVo2eVlqNjA3SWdnS1ZmUDdWWmZFT29CUXQyeEY0aGV4MFVuVnNMbzFRaDFR?oc=5",
+        "published": "Thu, 22 Oct 2026 21:23:27 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "銀行株は買いか？2026年の今後の見通しと本命5銘柄を分析 - 日本投資機構株式会社",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5FcWR5bzdMRHE3SVhxU0U4eDBwSDhLLWF5bDdFQktZTjVpZHBTM1NYT0htMGVXb2p5R25POXFQb1o0STEtSjg5TVNVdWg5WnpVR0Vzak9Xaw?oc=5",
+        "published": "Thu, 22 Oct 2026 09:09:29 GMT",
+        "publisher": "日本投資機構株式会社"
+      },
+      {
+        "title": "Cloudflare、PHPの重大脆弱性への攻撃試行が数百万件に達したと報告 政府サイトにも影響 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1xb19acU9HbmlNbjUyMC1IaHpKSUF6NUFLU3N4Z2lLMTR4eFJYUFNxRjBHRWJDN1lwX1lhXzRpaFJnTnczWXltdlJWdFl2YVZNQmJrSE1oRHRoU0t4VFZNVkZwZ3ZqY2ZXb21hcXdBX1pBUmpF?oc=5",
+        "published": "Thu, 22 Oct 2026 04:35:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "特設ステージ上で息の合った阿波踊りを披露する様子 - 伊豆下田経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE83SDMxZ2tyUTk4Y2FyakFyRkM5UFpIbk9xVmpCVmoza1J0VVo1aXRKcGJWVGNrOFdiVEdCSWQ1WWZMdHlSMUVsaXd5eHRzZmdMdlB6Xy1n?oc=5",
+        "published": "Thu, 22 Oct 2026 05:34:14 GMT",
+        "publisher": "伊豆下田経済新聞"
+      },
+      {
+        "title": "AAA宇野実彩子「3姉妹の成長はおばちゃんの幸せ」姪っ子たちとの笑顔ショット披露「幸せな空間」「仲良しで最高」の声 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE53d1hrTGF3SFR6cjMyVkpQMEFRZEFsNUV2V3UwUHBWci10ZW5fcUFMQVdseTVoUzlkSEVpU0trblRMczZ3RHhTLWxwUEJrWHJJajY0XzgxMDd0OHhXNm5tUmZ0aG9tNl8zaVgyUG5R?oc=5",
+        "published": "Thu, 22 Oct 2026 04:00:50 GMT",
+        "publisher": "au Webポータル"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期 自己資本比率について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260814520300.pdf",
+        "date": "2026-08-14 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕（連結）（公認会計士又は監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510381.pdf",
+        "date": "2026-08-06 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505851.pdf",
+        "date": "2026-08-03 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      }
+    ]
+  }
+}

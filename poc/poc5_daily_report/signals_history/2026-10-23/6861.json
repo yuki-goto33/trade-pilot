@@ -1,0 +1,204 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-10-23T09:40:00+09:00",
+  "price_as_of": "2026-10-23",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズの評価が strength 60 に留まり、buy エントリーの基準値（70）に達していないため、カタリスト不足と判断。利益率は高いものの、目先の不透明感が強い。",
+        "evidence": "fundamental_view.strength=60, fundamental_view.summary"
+      },
+      {
+        "reason": "テクニカル面で25日移動平均線を割り込み、MACDもデッドクロスを拡大させており、下落モメンタムが強く、押し目を確認できる状況にない。",
+        "evidence": "technical_view.points[0]: price_technical.last_close=78330.0 < price_technical.sma25=79520.4"
+      },
+      {
+        "reason": "市場全体が downtrend レジームにあり、地合いの悪化が個別株の押し下げ要因となるリスクが高まっている。",
+        "evidence": "reference.market_regime=downtrend"
+      },
+      {
+        "reason": "次回決算発表および日銀金融政策決定会合が10月29日から控えており、重要イベント前のポジション構築はリスクが高い。",
+        "evidence": "fundamental_view.cautions[0], reference.next_earnings_date=2026-10-29"
+      }
+    ],
+    "risks": [
+      "2026年10月29日の第2四半期決算発表に伴う急変リスク",
+      "同日の日銀金融政策決定会合による為替・金利変動の影響",
+      "テクニカル指標（MACD・ADR）が悪化しており、サポートライン 73510円付近までの下値模索",
+      "VIX指数上昇を伴う市場全体のボラティリティ拡大とリスクオフ姿勢の強まり"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 60,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズの評価が strength 60 に留まり、buy エントリーの基準値（70）に達していないため、カタリスト不足と判断。利益率は高いものの、目先の不透明感が強い。\",\n      \"evidence\": \"fundamental_view.strength=60, fundamental_view.summary\"\n    },\n    {\n      \"reason\": \"テクニカル面で25日移動平均線を割り込み、MACDもデッドクロスを拡大させており、下落モメンタムが強く、押し目を確認できる状況にない。\",\n      \"evidence\": \"technical_view.points[0]: price_technical.last_close=78330.0 < price_technical.sma25=79520.4\"\n    },\n    {\n      \"reason\": \"市場全体が downtrend レジームにあり、地合いの悪化が個別株の押し下げ要因となるリスクが高まっている。\",\n      \"evidence\": \"reference.market_regime=downtrend\"\n    },\n    {\n      \"reason\": \"次回決算発表および日銀金融政策決定会合が10月29日から控えており、重要イベント前のポジション構築はリスクが高い。\",\n      \"evidence\": \"fundamental_view.cautions[0], reference.next_earnings_date=2026-10-29\"\n    }\n  ],\n  \"risks\": [\n    \"2026年10月29日の第2四半期決算発表に伴う急変リスク\",\n    \"同日の日銀金融政策決定会合による為替・金利変動の影響\",\n    \"テクニカル指標（MACD・ADR）が悪化しており、サポートライン 73510円付近までの下値模索\",\n    \"VIX指数上昇を伴う市場全体のボラティリティ拡大とリスクオフ姿勢の強まり\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 80,
+      "summary": "市場全体がdowntrendレジームに転落する中、株価は25日移動平均線を明確に割り込み、MACDのデッドクロスも拡大。短期モメンタムの悪化が顕著で、さらなる下値模索の可能性が高い。",
+      "points": [
+        {
+          "point": "直近5営業日連続の下落により、サポートとして期待された25日移動平均線を大陰線で下抜けた。",
+          "evidence": "price_technical.last_close=78330.0, price_technical.sma25=79520.4, price_technical.recent_5_days"
+        },
+        {
+          "point": "MACDがデッドクロスを継続しており、ヒストグラムのマイナス幅も拡大傾向にあるため、下落の加速を示唆している。",
+          "evidence": "price_technical.macd=581.19, price_technical.macd_signal=828.84, price_technical.macd_histogram=-247.65"
+        },
+        {
+          "point": "TOPIXが25日線を下回り、5日騰落率もマイナスのため、市場全体のレジームがdowntrend（下降トレンド）に判定されている。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.market_regime.topix_close_vs_sma25=below"
+        },
+        {
+          "point": "前夜のADRが下落しており、翌営業日の寄り付き段階からさらなる売り圧力が波及する蓋然性が高い。",
+          "evidence": "us_overnight.adr.change_1d_pct=-1.45"
+        }
+      ],
+      "cautions": [
+        "VIX指数が14%急騰しており、市場全体のボラティリティ拡大による突発的な乱高下リスクがある",
+        "RSIが41.2まで低下しており、30付近の売られすぎ水準に接近した際の自律反発の可能性",
+        "ADRの下落分が寄り付き価格に織り込まれた後のショートカバーによる戻り"
+      ],
+      "key_levels": {
+        "support": 73510.0,
+        "resistance": 79520.4
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "業績は過去最高水準の更新を見込む堅調なトレンドにあり、製造業PMIも拡大圏を維持しているが、決算発表と日銀会合を目前に控えており、短期的な不透明感が強い。",
+      "points": [
+        {
+          "point": "2026年3月期は増収増益を計画しており、営業利益率が約51%に達する極めて高い収益性と成長トレンドを維持している。",
+          "evidence": "fundamentals.earnings_trend.annual[0]"
+        },
+        {
+          "point": "日本の製造業PMIが54.1と50を上回って推移しており、同社の主要な顧客基盤である製造業のFA投資需要が底堅く推移している。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=54.1"
+        },
+        {
+          "point": "他企業の成功指標とされるほど圧倒的な高収益体質と経営効率を維持しており、ファンダメンタルズの質は依然として国内トップクラスである。",
+          "evidence": "news.headlines[1], news.headlines[7]"
+        }
+      ],
+      "cautions": [
+        "2026年10月29日に第2四半期決算発表を控えており、発表内容によるボラティリティ増大のリスクがある（fundamentals.next_earnings_date=2026-10-29）。",
+        "決算と同日程（10/29-30）で日銀金融政策決定会合が開催され、金利や為替の変動が株価に影響を与える可能性がある（macro.boj.monetary_policy_meeting.next_meeting）。",
+        "市場全体がdowntrendにあり、VIX指数の上昇を伴うリスクオフ環境下では、高PER銘柄への売り圧力が強まりやすい（macro.market_regime.market_regime=downtrend, macro.indices[4].change_1d_pct=14.09）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "執念の創薬で時価総額10兆円に ノーベル賞級技術とキーエンス級収益 - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5odm8ySHh1SVFGQVlVMFJEOWRZWlNZUkphUml2Smo0YTV3bVZYb3hjUzgyUEJLZ2VHbHJVUktoRmxNc3BTWXZYRlM1emt5UXMyc21aOTNyY1cxYzVwYVI2NWJQcy0?oc=5",
+        "published": "Thu, 22 Oct 2026 15:00:00 GMT",
+        "publisher": "日経ビジネス電子版"
+      },
+      {
+        "title": "平均年収は業界トップ級の1300万円超 営業利益率48％のカギは販管費 - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE8xTlg2S3RjOGpvNEdyVjVpTmVZaWdFSzFNZlhfbDBmTHNSWmxhbEt2OU9KZ0U2U2RKVnBjZ1kwdy0waXVHMXFBUHQzckd2QVRPQ1phUWd5ekVSTVRkbTEtYld4S3U?oc=5",
+        "published": "Thu, 22 Oct 2026 15:00:00 GMT",
+        "publisher": "日経ビジネス電子版"
+      },
+      {
+        "title": "中外製薬・奥田修社長、「『自前オンリー主義』を転換」 外部知見掛け合わせへ - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5QV1NENEJiNlhCeUFRaG1hY3NNRHp3UHdYa1VaM1lIOXdpY0FvUVY3amxUNjVZU29jOXJ4WFotV2trZUlxX19Iem9jLV9NaHdsWEJBZ2Myd1JDTm1TVmducHZ1ZGE?oc=5",
+        "published": "Thu, 22 Oct 2026 15:00:00 GMT",
+        "publisher": "日経ビジネス電子版"
+      },
+      {
+        "title": "中国勢の台頭で創薬競争が激変 10年続いた開発も「ノー」、新薬を生む引き算 - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5lazRHU09DeVdYdUFJYkJJeWdoSHRUSGpCdnR4M2VDcFNZNnVneVJ6bUxFQkd2WUVqeExaSzBPOXpsaWdWUW93WG1RNHp6a0xDVDdTMjZ5UlcydXRCVURSOTFqTk8?oc=5",
+        "published": "Thu, 22 Oct 2026 15:00:00 GMT",
+        "publisher": "日経ビジネス電子版"
+      },
+      {
+        "title": "人事制度改革で異動を手挙げ制に 4段階飛び級も降級も、異能を生かす組織術 - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBTaWNqSVBXUnV0enhzYzNpcUxxME4tVTRsZkhvSDU4dWFqUDltSC1VeUo4a2o2T0dkd05MeGNRWUMxWTdacmR1X1NqQk9SRDBJRndmeGFvWUJTQkhEQnpURFFDNjM?oc=5",
+        "published": "Thu, 22 Oct 2026 15:00:00 GMT",
+        "publisher": "日経ビジネス電子版"
+      },
+      {
+        "title": "一橋大学大学院・楠木建特任教授 「中外の創薬力が起点とロシュも理解」 - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE04Y3pJZWt6VXBnOUhyWnJsWnBvd1NpU3kzR0F3cGNuZ0tUQVJLTS1SM3NSN0FxZ3Jrcm03SHMyel84MnA5WjVKUTdRdjYycV9FWndQRzFkSllfR3pPZWEwV3Fha2c?oc=5",
+        "published": "Thu, 22 Oct 2026 15:00:00 GMT",
+        "publisher": "日経ビジネス電子版"
+      },
+      {
+        "title": "過半出資を受けても自主独立経営 ロシュもたたえる創薬力、「徒手空拳」実る - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE44YzJyYjNYOWZMUGZYdkIzNk9STEdRaHBIVko1WWd4OUFhVHFKWmh4SFI1Yl9XbWdtM2ZWSW1paVNfVGc0NEZMNUt3WmdoZ0YtamZ1UE1YTEtzWjJkazdMOEVuWkk?oc=5",
+        "published": "Thu, 22 Oct 2026 15:00:00 GMT",
+        "publisher": "日経ビジネス電子版"
+      },
+      {
+        "title": "楽楽精算ラクス、キーエンスばりの超効率営業 行動力鍛えて売上高4倍 - 日経ビジネス電子版",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOS2R3MU80SmZ0UnBubk5EMWxwN1hKWlRlTmlrVEJ4Rkl3ZG1GdjJOVjVOM1poVUtNdWplVHJWOTZncW4tRkxvdmloM0lFNXQ0b0NrckhrY0s5U3NHMnE4NHNDR3NxcnQ5aDFGcHV5TGdaQ0pRdGw1dmNxaERPc3MxSV94blFlOTIzTVE?oc=5",
+        "published": "Thu, 22 Oct 2026 01:32:56 GMT",
+        "publisher": "日経ビジネス電子版"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578935.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "代表取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578937.pdf",
+        "date": "2025-10-29 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120251026578934.pdf",
+        "date": "2025-10-29 16:00:00"
+      }
+    ]
+  }
+}

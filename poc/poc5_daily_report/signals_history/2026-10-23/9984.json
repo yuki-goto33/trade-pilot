@@ -1,0 +1,215 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-10-23T09:39:17+09:00",
+  "price_as_of": "2026-10-22",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "テクニカルおよびファンダメンタルズ両面で極めて強い下落サインが出ているが、株価が25日移動平均線から-25%以上乖離しており、現時点での新規売りはリスクが高いと判断。原則ルールに従いホールドとする。",
+        "evidence": "reference.last_close=4305.0 / reference.sma25=5792.52 (乖離率-25.68%), technical_view.strength=95"
+      },
+      {
+        "reason": "米国市場でのADR大幅続落（約7.9%）やSOX指数の急落により、国内市場でも寄り付きからの窓開け下落が避けられない状況にある。",
+        "evidence": "us_overnight.adr.change_1d_pct=-7.91, fundamental_view.points[0]: SOX指数6.7%急落"
+      },
+      {
+        "reason": "SBエナジーの上場延期報道や国内金利上昇による財務コスト増など、個別・マクロの両面でネガティブな材料が重なっている。",
+        "evidence": "fundamental_view.points[1]: SBエナジー米上場12月以降, fundamental_view.points[3]: JGB10年金利 2.923%"
+      }
+    ],
+    "risks": [
+      "10月29日〜30日の日銀金融政策決定会合に伴う為替・金利の急変動による財務評価への影響",
+      "11月10日に予定される第2四半期決算発表における投資損益のサプライズ改善",
+      "RSIが売られすぎ水準に接近しており、テクニカルな自律反発（ショートカバー）が発生する可能性"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"テクニカルおよびファンダメンタルズ両面で極めて強い下落サインが出ているが、株価が25日移動平均線から-25%以上乖離しており、現時点での新規売りはリスクが高いと判断。原則ルールに従いホールドとする。\",\n   \"evidence\": \"reference.last_close=4305.0 / reference.sma25=5792.52 (乖離率-25.68%), technical_view.strength=95\"\n  },\n  {\n   \"reason\": \"米国市場でのADR大幅続落（約7.9%）やSOX指数の急落により、国内市場でも寄り付きからの窓開け下落が避けられない状況にある。\",\n   \"evidence\": \"us_overnight.adr.change_1d_pct=-7.91, fundamental_view.points[0]: SOX指数6.7%急落\"\n  },\n  {\n   \"reason\": \"SBエナジーの上場延期報道や国内金利上昇による財務コスト増など、個別・マクロの両面でネガティブな材料が重なっている。\",\n   \"evidence\": \"fundamental_view.points[1]: SBエナジー米上場12月以降, fundamental_view.points[3]: JGB10年金利 2.923%\"\n  }\n ],\n \"risks\": [\n  \"10月29日〜30日の日銀金融政策決定会合に伴う為替・金利の急変動による財務評価への影響\",\n  \"11月10日に予定される第2四半期決算発表における投資損益のサプライズ改善\",\n  \"RSIが売られすぎ水準に接近しており、テクニカルな自律反発（ショートカバー）が発生する可能性\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 95,
+      "summary": "中期・短期ともに強い下落トレンドが継続しており、直近で期間安値を更新。前夜ADRの大幅続落や国内市場の急落も重なり、さらなる一段安への警戒が極めて強い状況です。",
+      "points": [
+        {
+          "point": "中期下落トレンドが明確。60営業日騰落率および対TOPIX相対騰落率がともに大幅なマイナス圏に沈んでいる。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-27.26, price_technical.trend_60d.relative_to_topix_60d_pct=-26.78"
+        },
+        {
+          "point": "短期的な売り圧力が加速しており、直近5営業日で安値を更新。SMA5/SMA25のデッドクロスも継続中。",
+          "evidence": "price_technical.last_close=4305.0, price_technical.period_low=4305.0, price_technical.sma5_vs_sma25=dead"
+        },
+        {
+          "point": "市場全体が下落トレンド（downtrend）に転じており、日経平均の急落も相まってリスクオフの地合いが強まっている。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.indices[0].change_1d_pct=-4.31"
+        },
+        {
+          "point": "前夜のNY市場でADRが約7.9%下落しており、翌日の取引開始時点でさらなる窓開け下落の懸念が強い。",
+          "evidence": "us_overnight.adr.change_1d_pct=-7.91"
+        }
+      ],
+      "cautions": [
+        "RSI14が37.3と売られすぎ水準に接近しているが、MACDの乖離が拡大しており下げ止まりの兆候は見られない",
+        "ADRの大幅下落は寄り付き価格に反映されるため、開始直後のボラティリティ増大に注意が必要",
+        "VIX指数が19.03まで急上昇しており、市場全体でパニック的な売りが出るリスクがある"
+      ],
+      "key_levels": {
+        "support": 4305.0,
+        "resistance": 4654.0
+      }
+    },
+    "fundamental": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "米国のAI過剰投資懸念に伴うハイテク株安や、SBエナジーの上場延期といった個別悪材料が重なり、投資ポートフォリオの価値毀損リスクが高まっている。日銀会合と決算発表を間近に控え、マクロ・個別の両面で下押し圧力が強い状況にある。",
+      "points": [
+        {
+          "point": "AI投資への過剰警戒による外部環境の急悪化。米SOX指数の急落やナスダックの大幅安は、AI関連企業を多く抱える投資ポートフォリオに直接的な悪影響を及ぼす。",
+          "evidence": "news.headlines[3].title=\"【米国株式市場】ＳＯＸ指数６．７％急落、ナスダック６９４ポイント安、巨額ＡＩ投資への警戒広がる\""
+        },
+        {
+          "point": "主要子会社のExit戦略の遅れ。SBエナジーの米上場が12月以降に先送りされるとの報道があり、資金回収シナリオの不透明感が強まっている。",
+          "evidence": "news.headlines[0].title=\"SBエナジー、米上場12月以降か＝当初は9月予定―報道\""
+        },
+        {
+          "point": "世界的な信用懸念の波及による時価総額の減少。市場全体のリスクオフ姿勢（VIXの上昇）に加え、同社固有の信用リスクへの警戒が強まっている。",
+          "evidence": "news.headlines[1].title=\"ソフトバンクG株の時価総額、ピークの半分に－世界的な信用懸念波及\", macro.indices[4].change_1d_pct=14.09"
+        },
+        {
+          "point": "国内金利の上昇による財務コストへの懸念。JGB10年金利が2.9%台に達しており、頻繁に社債を発行する同社にとって利払い負担増は潜在的なリスク要因である。",
+          "evidence": "macro.rates.jgb_10y_percent.value=2.923, disclosures.items[4].title=\"第70回無担保普通社債の条件決定に関するお知らせ\""
+        }
+      ],
+      "cautions": [
+        "2026年11月10日に予定されている第2四半期決算発表での投資損益の改善",
+        "10月29日〜30日の日銀金融政策決定会合による為替・金利の急変動",
+        "OpenAIなどの未上場投資先の評価額の大幅な引き上げ（2026-10-01 追加出資実行済み）"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "SBエナジー、米上場12月以降か＝当初は9月予定―報道(時事通信) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPSU15aEh4YTg3M2NJQ2p5X3dERUl0cHlKSXp5V2ZreHNubThKTExwVWdJcnp2a1A1NHpVRjZxRUhxQk1tN3VLcFhmQjNYYVBoaXgzcU9mMjlGNTV2bFhXSkJwX1p5MnpjX050Q0czcWRiWE9rQW0tT0NFS0lpdGlCdk83dzBZRkU?oc=5",
+        "published": "Thu, 22 Oct 2026 22:46:02 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ソフトバンクG株の時価総額、ピークの半分に－世界的な信用懸念波及 - Bloomberg.com",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOWnpPY1l1YVBZVDgwRm9yMHdSbWFCa3RoSFNwQjQ1ejFPb2tMTjR1NWV0UTNUanRyZlVpSVVKS2Q1UWRONlpBRVFpZzVTYnVucWtaQmJaMG51NXdXcDFJSWoybzBaSWtJQXp4WDktbEVYNDQ5WGFYVUl1bWY3cTQxckNYRldMWmhSd3lqQjVB?oc=5",
+        "published": "Thu, 22 Oct 2026 05:44:00 GMT",
+        "publisher": "Bloomberg.com"
+      },
+      {
+        "title": "ソフトバンクG株の時価総額、ピークの半分に－世界的な信用懸念波及 - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5oamRsa29CR2tzVTRWbTJ1RjY5TDhUcDFqMnJnUGZrdmpLczR1VTdGWmhXd0xSeDFjVWgtQ3oyUDExWUpzYVBRX2U0TlM0MXk5bTI0a1R2UVJkNWt0MUU0Z2s3SlBEVFU?oc=5",
+        "published": "Thu, 22 Oct 2026 06:36:00 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "【米国株式市場】ＳＯＸ指数６．７％急落、ナスダック６９４ポイント安、巨額ＡＩ投資への警戒広がる - https://kabu-ir.com/",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9FS1VvY0xPZDZHMGZCRnEwYVNrc2tORTlBZDU1VHVvdncyZ3paTFZJc0JzUkdtVmJFV2RGWS13SF9NTU1jdWFpWkExd3VqNDNTQ1VXXw?oc=5",
+        "published": "Thu, 22 Oct 2026 23:23:30 GMT",
+        "publisher": "https://kabu-ir.com/"
+      },
+      {
+        "title": "日経平均、一時1300円超安 韓国株安とAI過剰投資懸念が重し - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBIZVJyY1VXbG1qaGJscXNJa0NTNkdmWi1IRVU3R0Z0TnJhVGh3MHZHNWhLUFNpZ01SS0hhbkV2dkxpZjhaTWs5U3RxT1hMdWczNnFsU1V3VzZBX05TYjIwa2VwWWFJc2NhNUkxdjFGcHI0X2la?oc=5",
+        "published": "Thu, 22 Oct 2026 05:05:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "ＳＢエナジー、上場先送り＝１２月以降に―米報道 - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9odi1FTTU3VkNwMlBuMXFvWnpOLXRSeWlvc25WXzBjY1lBanluWWZKbC1LcVR5U3lhS3FxanUwYm1MWDRtc0VlLXBDRXlxb1pLZDZORF9GbE92Y25TX0RMRzRpdGVNVDVUUmc40gFrQVVfeXFMT2h2LUVNNTdWQ3AyUG4xcW9aek4tdFJ5aW9zblZfMGNjWUFqeW5ZZkpsLUtxVHlTeWFLcXFqdTBibUxYNG1zRWUtcENFeXFvWktkNk5EX0ZsT3ZjblNfRExHNGl0ZU1UNVRSZzg?oc=5",
+        "published": "Thu, 22 Oct 2026 21:45:55 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "SBエナジー、上場先送り 12月以降に 米報道（時事通信） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9ZempCa2lzWjR3MElwU1IyZFlMUHFHVkpvMFdlWGdYNzZRbVB0UGt0VUlpcTBEWVhiZXJNQXJUQ2pfRWhlbHpQN0VMdXFqeEJKYlU5WnVWNTBnbC1OcVdMZlVVSXdLcUE0S0tNQXN5VGM1X0hXT05tV0JnZkZTOWM?oc=5",
+        "published": "Thu, 22 Oct 2026 21:48:24 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "日経平均は大幅反落、東エレクが1銘柄で約239円分押し下げ - 株探",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBMS2tsdk5NVUhXZkdlUzBhR0s2Q2ROdWl5RU5TYUtaQTFrdTgwTThVcEhpX1I2STAyWnFKNGdLd244SnQ4MlAtQ09GQy00cWdtRF96UEEwSnZnNW01YV9STg?oc=5",
+        "published": "Thu, 22 Oct 2026 03:40:21 GMT",
+        "publisher": "株探"
+      },
+      {
+        "title": "22日午前の日本株は反落､米決算がまちまちでAI関連に売り - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBoMHEzWVlza0wwMnR2S01PZXF4MzhCU3NVRU5Db2ozTDUzZ3ZoMTcwTnhVcUI4OFBWa3VGTG41RTNYWEp1c2FBNzZEZnp0OFdBRERhbEVuaw?oc=5",
+        "published": "Thu, 22 Oct 2026 03:11:00 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "ＳＢエナジー、上場先送り＝１２月以降に―米報道 - Excite エキサイト",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5GMDE0N1ZhcVk4QkRaVnRjbDJ1QWZWTE9tWjB3WGx4T2pkNWcyU2NhbTBqT2diWXluSUdoUW1RSl81cll6QUdCbWRWLUcxYmZuU2dNYUgzeWtxRWVZYXNF?oc=5",
+        "published": "Thu, 22 Oct 2026 21:45:00 GMT",
+        "publisher": "Excite エキサイト"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2021年発行ユーロ建普通社債の期限前償還に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261009548411.pdf",
+        "date": "2026-10-09 15:30:00"
+      },
+      {
+        "title": "OpenAIへの追加出資（サードトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260930543674.pdf",
+        "date": "2026-10-01 16:00:00"
+      },
+      {
+        "title": "外貨建シニア社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260924539094.pdf",
+        "date": "2026-09-24 08:00:00"
+      },
+      {
+        "title": "ブリッジローンの期限前返済に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533573.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260904531576.pdf",
+        "date": "2026-09-04 10:30:00"
+      },
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得の完了時期の変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260828527943.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824524817.pdf",
+        "date": "2026-08-24 09:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510515.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "新株予約権（ストックオプション）の発行内容確定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503871.pdf",
+        "date": "2026-07-30 17:00:00"
+      },
+      {
+        "title": "第68回及び第69回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501484.pdf",
+        "date": "2026-07-29 10:30:00"
+      }
+    ]
+  }
+}
