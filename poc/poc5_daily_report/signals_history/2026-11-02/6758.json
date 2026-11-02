@@ -1,0 +1,180 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-11-02T10:30:32+09:00",
+  "price_as_of": "2026-11-02",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家は中立（strength=50）と判断しており、直近四半期は黒字回復しているもののPER21.8倍と特段の割安感はなく、目先の株価を大きく押し上げる新規好材料が不足しています。",
+        "evidence": "fundamental_view.stance=neutral (strength=50), fundamental_view.points[0], fundamental_view.points[1]"
+      },
+      {
+        "reason": "テクニカル専門家も中立（strength=50）としており、中期トレンドは維持されているものの、MACDヒストグラムのマイナス圏推移や直近反発局面での出来高急減など短期的な上値の重さが目立ちます。",
+        "evidence": "technical_view.stance=neutral (strength=50), technical_view.points[1]: price_technical.macd_histogram=-6.18"
+      },
+      {
+        "reason": "統合判断ルールにおいてbuy条件（ファンダメンタルズがbullishかつstrength>=70）を満たしておらず、決算発表直前の様子見局面であることからholdと判断しました。",
+        "evidence": "reference.market_regime=downtrend, fundamental_view.strength=50"
+      }
+    ],
+    "risks": [
+      "2026年11月5日に次回決算発表を控えており、業績内容や通期見通しの変化によって株価が急変動するリスクがあります（reference.next_earnings_date=2026-11-05）。",
+      "市場全体の地合いがdowntrendにある中、米ハイテク株安やADR軟調の流れが引き継がれ、25日移動平均線（3886.88円）を下抜けて調整が長期化するリスクがあります。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 50,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n   {\n    \"reason\": \"ファンダメンタルズ専門家は中立（strength=50）と判断しており、直近四半期は黒字回復しているもののPER21.8倍と特段の割安感はなく、目先の株価を大きく押し上げる新規好材料が不足しています。\",\n    \"evidence\": \"fundamental_view.stance=neutral (strength=50), fundamental_view.points[0], fundamental_view.points[1]\"\n   },\n   {\n    \"reason\": \"テクニカル専門家も中立（strength=50）としており、中期トレンドは維持されているものの、MACDヒストグラムのマイナス圏推移や直近反発局面での出来高急減など短期的な上値の重さが目立ちます。\",\n    \"evidence\": \"technical_view.stance=neutral (strength=50), technical_view.points[1]: price_technical.macd_histogram=-6.18\"\n   },\n   {\n    \"reason\": \"統合判断ルールにおいてbuy条件（ファンダメンタルズがbullishかつstrength>=70）を満たしておらず、決算発表直前の様子見局面であることからholdと判断しました。\",\n    \"evidence\": \"reference.market_regime=downtrend, fundamental_view.strength=50\"\n   }\n  ],\n  \"risks\": [\n   \"2026年11月5日に次回決算発表を控えており、業績内容や通期見通しの変化によって株価が急変動するリスクがあります（reference.next_earnings_date=2026-11-05）。\",\n   \"市場全体の地合いがdowntrendにある中、米ハイテク株安やADR軟調の流れが引き継がれ、25日移動平均線（3886.88円）を下抜けて調整が長期化するリスクがあります。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "60日騰落率や移動平均線の配置は中期的な上昇基調を示しているものの、日足MACDのデッドクロス継続や直近反発局面での出来高急減、さらに市場全体の地合い悪化および前夜の米ハイテク株大幅安が重石となり、短期的には方向感が拮抗しています。",
+      "points": [
+        {
+          "point": "株価は5日線および25日線を上回っており、60日騰落率も+11.03%（対TOPIX比+10.18%）と中期的な上昇トレンドを維持している。",
+          "evidence": "price_technical.last_close=3985.0, price_technical.sma5=3981.2, price_technical.sma25=3886.88, price_technical.trend_60d.change_60d_pct=11.03"
+        },
+        {
+          "point": "直近2営業日は反発しているものの、直近日の出来高は3,962,300株と前日までの水準から急減しており、またMACDヒストグラムは-6.18とシグナルを下回る調整局面が継続している。",
+          "evidence": "price_technical.macd_histogram=-6.18, price_technical.recent_5_days"
+        },
+        {
+          "point": "国内TOPIXが25日線を下回るdowntrendレジームにあるほか、前夜の米国市場でハイテクETF（XLK）が-4.89%、ADRが-0.67%と軟調であり、外部環境からの下押し圧力が懸念される。",
+          "evidence": "macro.market_regime.market_regime=downtrend, us_overnight.sector_proxy.change_1d_pct=-4.89, us_overnight.adr.change_1d_pct=-0.67"
+        }
+      ],
+      "cautions": [
+        "米ハイテク株急落やADR安が寄り付きで織り込まれた後、下値支持線となる直近安値（3936.0円）を下回ると調整が長期化するリスクがある。",
+        "外部環境の悪化が一過性に留まり、出来高を伴って反発した場合は期間高値（4198.0円）に向けた上昇トレンド復帰となる可能性がある。"
+      ],
+      "key_levels": {
+        "support": 3886.88,
+        "resistance": 4198.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "直近四半期業績は黒字を確保しているものの、数日後に控える決算発表を前に積極的な買い材料に欠け、市場全体の調整懸念も重なり様子見が妥当と判断します。",
+      "points": [
+        {
+          "point": "2026年3月期通期は最終赤字（-3,269億円）となった一方、直近の2026年6月期は営業利益4,745億円、純利益3,422億円と黒字回復を示していますが、予想PER21.8倍・PBR2.80倍と評価は中立的な水準です。",
+          "evidence": "fundamentals.earnings_trend.annual[0], fundamentals.earnings_trend.quarterly[0], fundamentals.valuation.forward_pe=21.752, fundamentals.valuation.price_to_book=2.796"
+        },
+        {
+          "point": "直近2週間の開示情報は株式報酬制度（PSU・RSU付与）関連に限られており、目先の業績や事業展開を大きく押し上げる新規の好材料は見当たりません。",
+          "evidence": "disclosures.items[0].date=2026-10-30 15:30:00"
+        },
+        {
+          "point": "ドル円が157.8円と円安基調を保ち大企業製造業DIも24.0と堅調ですが、TOPIXが25日移動平均線を下回るdowntrend判定であり、米AI関連株安やVIX上昇（19.42）などマクロ環境の警戒感が上値を抑えています。",
+          "evidence": "macro.indices, macro.market_regime.market_regime=downtrend, macro.boj.tankan.di.large_manufacturing.current_di=24.0"
+        }
+      ],
+      "cautions": [
+        "2026年11月5日に次回決算発表が予定されており、短期的なボラティリティ急拡大およびガイダンス変化のリスクがあります（fundamentals.next_earnings_date=2026-11-05）。",
+        "米ハイテク・AI関連株の急落や市場センチメントの悪化が継続した場合、大型主力株として連れ安するリスクがあります（news.headlines、macro.indices）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソニーグループ(株)【SONY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBaWnphQUR5QkRjZVlTVmx6UFR5V014TllydmRXWkxLMjQyQlpTTTV0ZXN6b1lsNVZBTGlQMXJGcGFTbHdkcFJuYURxeFRfLTg?oc=5",
+        "published": "Sun, 01 Nov 2026 16:40:10 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "日経平均は続落で寄り付く、米ＡＩ関連株安を嫌気 一時500円安 - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9yRjRRWmJNcThHM1lGVDd5eGVpRm1NbzlOVEFMTElHa3EySGh4NHVwanNuV0NXVElBdF9TR3hUck1fUUIxZnpWTHdFdDBfUW92Q2lKcHo5LUpBRE1xQjl6N2lyV3l6c05IcG1aSGhn?oc=5",
+        "published": "Mon, 02 Nov 2026 00:27:08 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "《蚕糸産業の新たな可能性㊤》自動化養蚕で国産シルク 衣料以外の用途にも - 繊研新聞",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5Jdm9YeXFxSnZDRFlkenRXVGs5VXNCb01mQW05RXhPS3JmYWI4QzN1OEJpc0ZHMFp5NG9aQ0xpSHRkOW5icWZHbGR2LUlaVEk?oc=5",
+        "published": "Sun, 01 Nov 2026 23:00:00 GMT",
+        "publisher": "繊研新聞"
+      },
+      {
+        "title": "なぜ三菱UFJやTBSはIOWNを選んだのか？ ソニーのキーマンが明かす「光のAI基盤」 - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1hcW5vLURxQldReGM1NVg4VVVpb3VkaVJvM1p2QjU5Uy00TU9peTdJV1pqR3o5aExBeDVxMTdNOFlCTHlPZEtFYWJqUlRVUHV2ZDY3UjJqQmFrZmdpYl9meW5RNXoyem1jTGItSmhoOTdCcnE2cXc?oc=5",
+        "published": "Sun, 01 Nov 2026 05:39:04 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "なぜ三菱UFJやTBSはIOWNを選んだのか？ ソニーのキーマンが明かす「光のAI基盤」 (ITmedia ビジネスオンライン) - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQY0hvMV82UXMzVnNKVVZGYmR0eGpoX2hBS1BaazNEUm1DREFZaG9GYjhMVThtVWRzc2h6bTlGYnphRWxoTmJkOFlwS1NSeDVYR1VNY1JCNGxycUFiYmdHaE5rTEs5ZG9LdGRiMnJwOTZmdkpBZFRpNXhEN1FGVEI0TkZTbUpfd0NIQ19YNGJ3?oc=5",
+        "published": "Sun, 01 Nov 2026 05:33:17 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "【今週発表の注目決算】トヨタ、ソニーグループ、任天堂、三菱重工、三菱商事｜決算ウォッチ - ライブドアニュース",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9oekxFMklQSUwzcmx4TG1MMUJZdm8yUDFpMHRZa29kSlBhNjNIdzNvR1FNREZRMW40dENic3pabENxT210dTlUY1FQOC1qXzRjMzJLb25ZV3Y2SEkwTHVN?oc=5",
+        "published": "Sun, 01 Nov 2026 20:00:00 GMT",
+        "publisher": "ライブドアニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "業績連動型株式ユニット（PSU）による事後交付型株式報酬制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030560394.pdf",
+        "date": "2026-10-30 15:30:00"
+      },
+      {
+        "title": "業績連動型株式ユニット（PSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030560415.pdf",
+        "date": "2026-10-30 15:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030560428.pdf",
+        "date": "2026-10-30 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261005545702.pdf",
+        "date": "2026-10-05 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903530947.pdf",
+        "date": "2026-09-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260811517496.pdf",
+        "date": "2026-08-11 18:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805509201.pdf",
+        "date": "2026-08-05 11:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504252.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期 連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504254.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の権利確定に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595854.pdf",
+        "date": "2026-07-17 15:30:00"
+      }
+    ]
+  }
+}

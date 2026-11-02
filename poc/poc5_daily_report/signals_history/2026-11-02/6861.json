@@ -1,0 +1,164 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-11-02T10:38:32+09:00",
+  "price_as_of": "2026-11-02",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズは営業利益50%増や株式分割など極めて強力ですが、テクニカルが強い弱気（strength 90）を示しており、ルールに基づき押し目確認待ちのholdとします。",
+        "evidence": "fundamental_view.strength=80, technical_view.stance=bearish (strength=90)"
+      },
+      {
+        "reason": "MACDの拡大やデッドクロスの継続により短期的な下落の勢いが強く、落ちるナイフを掴むリスクを避ける必要があります。",
+        "evidence": "technical_view.points[2]: macd_histogram=-541.72, technical_view.points[1]: sma5_vs_sma25=dead"
+      },
+      {
+        "reason": "市場レジームがdowntrendであり、外部環境（米国テック株安）の影響を受けやすい地合いであるため、エントリー基準を厳格に適用します。",
+        "evidence": "reference.market_regime=downtrend, technical_view.points[3]: us_overnight.sector_proxy.change_1d_pct=-4.89"
+      }
+    ],
+    "risks": [
+      "市場全体のダウントレンドに伴うマクロ的なリスクオフと連れ安の継続",
+      "高PER（40.8倍）銘柄ゆえの、国内金利上昇に伴うバリュエーション調整圧力",
+      "テクニカル的節目（74,980円）を下抜けた場合のさらなる下値模索",
+      "次回日銀会合（12/17-18）に向けた金融政策修正への警戒感"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズは営業利益50%増や株式分割など極めて強力ですが、テクニカルが強い弱気（strength 90）を示しており、ルールに基づき押し目確認待ちのholdとします。\",\n   \"evidence\": \"fundamental_view.strength=80, technical_view.stance=bearish (strength=90)\"\n  },\n  {\n   \"reason\": \"MACDの拡大やデッドクロスの継続により短期的な下落の勢いが強く、落ちるナイフを掴むリスクを避ける必要があります。\",\n   \"evidence\": \"technical_view.points[2]: macd_histogram=-541.72, technical_view.points[1]: sma5_vs_sma25=dead\"\n  },\n  {\n   \"reason\": \"市場レジームがdowntrendであり、外部環境（米国テック株安）の影響を受けやすい地合いであるため、エントリー基準を厳格に適用します。\",\n   \"evidence\": \"reference.market_regime=downtrend, technical_view.points[3]: us_overnight.sector_proxy.change_1d_pct=-4.89\"\n  }\n ],\n \"risks\": [\n  \"市場全体のダウントレンドに伴うマクロ的なリスクオフと連れ安の継続\",\n  \"高PER（40.8倍）銘柄ゆえの、国内金利上昇に伴うバリュエーション調整圧力\",\n  \"テクニカル的節目（74,980円）を下抜けた場合のさらなる下値模索\",\n  \"次回日銀会合（12/17-18）に向けた金融政策修正への警戒感\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 90,
+      "summary": "中期および短期のトレンドが明確な下落基調にあり、MACDの売りシグナル拡大と外部環境の悪化が重なるため、一段の下値を試す展開が予想されます。",
+      "points": [
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともにマイナスであり、中期的な下落トレンドの中にあります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-5.38, price_technical.trend_60d.relative_to_topix_60d_pct=-6.23"
+        },
+        {
+          "point": "5日線が25日線を下回るデッドクロス状態にあり、直近でも5日線（77,780円）を下回る水準で引け、短期的な弱気が継続しています。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.last_close=76270.0"
+        },
+        {
+          "point": "MACDがシグナルを下回り、ヒストグラムがマイナス圏で大幅に拡大しており、下落の勢いが加速していることを示唆しています。",
+          "evidence": "price_technical.macd_histogram=-541.72, price_technical.macd=-278.72"
+        },
+        {
+          "point": "前夜のNY市場でテクノロジーセクターETF（XLK）が急落し、ADRもマイナス圏にあるため、国内市場でも売りが先行しやすい地合いです。",
+          "evidence": "us_overnight.sector_proxy.change_1d_pct=-4.89, us_overnight.adr.change_1d_pct=-2.0"
+        }
+      ],
+      "cautions": [
+        "前夜の米国株安は寄り付き段階で大きく織り込まれ、短期的には窓埋めの動きが出る可能性があります。",
+        "RSI14が42.1であり、さらに下落して30付近に到達した場合、売られすぎによる一時的な自律反発が意識されます。",
+        "市場レジームがdowntrendであるため、個別銘柄の反発が限定的になりやすい全体地合いに注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 74980.0,
+        "resistance": 79724.8
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 80,
+      "summary": "直近の中間決算で営業利益50%増という極めて高い成長性を証明。1対5の株式分割と実質増配の発表が強力なカタリストとなり、市場全体が軟調な中でも独自の成長期待による資金流入が見込まれる。",
+      "points": [
+        {
+          "point": "2027年3月期第2四半期において、営業利益が前年同期比50.0%増の4,082億円に達し、製造業の堅調な設備投資需要を背景に極めて強い業績モメンタムを示した。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary"
+        },
+        {
+          "point": "1株につき5株の株式分割（11月21日予定）と、実質100円の年間増配（年間650円相当）を発表。投資単位の引き下げによる流動性向上と株主還元の強化が同時に行われた。",
+          "evidence": "fundamentals.recent_important_disclosures[1].summary"
+        },
+        {
+          "point": "日本の製造業PMIが53.3と拡大圏を維持しており、日銀短観の大企業製造業DIも24.0へ改善するなど、同社の主要顧客である製造業の景況感が追い風となっている。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=53.3, macro.boj.tankan.di.large_manufacturing.current_di=24.0"
+        }
+      ],
+      "cautions": [
+        "市場全体が25日移動平均線を下回るダウントレンド（downtrend）にあり、マクロ的なリスクオフに伴う連れ安のリスクがある（macro.market_regime）。",
+        "Forward PEが40.8倍と高く、日本10年債利回りが2.8%台で推移する高金利環境下では、グロース株としてのバリュエーション調整圧力を受けやすい（fundamentals.valuation.forward_pe, macro.rates.jgb_10y_percent）。",
+        "次回決算（2027年1月28日）まで期間があるため、材料出尽くしによる一時的な利益確定売りに注意が必要（fundamentals.next_earnings_date）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "日本のファクトリー・オートメーションメーカーと強み - pando.life",
+        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9fRUtBd1VPclotcXlfQkFyU2pTMnAtQkZFeXc5SzdqRWFRZEoyamJNNnpoMjRuclVybmduR29CZjM5VkpYVURrUVJR?oc=5",
+        "published": "Sun, 01 Nov 2026 05:03:32 GMT",
+        "publisher": "pando.life"
+      },
+      {
+        "title": "＜画像2 / 10＞昨年ブレイク！カルピス“男子新体操部”の新CMがスゴイ - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1OZTVGY0ZCN3I2UmVCSUJGU3NmQmlVLVZkWnVfV0ZpYi0xVmp2NFhzTnZsc3BVNFFPMkliMFRrUlpma1I4dTd0S0loU0RNY3FhSUVzeE1ZLXZfQXFKMExBWG45V3Jjdw?oc=5",
+        "published": "Sun, 01 Nov 2026 03:17:12 GMT",
+        "publisher": "ウォーカープラス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261027557109.pdf",
+        "date": "2026-10-29 16:00:00"
+      },
+      {
+        "title": "株式分割及び定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028557317.pdf",
+        "date": "2026-10-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028557319.pdf",
+        "date": "2026-10-29 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      }
+    ]
+  }
+}

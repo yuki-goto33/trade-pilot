@@ -1,0 +1,217 @@
+{
+  "code": "9433",
+  "name": "KDDI",
+  "generated_at": "2026-11-02T10:40:20+09:00",
+  "price_as_of": "2026-11-02",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "直近 buy（2026-10-19）の継続監視中であり、同一銘柄への短期連続エントリーを避ける必要があるため。",
+        "evidence": "reference.recent_buy.date=2026-10-19"
+      },
+      {
+        "reason": "ファンダメンタルズは強気（strength=70）で成長投資も評価されるが、テクニカルが弱気で25日移動平均線を下回っており、押し目確認が必要な局面であるため。",
+        "evidence": "fundamental_view.strength=70 / technical_view.stance=bearish (price_technical.last_close=2827.0 < sma25=2887.66)"
+      },
+      {
+        "reason": "市場全体の地合いが下落レジームにあり、個別銘柄の好材料が相殺されやすい環境であるため。",
+        "evidence": "reference.market_regime=downtrend"
+      }
+    ],
+    "risks": [
+      "2026-11-06に予定されている決算発表に伴うボラティリティの急増。",
+      "25日移動平均線を抵抗線とした中期下落トレンドの継続。",
+      "VIX指数の上昇を伴う世界的なリスクオフ姿勢による国内市場全体の下押し。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"直近 buy（2026-10-19）の継続監視中であり、同一銘柄への短期連続エントリーを避ける必要があるため。\",\n      \"evidence\": \"reference.recent_buy.date=2026-10-19\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズは強気（strength=70）で成長投資も評価されるが、テクニカルが弱気で25日移動平均線を下回っており、押し目確認が必要な局面であるため。\",\n      \"evidence\": \"fundamental_view.strength=70 / technical_view.stance=bearish (price_technical.last_close=2827.0 < sma25=2887.66)\"\n    },\n    {\n      \"reason\": \"市場全体の地合いが下落レジームにあり、個別銘柄の好材料が相殺されやすい環境であるため。\",\n      \"evidence\": \"reference.market_regime=downtrend\"\n    }\n  ],\n  \"risks\": [\n    \"2026-11-06に予定されている決算発表に伴うボラティリティの急増。\",\n    \"25日移動平均線を抵抗線とした中期下落トレンドの継続。\",\n    \"VIX指数の上昇を伴う世界的なリスクオフ姿勢による国内市場全体の下押し。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "中期騰落率および対TOPIX相対騰落率がともにマイナスであり、中期的な下落トレンドが継続しています。短期・中期の移動平均線がデッドクロス状態にあり、市場全体の地合いも悪化していることから、下押し圧力が強い状況です。",
+      "points": [
+        {
+          "point": "60日騰落率が-2.62%、対TOPIX相対騰落率が-3.47%といずれもマイナスであり、中期的なトレンドが明確に弱気を示しています。",
+          "evidence": "price_technical.trend_60d"
+        },
+        {
+          "point": "SMA5がSMA25を下回るデッドクロスが継続しており、株価も25日移動平均線を下回って推移しています。",
+          "evidence": "price_technical.sma5_vs_sma25, price_technical.last_close=2827.0, price_technical.sma25=2887.66"
+        },
+        {
+          "point": "MACDがマイナス圏でシグナルを下回っており、ヒストグラムもマイナスが継続しているため、下落モメンタムが衰えていません。",
+          "evidence": "price_technical.macd=-44.38, price_technical.macd_histogram=-2.92"
+        },
+        {
+          "point": "TOPIXが25日線を下回り、5日騰落率もマイナスのため、市場全体が「downtrend（下落レジーム）」にあります。",
+          "evidence": "macro.market_regime"
+        }
+      ],
+      "cautions": [
+        "前夜のADRが+2.51%と反発して引けており、寄り付きでのギャップアップが想定されますが、戻り売りの対象となる可能性があります。",
+        "米国市場でVIX指数が12.91%急上昇しており、世界的なリスクオフ姿勢の強まりが国内市場へのさらなる下押し要因となるリスクがあります。",
+        "直近5営業日で2%超の反発を見せた日もあり、底固めを模索する動きが見られるものの、25日線を回復するまではテクニカル的な反転とは見なしにくい状況です。"
+      ],
+      "key_levels": {
+        "support": 2741.0,
+        "resistance": 2887.66
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "直近のAIデータセンター拡充や次世代通信技術への参画といった積極的な成長投資の材料に加え、直近四半期での営業増益基調が確認されている。次回決算を目前に控えているが、大規模な自己株買いの継続も下値の支えとなる。",
+      "points": [
+        {
+          "point": "AI対応データセンターの新設や光電融合技術への参画など、通信以外の成長分野における具体的な好材料が相次いでいる。",
+          "evidence": "news.headlines (KDDI、ロンドンデータセンターの受電容量を倍増、AI対応の新データセンターを建設 / KDDIも参戦 光電融合ブロードコム陣営に勢い)"
+        },
+        {
+          "point": "2027年3月期第1四半期（2026-06）の営業利益は3,029億円と前年同期の2,630億円から大幅に伸長しており、通期増益計画に向けて順調な滑り出しを見せている。",
+          "evidence": "fundamentals.earnings_trend.quarterly (2026-06=3029, 2025-06=2630)"
+        },
+        {
+          "point": "2026年5月決定の3,000億円規模の自己株買いが着実に執行されており、9月末時点で累計2,666億円に達するなど、強力な株主還元が需給面をサポートしている。",
+          "evidence": "fundamentals.recent_important_disclosures (2026-10-06)"
+        }
+      ],
+      "cautions": [
+        "2026年11月6日に次回決算発表を控えており、短期的なボラティリティの上昇が懸念される（fundamentals.next_earnings_date）。",
+        "市場全体が25日移動平均線を下回るダウントレンドにあり、外部環境の影響を受けやすい（macro.market_regime）。",
+        "入力データ上の予想PERが1,213倍と極めて高い値を示しており、年次業績トレンド（EPS 183円）との乖離があるため、精査が必要である（fundamentals.valuation.forward_pe）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-10-19",
+    "days_ago": 14,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "KDDI、ロンドンデータセンターの受電容量を倍増、AI対応の新データセンターを建設（クラウド Watch） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5SbVY4cGZWRkhFQkg0VnZ5aXlaMVRURnpxLU03aU9ZbFBCTlNic2c1aWQ3NFQtdl82bTZsQ1MweWQyaEhSRlBDUUZqY0wwZ0xiQlJodm11WVlmS3U4Yk11MlVwanRUcDVsRWpvYXB3MDlPTDB1M0VYdzUzSEljbFk?oc=5",
+        "published": "Mon, 02 Nov 2026 00:00:00 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "“光の開通前も5Gでつながる”だけじゃない！ 圧倒的な熱量で作り込まれたKDDIのハイブリッドホームルーター「Aterm HY01」 - INTERNET Watch",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9JUVFVUkJqVFJQN0VoUi1VT0dOVjhwVXZTbkc2cHE3LXpnZG5URDVRQk1lWDdmSXZSVHdRRThydFpFMzExdlVZSHN5QmFmTjNMMWotSVZybXdjRUtZZi1VekR4bnRUbW1vR0hENjhKcGd0TlEwVVZmeQ?oc=5",
+        "published": "Sun, 01 Nov 2026 21:00:00 GMT",
+        "publisher": "INTERNET Watch"
+      },
+      {
+        "title": "KDDIも参戦 光電融合ブロードコム陣営に勢い、4社新投入 - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdFB2RjJMdFlFX0VVNlhUT3NEQnhMT3M0QjVfLU8xZmhEZV93dnJuZFBFSXhtbXZvbkhyMVZJMWNPNFN5RVhwWVdNNmZKV3AyTE54U0tZSXd3SXlHTkVrd3dQZ0xPajJYVVRNZVg2VVdNYWwzTHpoQlJOaXE5WllCREtDQUQzRVFDYmlBUGpKVjlXRzBxRU5ialhGeTNtZ2dFa3ZZbl9raGFpcW9W?oc=5",
+        "published": "Sun, 01 Nov 2026 20:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "多摩センターで「KDDI南極アカデミー2026」11/21(土)開催！南極との8Kライブ中継や建物組み立て体験も - 多摩ポン",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1LaXBGZUYzMkR6b2hYQmxjSFdyT2tRVDB4ZFRDS2NxVnZUS3VNX255d2hfRjNBaUE5YjRGbzYwbk15blVablRtXy1CY0NraGx3bkVrWGxfbUxOVjhFd2NWLS1LNmlMZw?oc=5",
+        "published": "Sun, 01 Nov 2026 23:23:36 GMT",
+        "publisher": "多摩ポン"
+      },
+      {
+        "title": "自動運転の複数台運行を見守る、安定した映像伝送技術を実証 KDDIなど9者、長野県塩尻市で国内初のL4S技術を活用へ - LIGARE（リガーレ）",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBsU2JaVi1qR3NYSDdCR0hVQXdieHVCRE5NVUFYYUxIcUowQjNDZ3Q2RU5RcjlIN1BTaWF4S0duQkVrTlEwZGkzLU9TZjdRODdOTW1GbWROUmQ?oc=5",
+        "published": "Sun, 01 Nov 2026 23:32:15 GMT",
+        "publisher": "LIGARE（リガーレ）"
+      },
+      {
+        "title": "KDDIが対話型AI「Buffmee」 情報の信頼性重視、幅広さとの両立が課題 - 日経クロステック Active",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQMUFKXzNUeVk3UnZyTVNybkM3NW5HTDEwTzY1b2hSMTFjRmVhcGUxcV9TR0QwMEVKNzlxV183Zll5Y0ZTSFl6c3hPdE03dXdPdUJYWG1lYVNtQ09jbkRTWUpCR3ZFOEpHOXMwQjhXbjZia0dHMGp5eThLN19VcGFOUXItZDE2ZXB2aHhLenJOMlJRYVU?oc=5",
+        "published": "Sun, 01 Nov 2026 20:00:00 GMT",
+        "publisher": "日経クロステック Active"
+      },
+      {
+        "title": "KDDIの名機「INFOBAR」に新展開、11月18日に何かを発表――砂原哲氏が明かす - ITmedia Mobile - ITmedia",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBqOTI3cV9zelpXMDZ3QThuaE5OLXFsdENnZkJiVUsza0VrWFoxQUJiQWM5Vlk4b3BMbllNM3hkS0hzWTEybDI1LTVKdUZpWUtxQ05ReEJpYkVxYTU3NW5qUzZVWXhzU1B2Y2oycDkxNNIBaEFVX3lxTE05Wk9RU3R2YnRQNGlWa1BkWDhYVk1Sdk1wbHJ4aExkSmF0eTNkUzVVUUgwR2U3cmJndUd0d24wVEViZXpCdmJqUGU1WnY0ZEJ1dGVkNmNBWG1vVGw5YXc4bzR3M2syRVFT?oc=5",
+        "published": "Sun, 01 Nov 2026 13:30:00 GMT",
+        "publisher": "ITmedia"
+      },
+      {
+        "title": "ULSコンサルティング、女子プロゴルフ大会「KDDI LADY GO CUP」に協賛 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5Ya1lBUlYxTG1Oc3ZZc2I0S05mNWZ6cm5WM3RDaVFDaW83YkNmcTItSGxVWXNyZllSQks0S2RvR0JtZDJwUHgxeVh5SlFoTERHVkNxb3d4N3pmWnBERWp3aDZGekREc2dpSVE?oc=5",
+        "published": "Mon, 02 Nov 2026 01:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "KDDIの名機「INFOBAR」に新展開、11月18日に何かを発表――砂原哲氏が明かす - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNWXRBZlNhU0tIdENPZGNMU0ZZbE9DRFFMNVN3bFQxNVFtQnhuTzRwUmQ2WWNXYnFVZUdNQ3BWYTE0UzcyUFA5dE5lY29qaXBQM1gwd1l1UDlySXB5UmNLOTVZcnhoRWNPTV9WSnY4czJhSE9pU0trVWsyN21VZ3RTc1lWYTZuRFdhaHNUcDJnVF82bjl6Y19iZUFMMNIBlwFBVV95cUxNUG5XeEJsVHliWEdUZEFCN0tGQllzVVZpMnFHVm02bTRZcGcyWnVmNVBGRi1RY0s2M2dDVkp3MjhzaFRwQ181U2I0bW8xbXBvaXQ5OU9LcGhUUDN3TjdjSmdiTzRiX0dadW1zTkM4a0Vjdl9BeWZ6cUtWLXJwNzhUNlJHT0NHX21MU3hKd24xMDFvdk9hWng0?oc=5",
+        "published": "Sun, 01 Nov 2026 13:36:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "＜画像6 / 12＞KDDIの寄付金贈呈式で仲間由紀恵がサンゴ礁の保全をアピール - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9iUTdLemg0VFlTUEhERHBkYTJpRDdpYmEwd2RnMlZBVmZURDhBYnk2V21VWGFtSGN1NGU2TUR4djZGdDdpQlFRcEhwNnNRaEo2VlBIR1QwSFdaZ3FQQ3VqTHpBZHNLbHM?oc=5",
+        "published": "Sun, 01 Nov 2026 03:45:36 GMT",
+        "publisher": "ウォーカープラス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261002545526.pdf",
+        "date": "2026-10-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533350.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "業績連動型株式報酬制度の継続に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512616.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512648.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511956.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512701.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "2027年3月期　第1四半期決算詳細資料（データブック）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806512716.pdf",
+        "date": "2026-08-07 15:45:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260806511229.pdf",
+        "date": "2026-08-06 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260706588059.pdf",
+        "date": "2026-07-06 15:30:00"
+      },
+      {
+        "title": "財務報告に係る内部統制の開示すべき重要な不備に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260624579251.pdf",
+        "date": "2026-06-25 15:30:00"
+      }
+    ]
+  }
+}

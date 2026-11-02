@@ -1,0 +1,204 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-11-02T10:41:59+09:00",
+  "price_as_of": "2026-11-02",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ面では業績上方修正や大規模な自己株式取得が発表され極めて強気（strength=85）ですが、テクニカル面が明確な下落トレンド（bearish）にあるため、統合ルールに基づき押し目確認の保留とします。",
+        "evidence": "fundamental_view.points[0]: 業績上方修正 / technical_view.stance=bearish (strength=85)"
+      },
+      {
+        "reason": "市場全体がdowntrendレジームにあり、ADRも軟調であることから、好材料を内包しつつも短期的にはさらなる安値探りのリスクが排除できません。",
+        "evidence": "reference.market_regime=downtrend / technical_view.points[2]: ADR下落"
+      },
+      {
+        "reason": "テクニカル指標でSMA5がSMA25を下回るデッドクロスが継続しており、反転の兆候（テクニカルのneutral化）を待つべき局面です。",
+        "evidence": "technical_view.points[1]: sma5_vs_sma25=dead"
+      }
+    ],
+    "risks": [
+      "市場全体の地合い悪化に伴い、好材料が無視されてサポートライン（4,968円）を割り込むリスク",
+      "予想PER 28倍超という高バリュエーションによる利益確定売りの継続",
+      "2026年12月の日銀金融政策決定会合に向けた追加利上げ観測による成長株への下押し圧力"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ面では業績上方修正や大規模な自己株式取得が発表され極めて強気（strength=85）ですが、テクニカル面が明確な下落トレンド（bearish）にあるため、統合ルールに基づき押し目確認の保留とします。\",\n      \"evidence\": \"fundamental_view.points[0]: 業績上方修正 / technical_view.stance=bearish (strength=85)\"\n    },\n    {\n      \"reason\": \"市場全体がdowntrendレジームにあり、ADRも軟調であることから、好材料を内包しつつも短期的にはさらなる安値探りのリスクが排除できません。\",\n      \"evidence\": \"reference.market_regime=downtrend / technical_view.points[2]: ADR下落\"\n    },\n    {\n      \"reason\": \"テクニカル指標でSMA5がSMA25を下回るデッドクロスが継続しており、反転の兆候（テクニカルのneutral化）を待つべき局面です。\",\n      \"evidence\": \"technical_view.points[1]: sma5_vs_sma25=dead\"\n    }\n  ],\n  \"risks\": [\n    \"市場全体の地合い悪化に伴い、好材料が無視されてサポートライン（4,968円）を割り込むリスク\",\n    \"予想PER 28倍超という高バリュエーションによる利益確定売りの継続\",\n    \"2026年12月の日銀金融政策決定会合に向けた追加利上げ観測による成長株への下押し圧力\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 85,
+      "summary": "10月29日の大幅下落以降、短期・中期ともに明確な下落トレンドにあり、市場全体の地合い悪化も相まってさらなる安値探りのリスクが高い状態です。",
+      "points": [
+        {
+          "point": "中期的な下落トレンドが継続しており、市場平均に対しても劣後している。厳守事項に基づき、反転の兆候がないため弱気継続と判断する。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-5.15, price_technical.trend_60d.relative_to_topix_60d_pct=-6.0"
+        },
+        {
+          "point": "短期テクニカル指標も極めて弱気。5日線が25日線を下回るデッドクロス状態であり、MACDヒストグラムも大幅なマイナス圏で拡大している。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.macd_histogram=-89.28"
+        },
+        {
+          "point": "前夜の米国市場およびADRが軟調であり、国内の市場レジームもdowntrend判定であるため、寄り付きから売り圧力が強まりやすい環境にある。",
+          "evidence": "us_overnight.adr.change_1d_pct=-1.5, macro.market_regime.market_regime=downtrend"
+        }
+      ],
+      "cautions": [
+        "RSI14が37.5と比較的低い水準にあり、短期的には自律反発が生じる可能性があるが、SMA5を回復するまでは一時的な揺り戻しに留まるリスクがある。",
+        "前夜のADR下落が寄り付き価格に織り込まれた後、国内市場で「材料出尽くし」による買い戻しが入る可能性に注意が必要。"
+      ],
+      "key_levels": {
+        "support": 4968.0,
+        "resistance": 5285.6
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 85,
+      "summary": "2027年3月期中間決算における通期業績予想の上方修正、増配、および大規模な自己株式取得が発表されており、ファンダメンタルズと株主還元の両面で強力な買い材料が揃っている。",
+      "points": [
+        {
+          "point": "2027年3月期通期の連結業績予想を上方修正し、調整後営業利益で前期比20.9%増の1兆4,500億円を見込むなど、強い成長トレンドが継続している。",
+          "evidence": "fundamentals.recent_important_disclosures[0].summary (2026-10-28)"
+        },
+        {
+          "point": "中間配当を直近予想の28円から32円へ増額修正（前年同期比9円増配）し、かつ2,903億円規模の自己株式取得を実施するなど、株主還元姿勢が極めて積極的である。",
+          "evidence": "fundamentals.recent_important_disclosures[1].summary, disclosures.items[4].title"
+        },
+        {
+          "point": "AI・データセンター需要に伴う電力・冷却インフラの拡大が具体的なニュース（GPU冷却、変圧器用絶縁材新工場）として表れており、中長期的な収益機会の具体化が進んでいる。",
+          "evidence": "news.headlines[1].title, news.headlines[2].title"
+        },
+        {
+          "point": "日本の製造業PMIが53.3と拡大圏を維持しており、大企業製造業の業況判断DIも改善傾向にあるなど、主力の製造業部門を取り巻くマクロ環境が良好である。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=53.3, macro.boj.tankan.di.large_manufacturing.current_di=24.0"
+        }
+      ],
+      "cautions": [
+        "予想PERが28倍を超え、PBRも3.4倍とバリュエーション面に割安感はなく、期待先行による利益確定売りに警戒が必要。",
+        "市場全体が25日移動平均線を下回るダウントレンドにあり、VIX指数の上昇を伴う地合いの悪化が株価の重石となるリスクがある。",
+        "次回の日銀金融政策決定会合（12月17日〜18日）に向けた追加利上げ観測や、国内長期金利（JGB 10Y）の上昇が成長株のバリュエーションを圧迫する可能性がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)日立製作所【HTHIY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1sbW5DNlQwVHN5dlZ4RkdjaXVnbjJ4TGtWVWstLVdjcWtGcjdSdmlXSXRKVmdIdl9Fa0lIZ0YyUm5WU1lLZ1hFSWhmU2Q1eHhy?oc=5",
+        "published": "Sun, 01 Nov 2026 23:14:50 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "日立製作所、GPUの冷却電力3割減 新構造コールドプレートで - 日経クロステック",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5IZGdua3AwZXV3VV9JWkFFa2JPbTZXOVlWNlFHUTBVdmRaYUZGVGRKcGt6UExVN0F5VlN0Z0VnRXNxbWp0UWlKcmNoSEJwdkpoYVVkX1lQbWQ4alJsUkY0NDFyaGZjVFFQX0hLNA?oc=5",
+        "published": "Sun, 01 Nov 2026 20:00:00 GMT",
+        "publisher": "日経クロステック"
+      },
+      {
+        "title": "日立エナジー、カナダに変圧器用絶縁材新工場 AIで需要増 - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5nNlJ4SXFyVHYwQ3ZZTzNGc3pidXF1aFlkXzJjaHBJeTcxelBwN3dBbkpyd0FfMEFlenZ2ZkVJNU9JWGZUQXZsdEs1SkY3M1NrY2RSSkUzTVo?oc=5",
+        "published": "Sun, 01 Nov 2026 14:43:26 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "日立とBIPROGYが離脱、メインフレームベンダー「撤退」「継続」の胸算用 - 日経クロステック",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9BOWxDcmxjZFlyZG1YUEdZX0xVUkJFWnFlbW82bHhWckhxMXJzbTFncjZ1OGQ0Vi1JX1pSY0ZmUVhxaVBYSE9IQkJYSUM1VVRMS3BSUE8weVVRU0hRNE5j?oc=5",
+        "published": "Sun, 01 Nov 2026 07:33:53 GMT",
+        "publisher": "日経クロステック"
+      },
+      {
+        "title": "JPX、取引システムでの監視アラートの対処に生成AI技術を本格適用 - デジタルクロス",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1ZdTBOSG1qOGlVTnhaVkg5T01GcUxrUUs4WXZIaWYxLWo2MVFTbEtQaDlXakh5YjB5cVhxX05oMUIta1VnWmM1VXdVYXpFYy1nODBiY29nMkN4RWlvZDM2eDBCRQ?oc=5",
+        "published": "Sun, 01 Nov 2026 21:00:00 GMT",
+        "publisher": "デジタルクロス"
+      },
+      {
+        "title": "【ダイキン・日立・パナ・三菱電機】空調大手4社の「北米・欧州事業戦略」を徹底比較、勝ち組はどこ？データセンターバブルでM＆Aが超活発《再配信》 - ダイヤモンド・オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBFU05FMG9mNUhBN0tKcDJudnZnbU1sTmFwT21PU0JjeW9PUjFjaGV3RWpfSTMzT1RFZXh0TzN3ZGZwM0J0VHJjR2JIVzfSAU9BVV95cUxOUTVOdHk0d3YyU2cyVDN4X2MyQUFvLVZDYVVCSVUtOHBQdTl0TnY3Nzg2cUo4MHU2Y0dvaWNQVmd5Wm1PeEc3Nm94NjlWZVNn?oc=5",
+        "published": "Sun, 01 Nov 2026 19:10:00 GMT",
+        "publisher": "ダイヤモンド・オンライン"
+      },
+      {
+        "title": "秋の褒章 山口県内から6人 - 47NEWS",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1oTFRjY1B2M0xPaUxxOFdpR3BpcnRzbWNuZ3lmcHNLd1lfZEJiNTJ5UUJOQVFiS0pybUpaMGJ5UW5pdVRQRDVGM2VEWQ?oc=5",
+        "published": "Sun, 01 Nov 2026 20:00:00 GMT",
+        "publisher": "47NEWS"
+      },
+      {
+        "title": "ＪＲ東日本など５社 総務省「ワット・ビット連携関連実証」に着手 - 観光経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5JSDUzRUVZU0wxcXpuYnRnUEx4MjlvTG9VZGFUNHVTUnZzdU5RdTQ4Y1BTeXJkTlZMd1ZMT3pZODlqeTYzMy0tMTF2cVpIeFFEWHdibw?oc=5",
+        "published": "Sun, 01 Nov 2026 10:03:37 GMT",
+        "publisher": "観光経済新聞"
+      },
+      {
+        "title": "アルインコ (5933) キャッシュフロー報告書 - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMizwJBVV95cUxON3JLSUN3S182aXVlR3lQdEdPV0FOMjRwRFZJalJsZmFCUW1EX1RlRGplSmlqdEVaTDJzcTVqNnQ3QTJjbjczZ1FpNEhfal90Y3pxUFBnYlhrOEI2OTRxU3ZEcUREcE83dDUxRkxxUTNKb2hMWXhlMEhhSl9BOGhPdzJrTlVhVGptbHlqWU1iOUYxdHlrRzFtVy1tR3I3Z0RPZFBnZW5UNGk1Y1ZfUzlBdW9zVHUyRk53UDBRbEYyZDVKWEhnbEd5RHZRZUdOYl9QcnVRR291NzBuOVZ0RkRybUoydmNxcVBGcl9tdW9jcjRHQTBfaHpUaC1LX0o5WEpmejhkb2VZUzhRVHFZMTBXZzJjSkVRTWdRbzhCbDBZbDBGNVZSd1pCNXI4NHJkc0dTYzhZYndHZE5tSElLUGo3Y0VpNkZvS1BaUU53UDRCbw?oc=5",
+        "published": "Sun, 01 Nov 2026 06:38:34 GMT",
+        "publisher": "Moomoo"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第2四半期 (中間期) 決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028557937.pdf",
+        "date": "2026-10-28 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第2四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028557945.pdf",
+        "date": "2026-10-28 15:30:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028557955.pdf",
+        "date": "2026-10-28 15:30:00"
+      },
+      {
+        "title": "役員向け株式報酬制度に係る「役員報酬BIP信託」の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028557959.pdf",
+        "date": "2026-10-28 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261002545344.pdf",
+        "date": "2026-10-02 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260902530692.pdf",
+        "date": "2026-09-02 15:30:00"
+      },
+      {
+        "title": "個別決算における投資有価証券売却益(特別利益)の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260819523052.pdf",
+        "date": "2026-08-19 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804508474.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "（訂正）2027年3月期 第1四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503298.pdf",
+        "date": "2026-07-30 13:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729501771.pdf",
+        "date": "2026-07-29 15:30:00"
+      }
+    ]
+  }
+}

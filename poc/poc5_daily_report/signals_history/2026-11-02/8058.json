@@ -1,0 +1,181 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-11-02T10:41:02+09:00",
+  "price_as_of": "2026-11-02",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "2026年11月4日の第2四半期決算発表を直前に控えており、業績内容や株主還元方針を確認するまで静観が妥当である。",
+        "evidence": "fundamental_view.summary / next_earnings_date: 2026-11-04"
+      },
+      {
+        "reason": "ファンダメンタルズ面で2期連続の減益トレンドにあり、PER22倍超の割高感から積極的な買い材料が不足している。",
+        "evidence": "fundamental_view.points[0]: net_income 9640 -> 8005 / fundamental_view.points[1]: forward_pe=22.633"
+      },
+      {
+        "reason": "市場全体がdowntrendレジームにあり、VIX指数の上昇やADRの下落など外部環境の不透明感が強い。",
+        "evidence": "reference.market_regime='downtrend' / technical_view.cautions: us_overnight.adr=-1.54%, VIX=19.42"
+      },
+      {
+        "reason": "テクニカル面ではSMA25付近での底堅さは見られるものの、対TOPIXでの劣後など上値の重さが目立つ。",
+        "evidence": "technical_view.points[1]: relative_to_topix_60d_pct=-0.62 / reference.last_close=4798.0"
+      }
+    ],
+    "risks": [
+      "11月4日の決算発表における通期予想の下方修正や、期待を下回る株主還元策の発表",
+      "市場全体のダウントレンド継続に伴う、指数寄与度の高い大型株としての連れ安",
+      "米大統領選やマクロ経済統計を控えた、VIX上昇に伴うグローバルなリスク回避姿勢の強まり"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 50,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"2026年11月4日の第2四半期決算発表を直前に控えており、業績内容や株主還元方針を確認するまで静観が妥当である。\",\n   \"evidence\": \"fundamental_view.summary / next_earnings_date: 2026-11-04\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ面で2期連続の減益トレンドにあり、PER22倍超の割高感から積極的な買い材料が不足している。\",\n   \"evidence\": \"fundamental_view.points[0]: net_income 9640 -> 8005 / fundamental_view.points[1]: forward_pe=22.633\"\n  },\n  {\n   \"reason\": \"市場全体がdowntrendレジームにあり、VIX指数の上昇やADRの下落など外部環境の不透明感が強い。\",\n   \"evidence\": \"reference.market_regime='downtrend' / technical_view.cautions: us_overnight.adr=-1.54%, VIX=19.42\"\n  },\n  {\n   \"reason\": \"テクニカル面ではSMA25付近での底堅さは見られるものの、対TOPIXでの劣後など上値の重さが目立つ。\",\n   \"evidence\": \"technical_view.points[1]: relative_to_topix_60d_pct=-0.62 / reference.last_close=4798.0\"\n  }\n ],\n \"risks\": [\n  \"11月4日の決算発表における通期予想の下方修正や、期待を下回る株主還元策の発表\",\n  \"市場全体のダウントレンド継続に伴う、指数寄与度の高い大型株としての連れ安\",\n  \"米大統領選やマクロ経済統計を控えた、VIX上昇に伴うグローバルなリスク回避姿勢の強まり\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "SMA25の上方維持やMACDの好転などテクニカル指標の改善が見られる一方、市場全体の下降レジームと直近の続落により、短期的には方向感に欠ける展開が予想されます。",
+      "points": [
+        {
+          "point": "短期トレンドを示す5日線と25日線がゴールデンクロスしており、MACDもシグナルを上回ってヒストグラムが拡大するなど、テクニカル形状は底堅さを示しています。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, macd=8.59, macd_histogram=17.05"
+        },
+        {
+          "point": "60営業日の騰落率がプラスを維持しており、定義上の中期下落トレンドには該当しませんが、対TOPIXでは劣後しており相対的な上値の重さが確認されます。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=0.23, relative_to_topix_60d_pct=-0.62"
+        },
+        {
+          "point": "直近5営業日のうち10月29日に突出した出来高を伴って上昇しており、4700円台後半での買い意欲が一定程度存在することが示唆されています。",
+          "evidence": "price_technical.recent_5_days[2].volume=33884000, price_technical.recent_5_days[2].close=4908.0"
+        }
+      ],
+      "cautions": [
+        "TOPIXが25日線を下回るdowntrendレジームにあり、市場全体の売り圧力に押されるリスクがあります (macro.market_regime)",
+        "前夜のADRが-1.54%と下落しており、寄り付き直後に売りが先行する可能性があります (us_overnight.adr)",
+        "VIX指数が急上昇しており、米国市場のボラティリティ拡大に伴う不透明感が強まっています (macro.indices.VIX=19.42)"
+      ],
+      "key_levels": {
+        "support": 4748.8,
+        "resistance": 5020.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "11月4日の第2四半期決算発表を直前に控え、直近2期の減益トレンドおよび商社セクターとしては割高感のあるPER水準から、現時点での積極的な買い材料に乏しい。",
+      "points": [
+        {
+          "point": "年次業績が2期連続の減益となっており、収益性の低下傾向が明確である。",
+          "evidence": "fundamentals.earnings_trend.annual (2024-03 net_income 9640 -> 2026-03 net_income 8005)"
+        },
+        {
+          "point": "予想PERが22倍を超えており、歴史的な商社株のバリュエーション水準と比較して期待先行の価格形成となっている。",
+          "evidence": "fundamentals.valuation.forward_pe=22.633"
+        },
+        {
+          "point": "マクロ環境では157円台の円安水準や製造業PMIの拡大（53.3）が継続しており、事業環境自体は追い風が吹いている。",
+          "evidence": "macro.indices[2].close=157.8, macro.japan_pmi.manufacturing.latest_value=53.3"
+        }
+      ],
+      "cautions": [
+        "2026年11月4日の決算発表において、通期予想の下方修正や株主還元策が期待を下回る際の下落リスク",
+        "TOPIXが25日移動平均線を下回る市場全体のダウントレンドによる連れ安の可能性",
+        "VIX指数の上昇（19.42）に伴う投資家のリスク回避姿勢の強まり"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "三菱商事(株)【MSBHY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBCNG1fdC1BZEVqZUlpaGczUlBIaUZkS3BNMU84dGRhNXE3M20yb1JoQjFXN2k3Z05JVmdGNjFXVXZwbkl1ME45QzFydkFpTXps?oc=5",
+        "published": "Sun, 01 Nov 2026 13:46:11 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "鉄鋼・建設産業のDXを支えるMill-Box株式会社、2026年11月1日より営業開始 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE84cmRfanlkZktDS3o1Y3VPbzdXODVEMFg5Q01PVmFYN1VOUVZPY3VrdDdsb1NYY1V2OHN3dzVnZW9NQzhiOWRnazZKLWlQMGJWYVR0emNYRHJqOHhWVkRudWI0Y1dDdXJIa2c?oc=5",
+        "published": "Mon, 02 Nov 2026 01:00:02 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "ノーベル化学賞・硤合氏、若い世代に化学の魅力を - 化学工業日報 電子版",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFB6TTNzR1M2Y0dsdDJkQWNCSlFjZk9jZnFLWGJmRnNYZmloS1dXSXBLSDlnSjBXUGxac2hPX1Q0Z2t2aHYydlY1QUdjbjJJUEJNcDFB?oc=5",
+        "published": "Sun, 01 Nov 2026 20:03:08 GMT",
+        "publisher": "化学工業日報 電子版"
+      },
+      {
+        "title": "環境省など、環境配慮まちづくりで官民ネットワーク - 化学工業日報 電子版",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5sWEM5SV9rdnFIX09mNEpoTnZYZ0ZlQ2ZGRFZwamowazVaY0JUeXQtLVd0OU1TYjdPbjVxQTZvb291TnhhcW5PTHhSV1p1THEzWFI0?oc=5",
+        "published": "Sun, 01 Nov 2026 20:03:08 GMT",
+        "publisher": "化学工業日報 電子版"
+      },
+      {
+        "title": "【今週発表の注目決算】トヨタ、ソニーグループ、任天堂、三菱重工、三菱商事｜決算ウォッチ - ライブドアニュース",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9oekxFMklQSUwzcmx4TG1MMUJZdm8yUDFpMHRZa29kSlBhNjNIdzNvR1FNREZRMW40dENic3pabENxT210dTlUY1FQOC1qXzRjMzJLb25ZV3Y2SEkwTHVN?oc=5",
+        "published": "Sun, 01 Nov 2026 20:00:00 GMT",
+        "publisher": "ライブドアニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期第1四半期決算短信〔IFRS〕(連結）（監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510489.pdf",
+        "date": "2026-08-06 15:25:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505791.pdf",
+        "date": "2026-08-03 14:00:00"
+      },
+      {
+        "title": "特定子会社の異動（子会社の特定子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260714593288.pdf",
+        "date": "2026-07-15 10:00:00"
+      },
+      {
+        "title": "子会社間の合併及び特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552595.pdf",
+        "date": "2026-05-29 09:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C2プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539898.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C3プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539905.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C4プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539910.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C5プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539918.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C6プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539939.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260430515679.pdf",
+        "date": "2026-05-01 14:00:00"
+      }
+    ]
+  }
+}

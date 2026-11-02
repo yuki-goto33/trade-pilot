@@ -1,0 +1,214 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-11-02T10:37:50+09:00",
+  "price_as_of": "2026-11-02",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ・テクニカル両面で強い弱気シグナルが出ているが、株価が25日移動平均線から-18%以上乖離しており、売りを出すには下落が進行しすぎているため。",
+        "evidence": "reference.last_close=4331.0, reference.sma25=5308.8, technical_view.stance=bearish"
+      },
+      {
+        "reason": "出資先のIPO撤回やOpenAIの資金調達目標下方修正などの悪材料が重なっているが、RSIが34.1まで低下しており、短期的には売られすぎによる自律反発のリスクがある。",
+        "evidence": "fundamental_view.points[0,1], technical_view.cautions[1]"
+      },
+      {
+        "reason": "11月10日の決算発表を目前に控えており、投資持分の再評価による不確実性が高いため、発表前のポジション構築は避けるべき局面である。",
+        "evidence": "reference.next_earnings_date=2026-11-10, fundamental_view.cautions[0]"
+      }
+    ],
+    "risks": [
+      "2026-11-10の決算発表における投資先の評価損拡大に伴う株価急落リスク",
+      "米VIX指数の急騰（12.91%）に象徴される、グローバルなハイテク株からの資金流出",
+      "前夜NY市場のADR大幅安（-7.5%）を受けた、寄り付き後の更なる売り圧力の継続"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ・テクニカル両面で強い弱気シグナルが出ているが、株価が25日移動平均線から-18%以上乖離しており、売りを出すには下落が進行しすぎているため。\",\n   \"evidence\": \"reference.last_close=4331.0, reference.sma25=5308.8, technical_view.stance=bearish\"\n  },\n  {\n   \"reason\": \"出資先のIPO撤回やOpenAIの資金調達目標下方修正などの悪材料が重なっているが、RSIが34.1まで低下しており、短期的には売られすぎによる自律反発のリスクがある。\",\n   \"evidence\": \"fundamental_view.points[0,1], technical_view.cautions[1]\"\n  },\n  {\n   \"reason\": \"11月10日の決算発表を目前に控えており、投資持分の再評価による不確実性が高いため、発表前のポジション構築は避けるべき局面である。\",\n   \"evidence\": \"reference.next_earnings_date=2026-11-10, fundamental_view.cautions[0]\"\n  }\n ],\n \"risks\": [\n  \"2026-11-10の決算発表における投資先の評価損拡大に伴う株価急落リスク\",\n  \"米VIX指数の急騰（12.91%）に象徴される、グローバルなハイテク株からの資金流出\",\n  \"前夜NY市場のADR大幅安（-7.5%）を受けた、寄り付き後の更なる売り圧力の継続\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 85,
+      "summary": "60営業日騰落率・対TOPIXともに大幅マイナスの中期下落トレンドが継続しており、主要移動平均線の下抜けやMACD・地合いの悪化、前夜ADRの大幅安も重なり下値模索が続く見通しです。",
+      "points": [
+        {
+          "point": "60営業日騰落率が-19.69%、対TOPIXでも-20.54%と大幅なアンダーパフォームとなっており、中期下落トレンドが明白に継続している。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-19.69, price_technical.trend_60d.relative_to_topix_60d_pct=-20.54"
+        },
+        {
+          "point": "株価は5日線および25日線を下回り、5日線と25日線のデッドクロスに加え、MACDもシグナル線を下回りヒストグラムが陰転拡大している。",
+          "evidence": "price_technical.sma5_vs_sma25='dead(5日線が25日線の下)', price_technical.macd_histogram=-15.51, price_technical.last_close=4331.0, price_technical.sma5=4546.6"
+        },
+        {
+          "point": "市場レジームがdowntrendと判定されているほか、米VIXが急騰するなど全体相場にもリスク回避姿勢が強まっている。",
+          "evidence": "macro.market_regime.market_regime='downtrend', macro.indices[3].change_1d_pct=12.91"
+        },
+        {
+          "point": "前夜NY市場においてADRが-7.50%、米国テクノロジーセクターETFが-4.89%と急落しており、外部環境からの強い売り圧力が警戒される。",
+          "evidence": "us_overnight.adr.change_1d_pct=-7.5, us_overnight.sector_proxy.change_1d_pct=-4.89"
+        }
+      ],
+      "cautions": [
+        "ADRの急落（-7.50%）は寄り付き段階で織り込まれ、寄り底となって短期的な自律反発につながる可能性がある。",
+        "RSI14が34.1まで低下しており、期間安値（3962.0円）付近での売られすぎ感から買戻しが入るリスクがある。"
+      ],
+      "key_levels": {
+        "support": 3962.0,
+        "resistance": 4546.6
+      }
+    },
+    "fundamental": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "出資先のIPO撤回やOpenAIの資金調達目標下方修正といった個別悪材料に加え、米国のAI関連株安とVIX指数上昇による外部環境の悪化が短期的リスクとなっている。",
+      "points": [
+        {
+          "point": "主要投資先候補であるOpenAIの資金調達目標が100億ドル引き下げられたと報じられ、AIセクターの成長期待に対する不透明感が強まっている。",
+          "evidence": "news.headlines[3]"
+        },
+        {
+          "point": "出資先であるオーペイ（Opay）が外国当局の調査を理由に米IPOを撤回した。投資先の出口戦略と資産価値への懸念材料となる。",
+          "evidence": "news.headlines[2]"
+        },
+        {
+          "point": "米国市場でS&P500が1.82%下落し、恐怖指数（VIX）が12.91%急上昇するなど、投資家のリスク許容度が低下している。",
+          "evidence": "macro.indices"
+        },
+        {
+          "point": "国内市場全体がダウントレンド（25日移動平均線を下回り、5日騰落率がマイナス）にあり、大型株への資金流入が期待しにくい局面である。",
+          "evidence": "macro.market_regime"
+        }
+      ],
+      "cautions": [
+        "2026年11月10日に決算発表を控えており、投資持分の評価変動による大幅な業績振れリスクがある。",
+        "米ドル円が1ドル157.8円と円安水準にあり、為替による評価益がネガティブなニュースを相殺する可能性がある。",
+        "社債の期限前償還（2026-10-23）など財務健全化の動きは進んでおり、下値では買い支えが入る可能性がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソフトバンクグループ(株)【SFTBY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9PS0JwdDRlRjRxb1VMWkhNNTEwcUtyQkN0SVdKbk1ZVEN2VkZYZFhkVktRdVlLNUhBdm45Q1ZxY0xZSUtsTDktcWhXNjFPSU5s?oc=5",
+        "published": "Sun, 01 Nov 2026 23:14:50 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "上昇はわずか1銘柄､10月急落した銀行株騰落率ワースト30 - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBEN2RjMVZXSGZIU3F6M2djTFdyZTEybnNwVHpfdmlMOTRvSHJjS0NIdElYdjFxUTJLUkhqU1BrRElaMlExelh0X21WN1dpU2p3NWpYZUVjcw?oc=5",
+        "published": "Sun, 01 Nov 2026 22:00:00 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "ソフトバンクＧ出資のオーペイ、米ＩＰＯ撤回 「外国当局の調査」理由 - Reuters",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE13eXpkeUJpaVBnZ255YXpqVEI0OGNpVWZqdV9PY3dyYUMwOG90Ml9TNzdxSDlhU1h6bExCMFR4bzJGUm9oNXZpa0RiWFl0b1VrNThCOE9MQzBhckF6UW94cmJ2enlsVDc0ekhvR1Y4UXFZUzlsSUFpTGZ3R1J2QQ?oc=5",
+        "published": "Sun, 01 Nov 2026 22:33:44 GMT",
+        "publisher": "Reuters"
+      },
+      {
+        "title": "ソフトバンクＧ－大幅続落 ＯｐｅｎＡＩ、資金調達目標を100億ドル引き下げと伝わる(トレーダーズ・ウェブ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPY2I4SXlFTlY2ZkpvU3hvT3A1OXk5N1h6SUhqTEI4X19fSHFRSmFHNUJneDVpSktDcFRSeVJzRjZCazgtSTlPMmxQbHZjMWE4cUFDU0lFVVVRajBPSmRPRWNGY0pWYlY5d250QUpOSTdBbFpqdzlyUjlqX2I1eUdBakE5cVN0U0k?oc=5",
+        "published": "Mon, 02 Nov 2026 00:14:02 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "日経平均は続落で寄り付く、米ＡＩ関連株安を嫌気 一時500円安 - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9yRjRRWmJNcThHM1lGVDd5eGVpRm1NbzlOVEFMTElHa3EySGh4NHVwanNuV0NXVElBdF9TR3hUck1fUUIxZnpWTHdFdDBfUW92Q2lKcHo5LUpBRE1xQjl6N2lyV3l6c05IcG1aSGhn?oc=5",
+        "published": "Mon, 02 Nov 2026 00:27:08 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "うっかり言ってた…孫正義が「こっぴどく怒る」仕事ができないのが即バレする「NGワード」 (ダイヤモンド・オンライン) - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNMW5vUzM2SkgzWWJoY2tMWWo2ZldhT0NLUEotOU5hbnlzd0JBNmxrdGQtN3BlMS0zSm5Ba1NzUXpWQlFxamtuaVlVNmx4RGw0WTJiTnNUOXRXWjJhYlJoSXVhTHNicXFiMlRWeEJyY1AzMERPUEN6TWFnZ2syUDBXaDBWV0JaOGJMaThPZ0Fn?oc=5",
+        "published": "Sun, 01 Nov 2026 20:45:47 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "11月2日版 FX Weekly Report - FOREX.com",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQZHNtQlh6anVMeDNGVjAxLXMxdjB5R3NwRDh5MW52X2JIYkIxcFNreW0zejFSLXdqM3JZS3ZoblJzTktSZzVEZ3RETlRhSFRkaWdZV2hTdmZpZW00QnVvYmt3bGVueW9yeUNFQm1VVkU5MURPQ2JjYk5pV0ZDMEJEMA?oc=5",
+        "published": "Mon, 02 Nov 2026 00:08:00 GMT",
+        "publisher": "FOREX.com"
+      },
+      {
+        "title": "30日は日米の主要株価指数が軟調に推移 - FOREX.com",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPM0RpVUxxWEhTbkFKWmdYNVF4cWN3QnJDY2p2MW8zc0tpWmJIRFNmNFpfai11eHNMaDZGaWQ5WkNwSjE4UENxMTc4dDFHTUtkdXNCQ3psWnFuR1NuSnV0ZUxndGJOa1g5UFVOcDljUjdXYU84WWtEVjFmUVhISTg1Zi1B?oc=5",
+        "published": "Mon, 02 Nov 2026 00:21:00 GMT",
+        "publisher": "FOREX.com"
+      },
+      {
+        "title": "ソフトバンクＧ出資のオーペイ、米ＩＰＯ撤回 「外国当局の調査」理由 - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1XVWtTSnpkNWdSdjZwSVdyLXdPWUZFZndqMzZDa3pJcVBWc2luMTFrTUUxSGdIaFllZ2sya0RaUUUwbXljT3k4NkNGblkzc3lSNWdDNjVBNm56M0gwb1ppcGFKbXI2LTlFMHg0SlFn?oc=5",
+        "published": "Sun, 01 Nov 2026 22:33:05 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "うっかり言ってた…孫正義が「こっぴどく怒る」仕事ができないのが即バレする「NGワード」（ダイヤモンド・オンライン） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAxZTNPVWFwR2QtVkExd04wOW9BbEJ6QjBRWndxR05OMkx4VDh5MGFsS29BTGU4UVpvVkZfdHU3ZF81UklXbXV5b0t5bGk1S3F6dnE1Rkl1UFM3c2xGQ1NXd2ZNX3hXdjF6MHg1U0x6dFFRT1JVWVNoTkFmTHdVa00?oc=5",
+        "published": "Sun, 01 Nov 2026 20:32:40 GMT",
+        "publisher": "Yahoo!ニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得の完了時期の変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030561126.pdf",
+        "date": "2026-10-30 15:30:00"
+      },
+      {
+        "title": "剰余金の配当（中間配当）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261022554888.pdf",
+        "date": "2026-10-23 15:30:00"
+      },
+      {
+        "title": "2021年発行ユーロ建普通社債の期限前償還完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261023555022.pdf",
+        "date": "2026-10-23 11:30:00"
+      },
+      {
+        "title": "2021年発行ユーロ建普通社債の期限前償還に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261009548411.pdf",
+        "date": "2026-10-09 15:30:00"
+      },
+      {
+        "title": "OpenAIへの追加出資（サードトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260930543674.pdf",
+        "date": "2026-10-01 16:00:00"
+      },
+      {
+        "title": "外貨建シニア社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260924539094.pdf",
+        "date": "2026-09-24 08:00:00"
+      },
+      {
+        "title": "ブリッジローンの期限前返済に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533573.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260904531576.pdf",
+        "date": "2026-09-04 10:30:00"
+      },
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得の完了時期の変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260828527943.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824524817.pdf",
+        "date": "2026-08-24 09:30:00"
+      }
+    ]
+  }
+}
