@@ -1,0 +1,207 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-11-04T11:10:35+09:00",
+  "price_as_of": "2026-11-04",
+  "signal": {
+    "signal": "hold",
+    "confidence": 50,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "明日（11月5日）に第2四半期決算発表を控えており、通期計画に対する進捗や見通しの修正を確認する必要があるため、現状は様子見が妥当である。",
+        "evidence": "fundamental_view.points[0]: fundamentals.next_earnings_date=2026-11-05"
+      },
+      {
+        "reason": "市場全体が下降トレンド（downtrend）にあり、個別銘柄のテクニカルな強さが制限されやすく、日経平均の急落に伴う連れ安リスクが高い。",
+        "evidence": "technical_view.points[2]: macro.market_regime.market_regime=downtrend"
+      },
+      {
+        "reason": "テクニカル面で25日移動平均線を維持しているものの、MACDの弱気転換やRSIの低下など短期的な調整圧力が強まっている。",
+        "evidence": "technical_view.points[1]: price_technical.macd_histogram=-2.76, technical_view.cautions[2]: RSI<50"
+      }
+    ],
+    "risks": [
+      "明日（11月5日）の決算発表において、原材料高や販売台数の下振れによるネガティブサプライズのリスク。",
+      "日本の10年金利上昇（2.817%）に伴う円高進行が、輸出セクターである同社の業績に与える悪影響。",
+      "市場全体の地合い悪化による、テクニカル的な支持線（25日線 3008.92円）の割り込み。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 50,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 20,\n \"reasons\": [\n  {\n   \"reason\": \"明日（11月5日）に第2四半期決算発表を控えており、通期計画に対する進捗や見通しの修正を確認する必要があるため、現状は様子見が妥当である。\",\n   \"evidence\": \"fundamental_view.points[0]: fundamentals.next_earnings_date=2026-11-05\"\n  },\n  {\n   \"reason\": \"市場全体が下降トレンド（downtrend）にあり、個別銘柄のテクニカルな強さが制限されやすく、日経平均の急落に伴う連れ安リスクが高い。\",\n   \"evidence\": \"technical_view.points[2]: macro.market_regime.market_regime=downtrend\"\n  },\n  {\n   \"reason\": \"テクニカル面で25日移動平均線を維持しているものの、MACDの弱気転換やRSIの低下など短期的な調整圧力が強まっている。\",\n   \"evidence\": \"technical_view.points[1]: price_technical.macd_histogram=-2.76, technical_view.cautions[2]: RSI<50\"\n  }\n ],\n \"risks\": [\n  \"明日（11月5日）の決算発表において、原材料高や販売台数の下振れによるネガティブサプライズのリスク。\",\n  \"日本の10年金利上昇（2.817%）に伴う円高進行が、輸出セクターである同社の業績に与える悪影響。\",\n  \"市場全体の地合い悪化による、テクニカル的な支持線（25日線 3008.92円）の割り込み。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "個別銘柄としては25日移動平均線を維持し中期的な相対優位性を保っているが、市場全体の下降トレンド入りとMACDの弱気転換が重石となり、方向感の乏しい展開が予想される。",
+      "points": [
+        {
+          "point": "株価は25日移動平均線を上回って推移しており、中期的にはTOPIXをアウトパフォームしている。",
+          "evidence": "price_technical.last_close=3030.0, price_technical.sma25=3008.92, price_technical.trend_60d.relative_to_topix_60d_pct=5.32"
+        },
+        {
+          "point": "MACDがシグナルを下回りヒストグラムのマイナス圏が拡大しており、短期的な調整圧力が強まっている。",
+          "evidence": "price_technical.macd_histogram=-2.76, price_technical.macd=19.28, price_technical.macd_signal=22.04"
+        },
+        {
+          "point": "市場全体の地合いが明確な下降トレンドにあり、個別銘柄のテクニカル的な強さが制限されやすい状況にある。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.indices[0].change_1d_pct=-3.07"
+        }
+      ],
+      "cautions": [
+        "25日移動平均線（3008.92円）を明確に下抜けた場合、中期トレンドの崩壊が懸念される。",
+        "前夜の米国セクターETFは大幅高だが、日経平均の急落（-3.07%）による国内市場全体の換金売りに押されるリスクがある。",
+        "RSIが50を下回っており、買いの勢いが減退している。"
+      ],
+      "key_levels": {
+        "support": 3008.92,
+        "resistance": 3149.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "翌日（11月5日）に第2四半期決算発表を控えており、内容を見極める必要がある。PBR1倍割れの割安感や継続的な自己株式取得は下値を支える要因だが、通期で営業減益計画であることや市場全体の下落トレンドが重石となっている。",
+      "points": [
+        {
+          "point": "重要イベント直前による様子見姿勢。明日11月5日に決算発表を予定しており、減益計画に対する進捗状況や通期見通しの修正有無が最大の焦点となる。",
+          "evidence": "fundamentals.next_earnings_date=2026-11-05"
+        },
+        {
+          "point": "資本効率と株主還元への意識。PBRは1倍を下回る水準で推移しており、直近3ヶ月連続で自己株式の取得状況を開示するなど、継続的な株主還元姿勢が確認できる。",
+          "evidence": "fundamentals.valuation.price_to_book=0.962, disclosures.items[0,1,9]"
+        },
+        {
+          "point": "マクロ環境の減速懸念。日本の製造業PMIは53.3と拡大圏にあるものの、前月から低下傾向にあり、輸出セクターである自動車業界にとって景況感のピークアウトがリスクとなる。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=53.3, macro.japan_pmi.manufacturing.monthly"
+        }
+      ],
+      "cautions": [
+        "明日（11月5日）の決算発表において、原材料高や販売台数の下振れを要因とするネガティブサプライズのリスクがある。",
+        "市場全体が下降トレンド（downtrend）にあり、日経平均の急落（1日-3.07%）に連れ安する可能性がある。",
+        "日本の10年金利が2.817%まで上昇しており、円高進行や借入コスト増を通じた業績への影響が懸念される。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "トヨタ自動車(株)【TM】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBBVUdJM0U0aFlkR0FQN05mMW1YR2VRTlVLdEE1d19aRE9MWndrR1NnWTJZb1VtZmtjSGxRTzZseVZQaVhNU1NNUUJFSU8?oc=5",
+        "published": "Tue, 03 Nov 2026 18:37:23 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "「もっといいクルマづくり」続く挑戦 秋の叙勲・旭日大綬章、トヨタ自動車会長・豊田章男氏 - 朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1VdkkwR0dITHJrRDZrc2x3X3FhbXdiM0tQaWZZT20xOFR1R3JTMjM1YmY4ZENiRWlhbElPaDAzWHRFMHhiRkZSYmRzQ1pPQ2xjMnF6blBDX0ltaGI5?oc=5",
+        "published": "Tue, 03 Nov 2026 20:00:00 GMT",
+        "publisher": "朝日新聞"
+      },
+      {
+        "title": "〈2026秋の叙勲〉豊田章男氏（トヨタ自動車会長）に旭日大綬章 - 日刊自動車新聞",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5rNGV6cjA1NDdUTWRJaUgtbGJXNVgzX2ZOZ3BmN09XZG56TEtGbTd0RUhveFBRMG9sMGFSWFdzYTRLQ1BUckZJWkJ6TW9zTk4yVVE?oc=5",
+        "published": "Tue, 03 Nov 2026 20:00:00 GMT",
+        "publisher": "日刊自動車新聞"
+      },
+      {
+        "title": "「カローラ」誕生60年 開発責任者ら、進化の歴史語る トヨタ自動車堤工場で記念イベント：ニュース - 中日BIZナビ",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBOYnhzWHRJSDhzMmZ2WktZY1hKR3hYc1Z0Z2hKVGpKVk8tX19kc3hvcGp3N3BkZTlZTFhLM2xqRmFfbFVUWXliRkNxVllrQUZSZEhzTUxaT0FjaS1kRXhF?oc=5",
+        "published": "Tue, 03 Nov 2026 18:01:24 GMT",
+        "publisher": "中日BIZナビ"
+      },
+      {
+        "title": "｢これからも仲間とともに…｣ 秋の叙勲 トヨタ自動車 豊田章男会長（70）に旭日大綬章 “もっといいクルマづくり”掲げ業績拡大 自動車文化の発展に尽力 | 名古屋・愛知・岐阜・三重のニュース【CBC news】 | CBC web - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE80YkJocGp6cWtVZXdNck01MFh5T2pUd0RmSWxmLWM4RGUwSjNYZVFaWEpmcFpqbXJOMG9RNXZsbE9SRjVJbjlsNFFmZTc4V2FhTWVKWVlVMXhnZw?oc=5",
+        "published": "Tue, 03 Nov 2026 03:18:00 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "トヨタ自動車・豊田章男会長に旭日大綬章 「秋の叙勲」愛知県133人、岐阜県55人、三重県51人受章（2026年11月2日掲載） - 日テレNEWS NNN",
+        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQZ1FhZlVrelZJdHF3N1U4eVI5d2w1ZzE2bHRDeDMxYWludFdyM0IzMkpJX2RhN1hSTGl4c1hQaDBEdFh3WHZwWFg2M196blNUQ1I5OWZQUjh1bmo1Q1hLdEVrQl9uUmhjNVp5c0k0LThoVU9DUDhkUzJrRVpZVEpwVnpNRQ?oc=5",
+        "published": "Tue, 03 Nov 2026 03:01:00 GMT",
+        "publisher": "日テレNEWS NNN"
+      },
+      {
+        "title": "【女子バスケ】Wリーグ開幕 ！ 連覇目指すデンソー、昨季2冠のENEOSは黒星スタート　渡嘉敷来夢加入のトヨタ自動車は“トヨタダービー”制す　開幕節結果 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBCU19rSTV0eTlNb2NLeHltei1GTzFRUGMtMWFwRXU3NHo4WFhKTldBeWFCb01PM1BycHUyZ1lzVVNWQ1N4NThYMGRGUUpGZEtsQ3ZHRGhUOGNkNDZaMnhMOVhxemkwSFoyWElqcUJ3b9IBdEFVX3lxTE85d0RvZzQ2X3RILWpKQ2VRLXdISlRYaXdaV3JWNGZkRy1pT3ZMeElxckRRV040cm5SS2x5MDUwdWJFQklva1o4bGM4cUZQa2lMb1Rra0lvQUItaEpxWjJ0OTEtU01CMERiTG5Ea09mMW1ham5j?oc=5",
+        "published": "Tue, 03 Nov 2026 10:39:39 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "【秋の叙勲】愛知で133人受章 トヨタ自動車豊田章男会長に旭日大綬章「未来への挑戦続ける」（テレビ愛知） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5vR1liUFVaZUFDZzFXekRUOVJKRTFCUWc1XzI4Y202TllEMXNTdEhPZXdIN1h0cXd5bHQ5NWQ2VE4zRXYxZXY0WnNBX0Ryc1I2T0M5bXNHSm9EelFSM1Q5LWV3ZllwZWJYNEhaXzVjWHE0UFhZSElPc01FZ2VMTzQ?oc=5",
+        "published": "Tue, 03 Nov 2026 06:59:01 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "【秋の叙勲】愛知で133人受章 トヨタ自動車豊田章男会長に旭日大綬章「未来への挑戦続ける」 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxONWtuMHBoS3h5emNXWEcybGpFWHRSMUdxVUlER2w5SVQ1RGJpUVl5UThEV3BvckdnNEtKcDNxaGxMUExTcFRHZFRWMHAwd0RwYzQxdXdnczNNajlsaTVlUUdWUFhYVkdNZnhHX2xCdUdJdEUtVTM5LU5LaUs4LTRNWmpSNmdoeUdRNndrRmNESQ?oc=5",
+        "published": "Tue, 03 Nov 2026 06:55:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "トヨタ自動車・豊田章男会長に旭日大綬章 「秋の叙勲」愛知県133人、岐阜県55人、三重県51人受章 - TVer",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBDRi1oLUYyOHp2MUphb20xbmh5TkxQVXdhM2FUalFEU0tlb0ZaWHBndWF0Unl0Q0VDOU5UU3FRUDJzcXE1QllsNlN3VQ?oc=5",
+        "published": "Tue, 03 Nov 2026 03:18:55 GMT",
+        "publisher": "TVer"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261005545791.pdf",
+        "date": "2026-10-05 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903531084.pdf",
+        "date": "2026-09-03 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度の継続及び従業員に対する新たな株式交付制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507853.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507884.pdf",
+        "date": "2026-08-04 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503849.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "2027年3月期第１四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507860.pdf",
+        "date": "2026-08-04 14:00:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定および自己株式の消却に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507846.pdf",
+        "date": "2026-08-04 14:00:00"
+      }
+    ]
+  }
+}

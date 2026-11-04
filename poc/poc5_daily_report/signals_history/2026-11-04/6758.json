@@ -1,0 +1,219 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-11-04T11:15:57+09:00",
+  "price_as_of": "2026-11-04",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "明日11月5日に決算発表を控えており、内容を見極める必要があるため、現時点でのエントリーはリスクが高い。",
+        "evidence": "fundamental_view.points[0]: fundamentals.next_earnings_date=\"2026-11-05\""
+      },
+      {
+        "reason": "2026年3月期の純利益が赤字に転落しており、この不透明な損益構造の改善を確認する必要がある。",
+        "evidence": "fundamental_view.points[1]: fundamentals.earnings_trend.annual[0].net_income_oku_jpy=-3269"
+      },
+      {
+        "reason": "MACDがデッドクロス状態にあり、市場全体の地合いもダウントレンドであるため、短期的には調整圧力が強い。",
+        "evidence": "technical_view.points[2]: price_technical.macd_histogram=-7.7 / reference.market_regime=\"downtrend\""
+      }
+    ],
+    "risks": [
+      "2026年11月5日の決算発表において、赤字要因の継続や通期見通しの下方修正が出た場合の急落リスク。",
+      "市場全体がダウントレンドにあり、日経平均の急落に伴う大型株としての連れ安リスク。",
+      "米国テクノロジーセクターのセンチメント悪化が国内ハイテク株へ波及するリスク。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"明日11月5日に決算発表を控えており、内容を見極める必要があるため、現時点でのエントリーはリスクが高い。\",\n   \"evidence\": \"fundamental_view.points[0]: fundamentals.next_earnings_date=\\\"2026-11-05\\\"\"\n  },\n  {\n   \"reason\": \"2026年3月期の純利益が赤字に転落しており、この不透明な損益構造の改善を確認する必要がある。\",\n   \"evidence\": \"fundamental_view.points[1]: fundamentals.earnings_trend.annual[0].net_income_oku_jpy=-3269\"\n  },\n  {\n   \"reason\": \"MACDがデッドクロス状態にあり、市場全体の地合いもダウントレンドであるため、短期的には調整圧力が強い。\",\n   \"evidence\": \"technical_view.points[2]: price_technical.macd_histogram=-7.7 / reference.market_regime=\\\"downtrend\\\"\"\n  }\n ],\n \"risks\": [\n  \"2026年11月5日の決算発表において、赤字要因の継続や通期見通しの下方修正が出た場合の急落リスク。\",\n  \"市場全体がダウントレンドにあり、日経平均の急落に伴う大型株としての連れ安リスク。\",\n  \"米国テクノロジーセクターのセンチメント悪化が国内ハイテク株へ波及するリスク。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "中期トレンドは市場を大幅にアウトパフォームしておりゴールデンクロスを維持しているが、MACDのデッドクロスおよび全体相場の急速な地合い悪化が短期的重石となっている。",
+      "points": [
+        {
+          "point": "直近60営業日でTOPIXを14%以上アウトパフォームしており、中期的な上昇トレンドは依然として強固である。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=12.66, price_technical.trend_60d.relative_to_topix_60d_pct=14.16"
+        },
+        {
+          "point": "短期移動平均線が長期を上回るゴールデンクロスを維持しており、株価は25日線の上方をキープしている。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden(5日線が25日線の上)\", price_technical.last_close=3987.0, price_technical.sma25=3898.4"
+        },
+        {
+          "point": "MACDはシグナル線を下回るデッドクロス状態にあり、ヒストグラムもマイナス圏で推移し短期的な調整圧力を示している。",
+          "evidence": "price_technical.macd_histogram=-7.7, price_technical.macd=57.1, price_technical.macd_signal=64.8"
+        },
+        {
+          "point": "市場全体が「downtrend」レジームにあり、日経平均の急落など外部環境の悪化が個別銘柄の上値を抑える要因となっている。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\", macro.indices[0].change_1d_pct=-3.07"
+        }
+      ],
+      "cautions": [
+        "直近3日間の反発局面において出来高が減少傾向にあり、買いの勢いが限定的である可能性がある。",
+        "米国テクノロジーセクターETF（XLK）の大幅落（-2.95%）が国内ハイテク株のセンチメントを悪化させるリスクがある。",
+        "マクロ環境の悪化により、サポートラインである25日線を明確に割り込んだ場合は中期トレンドの転換に警戒が必要。"
+      ],
+      "key_levels": {
+        "support": 3898.4,
+        "resistance": 4198.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "明日11月5日に決算発表を控えたイベントリスクに加え、直近通期業績における純利益の赤字転落と、市場全体の下落トレンドを考慮し、中立的な見解を維持します。中長期的にはTSMCとの半導体合弁事業などの成長投資は評価されますが、短期的には決算内容の確認が最優先です。",
+      "points": [
+        {
+          "point": "重要イベントである決算発表が翌日に迫っており、内容を見極める必要があるため、現時点でのポジション構築はリスクが高いと判断します。",
+          "evidence": "fundamentals.next_earnings_date=\"2026-11-05\""
+        },
+        {
+          "point": "2026年3月期は営業利益が1.5兆円超の黒字を確保する一方で、純利益が3,269億円の赤字に転落しており、この不透明な損益構造の改善を確認する必要があります。",
+          "evidence": "fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=15537, fundamentals.earnings_trend.annual[0].net_income_oku_jpy=-3269"
+        },
+        {
+          "point": "TSMCとの合弁会社による熊本での半導体量産に向けた7,000億円規模の投資など、将来の成長力強化に資する具体的な進展が報じられています。",
+          "evidence": "news.headlines[7].title=\"ソニーとＴＳＭＣ、半導体量産 熊本で２９年、７千億円出資\", disclosures.items[5].title=\"ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ\""
+        },
+        {
+          "point": "定期的な自己株式取得（自社株買い）の実施状況が開示されており、株主還元姿勢と下値支持への意識は継続しています。",
+          "evidence": "disclosures.items[3].title=\"自己株式の取得状況に関するお知らせ\", disclosures.items[4].title=\"自己株式の取得状況に関するお知らせ\""
+        },
+        {
+          "point": "マクロ環境は製造業PMIが拡大圏を維持しつつも鈍化しており、市場全体がダウントレンドにあるため、外部環境からの追い風は期待しにくい状況です。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=53.3, macro.market_regime.market_regime=\"downtrend\""
+        }
+      ],
+      "cautions": [
+        "2026年11月5日の決算発表において、赤字要因の継続や通期見通しの下方修正が出た場合の急落リスク。",
+        "日経平均が3%超下落するなどの地合い悪化に伴う、時価総額の大きい銘柄としての連れ安。",
+        "製造業PMIの低下に見られるグローバルな景況感の減速による、エレクトロニクス・デバイス事業への需要減退。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "生成AI活用により本番インシデントは242％増──ソニーグループが考えるAI時代の「統制と自由」 (1/3)|DeveloperZine - CodeZine",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1VeXlyd3ZSQVUzNEw3NjVOeFVUZWFsNGFvN09IQzlIWDRONU5aQzNheFdPTDdsLU91Y0FjZFJEY245VDZ5Y2ZEaEVLX2xrWm1GMkE?oc=5",
+        "published": "Wed, 04 Nov 2026 00:00:00 GMT",
+        "publisher": "CodeZine"
+      },
+      {
+        "title": "ソニーグループ(株)【SONY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBaWnphQUR5QkRjZVlTVmx6UFR5V014TllydmRXWkxLMjQyQlpTTTV0ZXN6b1lsNVZBTGlQMXJGcGFTbHdkcFJuYURxeFRfLTg?oc=5",
+        "published": "Tue, 03 Nov 2026 18:33:22 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "日経平均は小幅続落で寄り付く、半導体株は売り先行 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQRDhkLWxjdW03U0x1TlZ4QmxpbktpWGtTLW1YZm1qRHF0cGJRdnRaa3pBbWIxdmRMRnhHUFVnZzE2dWxzWHRWNmY2UkdoUFVkNy1wTm5BTlJ0NkFDTVJGejJPZ0VHdV9FcTZsa2Y0Rm9IUUFSeGV3QVVpTlBuX2lzVVJWbVE4YlHSAYcBQVVfeXFMUEQ4ZC1sY3VtN1NMdU5WeEJsaW5LaVhrUy1tWGZtakRxdHBiUXZ0Wmt6QW1iMXZkTEZ4R1BVZ2cxNnVsc1h0VjZmNlJHaFBVZDctcE5uQU5SdDZBQ01SRnoyT2dFR3VfRXE2bGtmNEZvSFFBUnhld0FVaU5Qbl9pc1VSVm1ROGJR?oc=5",
+        "published": "Wed, 04 Nov 2026 00:28:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "日経平均は小幅続落で寄り付く、半導体株は売り先行 - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5ISTc0WDM2d2lMczJkNzdEeTk3TXZUaFlNdGtZQUMwTW80OWFWa0c4dHJ2VnNkSXJrN0xDNjBwQXc3TVo3ZnBHYk9tRlhYSDZzcF84eTM0UGVjUjBPQXJyazZlbGVOdjdfdXVEVkRR?oc=5",
+        "published": "Wed, 04 Nov 2026 00:28:07 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "「株式」ADR日本株ランキング〜全般売り優勢、シカゴは大阪日中比295円高の63075円 - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPQ3AwbWNOZjFPM2FDU1hmYmUxc0o2c2dWeEVLb1dUQjdTY0hYb1hBYXhwZDJHZ252el9nVnA4dEdrT0llbF9uOXVQX3BIbHV3cmZkazc1d2pud2RKdFlOZHJWVDFBVGVzOVp6bkFRb3JOcm1aSkgyakJ5MkR5dzNUQUc4NnM1alB4UnZ1TNIBjAFBVV95cUxPQ3AwbWNOZjFPM2FDU1hmYmUxc0o2c2dWeEVLb1dUQjdTY0hYb1hBYXhwZDJHZ252el9nVnA4dEdrT0llbF9uOXVQX3BIbHV3cmZkazc1d2pud2RKdFlOZHJWVDFBVGVzOVp6bkFRb3JOcm1aSkgyakJ5MkR5dzNUQUc4NnM1alB4UnZ1TA?oc=5",
+        "published": "Wed, 04 Nov 2026 00:36:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "Razer、レーザーエッチングガラスとマグネシウムシェルを採用した「Raiju V3 Pro Signature Edition」を発表、スペックは据え置き - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE03a0tPM0o5Rk41RlRqcnJ4T3lLVTI0VHhZQzJOWHZhdmhTRmpuVmQyUWVSVTRxalVsS0RvZFVtSHc3OEhNUllZUGdJejdTSWR4azQ4WnlyWkhfcWIzNDF5RHpULVJDSTdBQllROTd1TTBLUXhP?oc=5",
+        "published": "Tue, 03 Nov 2026 18:25:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "特集 “アニメ”経済圏 - 日経クロストレンド",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1IcHBqN1ltSFl6b29oc21TcjV3b0ROdW1ORldpd2JoRGhvRENJZDhrb1ZtZG5LZzAtdUo3WDE4d19jbU8zYUhDZ1lMeTM4MnNvZnRBOVpheE1lb1JieHc?oc=5",
+        "published": "Tue, 03 Nov 2026 08:58:38 GMT",
+        "publisher": "日経クロストレンド"
+      },
+      {
+        "title": "ソニーとＴＳＭＣ、半導体量産 熊本で２９年、７千億円出資 - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1xelJ5aXIxYW5RcDdhVno5bjN2dmtHcms0TnNaaC1lQ25ZMEZzZ2lhNWNnejR2R05XWGhKWTRDZmxUeFZGaVRQZ0NxZ0xMaC1kcGczNzVPaXo1cUN0ODdlTm0zNA?oc=5",
+        "published": "Tue, 03 Nov 2026 03:35:23 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "【速報】20代男性が軽乗用車にはねられ左足切断 車は海に転落 運転していた80代女性が死亡 山口・下関市 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5ONUgxYnNzWHhBSEhFSE9GbGRXX2hpY2lQbzBUcDM4a1E4SGdCYWFMamJVRFdXTzlYdUhJU1plWWdyMkdCb014S2RxbUVGdHVkSnkzZF9Ja245NENCQi1FTHQzS2xiYVV6ZHkya3h3?oc=5",
+        "published": "Tue, 03 Nov 2026 03:04:07 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "米国株式市場はまちまち、ハイテクに買戻し - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQOVl4ZEFoQ1FMU004LUV4X3lJbk5IVzhWTy1keUgwdTF6SEszT1dmZVhWU2hBdkpkMVFDQ0xxS0pORHd1dVlKU0ppaldCZWQzTUtENWo5T2lJVXA2bXRkdTZCeGpsRWhQeGxOeTNXOTlSTGxWaUVhUkxDYUxvcTdZWG5OaThIZWhMcWFNR3VfNXZCczVwZ2lQSXY1X3V6X3NuejJUWUpfX1ZvX1ZyM3pRa3hiQUp5Z24zczh5RnlqbUtCTnhoaUtjbDdJR2JzbnkydWN2WWdUekltVV9a0gGMAUFVX3lxTE5nMWYtd21MTm9YWjN2Vl9VLWdCUTFqUXNsWXMzek5WdVM3cE4za3NMaC1CaFBNNFVrVzlZdktwQWg5MHF1S2VvZFh3czBXWnlzc09TczdzOTlWcm90bW01UkQ0WVhvUFQwQmJjX19ERjNyRjNIN1Y1QjlGZXkwVWNwam5zYktwc3JkZHZk?oc=5",
+        "published": "Wed, 04 Nov 2026 00:28:00 GMT",
+        "publisher": "ｄメニューニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "業績連動型株式ユニット（PSU）による事後交付型株式報酬制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030560394.pdf",
+        "date": "2026-10-30 15:30:00"
+      },
+      {
+        "title": "業績連動型株式ユニット（PSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030560415.pdf",
+        "date": "2026-10-30 15:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030560428.pdf",
+        "date": "2026-10-30 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261005545702.pdf",
+        "date": "2026-10-05 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903530947.pdf",
+        "date": "2026-09-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260811517496.pdf",
+        "date": "2026-08-11 18:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805509201.pdf",
+        "date": "2026-08-05 11:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504252.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期 連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504254.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の権利確定に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595854.pdf",
+        "date": "2026-07-17 15:30:00"
+      }
+    ]
+  }
+}

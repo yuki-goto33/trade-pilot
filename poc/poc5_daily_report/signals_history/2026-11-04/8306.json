@@ -1,0 +1,182 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-11-04T11:16:55+09:00",
+  "price_as_of": "2026-11-04",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 20,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズの進捗は良好だが、強気確信度(strength: 60)がbuy条件の70に達しておらず、かつテクニカルがbearishであるためルールに従い静観する。",
+        "evidence": "fundamental_view.strength=60, technical_view.stance=\"bearish\""
+      },
+      {
+        "reason": "テクニカル面で5日線が25日線を下回るデッドクロスを形成しており、中期的な下落トレンドが継続している。",
+        "evidence": "technical_view.points[1]: price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\""
+      },
+      {
+        "reason": "市場全体がdowntrendレジームにあり、地合いの悪化が個別銘柄の下押し圧力となっている。",
+        "evidence": "reference.market_regime=\"downtrend\", technical_view.points[2]"
+      },
+      {
+        "reason": "2026年11月13日に決算発表を控えており、上方修正や追加還元策の有無を確認するまでのイベントリスクを考慮。",
+        "evidence": "fundamental_view.cautions[0], reference.next_earnings_date=\"2026-11-13\""
+      }
+    ],
+    "risks": [
+      "市場全体のdowntrend継続による連れ安リスク",
+      "11月13日の決算発表における材料出尽くしや期待外れによる下落",
+      "12月の日銀金融政策決定会合に向けた政策修正観測に伴うボラティリティの拡大",
+      "テクニカル的なサポートラインである3190円を下抜けた場合の下値模索"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 60,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 20,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズの進捗は良好だが、強気確信度(strength: 60)がbuy条件の70に達しておらず、かつテクニカルがbearishであるためルールに従い静観する。\",\n      \"evidence\": \"fundamental_view.strength=60, technical_view.stance=\\\"bearish\\\"\"\n    },\n    {\n      \"reason\": \"テクニカル面で5日線が25日線を下回るデッドクロスを形成しており、中期的な下落トレンドが継続している。\",\n      \"evidence\": \"technical_view.points[1]: price_technical.sma5_vs_sma25=\\\"dead(5日線が25日線の下)\\\"\"\n    },\n    {\n      \"reason\": \"市場全体がdowntrendレジームにあり、地合いの悪化が個別銘柄の下押し圧力となっている。\",\n      \"evidence\": \"reference.market_regime=\\\"downtrend\\\", technical_view.points[2]\"\n    },\n    {\n      \"reason\": \"2026年11月13日に決算発表を控えており、上方修正や追加還元策の有無を確認するまでのイベントリスクを考慮。\",\n      \"evidence\": \"fundamental_view.cautions[0], reference.next_earnings_date=\\\"2026-11-13\\\"\"\n    }\n  ],\n  \"risks\": [\n    \"市場全体のdowntrend継続による連れ安リスク\",\n    \"11月13日の決算発表における材料出尽くしや期待外れによる下落\",\n    \"12月の日銀金融政策決定会合に向けた政策修正観測に伴うボラティリティの拡大\",\n    \"テクニカル的なサポートラインである3190円を下抜けた場合の下値模索\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 85,
+      "summary": "中期騰落率および対TOPIX相対騰落率がともにマイナスで中期下落トレンドを形成しており、主要移動平均線の下抜けと市場全体の地合い悪化が重なり、下値模索の展開が予想されます。",
+      "points": [
+        {
+          "point": "60営業日騰落率が-4.27%、対TOPIX相対騰落率が-2.76%と、いずれもマイナス圏に沈んでおり、中期的な下落トレンドから脱却できていない。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-4.27, price_technical.trend_60d.relative_to_topix_60d_pct=-2.76"
+        },
+        {
+          "point": "短期の5日線が25日線を下回るデッドクロスを形成しており、直近3営業日の続落によってSMA5（3398.6円）との乖離も拡大している。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\", price_technical.recent_5_days"
+        },
+        {
+          "point": "市場レジームがdowntrendと判定されており、日経平均の急落（前日比-3.07%）を含め、外部環境が当該銘柄のテクニカル的な下押し圧力となっている。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\", macro.indices[0].change_1d_pct=-3.07"
+        }
+      ],
+      "cautions": [
+        "RSI14が37.1まで低下しており、過去の期間安値付近での一時的な買い戻しや自律反発が懸念される。",
+        "前夜の米国市場で金融セクターETF(XLF)が1.86%上昇しており、ADRの下落分を相殺する寄り付きの買いが入る可能性がある。",
+        "MACDヒストグラムは1.53とプラス圏で推移しており、短期的には下げ止まりの兆候が完全に否定されているわけではない。"
+      ],
+      "key_levels": {
+        "support": 3190.0,
+        "resistance": 3472.48
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "2026年3月期第1四半期の純利益が通期計画に対して極めて好調な進捗を見せているものの、次回決算発表を9日後に控え、市場全体のダウンレジームに伴う調整局面にあるため、現在は静観が妥当と判断します。",
+      "points": [
+        {
+          "point": "直近の四半期利益（2026-06期）は8,094億円と非常に高い水準を記録しており、通期純利益予想2兆4,272億円に対して約33%の高い進捗率を示している。",
+          "evidence": "fundamentals.earnings_trend.quarterly.2026-06, fundamentals.earnings_trend.annual.2026-03"
+        },
+        {
+          "point": "日本の10年債利回りが2.8%台の高水準を維持しており、銀行業にとって利ざや改善が期待されるマクロ環境が継続している。",
+          "evidence": "macro.rates.jgb_10y_percent.value=2.817"
+        },
+        {
+          "point": "銀行株全体に調整が入っており、配当利回りが2.8%台まで上昇しているが、市場全体が25日移動平均線を下回る下落トレンドにあることが重石となっている。",
+          "evidence": "news.headlines[1], macro.market_regime.market_regime=downtrend"
+        }
+      ],
+      "cautions": [
+        "2026年11月13日に決算発表を控えており、上方修正や追加の還元策（自社株買い等）の有無を確認するまでイベントリスクが高い。",
+        "TOPIX連動ETFが25日線を下回っており、市場全体の投資心理が悪化していることによる連れ安のリスクがある。",
+        "次回の12月日銀金融政策決定会合に向けた政策修正観測が、ボラティリティを高める要因となる可能性がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "(株)三菱ＵＦＪフィナンシャル・グループ【MUFG】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1fb09UZ016WWhiUVBjc0RvWFltWjhxVkhJbkpyOEhKLXMzR2JuMk0wY1MybnpuUWNldldDSTJMak1rZV83N2JYNGFMWktSU3M?oc=5",
+        "published": "Tue, 03 Nov 2026 19:10:20 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "三菱UFJ・三井住友など銀行株の調整続く 配当利回り、2.8%台に - QUICK Money World",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE90VlhQOHU4ZEJmYndza0VlRVdpYmlHdkJGN2dfWDYzUkZZM011RG9HTkNxRGZkSkxJZmNsSlZsbzQ0WlVWYzBWaGI2S19CaTdQMXNjYmVR?oc=5",
+        "published": "Tue, 03 Nov 2026 23:41:00 GMT",
+        "publisher": "QUICK Money World"
+      },
+      {
+        "title": "三菱ＵＦＪ、時価総額４２兆円超 キオクシアとトヨタ抜き首位浮上 - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1pLTFHZEY1UjFjV3NIaDZjbEZwa3pCVUktY1Q0TFVGdmVoOGVBbG9waUMyZ1FOZXpkOWpudWZrY1dpWDBIako0QTJEWDZ6QUZZT0l3LUZ3eDU?oc=5",
+        "published": "Tue, 03 Nov 2026 05:00:09 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "三菱ＵＦＪ－3日ぶり反発 新銀行でキャッシュカード全廃 サイバー防御へスマホ入出金＝日経(トレーダーズ・ウェブ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNNVd5V0tPVmxhMkpRel8zNjdfMlhmMzZ6cVB0SjNsTkFDdkNHQjJFYXNQZ1dicjRLYmNXTEhVeC03LWhRazdEN2Z4enZqc1cxNHdTbWlITUJwdEU4LW9tbUh6V1hhNDlRc2RhblJJcXZNOTI0ekhxR2tyT1IzOWw0SVVoY0RtaXc?oc=5",
+        "published": "Wed, 04 Nov 2026 00:11:02 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "アダニ・グループ、データセンター事業拡大へ15億ドルの海外融資を模索 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4wa2xlRHVuYU1SVlR3M0VCbXczMTJBWkR0M08wQWdxNU9xTVVOMnlNbHdQVmR2bzhwR2hBdnVGcUZSd3pEckFvQjlKczhvLXdZWDlfajRuSEdNZE5GOXlERWpLVllhNWhUc2QzZkxYazVHdTk5?oc=5",
+        "published": "Tue, 03 Nov 2026 04:55:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第1四半期 自己資本比率について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260814520300.pdf",
+        "date": "2026-08-14 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕（連結）（公認会計士又は監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510381.pdf",
+        "date": "2026-08-06 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505851.pdf",
+        "date": "2026-08-03 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260514533253.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "剰余金の配当に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538217.pdf",
+        "date": "2026-05-15 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260515538255.pdf",
+        "date": "2026-05-15 16:15:00"
+      }
+    ]
+  }
+}

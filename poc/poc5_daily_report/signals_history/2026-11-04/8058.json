@@ -1,0 +1,209 @@
+{
+  "code": "8058",
+  "name": "三菱商事",
+  "generated_at": "2026-11-04T11:26:53+09:00",
+  "price_as_of": "2026-11-04",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズは新規の投資ファンド協業や四半期業績の改善を好材料とし強気スタンスですが、テクニカルは中期的な下落トレンド継続と直近の大幅下落を示唆しており、両者の見解が対立しているため、明確な売買シグナルは出せません。",
+        "evidence": "fundamental_view.stance=bullish (strength=70), technical_view.stance=bearish (strength=80)"
+      },
+      {
+        "reason": "本日（2026-11-04）に次回決算発表を控えており、その内容が株価に大きな影響を与える可能性が高いため、発表結果を見極める必要があります。",
+        "evidence": "reference.next_earnings_date=2026-11-04, fundamental_view.cautions[0]"
+      },
+      {
+        "reason": "テクニカルは直近60営業日での株価下落とTOPIX劣勢、ならびに5日・25日移動平均線の下回りを指摘しており、中期的な下落トレンドが継続していると判断されます。",
+        "evidence": "technical_view.points[0], technical_view.points[1]"
+      },
+      {
+        "reason": "市場全体が下降トレンドであるため、ファンダメンタルズの好材料であっても株価の上昇を抑制する可能性があり、慎重な姿勢が求められます。",
+        "evidence": "reference.market_regime=downtrend, technical_view.points[2]"
+      }
+    ],
+    "risks": [
+      "本日発表される決算内容が市場予想を大きく上回る、または下回る場合、株価が急変する可能性があります。",
+      "テクニカル専門家が指摘するMACDヒストグラムのプラス圏転換により、短期的な反発が発生する可能性は排除できません。",
+      "市場全体の地合いが下降トレンドであるため、個別の好材料が株価に織り込まれにくい可能性があります。",
+      "約1ヶ月半後に控える日銀の金融政策決定会合の結果が、総合商社の事業環境に影響を与える可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズは新規の投資ファンド協業や四半期業績の改善を好材料とし強気スタンスですが、テクニカルは中期的な下落トレンド継続と直近の大幅下落を示唆しており、両者の見解が対立しているため、明確な売買シグナルは出せません。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=70), technical_view.stance=bearish (strength=80)\"\n  },\n  {\n   \"reason\": \"本日（2026-11-04）に次回決算発表を控えており、その内容が株価に大きな影響を与える可能性が高いため、発表結果を見極める必要があります。\",\n   \"evidence\": \"reference.next_earnings_date=2026-11-04, fundamental_view.cautions[0]\"\n  },\n  {\n   \"reason\": \"テクニカルは直近60営業日での株価下落とTOPIX劣勢、ならびに5日・25日移動平均線の下回りを指摘しており、中期的な下落トレンドが継続していると判断されます。\",\n   \"evidence\": \"technical_view.points[0], technical_view.points[1]\"\n  },\n  {\n   \"reason\": \"市場全体が下降トレンドであるため、ファンダメンタルズの好材料であっても株価の上昇を抑制する可能性があり、慎重な姿勢が求められます。\",\n   \"evidence\": \"reference.market_regime=downtrend, technical_view.points[2]\"\n  }\n ],\n \"risks\": [\n  \"本日発表される決算内容が市場予想を大きく上回る、または下回る場合、株価が急変する可能性があります。\",\n  \"テクニカル専門家が指摘するMACDヒストグラムのプラス圏転換により、短期的な反発が発生する可能性は排除できません。\",\n  \"市場全体の地合いが下降トレンドであるため、個別の好材料が株価に織り込まれにくい可能性があります。\",\n  \"約1ヶ月半後に控える日銀の金融政策決定会合の結果が、総合商社の事業環境に影響を与える可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 80,
+      "summary": "中期的な下落トレンドが継続しており、直近の株価も大幅に下落しています。市場全体の地合いも悪く、当面は軟調な展開が予想されます。",
+      "points": [
+        {
+          "point": "直近60営業日で株価は下落し、TOPIXに対しても劣勢であるため、中期的な下落トレンドが継続しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct = -2.24%, price_technical.trend_60d.relative_to_topix_60d_pct = -0.73%"
+        },
+        {
+          "point": "直近の取引日で株価が大きく下落し、5日移動平均線および25日移動平均線を明確に下回っています。",
+          "evidence": "price_technical.recent_5_days[-1].change_pct = -2.93%, price_technical.last_close = 4632.0, price_technical.sma5 = 4792.8, price_technical.sma25 = 4740.32"
+        },
+        {
+          "point": "市場全体が下降トレンドにあり、個別銘柄の株価にも下押し圧力がかかる可能性があります。",
+          "evidence": "macro.market_regime.market_regime = \"downtrend\""
+        },
+        {
+          "point": "前夜のNY市場で当該銘柄のADRとエネルギーセクターETFがともに下落しており、本日の日本市場での売り圧力が懸念されます。",
+          "evidence": "us_overnight.adr.change_1d_pct = -1.61%, us_overnight.sector_proxy.change_1d_pct = -3.96%"
+        }
+      ],
+      "cautions": [
+        "MACDヒストグラムがプラス圏に転じており、短期的な反発の可能性も排除できません。",
+        "過去30営業日の安値水準（4513.0円）に近づいており、この水準での買い支えが入る可能性があります。",
+        "前夜の米国株安は、本日の寄り付きである程度織り込まれる可能性があります。"
+      ],
+      "key_levels": {
+        "support": 4513.0,
+        "resistance": 4740.32
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "直近で新規の投資ファンド協業に関するポジティブなニュースがあり、事業戦略の進展が期待されます。国内経済の景況感も拡大基調を維持しているものの、本日決算発表を控えておりその内容には注意が必要です。",
+      "points": [
+        {
+          "point": "新規の投資ファンド協業に関する報道があり、LNGカナダへのブラックストーンとの協業を通じて、事業戦略の進展に期待が持てます。",
+          "evidence": "news.headlines[0].title (三菱商事の「投資ファンド協業」始動 LNGカナダにブラックストーン)"
+        },
+        {
+          "point": "直近四半期（2026年6月期）の業績において、営業利益および純利益が前四半期（2026年3月期）比で改善傾向を示しています。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].operating_income_oku_jpy=1503, fundamentals.earnings_trend.quarterly[0].net_income_oku_jpy=2985 vs fundamentals.earnings_trend.quarterly[1].operating_income_oku_jpy=1075, fundamentals.earnings_trend.quarterly[1].net_income_oku_jpy=1925"
+        },
+        {
+          "point": "日本の製造業およびサービス業PMIがともに50を上回って推移しており（製造業53.3、サービス業52.0）、国内景況感の拡大基調が継続していることは、総合商社の事業環境にとってポジティブな兆候です。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=53.3, macro.japan_pmi.services.latest_value=52.0"
+        },
+        {
+          "point": "直近で「特定子会社の異動に関するお知らせ」の適時開示があり、事業ポートフォリオの再編や効率化の動きが伺えます。",
+          "evidence": "disclosures.items[0].title (特定子会社の異動に関するお知らせ), disclosures.items[0].date=2026-11-02"
+        }
+      ],
+      "cautions": [
+        "本日（2026-11-04）に次回決算発表を控えており、その内容が株価に大きな影響を与える可能性があります。",
+        "市場全体の地合いが「downtrend」にあり、個別銘柄の上昇を抑制する可能性があります。",
+        "年次業績の純利益およびEPSは2024年3月期をピークに減少傾向にあり、今後の推移を注視する必要があります。",
+        "日銀の金融政策決定会合が約1ヶ月半後に控えており、金融政策の変更が事業環境に影響を与える可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "三菱商事の「投資ファンド協業」始動 LNGカナダにブラックストーン - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE0yV2RJU2lpMkNTY01SdVZUWUFERjBPMHc0djRCTnAtbXFWdUtjSVR6bHlBa29mZThvTjFkQmVIb2FtQ2RpUURJcE13ZVRodk5GLXN5T3JnRlFndG1aSG04Qjd6MERNRGRrSmZKdg?oc=5",
+        "published": "Tue, 03 Nov 2026 20:00:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "きょうの主な経済指標・スケジュール＞(ウエルスアドバイザー) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNWE9BZWlzM3UySlQ0U0lsMEtoSmFPNlFQQ0pHOEcwcEMwUDdVVkVwb0R0VzkxQnJWeDdZaDlMa2NvRE1CWFQzZV9JeWhNTzE5V3F3SVg5Q1ZmSVZtamJQWUlYSUI0eU5RS01hWS1vSjJqdGZ6bk1OZlN6Y3FOdmRPMUliZ0ZtWHM?oc=5",
+        "published": "Tue, 03 Nov 2026 22:38:57 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "冬の丸の内がクリスマスの装いに！『Marunouchi Street Park 2026 Winter』｜イベント｜Today’sピックアップ - Marunouchi.com",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE00blBsd0Y0ZUhibmxlaklxcjBiOElNY2xxTzJna0tOem5kcU1BTWJQQzViTG92dDlTVkVmSXVJM1lrdzJ5UWcyOVp2aTBxenRVY1l1WmJnQ056UQ?oc=5",
+        "published": "Tue, 03 Nov 2026 08:54:47 GMT",
+        "publisher": "Marunouchi.com"
+      },
+      {
+        "title": "米国株式市場はまちまち、ハイテクに買戻し - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQOVl4ZEFoQ1FMU004LUV4X3lJbk5IVzhWTy1keUgwdTF6SEszT1dmZVhWU2hBdkpkMVFDQ0xxS0pORHd1dVlKU0ppaldCZWQzTUtENWo5T2lJVXA2bXRkdTZCeGpsRWhQeGxOeTNXOTlSTGxWaUVhUkxDYUxvcTdZWG5OaThIZWhMcWFNR3VfNXZCczVwZ2lQSXY1X3V6X3NuejJUWUpfX1ZvX1ZyM3pRa3hiQUp5Z24zczh5RnlqbUtCTnhoaUtjbDdJR2JzbnkydWN2WWdUekltVV9a0gGMAUFVX3lxTE5nMWYtd21MTm9YWjN2Vl9VLWdCUTFqUXNsWXMzek5WdVM3cE4za3NMaC1CaFBNNFVrVzlZdktwQWg5MHF1S2VvZFh3czBXWnlzc09TczdzOTlWcm90bW01UkQ0WVhvUFQwQmJjX19ERjNyRjNIN1Y1QjlGZXkwVWNwam5zYktwc3JkZHZk?oc=5",
+        "published": "Wed, 04 Nov 2026 00:28:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "【総合商社４社決算直前】資源か非資源か――ＡＩ・次世代燃料・購買データ、株主還元の「稼ぐ力」を比較 - https://kabu-ir.com/",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9veEVoRGh6TGZWaG9IbWRIcGUwT1NsaDI5M1BjWm5wSV9vUDNiUTJhaHdaLTh3aV9seWV5emM1UzRGVWRMVHZhOFRjVm9NSFpudmlNNg?oc=5",
+        "published": "Tue, 03 Nov 2026 03:05:19 GMT",
+        "publisher": "https://kabu-ir.com/"
+      },
+      {
+        "title": "3メガバンクが日本円建てステーブルコインを共同実証！三菱UFJ信託が発行を担い2026年度中の実取引を目指す - DXマガジン",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE8wbHVBS3llU3V4ODVuRFdIMFIyd3ZKT183VE5tc3FuZVhRRS1tM1dCYmJocW9XQUViY1QxQ2NLZHZsb2dVNzJrQjJ2ZWo?oc=5",
+        "published": "Tue, 03 Nov 2026 11:03:28 GMT",
+        "publisher": "DXマガジン"
+      },
+      {
+        "title": "米スナップ、10代依存症訴訟で裁判直前に和解 初の法廷審理を回避 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9sTkxMMTVOMWNfd0JVNkpsTE1JSk9IZ3hlWkUyalJzR0o2bHFzd3RNSEp6WmI3YUM1c18zZzBmbk91WTZ1WDB4Si1kRlZsRDkyMFdFS2pTVWV6V2lSZVh6WGhJLWcyWWVKbzNXUERlamFiLUVk?oc=5",
+        "published": "Tue, 03 Nov 2026 05:25:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "【今週発表の注目決算】トヨタ、ソニーグループ、任天堂、三菱重工、三菱商事｜決算ウォッチ (2026年11月2日掲載) - ライブドアニュース",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5NeUVCeWZ1RFNFYklmTU5sdzJYMDU4eHoxcjJZeUxqeWNIMlk3ZXVNM3dhQncxUEJVTGd0XzdhUXpmRWNNdlpYTHExM1ZtYnRZVHE3WGtzZjhQYUFrM3c?oc=5",
+        "published": "Tue, 03 Nov 2026 08:41:45 GMT",
+        "publisher": "ライブドアニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261027557099.pdf",
+        "date": "2026-11-02 15:30:00"
+      },
+      {
+        "title": "2027年3月期第1四半期決算短信〔IFRS〕(連結）（監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510489.pdf",
+        "date": "2026-08-06 15:25:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔ＩＦＲＳ〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505791.pdf",
+        "date": "2026-08-03 14:00:00"
+      },
+      {
+        "title": "特定子会社の異動（子会社の特定子会社化）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260714593288.pdf",
+        "date": "2026-07-15 10:00:00"
+      },
+      {
+        "title": "子会社間の合併及び特定子会社の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260528552595.pdf",
+        "date": "2026-05-29 09:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C2プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539898.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C3プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539905.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C4プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539910.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C5プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539918.pdf",
+        "date": "2026-05-19 14:00:00"
+      },
+      {
+        "title": "執行役員に対するストックオプションの割当てについて（C6プラン）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260518539939.pdf",
+        "date": "2026-05-19 14:00:00"
+      }
+    ]
+  }
+}
