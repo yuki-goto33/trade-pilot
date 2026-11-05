@@ -1,0 +1,216 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-11-05T11:16:20+09:00",
+  "price_as_of": "2026-11-05",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家がニュートラル評価（strength=55）であり、統合判断ルールにおける buy の必須条件（strength≥70）を満たさないため。",
+        "evidence": "fundamental_view.strength=55 / fundamental_view.stance=neutral"
+      },
+      {
+        "reason": "本日11月5日に決算発表を控えており、通期赤字予想の修正や進捗を確認する必要がある材料待ちの局面であるため。",
+        "evidence": "fundamental_view.points[0] / reference.next_earnings_date"
+      },
+      {
+        "reason": "テクニカル専門家が強気（strength=85）だが、ファンダメンタルズの裏付けがない局面では織り込み済みによるエントリー遅延リスクを避けるルールを適用。",
+        "evidence": "technical_view.stance=bullish / technical_view.strength=85"
+      },
+      {
+        "reason": "市場全体がダウントレンドにあり、個別株のテクニカルな強さが地合いによって抑制される懸念があるため。",
+        "evidence": "reference.market_regime=\"downtrend\" / technical_view.cautions[0]"
+      }
+    ],
+    "risks": [
+      "本日（2026-11-05）の決算発表内容が市場予想を下回り、ボラティリティが急増するリスク",
+      "RSIが65.7に達しており、期間高値（4274.0円）付近での利益確定売りの発生",
+      "2026年3月期の通期純利益赤字予想の背景が構造的悪化であった場合の嫌気売り",
+      "市場全体のダウントレンド継続による、個別材料の打ち消し"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 55,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズ専門家がニュートラル評価（strength=55）であり、統合判断ルールにおける buy の必須条件（strength≥70）を満たさないため。\",\n      \"evidence\": \"fundamental_view.strength=55 / fundamental_view.stance=neutral\"\n    },\n    {\n      \"reason\": \"本日11月5日に決算発表を控えており、通期赤字予想の修正や進捗を確認する必要がある材料待ちの局面であるため。\",\n      \"evidence\": \"fundamental_view.points[0] / reference.next_earnings_date\"\n    },\n    {\n      \"reason\": \"テクニカル専門家が強気（strength=85）だが、ファンダメンタルズの裏付けがない局面では織り込み済みによるエントリー遅延リスクを避けるルールを適用。\",\n      \"evidence\": \"technical_view.stance=bullish / technical_view.strength=85\"\n    },\n    {\n      \"reason\": \"市場全体がダウントレンドにあり、個別株のテクニカルな強さが地合いによって抑制される懸念があるため。\",\n      \"evidence\": \"reference.market_regime=\\\"downtrend\\\" / technical_view.cautions[0]\"\n    }\n  ],\n  \"risks\": [\n    \"本日（2026-11-05）の決算発表内容が市場予想を下回り、ボラティリティが急増するリスク\",\n    \"RSIが65.7に達しており、期間高値（4274.0円）付近での利益確定売りの発生\",\n    \"2026年3月期の通期純利益赤字予想の背景が構造的悪化であった場合の嫌気売り\",\n    \"市場全体のダウントレンド継続による、個別材料の打ち消し\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 85,
+      "summary": "中期上昇トレンドを維持する中で、直近の強力な反発により5日線と25日線のゴールデンクロスを達成。テクニカル指標の多くが上方向を示唆しており、強い上昇モメンタムが確認されます。",
+      "points": [
+        {
+          "point": "中期的なトレンドが非常に強力であり、市場平均（TOPIX）を大幅にアウトパフォームしている。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=17.73, relative_to_topix_60d_pct=19.06"
+        },
+        {
+          "point": "直近5営業日で6.71%という出来高を伴う急騰を記録し、SMA5がSMA25を上抜けるゴールデンクロスが発生している。",
+          "evidence": "price_technical.recent_5_days[4].change_pct=6.71, price_technical.sma5_vs_sma25=\"golden\""
+        },
+        {
+          "point": "MACDがシグナル線を上回り、ヒストグラムがプラス圏で推移し始めたことで、上昇加速のサインが出ている。",
+          "evidence": "price_technical.macd=72.51, price_technical.macd_signal=71.69, price_technical.macd_histogram=0.83"
+        }
+      ],
+      "cautions": [
+        "市場全体のレジームがdowntrendと判定されており、日経平均の軟調な地合いが個別株の重石となるリスクがある（macro.market_regime=\"downtrend\"）。",
+        "RSIが65.7まで上昇しており、短期的には期間高値付近での利益確定売りが出やすい水準にある（price_technical.rsi14=65.7）。"
+      ],
+      "key_levels": {
+        "support": 3914.84,
+        "resistance": 4274.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "2026年3月期の通期純利益が赤字予想である点が懸念されるが、直近の四半期業績は黒字を維持。本日11月5日の決算発表を控え、材料出尽くしや見通し改善の有無を確認すべき局面である。",
+      "points": [
+        {
+          "point": "本日2026年11月5日に決算発表を予定。2026年3月期の通期純利益が-3,269億円の赤字予想となっている一方、直近1Q（2026年6月期）は3,422億円の黒字であり、決算での修正や進捗が焦点。",
+          "evidence": "fundamentals.next_earnings_date, fundamentals.earnings_trend.annual[0], fundamentals.earnings_trend.quarterly[0]"
+        },
+        {
+          "point": "メモリー価格の一服によるコスト構造の改善期待がニュースで報じられており、エンターテインメント・ハードウェア分野での収益性向上が期待される。",
+          "evidence": "news.headlines[2].title"
+        },
+        {
+          "point": "2026年8月から10月にかけて毎月、自己株式の取得状況を開示しており、継続的な株主還元姿勢が下値を支える要因となっている。",
+          "evidence": "disclosures.items[3],[4],[6]"
+        },
+        {
+          "point": "製造業PMIが53.3と拡大圏を維持し、ドル円レートも157.97円と円安水準にあるため、海外売上比率の高い同社にとってマクロ環境は概ね追い風。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=53.3, macro.indices[2].close=157.97"
+        }
+      ],
+      "cautions": [
+        "決算発表当日であり、内容次第でボラティリティが急増するイベントリスクがある。",
+        "2026年3月期の通期純利益が大幅な赤字予想となっている背景（一時的費用か構造的悪化か）に注意が必要。",
+        "市場全体が25日移動平均線を下回るダウントレンドにあり、地合い悪化の影響を受けやすい。",
+        "22.7倍の予想PERは、赤字予想を含む業績トレンドを鑑みると割安とは言い難い。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "$ソニー・グループADR (SONY.US)$ ♧強気♧ あなたの大きな仕掛けの発表を楽しみにしています😘 あなたを信じています - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNc05LaHJJcHNjUUFGUHl2eTdNa2xvdnRrX082eEE4RTNUTkczbHJXVnk5VjI1VVM3aDc1ZGJQcG90T2VlSHFTMTBENEJUVHpBZlRtWENOX1VvVUllbmZPMUlfR2pOcVdfWWZ1TkU4UTRBaUJhNmtTbVV2M3Jxd0lMcURYdWhma0RSNExfUzFCUjQxVDV0ZGlrSnVGZWFvNEtBUjdvdVpzcjJmN3JlVXlJ?oc=5",
+        "published": "Wed, 04 Nov 2026 15:32:35 GMT",
+        "publisher": "Moomoo"
+      },
+      {
+        "title": "日経平均は反発で寄り付く、米中間選後の米株高・原油安が支援 ＡＩ株は下げ目立つ - Reuters",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPcEx1STZrYzFnZlo3YnNXa1dnb1U0WVViQUUtaTd2TnBMbnJWOE1zUHZvX2gxVllNdjVrRWo5V05oNkJ2VjRlQkxua1V6MnF5TElvMEpmWlZZOE9McmdTMjVTSWthQkg5TmtsTkllR1NkSk9sOTJIYUpqSEFlRkE0X2dYTXRfUQ?oc=5",
+        "published": "Thu, 05 Nov 2026 00:14:00 GMT",
+        "publisher": "Reuters"
+      },
+      {
+        "title": "任天堂－急騰 メモリー価格一服による収益改善を期待 ソニーＧも高い(トレーダーズ・ウェブ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOLXZKNnk4aEVUaFM2ZlYxLVpvNS16dEpPSWlPYmNRaEdxS2lzUkUtREljbWJTd05BcjRVZmJOTTZrSVpwR2VTeFEwMGlYeFFZVHREdWRyQS00azc2QnRCYk1Id084QnJQakVNV1RIM0FXbnlBYnU2VVpJZWpZM2Q1THpQVmtpR2s?oc=5",
+        "published": "Thu, 05 Nov 2026 01:09:03 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "日経平均、反発始動 米株高と原油急落が支えもAI・半導体株が重石 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1wdWppTFg2RHFVOXUtVGlOcVJURjFpdndOYXRSTndwTW1Obk1xVVhSbGs5WjhQSk5mVDRCSURuUU5VbC1BUFN5Z3VVQW90QVNPU2sxdnJnaDdXZG1DeC1jVWVZZ3NyVXFQTW1tSUZiNmhGWVpU?oc=5",
+        "published": "Thu, 05 Nov 2026 00:56:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "日経平均は反発で寄り付く、米中間選後の米株高・原油安が支援 ＡＩ株は下げ目立つ - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFB1RjBDbmRtT3BjaTlJa0JiUnpsRGRHb2xCbEZ5U2tZMUtaRkl4ZGNzQ2l0Yks1VS1jTjZVWFNoaHBHWGtmY0JCc0lXMEFmRjZJRUVTeVRLTWo4Zkw5WkdBZVRpQU11c2N5UklVb2x3?oc=5",
+        "published": "Thu, 05 Nov 2026 00:14:47 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "住宅でも導入しやすいらせん階段 - 日経クロステック Active",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNNUxzUkFfR0N1Zzd4aWp3VzJOT0JnZ0pkU01tNnZlcW1XWnNFRnlTUmdSdzJXaHFoSWNrdXQ1ejhqOGszNU9OR09qN0pOZG95TDhEZjVrclN5d3h3TnViWTdYeXJncUJGeTEwVXRlVnlPOUJoWUhKRmt6anZ2dG44YlludlhPNU9LUUlwNw?oc=5",
+        "published": "Wed, 04 Nov 2026 20:00:00 GMT",
+        "publisher": "日経クロステック Active"
+      },
+      {
+        "title": "「Premium Pass」キャンペーンVol.4の開始について - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9nUDFrRm41Y0lzeUYxQ1JyeGRZV1pPQlJsTTBLSDdQYVdkUzN4dFhYcm5IQi0zNkFmZjFtRFNnTEJQcThFRWJ6X3VleDRJeDB0dlNBZFB6QlJfWDJ3YTZxX3ZUeTZxeEgxWUl5cWpfekYwQ1loQ2c?oc=5",
+        "published": "Wed, 04 Nov 2026 13:30:29 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "日経平均は反発で寄り付く、米中間選後の米株高・原油安が支援 ＡＩ株は下げ目立つ（ロイター） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBjSXlmOXhEN2JadEptSzFSMTNDWUhrWm9KSW9wQV9yMWMtN3pybm4zRTF2T2FrcmY2MHlOeWJzY3pvNkFJdzNlWWxsZ3AtR3A5bUZXQVhqYVFkcnRMUEY5YWh0TmlZQmU2aGsxWFJBN0tfaGhRc1FuUEpBTTE5SE0?oc=5",
+        "published": "Thu, 05 Nov 2026 00:14:47 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "日々の育児に彩りと上質さを 「PEANUTS BABY」の新作ベビーアイテムを赤ちゃん本舗で販売開始 - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1kdmtnVHZER282VUJhTXk1Z3NTQlpRSTg4RVZHNm1Hc2lwTlY2TV9hTFdsLVk4U2Y1Mm5TTVBnODZ5NW9kdExrSWxpUklnZTN0amJhOG5aUjNBWmdSdkhwZmZqdkk3Nm9XYjRtOTFLRDk4ZWtKaUljMXk1Zw?oc=5",
+        "published": "Wed, 04 Nov 2026 08:30:41 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "【28卒就職人気企業ランキング】伊藤忠商事が盤石の9年連続首位。エンタメ系変わらず人気、アイリスオーヤマなどメーカー系も - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBVZG1fUjd1OWY1SGtQYWQ3VnpmYk5pSklSdERWaTdCX2toWnVoUHo5WDc3Y3BCUFB5RnRVRkx4RF9jVTFaTjBfTy12cGFYVFhENUZ3cWxibkhtdjhPR2ZZQkN6RHg3T0pO?oc=5",
+        "published": "Wed, 04 Nov 2026 04:15:30 GMT",
+        "publisher": "ニコニコニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "業績連動型株式ユニット（PSU）による事後交付型株式報酬制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030560394.pdf",
+        "date": "2026-10-30 15:30:00"
+      },
+      {
+        "title": "業績連動型株式ユニット（PSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030560415.pdf",
+        "date": "2026-10-30 15:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030560428.pdf",
+        "date": "2026-10-30 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261005545702.pdf",
+        "date": "2026-10-05 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903530947.pdf",
+        "date": "2026-09-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260811517496.pdf",
+        "date": "2026-08-11 18:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第１項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805509201.pdf",
+        "date": "2026-08-05 11:30:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504252.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "2026年度 第1四半期 連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504254.pdf",
+        "date": "2026-07-31 12:00:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の権利確定に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595854.pdf",
+        "date": "2026-07-17 15:30:00"
+      }
+    ]
+  }
+}
