@@ -1,0 +1,213 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-11-06T11:15:13+09:00",
+  "price_as_of": "2026-11-06",
+  "signal": {
+    "signal": "buy",
+    "confidence": 70,
+    "target_price": 3550.0,
+    "stop_loss": 3250.0,
+    "holding_period_days": 28,
+    "reasons": [
+      {
+        "reason": "通期営業利益の上方修正（3.9兆円）および中間増益の発表に加え、自社株買い・消却の開示という強力なカタリストが存在し、株価の織り込み前における下値支持と反発余地が大きいと判断しました。",
+        "evidence": "fundamental_view.points[0]: 2026-11-05 中日新聞Web等の営業利益上方修正報道, fundamental_view.points[1]: 自己株式取得及び消却の開示"
+      },
+      {
+        "reason": "テクニカル面では直近高値からの反落と全体相場の急変により中立判断にとどまっており、モメンタム追随ではなく押し目・織り込み前の好機となっています。5日線・25日線のゴールデンクロスなど基調自体は堅調です。",
+        "evidence": "technical_view.stance=neutral (strength=55), technical_view.points[0]: price_technical.sma5_vs_sma25=golden"
+      },
+      {
+        "reason": "予想PER約10.4倍、PBR1.07倍とバリュエーションに過熱感がなく、157円台の円安水準も相まって業績下支え効果が見込めます。",
+        "evidence": "fundamental_view.points[2]: forward_pe=10.394, price_to_book=1.07, fundamental_view.points[3]: ドル円=157.94"
+      }
+    ],
+    "risks": [
+      "TOPIXおよび日経平均の急落（market_regime=downtrend、VIX=28.18）に伴う全体相場連れ安により、個別好材料が相殺されて下値支持線（3210.6円）を割り込むリスク。",
+      "直近RSI14が68.6と買われすぎ水準からの反落局面にあるため、短期的には戻り売りや利益確定売りに押されるリスク。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"buy\",\n \"confidence\": 70,\n \"target_price\": 3550.0,\n \"stop_loss\": 3250.0,\n \"holding_period_days\": 28,\n \"reasons\": [\n  {\n   \"reason\": \"通期営業利益の上方修正（3.9兆円）および中間増益の発表に加え、自社株買い・消却の開示という強力なカタリストが存在し、株価の織り込み前における下値支持と反発余地が大きいと判断しました。\",\n   \"evidence\": \"fundamental_view.points[0]: 2026-11-05 中日新聞Web等の営業利益上方修正報道, fundamental_view.points[1]: 自己株式取得及び消却の開示\"\n  },\n  {\n   \"reason\": \"テクニカル面では直近高値からの反落と全体相場の急変により中立判断にとどまっており、モメンタム追随ではなく押し目・織り込み前の好機となっています。5日線・25日線のゴールデンクロスなど基調自体は堅調です。\",\n   \"evidence\": \"technical_view.stance=neutral (strength=55), technical_view.points[0]: price_technical.sma5_vs_sma25=golden\"\n  },\n  {\n   \"reason\": \"予想PER約10.4倍、PBR1.07倍とバリュエーションに過熱感がなく、157円台の円安水準も相まって業績下支え効果が見込めます。\",\n   \"evidence\": \"fundamental_view.points[2]: forward_pe=10.394, price_to_book=1.07, fundamental_view.points[3]: ドル円=157.94\"\n  }\n ],\n \"risks\": [\n  \"TOPIXおよび日経平均の急落（market_regime=downtrend、VIX=28.18）に伴う全体相場連れ安により、個別好材料が相殺されて下値支持線（3210.6円）を割り込むリスク。\",\n  \"直近RSI14が68.6と買われすぎ水準からの反落局面にあるため、短期的には戻り売りや利益確定売りに押されるリスク。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "個別テクニカルは移動平均線の好転や中期的な市場対比アウトパフォームを維持しているものの、直近の急騰後の反落と全体相場の急激な下落レジームが重石となり拮抗しています。",
+      "points": [
+        {
+          "point": "5日線が25日線を上回るゴールデンクロスを形成し、MACDもシグナルを上回るなど個別トレンドは上向きを維持しています。",
+          "evidence": "price_technical.sma5_vs_sma25=golden(5日線が25日線の上), price_technical.macd_histogram=31.48"
+        },
+        {
+          "point": "60営業日騰落率が+12.99%、対TOPIX相対騰落率が+20.66%と、中期的なトレンドは市場全体に対して明確に優位です。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=12.99, price_technical.trend_60d.relative_to_topix_60d_pct=20.66"
+        },
+        {
+          "point": "期間高値3533.0円を記録した翌営業日に-4.59%と反落しており、RSI14も68.6と過熱圏近辺からの利益確定売り圧力が確認されます。",
+          "evidence": "price_technical.period_high=3533.0, price_technical.recent_5_days[4].change_pct=-4.59, price_technical.rsi14=68.6"
+        },
+        {
+          "point": "TOPIXの判定がdowntrendにあり、日経平均が前日比-7.56%、VIXが28.18へ急騰するなど、マクロ環境の急激なリスクオフが個別株の上値を制約しています。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.indices[0].change_1d_pct=-7.56, macro.indices[3].close=28.18"
+        }
+      ],
+      "cautions": [
+        "全体相場の急落連鎖に巻き込まれ、下値支持線となる5日移動平均線（3210.6円）や25日移動平均線（3052.94円）を下回った場合は下落トレンド転換に警戒が必要です。",
+        "前夜NYデータの日付（2026-11-04）が直近営業日とずれており、当日の全体地合いの急変が寄り付きにネガティブに波及する可能性があります。"
+      ],
+      "key_levels": {
+        "support": 3210.6,
+        "resistance": 3533.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "直近の中間決算発表で通期営業利益の上方修正と自社株買いの開示が行われており、業績の底堅さと株主還元姿勢が明確なカタリストとなっています。全体相場の急変リスクには警戒が必要ですが、バリュエーション面の割安さと相まって下値抵抗力と上値余地を兼ね備えています。",
+      "points": [
+        {
+          "point": "2026年11月5日に通期営業利益の3兆9千億円への上方修正および中間増益が報じられ、HV需要の堅調さや為替動向を背景にした収益改善という明確な直近カタリストが存在します。",
+          "evidence": "news.headlines: 2026-11-05 中日新聞Web「トヨタ自動車、2027年3月期の営業利益を3兆9千億円に上方修正 HV堅調、円安も追い風に」および朝日新聞「トヨタ、営業増益へ転換 ３月期予想を上方修正 ９月中間増益」"
+        },
+        {
+          "point": "決算発表と同時に自己株式取得および消却・公開買付けに関する適時開示を行っており、積極的な資本政策と株主還元が下値支持要因となります。",
+          "evidence": "disclosures.items: 2026-11-05「自己株式の取得に係る事項の一部変更、自己株式の取得及び自己株式の公開買付け並びに自己株式の消却に係る事項の一部変更に関するお知らせ」"
+        },
+        {
+          "point": "予想PER約10.4倍、実績PER8.22倍、PBR1.07倍、配当利回り3.30%と依然としてバリュエーションに過熱感がなく、ROEも12.4%と良好な資本効率を維持しています。",
+          "evidence": "fundamentals.valuation: trailing_pe=8.22, forward_pe=10.394, price_to_book=1.07, dividend_yield_percent=3.3, return_on_equity=0.124"
+        },
+        {
+          "point": "ドル円が157円台後半で推移していることや、日銀短観の大企業製造業DIが24（前回比+2）と底堅い水準にあることは輸出比率の高い同社の業績の下支えとなります。",
+          "evidence": "macro.indices: ドル円=157.94, macro.boj.tankan.di.large_manufacturing.current_di=24.0"
+        }
+      ],
+      "cautions": [
+        "日経平均（前日比-7.56%）の急落やVIX急上昇（28.18、+69.66%）、market_regimeがdowntrendとなっている全体相場のリスクオフに巻き込まれる懸念があります。",
+        "日本の長期金利が2.806%まで上昇しており、株式全体のバリュエーション調整圧力となり得ます。",
+        "製造業PMIが53.3と拡大圏にあるものの直近数ヶ月で低下傾向を示しており、世界的な製造業サイクルの減速には留意が必要です。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "〈コラム 筆洗〉＜カローラは豹（ひょう）＞。トヨタ自動車が1966年に発売… - 東京新聞",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBNd2VwcFpYWGhFLVdRNzd4Rm82OE1va1JCT1R4OHg5Rk9iRHhIRzB4aW5TeF9uMXJUZS1pekVDZmZ5eGwwTGRLRl9NTUpjbDFHNVpr?oc=5",
+        "published": "Thu, 05 Nov 2026 22:04:24 GMT",
+        "publisher": "東京新聞"
+      },
+      {
+        "title": "2027年3月期 第2四半期決算説明会 | コーポレート | グローバルニュースルーム - トヨタ自動車株式会社 公式企業サイト",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1BZ19LOU1mTWtCQWx3MmZtMkZVSkgzOE04S2ZWTTZZckxWSTJBWFpJTUxYenVEaGJjLWFxNzlXQ2h1bEo0OUZJMnpCSThtOGxmVDhtRzJYNlNtamRHUExVdkJSdzZraktN?oc=5",
+        "published": "Thu, 05 Nov 2026 07:28:25 GMT",
+        "publisher": "トヨタ自動車株式会社 公式企業サイト"
+      },
+      {
+        "title": "トヨタ、営業増益へ転換 ３月期予想を上方修正 ９月中間増益 - 朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5MLXNSZEIwc0gxNWl5WEJwUVlVaG5kdHhrM2VfVlUwc0ZuMXlrbFhxWjE1S0JaekdESWtOZ3NXanpSeFExdFFFZmJZRk1iREpSbEtlbTRUVDdNckJ5?oc=5",
+        "published": "Thu, 05 Nov 2026 20:00:00 GMT",
+        "publisher": "朝日新聞"
+      },
+      {
+        "title": "【トヨタ決算】巨大市場てこ入れ腐心 新車開発現地化、期間短縮 - 西日本新聞me",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9GOHQ1Q2FtT3VBZ19Mc3N5aDQzTGFJblF4RHpXRlRvNHBQM2hNODFseHB0VzlXMTlKN1pScDY2NFl5SjYtbTZpQldCYi1fZkp2MGQyX1ZR?oc=5",
+        "published": "Fri, 06 Nov 2026 01:22:18 GMT",
+        "publisher": "西日本新聞me"
+      },
+      {
+        "title": "【トヨタ決算】巨大市場てこ入れ腐心 新車開発現地化、期間短縮 - 静岡新聞DIGITAL",
+        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE45VHRKdVpNRWtaQ2dQZGthVDRZN29SVWdtTGh1ODJQZ0s5MjZRMWY2c0NFcXNxcU5EWG5CTU40TVBreG1BUFNtYVpFLW1zQQ?oc=5",
+        "published": "Fri, 06 Nov 2026 01:22:00 GMT",
+        "publisher": "静岡新聞DIGITAL"
+      },
+      {
+        "title": "トヨタ自動車、2027年3月期の営業利益を3兆9千億円に上方修正 HV堅調、円安も追い風に - 中日新聞Web",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5BSXJWYmlkZXhLYVA3WEVaRjFMOG03VEFaX0twX0xta2cwVWJ4RUNhbk1WTE1NLWFTdmRGMnlJeUt1TGt5WnJmT2dsMG5RZnFBVGpMTg?oc=5",
+        "published": "Thu, 05 Nov 2026 13:10:00 GMT",
+        "publisher": "中日新聞Web"
+      },
+      {
+        "title": "トヨタ自動車[7203]：2027年3月期 第2四半期（中間期）決算短信〔IFRS〕（連結) 2026年11月5日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPSFgzRFE5cHlISHV6eThZdUJZVXpmSTlxenc2YloxQ0ZLVXl0OHlHVllIOVYyRzFibW1TUUFNQjgyV3VkZlAwSTFEMHNpWS1vSm41NmNDTXZteEZ5SUJaOFdoYmtXZ0owWTFnbHk0MTJxN3pqQVpPTmctSnFPeEx3ZlI0bVBrRDhFVWtuWTZEU1RCSnJfa1J6Q3dZTnFIMWduTDJNUFFsOUVKNGlsRVhaRGZ4ZEdHaDRVWHlKbl81d3c2cXU4THRUZ01FQi0?oc=5",
+        "published": "Thu, 05 Nov 2026 04:55:00 GMT",
+        "publisher": "日本経済新聞"
+      },
+      {
+        "title": "トヨタ中間純利益、３期ぶりプラス コスト削減奏功、ロボ事業も強化 - 時事ドットコム",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPT1FYUXRnS3RCTVp3RUdmY0lFcXdzVXBTY29qQV91V3IwTFBSazJTVkN3RzNKbTV1cFE3QWUxb01ORmd4QmxNc3FIcjdUd3FaUnBoWGlaWWNtc2tiTElFUWdEVHRkbFE4WElCOGFLWmNiTDl6RWxjdUNmZ2dNWFdFLWdB?oc=5",
+        "published": "Thu, 05 Nov 2026 11:12:00 GMT",
+        "publisher": "時事ドットコム"
+      },
+      {
+        "title": "トヨタ自動車、2027年3月期の営業利益を3兆9千億円に上方修正 HV堅調、円安も追い風に - 47NEWS",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1zajI4UnM0MzNQTkJZOHpRMWk3UDBsQU9JdXZrWFJ1TkIwVEJXWGJ2VUEzNzN1aER1VG1mcmpucXhTSGNGV0RQSnBKOA?oc=5",
+        "published": "Thu, 05 Nov 2026 13:10:00 GMT",
+        "publisher": "47NEWS"
+      },
+      {
+        "title": "トヨタ自動車（トヨタ）【7203】株価｜週次信用残時系列データ｜株探（かぶたん） - 株探",
+        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOSFlvUWdNU094SHV3Ynp0TFI0bHgzbTBPc1VkTnNTdjNFM3JNaHNVWkUzM3VLRlBsbEtJMUNZeWRVUnFPdFhBbHR4a0ttZ2Q0QllxeC1rWjd3ZWNOYnM2TnduZzNYd09OQk5Hd1BDUVN2WTZlU3BXclFKQWN3Q0FpWGY4WQ?oc=5",
+        "published": "Thu, 05 Nov 2026 06:30:00 GMT",
+        "publisher": "株探"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第2四半期（中間期）決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030561115.pdf",
+        "date": "2026-11-05 13:55:00"
+      },
+      {
+        "title": "2027年3月期第２四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261104563510.pdf",
+        "date": "2026-11-05 13:55:00"
+      },
+      {
+        "title": "自己株式の取得に係る事項の一部変更、自己株式の取得及び自己株式の公開買付け並びに自己株式の消却に係る事項の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261105565338.pdf",
+        "date": "2026-11-05 13:55:00"
+      },
+      {
+        "title": "組織改正、および役員・幹部職人事について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261104563543.pdf",
+        "date": "2026-11-05 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261104563596.pdf",
+        "date": "2026-11-04 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261005545791.pdf",
+        "date": "2026-10-05 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903531084.pdf",
+        "date": "2026-09-03 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      }
+    ]
+  }
+}
