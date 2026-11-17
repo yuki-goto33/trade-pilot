@@ -1,0 +1,202 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-11-17T13:43:20+09:00",
+  "price_as_of": "2026-11-17",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "テクニカル・ファンダメンタルズ共に極めて強い弱気サインが出ているが、既に中期的な下落トレンドの中にあり、追っかけ売りは的中率が低いと判断。",
+        "evidence": "technical_view.points[0]: change_60d_pct=-13.48 / fundamental_view.strength=70"
+      },
+      {
+        "reason": "前夜のADRが大幅安（-5.65%）となっており、寄り付きで材料を急激に織り込む可能性が高く、エントリーポイントとしては不適切。",
+        "evidence": "technical_view.points[3]: us_overnight.adr.change_1d_pct=-5.65"
+      },
+      {
+        "reason": "市場全体が下落レジームにあり、高PERな値がさグロース株である同社には、日本の金利上昇が強いバリュエーション調整圧力として作用している。",
+        "evidence": "fundamental_view.points[1]: jgb_10y_percent.value=2.927 / trailing_pe=32.957"
+      }
+    ],
+    "risks": [
+      "2026年12月17日の日銀金融政策決定会合における追加利上げ決定に伴う、更なるマルチプル収縮リスク",
+      "市場全体がdowntrendであることによる、指数寄与度の高い大型株への機械的な売り圧力の継続",
+      "RSIが37.6と低位にあり、短期的には需給による自律反発が発生し、売りタイミングを逸する可能性"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"テクニカル・ファンダメンタルズ共に極めて強い弱気サインが出ているが、既に中期的な下落トレンドの中にあり、追っかけ売りは的中率が低いと判断。\",\n   \"evidence\": \"technical_view.points[0]: change_60d_pct=-13.48 / fundamental_view.strength=70\"\n  },\n  {\n   \"reason\": \"前夜のADRが大幅安（-5.65%）となっており、寄り付きで材料を急激に織り込む可能性が高く、エントリーポイントとしては不適切。\",\n   \"evidence\": \"technical_view.points[3]: us_overnight.adr.change_1d_pct=-5.65\"\n  },\n  {\n   \"reason\": \"市場全体が下落レジームにあり、高PERな値がさグロース株である同社には、日本の金利上昇が強いバリュエーション調整圧力として作用している。\",\n   \"evidence\": \"fundamental_view.points[1]: jgb_10y_percent.value=2.927 / trailing_pe=32.957\"\n  }\n ],\n \"risks\": [\n  \"2026年12月17日の日銀金融政策決定会合における追加利上げ決定に伴う、更なるマルチプル収縮リスク\",\n  \"市場全体がdowntrendであることによる、指数寄与度の高い大型株への機械的な売り圧力の継続\",\n  \"RSIが37.6と低位にあり、短期的には需給による自律反発が発生し、売りタイミングを逸する可能性\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 90,
+      "summary": "中期・短期ともに明確な下落トレンドが継続しており、前夜のADR大幅安や市場全体の地合い悪化も相まって、さらなる下値を模索する展開が濃厚です。",
+      "points": [
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともに大幅なマイナスであり、中期的な下落トレンドの中にあります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-13.48, price_technical.trend_60d.relative_to_topix_60d_pct=-7.19"
+        },
+        {
+          "point": "5日線が25日線を下回るデッドクロス状態にあり、直近5営業日でも軟調な推移が続いています。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.recent_5_days"
+        },
+        {
+          "point": "MACDおよびシグナルがマイナス圏で推移し、ヒストグラムもマイナスを拡大しており、下落の勢いが弱まっていません。",
+          "evidence": "price_technical.macd=-1797.05, price_technical.macd_histogram=-63.72"
+        },
+        {
+          "point": "市場全体が下落レジームにあり、さらに前夜のADRが-5.6%超と大幅に下落しているため、寄り付きからの強い下押し圧力が懸念されます。",
+          "evidence": "macro.market_regime.market_regime=downtrend, us_overnight.adr.change_1d_pct=-5.65"
+        }
+      ],
+      "cautions": [
+        "ADRの大幅下落を寄り付きで一気に織り込んだ後、RSIの低位水準（37.6）を背景とした目先の買い戻しが発生する可能性",
+        "VIX指数の急上昇（22.91）に伴う市場全体の不透明感によるボラティリティの増大"
+      ],
+      "key_levels": {
+        "support": 65210.0,
+        "resistance": 76902.0
+      }
+    },
+    "fundamental": {
+      "stance": "bearish",
+      "strength": 70,
+      "summary": "業績は堅調な増益基調を維持しているものの、大手証券による投資判断の引き下げと市場マルチプルの縮小懸念、および高金利環境がバリュエーションの重石となっている。",
+      "points": [
+        {
+          "point": "大手外資系証券（MSMUFG等）による投資判断の引き下げと、市場全体のマルチプル縮小を反映した格下げニュースが相次いでいる。",
+          "evidence": "news.headlines[0,1,7]"
+        },
+        {
+          "point": "日本の10年債利回りが2.9%超の水準で推移しており、PER30倍を超える高バリュエーションのグロース銘柄には逆風の環境である。",
+          "evidence": "macro.rates.jgb_10y_percent.value=2.927, fundamentals.valuation.trailing_pe=32.957"
+        },
+        {
+          "point": "2026年10月末に株式分割や配当予想の修正を発表済みだが、直近のニュースでの下落はそれらの好材料を織り込み終えた後の需給悪化を示唆している。",
+          "evidence": "disclosures.items[1,2], news.headlines[2]"
+        },
+        {
+          "point": "製造業PMIは50を超えて拡大圏を維持しているものの、4月の55.1から10月の53.3へと緩やかな減速傾向にある。",
+          "evidence": "macro.japan_pmi.manufacturing.monthly"
+        }
+      ],
+      "cautions": [
+        "2026年12月17日から開催される日銀金融政策決定会合における追加利上げ観測（macro.boj.monetary_policy_meeting）",
+        "市場全体がダウントレンド（market_regime=downtrend）にあり、大型株への資金流出圧力",
+        "次回決算発表（2027-01-28）までの期間が長く、当面は外部環境やアナリスト評価に左右されやすい"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "キーエンス－MSMUFGが投資判断引き下げ 市場マルチプル縮小を反映〔DZH 個別株情報〕(時事通信) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPWU1FeEJlX3hxYnA5Q3ZQQThTaHg4UklOSmZBY0RpdW9DU1BfemRhX3kxZFNMTVhUYnpRZWF1MkFWUThYWkI0MC05amg3eHJZYWd0Zm9UMjh5Rmxlb05PUVlrVEpoZktncVNzUlNTV0tjbl9EbG9ibFo4UVFseVNTVTNjSkxVa1k?oc=5",
+        "published": "Tue, 17 Nov 2026 00:54:22 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "レーティング情報（投資判断変更・その２）＝キーエンス、ソニーＧなど(ウエルスアドバイザー) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQV2FtbEptTXJ4RDdianlUejhtTlF3aTExc3JtQW5zMnVBUGdRM0h4TTlHUGpITWFJVTdXY0RrR3d1UFJVc2RzdDhnelZYbzFOb3l5Y0JUUTNaTDltUGZDTFp3cVBhTExOZVU4anh2c09WRjFTS3VQaGwwbEZUeWJqVHh5U0Zod2c?oc=5",
+        "published": "Tue, 17 Nov 2026 00:35:32 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ADR主要銘柄（日本）－大東建、三菱電が上昇、ニデック、キーエンスが下落(トレーダーズ・ウェブ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQLVNVWUYxUW5MV1h3R0NSdEZEbV92V3VXUFBEbTI5NFhnWmhrN1VZUnZOSHlWRlRXOUdFNmpGTjZtWExxVEZkYTlFLU9oMllkcXVLUWI0NFVEN2VaZndlcFM5cHc1LUZjRFk0U1hzVEs5eHpPUTdhNWdsY0ZNcGVRTzNJdjhHNk0?oc=5",
+        "published": "Mon, 16 Nov 2026 22:18:01 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "「儲かりすぎ」の指摘は妥当？ JR東海、中間決算で初の1兆円突破！ 東海道新幹線という“ドル箱”に依存する高収益経営の死角 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1PWHRnQ0pxOXZhUURYZTBWQ1doeFZCcGljX2U1Y2FDSEk3NHFQa25RcjB5WE1CcVV3S1RiMFZlLWNYYzdLSzdZV3dVelVWTmpfTDdDNEI4Q0VHZG5CaWo4TkxhcHBEQVJ6aFdSUDZR?oc=5",
+        "published": "Mon, 16 Nov 2026 21:21:00 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "｢この目で見なあかん｣…モノタロウが被災地支援をボランティアではなく｢対価をもらう事業｣にした理由 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE84Y2tTbEU5T0FYVGYyUXdlNGMyblVYUS1HbFVCN0s0R0tfcnVjdUJZVEZGcGpWV2dLSTVGSmxVb0doR0E0WVYtdnMzem9HYWs?oc=5",
+        "published": "Tue, 17 Nov 2026 02:03:08 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "＜画像4 / 10＞昨年ブレイク！カルピス“男子新体操部”の新CMがスゴイ - ウォーカープラス",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1GdWQwYUV5M1kwOWZ2RWF2SldQMl9FTDB0MGtjQ1ZiTUV1YXZpZDcwLUhvd0FXVFhmeHdRTnpmQ0JjTlQ1QTlZODJfek5OZVBhaGdaZ2ZHQXhxemxjSGt2Z1ZGb2c2UQ?oc=5",
+        "published": "Mon, 16 Nov 2026 06:39:56 GMT",
+        "publisher": "ウォーカープラス"
+      },
+      {
+        "title": "前場コメント No.6 ネットプロＨＤ、三井不、プレイド、オークマ、エーザイ、キーエンス(トレーダーズ・ウェブ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNajQ5Wm45RXVySUdGamZHYVFBME5RTmJ2MzNSZW9WOHRGWl9WLVN5Y2hya282aGh3dGlZRWZHdlFic18xMmRFSWk4MzNJbGJYaGpZdnJwRG8wdVdFaVEweXVRc282SE5IY1gyOFBDWE1nRFYwVU55QzVDNEZVb2lZRkNURkR4X28?oc=5",
+        "published": "Tue, 17 Nov 2026 02:31:04 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "レーティング日報【格下げ↓】 (11月16日)(株探ニュース) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQNmZNM21lV1oyVl9LYmJzX3NDeTdKRGZxZGJtUVVGbGkxQ3I2Q0RPYXlQbTk4aXpsT243dDB4eVFyU0ROOFN5Q2RldHFGX0xoQ0ZJYnd4Rm5qQ2NtVHJ2eXhPcHFIb014Q2RKcWVxNElQbFE1NjVWOTdxbjU2VGlDSm40V3NsZ1k?oc=5",
+        "published": "Mon, 16 Nov 2026 08:00:40 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261027557109.pdf",
+        "date": "2026-10-29 16:00:00"
+      },
+      {
+        "title": "株式分割及び定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028557317.pdf",
+        "date": "2026-10-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028557319.pdf",
+        "date": "2026-10-29 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-11-17T13:36:32+09:00",
+  "price_as_of": "2026-11-17",
+  "signal": {
+    "signal": "buy",
+    "confidence": 70,
+    "target_price": 4520.0,
+    "stop_loss": 4080.0,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズの評価が非常に高く（strength 75）、かつテクニカルが中立（neutral）であるため、好材料が株価に完全に織り込まれる前の「織り込み前エントリー」の条件を満たした。",
+        "evidence": "fundamental_view.strength=75, technical_view.stance=neutral"
+      },
+      {
+        "reason": "営業利益の拡大トレンドに加え、アナリストによる目標株価引き上げや27年3月期の利益予想上方修正といったポジティブなカタリストが複数確認できる。",
+        "evidence": "fundamental_view.points[0]: 'ソニーG－丸三が目標株価引き上げ' / '27年3月期経常予想。対前週上昇。'"
+      },
+      {
+        "reason": "PlayStation 5の販売1億台突破により、今後のソフトウェア・サービス収益の拡大という強固な事業基盤が再確認された。",
+        "evidence": "fundamental_view.points[1]: 'PS5、販売1億台突破 発売6年で大台'"
+      },
+      {
+        "reason": "テクニカル面では短期的な調整局面にあるが、中期トレンドはTOPIXをアウトパフォームしており、SMA25付近までの押し目は絶好のエントリー機会となる。",
+        "evidence": "technical_view.points[0]: price_technical.trend_60d.relative_to_topix_60d_pct=21.13 / technical_view.key_levels.support=4077.28"
+      }
+    ],
+    "risks": [
+      "市場全体が『downtrend』レジームにあり、TOPIXが25日線を割り込む中で連れ安となるリスク",
+      "前夜の米テクノロジーセクター（XLK）の大幅下落を受けた、国内ハイテク株への売り圧力の波及",
+      "次回の日銀金融政策決定会合（12/17-18）に伴う、為替相場（円高進展）や国内金利の急変動",
+      "営業利益の成長に対して、通期純利益が赤字となっている財務構造上の乖離要因"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"buy\",\n \"confidence\": 70,\n \"target_price\": 4520.0,\n \"stop_loss\": 4080.0,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズの評価が非常に高く（strength 75）、かつテクニカルが中立（neutral）であるため、好材料が株価に完全に織り込まれる前の「織り込み前エントリー」の条件を満たした。\",\n   \"evidence\": \"fundamental_view.strength=75, technical_view.stance=neutral\"\n  },\n  {\n   \"reason\": \"営業利益の拡大トレンドに加え、アナリストによる目標株価引き上げや27年3月期の利益予想上方修正といったポジティブなカタリストが複数確認できる。\",\n   \"evidence\": \"fundamental_view.points[0]: 'ソニーG－丸三が目標株価引き上げ' / '27年3月期経常予想。対前週上昇。'\"\n  },\n  {\n   \"reason\": \"PlayStation 5の販売1億台突破により、今後のソフトウェア・サービス収益の拡大という強固な事業基盤が再確認された。\",\n   \"evidence\": \"fundamental_view.points[1]: 'PS5、販売1億台突破 発売6年で大台'\"\n  },\n  {\n   \"reason\": \"テクニカル面では短期的な調整局面にあるが、中期トレンドはTOPIXをアウトパフォームしており、SMA25付近までの押し目は絶好のエントリー機会となる。\",\n   \"evidence\": \"technical_view.points[0]: price_technical.trend_60d.relative_to_topix_60d_pct=21.13 / technical_view.key_levels.support=4077.28\"\n  }\n ],\n \"risks\": [\n  \"市場全体が『downtrend』レジームにあり、TOPIXが25日線を割り込む中で連れ安となるリスク\",\n  \"前夜の米テクノロジーセクター（XLK）の大幅下落を受けた、国内ハイテク株への売り圧力の波及\",\n  \"次回の日銀金融政策決定会合（12/17-18）に伴う、為替相場（円高進展）や国内金利の急変動\",\n  \"営業利益の成長に対して、通期純利益が赤字となっている財務構造上の乖離要因\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "中期トレンドやMACDなどのテクニカル指標は強気形状を維持しているが、市場全体の地合い悪化と米国のハイテク株安が重石となり、短期的には調整局面にある。",
+      "points": [
+        {
+          "point": "中期トレンドはTOPIXを大幅にアウトパフォームしており、SMA5とSMA25のゴールデンクロスも継続している。",
+          "evidence": "price_technical.trend_60d.relative_to_topix_60d_pct=21.13, price_technical.sma5_vs_sma25=golden"
+        },
+        {
+          "point": "MACDはシグナルを上回りプラス圏で推移しており、中長期的な上昇余力は残されている。",
+          "evidence": "price_technical.macd=117.15, price_technical.macd_signal=102.94"
+        },
+        {
+          "point": "直近2営業日は続落しており、RSIも過熱圏から低下するなど短期的な押しを形成している。",
+          "evidence": "price_technical.recent_5_days[3,4].change_pct=-0.76, -1.16, price_technical.rsi14=66.1"
+        },
+        {
+          "point": "市場レジームが下降トレンドにあり、VIXの急騰など外部環境の不透明感が強い。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.indices[3].change_1d_pct=18.7"
+        }
+      ],
+      "cautions": [
+        "前夜の米テクノロジーセクターETF（XLK）が3.24%と大幅下落しており、ハイテク株全般への売り圧力が懸念される",
+        "TOPIXが25日線を下回るダウントレンドにあり、個別銘柄の好需給を相殺するリスクがある",
+        "SMA5（4284.8円）を割り込んでおり、SMA25（4077.28円）付近までの深押しへの警戒が必要"
+      ],
+      "key_levels": {
+        "support": 4077.28,
+        "resistance": 4450.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "営業利益ベースでの増益トレンドが継続する中、直近でアナリストによる目標株価の引き上げや、PS5販売1億台突破といったポジティブな材料が重なっている。マクロ環境は不安定だが、エンターテインメント領域の成長性と自社株買いによる株主還元姿勢が下値を支える。",
+      "points": [
+        {
+          "point": "エンタメ領域の牽引による業績拡大とアナリストの評価向上。直近の証券会社による目標株価引き上げや、27年3月期の経常利益予想の上方修正がポジティブに作用している。",
+          "evidence": "news.headlines[1,5]: 'ソニーG－丸三が目標株価引き上げ', '27年3月期経常予想。対前週上昇。' (2026-11-17/16)"
+        },
+        {
+          "point": "主力製品であるPlayStation 5の累計販売台数が1億台を突破し、ゲーム事業の強固な基盤が再確認された。ハードウェアの普及に伴うソフトウェア・サービス収益の拡大が期待できる。",
+          "evidence": "news.headlines[6]: 'PS5、販売1億台突破 発売6年で大台' (2026-11-16)"
+        },
+        {
+          "point": "営業利益の拡大傾向と継続的な株主還元策。2026年3月期の営業利益は前期比で伸長しており、また定期的な自己株式取得の開示が株価のサポート材料となっている。",
+          "evidence": "fundamentals.earnings_trend.annual[0,1]: operating_income_oku_jpy が 12,803から15,537へ増加。disclosures.items[3,7,8]: 自己株式の取得状況に関するお知らせ。"
+        },
+        {
+          "point": "製造業PMIが拡大圏を維持し、かつ円安水準が継続していることは、海外売上比率の高い同社にとって事業環境および為替換算の両面で追い風となる。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=53.3, macro.indices[2].close (ドル円)=159.15"
+        }
+      ],
+      "cautions": [
+        "市場全体のレジームが『downtrend』であり、TOPIXが25日線を下回るなど外部環境の悪化による連れ安のリスクがある（macro.market_regime）。",
+        "2026年3月期の通期純利益が赤字（-3,269億円）となっており、営業利益の成長と最終利益の乖離については今後の精査が必要（fundamentals.earnings_trend.annual）。",
+        "次回の日銀金融政策決定会合（12/17-18）を控え、国内金利上昇や為替の急変動がバリュエーションに影響を与える可能性がある（macro.boj.monetary_policy_meeting）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソニーフィナンシャルグループ(株)【8729】：株価・株式情報（夜間PTS含む） - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9Pa3JPa0lpN3U4UUtXb2RQN2pnb1JDUEJyMEl4Ym9aZXRlYUtpMm9DblpjY2JVTnV4T0tuX1VOaTlUZW1VUHoxM0VONHVFQk1Zcmc?oc=5",
+        "published": "Mon, 16 Nov 2026 22:51:26 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "【アナリスト予想】ソニーＧ、27年3月期経常予想。対前週上昇。(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQWm5zUHFjVmpWU29Tc1E4eHlZeWFnSnFwUTlYNzRyVlplenR4am95R3JLdGtHendrR3h5MGtETnQyMkREUEFnLVdRZFQwV2FWOUl4ZFh3RDRrTGhoQnF2WWNMTkRoWkY4emxwOG0tWkFBbkdneGhPanZ6YjAyWGhNQlN1LW1rZ28?oc=5",
+        "published": "Mon, 16 Nov 2026 13:46:31 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "日本が世界と闘うために誕生した「フィジカルAI」計画。日本の大手企業多数参加も自動車メーカーは「ホンダだけ」の謎 - WEB CARTOP",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBJZExXOUQ2aHFfdzB6WFE1QnBTbmNzZ3JBQVVHSDVMajI0Z1pYWDJ3NTNLV0p2RmUwQlUycG5yTjcwYXV3UC1ua3U2X3U3QlRaLVRn0gFYQVVfeXFMTjItVE91U050Ym9TYWFLczJyc0VGX0taU3dxVExmWk1oVTBnT0h5Q3lpWkplVG9vOHZFb1o3ZmRmRzVvRXhhSHN0WGNoSkZhaWotd2JOYXQ0bQ?oc=5",
+        "published": "Mon, 16 Nov 2026 09:00:45 GMT",
+        "publisher": "WEB CARTOP"
+      },
+      {
+        "title": "特集 ソニー・クリエイティブプロダクツのIP戦略 - 日経クロストレンド",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5Qc3MxMnlQSmlfUkZkejg3TDRGQlp3X0ZYNWlqZ2xMLUkzODZISjBQelBWcS1tVkwtN2FTeDktVFBGSTY3YWNiaU1yVkNZaXo3eXpqUGptdU5OSXlUeEE?oc=5",
+        "published": "Mon, 16 Nov 2026 11:41:53 GMT",
+        "publisher": "日経クロストレンド"
+      },
+      {
+        "title": "米国株式市場は下落、AI規制強化や銀行が重し - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxON0FzdHdmMHcxa2NYQjhBQnpIbHc1WEhpdUQzM2ZnWUs2WXY4VE9XMUpld1BJYUlnUzF4VlFmRVFxVURINlc5WmI2Tm5vcDliVmVUb05wM1pkd2YyeWdUOEt0RGl1LUlLV01oVi1zOU5NNUladkstRXBvWFk1SXRsSGt2V01DUklFTzFBZ9IBjAFBVV95cUxON0FzdHdmMHcxa2NYQjhBQnpIbHc1WEhpdUQzM2ZnWUs2WXY4VE9XMUpld1BJYUlnUzF4VlFmRVFxVURINlc5WmI2Tm5vcDliVmVUb05wM1pkd2YyeWdUOEt0RGl1LUlLV01oVi1zOU5NNUladkstRXBvWFk1SXRsSGt2V01DUklFTzFBZw?oc=5",
+        "published": "Mon, 16 Nov 2026 23:15:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "ソニーG－丸三が目標株価引き上げ エンタメ領域がけん引し最高益更新〔DZH 個別株情報〕(時事通信) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQUzFQbFRQc3VjblhMRXdnQjhNbVhKTTVONVVsbDFWRnJrTk5kMjdCWjV6cDZ5QTlTd0t0aVdDUnc4WlhpbE9qRW8wRlBfcGZiQ3NmdHJLd2UtTEh0eVByUFpaRzMtOGg3MVJjM2huSjZ2aWpkYWpLY0tMOFE4b0xnaEF6Q3BNSHc?oc=5",
+        "published": "Tue, 17 Nov 2026 02:18:19 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "PS5、販売1億台突破 発売6年で大台 ソニー（時事通信） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1jSFVGQTRLOEYycDBxQUFlby1DeHBQSzZyTzhyMEF3aWJpRjVjZS1fZ0w1dFZMWVhkUUczSExkQlhPZE9wV01ZUk9TZkVaQzAtZHladjd3TnN0UUNWUUEwWWVNZDBOWnRfZGY5d2hHUkxmTDFDYlVidnVoWlo5bjg?oc=5",
+        "published": "Mon, 16 Nov 2026 05:15:00 GMT",
+        "publisher": "Yahoo!ニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の権利確定に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261113578684.pdf",
+        "date": "2026-11-13 15:30:00"
+      },
+      {
+        "title": "2027年３月期 第２四半期（中間期）決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261104564860.pdf",
+        "date": "2026-11-05 15:30:00"
+      },
+      {
+        "title": "2026年度第２四半期連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261104564884.pdf",
+        "date": "2026-11-05 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261105564929.pdf",
+        "date": "2026-11-05 11:30:00"
+      },
+      {
+        "title": "業績連動型株式ユニット（PSU）による事後交付型株式報酬制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030560394.pdf",
+        "date": "2026-10-30 15:30:00"
+      },
+      {
+        "title": "業績連動型株式ユニット（PSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030560415.pdf",
+        "date": "2026-10-30 15:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030560428.pdf",
+        "date": "2026-10-30 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261005545702.pdf",
+        "date": "2026-10-05 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903530947.pdf",
+        "date": "2026-09-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260811517496.pdf",
+        "date": "2026-08-11 18:30:00"
+      }
+    ]
+  }
+}

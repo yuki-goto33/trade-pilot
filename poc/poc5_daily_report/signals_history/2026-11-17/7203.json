@@ -1,0 +1,222 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-11-17T13:35:53+09:00",
+  "price_as_of": "2026-11-17",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "2026-11-06にbuyシグナルを発出しており、現在はその継続監視期間（14日以内）に該当するため、ルールに基づき新規の追加買いは行わずホールドを維持する。",
+        "evidence": "reference.recent_buy.date=2026-11-06"
+      },
+      {
+        "reason": "ファンダメンタルズ評価がstrength 60にとどまり、新規buyの必須条件である70を満たしていない。通期減益見通しによる成長鈍化が重石となっている。",
+        "evidence": "fundamental_view.strength=60, fundamental_view.points[0]"
+      },
+      {
+        "reason": "市場全体がdowntrend（下落トレンド）にあり、VIX指数の急上昇（22.91）を伴うリスクオフ環境下では、個別銘柄の底堅さにかかわらず静観が妥当である。",
+        "evidence": "reference.market_regime='downtrend', technical_view.cautions[2]"
+      },
+      {
+        "reason": "テクニカル形状はSMA25を上回り強気を維持しているが、直近ではSMA5を下回るなど短期的な押し戻しが見られ、地合いの悪化に引きずられるリスクがある。",
+        "evidence": "technical_view.points[3], technical_view.cautions[0]"
+      }
+    ],
+    "risks": [
+      "2026年12月17-18日の日銀金融政策決定会合に向けた追加利上げ観測と国内金利上昇による影響",
+      "VIX指数の急騰（前日比+18.7%）に伴う、市場全体のボラティリティ拡大とパニック売りの波及",
+      "2027年春闘協議の前倒し実施に伴う、人件費負担増による利益率圧迫への懸念",
+      "米国市場におけるセクターETF（XLY）の下落トレンド継続による相関的な売り圧力"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"2026-11-06にbuyシグナルを発出しており、現在はその継続監視期間（14日以内）に該当するため、ルールに基づき新規の追加買いは行わずホールドを維持する。\",\n   \"evidence\": \"reference.recent_buy.date=2026-11-06\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズ評価がstrength 60にとどまり、新規buyの必須条件である70を満たしていない。通期減益見通しによる成長鈍化が重石となっている。\",\n   \"evidence\": \"fundamental_view.strength=60, fundamental_view.points[0]\"\n  },\n  {\n   \"reason\": \"市場全体がdowntrend（下落トレンド）にあり、VIX指数の急上昇（22.91）を伴うリスクオフ環境下では、個別銘柄の底堅さにかかわらず静観が妥当である。\",\n   \"evidence\": \"reference.market_regime='downtrend', technical_view.cautions[2]\"\n  },\n  {\n   \"reason\": \"テクニカル形状はSMA25を上回り強気を維持しているが、直近ではSMA5を下回るなど短期的な押し戻しが見られ、地合いの悪化に引きずられるリスクがある。\",\n   \"evidence\": \"technical_view.points[3], technical_view.cautions[0]\"\n  }\n ],\n \"risks\": [\n  \"2026年12月17-18日の日銀金融政策決定会合に向けた追加利上げ観測と国内金利上昇による影響\",\n  \"VIX指数の急騰（前日比+18.7%）に伴う、市場全体のボラティリティ拡大とパニック売りの波及\",\n  \"2027年春闘協議の前倒し実施に伴う、人件費負担増による利益率圧迫への懸念\",\n  \"米国市場におけるセクターETF（XLY）の下落トレンド継続による相関的な売り圧力\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 65,
+      "summary": "個別銘柄のテクニカル指標や中期トレンドは依然として強気形状を維持しているものの、市場全体の地合いが明確な下落レジームにあり、短期的な調整圧力が強まっているため中立と判断します。",
+      "points": [
+        {
+          "point": "SMA25（3198.4円）を大きく上回る水準で推移し、SMA5とSMA25のゴールデンクロスも継続しており、中長期的な上昇基調は崩れていない。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.last_close=3394.0, price_technical.sma25=3198.4"
+        },
+        {
+          "point": "MACDがシグナルを上回ってプラス圏で推移しており、テクニカル的なモメンタムは依然として上向きを示唆している。",
+          "evidence": "price_technical.macd=117.84, price_technical.macd_signal=105.2, price_technical.macd_histogram=12.64"
+        },
+        {
+          "point": "過去60営業日の騰落率がTOPIXを大幅にアウトパフォームしており、市場全体と比較して強い相対的な勢いを持っている。",
+          "evidence": "price_technical.trend_60d.relative_to_topix_60d_pct=18.6, price_technical.trend_60d.change_60d_pct=12.31"
+        },
+        {
+          "point": "直近の終値がSMA5（3416.6円）を下回っており、短期的には直近5営業日の高値圏から押し戻される動きが見られる。",
+          "evidence": "price_technical.last_close=3394.0, price_technical.sma5=3416.6, price_technical.recent_5_days[0].close=3435.0"
+        }
+      ],
+      "cautions": [
+        "TOPIXが25日線を下回り、市場レジームがdowntrend（下落トレンド）と判定されているため、市場全体の下落に引きずられるリスクが極めて高い。",
+        "前夜の米国市場で対応セクターETF（XLY）が1.53%下落しており、関連セクターへの売り波及が懸念される。",
+        "VIX指数が22.91まで急上昇（+18.7%）しており、リスクオフの地合いによるボラティリティ拡大に注意が必要。"
+      ],
+      "key_levels": {
+        "support": 3198.4,
+        "resistance": 3533.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "通期での営業減益見通しと市場全体のダウンレジームが重石となる一方、PBR1倍近辺のバリュエーションと継続的な自社株買いが下値を支える拮抗状態にあります。",
+      "points": [
+        {
+          "point": "2026年3月期の通期業績は、売上高が増加する一方で営業利益・純利益ともに前期比で減益となる計画であり、成長の鈍化が意識される局面です。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "11月5日の決算発表に合わせ、自己株式取得（自社株買い）の条件変更や公開買付け等の還元策を矢継ぎ早に公表しており、株主還元への強い姿勢が下値限定要因となっています。",
+          "evidence": "disclosures.items[2]"
+        },
+        {
+          "point": "製造業PMIは53.3と拡大圏を維持しており、1ドル159円台の円安水準も輸出採算の追い風となりますが、製造業PMI自体は4月(55.1)をピークに緩やかな減速傾向にあります。",
+          "evidence": "macro.japan_pmi.manufacturing, macro.indices[2]"
+        }
+      ],
+      "cautions": [
+        "12月17-18日の日銀金融政策決定会合に向けた追加利上げ観測や、国内金利の上昇（JGB10年 2.927%）による金利感応株への影響（macro.boj.monetary_policy_meeting, macro.rates.jgb_10y_percent）",
+        "2027年春闘の協議が12月に前倒しされることが報じられており、人件費負担増への懸念が利益率の圧迫要因として意識されるリスク（news.headlines[2]）",
+        "市場全体がdowntrend（25日線割れかつ5日騰落マイナス）にあり、VIX指数も急上昇（22.91）するなどリスクオフムードが強まっていること（macro.market_regime, macro.indices[4]）"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-11-06",
+    "days_ago": 11,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "トヨタ自動車(株)【TM】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBBVUdJM0U0aFlkR0FQN05mMW1YR2VRTlVLdEE1d19aRE9MWndrR1NnWTJZb1VtZmtjSGxRTzZseVZQaVhNU1NNUUJFSU8?oc=5",
+        "published": "Mon, 16 Nov 2026 21:28:20 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "「プリウスはカッコいいのか？」トヨタ自動車 サイモン・ハンフリーズCBOに聞くカーデザイン術 - JBpress",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1Vejg3ajlrUUxQMmlHU1BWSTBSSWpIdzZXU0RZZDVOQU1PV3pXcU5IZWVuWWNPV1k4dUgtb0dQTjA4VDFlbF9ITUJlRFk5WldRcU9HcVBB?oc=5",
+        "published": "Mon, 16 Nov 2026 21:00:00 GMT",
+        "publisher": "JBpress"
+      },
+      {
+        "title": "トヨタ自動車 2027年春闘を約2か月前倒し 12月上旬開始へ 海外メーカーとの競争激化など受け全従業員が経営状況の理解深める狙い | 名古屋・愛知・岐阜・三重のニュース【CBC news】 | CBC web (1ページ) - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE52bDVtYXlwRGdmbkhjTV9KZzktZUpJYjdGakpSa0FxVVRMZWdOSFJYNFExQWhZaWt5ZlZ4VmtONVpsSENRVTRISnN3Rkx1WDhtS0U3OE8yZGFteldEWmE2Y2xTZk9fZnM?oc=5",
+        "published": "Mon, 16 Nov 2026 12:21:00 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "ライズ - トヨタ自動車株式会社 公式企業サイト",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBLQzF3ZEY2ZGkxeFJsb1pvR3J0YnAtbWpFQTF4NXdIaWN1YUNlNjZNN2RPZkFCdXVJMkhOeVZmWFNWQllxSHlnaWFRLWoySFlaR3NSeGhUeFBOSkU?oc=5",
+        "published": "Mon, 16 Nov 2026 04:32:57 GMT",
+        "publisher": "トヨタ自動車株式会社 公式企業サイト"
+      },
+      {
+        "title": "トヨタ自動車本社に掲げられた旗＝愛知県豊田市 - トヨタ春闘前倒し12月開始 十分な時間かけ議論深く - 写真・画像(1/1) - 西日本新聞me",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9sU0hYZWxodndwR0UxWFZpX0dLRDIxbWRmSi0ydFZ1QXBaWHNOeHRTRkRwRXBPMVdSZTQ0bU1uT0tKUTRHSHg1UU1WMXkxVnBfVXU5RjlWVQ?oc=5",
+        "published": "Mon, 16 Nov 2026 09:01:05 GMT",
+        "publisher": "西日本新聞me"
+      },
+      {
+        "title": "トヨタ労使、春闘協議を12月に前倒し 要求書提出は例年通り2月 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE41NnNZaDVrSnQ2WHF6VmNMbzgxN2I5Zk5yWlhaUVEwd18wR2dxZjVtWG9HNGxTRXZYRWRHeWJNYzQ1c0hsS0xzSXZXeTI0cWttNGp5UC1IU3RES0lKa1RhOGNaSnJ6ZTJINTJpNno0RlRfdnJz?oc=5",
+        "published": "Mon, 16 Nov 2026 10:25:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "トヨタ春闘前倒し１２月開始 - カナロコ",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE81cDZuMkxWZXhwd2VFNDNuT3hBRzhXSzhueVR4Tm1OWWNISmNpakRDS3VETVprNklhby01WWxKRlRXYUEzQ2JpQmlkOUlLVS0yMlBpcmU5VGRULWRGUm5fVldtb1JxbWFv?oc=5",
+        "published": "Mon, 16 Nov 2026 08:40:47 GMT",
+        "publisher": "カナロコ"
+      },
+      {
+        "title": "トヨタ『ライズ』一部改良、スマートアシスト強化…Z「POWERFUL」も新設定 - StartYourEngines",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE0zbm1BdWxPYmQ4eWhucHNZX1dTRVR6ZG1UQS1NOWdwc0k0dmh1UG1pSDFINWlaRkFHaXZ3T2syZTJOYTJ1Uno3V1JFLXhKdnpMRnhlekxaUWZvUkpUQWpkMnVXVQ?oc=5",
+        "published": "Mon, 16 Nov 2026 08:04:07 GMT",
+        "publisher": "StartYourEngines"
+      },
+      {
+        "title": "【ソフトボール】4連覇トヨタ自動車の石川恭子主将「メッセージをいただいて実感わいた」オンラインで会見（中日スポーツ） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5CdENHdWpJd0NHQmpaNmw0aEJROEVpSnRjYVo3aXg4OWZBTm5UQjVfczNuSW9GODg4b09kMXRZYjY4OTlSTk9kRzNRdEJCLTFqcldQX3FGdExjei10eEdOcXJ0UEZ4OTdjZE52cHRJbkV1NnhOeDA1bHM3NVlmcUE?oc=5",
+        "published": "Mon, 16 Nov 2026 10:46:53 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "トヨタ春闘前倒し１２月開始 - 埼玉新聞",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFB5Y0pJd0VEOXRjaEhYWmE3MFRtSWNqZmNwdUdXOGl3S19nRTk1ZHZBVm4weXN0ZzRUb2pkbWg2TVp4NUxGUzh1czhtdGs1WTFNOEljemNwZw?oc=5",
+        "published": "Mon, 16 Nov 2026 08:40:00 GMT",
+        "publisher": "埼玉新聞"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第2四半期（中間期）決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030561115.pdf",
+        "date": "2026-11-05 13:55:00"
+      },
+      {
+        "title": "2027年3月期第２四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261104563510.pdf",
+        "date": "2026-11-05 13:55:00"
+      },
+      {
+        "title": "自己株式の取得に係る事項の一部変更、自己株式の取得及び自己株式の公開買付け並びに自己株式の消却に係る事項の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261105565338.pdf",
+        "date": "2026-11-05 13:55:00"
+      },
+      {
+        "title": "組織改正、および役員・幹部職人事について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261104563543.pdf",
+        "date": "2026-11-05 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261104563596.pdf",
+        "date": "2026-11-04 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261005545791.pdf",
+        "date": "2026-10-05 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903531084.pdf",
+        "date": "2026-09-03 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      }
+    ]
+  }
+}

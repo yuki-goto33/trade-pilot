@@ -1,0 +1,212 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-11-17T13:42:40+09:00",
+  "price_as_of": "2026-11-17",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "テクニカル面で非常に強い下落トレンドが継続しており、MACDやSMAのデッドクロス、ADRの大幅安など、下げ止まりの兆候が見られない。",
+        "evidence": "technical_view.stance=bearish (strength=95), us_overnight.adr.change_1d_pct=-5.02"
+      },
+      {
+        "reason": "ファンダメンタルズ面では巨額赤字の露呈とAI投資への期待・財務懸念が拮抗しており、強気転換にはカタリストが不足している。",
+        "evidence": "fundamental_view.stance=neutral (strength=60), news.headlines[4].title"
+      },
+      {
+        "reason": "株価が25日移動平均線から大きく下方乖離（約-25%）しており、追加の売りを出すには下落が進みすぎている一方、反発の根拠も乏しいため様子見が妥当である。",
+        "evidence": "reference.last_close=3217.0, reference.sma25=4279.08"
+      }
+    ],
+    "risks": [
+      "RSI14が20.7と極めて低い水準にあり、テクニカル的な売られすぎに伴う急激な自律反発のリスクがある。",
+      "15兆円規模のAI投資資金調達に関する具体的進展や、孫会長による新たな戦略発表によるセンチメントの劇的変化。",
+      "米SOX指数の下落やエヌビディア関連の動向による、投資先資産価値（NAV）のさらなる毀損。",
+      "次回日銀金融政策決定会合（12月17-18日）に向けた国内金利の上昇による有利子負債負担の増大懸念。"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 60,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"テクニカル面で非常に強い下落トレンドが継続しており、MACDやSMAのデッドクロス、ADRの大幅安など、下げ止まりの兆候が見られない。\",\n      \"evidence\": \"technical_view.stance=bearish (strength=95), us_overnight.adr.change_1d_pct=-5.02\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズ面では巨額赤字の露呈とAI投資への期待・財務懸念が拮抗しており、強気転換にはカタリストが不足している。\",\n      \"evidence\": \"fundamental_view.stance=neutral (strength=60), news.headlines[4].title\"\n    },\n    {\n      \"reason\": \"株価が25日移動平均線から大きく下方乖離（約-25%）しており、追加の売りを出すには下落が進みすぎている一方、反発の根拠も乏しいため様子見が妥当である。\",\n      \"evidence\": \"reference.last_close=3217.0, reference.sma25=4279.08\"\n    }\n  ],\n  \"risks\": [\n    \"RSI14が20.7と極めて低い水準にあり、テクニカル的な売られすぎに伴う急激な自律反発のリスクがある。\",\n    \"15兆円規模のAI投資資金調達に関する具体的進展や、孫会長による新たな戦略発表によるセンチメントの劇的変化。\",\n    \"米SOX指数の下落やエヌビディア関連の動向による、投資先資産価値（NAV）のさらなる毀損。\",\n    \"次回日銀金融政策決定会合（12月17-18日）に向けた国内金利の上昇による有利子負債負担の増大懸念。\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 95,
+      "summary": "中期下落トレンドが継続する中で直近5営業日の急落が加速しており、地合いの悪化や前夜ADRの大幅安も重なり、底打ちを確認できるテクニカル上の根拠が乏しい非常に強い弱気局面です。",
+      "points": [
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともに大幅なマイナスであり、深刻な中期下落トレンド内にあると判断されます。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-44.82, relative_to_topix_60d_pct=-38.53"
+        },
+        {
+          "point": "MACDがシグナルの下で低下を続けており、MACDヒストグラムもマイナス圏で拡大傾向にあるため、下落のモメンタムが依然として強力です。",
+          "evidence": "price_technical.macd=-553.53, macd_histogram=-21.4"
+        },
+        {
+          "point": "5日線が25日線を大きく下回るデッドクロス状態にあり、SMA25からの下方乖離も極めて大きく、トレンドの改善が見られません。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, sma5=3554.6, sma25=4279.08"
+        },
+        {
+          "point": "前夜のNY市場でADRが5%超の下落となっており、当日の寄り付きから一段安となる可能性が極めて高い状況です。",
+          "evidence": "us_overnight.adr.change_1d_pct=-5.02"
+        }
+      ],
+      "cautions": [
+        "RSI14が20.7と極めて低い売られすぎ水準に達しており、突発的な自律反発が発生するリスクには注意が必要です。",
+        "VIX指数が18%超と急上昇しており、市場全体のボラティリティ拡大により、テクニカル的な節目を無視した乱高下のリスクがあります。",
+        "ADRの下落分が寄り付き価格に織り込まれた後、目先の達成感から買い戻しが入る「寄り底」の可能性を排除できません。"
+      ],
+      "key_levels": {
+        "support": 3191.0,
+        "resistance": 3554.6
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "直近決算での巨額赤字報道と、湾岸諸国からの15兆円規模のAI投資資金調達に関する観測が交錯しています。外部環境としてAI・半導体セクターへの逆風が強まっており、投資判断には極めて高い不透明感が伴います。",
+      "points": [
+        {
+          "point": "業績の不透明感と巨額赤字の露呈：直近のニュースで7,680億円の赤字が報じられており、2026年11月10日に発表された中間決算の内容がネガティブに意識されている。",
+          "evidence": "news.headlines[4].title, disclosures.items[0].title"
+        },
+        {
+          "point": "巨大なAI投資資金の調達観測：湾岸諸国から15兆円規模の調達を打診しているとの報道があり、孫会長の掲げるAI戦略への期待と、さらなる財務リスク拡大への懸念が拮抗している。",
+          "evidence": "news.headlines[3].title"
+        },
+        {
+          "point": "マクロ環境およびAIセクターのセンチメント悪化：米国の半導体規制強化やエヌビディアCEOの辞任報道により、同社の投資先価値に直結するAI関連銘柄の地合いが悪化している。",
+          "evidence": "news.headlines[2].title, news.headlines[8].title, macro.market_regime.market_regime=\"downtrend\""
+        }
+      ],
+      "cautions": [
+        "AI/半導体株のボラティリティ波及：米SOX指数の5%安やハイテク株の調整が同社のNAV（純資産価値）に直接的な毀損を与えるリスクがある（news.headlines[2]）。",
+        "国内金利の上昇リスク：日本10年債利回りが2.927%まで上昇しており、有利子負債の多い同社にとって利払い負担増や調達コストの上昇は財務上の重石となる（macro.rates）。",
+        "イベントリスク：30日後に日銀金融政策決定会合（12月17-18日）を控えており、為替や国内金利の急変動が警戒される（macro.boj.monetary_policy_meeting）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "「AQUOS sense11」を“ソフトバンク”で11月26日に発売 | 企業・IR | ソフトバンク - ソフトバンク",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBKSXh5b3A1a09CblMydm05UEJRUlVUWVQyWmZQeEFucjAwQnJVbVdqcEtWbzZ0Rm1KT0t6aFo4RllRd3dPR291MTdNSnRjR3VBbHlpV2JTMVB0cGhObHZUZVpKbGswTjBUX0dGYUdfcw?oc=5",
+        "published": "Tue, 17 Nov 2026 01:00:00 GMT",
+        "publisher": "ソフトバンク"
+      },
+      {
+        "title": "孫会長「１０～１５年頑張る」 ＳＢＧ株主総会 - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1LY25yWlFFZnRZUG5IM0tnTXhoc1lvNWNxR0xuOGlFbjJ1ZjBHdTczeVZ1NHZuNXJtN3VFOVBBRUY4SXBZVndjQ0d0bjRmY29SQ2k1WjhSUWxxT2Rw?oc=5",
+        "published": "Mon, 16 Nov 2026 21:31:27 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "日経平均、一時5万9000円割れ 米半導体規制強化でSOX5%安 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5ucGE0bWNBbFZ3aVcxTGpxQVNIS19La3ExRGxDLVFlMFNnWFBIaVZFa1RwU2JaOE15YXFYR3A2d0ZDQjJLeTNVakk3R1J3WS05ZHNpYUtSZWk1bUxBZXFpbW02SDNRVF9pM2FVODU2dG9aWm4z?oc=5",
+        "published": "Tue, 17 Nov 2026 00:55:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "ＳＢＧ、１５兆円調達打診か 湾岸諸国投資家に、ＡＩ投資拡大 - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5pdWxjUjNodXpzRHVldG1icllCSkM4ZmE0VFc2cDBVZ1dQcC1ESkZBTzFqSURlZk9sSkdWc1ZfcmJScmh4LVZtQnhFN3pmQTEzYm1MSHBaWkxEOUJaMGZienpUVkxaZEVkNUVIeUFHOA?oc=5",
+        "published": "Mon, 16 Nov 2026 21:22:57 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "ソフトバンクGが7680億円の大赤字 AIに巨額投資の孫正義氏だがアメリカでデータセンター建設に逆風 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE45T1ptdjF0OWlKWWNqUGJLRXpZMWNPN3BBbFBwYVNjcmFXTGRqYjNOUFZFNlA5Znc1S2xLMlA3eVBLMDJicmswcGVsVGNtbG5Yck5hN2RRRE1QdUJxOGxTcDgyU2czTzNfUGlBcFd3?oc=5",
+        "published": "Tue, 17 Nov 2026 02:51:17 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "「年間配当175円への増配」と「上限200億円の自社株買い」発表でストップ高…手厚い株主還元策で急伸した〈注目銘柄〉の - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9RVXluWGp0aVExeW1lU3dJT3RUVWI5dTRFOTdXQ1RtVC16TFJYdmxjU202NmI2aFBpeWtMWng1NG5KRW5iOXJPXzhZX0cxSFE0V3FmbWdHSkZDcXozQXpXSllhU2lQT0FS?oc=5",
+        "published": "Tue, 17 Nov 2026 02:15:43 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "ソフトバンクGが7680億円の大赤字 AIに巨額投資の孫正義氏だがアメリカでデータセンター建設に逆風 - J-CAST ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5oYWg1WGp3TGFpYUhiOTFoeDdYSjczX0NuSXVnMG0tUGpMRm5Jb3F5QWllbDBiUFdtaXRfc29qS09KTDZpNFNsTW92Y2I0OENKanhrYzc0bWpOMkdUVDE4?oc=5",
+        "published": "Tue, 17 Nov 2026 02:30:00 GMT",
+        "publisher": "J-CAST ニュース"
+      },
+      {
+        "title": "関連ニュース - 時事通信ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBSdWJXYXRaQk1hWTAtTloyMzNJVXM5QVNENGt1NFlVNWN0blBqclNCUmV2NnRKdHQ3OS1XbVVjOGJ2TXNXQ01wM19NOXB0YUYxcFQ4Q1JQWnJDZw?oc=5",
+        "published": "Mon, 16 Nov 2026 08:20:00 GMT",
+        "publisher": "時事通信ニュース"
+      },
+      {
+        "title": "日経平均、1週間ぶり6万円割れ エヌビディアCEO辞任がAI株直撃 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE0tNWNZYWlIV2U4MzhvUF9xUl92QXJaZXdKeHVhM2l1cnVZX1o4Yi0ydjAzRW5Id3UtNktZQ2hmeG93V2dfRTBNd3dVSDFGRmVuN2NXNDZJNnNaREFyclJEVU9ySmFydTdWLUkzUUJwNDk0V05G?oc=5",
+        "published": "Mon, 16 Nov 2026 04:25:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "上場企業、純利益２６％増＝ＡＩデータセンター需要追い風―９月中間 - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE42QWNUeWpwc0dtUXpIakJVQUFGTGo2Z3JLR2hMMFNJRmRpUUhnZ0JzMWxhWEFOdkxmTG1sRDlUYzJ0OTgtYm5PVE9jRXJPSTBmOFdNRHREdDQyNFNPVElxWUlPWmg3cVBiTElZ0gFrQVVfeXFMTjZBY1R5anBzR21RekhqQlVBQUZMajZncktHaEwwU0lGZGlRSGdnQnMxbGFYQU52TGZMbWxEOVRjMnQ5OC1ibk9UT2NFck9JMGY4V01EdER0NDI0U09USXFZSU9aaDdxUGJMSVk?oc=5",
+        "published": "Mon, 16 Nov 2026 08:20:45 GMT",
+        "publisher": "Infoseek"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年３月期 第２四半期（中間期）決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261109569352.pdf",
+        "date": "2026-11-10 15:30:00"
+      },
+      {
+        "title": "ABB Ltd のロボティクス事業の買収に関する経過のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030561893.pdf",
+        "date": "2026-11-06 08:00:00"
+      },
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得の完了時期の変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030561126.pdf",
+        "date": "2026-10-30 15:30:00"
+      },
+      {
+        "title": "剰余金の配当（中間配当）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261022554888.pdf",
+        "date": "2026-10-23 15:30:00"
+      },
+      {
+        "title": "2021年発行ユーロ建普通社債の期限前償還完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261023555022.pdf",
+        "date": "2026-10-23 11:30:00"
+      },
+      {
+        "title": "2021年発行ユーロ建普通社債の期限前償還に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261009548411.pdf",
+        "date": "2026-10-09 15:30:00"
+      },
+      {
+        "title": "OpenAIへの追加出資（サードトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260930543674.pdf",
+        "date": "2026-10-01 16:00:00"
+      },
+      {
+        "title": "外貨建シニア社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260924539094.pdf",
+        "date": "2026-09-24 08:00:00"
+      },
+      {
+        "title": "ブリッジローンの期限前返済に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533573.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260904531576.pdf",
+        "date": "2026-09-04 10:30:00"
+      }
+    ]
+  }
+}
