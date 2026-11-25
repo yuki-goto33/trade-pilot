@@ -1,0 +1,169 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-11-25T14:17:52+09:00",
+  "price_as_of": "2026-11-25",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズは極めて強固で、PER 7.8倍の割安感やPMI拡大等の好材料が揃っていますが、テクニカルが弱気トレンドにあるため「落ちるナイフを掴まない」原則に従いホールドとします。",
+        "evidence": "fundamental_view.strength=75, technical_view.stance=bearish, fundamental_view.points[3]"
+      },
+      {
+        "reason": "市場全体が下落レジーム（downtrend）にあり、個別銘柄の好業績よりもマクロ環境の悪化による連れ安のリスクが優先される局面です。",
+        "evidence": "reference.market_regime=downtrend, technical_view.points[2]"
+      },
+      {
+        "reason": "テクニカル面で25日移動平均線を下回るデッドクロスが継続しており、反転を確認するまではエントリーを見送ります。",
+        "evidence": "technical_view.points[1], reference.last_close=14605.0 < reference.sma25=15079.92"
+      }
+    ],
+    "risks": [
+      "市場全体のダウンレジーム継続による、好業績銘柄へのさらなる売り圧力",
+      "2026年12月17・18日の日銀金融政策決定会合における金利上昇観測とグロース株への影響",
+      "米国テクノロジーセクターETFの大幅下落に伴う、国内ハイテク・FA関連株のセンチメント悪化"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズは極めて強固で、PER 7.8倍の割安感やPMI拡大等の好材料が揃っていますが、テクニカルが弱気トレンドにあるため「落ちるナイフを掴まない」原則に従いホールドとします。\",\n      \"evidence\": \"fundamental_view.strength=75, technical_view.stance=bearish, fundamental_view.points[3]\"\n    },\n    {\n      \"reason\": \"市場全体が下落レジーム（downtrend）にあり、個別銘柄の好業績よりもマクロ環境の悪化による連れ安のリスクが優先される局面です。\",\n      \"evidence\": \"reference.market_regime=downtrend, technical_view.points[2]\"\n    },\n    {\n      \"reason\": \"テクニカル面で25日移動平均線を下回るデッドクロスが継続しており、反転を確認するまではエントリーを見送ります。\",\n      \"evidence\": \"technical_view.points[1], reference.last_close=14605.0 < reference.sma25=15079.92\"\n    }\n  ],\n  \"risks\": [\n    \"市場全体のダウンレジーム継続による、好業績銘柄へのさらなる売り圧力\",\n    \"2026年12月17・18日の日銀金融政策決定会合における金利上昇観測とグロース株への影響\",\n    \"米国テクノロジーセクターETFの大幅下落に伴う、国内ハイテク・FA関連株のセンチメント悪化\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "中期的な下落トレンドが継続しており、主要な移動平均線の下位で推移する弱気な形状です。市場全体の下落レジームも重石となり、反発の勢いは限定的と判断します。",
+      "points": [
+        {
+          "point": "60営業日の騰落率および対TOPIX相対騰落率がともにマイナスであり、明確な中期下落トレンド内にあります。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-11.22, price_technical.trend_60d.relative_to_topix_60d_pct=-3.58"
+        },
+        {
+          "point": "5日移動平均線が25日移動平均線を下回るデッドクロス状態が続いており、短期的な上値の重さが意識されます。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, price_technical.last_close=14605.0, price_technical.sma25=15079.92"
+        },
+        {
+          "point": "市場全体の地合いがdowntrendと判定されており、日経平均の大幅下落などマクロ環境が個別銘柄の重石となっています。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.indices[0].change_1d_pct=-2.76"
+        }
+      ],
+      "cautions": [
+        "前夜のADRが+2.08%と反発しており、寄り付き直後の買い戻しが強まる可能性があります。",
+        "MACDヒストグラムがわずかにプラスに転じており、短期的には下げ止まりの兆候が見られます。",
+        "米国テクノロジーセクターETFの大幅下落（-3.26%）が国内ハイテク株のセンチメントをさらに悪化させるリスクがあります。"
+      ],
+      "key_levels": {
+        "support": 13042.0,
+        "resistance": 15079.9
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "製造業PMIの拡大を背景とした良好な外部環境下で、直近四半期も過去最高水準の利益成長を維持しており、アナリストによる強気評価の継続も株価の支えとなる。10月末に発表された株式分割と増配予想の修正による流動性向上と株主還元の強化もポジティブな材料である。",
+      "points": [
+        {
+          "point": "直近四半期（2026年9月期）において、売上高3,888億円、営業利益2,212億円を計上し、前四半期比で増収増益を達成。高い収益性を維持している。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0]"
+        },
+        {
+          "point": "日本の製造業PMIが53.7と拡大圏にあり、工場の自動化・省力化ニーズ（FA機器）の需要拡大を示唆するマクロ環境が追い風となっている。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=53.7"
+        },
+        {
+          "point": "直近（2026年11月24日）のニュースで、マッコーリーが投資判断「アウトパフォーム」を継続しており、外部専門家による評価が依然として高い。",
+          "evidence": "news.headlines[0].title"
+        },
+        {
+          "point": "ROEが15.6%と高く、資本効率に優れた経営が継続されていることに加え、予想PERが低水準にあり、業績成長に対する割安感が強まっている。",
+          "evidence": "fundamentals.valuation.return_on_equity=0.156, fundamentals.valuation.forward_pe=7.821"
+        }
+      ],
+      "cautions": [
+        "市場全体が下降トレンド（downtrend）にあり、日経平均の大幅な下落に伴う連れ安のリスクがある（macro.market_regime.market_regime=downtrend）",
+        "2026年12月17・18日の日銀金融政策決定会合に向けた金利上昇観測が、グロース株の側面を持つ同社株の重石となる可能性がある（macro.boj.monetary_policy_meeting.next_meeting）",
+        "サービス業PMI（50.5）に見られる景況感の鈍化が製造業へ波及した場合、先行きへの懸念が生じる可能性がある（macro.japan_pmi.services.latest_value=50.5）"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": 20100
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "＊キーエンス－マッコーリーが投資判断を「OP」継続、目標株価100500円→20100円 - TradingView",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE8teFFPZ3RQLVVJOENJNEJRZFB2VFBNeHRRckM2d3I5TzQ4N0UyX21xRzZ5THEycTlLMGxhOERVV3NWeTctb1ZqTnR6bVQyd3ozeThhTTZRcWNXdFU3VENaOGdpOTZhaGtRQUZpS1Z3bTk?oc=5",
+        "published": "Tue, 24 Nov 2026 23:00:07 GMT",
+        "publisher": "TradingView"
+      },
+      {
+        "title": "キーエンス出身者が実践する商談の型を、全34ページの資料一冊に 営業代行のセグロスが「商談の進め方の教科書」を無料公開 - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5TcG9TNEtRRERwY0IxNG9PT013YlViZ182WGJyblpUNXg5QUk5d3dsWXo2UjN0TG9MYWMyY2dIOWlzdGEtUmNoLUNKWks4S01JY29vWWpvVGoyT0tmS1ZBT2lycXJCYlRzUlY1aThaUmY5VzhwcHc?oc=5",
+        "published": "Tue, 24 Nov 2026 17:15:31 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "｢させていただく｣依存症はこう直す…丁寧なつもりが逆に失礼に見える｢くどすぎメール｣の\"引き算\"術 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5lMVZMM3hEQVRqOUhxUXZmS0s1aV9zZHFTdDc3SEM2S3MzcW9xYlBQX1FqLVZqSy10V09BZ2FpRW0xRVZ3Z3ZPZjgwenNtdjg?oc=5",
+        "published": "Wed, 25 Nov 2026 01:01:06 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261027557109.pdf",
+        "date": "2026-10-29 16:00:00"
+      },
+      {
+        "title": "株式分割及び定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028557317.pdf",
+        "date": "2026-10-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028557319.pdf",
+        "date": "2026-10-29 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      }
+    ]
+  }
+}

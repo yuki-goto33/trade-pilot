@@ -1,0 +1,168 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-11-25T14:21:53+09:00",
+  "price_as_of": "2026-11-25",
+  "signal": {
+    "signal": "buy",
+    "confidence": 70,
+    "target_price": 5200.0,
+    "stop_loss": 4750.0,
+    "holding_period_days": 60,
+    "reasons": [
+      {
+        "reason": "年次および直近四半期の堅調な業績トレンドに加え、自己株式取得や事業戦略開示が株主還元と透明性向上への期待を高めるため、ファンダメンタルズは強気と判断されます。",
+        "evidence": "fundamental_view.points[0], fundamental_view.points[1], fundamental_view.points[2]"
+      },
+      {
+        "reason": "日本の製造業PMIの拡大傾向と日銀短観の大企業製造業DIの改善、および円安の進行が日立の事業環境にとって追い風となります。",
+        "evidence": "fundamental_view.points[3], fundamental_view.points[4]"
+      },
+      {
+        "reason": "テクニカル専門家が中立スタンスであるため、ファンダメンタルズのポジティブ材料が株価に十分に織り込まれていない段階でのエントリー機会と判断します。",
+        "evidence": "technical_view.stance='neutral'"
+      },
+      {
+        "reason": "市場全体のダウントレンド局面において、ファンダメンタルズの確信度（strength 75）が買いシグナル発動の基準（75）を満たしています。",
+        "evidence": "reference.market_regime='downtrend', fundamental_view.strength=75"
+      }
+    ],
+    "risks": [
+      "現在のPERが29.70倍と高水準であり、バリュエーション面での割安感が限定的である点に注意が必要です。",
+      "2027年1月28日の次回決算発表、および2026年12月17日〜18日の日銀金融政策決定会合が想定保有期間内にあり、イベントリスクとなる可能性があります。",
+      "市場全体の地合いがダウントレンドであり、全体的な株価の上昇を抑制する可能性があります。",
+      "テクニカル面では中期的な下落トレンドが継続しており、MACDヒストグラムの改善は短期的な動きに過ぎず、本格的なトレンド転換とは言えない可能性があります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"buy\",\n \"confidence\": 70,\n \"target_price\": 5200.0,\n \"stop_loss\": 4750.0,\n \"holding_period_days\": 60,\n \"reasons\": [\n  {\n   \"reason\": \"年次および直近四半期の堅調な業績トレンドに加え、自己株式取得や事業戦略開示が株主還元と透明性向上への期待を高めるため、ファンダメンタルズは強気と判断されます。\",\n   \"evidence\": \"fundamental_view.points[0], fundamental_view.points[1], fundamental_view.points[2]\"\n  },\n  {\n   \"reason\": \"日本の製造業PMIの拡大傾向と日銀短観の大企業製造業DIの改善、および円安の進行が日立の事業環境にとって追い風となります。\",\n   \"evidence\": \"fundamental_view.points[3], fundamental_view.points[4]\"\n  },\n  {\n   \"reason\": \"テクニカル専門家が中立スタンスであるため、ファンダメンタルズのポジティブ材料が株価に十分に織り込まれていない段階でのエントリー機会と判断します。\",\n   \"evidence\": \"technical_view.stance='neutral'\"\n  },\n  {\n   \"reason\": \"市場全体のダウントレンド局面において、ファンダメンタルズの確信度（strength 75）が買いシグナル発動の基準（75）を満たしています。\",\n   \"evidence\": \"reference.market_regime='downtrend', fundamental_view.strength=75\"\n  }\n ],\n \"risks\": [\n  \"現在のPERが29.70倍と高水準であり、バリュエーション面での割安感が限定的である点に注意が必要です。\",\n  \"2027年1月28日の次回決算発表、および2026年12月17日〜18日の日銀金融政策決定会合が想定保有期間内にあり、イベントリスクとなる可能性があります。\",\n  \"市場全体の地合いがダウントレンドであり、全体的な株価の上昇を抑制する可能性があります。\",\n  \"テクニカル面では中期的な下落トレンドが継続しており、MACDヒストグラムの改善は短期的な動きに過ぎず、本格的なトレンド転換とは言えない可能性があります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 50,
+      "summary": "株価は中期的な下落トレンドと市場全体の地合いの悪さが上値を抑える一方、短期的な下落勢いには鈍化の兆しが見られ、方向感に欠ける中立的な見通しです。",
+      "points": [
+        {
+          "point": "中期的な株価トレンドは下落基調にあり、5日移動平均線は25日移動平均線を下回るデッドクロスを形成しています。",
+          "evidence": "price_technical.sma5_vs_sma25='dead(5日線が25日線の下)', price_technical.sma5=4909.0, price_technical.sma25=5114.0"
+        },
+        {
+          "point": "直近60営業日の騰落率はマイナスであり、中期的な株価は下落しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-6.87"
+        },
+        {
+          "point": "市場全体の地合いは悪化しており、TOPIXが25日移動平均線を下回るダウントレンドにあり、日経平均やS&P500も下落しています。",
+          "evidence": "macro.market_regime.market_regime='downtrend', macro.indices[0].change_1d_pct=-2.76, macro.indices[1].change_1d_pct=-0.45, macro.indices[2].change_1d_pct=-0.5"
+        },
+        {
+          "point": "MACDヒストグラムがプラスに転じており、短期的な下落圧力が緩和されつつある兆候が見られます。",
+          "evidence": "price_technical.macd_histogram=30.66"
+        },
+        {
+          "point": "前夜のNY市場では、日立製作所のADRおよび同業種のセクターETFが小幅に下落しており、当日の寄り付きにややマイナス圧力がかかる可能性があります。",
+          "evidence": "us_overnight.adr.change_1d_pct=-0.36, us_overnight.sector_proxy.change_1d_pct=-0.53"
+        }
+      ],
+      "cautions": [
+        "市場全体の地合いが弱いため、個別の買い材料が出ない限り、株価の上値は限定的となる可能性があります。",
+        "MACDヒストグラムの改善は短期的な動きに過ぎず、MACD線自体がシグナルラインを上抜けたり、株価が25日移動平均線を明確に回復するまでは、本格的なトレンド転換とは見なせません。",
+        "前夜のNY市場の動向は寄り付きで織り込まれることが多く、その後の値動きを保証するものではありません。"
+      ],
+      "key_levels": {
+        "support": 4909.0,
+        "resistance": 5114.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "日立製作所は堅調な年次業績トレンドと直近四半期の好調な推移に加え、自己株式取得や事業戦略開示といったポジティブな材料があり、マクロ経済環境も製造業には追い風となるため、強気と判断します。",
+      "points": [
+        {
+          "point": "年次業績は継続的な増収増益計画を示しており、2026年3月期も増収増益を見込んでいます。",
+          "evidence": "fundamentals.earnings_trend.annual[0].revenue_oku_jpy=105868, fundamentals.earnings_trend.annual[0].operating_income_oku_jpy=11993, fundamentals.earnings_trend.annual[0].net_income_oku_jpy=8024"
+        },
+        {
+          "point": "直近四半期（2026年9月期）の業績は、前四半期比で売上、営業利益、純利益が全て増加しており、堅調な推移が確認できます。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0].revenue_oku_jpy=29044, fundamentals.earnings_trend.quarterly[0].operating_income_oku_jpy=3490, fundamentals.earnings_trend.quarterly[0].net_income_oku_jpy=2272"
+        },
+        {
+          "point": "直近で自己株式の取得状況が発表されており、株主還元への姿勢が評価されます。また、Hitachi Energy Investor Day資料公開により、事業戦略の透明性向上が期待されます。",
+          "evidence": "disclosures.items[0].date=2026-11-04, disclosures.items[1].date=2026-11-02"
+        },
+        {
+          "point": "日本の製造業PMIは50を超えて拡大傾向を維持しており、日銀短観の大企業製造業DIも改善していることから、日立の事業環境にとって追い風となっています。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=53.7, macro.boj.tankan.di.large_manufacturing.current_di=24.0"
+        },
+        {
+          "point": "ドル円が159円台と円安傾向で推移しており、グローバル事業を展開する同社にとって収益面でプラスに作用する可能性があります。",
+          "evidence": "macro.indices[2].close=159.35"
+        }
+      ],
+      "cautions": [
+        "現在のPERが29.70倍と高水準であり、バリュエーション面での割安感は限定的です。",
+        "次回決算発表日が2027年1月28日に予定されており、それまでの期間はイベントリスクとして認識する必要があります。",
+        "2026年12月17日〜18日には日銀の金融政策決定会合が開催予定であり、金融政策の変更が市場に影響を与える可能性があります。",
+        "現在の市場全体はdowntrendの状況にあり、全体地合いの悪化が株価の上昇を抑制する可能性があります。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261104564131.pdf",
+        "date": "2026-11-04 15:30:00"
+      },
+      {
+        "title": "Hitachi Energy Investor Day 資料公開に関するお知らせ(CEO プレゼン)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261102562975.pdf",
+        "date": "2026-11-02 17:00:00"
+      },
+      {
+        "title": "Hitachi Energy Investor Day 資料公開に関するお知らせ(CFO プレゼン)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261102562979.pdf",
+        "date": "2026-11-02 17:00:00"
+      },
+      {
+        "title": "2027年3月期 第2四半期 (中間期) 決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028557937.pdf",
+        "date": "2026-10-28 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第2四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028557945.pdf",
+        "date": "2026-10-28 15:30:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028557955.pdf",
+        "date": "2026-10-28 15:30:00"
+      },
+      {
+        "title": "役員向け株式報酬制度に係る「役員報酬BIP信託」の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028557959.pdf",
+        "date": "2026-10-28 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261002545344.pdf",
+        "date": "2026-10-02 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260902530692.pdf",
+        "date": "2026-09-02 15:30:00"
+      },
+      {
+        "title": "個別決算における投資有価証券売却益(特別利益)の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260819523052.pdf",
+        "date": "2026-08-19 15:30:00"
+      }
+    ]
+  }
+}

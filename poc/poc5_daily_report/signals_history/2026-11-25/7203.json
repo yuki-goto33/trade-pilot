@@ -1,0 +1,224 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-11-25T14:06:55+09:00",
+  "price_as_of": "2026-11-25",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 25,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家により減益トレンドとEUの輸入規制リスクが指摘されており、strength 60 で「カタリスト不足」の評価となっているため。",
+        "evidence": "fundamental_view.summary: 通期業績の減益トレンドと欧州でのHV/PHV輸入規制という新たなリスクが重石"
+      },
+      {
+        "reason": "テクニカル面でMACDがデッドクロスしており、株価反発にもかかわらず短期的な上昇モメンタムの減衰が示唆されているため。",
+        "evidence": "technical_view.points[2]: MACDはシグナルを下回るデッドクロス状態にあり、上昇モメンタムの短期的な減衰を示唆"
+      },
+      {
+        "reason": "市場全体が downtrend レジームにあり、TOPIXの下落に伴う指数連動の売り圧力が懸念される局面であるため。",
+        "evidence": "reference.market_regime=downtrend, technical_view.points[3]: 市場地合いの冷え込み"
+      },
+      {
+        "reason": "一方で、自社株買いや3%超の配当利回り、25日移動平均線（3263円）が下値を支える要因として機能しており、売り急ぐ水準でもない。",
+        "evidence": "fundamental_view.points[2]: 積極的な自社株買いと3%を超える配当利回り / reference.sma25=3263.0"
+      }
+    ],
+    "risks": [
+      "EUによるHV・PHV輸入数量枠設定の報道が現実化した場合の輸出採算悪化リスク",
+      "12月17-18日の日銀金融政策決定会合における追加利上げ観測に伴う円高進行リスク",
+      "VIX指数26超に伴う外部環境急変による市場全体のパニック売り波及",
+      "MACDデッドクロス解消に失敗した場合の期間高値（3533円）付近での戻り売り圧力"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 25,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家により減益トレンドとEUの輸入規制リスクが指摘されており、strength 60 で「カタリスト不足」の評価となっているため。\",\n   \"evidence\": \"fundamental_view.summary: 通期業績の減益トレンドと欧州でのHV/PHV輸入規制という新たなリスクが重石\"\n  },\n  {\n   \"reason\": \"テクニカル面でMACDがデッドクロスしており、株価反発にもかかわらず短期的な上昇モメンタムの減衰が示唆されているため。\",\n   \"evidence\": \"technical_view.points[2]: MACDはシグナルを下回るデッドクロス状態にあり、上昇モメンタムの短期的な減衰を示唆\"\n  },\n  {\n   \"reason\": \"市場全体が downtrend レジームにあり、TOPIXの下落に伴う指数連動の売り圧力が懸念される局面であるため。\",\n   \"evidence\": \"reference.market_regime=downtrend, technical_view.points[3]: 市場地合いの冷え込み\"\n  },\n  {\n   \"reason\": \"一方で、自社株買いや3%超の配当利回り、25日移動平均線（3263円）が下値を支える要因として機能しており、売り急ぐ水準でもない。\",\n   \"evidence\": \"fundamental_view.points[2]: 積極的な自社株買いと3%を超える配当利回り / reference.sma25=3263.0\"\n  }\n ],\n \"risks\": [\n  \"EUによるHV・PHV輸入数量枠設定の報道が現実化した場合の輸出採算悪化リスク\",\n  \"12月17-18日の日銀金融政策決定会合における追加利上げ観測に伴う円高進行リスク\",\n  \"VIX指数26超に伴う外部環境急変による市場全体のパニック売り波及\",\n  \"MACDデッドクロス解消に失敗した場合の期間高値（3533円）付近での戻り売り圧力\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "中期トレンドは対TOPIXで+18.7%と極めて堅調であり、25日移動平均線付近での下げ止まりも見られますが、MACDのデッドクロス継続や市場全体のレジーム悪化が上値を抑える要因となっています。",
+      "points": [
+        {
+          "point": "中期トレンドの圧倒的な優位性。直近60営業日で市場全体が低迷する中、対TOPIX相対騰落率で大幅なプラスを維持しています。",
+          "evidence": "price_technical.trend_60d.relative_to_topix_60d_pct=18.7, price_technical.trend_60d.change_60d_pct=11.06"
+        },
+        {
+          "point": "主要移動平均線のサポート。株価は上向きの25日線を上回っており、ゴールデンクロスも継続中。直近も5日線を奪回する強い反発を見せています。",
+          "evidence": "price_technical.last_close=3423.0, price_technical.sma25=3263.0, price_technical.sma5_vs_sma25=golden"
+        },
+        {
+          "point": "MACDのシグナル悪化。価格は反発したものの、MACDはシグナルを下回るデッドクロス状態にあり、上昇モメンタムの短期的な減衰を示唆しています。",
+          "evidence": "price_technical.macd_histogram=-9.22, price_technical.macd=78.56, price_technical.macd_signal=87.77"
+        },
+        {
+          "point": "市場地合いの冷え込み。TOPIXが25日線を下回り「downtrend」レジームにあるため、指数連動による下押し圧力が懸念されます。",
+          "evidence": "macro.market_regime.market_regime=downtrend, macro.indices[0].change_1d_pct=-2.76"
+        }
+      ],
+      "cautions": [
+        "前夜のADRが-1.04%と軟調であり、本日の寄り付きで直近の反発分が削られる可能性があります。",
+        "MACDのデッドクロスが解消されない限り、期間高値（3533.0円）付近での戻り売りが強まるリスクがあります。",
+        "VIX指数が26超まで上昇しており、外部環境の急変によるパニック的な売りに注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 3263.0,
+        "resistance": 3533.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "通期業績の減益トレンドと欧州でのHV/PHV輸入規制という新たなリスクが重石となる一方、低PER・PBR水準と積極的な自社株買いが下値を支える、強弱拮抗の展開を予想します。",
+      "points": [
+        {
+          "point": "2024年3月期をピークとした連結営業利益および純利益の減少トレンドが継続しており、収益性の低下が懸念される。",
+          "evidence": "fundamentals.earnings_trend.annual"
+        },
+        {
+          "point": "EUが12月からHV・PHVの輸入に数量枠を設定するとの報道があり、輸出採算および販売戦略への影響が懸念される。",
+          "evidence": "news.headlines[2]"
+        },
+        {
+          "point": "継続的な自社株買いの実施と、3%を超える配当利回りが株価の下支え要因となっている。",
+          "evidence": "disclosures.items[2], fundamentals.valuation.dividend_yield_percent=3.02"
+        },
+        {
+          "point": "国内製造業PMIが53.7と拡大圏を維持し、前回比でも改善しており、事業環境自体は底堅い。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=53.7"
+        },
+        {
+          "point": "アナリストによる来期経常利益予想が前週比で下降しており、市場のセンチメントは慎重に傾きつつある。",
+          "evidence": "news.headlines[1]"
+        }
+      ],
+      "cautions": [
+        "EUの輸入制限による輸出数量の減少および地域ポートフォリオの悪化。",
+        "12月17-18日の日銀金融政策決定会合に伴う為替の円高振れリスク。",
+        "市場全体のレジームがdowntrendにあり、外部要因による連れ安の可能性。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "海外赴任者数が多い企業ランキングTOP100！ 3位は三井物産､2位トヨタ自動車､では1位？ 3ページ目 | ライフ - 東洋経済オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9DU01vMUFhRGRnc3VzNDhqMXlKTGNpX3dQZXc2b0todXk3TndyY2p1VjNnLXQ2VTBqdHBpdHRISDRfYURDVVI5eFFRSGtVVHdqLXU4UVRTOHVMa1E?oc=5",
+        "published": "Tue, 24 Nov 2026 20:00:00 GMT",
+        "publisher": "東洋経済オンライン"
+      },
+      {
+        "title": "【アナリスト予想】トヨタ自動車、27年3月期経常予想。対前週0.3%下降。(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOeWFzUDYzVXR5dGF1eV92MFVDSld3N092bUFnaHpQUHZ0ODFkRG1VU2lnSkRGd0VHaTJaOGF0QTBJdlR4amNZODdXN256d3NsT3JTbmQzdFhHT0lIWTBWQ1FqRFFOalZ1WElNZll1anlRdkVHUGhoc3dTbThQSlRWc01nR2VBaFU?oc=5",
+        "published": "Tue, 24 Nov 2026 13:47:16 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "EU、HV・PHV輸入に12月から数量枠 日本製も対象 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9ZVmFwTFllcU5wX3lwcGFJUEVZUWQ1QWNSN3N2dW9oaWRubmktWFBnTTBBNDk4YnU4T3ZIMUtQcjhZUV84UWRKdmNJN1MxR0ZVSGg5b2EyWXM3RXBkdEEzODFsSXZ1TWJhWE9MM1FvOThxQzFq?oc=5",
+        "published": "Tue, 24 Nov 2026 12:55:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "海外赴任者数が多い企業ランキングTOP100！ 3位は三井物産、2位トヨタ自動車、では1位？ (東洋経済オンライン) - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPbGpPb3FmVmh5WFRDbVhVMGViRG1hOGQ3NnFZZWs0TUxqLXQ0RmZnUVdyN1ZzekNYeWtrUlpnandDdjJQWEpTaWhiY01BWEhjVmRuVkxpNXphTkUtVTZCZmNpeXdmYmhlY1FfM3pLTUQwNFBWeXZjTzJtdWpJUXVrVjluamdhS1lDQTZjU013?oc=5",
+        "published": "Tue, 24 Nov 2026 21:06:16 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "決算発表直後に上昇したTOPIX100構成銘柄は？ 株価騰落率TOP20（2026年9-11月発表分） 野村證券・滝沢弘量 - 野村證券",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE01VnJ6a2hMVDBDWDhYaTJGVF8yX1ZxQnU4WjhVWTYwUEprcHJ0YWdJaFdkLUJ0Z0daX0lrZHJOWUtma1ZDbHR1MkpBaV91TnRQOURkMHJyMFVJcFFzZC13?oc=5",
+        "published": "Tue, 24 Nov 2026 06:00:00 GMT",
+        "publisher": "野村證券"
+      },
+      {
+        "title": "元テレ朝・富川悠太氏、トヨタ・豊田章男会長からの“誕生日祝い”に感激「嬉しすぎます」「朝イチでオメコメもいただきました」 - 山陽新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE85RHdXZzdiSExsYkhuX2pQNlJLSi1rTXlGaXdnNXMyYVZNVDg2RlM2WTl3bXZaZzNhOUN1ZDBkV3hZSDQwLTBXOFh1TUl3S1lXb2R3NFB4ejMzNXJvZzhsMTRDVmM0YjQ?oc=5",
+        "published": "Tue, 24 Nov 2026 06:16:19 GMT",
+        "publisher": "山陽新聞"
+      },
+      {
+        "title": "トヨタの遺伝子解析技術を活用した育種向け試薬をタカラバイオが発売：医療技術ニュース - MONOist",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1JT3ZrQ3hwUk1HV1V6MXFjTjZvSmhBSDc1emlaTHZhdFB1bVRSYy14b21weUluWXlsdHkydC1oV2RwSnUwODBEV1dpb0xPOHFqUHc0OTA3a1Q1VDBsZ1hxWExvZVFiVWZEeUNEaG1SSQ?oc=5",
+        "published": "Tue, 24 Nov 2026 06:00:00 GMT",
+        "publisher": "MONOist"
+      },
+      {
+        "title": "【製造業_品質保証・製造部門責任者向け】品質はどの工程でつくるのか。トヨタ自動車元副社長・佐々木眞一氏が自工程完結を解説、12月3日配信 - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE8weng5d2RLa1QtR3kxZTRDbjdJR0JLUGhPbzBTTmdlUFhhU3ZoVWttem9faXFwZmpoal9LS1JjaTNINUhfaklaQUVxNmt4YmYyVnJNdkRKVnI0S0prWDhqanZkS2NOZHJ3?oc=5",
+        "published": "Tue, 24 Nov 2026 12:15:11 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "EUのEV優遇策、日本車なお除外 議長国修正案は部品に配慮 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9mM2M2VWo1bmJHY3RPVE5Ua0VRT2VYNGpFcU9QQ242bjZnNGlvNGJZWlBjeTk5SXAwdkxJaTgzODUzbll2Y1ByU0hsMENNVGU1NlVVc0l3eW9DM3dPWk1TMzRmOUtuVTJkRWtRVUdlUHJnbGJy?oc=5",
+        "published": "Tue, 24 Nov 2026 11:55:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "日経平均は反落で寄り付く、米半導体株安を嫌気 - Reuters",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNanBqVGx1QW5ReUVSaTRocnpVT3M5TUV5Sk5MdFlvMUJuRDRKWXU5SDI5VkU1LWNwVlhOU0lwNUJheW5WRUJSMU9jSVV0LVNLTFVyYUZMdUZrVTlXRFM5bG5qeVpxSlpleXBQTnRxN1R4YzhWa1dHWHZvZkhMMDFOT2lfT2lEdw?oc=5",
+        "published": "Wed, 25 Nov 2026 00:25:00 GMT",
+        "publisher": "Reuters"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第2四半期（中間期）決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030561115.pdf",
+        "date": "2026-11-05 13:55:00"
+      },
+      {
+        "title": "2027年3月期第２四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261104563510.pdf",
+        "date": "2026-11-05 13:55:00"
+      },
+      {
+        "title": "自己株式の取得に係る事項の一部変更、自己株式の取得及び自己株式の公開買付け並びに自己株式の消却に係る事項の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261105565338.pdf",
+        "date": "2026-11-05 13:55:00"
+      },
+      {
+        "title": "組織改正、および役員・幹部職人事について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261104563543.pdf",
+        "date": "2026-11-05 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261104563596.pdf",
+        "date": "2026-11-04 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261005545791.pdf",
+        "date": "2026-10-05 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903531084.pdf",
+        "date": "2026-09-03 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "code": "9984",
+  "name": "ソフトバンクグループ",
+  "generated_at": "2026-11-25T14:13:57+09:00",
+  "price_as_of": "2026-11-25",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "テクニカル・ファンダメンタルズ共に極めて強い弱気サインだが、株価は既に25日線から-30%以上乖離しており、追撃売りを行うには下落が進みすぎている。",
+        "evidence": "reference.last_close=2713.0 vs reference.sma25=3902.52"
+      },
+      {
+        "reason": "直近決算での1.1兆円超の最終赤字に加え、アナリストの来期利益予想が約46%も下方修正されており、ファンダメンタルズの悪化が深刻である。",
+        "evidence": "fundamental_view.points[1], fundamental_view.points[2]"
+      },
+      {
+        "reason": "テクニカル面では60日騰落率が-46.67%と市場を大きく劣後する深刻な下落トレンドにあり、ADRの急落から一段安の可能性が極めて高い。",
+        "evidence": "technical_view.points[0], technical_view.points[3]"
+      }
+    ],
+    "risks": [
+      "RSIが28.4と売られすぎ水準に達しており、テクニカル的な自律反発が急激に発生するリスク",
+      "PBR 0.94倍という資産価値観点からの割安感による下値支持",
+      "12月中旬の日銀金融政策決定会合における金利先高観によるグロース株への一段の逆風",
+      "米SOX指数やAI関連株の動向による、ビジョン・ファンド保有資産のさらなる評価損"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 30,\n  \"reasons\": [\n    {\n      \"reason\": \"テクニカル・ファンダメンタルズ共に極めて強い弱気サインだが、株価は既に25日線から-30%以上乖離しており、追撃売りを行うには下落が進みすぎている。\",\n      \"evidence\": \"reference.last_close=2713.0 vs reference.sma25=3902.52\"\n    },\n    {\n      \"reason\": \"直近決算での1.1兆円超の最終赤字に加え、アナリストの来期利益予想が約46%も下方修正されており、ファンダメンタルズの悪化が深刻である。\",\n      \"evidence\": \"fundamental_view.points[1], fundamental_view.points[2]\"\n    },\n    {\n      \"reason\": \"テクニカル面では60日騰落率が-46.67%と市場を大きく劣後する深刻な下落トレンドにあり、ADRの急落から一段安の可能性が極めて高い。\",\n      \"evidence\": \"technical_view.points[0], technical_view.points[3]\"\n    }\n  ],\n  \"risks\": [\n    \"RSIが28.4と売られすぎ水準に達しており、テクニカル的な自律反発が急激に発生するリスク\",\n    \"PBR 0.94倍という資産価値観点からの割安感による下値支持\",\n    \"12月中旬の日銀金融政策決定会合における金利先高観によるグロース株への一段の逆風\",\n    \"米SOX指数やAI関連株の動向による、ビジョン・ファンド保有資産のさらなる評価損\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 95,
+      "summary": "中期騰落率が市場を大きく下回る深刻な下落トレンドにあり、直近の急落とADRの大幅安から、下値模索の動きが続く公算が極めて高い。",
+      "points": [
+        {
+          "point": "60営業日騰落率が-46.67%と極めて弱く、対TOPIXでも大幅な劣後が続いており、中期的な下落トレンドが明確である。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-46.67, price_technical.trend_60d.relative_to_topix_60d_pct=-39.03"
+        },
+        {
+          "point": "直近5営業日中に14%超の急落が2度発生しており、出来高を伴う非常に強い売り圧力が継続している。",
+          "evidence": "price_technical.recent_5_days[2].change_pct=-14.48, price_technical.recent_5_days[4].change_pct=-14.31"
+        },
+        {
+          "point": "MACDヒストグラムのマイナス幅が拡大しており、SMA5とSMA25のデッドクロスも解消の兆しが見えない。",
+          "evidence": "price_technical.macd_histogram=-55.57, price_technical.sma5_vs_sma25=dead"
+        },
+        {
+          "point": "前夜のADRが10%を超える大幅下落となっており、国内市場でも寄り付きから一段の下落が懸念される。",
+          "evidence": "us_overnight.adr.change_1d_pct=-10.29"
+        }
+      ],
+      "cautions": [
+        "RSIが28.4と「売られすぎ」の目安である30を下回っており、テクニカル的な自律反発がいつ起きてもおかしくない水準にある。",
+        "ボラティリティが極端に高まっており、日中の乱高下に注意が必要。",
+        "市場全体がdowntrendレジームにあり、地合いによる下押し圧力が加わりやすい。"
+      ],
+      "key_levels": {
+        "support": 2652.0,
+        "resistance": 3166.0
+      }
+    },
+    "fundamental": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "AI・半導体セクターのバブル崩壊懸念を背景とした投資ポートフォリオの毀損リスクに加え、直近四半期の大幅な最終赤字とアナリスト予想の下方修正が重なり、強い下押し圧力が継続している。",
+      "points": [
+        {
+          "point": "米SOX指数の急落やAI関連銘柄の選別局面入りにより、ビジョン・ファンドを中心とした保有資産の評価益期待が大きく後退している。",
+          "evidence": "news.headlines[2], news.headlines[9]"
+        },
+        {
+          "point": "直近の2026年9月中間決算において、1兆1,153億円の四半期最終赤字を計上しており、収益の不安定さが露呈している。",
+          "evidence": "fundamentals.earnings_trend.quarterly[0]"
+        },
+        {
+          "point": "アナリストによる27年3月期の経常利益予想が対前週で45.9%下降するなど、市場の業績コンセンサスが急激に悪化している。",
+          "evidence": "news.headlines[8]"
+        },
+        {
+          "point": "市場全体が下落トレンド（downtrend）にあり、VIX指数も26超とリスクオフ姿勢が強まる中、ハイベータな同社株には厳しい環境が続いている。",
+          "evidence": "macro.market_regime.market_regime, macro.indices[4].close"
+        }
+      ],
+      "cautions": [
+        "PBRが0.94倍と1倍を割り込んでおり、資産価値観点からの割安感が下値支持として機能する可能性がある（fundamentals.valuation.price_to_book=0.943）",
+        "英アーム（ARM）CEOの契約延長や、OpenAIへの追加出資など、中長期的なAI戦略の進展が株価を支える可能性がある（news.headlines[6], disclosures.items[6]）",
+        "12月中旬の日銀金融政策決定会合に向けた金利上昇観測が、グロース株である同社への逆風を強めるリスクがある（macro.boj.monetary_policy_meeting.next_meeting）"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": 11000.0
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "「motorola signature」を“ソフトバンク”で 12月4日に発売 - ソフトバンク",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9CNnJPZzZIbkxrWUIxSkNXUEtRQ0dVZmdlcXJyRUJpc2ZCQ0JEZWs1aW1MT3RNX1RNUThyMWJfcFY0YndYak4yOE9kVHpKazBZUXA3WUZGcF9XcWF4WGtDTEk5eF9BMUs1Si02Y0ZBWQ?oc=5",
+        "published": "Wed, 25 Nov 2026 04:00:00 GMT",
+        "publisher": "ソフトバンク"
+      },
+      {
+        "title": "ソフトバンクGが反落､6月最高値から｢半値八掛け二割引き｣に - 四季報オンライン",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5EbWR5azE4Um1veDVLODBNejE1Y0hNb1hfcXdjYVBBeFRraElKMGxzOEhfSlBBb3RPRkY0VjZHbTFYdVVEVXdubjVmSk00UktqQnlJU0lfaw?oc=5",
+        "published": "Wed, 25 Nov 2026 00:59:50 GMT",
+        "publisher": "四季報オンライン"
+      },
+      {
+        "title": "日経平均、一時5万7000円割れ 米SOX急落でAI・半導体株に売り - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE12YzN0emNXVUJ1ek1SWDNvOXYzWURaRnQ1R2hOb21uQVNLZ0lwd1RKVFBtaUVVb3JCa1VHV0lYQWZWUG41ZmxSVUJ6LXhVRGxmUGNQaklTMEhGc3RRWWFHSkd3TnJGRVF1X0x1Um9hb2Zpd3FC?oc=5",
+        "published": "Wed, 25 Nov 2026 00:55:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "SB OAI Japan、インターネット公開資産へ初期侵入できるか検証する 「侵入可否診断」 - ビジネスネットワーク",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5oMkJVa0ZmTHA3dzdySGhzTV9EVDVQVEYzeGpFazRPMi10S01BaFB5ZlZRRGV5M0tnejJsMDQtcjJNVTRqc3E4N3lSbkRSYWs1UHc?oc=5",
+        "published": "Wed, 25 Nov 2026 02:34:19 GMT",
+        "publisher": "ビジネスネットワーク"
+      },
+      {
+        "title": "ソフトバンクG株13%安、年初来安値を更新｜高値から約7割下落 - CRYPTO TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1ISEZiZm85eV9MRXVKM0dUaVJvel9wc3hVYjdST2RmSUQ0VkdlcXpsUHMxeWc1QTBqd2pPaTJCWHJCZURVUlNqQjQxRGVZcFJhdG5GMjViWkd3a3l2c3d4M1h3bC1XMzgw?oc=5",
+        "published": "Wed, 25 Nov 2026 01:46:19 GMT",
+        "publisher": "CRYPTO TIMES"
+      },
+      {
+        "title": "孫正義氏 韓国・大邱で先祖の墓参り＝家族ら伴い非公開で - 聯合ニュース",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPVXlHX0VIMUFlMDFoRnYxTkcwV21EUmVYeHVEN3VmWjAtcXI0dVJWWHUzUzFmaXZSeEVBOTVMSHljem0xU1RXcGlYTS1lal9vMXdvb0E3UjlSQUZDVTFfUUdpNzU3Y21aR2d1YldiTGtXUmRVdnljN0lIRHVTSFdTWHBtQzdsZw?oc=5",
+        "published": "Wed, 25 Nov 2026 02:10:39 GMT",
+        "publisher": "聯合ニュース"
+      },
+      {
+        "title": "エヌビディア「後任ＣＥＯ候補」と報じられた英アームのハースＣＥＯ、２０３３年まで契約延長…ソフトバンクＧ副会長にも - 読売新聞",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB0VmxpekdXeENfd2d2OVU4eS1GYVpvUHJSTXR2ajZ5NHNqNC10SXFiYldGWTBFSjJMZlVtXzZGTUNZTVQ5cXlEMW0yUkZSZjdXY0hmX0xwaFY0aGtQaVJOc0lTSzI?oc=5",
+        "published": "Tue, 24 Nov 2026 08:40:00 GMT",
+        "publisher": "読売新聞"
+      },
+      {
+        "title": "日経平均が高値から22％下落！AIバブル崩壊から資産を守る方法 - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBTSW9ldUpXNHNMVGhfVlV0c3FEOE1rRndXQlZVX0luZTEzQm04SGhPNE5nanhqMU5XRVdaWUZtT0E1Rm9zbWNYYVBlYTVtR0VtTmxDYzBpLURXU0VYOXlvMA?oc=5",
+        "published": "Wed, 25 Nov 2026 02:00:00 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "【アナリスト予想】ソフトバンクＧ、27年3月期経常予想。対前週45.9%下降。(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPdzNqNXlzWWRQY2tWeENERE5XMGVqVXpNUENXSXZ5NHlEYnFnd3NMX2FZa2ZDdzR1ODhRNGpqU1JDYmJvQkhnSXNFYXh5U1pfek1VZG4yRExuNy1GTnoxUThXZlZBcloydHZSTEdOOHg5TzhxMXh4Mmg4eHI2YzdnZXRBZFpvbm8?oc=5",
+        "published": "Tue, 24 Nov 2026 13:47:27 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "【アンソロピック公開価格割れ】上場１週間足らず、エヌビディアも反落、ＡＩ株の選別局面へ - https://kabu-ir.com/",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1weUhaNThKblJPaUhqNHN1M0s3dkUtQXU2ZGktZ1Q2emxrakZVcWh5ZGIzSE9jblk5cUxwWmJQVmlvR3NYcVdtMjBwZ0VLQkpIanM4Rw?oc=5",
+        "published": "Tue, 24 Nov 2026 23:23:29 GMT",
+        "publisher": "https://kabu-ir.com/"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年３月期 第２四半期（中間期）決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261109569352.pdf",
+        "date": "2026-11-10 15:30:00"
+      },
+      {
+        "title": "ABB Ltd のロボティクス事業の買収に関する経過のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030561893.pdf",
+        "date": "2026-11-06 08:00:00"
+      },
+      {
+        "title": "（開示事項の経過）連結子会社（LINE MAN CORPORATION PTE. LTD.）の株式取得の完了時期の変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030561126.pdf",
+        "date": "2026-10-30 15:30:00"
+      },
+      {
+        "title": "剰余金の配当（中間配当）に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261022554888.pdf",
+        "date": "2026-10-23 15:30:00"
+      },
+      {
+        "title": "2021年発行ユーロ建普通社債の期限前償還完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261023555022.pdf",
+        "date": "2026-10-23 11:30:00"
+      },
+      {
+        "title": "2021年発行ユーロ建普通社債の期限前償還に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261009548411.pdf",
+        "date": "2026-10-09 15:30:00"
+      },
+      {
+        "title": "OpenAIへの追加出資（サードトランシェ）の実行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260930543674.pdf",
+        "date": "2026-10-01 16:00:00"
+      },
+      {
+        "title": "外貨建シニア社債の発行に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260924539094.pdf",
+        "date": "2026-09-24 08:00:00"
+      },
+      {
+        "title": "ブリッジローンの期限前返済に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260909533573.pdf",
+        "date": "2026-09-09 15:30:00"
+      },
+      {
+        "title": "第70回無担保普通社債の条件決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260904531576.pdf",
+        "date": "2026-09-04 10:30:00"
+      }
+    ]
+  }
+}

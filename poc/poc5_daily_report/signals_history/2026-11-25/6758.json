@@ -1,0 +1,156 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-11-25T14:07:34+09:00",
+  "price_as_of": "2026-11-25",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "直近 8 日前（2026-11-17）に buy シグナルを発出しており、現在はその継続監視期間にあたるため、ルールに基づき新規のエントリーは行わず静観する。",
+        "evidence": "reference.recent_buy (date: 2026-11-17, days_ago: 8)"
+      },
+      {
+        "reason": "テクニカル面では強い上昇トレンドを維持しているものの、RSIが72.7と買われすぎ水準に達しており、米国ハイテク株安の影響による短期的な調整リスクが高まっている。",
+        "evidence": "technical_view.cautions[0]: RSI14=72.7 / technical_view.cautions[1]: XLK -3.26%"
+      },
+      {
+        "reason": "ファンダメンタルズの確信度（strength）が 60 に留まっており、織り込み前の優位性があるエントリー条件を満たしていない。",
+        "evidence": "fundamental_view.strength=60"
+      },
+      {
+        "reason": "市場全体が下落トレンド（downtrend）にある中、独歩高の様相を呈しているが、地合い悪化に伴う連れ安リスクを無視できない局面である。",
+        "evidence": "reference.market_regime=\"downtrend\""
+      }
+    ],
+    "risks": [
+      "22日後に控える日銀金融政策決定会合における追加利上げ観測と、それに伴う円高進行による業績圧迫リスク",
+      "RSIの過熱感に伴う利益確定売りの加速、および米国テクノロジーセクター安の波及による下落リスク",
+      "市場全体（TOPIX）の下落トレンド継続によるセンチメントのさらなる悪化"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"直近 8 日前（2026-11-17）に buy シグナルを発出しており、現在はその継続監視期間にあたるため、ルールに基づき新規のエントリーは行わず静観する。\",\n   \"evidence\": \"reference.recent_buy (date: 2026-11-17, days_ago: 8)\"\n  },\n  {\n   \"reason\": \"テクニカル面では強い上昇トレンドを維持しているものの、RSIが72.7と買われすぎ水準に達しており、米国ハイテク株安の影響による短期的な調整リスクが高まっている。\",\n   \"evidence\": \"technical_view.cautions[0]: RSI14=72.7 / technical_view.cautions[1]: XLK -3.26%\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズの確信度（strength）が 60 に留まっており、織り込み前の優位性があるエントリー条件を満たしていない。\",\n   \"evidence\": \"fundamental_view.strength=60\"\n  },\n  {\n   \"reason\": \"市場全体が下落トレンド（downtrend）にある中、独歩高の様相を呈しているが、地合い悪化に伴う連れ安リスクを無視できない局面である。\",\n   \"evidence\": \"reference.market_regime=\\\"downtrend\\\"\"\n  }\n ],\n \"risks\": [\n  \"22日後に控える日銀金融政策決定会合における追加利上げ観測と、それに伴う円高進行による業績圧迫リスク\",\n  \"RSIの過熱感に伴う利益確定売りの加速、および米国テクノロジーセクター安の波及による下落リスク\",\n  \"市場全体（TOPIX）の下落トレンド継続によるセンチメントのさらなる悪化\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "市場全体が下落トレンドにある中で逆行高を見せており、短期・中期ともに非常に強い上昇トレンドを維持しています。ただし、RSIの過熱感と米国ハイテク株安の影響による目先の調整には警戒が必要です。",
+      "points": [
+        {
+          "point": "短期・中期ともに強気トレンドが明確であり、5日線が25日線を上回るゴールデンクロスとMACDのプラス圏拡大が続いています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"golden\", price_technical.macd_histogram=14.2, price_technical.trend_60d.change_60d_pct=17.77"
+        },
+        {
+          "point": "直近5営業日で期間高値付近まで急騰しており、強い買いモメンタムが確認されます。",
+          "evidence": "price_technical.last_close=4513.0, price_technical.period_high=4514.0, price_technical.recent_5_days[4].change_pct=4.42"
+        },
+        {
+          "point": "TOPIXが下落トレンドにある中で、対TOPIX相対騰落率が大幅にプラスとなっており、消去法的な資金流入または独歩高の様相を呈しています。",
+          "evidence": "price_technical.trend_60d.relative_to_topix_60d_pct=25.41, macro.market_regime.market_regime=\"downtrend\""
+        }
+      ],
+      "cautions": [
+        "RSI14が72.7と買われすぎ水準の70を超えており、目先の利益確定売りが出やすい過熱圏にあります。",
+        "前夜の米国市場でテクノロジーセクターETF(XLK)が-3.26%と大幅下落しており、国内ハイテク株全般への波及が懸念されます。",
+        "市場レジームがdowntrend判定であり、全体相場の急落に伴う連れ安リスクを完全には否定できません。"
+      ],
+      "key_levels": {
+        "support": 4168.4,
+        "resistance": 4514.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "直近の四半期業績は回復基調にあり、継続的な自社株買いも下支え要因となっているが、市場全体が下落トレンドにあることや、日銀会合を控えたマクロ環境の不透明感から、現在は様子見が妥当と判断する。",
+      "points": [
+        {
+          "point": "直近の2026年9月期において営業利益6,451億円、四半期純利益4,496億円を計上し、前年度の通期赤字から収益性が急回復している。",
+          "evidence": "fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "2026年9月、10月、11月と継続的に自己株式の取得状況を開示しており、積極的な株主還元姿勢と需給の下支えが期待できる。",
+          "evidence": "disclosures"
+        },
+        {
+          "point": "製造業PMIが53.7と拡大圏を維持しており、159円台の円安水準もデバイス事業などの輸出採算において追い風となる外部環境である。",
+          "evidence": "macro.japan_pmi.manufacturing, macro.indices.JPY=X"
+        }
+      ],
+      "cautions": [
+        "TOPIX連動ETFが25日線を下回るdowntrend局面であり、地合いの悪化による連れ安リスクが高い (macro.market_regime)",
+        "22日後に日銀金融政策決定会合を控えており、追加利上げ観測に伴う円高進行が利益を圧迫する可能性がある (macro.boj.monetary_policy_meeting)",
+        "Forward PEが24.6倍とTrailing PE（21.3倍）より高く、今後の業績期待が既に一定程度価格に織り込まれている可能性がある (fundamentals.valuation)"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-11-17",
+    "days_ago": 8,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [],
+    "disclosures": [
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の権利確定に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261113578684.pdf",
+        "date": "2026-11-13 15:30:00"
+      },
+      {
+        "title": "2027年３月期 第２四半期（中間期）決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261104564860.pdf",
+        "date": "2026-11-05 15:30:00"
+      },
+      {
+        "title": "2026年度第２四半期連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261104564884.pdf",
+        "date": "2026-11-05 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261105564929.pdf",
+        "date": "2026-11-05 11:30:00"
+      },
+      {
+        "title": "業績連動型株式ユニット（PSU）による事後交付型株式報酬制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030560394.pdf",
+        "date": "2026-10-30 15:30:00"
+      },
+      {
+        "title": "業績連動型株式ユニット（PSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030560415.pdf",
+        "date": "2026-10-30 15:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030560428.pdf",
+        "date": "2026-10-30 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261005545702.pdf",
+        "date": "2026-10-05 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903530947.pdf",
+        "date": "2026-09-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260811517496.pdf",
+        "date": "2026-08-11 18:30:00"
+      }
+    ]
+  }
+}
