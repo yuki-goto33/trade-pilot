@@ -1,0 +1,203 @@
+{
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "generated_at": "2026-11-26T13:10:31+09:00",
+  "price_as_of": "2026-11-26",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズは業績上方修正、増配、自社株買い、および巨額融資参画など極めて強固（strength 75）であるが、テクニカル面で明確な下落トレンドが継続している。",
+        "evidence": "fundamental_view.strength=75, technical_view.stance=bearish (strength=75)"
+      },
+      {
+        "reason": "統合判断ルールに基づき、テクニカルが bearish の間は「落ちるナイフ」を掴むことを避け、押し目確認後のエントリーを待機するため、現時点では hold とする。",
+        "evidence": "technical_view.points[1]: 5日線が25日線を下回るデッドクロス状態"
+      },
+      {
+        "reason": "市場全体が downtrend レジームにあり、個別株の好材料が株価に反映されにくい環境である。地合いの好転または株価の底打ちを確認する必要がある。",
+        "evidence": "reference.market_regime=downtrend"
+      },
+      {
+        "reason": "MACDがマイナス圏で拡大を続けており、短期的には下方へのモメンタムが依然として強く、反転の兆しが見られない。",
+        "evidence": "technical_view.points[2]: macd=-76.3, macd_histogram=-27.57"
+      }
+    ],
+    "risks": [
+      "約21日後の日銀金融政策決定会合に伴う金利変動および銀行セクターへのボラティリティ波及リスク",
+      "市場全体の地合い（downtrend）継続による、さらなる下値支持線の割り込み",
+      "RSIが35.6と低水準であることによる一時的な自律反発と、その後の戻り売り圧力"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズは業績上方修正、増配、自社株買い、および巨額融資参画など極めて強固（strength 75）であるが、テクニカル面で明確な下落トレンドが継続している。\",\n   \"evidence\": \"fundamental_view.strength=75, technical_view.stance=bearish (strength=75)\"\n  },\n  {\n   \"reason\": \"統合判断ルールに基づき、テクニカルが bearish の間は「落ちるナイフ」を掴むことを避け、押し目確認後のエントリーを待機するため、現時点では hold とする。\",\n   \"evidence\": \"technical_view.points[1]: 5日線が25日線を下回るデッドクロス状態\"\n  },\n  {\n   \"reason\": \"市場全体が downtrend レジームにあり、個別株の好材料が株価に反映されにくい環境である。地合いの好転または株価の底打ちを確認する必要がある。\",\n   \"evidence\": \"reference.market_regime=downtrend\"\n  },\n  {\n   \"reason\": \"MACDがマイナス圏で拡大を続けており、短期的には下方へのモメンタムが依然として強く、反転の兆しが見られない。\",\n   \"evidence\": \"technical_view.points[2]: macd=-76.3, macd_histogram=-27.57\"\n  }\n ],\n \"risks\": [\n  \"約21日後の日銀金融政策決定会合に伴う金利変動および銀行セクターへのボラティリティ波及リスク\",\n  \"市場全体の地合い（downtrend）継続による、さらなる下値支持線の割り込み\",\n  \"RSIが35.6と低水準であることによる一時的な自律反発と、その後の戻り売り圧力\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "中期・短期ともに明確な下落トレンドが継続しており、主要な移動平均線の下方で推移しています。MACDの弱気シグナルや市場全体の地合いの悪化を考慮すると、直近の下げ止まりは一時的な自律反発の域を出ておらず、下落リスクが依然として高い状態です。",
+      "points": [
+        {
+          "point": "中期トレンドが大幅なマイナス圏にあり、対TOPIXでも劣後していることから、強い売り圧力が継続しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-11.93, relative_to_topix_60d_pct=-4.5"
+        },
+        {
+          "point": "5日線が25日線を下回るデッドクロス状態が続いており、短期的な戻り売りが意識されやすい形状です。",
+          "evidence": "price_technical.sma5_vs_sma25=dead, sma25=3334.28"
+        },
+        {
+          "point": "MACDがシグナルの下でマイナス圏を拡大させており、ヒストグラムも負の値を更新しているため、下落モメンタムは収束していません。",
+          "evidence": "price_technical.macd=-76.3, macd_signal=-48.73, macd_histogram=-27.57"
+        },
+        {
+          "point": "TOPIXが25日線を下回り5日騰落率もマイナスであることから、市場全体が下落トレンド（downtrend）にあります。",
+          "evidence": "macro.market_regime.market_regime=downtrend"
+        }
+      ],
+      "cautions": [
+        "前夜のADRおよびセクターETFが小幅に上昇しており、寄り付き時に窓を開けて反発する可能性がありますが、トレンド転換には至りません。",
+        "RSI14が35.6と低水準にあり、売られすぎ意識からのショートカバーによる一時的な反発がリスクとなります。",
+        "VIX指数が28.29と高水準であり、ボラティリティの拡大に伴う乱高下に注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 3024.0,
+        "resistance": 3334.28
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "11月13日に発表された業績上方修正・増配・自社株買いの三点セットに加え、直近の巨額融資ニュースが貸出資産拡大のカタリストとなっている。国内金利の高止まりも追い風だが、市場全体の地合いの悪さが上値抑制要因。",
+      "points": [
+        {
+          "point": "2026年11月26日に報じられた米新興クラウド企業への約7,000億円規模の融資調達への参画は、成長分野への貸出資産拡大を示すポジティブな材料である。",
+          "evidence": "news.headlines[2]"
+        },
+        {
+          "point": "直近11月13日の適時開示にて、通期業績目標の上方修正、期末配当予想の増額、および自己株式取得の決定を同時に発表しており、収益力向上と株主還元の強化が鮮明である。",
+          "evidence": "disclosures.items[0,1,2]"
+        },
+        {
+          "point": "国内10年債金利（JGB）が2.713%と高水準で推移しており、銀行業にとって利ざや改善を通じた本業利益の拡大が期待できるマクロ環境にある。",
+          "evidence": "macro.rates.jgb_10y_percent.value=2.713"
+        }
+      ],
+      "cautions": [
+        "TOPIX連動ETFが25日線を下回りdowntrend判定となっており、市場全体のセンチメント悪化が個別株の重しとなるリスクがある（macro.market_regime）。",
+        "約21日後に日銀金融政策決定会合を控えており、政策金利の据え置きやサプライズの内容次第で銀行セクター全体のボラティリティが高まる可能性がある（macro.boj.monetary_policy_meeting）。",
+        "日系大手証券による目標株価の3,700円への引き下げや、来期経常予想の微減など、アナリストによる期待値の修正が観測されている（news.headlines[3,4,6]）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": 3700.0
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "米新興クラウド企業への融資調達 - 京都新聞デジタル",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBHbXJfNWpzVjFMOHA1SVItSHZTeEk3SWtxSW1ENUdxVTNHOG10anBhcVAtYmlpYnYzWUZSY3JFTnQ0V2lXSXFPOUF4ZHluM25qU0M3WUhTRWY5SWM?oc=5",
+        "published": "Thu, 26 Nov 2026 00:25:20 GMT",
+        "publisher": "京都新聞デジタル"
+      },
+      {
+        "title": "米CoreWeave、メタ契約担保の45億ドル融資を約7%で売り出しへ－2031年債利回りは18% - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE54ZTZaNi0zQ0Jsdi00ejIzVVhBb01McmIzM0F4akFFNkw2UHZWcjQ0NkZJOXFPSW02QVZxWGFuWFY3ajJKMzdhYzNRdHhXZVZTZnhyOUxNWEZzNEtmQjMtWGJuX2dhY215ZTZHN0lOeXR1eExW?oc=5",
+        "published": "Wed, 25 Nov 2026 19:05:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "米新興クラウド企業への融資調達 三菱UFJなど7千億円 - 47NEWS",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1nbWhjZVBGZ1F6Z0R5bkxiWVRSVzlRZGliSU1RMW8zczZyWTNJRzBoZVRWLTA5Q0hmMUVsaVNGZlVPTVBFa3otd0gycw?oc=5",
+        "published": "Thu, 26 Nov 2026 00:30:00 GMT",
+        "publisher": "47NEWS"
+      },
+      {
+        "title": "【アナリスト評価】三菱ＵＦＪＦＧ、レーティングやや強気を据置き、目標株価3,700円に引下げ（日系大手証券）(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQbC1ZS3ZibHhkaFVtcHJmZWp2WkhpeC1XSS1GTlBkQU13UFhSOVdtY2tBX3laQ0d5LWNubmYxU0hKVVdPVkw4cDRscU0yT1gxUWtVUEVZYWNJTUpFS3ZXbFh1VHprYnVOc0xnVnZyTkJINzZKZ0s2VndLOXF2Y2ZvRkNZZ0RHOVk?oc=5",
+        "published": "Wed, 25 Nov 2026 09:58:29 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "【アナリスト予想】三菱ＵＦＪＦＧ、27年3月期経常予想。対前週0.3%下降。(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQSVpQeXJZN1pHNHZZOWlBYm9Va09hbFR4b25xSHVZeEpCbVBUcWVHMUhBU3JuRWJOWmVEX2NOZTdlLXF3ZkJ3YzVSWlpvcVBpTS0tMzBLM0ZxX0NQOXo4TEc2M3VUSm1YZWxueE1yT2dUNUpUcFNfVDVzLVhzN25TQ2NBdDZRbkE?oc=5",
+        "published": "Wed, 25 Nov 2026 13:47:22 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "「配当金はあぶく銭。古美術の日本刀も買ってしまった」67歳男性が持つ銀行系高配当銘柄 - All About（オールアバウト）",
+        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPandpal9nYnpWVDdnV3hOaWIxTGlaa1QtcGptN1FIX0U2OTlZdDlnVXo2VlhJWTZET2x1UlBZd2VmNEdTaEd2WmI1eWdSRFN6aGxXMDk1NWtrajlNallidS1KZTQwWWdzMi1mSndYSUZIWWo4WnY0V3M4UUJwUFYwSWpYNVJWQkZDbDJZamp1dHhQMjM1WnkyY2phdERta1N6UVFNYVdjZkhGWTBnOFpkRkZhUnBwRU9FVWdnSmVHWHBZc3owOWRSSDd3dHVWdw?oc=5",
+        "published": "Wed, 25 Nov 2026 08:30:05 GMT",
+        "publisher": "All About（オールアバウト）"
+      },
+      {
+        "title": "三菱UFJFG－大和が目標株価引き下げ 来期3兆円超を予想〔DZH 個別株情報〕(時事通信) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPNDlCQzJMWW1BRnJKc1FDbm5PM0NnakZ6NFBZSVZiUERFd3djdW9oaWxzYXJPbTRGU3RMTzlNVWFNeDVXUmRrdUluRTB4WlFWUFY2YThTaE5CZ09WeWwzMHdyWHNRMEVmVHc4MWwxMU5BTzY0Wkc4R19MWFFvZFJHTkYwY3lWUzQ?oc=5",
+        "published": "Thu, 26 Nov 2026 00:36:36 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "三菱ＵＦＪなどメガバンクは底堅い動き、米金利低下も配当再投資期待が下値サポート◇ - ライブドアニュース",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1OWXpkdzIxakJUUThoN0xmM2gtWUVJbEdtRVFEN2dMOEVUdEhmcnVSZGtBNC1DSmxrWnlKak1PQ3V1U1VPdXJIbjBPR2lIWDZPMk1Ld045bUs1ZXZGdkY0?oc=5",
+        "published": "Thu, 26 Nov 2026 01:08:19 GMT",
+        "publisher": "ライブドアニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第2四半期（中間期）決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261112577371.pdf",
+        "date": "2026-11-13 16:15:00"
+      },
+      {
+        "title": "通期業績目標の修正および期末配当予想の修正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261113578527.pdf",
+        "date": "2026-11-13 16:15:00"
+      },
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261113578582.pdf",
+        "date": "2026-11-13 16:15:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期 自己資本比率について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260814520300.pdf",
+        "date": "2026-08-14 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕（連結）（公認会計士又は監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260805510381.pdf",
+        "date": "2026-08-06 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260731505851.pdf",
+        "date": "2026-08-03 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信（連結）＜米国会計基準＞",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260707588680.pdf",
+        "date": "2026-07-07 10:00:00"
+      },
+      {
+        "title": "自己株式の取得状況および取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260626582131.pdf",
+        "date": "2026-06-26 16:00:00"
+      },
+      {
+        "title": "（訂正）「2026年3月期 決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260622576205.pdf",
+        "date": "2026-06-24 16:00:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260601558034.pdf",
+        "date": "2026-06-01 16:00:00"
+      }
+    ]
+  }
+}

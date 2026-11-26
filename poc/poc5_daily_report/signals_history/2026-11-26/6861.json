@@ -1,0 +1,199 @@
+{
+  "code": "6861",
+  "name": "キーエンス",
+  "generated_at": "2026-11-26T13:11:57+09:00",
+  "price_as_of": "2026-11-26",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズは非常に強気で、直近四半期の利益急拡大や新規事業の発表など、成長のカタリストが明確に存在している。",
+        "evidence": "fundamental_view.points[0]: quarterly earnings trend, fundamental_view.points[1]: new business launch 2026-11-26"
+      },
+      {
+        "reason": "テクニカル面では依然として中期下落トレンドが継続しており、5日・25日移動平均線を下回る「落ちるナイフ」の状態にあるため、エントリーには反転の確認が必要である。",
+        "evidence": "technical_view.stance=bearish, technical_view.points[1]: last_close < sma25"
+      },
+      {
+        "reason": "市場全体の地合い（TOPIX）が下落トレンド（downtrend）にあり、個別銘柄の好材料が打ち消されるリスクが高い局面である。",
+        "evidence": "reference.market_regime=downtrend"
+      }
+    ],
+    "risks": [
+      "2026年12月17-18日の日銀金融政策決定会合における金利上昇観測と、それに伴う高PER銘柄への売り圧力。",
+      "市場全体のセンチメント悪化による、テクニカルサポートライン（13,042円）の割り込み。",
+      "新規事業の無料提供開始が短期的には収益化に貢献せず、期待先行の反動で売られるリスク。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 60,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズは非常に強気で、直近四半期の利益急拡大や新規事業の発表など、成長のカタリストが明確に存在している。\",\n   \"evidence\": \"fundamental_view.points[0]: quarterly earnings trend, fundamental_view.points[1]: new business launch 2026-11-26\"\n  },\n  {\n   \"reason\": \"テクニカル面では依然として中期下落トレンドが継続しており、5日・25日移動平均線を下回る「落ちるナイフ」の状態にあるため、エントリーには反転の確認が必要である。\",\n   \"evidence\": \"technical_view.stance=bearish, technical_view.points[1]: last_close < sma25\"\n  },\n  {\n   \"reason\": \"市場全体の地合い（TOPIX）が下落トレンド（downtrend）にあり、個別銘柄の好材料が打ち消されるリスクが高い局面である。\",\n   \"evidence\": \"reference.market_regime=downtrend\"\n  }\n ],\n \"risks\": [\n  \"2026年12月17-18日の日銀金融政策決定会合における金利上昇観測と、それに伴う高PER銘柄への売り圧力。\",\n  \"市場全体のセンチメント悪化による、テクニカルサポートライン（13,042円）の割り込み。\",\n  \"新規事業の無料提供開始が短期的には収益化に貢献せず、期待先行の反動で売られるリスク。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "中期的に市場平均を下回る強い下落トレンドが継続しており、直近の一時的な反発も戻り売りに押される展開です。25日移動平均線の下方で推移し、市場全体の地合いも悪化していることから、下値を模索する動きが続く可能性が高いと判断します。",
+      "points": [
+        {
+          "point": "60営業日騰落率および対TOPIX相対騰落率がともにマイナスであり、明確な中期下落トレンドの中にある。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=-11.5, relative_to_topix_60d_pct=-4.08"
+        },
+        {
+          "point": "株価は5日線および25日線を下回って推移しており、SMA5とSMA25のデッドクロスも継続している。",
+          "evidence": "price_technical.last_close=14425.0, price_technical.sma5=14509.0, price_technical.sma25=15011.64, price_technical.sma5_vs_sma25=dead"
+        },
+        {
+          "point": "市場全体（TOPIX）のレジームが下落トレンドと判定されており、個別銘柄への逆風が強い地合いである。",
+          "evidence": "macro.market_regime.market_regime=downtrend"
+        }
+      ],
+      "cautions": [
+        "MACDヒストグラムがプラス圏で改善傾向にあり、短期的には下げ止まりの兆しが見られる点 (price_technical.macd_histogram=8.11)",
+        "RSI14が30台まで低下しており、売られすぎ水準からの自律反発が入りやすい水準にある点 (price_technical.rsi14=37.4)",
+        "前夜のADRが小幅にプラスで引けており、寄り付きでの買い戻しが先行する可能性がある点 (us_overnight.adr.change_1d_pct=0.59)"
+      ],
+      "key_levels": {
+        "support": 13042.0,
+        "resistance": 15011.64
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "日本の製造業PMIが拡大圏を維持する好環境の中、直近四半期で非常に高い利益成長を実現しており、新規事業の展開という直近の材料も成長期待を後押ししている。",
+      "points": [
+        {
+          "point": "2026年9月期の営業利益が2,212億円と、直前の2026年6月期（1,871億円）から大幅に伸長しており、四半期ベースでの収益拡大が顕著である。",
+          "evidence": "fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "2026年11月26日に新規事業会社メイカーズによる「図面加工品 調達管理システム」の無料提供開始が発表されており、新たな顧客獲得のカタリストとして機能する可能性がある。",
+          "evidence": "news.headlines[0]"
+        },
+        {
+          "point": "日本の製造業PMIが2026年11月時点で53.7と拡大圏にあり、主業であるFA機器の需要環境が良好であることが示唆されている。",
+          "evidence": "macro.japan_pmi.manufacturing"
+        },
+        {
+          "point": "予想PER（Forward PE）が7.725倍と、実績値（32.369倍）に比べて著しく低い水準に設定されており、市場が将来の利益成長を強く織り込み始めている可能性がある。",
+          "evidence": "fundamentals.valuation.forward_pe=7.725"
+        }
+      ],
+      "cautions": [
+        "TOPIXが25日移動平均線を下回り「downtrend」と判定されており、市場全体の地合い悪化による連れ安のリスクがある（macro.market_regime）。",
+        "2026年12月17-18日の日銀金融政策決定会合が近づいており、金利上昇観測が強まった場合、高PER銘柄への売り圧力となる可能性がある（macro.boj.monetary_policy_meeting）。",
+        "2027年1月28日の次回決算発表に向けた思惑で株価が乱高下する可能性がある（fundamentals.next_earnings_date）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "キーエンスの新規事業会社メイカーズ、「図面加工品 調達管理システム」を初期費用・月額費用無料で提供開始 - PR TIMES",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5aOTBfZ1lraWl5emVqRUExOFBtc2JyNDh6amltWEZTSkh5b1Y5dHFPdEFmWl9OaXRjbEh4blR5eDVUOTZOYW1Db0FyUXp3ZWFtSDkwNnZ2NDI1ZTd3dmRYS1BpZnJkbTBwMGc?oc=5",
+        "published": "Thu, 26 Nov 2026 03:02:05 GMT",
+        "publisher": "PR TIMES"
+      },
+      {
+        "title": "NTT社長が説く 縮小市場で売り上げを伸ばすため、経営者が下すべき「3つの決断」（ITmedia エンタープライズ） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSVpsVXpwSHpnaHExdUVXUGhLOTVUU3dPYUl5Rk1KcVdvblF1azlONmhiM3M2Y3gxT25PWlpfUTk5NVNHYWpTOVRKakV3QWRKd25iNUFuU2tncE1QY0hvTXlCQjcweFU2LVpvRzF5NExMSFlJS183aHotOGZnVW9yRGdmSjVhdEww?oc=5",
+        "published": "Thu, 26 Nov 2026 01:00:16 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "NTT、社員16万5000人のスキルを可視化 AIが導く「オファー型人事」始動 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1XclVUamd0dWVPLUhpSFZUVzRSSnkydlQ3YWk1N25tdlBFMUstUGdzZURKLUcyMlNSY0U0VlhFY2hqSWUydi0wXzVPYkV2VEJ2T1JWbG4tX29tUGk3MnVScEFZX01uVHZpRlFldlZ3cXhmcmdL?oc=5",
+        "published": "Thu, 26 Nov 2026 01:26:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "100点は目立つ､でも60点以下は困る…内田樹が見た｢中高6年間で効率よく勉強した大学生｣が身を隠す点数 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE0xeXQybXBIMzM0c3ZRVWJpbXYyV2JqYWx4TEI4UVlaYzV2VmZOX2tJZVdnZFJBOUswZ2psMl95Qjc0M0FfUmRZZDFtZEVleFk?oc=5",
+        "published": "Wed, 25 Nov 2026 23:04:45 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "光電センサーの有力企業トップ10 - pando.life",
+        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5zMjdieGZPTUVmNEN4UlFqdEVROTZUeVhaT29QdkRYVVVNMi03dk8wcDBqdVJHb2lNT1BubzNfZTQ1cGgzdnZLWlhR?oc=5",
+        "published": "Wed, 25 Nov 2026 12:03:14 GMT",
+        "publisher": "pando.life"
+      },
+      {
+        "title": "私は何十年たっても許されない女なのか…年下作家との姦通から60年後､宇野千代が煩悶した\"京都からの手紙\" - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE52Nk1yLTBYcTlRbmZyMFhxbFIwNFBXd1lNZHlVYjA1cm5UeUdjdC1hZWMwenlISW9HYVE1QjQwSGdxUmM5cEhPMEdzRXctTGM?oc=5",
+        "published": "Wed, 25 Nov 2026 21:04:12 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "仕事を断るのはナンセンス…｢ドラえもん｣スネ夫役の声優･関智一が､今も悔やむ\"辞退した意外な仕事\" - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9iTk1vNVk3VnJmZnJLUUZFZ3hhZG9MY25vOW1EQ09Ra0dfdUJzbV9sd2pJaGJudUoyRFo1QXlMMnZWQjM4UW1Oc1VoaFNlMWc?oc=5",
+        "published": "Wed, 25 Nov 2026 11:02:11 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "title": "｢このペン､書けない｣を英語で言うと…ネイティブは｢ギャグがスベった｣ときにも使う\"w\"から始まる中1動詞 - PRESIDENT Online（プレジデントオンライン）",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE4tWHI5V0JzM2lWbUNNRWFiZWRScWtXcGkwUHN2aFlBSnBZMEtJcjY3dFI1Njc1RVN1MjQ5OU1VVGpxZVp3M0NfUVI2Q09iWEE?oc=5",
+        "published": "Wed, 25 Nov 2026 08:03:56 GMT",
+        "publisher": "PRESIDENT Online（プレジデントオンライン）"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261027557109.pdf",
+        "date": "2026-10-29 16:00:00"
+      },
+      {
+        "title": "株式分割及び定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028557317.pdf",
+        "date": "2026-10-29 16:00:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)及び期末配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028557319.pdf",
+        "date": "2026-10-29 16:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260717595564.pdf",
+        "date": "2026-07-28 16:00:00"
+      },
+      {
+        "title": "投資単位の引下げに関する考え方及び方針等について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260617572283.pdf",
+        "date": "2026-06-18 16:00:00"
+      },
+      {
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506301.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期の連結業績と前期の連結業績との差異に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506302.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "定款の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260418506304.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "取締役の異動に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260423509180.pdf",
+        "date": "2026-04-24 16:00:00"
+      },
+      {
+        "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260123537908.pdf",
+        "date": "2026-01-29 16:00:00"
+      }
+    ]
+  }
+}

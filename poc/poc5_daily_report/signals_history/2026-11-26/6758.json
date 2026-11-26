@@ -1,0 +1,215 @@
+{
+  "code": "6758",
+  "name": "ソニーグループ",
+  "generated_at": "2026-11-26T13:09:37+09:00",
+  "price_as_of": "2026-11-26",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-11-17）に同一銘柄で buy シグナルを発行しており、現在はその継続監視フェーズにあるため、新規エントリーは控える。",
+        "evidence": "reference.recent_buy.date=2026-11-17"
+      },
+      {
+        "reason": "ファンダメンタルズは極めて強力だが、テクニカルも既に強気（bullish）となっており、材料の多くが株価に織り込まれたモメンタム追随の局面であるため、統合判断ルールに基づき新規 buy は見送る。",
+        "evidence": "fundamental_view.strength=75, technical_view.stance=bullish"
+      },
+      {
+        "reason": "市場全体のレジームが downtrend であり、地合いの悪化による連れ安リスクを考慮し、追加の買い増しではなく静観が妥当と判断。",
+        "evidence": "reference.market_regime=downtrend"
+      },
+      {
+        "reason": "「GTA6」の記録的ヒットや円安、V字回復期待といった強力なカタリストは確認できるが、RSIが70を超えており短期的には過熱感がある。",
+        "evidence": "fundamental_view.points[0].evidence, technical_view.points[1].evidence"
+      }
+    ],
+    "risks": [
+      "市場レジームが downtrend であることによる外部環境悪化への連れ安リスク（reference.market_regime）",
+      "約3週間後の日銀金融政策決定会合（2026-12-17〜18）に伴う円高反転リスク（fundamental_view.cautions）",
+      "RSIが70を超えており、直近高値（4563.0）付近での達成感による利益確定売りの発生（technical_view.cautions）"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 65,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 21,\n  \"reasons\": [\n    {\n      \"reason\": \"直近14日以内（2026-11-17）に同一銘柄で buy シグナルを発行しており、現在はその継続監視フェーズにあるため、新規エントリーは控える。\",\n      \"evidence\": \"reference.recent_buy.date=2026-11-17\"\n    },\n    {\n      \"reason\": \"ファンダメンタルズは極めて強力だが、テクニカルも既に強気（bullish）となっており、材料の多くが株価に織り込まれたモメンタム追随の局面であるため、統合判断ルールに基づき新規 buy は見送る。\",\n      \"evidence\": \"fundamental_view.strength=75, technical_view.stance=bullish\"\n    },\n    {\n      \"reason\": \"市場全体のレジームが downtrend であり、地合いの悪化による連れ安リスクを考慮し、追加の買い増しではなく静観が妥当と判断。\",\n      \"evidence\": \"reference.market_regime=downtrend\"\n    },\n    {\n      \"reason\": \"「GTA6」の記録的ヒットや円安、V字回復期待といった強力なカタリストは確認できるが、RSIが70を超えており短期的には過熱感がある。\",\n      \"evidence\": \"fundamental_view.points[0].evidence, technical_view.points[1].evidence\"\n    }\n  ],\n  \"risks\": [\n    \"市場レジームが downtrend であることによる外部環境悪化への連れ安リスク（reference.market_regime）\",\n    \"約3週間後の日銀金融政策決定会合（2026-12-17〜18）に伴う円高反転リスク（fundamental_view.cautions）\",\n    \"RSIが70を超えており、直近高値（4563.0）付近での達成感による利益確定売りの発生（technical_view.cautions）\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 85,
+      "summary": "中期上昇トレンドを維持する中で短期的なモメンタムも加速しており、ADRの大幅上昇も追い風となる極めて強いチャート形状です。",
+      "points": [
+        {
+          "point": "SMA5がSMA25を上回るゴールデンクロスを維持し、直近60日間の騰落率が+15%超と中長期の上昇トレンドが明確です。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, price_technical.trend_60d.change_60d_pct=15.88"
+        },
+        {
+          "point": "MACDがシグナルを上回って拡大しており、上昇の勢いが増しています。RSIも70を超え、強い買い意欲を示しています。",
+          "evidence": "price_technical.macd_histogram=18.49, price_technical.rsi14=70.1"
+        },
+        {
+          "point": "前夜のNY市場でADRが+2.52%と大幅に上昇しており、当日の寄り付きからの上値追いが期待されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=2.52"
+        }
+      ],
+      "cautions": [
+        "市場全体のレジームがdowntrendと判定されており、地合いの悪化に引きずられるリスクがあります。",
+        "RSIが70を超えており、直近の急伸による短期的な達成感から、期間高値付近での利益確定売りが想定されます。",
+        "VIX指数が28.29と高水準にあり、米市場発の急激なボラティリティ上昇に注意が必要です。"
+      ],
+      "key_levels": {
+        "support": 4189.76,
+        "resistance": 4563.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "大型タイトル『GTA6』の記録的ヒットという強力なカタリストに加え、円安と製造業PMIの改善が追い風となり、年初来高値を更新する強いモメンタムにある。足元の四半期業績も安定的な黒字を維持しており、前期の巨額赤字から完全に脱却したと判断できる。",
+      "points": [
+        {
+          "point": "ゲーム事業における強力な収益カタリストの出現。大型タイトル『GTA6』がPlayStation史上最大のローンチを記録し、年末商戦に向けたハード・ソフト両面の業績貢献が期待される。",
+          "evidence": "news.headlines[3]: 「GTA6」の好発進を材料にソニーグループが年初来高値を更新, news.headlines[6]: ソニーG、「GTA6」がPS史上最大のローンチ、ゲーム事業に期待"
+        },
+        {
+          "point": "四半期ベースでの業績回復の鮮明化。2025年12月期の巨額赤字以降、直近2四半期（2026年6月期・9月期）は純利益を安定的に計上しており、通期赤字からのV字回復傾向にある。",
+          "evidence": "fundamentals.earnings_trend.quarterly: 2026-09期のnet_income_oku_jpy=4496"
+        },
+        {
+          "point": "マクロ環境が輸出主体の同社に有利。ドル円相場が159円台と円安水準にあり、さらに製造業PMIも53.7と拡大圏を維持していることから、電子工学・デバイス部門の採算性向上が見込まれる。",
+          "evidence": "macro.indices[2]: ドル円=159.15, macro.japan_pmi.manufacturing.latest_value=53.7"
+        },
+        {
+          "point": "積極的な株主還元姿勢の継続。直近3ヶ月連続で自己株式の取得状況を開示しており、資本効率の改善と下値支持への寄与が期待される。",
+          "evidence": "disclosures.items[3, 7, 8]: 自己株式の取得状況に関するお知らせ（2026-11-05, 10-05, 09-03）"
+        }
+      ],
+      "cautions": [
+        "2026年3月期の通期純損益が赤字（-3,269億円）であり、過年度の負の遺産や一過性損失の影響が完全に払拭されたかの精査が必要（fundamentals.earnings_trend.annual）",
+        "市場全体のレジームが「downtrend」と判定されており、外部環境の悪化による連れ安リスクがある（macro.market_regime）",
+        "約3週間後に日銀金融政策決定会合を控えており、金利上昇観測に伴う為替の円高反転やグロース株への売り圧力がリスク要因となる（macro.boj.monetary_policy_meeting）"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-11-17",
+    "days_ago": 9,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "ソニーグループ(株)【SONY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBaWnphQUR5QkRjZVlTVmx6UFR5V014TllydmRXWkxLMjQyQlpTTTV0ZXN6b1lsNVZBTGlQMXJGcGFTbHdkcFJuYURxeFRfLTg?oc=5",
+        "published": "Wed, 25 Nov 2026 18:42:38 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "日経平均、反発で寄り付き 半導体株に買い戻し 前日1934円安の反動 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9RbmdBd095aTY2Nk5QS1hoVzBJV2FFQnFFOHNkLU9VTEVhT0Z6dkdjRFBsd3dUUFVTTzd0Z3FXN2FKaXZydll5MF9kbDltWkxBYlYyWFZsWVlYVnV0ZWsyeVVVNkZqWlhYQXpfZ0d2ZXU3bHJj?oc=5",
+        "published": "Thu, 26 Nov 2026 00:55:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "【レポーティング】統合報告書は必要なのか ～価値創造モデルの実効性とSSBJ時代の情報開示～ | Sustainable Japan | 世界のサステナビリティ・ESG投資・SDGs - Sustainable Japan",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOQ2hvVERPckxnQ1RzQzJjTTJvM245cEhFVGlzejdGSGJES21NcXBIYm5IOEhtNUhZQ1QycGFkZFVyMUFNU2MyeGNRSllzVl9vbHJoVTlRQ0h4MUF5cmNmTDlZelNuUF9uVjNGRlVWVGJvUm1SbkNYdXVZNUpHVkp6aERJREg0bDTSAYcBQVVfeXFMTkNob1RET3JMZ0NUc0MyY00ybzNuOXBIRVRpc3o3RkhiREttTXFwSGJuSDhIbTVIWUNUMnBhZGRVcjFBTVNjMnhjUUpZc1Zfb2xyaFU5UUNIeDFBeXJjZkw5WXpTblBfblYzRkZVVlRib1JtUm5DWHV1WTVKR1ZKemhESURINGw0?oc=5",
+        "published": "Wed, 25 Nov 2026 07:20:48 GMT",
+        "publisher": "Sustainable Japan"
+      },
+      {
+        "title": "【ゲームエンタメ株概況(11/25)】『GTA6』の好発進を材料にソニーグループが年初来高値を更新 新作『ホロじゃん』リリースもAimingは後場に入って急落(gamebiz) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPR0V3aVVEQWdlTm5BMTlKNDJiSC1reUZhV0pfUU5vb0NPaWFmanlGaEhsNUtOWEVTeWlLZWRveGI5NW51NmJJU0ZqNU55enBkMGI2anB4YXFZeUFRUFByeU9xN2dxX3RndGszYjQ2OHhud2Nua1oxOW5idWFRZElBWFJva2hvU2s?oc=5",
+        "published": "Wed, 25 Nov 2026 07:19:54 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "日経平均1633円安でも6割高、AI相場の死角で内需株に資金還流 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE11WlZvZ1FYVXpWek5zU05kWmxTaDhpQmU1UXhtM1NBM1R6TjlCQVZ4UkstclpEaG82anFScEpMenNEM3JGVnpjWmdNdFB5bW40YXd5bHI0N2hGZHU0WHI3bVFza1VGZU1SYkk2SUdZdUdHWGpo?oc=5",
+        "published": "Wed, 25 Nov 2026 08:26:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "11/28からGinza Sony Parkで開催の企画展に「PostPet(TM)」が登場！ - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA5YmJDdjZZbnVWSEtzREpXUGx2bHVLVlBnY1JVYVJRLXItQU5Taml2cHhDdjBON1JwbXIzMl82YlkyY1REcmdzbU12UG1NNDRSc3RlUUhqX1o3Zy1NMUZFbEVsQ0ljdWU3?oc=5",
+        "published": "Wed, 25 Nov 2026 11:30:29 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "ソニーＧ、「ＧＴＡ６」がＰＳ史上最大のローンチ、ゲーム事業に期待(ウエルスアドバイザー) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPZk90R1FzMmdMUFYwbWxqRllvTEdiczkybFZFbEM3OThWd2d5YTJXZ3g4a0xmdVdTcWtmN1pacVd1aFpDZ3g1d3pXcTBpOVkyTi1waTlLaWpJRXc0ajN3Tll1ZkVWU09aYmJHTFdnbGdGMm9aZWwxTFpvTHBDZUtaT2NvQU1fUUk?oc=5",
+        "published": "Wed, 25 Nov 2026 06:53:53 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "ひと 機能会社から事業会社へ 三井倉庫ＳＣＳ社長 芳賀丈治 氏 - カーゴニュースオンライン",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5MYlJFZ25obnczcGdBaUxSaVJyWHU4aW1QQko2TW8teTRzWjZpOXNzZWRrTVBZX3E1SUhUdV9rUmNBaE02aXU5SkJqMGZwNDFjd25vRU1wZTF3eW9RdU1z?oc=5",
+        "published": "Wed, 25 Nov 2026 07:00:00 GMT",
+        "publisher": "カーゴニュースオンライン"
+      },
+      {
+        "title": "ソニーＧが年初来高値、大型ゲームソフトの記録的ヒットの好材料を受けた買いが継続 - ライブドアニュース",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5WYnBjMGdZYTRqRG52N2J0WnE1X19oLS1Oc3dlMldXbGRhUERpRDc4T2gwU2lyWmxMWXVremxjT1JmSWh5UVp3VURIaF9NNXRpY1VYUmpmcnVhTzJQN1o4?oc=5",
+        "published": "Wed, 25 Nov 2026 04:29:11 GMT",
+        "publisher": "ライブドアニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の権利確定に伴う自己株式処分に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261113578684.pdf",
+        "date": "2026-11-13 15:30:00"
+      },
+      {
+        "title": "2027年３月期 第２四半期（中間期）決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261104564860.pdf",
+        "date": "2026-11-05 15:30:00"
+      },
+      {
+        "title": "2026年度第２四半期連結業績概要（決算説明会資料）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261104564884.pdf",
+        "date": "2026-11-05 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261105564929.pdf",
+        "date": "2026-11-05 11:30:00"
+      },
+      {
+        "title": "業績連動型株式ユニット（PSU）による事後交付型株式報酬制度の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030560394.pdf",
+        "date": "2026-10-30 15:30:00"
+      },
+      {
+        "title": "業績連動型株式ユニット（PSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030560415.pdf",
+        "date": "2026-10-30 15:30:00"
+      },
+      {
+        "title": "譲渡制限付株式ユニット（RSU）の付与に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030560428.pdf",
+        "date": "2026-10-30 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261005545702.pdf",
+        "date": "2026-10-05 11:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ（会社法第459条第1項の規定による定款の定めに基づく自己株式の取得）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903530947.pdf",
+        "date": "2026-09-03 11:30:00"
+      },
+      {
+        "title": "ソニーセミコンダクタソリューションズとTSMCとの合弁会社設立に関する確定契約締結のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260811517496.pdf",
+        "date": "2026-08-11 18:30:00"
+      }
+    ]
+  }
+}

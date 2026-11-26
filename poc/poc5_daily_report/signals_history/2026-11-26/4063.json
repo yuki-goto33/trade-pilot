@@ -1,0 +1,199 @@
+{
+  "code": "4063",
+  "name": "信越化学工業",
+  "generated_at": "2026-11-26T13:12:38+09:00",
+  "price_as_of": "2026-11-26",
+  "signal": {
+    "signal": "hold",
+    "confidence": 60,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 21,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズの確信度が60に留まり、業績回復の兆しと目標株価引き下げの悪材料が混在しているため、buyの必須条件（strength≥70）を満たさない。",
+        "evidence": "fundamental_view.strength=60, fundamental_view.cautions[0]: 証券各社による目標株価の引き下げ"
+      },
+      {
+        "reason": "テクニカル面では中期下落トレンドが継続しており、主要な移動平均線の下方で推移する弱気な地合いにあるため、エントリーには反転の確認が必要。",
+        "evidence": "technical_view.stance=bearish (strength=75), price_technical.sma5_vs_sma25 = dead"
+      },
+      {
+        "reason": "市場全体のレジームがdowntrendと判定されており、外部環境の悪化による連れ安リスクが高いため、慎重な静観が妥当と判断。",
+        "evidence": "reference.market_regime=downtrend"
+      }
+    ],
+    "risks": [
+      "本日報じられた証券各社による目標株価引き下げに伴う、機関投資家からの見直し売り圧力（fundamental_view.cautions[0]）",
+      "21日後に控える日銀金融政策決定会合に伴う為替および金利の急変動リスク（reference.next_boj_meeting）",
+      "半導体セクター全体（SOX指数・SMH）のモメンタム悪化によるセクター売りの波及（technical_view.cautions[2]）"
+    ]
+  },
+  "raw_response": "{\n  \"signal\": \"hold\",\n  \"confidence\": 60,\n  \"target_price\": null,\n  \"stop_loss\": null,\n  \"holding_period_days\": 21,\n  \"reasons\": [\n    {\n      \"reason\": \"ファンダメンタルズの確信度が60に留まり、業績回復の兆しと目標株価引き下げの悪材料が混在しているため、buyの必須条件（strength≥70）を満たさない。\",\n      \"evidence\": \"fundamental_view.strength=60, fundamental_view.cautions[0]: 証券各社による目標株価の引き下げ\"\n    },\n    {\n      \"reason\": \"テクニカル面では中期下落トレンドが継続しており、主要な移動平均線の下方で推移する弱気な地合いにあるため、エントリーには反転の確認が必要。\",\n      \"evidence\": \"technical_view.stance=bearish (strength=75), price_technical.sma5_vs_sma25 = dead\"\n    },\n    {\n      \"reason\": \"市場全体のレジームがdowntrendと判定されており、外部環境の悪化による連れ安リスクが高いため、慎重な静観が妥当と判断。\",\n      \"evidence\": \"reference.market_regime=downtrend\"\n    }\n  ],\n  \"risks\": [\n    \"本日報じられた証券各社による目標株価引き下げに伴う、機関投資家からの見直し売り圧力（fundamental_view.cautions[0]）\",\n    \"21日後に控える日銀金融政策決定会合に伴う為替および金利の急変動リスク（reference.next_boj_meeting）\",\n    \"半導体セクター全体（SOX指数・SMH）のモメンタム悪化によるセクター売りの波及（technical_view.cautions[2]）\"\n  ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bearish",
+      "strength": 75,
+      "summary": "中期下落トレンドが継続しており、主要な移動平均線の下方で推移する弱気な地合いです。直近3営業日で下げ止まりの兆しは見られますが、反転を示すテクニカル的な証拠が不足しています。",
+      "points": [
+        {
+          "point": "60日騰落率および対TOPIX相対騰落率がともにマイナスであり、中期的な下落トレンドから脱却できていません。",
+          "evidence": "price_technical.trend_60d.change_60d_pct = -7.86, relative_to_topix_60d_pct = -0.43"
+        },
+        {
+          "point": "SMA5がSMA25の下方に位置するデッドクロス状態にあり、MACDヒストグラムもマイナス圏で推移するなど、下落圧力が強い状態です。",
+          "evidence": "price_technical.sma5_vs_sma25 = dead, price_technical.macd_histogram = -4.6"
+        },
+        {
+          "point": "市場全体のレジームがdowntrendと判定されており、個別株にとっても強い逆風が吹く環境です。",
+          "evidence": "macro.market_regime.market_regime = downtrend"
+        },
+        {
+          "point": "直近3日間は小幅な続伸を見せているものの、本日11/26の出来高は直近5日間で最低となっており、買いの勢いが限定的です。",
+          "evidence": "price_technical.recent_5_days (11/26 volume = 2019300)"
+        }
+      ],
+      "cautions": [
+        "前夜のNY市場でADRが3.18%上昇しており、寄り付き直後は買い先行となる可能性がありますが、これが窓埋め後の下落に繋がるリスクに注意が必要です。",
+        "RSI14が32.4と売られすぎ水準に接近しており、テクニカルな自律反発が急激に入る可能性があります。",
+        "SOX指数や半導体セクターETF(SMH)は下落しており、業種全体としてのモメンタムは依然として弱いです。"
+      ],
+      "key_levels": {
+        "support": 5237.0,
+        "resistance": 5683.96
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "直近の四半期利益の回復や自己株式取得の決定はポジティブだが、本日発表された証券各社による目標株価の引き下げや市場全体のダウントレンドが重石となっており、短期的には拮抗した展開が予想される。",
+      "points": [
+        {
+          "point": "四半期ベースでの業績回復の兆し。2026年9月期の営業利益は前四半期比で約22%増加しており、収益の底打ち感が示唆されている。",
+          "evidence": "fundamentals.earnings_trend.quarterly（2026-09: 2,121億円 vs 2026-06: 1,738億円）"
+        },
+        {
+          "point": "直近2週間以内の好材料として、自己株式取得に係る事項の決定が開示されており、需給面での下支えと株主還元姿勢が確認できる。",
+          "evidence": "disclosures.items[0]（2026-11-13 15:30:00 自己株式取得に係る事項の決定に関するお知らせ）"
+        },
+        {
+          "point": "マクロ環境は追い風。11月の製造業PMIが53.7と拡大圏を維持し、1ドル159円台の円安水準も同社の輸出採算に寄与する。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=53.7, macro.indices[2].close=159.15"
+        }
+      ],
+      "cautions": [
+        "本日、日系および外資証券による目標株価の引き下げが報じられており、短期的には利益確定や見直し売りの圧力となる可能性がある（news.headlines[0][1]）。",
+        "TOPIXが25日線を下回りダウントレンドにあるため、外部環境悪化による連れ安リスクを孕んでいる（macro.market_regime.market_regime=downtrend）。",
+        "21日後に日銀金融政策決定会合（12月17-18日）を控えており、政策金利や為替の急変動リスクに注意が必要（macro.boj.monetary_policy_meeting.next_meeting）。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": 7400.0
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "信越化学工業－SMBC日興が目標株価引き下げ 安心感のある半導体材料メーカー〔DZH 個別株情報〕(時事通信) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQbzdQV0lpb1lCNGZCQTRBV2g1a0Z6TFBrMU1MbWljd3dsVC1UQlZzbXZCNXQ1aFBRenpNWjZtc1hURmNkMmI5OWVLdVJjRTktVDhseWstTU1LXzZhZ2M4VnVxbVVZTmZyODY1NTZWa2h0ZTM0b1NfSUU5TDl4WHBQUjloVG0wUVk?oc=5",
+        "published": "Thu, 26 Nov 2026 00:39:24 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "【アナリスト評価】信越化学工業、レーティング強気を継続、目標株価7,400円に引下げ（日系大手証券）(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPX1FjV19QSDZqU0hDMlNsd0pWYUVnSklGNGZiNFdKS3dFVkc3SGp0NkN2TmVadHQ0MWkzcHpwckVXSnBFS3BqcDg5SlYzdWlQNjR3cVlPazlmTk9wbjllUzBsY0MwWEN1R2VMcWVuMkJGdGp2UXFCUElkdzBQemxCLVJHQUp4ZHM?oc=5",
+        "published": "Thu, 26 Nov 2026 02:08:16 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "CO2固定の合成炭酸カルシウムでPVC材料 レザー製品化：脱炭素 - MONOist",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1kaHMwUGoyOWdpZ2FpVWRlZWFldHhOOU42SUVxYzZKRHZ6Vi0tczRzekE5OE1uMHU5WFFBRUc0UHNEaWM0WVFEeWxYRk5zazQtclFKNHhvUHQtVVVPcDZpbEZUbW1xME9DRy1HNTNlYw?oc=5",
+        "published": "Wed, 25 Nov 2026 04:00:00 GMT",
+        "publisher": "MONOist"
+      },
+      {
+        "title": "「John’s Blend」ブランド誕生10年記念！「ジョンおじさん」をモチーフにした限定アニバーサリーコレクションが2026年12月上旬より公式オンラインショップにて先行発売。 - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA5cnBFaElZMVBQdnJaOGxMU2I5Nko1NE96Z1VxVkZ3RWNCdkFWc3hxYzhKUk1wNzhQbUVSR0I2ZF9YdnBGMnAzcWZtUWpaYTc5SWZNY2RnMHBBMDIyRGNmenF2dWxmZnpvU1RTeEQ2SFJDUQ?oc=5",
+        "published": "Wed, 25 Nov 2026 05:45:43 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "米国株式市場はまちまち、AI懸念が根強い - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNYjVHVFJsSWc2cGhWQmhKMnVNX3dWdHpiTXY0TnRnZndKNFNockt6YWtNZVZqaWVCTTdjcVhDQnNKazU3RHpEcUJRR3M2WjVXTEgwY3B6VzVsTmVmWm5Ja25YQ3pyelJrUHNKajZqcG11Sm83M0tHQUcyMXlodERzWGhtaWFIS2k3V2NVONIBjAFBVV95cUxNYjVHVFJsSWc2cGhWQmhKMnVNX3dWdHpiTXY0TnRnZndKNFNockt6YWtNZVZqaWVCTTdjcVhDQnNKazU3RHpEcUJRR3M2WjVXTEgwY3B6VzVsTmVmWm5Ja25YQ3pyelJrUHNKajZqcG11Sm83M0tHQUcyMXlodERzWGhtaWFIS2k3V2NVOA?oc=5",
+        "published": "Thu, 26 Nov 2026 00:11:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "【アナリスト予想】ＳＵＭＣＯ、26年12月期経常予想。対前週24.3%上昇。(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNRHJnem44SDBwZnk0YndHU25hOUxic1hlT2lzenZIRFFSeGtaUGdhb0dtUlNUYkN6cUNOMlF4WkRwVjlreDBWeG9UUjJPM0RpUHhIVFhmbmNwY2h4VW9Qa05TUUZvb2ZMUnF2Yzl6ZnFxNlM1UUVXbld0WjlLa2p4X3BaRTN3cVk?oc=5",
+        "published": "Wed, 25 Nov 2026 13:46:48 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "【アナリスト評価】ＳＵＭＣＯ、レーティング強気を継続、目標株価2,800円に引下げ（米系大手証券）(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPRnAyVTZxQXBacEFqNDJBVnZVZFhldG5ubnlZX0xVdW51UGNFcVpTVUs0LW50MGZHa1FUWjl1aUdDWDBBNTg1ZEUwbGJJOUZkX21sUktOZXFLXzU4ekRib2lKenNpRnpobVpmQU04Qk9sdXdQNlpEY1doZXlxOGJDV1pmTnNTWE0?oc=5",
+        "published": "Wed, 25 Nov 2026 07:11:26 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "【アナリスト評価】東レ、レーティング強気を継続、目標株価1,730円に引上げ（米系大手証券）(アイフィス株予報) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNc0NnZ3dzM3V1NV9nLWdGUlh1dk9vS2xVZ3VKNFh0TUdEQ2VjcmdxcU02WmlqWkNTUnFfMk9lVlhnVDhyUUdqNDV5VktsN2J3XzlhQVFFSFQ1YjBfOGluNjRJUUZQN0x2MjJRUkJ6TTZwQXRWUjV2bUhTUTBqXzMyYzd3T0dITVE?oc=5",
+        "published": "Wed, 25 Nov 2026 09:21:38 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式取得に係る事項の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261112575563.pdf",
+        "date": "2026-11-13 15:30:00"
+      },
+      {
+        "title": "コミットメント型自己株式取得（FCSR）における事後調整完了のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261109568958.pdf",
+        "date": "2026-11-09 15:30:00"
+      },
+      {
+        "title": "2027年３月期 第２四半期（中間期）決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261026556436.pdf",
+        "date": "2026-10-27 15:30:00"
+      },
+      {
+        "title": "取締役、執行役員及び従業員に対するストックオプション（新株予約権）の払込金額確定のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260929542174.pdf",
+        "date": "2026-09-30 16:50:00"
+      },
+      {
+        "title": "創立100周年記念配当の実施 及び 配当予想の修正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260914536275.pdf",
+        "date": "2026-09-15 15:30:00"
+      },
+      {
+        "title": "コミットメント型自己株式取得（FCSR）における事後調整のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260915536456.pdf",
+        "date": "2026-09-15 15:30:00"
+      },
+      {
+        "title": "ストックオプション（新株予約権）の割当てに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260915536486.pdf",
+        "date": "2026-09-15 15:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による取得結果および自己株式の取得終了に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730502910.pdf",
+        "date": "2026-07-30 11:30:00"
+      },
+      {
+        "title": "コミットメント型自己株式取得（FCSR）による自己株式取得のための第三者割当による第27回および第28回新株予約権の発行条件の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730503103.pdf",
+        "date": "2026-07-30 11:30:00"
+      },
+      {
+        "title": "自己株式立会外買付取引（ToSTNeT-3）による自己株式の買付けに関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260729502228.pdf",
+        "date": "2026-07-29 16:30:00"
+      }
+    ]
+  }
+}

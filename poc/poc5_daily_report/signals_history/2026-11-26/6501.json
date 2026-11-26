@@ -1,0 +1,233 @@
+{
+  "code": "6501",
+  "name": "日立製作所",
+  "generated_at": "2026-11-26T13:15:53+09:00",
+  "price_as_of": "2026-11-26",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 60,
+    "reasons": [
+      {
+        "reason": "直近14日以内（2026-11-25）に買いシグナルを出しているため、新規の買いは行わず、既存のポジションを継続監視とします。",
+        "evidence": "reference.recent_buy.date"
+      },
+      {
+        "reason": "ファンダメンタルズは年次・四半期ともに堅調な増収増益トレンドを維持しており、AI関連ソリューションや顔認証決済サービス導入など、複数の好材料により高い成長性が期待されます。",
+        "evidence": "fundamental_view.stance=bullish (strength=75), fundamental_view.points[0], fundamental_view.points[1], fundamental_view.points[2]"
+      },
+      {
+        "reason": "テクニカルは主要トレンド指標が下降を示唆する一方、MACDヒストグラムの好転やADR上昇から短期的な底堅さが見られ、全体としては中立的な状況です。",
+        "evidence": "technical_view.stance=neutral (strength=60), technical_view.points[0], technical_view.points[2], technical_view.points[3]"
+      }
+    ],
+    "risks": [
+      "市場全体が下降トレンドにあるため、個別銘柄の上昇も抑制される可能性があります。",
+      "次回決算発表（2027-01-28）を控えており、その内容や通期見通しによっては株価が変動する可能性があります。",
+      "日本銀行金融政策決定会合（2026-12-17〜18）の結果が、市場金利や経済環境に影響を与える可能性があります。",
+      "現在の主要な移動平均線やMACDは下降トレンドを示しており、本格的なトレンド転換には至っていません。",
+      "PERやPBRが市場平均と比較してやや高水準にあり、バリュエーション面での割安感は限定的です。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 60,\n \"reasons\": [\n  {\n   \"reason\": \"直近14日以内（2026-11-25）に買いシグナルを出しているため、新規の買いは行わず、既存のポジションを継続監視とします。\",\n   \"evidence\": \"reference.recent_buy.date\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは年次・四半期ともに堅調な増収増益トレンドを維持しており、AI関連ソリューションや顔認証決済サービス導入など、複数の好材料により高い成長性が期待されます。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=75), fundamental_view.points[0], fundamental_view.points[1], fundamental_view.points[2]\"\n  },\n  {\n   \"reason\": \"テクニカルは主要トレンド指標が下降を示唆する一方、MACDヒストグラムの好転やADR上昇から短期的な底堅さが見られ、全体としては中立的な状況です。\",\n   \"evidence\": \"technical_view.stance=neutral (strength=60), technical_view.points[0], technical_view.points[2], technical_view.points[3]\"\n  }\n ],\n \"risks\": [\n  \"市場全体が下降トレンドにあるため、個別銘柄の上昇も抑制される可能性があります。\",\n  \"次回決算発表（2027-01-28）を控えており、その内容や通期見通しによっては株価が変動する可能性があります。\",\n  \"日本銀行金融政策決定会合（2026-12-17〜18）の結果が、市場金利や経済環境に影響を与える可能性があります。\",\n  \"現在の主要な移動平均線やMACDは下降トレンドを示しており、本格的なトレンド転換には至っていません。\",\n  \"PERやPBRが市場平均と比較してやや高水準にあり、バリュエーション面での割安感は限定的です。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 60,
+      "summary": "主要なトレンド指標は下落を示唆していますが、MACDヒストグラムの好転や前夜の米国市場でのADR上昇など、短期的な底堅さや反発の兆しが見られます。",
+      "points": [
+        {
+          "point": "5日移動平均線が25日移動平均線を下回りデッドクロスを形成しており、下降トレンドを示唆しています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\""
+        },
+        {
+          "point": "MACDがマイナス圏で推移しており、中期的な下降傾向を示しています。",
+          "evidence": "price_technical.macd=-147.76"
+        },
+        {
+          "point": "MACDヒストグラムがプラスに転じており、短期的な底堅さや反発の兆しが見られます。",
+          "evidence": "price_technical.macd_histogram=41.13"
+        },
+        {
+          "point": "前夜のNY市場でADRが上昇し、業種セクターETFも堅調だったことから、寄り付きは買い優勢となる可能性があります。",
+          "evidence": "us_overnight.adr.change_1d_pct=2.29%, us_overnight.sector_proxy.change_1d_pct=0.83%"
+        },
+        {
+          "point": "市場全体が下降トレンドにあり、銘柄の上値を押さえやすい地合いです。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\""
+        }
+      ],
+      "cautions": [
+        "前夜の米国市場でのADR上昇は、当日の寄り付き価格に既に織り込まれる可能性があります。",
+        "下降トレンドを示す主要な移動平均線やMACDは依然としてマイナス圏にあり、本格的なトレンド転換には至っていません。",
+        "RSIが36.6と売られすぎ水準に近づいており、自律反発の動きには注意が必要です。",
+        "直近60営業日では株価が下落しているものの、TOPIXに対してはアウトパフォームしており、相対的な強さも考慮する必要があります。"
+      ],
+      "key_levels": {
+        "support": 4763.0,
+        "resistance": 5082.92
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 75,
+      "summary": "日立製作所は年次・四半期ともに堅調な増収増益トレンドを維持しており、直近ではAI関連ソリューション販売開始や顔認証決済の導入など、事業成長につながる複数の好材料が発表されており、今後の投資価値は高いと評価します。",
+      "points": [
+        {
+          "point": "年次・四半期ともに堅調な増収増益トレンドを維持しており、継続的な業績成長が見込まれます。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "直近のニュースで、AIデータ基盤連携を支援する新製品「HiRDB Version 11」の販売開始や、鉄道信号新試験棟の自動化による能力向上など、複数分野での競争力強化・新規事業展開を示す具体的な材料が確認できます。",
+          "evidence": "news.headlines[3].title (AI関連ソリューション), news.headlines[5].title (鉄道事業)"
+        },
+        {
+          "point": "顔認証決済サービス「SAKULaLa」の西日本初導入が報じられており、デジタル事業における地域展開の拡大が期待されます。",
+          "evidence": "news.headlines[2].title (顔認証決済サービス導入), news.headlines[4].title (SAKULaLa活用)"
+        },
+        {
+          "point": "継続的な自己株式の取得状況が適時開示されており、株主還元への意識の高さがうかがえます。",
+          "evidence": "disclosures.items[0].title (自己株式の取得状況に関するお知らせ)"
+        },
+        {
+          "point": "日銀短観の大企業製造業・非製造業の業況判断DIは堅調に推移し、製造業PMIも拡大基調を維持していることから、日立の事業環境にとって追い風となる可能性が高いです。",
+          "evidence": "macro.boj.tankan.di.large_manufacturing.current_di=24.0, macro.boj.tankan.di.large_nonmanufacturing.current_di=35.0, macro.japan_pmi.manufacturing.latest_value=53.7"
+        }
+      ],
+      "cautions": [
+        "市場全体は下降トレンド（downtrend）と判断されており、全体相場の動向には注意が必要です。",
+        "2027年1月28日に次回決算発表を控えており、その内容や通期見通しによっては株価が変動する可能性があります。",
+        "12月17日〜18日に開催される日本銀行金融政策決定会合の結果が、市場金利や経済環境に影響を与える可能性があります。",
+        "現在のPER（30.154倍）やPBR（3.412倍）は市場平均と比較してやや高水準にあり、バリュエーション面での割安感は限定的です。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "recent_buy": {
+    "date": "2026-11-25",
+    "days_ago": 1,
+    "confidence": 70,
+    "note": "直近14日以内に buy シグナル済み。新規 buy は出さず hold（継続監視）とすること"
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "“現代の名工”に選ばれ表彰 日立製作所笠戸事業所の宮島誠司さん「さらに精進」 山口（ｔｙｓテレビ山口） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBOVGNNOEQ4ZmY2bVloY1FDRnZWMnFPbzQwcGxpYm1UR19mdEpNMDZ2b29xUGcweGV3ZWpsXzBld3hMMHU2WUx5SjV4OWpZRDFzWlZES25xX2lPYkIxWlNOSVMzUkJjTFVTcEtDU1doUkpoNE01N1JBeDJFMUJULU0?oc=5",
+        "published": "Wed, 25 Nov 2026 11:10:23 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "LF Energyのミートアップから日立製作所のプレゼンテーションを紹介 - ThinkIT",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5wUGl0UWxwRnR2Mmc0eTJ6dEppY2doRGFNLUlzTW9YRW1GWk5NTXFWUGljckdETWFnZC1EdkVMeHJzSW9LSWZ4amNNSQ?oc=5",
+        "published": "Wed, 25 Nov 2026 11:30:17 GMT",
+        "publisher": "ThinkIT"
+      },
+      {
+        "title": "西鉄ワンビル、114店舗で顔認証決済 西日本商業施設で初導入 - BigGo ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBpa2ZBNFZyNFRkZ0h3ODJnVTB4WGkzY2hMU0tfcm1sMkVZUlZCTzhydUdBa08wVmlQcGZOa3ZjT3g4TzlkY09qX1c0Z3VCQi11OEdRM3pvQjVxR2lKNkZuU3Yyb2M3ZTZvN0pfY1dxZnZiclRp?oc=5",
+        "published": "Wed, 25 Nov 2026 08:26:00 GMT",
+        "publisher": "BigGo ファイナンス"
+      },
+      {
+        "title": "日立、基幹データの「AI Ready化」を支援する「HiRDB Version 11」を販売開始 夜間バッチ処理を待たずに最新データをAIデータ基盤へ連携 - Ledge.ai",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFAyWDJPYVk4MS1paF83Z0pxX0kxTjN5S3JTc1UwdmZiczhDZVZNR2FkUUZvQ2dwZFJqdEQydmF2dURJRG0yV1hYdjRlSlVvQmdudV80MndtSWVueHo1RzRsbjljcjFSR0VpU0dON3Rjaw?oc=5",
+        "published": "Thu, 26 Nov 2026 01:02:44 GMT",
+        "publisher": "Ledge.ai"
+      },
+      {
+        "title": "福岡・天神「ONE FUKUOKA BLDG.」114店舗に顔認証決済を導入 日立と東武鉄道の「SAKULaLa」、西日本初展開 - AMP[アンプ]",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE16ZDVrTVlLMGl2SzRKdUdFR1lYa2hyZ0hKSDZoYzNQbmlEUWotRXlJMm1jWnpPaFUwdTB1ZkZKWTNHd21SVHdybWh0aUM4dmw0UU93dnd6OEoxWkU?oc=5",
+        "published": "Wed, 25 Nov 2026 06:47:18 GMT",
+        "publisher": "AMP[アンプ]"
+      },
+      {
+        "title": "日立、水戸に鉄道信号新試験棟 自働化で能力2倍 - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1KZ1ptYTNvY3VKSGZQRmtFQktqcjU1WVh5Vk5PblVlNTlXT0loanFiV0VUeURFZ2JCZDNIUGl3ZkN6UC1EcmFJNm9wT1BjWjNuSkZaRUVndlE?oc=5",
+        "published": "Wed, 25 Nov 2026 20:00:00 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "顔認証決済をワンビルの114店舗に西日本初導入！ - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFB0QThPVEwwOU8xRGxjQ2RLWXoyUGthaEFUWDFwbkxSSzA4dktXa3kxZVJWTnEyWi1vVWxiMGk5bEV2ZllqbHNRTFRQUjloNVBLVVdvN1NQQ1VJemU3aE9TQlYwWF84THpkVE41Y042U09CX2VUYXFQSWI5SQ?oc=5",
+        "published": "Wed, 25 Nov 2026 09:21:49 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "福岡のワンビルで顔認証決済導入　西日本初、手ぶらで買い物可能に - Infoseek",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBoa0dELVdJOWI4RlgxdTZQaHVOancwc1E2MHZ4ZTl5YzhxNjdoZjB1Ulk4QXZLcDdhYk82SlVfa0h1UG95dlRsWDF6YWJhTC1hM3NNNDdRLTY5eVVKNmluRGhsMkRfRDFESkZIREs1WERSWDdI0gF0QVVfeXFMUGhrR0QtV0k5YjhGWDF1NlBodU5qdzBzUTYwdnhlOXljOHE2N2hmMHVSWThBdktwN2FiTzZKVV9rSHVQb3l2VGxYMXphYmFMLWEzc000N1EtNjl5VUo2aW5EaGwyRF9EMURKRkhESzVYRFJYN0g?oc=5",
+        "published": "Wed, 25 Nov 2026 07:26:50 GMT",
+        "publisher": "Infoseek"
+      },
+      {
+        "title": "「SAKULaLa」を活用した顔認証決済を、西日本で初めて、西鉄が運営する福岡の大型複合ビル「ONE FUKUOKA - ニコニコニュース",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9wSGhIb0pSYTV6MzZBWUpSbE1xbUk5aUpyeFFRMXZBbWh1aXRRcnVzUDBNcEhKaTFWUDNObzlrYUJXclhhaTBnY3hJS2dtZk5teVptZTVRcEZZaEpSc0VKeElTLW1paVFk?oc=5",
+        "published": "Wed, 25 Nov 2026 10:51:33 GMT",
+        "publisher": "ニコニコニュース"
+      },
+      {
+        "title": "“現代の名工”に選ばれ表彰 日立製作所笠戸事業所の宮島誠司さん「さらに精進」 山口 - Excite エキサイト",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFByeGtnRWJwTDBPbEJjMFlKN1NnNm9hbFFBLWpkVkYxQWdNVlFGMl9QYXl6NUFaQVhEaWNwZU9kZWxRSWczVWhRbzJtTGl0bXU0Umk0Vm56V1RqRkZPZzU5WkIzbC1acnBHaTIwdVZn?oc=5",
+        "published": "Wed, 25 Nov 2026 11:16:00 GMT",
+        "publisher": "Excite エキサイト"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261104564131.pdf",
+        "date": "2026-11-04 15:30:00"
+      },
+      {
+        "title": "Hitachi Energy Investor Day 資料公開に関するお知らせ(CEO プレゼン)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261102562975.pdf",
+        "date": "2026-11-02 17:00:00"
+      },
+      {
+        "title": "Hitachi Energy Investor Day 資料公開に関するお知らせ(CFO プレゼン)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261102562979.pdf",
+        "date": "2026-11-02 17:00:00"
+      },
+      {
+        "title": "2027年3月期 第2四半期 (中間期) 決算短信〔IFRS〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028557937.pdf",
+        "date": "2026-10-28 15:30:00"
+      },
+      {
+        "title": "2027年3月期 第2四半期連結決算の概要",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028557945.pdf",
+        "date": "2026-10-28 15:30:00"
+      },
+      {
+        "title": "剰余金の配当(中間配当)に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028557955.pdf",
+        "date": "2026-10-28 15:30:00"
+      },
+      {
+        "title": "役員向け株式報酬制度に係る「役員報酬BIP信託」の導入に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028557959.pdf",
+        "date": "2026-10-28 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261002545344.pdf",
+        "date": "2026-10-02 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ(会社法第459条第1項の規定による定款の定めに基づく自己株式の取得)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260902530692.pdf",
+        "date": "2026-09-02 15:30:00"
+      },
+      {
+        "title": "個別決算における投資有価証券売却益(特別利益)の計上に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260819523052.pdf",
+        "date": "2026-08-19 15:30:00"
+      }
+    ]
+  }
+}

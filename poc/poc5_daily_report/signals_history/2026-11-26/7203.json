@@ -1,0 +1,211 @@
+{
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "generated_at": "2026-11-26T13:08:53+09:00",
+  "price_as_of": "2026-11-26",
+  "signal": {
+    "signal": "hold",
+    "confidence": 55,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 30,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家の評価が Neutral (strength=55) であり、Buy エントリーの必須条件である strength 70 以上を満たしていない。",
+        "evidence": "fundamental_view.stance=neutral (strength=55)"
+      },
+      {
+        "reason": "テクニカル専門家が Bullish (strength=70) と判断しており、既に材料が株価に織り込まれモメンタム追随の遅いエントリーとなる懸念があるため、統合判断ルールに基づき様子見とする。",
+        "evidence": "technical_view.stance=bullish (strength=70)"
+      },
+      {
+        "reason": "市場全体（TOPIX）が 25 日線を下回るダウントレンドレジームにあり、VIX 指数も 28.29 と高水準であるため、地合いによる連れ安リスクを優先すべき局面である。",
+        "evidence": "reference.market_regime='downtrend', technical_view.cautions[2]: VIX=28.29"
+      }
+    ],
+    "risks": [
+      "12月17日〜18日に控える日銀金融政策決定会合による為替急変動および金利上昇リスク。",
+      "直近四半期の純利益が前四半期比で約48%減少しており、業績成長の鈍化が意識されるリスク。",
+      "MACDがデッドクロス状態にあり、短期的には下押し圧力が継続する可能性。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 55,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 30,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家の評価が Neutral (strength=55) であり、Buy エントリーの必須条件である strength 70 以上を満たしていない。\",\n   \"evidence\": \"fundamental_view.stance=neutral (strength=55)\"\n  },\n  {\n   \"reason\": \"テクニカル専門家が Bullish (strength=70) と判断しており、既に材料が株価に織り込まれモメンタム追随の遅いエントリーとなる懸念があるため、統合判断ルールに基づき様子見とする。\",\n   \"evidence\": \"technical_view.stance=bullish (strength=70)\"\n  },\n  {\n   \"reason\": \"市場全体（TOPIX）が 25 日線を下回るダウントレンドレジームにあり、VIX 指数も 28.29 と高水準であるため、地合いによる連れ安リスクを優先すべき局面である。\",\n   \"evidence\": \"reference.market_regime='downtrend', technical_view.cautions[2]: VIX=28.29\"\n  }\n ],\n \"risks\": [\n  \"12月17日〜18日に控える日銀金融政策決定会合による為替急変動および金利上昇リスク。\",\n  \"直近四半期の純利益が前四半期比で約48%減少しており、業績成長の鈍化が意識されるリスク。\",\n  \"MACDがデッドクロス状態にあり、短期的には下押し圧力が継続する可能性。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "中期トレンドが市場を大幅にアウトパフォームしており、25日移動平均線をサポートとした上昇基調を維持しています。前夜のADRも大幅上昇しており、目先は上値を試す展開が期待されます。",
+      "points": [
+        {
+          "point": "中期トレンドが非常に強力であり、対TOPIXで顕著な強さを示しています。",
+          "evidence": "price_technical.trend_60d.change_60d_pct=10.68, relative_to_topix_60d_pct=18.11"
+        },
+        {
+          "point": "株価は25日線の上方に位置し、短期・中期の移動平均線がゴールデンクロスを形成しています。",
+          "evidence": "price_technical.sma5_vs_sma25=golden, last_close=3398.0, sma25=3274.16"
+        },
+        {
+          "point": "前夜のNY市場でADRが大幅に上昇しており、寄り付きからの買い意欲が期待されます。",
+          "evidence": "us_overnight.adr.change_1d_pct=2.77"
+        }
+      ],
+      "cautions": [
+        "MACDがシグナルを下回るデッドクロス状態にあり、短期的には調整圧力が残る可能性があります(macd_histogram=-9.08)。",
+        "市場全体（TOPIX）が25日線を下回るダウントレンドレジームにあり、地合いの悪化が重石となるリスクがあります。",
+        "VIX指数が28.29と高水準にあり、外部要因によるボラティリティ急増に警戒が必要です。"
+      ],
+      "key_levels": {
+        "support": 3274.0,
+        "resistance": 3533.0
+      }
+    },
+    "fundamental": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "業績が減益基調にある一方、新型車の投入や継続的な自社株買いが下値を支える構図。マクロ環境は製造業PMIの拡大や円安が追い風だが、市場全体のダウントレンドと利益成長の鈍化が重石となっている。",
+      "points": [
+        {
+          "point": "利益成長の鈍化と四半期ベースの減益。2026年3月期の純利益予想は前期比で減少傾向にあり、直近四半期（2026年9月期）の純利益も前四半期比で約48%減少している。",
+          "evidence": "fundamentals.earnings_trend.annual, fundamentals.earnings_trend.quarterly"
+        },
+        {
+          "point": "直近の材料として「新型カムリ」の国内発売（12月23日予定）が発表された。米国生産車両の逆輸入という新たな販売戦略が示されている。",
+          "evidence": "news.headlines (published: 2026-11-25/26)"
+        },
+        {
+          "point": "自社株買いによる株主還元姿勢の継続。11月5日には自己株式の公開買付けや取得枠の一部変更を開示しており、資本効率への意識は高い。",
+          "evidence": "disclosures.items (2026-11-05)"
+        },
+        {
+          "point": "マクロ環境は一長一短。製造業PMIは53.7と拡大圏にあるが、10年債金利が2.713%まで上昇しており、金融引き締め観測がリスク要因となる。",
+          "evidence": "macro.japan_pmi.manufacturing.latest_value=53.7, macro.rates.jgb_10y_percent.value=2.713"
+        }
+      ],
+      "cautions": [
+        "次回の決算発表（2027年2月4日）まで期間があるが、業績の下方修正リスクに注意が必要。",
+        "日銀の金融政策決定会合（12月17日〜18日）を控え、金利上昇による自動車ローンの需要抑制や為替の急変動リスクがある。",
+        "市場全体がダウントレンド（TOPIXが25日線の下）にあり、個別材料に関わらず連れ安する可能性がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "トヨタ自動車/トヨタグループ株式ファンド【7931603B】：基準価格・投資信託情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1JV1VLT19ZNXNfQkxlaUo1NWtJRjZrcGZ2Q2dVMmtjVWpxSUhUbXg4Wjc1dDRBN0ZHV0JhdHRuWTQzdHZ2YkNuYWFLaEJ6U0xBZlluZQ?oc=5",
+        "published": "Thu, 26 Nov 2026 01:11:33 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "カイゼンを続ける ＭＡＤＥ ＩＮ 宮城のタクシー専用車両 トヨタ自動車東日本宮城大衡工場で全て生産 - khb東日本放送",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5XcE5jbTQ0MVdQNEpJQzFQSm9HMDd0YnZvQnRydmV0TXZzaDNnd2lqcVFaMDZISXBQVzhxYXdSdHl3b1p5aW14R001QzBuWEk?oc=5",
+        "published": "Wed, 25 Nov 2026 23:22:33 GMT",
+        "publisher": "khb東日本放送"
+      },
+      {
+        "title": "トヨタ自動車東日本ハンドボール部「レガロッソ宮城」 業務と両立しながら日本最高峰リーグで戦う選手たち - FNNプライムオンライン",
+        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFAyamRhRy1YY1N3TUhLUTUzbVZMRVZJQTdGT2g2ZlFNcXlxOFJQWUsyV0x6X2NDclZDVGlvdVBDYVBCU2w5SjVmUmpDRl94QQ?oc=5",
+        "published": "Wed, 25 Nov 2026 20:50:00 GMT",
+        "publisher": "FNNプライムオンライン"
+      },
+      {
+        "title": "トヨタ自動車／小型トラック「ダイナ」「トヨエース」タカタ製エアバッグ不具合で1512台をリコール - トラックニュース",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9YQjl2TExVbjJrd3I0X25xLUlNMUF0VVo4cm5jUVFXejljemlrWG84Tm80YUpBbHRGMHV0UmNXU1ZNWVRERF96S1FRcXEwaXd5VWpyWg?oc=5",
+        "published": "Thu, 26 Nov 2026 01:36:00 GMT",
+        "publisher": "トラックニュース"
+      },
+      {
+        "title": "カムリ、３年ぶり国内復活 トヨタ、米から輸入・販売へ - 朝日新聞",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9NVnU0aHJ0LW5wanlrZVhoYzNGNndsTFQwMTBSU3lNQ1hmQ21Dd3FjTi1reGc5cEFjaEYxRjRLWHphZUlKNkctTldaNkJUMmJrNHJMb3R3Vkk2UkZm?oc=5",
+        "published": "Wed, 25 Nov 2026 20:00:00 GMT",
+        "publisher": "朝日新聞"
+      },
+      {
+        "title": "トヨタ自動車、米国製の新型カムリを１２月２３日に国内発売、約３年ぶりに販売復活 - https://kabu-ir.com/",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1ILXpYOEp0VWRVUGdZWFZqZEpycmtMVlZ0eGNBU3pIeFliNHN0WE9rMnFXQlRTRDhoajZ4a2tLZlZ4NVY0U01UWlZqR19scmNLbWYyWA?oc=5",
+        "published": "Thu, 26 Nov 2026 00:27:02 GMT",
+        "publisher": "https://kabu-ir.com/"
+      },
+      {
+        "title": "新型カムリを発売 | トヨタ | グローバルニュースルーム - トヨタ自動車株式会社 公式企業サイト",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE91UDBVM2dvbkwwbFM3TmxOVGRYRUljcWE1V19tZGZRTTJDY2haRmdjM0J5Qmp1eExnTmc4UEVJOTNUZURvYi12aWJreERkV2Q2ZFBwMDhXQlk5ekd0emJldnNnNXI?oc=5",
+        "published": "Wed, 25 Nov 2026 04:44:30 GMT",
+        "publisher": "トヨタ自動車株式会社 公式企業サイト"
+      },
+      {
+        "title": "トヨタ自動車、新型「カムリ」 来月国内発売 - 日刊工業新聞",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE96RERlQ3NobFpueEVfNnBTOFZLNFNxNjQxbUVaU1ZPcjg2QWlmd1hRaFNMVTBkdlF3ckRWVG01QVlReVdTVHdfeWdJSF8wUzM0Ym5NbldfYU4?oc=5",
+        "published": "Wed, 25 Nov 2026 08:00:00 GMT",
+        "publisher": "日刊工業新聞"
+      },
+      {
+        "title": "トヨタ自動車が米国で生産し、日本で発売するセダン「カムリ」 - 「逆輸入」カムリ12月発売 トヨタ、430万円から - 写真・画像(1/1) - 西日本新聞me",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5yT3o0ODF4WHdqZ1FCVm1HNFFYdE9OcXJaOThUcmFjdlZoMU9JSTVWbFFOUDVmZUtvbjFKLVBKaktwMFFEbS1Wd2xVZVpIVmxDOXVPRnYzQQ?oc=5",
+        "published": "Wed, 25 Nov 2026 07:25:03 GMT",
+        "publisher": "西日本新聞me"
+      },
+      {
+        "title": "トヨタ『カムリ』新型、米国生産の右ハンドルで日本導入…430万円から - StartYourEngines",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9qWU4zY084WW1sMk9sempkS21HOGV6UEJWTzBGTHRJOHVGYTE0Q20ybUN4YnRGcVZuVW10OHhiSlBZbDVCUFFvdWJrZmV3elBfbm40Q1preEpXM0RiMVZPeENZbw?oc=5",
+        "published": "Wed, 25 Nov 2026 08:01:44 GMT",
+        "publisher": "StartYourEngines"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第2四半期（中間期）決算短信〔IFRS〕（連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261030561115.pdf",
+        "date": "2026-11-05 13:55:00"
+      },
+      {
+        "title": "2027年3月期第２四半期決算報告プレゼンテーション資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261104563510.pdf",
+        "date": "2026-11-05 13:55:00"
+      },
+      {
+        "title": "自己株式の取得に係る事項の一部変更、自己株式の取得及び自己株式の公開買付け並びに自己株式の消却に係る事項の一部変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261105565338.pdf",
+        "date": "2026-11-05 13:55:00"
+      },
+      {
+        "title": "組織改正、および役員・幹部職人事について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261104563543.pdf",
+        "date": "2026-11-05 13:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261104563596.pdf",
+        "date": "2026-11-04 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261005545791.pdf",
+        "date": "2026-10-05 15:30:00"
+      },
+      {
+        "title": "自己株式の取得状況に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260903531084.pdf",
+        "date": "2026-09-03 15:30:00"
+      },
+      {
+        "title": "従業員に対する株式交付制度としての自己株式の処分の処分価額等の決定に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514302.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2027年3月期 第1四半期決算短信〔IFRS〕（連結)」補足資料の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807513909.pdf",
+        "date": "2026-08-07 12:00:00"
+      },
+      {
+        "title": "2027年３月期 第１四半期決算 投資家向け決算説明会　質疑応答（要旨）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260804507895.pdf",
+        "date": "2026-08-04 19:30:00"
+      }
+    ]
+  }
+}

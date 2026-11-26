@@ -1,0 +1,224 @@
+{
+  "code": "4568",
+  "name": "第一三共",
+  "generated_at": "2026-11-26T13:17:19+09:00",
+  "price_as_of": "2026-11-26",
+  "signal": {
+    "signal": "hold",
+    "confidence": 65,
+    "target_price": null,
+    "stop_loss": null,
+    "holding_period_days": 60,
+    "reasons": [
+      {
+        "reason": "ファンダメンタルズ専門家は、直近四半期決算の力強い業績回復と過去平均と比較した割安性を根拠に強気姿勢を示しています。",
+        "evidence": "fundamental_view.stance=bullish (strength=70), fundamental_view.points[0], fundamental_view.points[1]"
+      },
+      {
+        "reason": "テクニカル専門家は、直近の株価反発による25日線回復を評価する一方で、デッドクロス継続やMACDの弱気シグナルからニュートラルな見解です。",
+        "evidence": "technical_view.stance=neutral (strength=55), technical_view.points[0], technical_view.points[1], technical_view.points[2]"
+      },
+      {
+        "reason": "ファンダメンタルズは強気であるものの、市場全体のレジームがdowntrendであるため、buyシグナルの発動条件であるファンダメンタルズのstrength≥75を満たさないため、現時点ではholdと判断します。",
+        "evidence": "reference.market_regime=\"downtrend\" (rule 3), fundamental_view.strength=70 (rule 3)"
+      }
+    ],
+    "risks": [
+      "市場全体の地合いが下落トレンドにあり、個別銘柄の良好な材料が相場全体の重しに押される可能性があります。",
+      "2027年1月29日に次回決算発表が予定されており、発表内容によっては株価が変動するリスクがあります。",
+      "2026年12月17日〜18日の日銀金融政策決定会合が予定されており、金融政策の変更が市場全体に影響を与える可能性があります。",
+      "NTKからの損害賠償等請求訴訟の控訴審の動向は、引き続き不透明要因として株価に影響を与える可能性があります。",
+      "テクニカル指標のデッドクロスやMACDの弱気シグナルが継続しており、現在の反発の勢いが鈍化すれば再度下落に転じるリスクがあります。"
+    ]
+  },
+  "raw_response": "{\n \"signal\": \"hold\",\n \"confidence\": 65,\n \"target_price\": null,\n \"stop_loss\": null,\n \"holding_period_days\": 60,\n \"reasons\": [\n  {\n   \"reason\": \"ファンダメンタルズ専門家は、直近四半期決算の力強い業績回復と過去平均と比較した割安性を根拠に強気姿勢を示しています。\",\n   \"evidence\": \"fundamental_view.stance=bullish (strength=70), fundamental_view.points[0], fundamental_view.points[1]\"\n  },\n  {\n   \"reason\": \"テクニカル専門家は、直近の株価反発による25日線回復を評価する一方で、デッドクロス継続やMACDの弱気シグナルからニュートラルな見解です。\",\n   \"evidence\": \"technical_view.stance=neutral (strength=55), technical_view.points[0], technical_view.points[1], technical_view.points[2]\"\n  },\n  {\n   \"reason\": \"ファンダメンタルズは強気であるものの、市場全体のレジームがdowntrendであるため、buyシグナルの発動条件であるファンダメンタルズのstrength≥75を満たさないため、現時点ではholdと判断します。\",\n   \"evidence\": \"reference.market_regime=\\\"downtrend\\\" (rule 3), fundamental_view.strength=70 (rule 3)\"\n  }\n ],\n \"risks\": [\n  \"市場全体の地合いが下落トレンドにあり、個別銘柄の良好な材料が相場全体の重しに押される可能性があります。\",\n  \"2027年1月29日に次回決算発表が予定されており、発表内容によっては株価が変動するリスクがあります。\",\n  \"2026年12月17日〜18日の日銀金融政策決定会合が予定されており、金融政策の変更が市場全体に影響を与える可能性があります。\",\n  \"NTKからの損害賠償等請求訴訟の控訴審の動向は、引き続き不透明要因として株価に影響を与える可能性があります。\",\n  \"テクニカル指標のデッドクロスやMACDの弱気シグナルが継続しており、現在の反発の勢いが鈍化すれば再度下落に転じるリスクがあります。\"\n ]\n}",
+  "expert_views": {
+    "technical": {
+      "stance": "neutral",
+      "strength": 55,
+      "summary": "直近の急反発により株価は25日移動平均線を回復しましたが、5日線は25日線を下回るデッドクロスを継続しており、MACDも弱気シグナルを示しています。前夜の米国ADRは大幅高でしたが、市場全体の地合いは下落トレンドであり、方向感に乏しい状況です。",
+      "points": [
+        {
+          "point": "株価は直近の大幅上昇により25日移動平均線を回復し、短期的な勢いを示しています。",
+          "evidence": "price_technical.last_close=2882.5, price_technical.sma25=2802.26, price_technical.recent_5_days[3].change_pct=5.79"
+        },
+        {
+          "point": "5日移動平均線は25日移動平均線を下回るデッドクロスの状態が継続しており、短期トレンドの弱さを示唆しています。",
+          "evidence": "price_technical.sma5_vs_sma25=\"dead(5日線が25日線の下)\""
+        },
+        {
+          "point": "MACDはシグナルを下回っており、売りの勢いが継続している可能性を示唆しています。",
+          "evidence": "price_technical.macd=27.32, price_technical.macd_signal=30.48, price_technical.macd_histogram=-3.15"
+        },
+        {
+          "point": "前夜のNY市場でのADRは大幅に上昇しており、本日の寄り付きに買い圧力がかかる可能性があります。",
+          "evidence": "us_overnight.adr.change_1d_pct=4.94"
+        },
+        {
+          "point": "TOPIXが下落トレンドにあると機械判定されており、市場全体の地合いは個別銘柄の上昇にとって逆風となる可能性があります。",
+          "evidence": "macro.market_regime.market_regime=\"downtrend\""
+        }
+      ],
+      "cautions": [
+        "前夜のADR高は本日の寄り付き価格に織り込まれる可能性があり、その後の勢いが継続するかは注視が必要です。",
+        "市場全体の地合いが下落トレンドにあるため、個別の好材料や株価の反発が相場全体の重しに押されるリスクがあります。",
+        "移動平均線のデッドクロスやMACDの弱気シグナルが継続しており、現在の反発の勢いが鈍化すれば再度下落に転じるリスクがあります。",
+        "直近で急上昇しているため、短期的な利益確定売りが出やすい水準である点に留意が必要です。"
+      ],
+      "key_levels": {
+        "support": 2802.26,
+        "resistance": 3104.0
+      }
+    },
+    "fundamental": {
+      "stance": "bullish",
+      "strength": 70,
+      "summary": "直近の四半期決算で力強い業績回復が見られ、市場からは好業績にもかかわらず過去平均と比較して割安であるとの見方も出ており、投資妙味が高まっています。",
+      "points": [
+        {
+          "point": "2026年9月期第2四半期の売上高、営業利益、純利益が前四半期比で大きく回復しており、足元の業績モメンタムは改善傾向にある。",
+          "evidence": "fundamentals.earnings_trend.quarterly[period=\"2026-09\"]"
+        },
+        {
+          "point": "直近のニュース記事で、PERが過去5期平均と比較して低下しており、好業績にもかかわらず割安であるとの指摘があり、株価の再評価に繋がる可能性がある。",
+          "evidence": "news.headlines[title*=\"PERが低下した｢割安株｣\"][published=\"Wed, 25 Nov 2026 12:20:30 GMT\"]"
+        },
+        {
+          "point": "配当利回りが3.65%と比較的魅力的な水準にあり、高い収益性を示すROE（17.6%）も維持されている。",
+          "evidence": "fundamentals.valuation.dividend_yield_percent=3.65, fundamentals.valuation.return_on_equity=0.176"
+        },
+        {
+          "point": "日銀短観の大企業製造業の業況判断DIが前回調査から改善しており、日本経済の製造業セクターの景況感は良好である。",
+          "evidence": "macro.boj.tankan.di.large_manufacturing.current_di=24.0, macro.boj.tankan.di.large_manufacturing.change_from_prev=2.0"
+        }
+      ],
+      "cautions": [
+        "2026年3月期の通期業績では、売上高は増加したものの、営業利益、純利益、EPSが前年比で減少しており、年間を通した利益成長には課題が見られる。",
+        "NTKからの損害賠償等請求訴訟で一度は勝訴したものの、相手側から控訴が提起されており、引き続き動向を注視する必要がある。",
+        "次回の決算発表日が2027年1月29日に予定されており、新たな業績情報が株価に影響を与える可能性がある。",
+        "日銀の金融政策決定会合が2026年12月17日〜18日に控えており、マクロ経済環境の変化による市場全体の変動リスクがある。",
+        "市場全体のレジームがdowntrendと判断されており、全体相場の軟調さが個別銘柄の上昇を抑制する可能性がある。"
+      ],
+      "key_levels": {
+        "support": null,
+        "resistance": null
+      }
+    }
+  },
+  "context_refs": {
+    "news": [
+      {
+        "title": "第一三共(株)【DSNKY】：株価・株式情報 - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1LdkZxbEN5Vm9Scm5nSFgzTDZJZlNtcVFXR0dkU1J3c2RfRFBuNmNiOGFibVNVTE1zT2lad2dyNnA0TFRoT3RVZktKcGRiMVVV?oc=5",
+        "published": "Wed, 25 Nov 2026 22:36:29 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "メタノール摂取させて妻殺害の罪に問われた「第一三共」元研究員の上告を棄却 懲役16年命じた1審・2審判決が確定へ 最高裁 - TBS NEWS DIG",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBjc1BJZ29ENGtTNzNNTzBFLTNManotMXFBMDItMTd1amQtVERZbEc0ZEFpb1NkTjlvTHNieElwSzBBNU9waTBtM3ZLaXlpR0tWbWc1eUlScw?oc=5",
+        "published": "Wed, 25 Nov 2026 08:41:20 GMT",
+        "publisher": "TBS NEWS DIG"
+      },
+      {
+        "title": "子どものかぜはすぐケアするのに⋯子育て層の85.1%が「自分の健康管理」を後回しに - 第一三共ヘルスケア調査 - au Webポータル",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFAyRWR2Q2d2R0R1Wk10QTg0TG0zVktleFo1VC1DSE9GX1hPNDRfYzM1cWcyQ1FmaVhPaEI1ZHd1d2xtWGgzaTF2SkZiZDRlX2RJUkhhVFBGT3cxLWpPY0Z4clczOHpqZnRDUndGUjBB?oc=5",
+        "published": "Thu, 26 Nov 2026 01:53:51 GMT",
+        "publisher": "au Webポータル"
+      },
+      {
+        "title": "メタノールで妻殺害の44歳「第一三共」元社員、懲役16年確定へ 最高裁が上告棄却 - 産経ニュース",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE83U2dmYWRycE5mZFVTdU5DdkRzdTgzZzdmTGlYNE5va1VBZ0RfUGZaTXBRdUR1Ujl0NVgySVZ6cXJXaGFveGhuRlZZWnh5dzd5WFU2aGZZOFpENDRNX2tnV1J3RkpVXzFySlVyajhFVVBWS3pyS2c?oc=5",
+        "published": "Wed, 25 Nov 2026 08:44:48 GMT",
+        "publisher": "産経ニュース"
+      },
+      {
+        "title": "【日本株】過去5期平均よりPERが低下した｢割安株｣の2銘柄！好業績でも割安な｢大阪有機化学工業｣、PERが過去5期平均の半分まで下がった｢第一三共｣に注目（ダイヤモンド・ザイ） - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBNWUVsR1N3ckdlY2FkeDNXejdpRGcwZVlDZWpqeXloSlExOUVsWWJfek9qa25PZDN0ZVJ2cWVoTW1iMGlCR3VKRXNHajBEX0VQX3ZZc2IzemRreDRObDFlT3lTeGdqYWxRWWoteWJVc2c5ZDREOGZza1RDS1N2QjA?oc=5",
+        "published": "Wed, 25 Nov 2026 12:20:30 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "動いた株・出来た株（前場）part2：バンナムHD、第一三共など15社(フィスコ) - Yahoo!ファイナンス",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQODNKUXl6TFRMdV9EeFFhN0VhVTBBdE10bG5xME5KRm05bUpiZXJoWnJDVUljLUViSm1TdER6b2ptOFdQNk1UMzZkZzZtMS1qOERmRzZCdzBaYnZZSGdhdnRfSFcwZUlBTmRPcnAtZkRqd2FFM2kyald4RzAta002SFpKZDFpc2s?oc=5",
+        "published": "Wed, 25 Nov 2026 05:12:07 GMT",
+        "publisher": "Yahoo!ファイナンス"
+      },
+      {
+        "title": "製薬大手元社員、懲役１６年確定へ＝メタノールで妻殺害、上告棄却―最高裁 - 時事通信ニュース",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE8wT2gzT3h4NnNZMGF1UkNUZ3dnVENqSnRkcDBXbU5BeUowcU9LQjBjRDFoLVdzNHhBc3FHLXFzSmtPRkR4WXlrdTJ5LWdySW9obGZWejdFRUNVbkVUZEE?oc=5",
+        "published": "Wed, 25 Nov 2026 08:20:00 GMT",
+        "publisher": "時事通信ニュース"
+      },
+      {
+        "title": "米国株式市場はまちまち、AI懸念が根強い - ｄメニューニュース",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNYjVHVFJsSWc2cGhWQmhKMnVNX3dWdHpiTXY0TnRnZndKNFNockt6YWtNZVZqaWVCTTdjcVhDQnNKazU3RHpEcUJRR3M2WjVXTEgwY3B6VzVsTmVmWm5Ja25YQ3pyelJrUHNKajZqcG11Sm83M0tHQUcyMXlodERzWGhtaWFIS2k3V2NVONIBjAFBVV95cUxNYjVHVFJsSWc2cGhWQmhKMnVNX3dWdHpiTXY0TnRnZndKNFNockt6YWtNZVZqaWVCTTdjcVhDQnNKazU3RHpEcUJRR3M2WjVXTEgwY3B6VzVsTmVmWm5Ja25YQ3pyelJrUHNKajZqcG11Sm83M0tHQUcyMXlodERzWGhtaWFIS2k3V2NVOA?oc=5",
+        "published": "Thu, 26 Nov 2026 00:11:00 GMT",
+        "publisher": "ｄメニューニュース"
+      },
+      {
+        "title": "【日本株】過去5期平均よりPERが低下した｢割安株｣の2銘柄！好業績でも割安な｢大阪有機化学工業｣、PERが過去5期平均の半分まで下がった｢第一三共｣に注目 (ダイヤモンド・ザイ) - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPb045U2piQXZLalhfYUpWMm54cWRXY2dnZDlCMkp5US1aYXlVeThlWkVfMXU0Z3JPbmhFRjhsVnpPWlNNTWVYeHluV2c5TkFVLUg3WjZfdTBGZE1DbDVzREtHamZZSUcyVjZfYnNISUNNT0hyRlBtajIxMnRYR1lyZGFRa3NhZFBWQmNoNW9B?oc=5",
+        "published": "Wed, 25 Nov 2026 12:20:30 GMT",
+        "publisher": "Yahoo!ニュース"
+      },
+      {
+        "title": "メタノール摂取させて妻殺害の罪に問われた「第一三共」元研究員の上告を棄却 懲役16年命じた1審・2審判決が確定へ 最高裁 - Yahoo!ニュース",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNcDA0ZEtfNjJNdHdkcmlnMXJZV3FmNm1xakVlOXp1Mll5RmMxUjdaMWhaVjU5RDBMbTRvalJLbU5BaUc0X2x5d2tzVUNmWXBkTjRocDVrc3lCYUdPVm1JM1lFclJvWC15M0VYVTB0NlJsOXlFSnRSd29QYkZoQXNhVWVsRE1oM2ZRVl9pTENB?oc=5",
+        "published": "Wed, 25 Nov 2026 08:39:43 GMT",
+        "publisher": "Yahoo!ニュース"
+      }
+    ],
+    "disclosures": [
+      {
+        "title": "2027年3月期 第2四半期（中間期）決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028556619.pdf",
+        "date": "2026-10-30 13:00:00"
+      },
+      {
+        "title": "決算補足資料（2026年度 第2四半期決算）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028558606.pdf",
+        "date": "2026-10-30 13:00:00"
+      },
+      {
+        "title": "2026年度 第2四半期決算説明会資料",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120261028558612.pdf",
+        "date": "2026-10-30 13:00:00"
+      },
+      {
+        "title": "当社に対するNTKからの損害賠償等請求訴訟における控訴提起のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260925540546.pdf",
+        "date": "2026-09-28 08:45:00"
+      },
+      {
+        "title": "当社に対するNTKからの損害賠償等請求訴訟に関する判決（勝訴）のお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260910534407.pdf",
+        "date": "2026-09-10 17:00:00"
+      },
+      {
+        "title": "（開示事項の変更）第一三共ビジネスアソシエの吸収合併（簡易合併・略式合併）の効力発生日変更に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260824525305.pdf",
+        "date": "2026-08-28 15:30:00"
+      },
+      {
+        "title": "（再訂正）「2025年度 決算補足資料」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514622.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正）「2025年度決算および第6期中期経営計画説明会」資料の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260807514744.pdf",
+        "date": "2026-08-07 15:30:00"
+      },
+      {
+        "title": "（訂正・数値データ訂正）「2026年３月期 決算短信〔IFRS基準〕(連結)」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504176.pdf",
+        "date": "2026-07-31 13:00:00"
+      },
+      {
+        "title": "2027年3月期 第1四半期決算短信〔IFRS〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260730504099.pdf",
+        "date": "2026-07-31 13:00:00"
+      }
+    ]
+  }
+}
